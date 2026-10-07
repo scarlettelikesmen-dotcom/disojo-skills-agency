@@ -38,7 +38,9 @@ Pushed to a PRIVATE GitHub repo: `scarlettelikesmen-dotcom/disojo-skills-agency`
 ## Postcards site
 Pushed (both branches) to the private repo `disojo-solutions/postcards-perfumes-web` on the agency GitHub account.
 
+## Memory notes
+Snapshot in the skill `disojo-memory-backup` (`user-skills/disojo-memory-backup/references/memory/`). Refresh with `bash ~/.claude/skills/disojo-memory-backup/scripts/backup_memory.sh`.
+
 ## D. Things that are NOT backed up anywhere except this Mac
 - `~/.claude/CLAUDE.md` (master context) and `~/.claude/master-context-for-claude-ai.md` (deliberately not committed here)
-- Claude's memory notes: `~/.claude/projects/-Users-tejjo-claudeskillsthrureels/memory/`
 - Postcards original source footage and generated images in Downloads
