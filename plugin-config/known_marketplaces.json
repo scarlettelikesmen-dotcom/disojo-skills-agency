@@ -1,0 +1,18 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/Users/tejjo/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-09-29T17:02:43.478Z"
+  },
+  "vercel-vercel-plugin": {
+    "source": {
+      "source": "directory",
+      "path": "/Users/tejjo/.cache/plugins/github.com-vercel-vercel-plugin"
+    },
+    "installLocation": "/Users/tejjo/.cache/plugins/github.com-vercel-vercel-plugin",
+    "lastUpdated": "2026-04-03T19:36:17.885Z"
+  }
+}

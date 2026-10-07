@@ -20,19 +20,20 @@ make-interfaces-feel-better, motion-advanced, motion-foundations, motion-pattern
 redesign-existing-projects, review-animations, safety-guard, santa-method, search-first, strategic-compact, ui-demo, ui-ux-pro-max,
 verification-loop. (`learned/` is an empty folder.)
 
-## C. NOT in this repo (installed from elsewhere; re-installable, not lost with the Mac)
+## C. Other skill sets (now ALSO in this repo as of the second push; also re-installable)
 - **vercel-plugin 0.30.0** (installed from the Vercel plugin repo on GitHub): bootstrap, deploy, env, marketplace, status, ai-gateway, ai-sdk,
   auth, chat-sdk, deployments-cicd, env-vars, knowledge-update, next-cache-components, next-upgrade, nextjs, react-best-practices,
   routing-middleware, runtime-cache, shadcn, turbopack, vercel-agent, vercel-cli, vercel-functions, vercel-sandbox, vercel-storage,
-  verification, workflow. Lives in `~/.claude/plugins/cache/`.
-- **Anthropic skills that come with the Claude app/account**: docs, docx, pdf, pptx, xlsx, google-workspace, schedule, skill-creator, morning,
-  setup-claude, explain-usage, consolidate-memory, import-memory.
-- **Built into Claude Code**: dataviz, artifact-design, artifact-diagramming, artifact-capabilities, update-config, keybindings-help,
+  verification, workflow. Lives in `~/.claude/plugins/cache/`; copied to `vercel-plugin-0.30.0/` (42 SKILL.md files found).
+- **Anthropic skills that come with the Claude app/account** (copied to `anthropic-app-skills/`, 17 unique): docs, docx, pdf, pptx, xlsx,
+  google-workspace, schedule, skill-creator, morning, setup-claude, explain-usage, consolidate-memory, import-memory, setup-cowork,
+  sales-case-simulation, cowork-plugin-customizer, create-cowork-plugin.
+- **Built into Claude Code** (not files; names and descriptions recorded in `builtin-skills.md`): dataviz, artifact-design, artifact-diagramming, artifact-capabilities, update-config, keybindings-help,
   code-review, simplify, fewer-permission-prompts, loop, schedule, claude-api, run, init, security-review, plugin-authoring.
 
 ## Remote backup
 Pushed to a PRIVATE GitHub repo: `scarlettelikesmen-dotcom/disojo-skills-agency` (branch `main`). Push again after any skill change:
-`cd "~/Desktop/DISOJO SOLUTIONS/skills" && rsync -a --exclude node_modules ~/.claude/skills/ . && git add -A && git commit -m "update" && git push`
+`cd "~/Desktop/DISOJO SOLUTIONS/skills" && rsync -a --exclude node_modules ~/.claude/skills/ user-skills/ && git add -A && git commit -m "update" && git push`
 
 ## D. Things that are NOT backed up anywhere except this Mac
 - `~/.claude/CLAUDE.md` (master context) and `~/.claude/master-context-for-claude-ai.md` (deliberately not committed here)

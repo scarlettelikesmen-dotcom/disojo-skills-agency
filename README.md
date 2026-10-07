@@ -1,10 +1,16 @@
-# Disojo Claude skills (backup)
+# Disojo Claude skills: full backup
 
-A copy of everything in `~/.claude/skills/` on Tejjomay's Mac. Restore with:
+Private backup of everything skill-related on Tejjomay's Mac (2026-10-07). Keep this repo PRIVATE: it includes Anthropic's app skills (some carry
+proprietary license terms, personal use only) and a Postcards example config with a client's real email and phone.
 
-    rsync -a "<this folder>/" ~/.claude/skills/        # then restart Claude Code
+| Folder | What | Restore |
+|---|---|---|
+| `user-skills/` | 40 folders from `~/.claude/skills`: the 9 Disojo skills + 31 others (start with `disojo-client-playbook`) | `rsync -a user-skills/ ~/.claude/skills/` |
+| `vercel-plugin-0.30.0/` | The Vercel plugin as installed (skills, agents, commands, hooks) | Reinstall from the Vercel plugin repo; this copy is the exact version used |
+| `anthropic-app-skills/` | Anthropic's Claude-app skills (17), newest copy of each | Normally reinstalled by the Claude app; copy a folder into `~/.claude/skills/` to use it standalone |
+| `plugin-config/` | Which plugins and marketplaces were installed | Reference for reinstalling |
+| `builtin-skills.md` | Names and descriptions of built-in skills (not files) | Return with a Claude Code reinstall |
 
-New-client entry point: `disojo-client-playbook`. Full list and what is / is not backed up: `INVENTORY.md`.
-
-Remote: private GitHub repo `scarlettelikesmen-dotcom/disojo-skills-agency` (branch `main`). Restore on a new Mac:
-`git clone https://github.com/scarlettelikesmen-dotcom/disojo-skills-agency.git ~/.claude/skills` (needs access to that GitHub account).
+New Mac: `git clone https://github.com/scarlettelikesmen-dotcom/disojo-skills-agency.git ~/disojo-skills-backup && rsync -a ~/disojo-skills-backup/user-skills/ ~/.claude/skills/`
+(needs access to that GitHub account), then restart Claude Code. Full list: `INVENTORY.md`.
+NOT in this repo: `~/.claude/CLAUDE.md`, memory notes, the Postcards project code, raw assets.
