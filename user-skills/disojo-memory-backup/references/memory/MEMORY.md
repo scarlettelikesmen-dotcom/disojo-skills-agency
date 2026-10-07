@@ -1,0 +1,6 @@
+- [Reels to skills goal](reels-to-skills-goal.md) — turn saved/DM'd Instagram reels into usable skills; delete downloads after
+- [Disojo business](disojo-business.md) — Tejjomay's Mumbai software studio for owner-run businesses; context for reel-to-skill filtering
+- [Lumina Store / Postcards rebuild](lumina-store-3d-rebuild.md) — finished rebuild, live demo URL, open items, and the skill made from it
+- [Disojo site skill set](reference-scroll-site-skill.md) — playbook, intake, archetypes, starter, motion recipes, launch checklist; start with disojo-client-playbook
+- [How Tejjomay wants me to work](feedback-working-style.md) — finish whole sections before showing, never invent content, re-read details, be direct
+- [Master context file](reference-master-context.md) — ~/.claude/CLAUDE.md is the always-loaded master context; keep it updated
