@@ -35,8 +35,10 @@ verification-loop. (`learned/` is an empty folder.)
 Pushed to a PRIVATE GitHub repo: `scarlettelikesmen-dotcom/disojo-skills-agency` (branch `main`). Push again after any skill change:
 `cd "~/Desktop/DISOJO SOLUTIONS/skills" && rsync -a --exclude node_modules ~/.claude/skills/ user-skills/ && git add -A && git commit -m "update" && git push`
 
+## Postcards site
+Pushed (both branches) to the private repo `disojo-solutions/postcards-perfumes-web` on the agency GitHub account.
+
 ## D. Things that are NOT backed up anywhere except this Mac
 - `~/.claude/CLAUDE.md` (master context) and `~/.claude/master-context-for-claude-ai.md` (deliberately not committed here)
 - Claude's memory notes: `~/.claude/projects/-Users-tejjo-claudeskillsthrureels/memory/`
-- The Postcards site code (`~/Desktop/websites ARCHIVE/lumina-store`, git repo with no remote)
 - Postcards original source footage and generated images in Downloads
