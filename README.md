@@ -6,5 +6,5 @@ A copy of everything in `~/.claude/skills/` on Tejjomay's Mac. Restore with:
 
 New-client entry point: `disojo-client-playbook`. Full list and what is / is not backed up: `INVENTORY.md`.
 
-This copy lives on the same Mac. It protects against deleting something, NOT against losing the laptop: push it to a private remote
-(GitHub/GitLab) or copy it to an external drive / iCloud Drive as well.
+Remote: private GitHub repo `scarlettelikesmen-dotcom/disojo-skills-agency` (branch `main`). Restore on a new Mac:
+`git clone https://github.com/scarlettelikesmen-dotcom/disojo-skills-agency.git ~/.claude/skills` (needs access to that GitHub account).

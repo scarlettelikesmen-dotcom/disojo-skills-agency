@@ -30,6 +30,10 @@ verification-loop. (`learned/` is an empty folder.)
 - **Built into Claude Code**: dataviz, artifact-design, artifact-diagramming, artifact-capabilities, update-config, keybindings-help,
   code-review, simplify, fewer-permission-prompts, loop, schedule, claude-api, run, init, security-review, plugin-authoring.
 
+## Remote backup
+Pushed to a PRIVATE GitHub repo: `scarlettelikesmen-dotcom/disojo-skills-agency` (branch `main`). Push again after any skill change:
+`cd "~/Desktop/DISOJO SOLUTIONS/skills" && rsync -a --exclude node_modules ~/.claude/skills/ . && git add -A && git commit -m "update" && git push`
+
 ## D. Things that are NOT backed up anywhere except this Mac
 - `~/.claude/CLAUDE.md` (master context) and `~/.claude/master-context-for-claude-ai.md` (deliberately not committed here)
 - Claude's memory notes: `~/.claude/projects/-Users-tejjo-claudeskillsthrureels/memory/`
