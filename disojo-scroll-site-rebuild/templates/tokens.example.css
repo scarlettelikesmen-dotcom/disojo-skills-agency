@@ -1,0 +1,66 @@
+/* Tokens used by the templates (see :root in the Postcards build). Swap values per brand. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  /* === POSTCARDS COLOR SYSTEM — Brand Kit 2.0 === */
+
+  /* Light Palette */
+  --cream: #F7F4EF;
+  --cream-alt: #E9E1D5;
+  --cream-card: #F0EDE6;
+  --cream-border: rgba(199, 187, 169, 0.45);
+  --warm-gray: #C7BBA9;
+
+  /* Dark Palette */
+  --ink: #2B2B2B;
+  --ink-2: #1E1E1E;
+  --ink-3: #242424;
+  --ink-border: rgba(247, 244, 239, 0.1);
+
+  /* Accents — Terracotta replaces Gold */
+  --terracotta: #C46C4E;
+  --terracotta-light: #D4836A;
+  --terracotta-pale: rgba(196, 108, 78, 0.1);
+  --forest: #415145;
+  --forest-light: #5A6E5C;
+  --forest-pale: rgba(65, 81, 69, 0.1);
+  --brown: #4A3529;
+
+  /* Gold alias — keeps older CSS vars working without refactor */
+  --gold: var(--terracotta);
+  --gold-light: var(--terracotta-light);
+  --gold-pale: var(--terracotta-pale);
+
+  /* Semantics */
+  --color-bg: var(--cream);
+  --color-bg-alt: var(--cream-alt);
+  --color-bg-card: var(--cream-card);
+  --color-border: var(--cream-border);
+  --color-text: var(--ink);
+  --color-text-muted: #7A6E60;
+  --color-accent: var(--terracotta);
+  --color-gold: var(--terracotta);
+  --color-sand: var(--warm-gray);
+
+  /* Product gradients (unchanged — real photos replacing these) */
+  --himalayan-from: #C5D5E4;
+  --himalayan-to: #7E9EBA;
+  --rani-from: #EAC8C8;
+  --rani-to: #C49090;
+  --malabar-from: #B8D5CC;
+  --malabar-to: #6BA597;
+  --haveli-from: #DEC9A8;
+  --haveli-to: #B89A6A;
+  --discovery-from: #D8D0C4;
+  --discovery-to: #A89880;
+
+  /* Typography */
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Layout */
+  --max-width: 1200px;
+  --bar-height: 0px; /* announcement marquee removed */
+  --nav-height: 84px;
+  --total-top: calc(var(--bar-height) + var(--nav-height));
+}

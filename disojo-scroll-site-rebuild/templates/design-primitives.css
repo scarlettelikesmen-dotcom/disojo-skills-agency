@@ -1,0 +1,64 @@
+/* Editorial primitives: pill + text links, display title, label, shared gutter. Add after your :root tokens. */
+.pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.85rem 1rem 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: #121210;
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.pill-link:hover { background: #2a2a26; }
+.pill-link:active { transform: scale(0.97); }
+.pill-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.pill-link-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+}
+.pill-link--light { background: var(--cream); color: #121210; }
+.pill-link--light:hover { background: #e9e1d5; }
+.pill-link--light:focus-visible { outline-color: var(--cream); }
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: inherit;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid currentColor;
+  transition: opacity 0.2s ease;
+}
+.text-link:hover { opacity: 0.6; }
+.text-link:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+
+.ed-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.ed-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.ed-gutter { padding-left: clamp(20px, 3.4vw, 56px); padding-right: clamp(20px, 3.4vw, 56px); }

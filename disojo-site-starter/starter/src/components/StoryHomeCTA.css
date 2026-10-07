@@ -1,0 +1,19 @@
+.story-line {
+  padding-top: clamp(120px, 18vh, 200px);
+  padding-bottom: clamp(120px, 18vh, 200px);
+  background: var(--color-bg);
+  color: var(--ink);
+}
+
+.story-line-label { color: var(--color-text-muted); margin: 0 0 2rem; }
+
+.story-line-quote {
+  max-width: 18ch;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5.6vw, 5.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  margin: 0 0 3rem;
+  text-wrap: balance;
+}

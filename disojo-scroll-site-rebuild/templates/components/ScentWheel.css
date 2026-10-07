@@ -1,0 +1,139 @@
+/* Pinned for ~4 extra screens of scroll: enough to turn the wheel through all
+   8 slots (4 scents x 2) at a readable pace. */
+.scent-wheel {
+  position: relative;
+  height: 420vh;
+  background: var(--sw-bg);
+  transition: background-color 0.6s ease;
+}
+
+.scent-wheel-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  /* clip, not hidden: a hidden container can still be scrolled by focus/click,
+     which shoved the whole stage up 358px when a bottle button got focus */
+  overflow: clip;
+  color: var(--sw-ink);
+}
+
+/* Stamp plinth: centred, top edge at ~62% of the screen, running off the bottom. */
+.scent-wheel-plinth {
+  position: absolute;
+  left: 50%;
+  top: 62vh;
+  width: min(86vw, 120vh, 760px);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  color: var(--cream);
+}
+
+.scent-wheel-stamp,
+.scent-wheel-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.scent-wheel-stamp rect:first-of-type { transition: fill 0.6s ease; }
+
+.scent-wheel-ring {
+  fill: var(--cream);
+  font-family: var(--font-serif);
+  font-size: 40px;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+  will-change: transform;
+}
+
+/* Bottles: positioned every frame from JS (transform only). */
+.scent-wheel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* proportions of the real bottle cut-outs (359x1500) */
+  width: 15.5vh;
+  aspect-ratio: 359 / 1500;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  will-change: transform;
+  filter: drop-shadow(0 28px 32px rgba(30, 20, 10, 0.22));
+  transition: opacity 0.3s ease;
+}
+
+.scent-wheel-item:focus-visible { outline: 2px solid var(--sw-ink); outline-offset: 6px; border-radius: 12px; }
+
+.bottle-art { display: block; width: 100%; height: 100%; object-fit: contain; }
+
+.scent-wheel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(3vh + 22px);
+  text-align: center;
+  color: var(--cream);
+  z-index: 200;
+  pointer-events: none;
+}
+
+.scent-wheel-name {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  letter-spacing: -0.015em;
+  line-height: 1;
+  margin: 0 0 0.5rem;
+}
+
+.scent-wheel-meta {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 0 0 1rem;
+}
+
+.scent-wheel-view {
+  pointer-events: auto;
+  background: none;
+  color: inherit;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0 0 3px;
+  border-bottom: 1.5px solid currentColor;
+}
+
+.scent-wheel-view:hover { opacity: 0.7; }
+.scent-wheel-view:focus-visible { outline: 2px solid var(--cream); outline-offset: 4px; }
+
+.scent-wheel-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.7;
+  z-index: 200;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .scent-wheel-item { width: 13vh; }
+  .scent-wheel-plinth { top: 60vh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scent-wheel { height: 140vh; }
+  .scent-wheel-ring { will-change: auto; }
+}

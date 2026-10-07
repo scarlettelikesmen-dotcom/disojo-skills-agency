@@ -1,0 +1,26 @@
+/* Inner pages share one header pattern: big serif title, small label, generous top padding for the fixed nav. */
+.page { padding-top: calc(var(--nav-height) + clamp(48px, 9vh, 110px)); padding-bottom: clamp(80px, 12vh, 150px); min-height: 70vh; }
+.page-head { display: grid; gap: 1rem; margin-bottom: clamp(40px, 7vh, 88px); max-width: 60rem; }
+.page-head .ed-title { font-size: clamp(2.6rem, 6vw, 5.6rem); }
+.page-lead { margin: 0; font-family: var(--font-serif); font-size: clamp(1.2rem, 2vw, 1.7rem); line-height: 1.4; max-width: 44rem; color: var(--ink); }
+
+.shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: clamp(20px, 2.4vw, 36px); }
+
+.about-body { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 6vw, 112px); align-items: start; }
+.about-body p { margin: 0 0 1.25rem; line-height: 1.7; max-width: 58ch; color: var(--color-text-muted); }
+.about-values { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(43, 43, 43, 0.16); }
+.about-values li { padding: 1.4rem 0; border-bottom: 1px solid rgba(43, 43, 43, 0.16); }
+.about-values h3 { margin: 0 0 0.4rem; font-family: var(--font-serif); font-weight: 400; font-size: 1.4rem; }
+.about-values p { margin: 0; font-size: 0.95rem; }
+
+.contact-body { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 112px); }
+.contact-details { display: grid; gap: 1.25rem; align-content: start; }
+.contact-details a { display: block; font-family: var(--font-serif); font-size: 1.4rem; width: fit-content; border-bottom: 1px solid transparent; }
+.contact-details a:hover { border-bottom-color: currentColor; }
+.contact-form { display: grid; gap: 1.25rem; }
+.contact-form label { display: grid; gap: 0.4rem; }
+.contact-form input, .contact-form textarea { padding: 0.9rem 0; border: 0; border-bottom: 1px solid rgba(43, 43, 43, 0.3); background: transparent; font: inherit; color: inherit; outline: none; }
+.contact-form input:focus, .contact-form textarea:focus { border-bottom-color: var(--ink); }
+.contact-form .pill-link { justify-self: start; }
+
+@media (max-width: 860px) { .about-body, .contact-body { grid-template-columns: 1fr; } }

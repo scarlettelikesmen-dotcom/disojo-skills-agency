@@ -1,0 +1,6 @@
+# never upload local secrets (Gemini key) or raw source footage
+.env*
+*.local
+src/assets/hero-source.mp4
+node_modules
+dist

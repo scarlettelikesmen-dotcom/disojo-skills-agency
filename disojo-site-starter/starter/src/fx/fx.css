@@ -1,0 +1,30 @@
+/* split words */
+.fx-split-word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em; }
+.fx-split-word > span { display: inline-block; transform: translateY(108%); transition: transform 0.95s cubic-bezier(0.22, 1, 0.36, 1); transition-delay: var(--d, 0ms); }
+.fx-split.is-in .fx-split-word > span { transform: none; }
+.fx-split-line { display: block; }
+
+.fx-counter { font-variant-numeric: tabular-nums; }
+
+/* video scrub */
+.fx-scrub { position: relative; background: #0b0b0a; color: var(--cream); }
+.fx-scrub-stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: clip; }
+.fx-scrub video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fx-scrub-copy { position: absolute; inset: 0; display: grid; align-content: end; padding: clamp(20px, 3.4vw, 56px); }
+
+/* pinned row */
+.fx-pinned { position: relative; }
+.fx-pinned-stage { position: sticky; top: 0; height: 100vh; height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: clamp(24px, 5vh, 56px); padding-top: var(--nav-height); overflow: clip; }
+.fx-pinned-row { display: flex; gap: clamp(12px, 1.6vw, 24px); will-change: transform; }
+.fx-pinned-row > * { flex: 0 0 min(70vw, 560px); }
+.fx-pinned-row img { width: 100%; height: min(52vh, 480px); object-fit: cover; display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .fx-pinned-stage { position: static; height: auto; padding: 4rem 0; }
+  .fx-pinned-row { overflow-x: auto; will-change: auto; }
+  .fx-split-word > span { transform: none; transition: none; }
+}
+
+/* consent card */
+.fx-consent { position: fixed; left: 16px; bottom: 16px; z-index: 8000; max-width: 320px; padding: 1rem 1.1rem; background: var(--cream); color: var(--ink); border: 1px solid rgba(43, 43, 43, 0.15); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12); display: grid; gap: 0.8rem; font-size: 0.85rem; }
+.fx-consent p { margin: 0; line-height: 1.5; }
+.fx-consent div { display: flex; gap: 1rem; align-items: center; justify-content: flex-end; }

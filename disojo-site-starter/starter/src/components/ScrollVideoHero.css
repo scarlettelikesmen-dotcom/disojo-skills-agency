@@ -1,0 +1,138 @@
+/* The hero is 320vh tall so there's real scroll distance to scrub through one full
+   turn of the bottle — the stage inside it is pinned to the viewport the whole way. */
+.scroll-video-hero {
+  position: relative;
+  height: 320vh;
+}
+
+.scroll-video-hero-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #efe4d3; /* matches the studio backdrop while frames load */
+}
+
+.scroll-video-hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.scroll-video-hero-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(43, 43, 43, 0.55);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Overlay copy, laid out like a full-bleed editorial hero: an info row across the
+   middle (split around the centred bottle), the statement bottom-left, a hint
+   bottom-right. Horizontal padding matches the nav so everything lines up. */
+.scroll-video-hero-row,
+.scroll-video-hero-statement,
+.scroll-video-hero-hint {
+  position: absolute;
+  color: var(--ink);
+}
+
+.scroll-video-hero-row {
+  left: clamp(20px, 3.4vw, 56px);
+  right: clamp(20px, 3.4vw, 56px);
+  top: 56%;
+  display: grid;
+  /* the empty middle track is where the bottle stands */
+  grid-template-columns: 1fr 1fr 18vw 1fr 1fr;
+  align-items: baseline;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.scroll-video-hero-row > :nth-child(3) { grid-column: 4; }
+
+.scroll-video-hero-cta {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 0 4px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  border-bottom: 1.5px solid currentColor;
+  transition: opacity 0.2s ease;
+}
+
+.scroll-video-hero-cta:hover { opacity: 0.6; }
+.scroll-video-hero-cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+.scroll-video-hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+}
+
+.scroll-video-hero-statement {
+  left: clamp(20px, 3.4vw, 56px);
+  bottom: clamp(28px, 5vh, 56px);
+  max-width: min(640px, 38vw);
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.scroll-video-hero-hint {
+  right: clamp(20px, 3.4vw, 56px);
+  bottom: clamp(28px, 5vh, 56px);
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Portrait: statement on the wall under the nav, bottle in the lower part, and a
+   compact name + add-to-cart row along the bottom. */
+@media (max-aspect-ratio: 1/1) {
+  .scroll-video-hero { height: 260vh; }
+  .scroll-video-hero-statement {
+    /* nav + the mobile link row that sits under it below 1080px */
+    top: calc(var(--nav-height) + 48px);
+    bottom: auto;
+    right: clamp(20px, 3.4vw, 56px);
+    max-width: none;
+    font-size: clamp(1.5rem, 6.4vw, 2.1rem);
+  }
+  .scroll-video-hero-row {
+    top: auto;
+    bottom: 24px;
+    grid-template-columns: 1fr auto;
+  }
+  .scroll-video-hero-row > :nth-child(1),
+  .scroll-video-hero-row > :nth-child(3) { display: none; }
+  .scroll-video-hero-hint { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-video-hero { height: auto; }
+  .scroll-video-hero-stage { position: relative; height: 100vh; }
+}

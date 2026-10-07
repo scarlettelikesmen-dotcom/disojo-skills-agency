@@ -1,0 +1,95 @@
+.b2b {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 112px);
+  padding-top: clamp(96px, 14vh, 160px);
+  padding-bottom: clamp(96px, 14vh, 160px);
+  background: var(--cream-alt);
+  color: var(--ink);
+}
+
+.b2b-kicker { color: var(--color-text-muted); margin: 0 0 1.5rem; }
+.b2b .ed-title { margin-bottom: 1.5rem; }
+
+.b2b-text {
+  max-width: 40ch;
+  margin: 0 0 3rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.b2b-cases { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(43, 43, 43, 0.16); }
+
+.b2b-cases li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.16);
+}
+
+.b2b-num { color: var(--color-text-muted); padding-top: 0.3rem; }
+.b2b-cases h3 { font-family: var(--font-serif); font-weight: 400; font-size: 1.25rem; margin: 0 0 0.3rem; }
+.b2b-cases p { margin: 0; font-size: 0.92rem; line-height: 1.55; color: var(--color-text-muted); }
+
+/* Form: underline fields, no boxes. */
+.b2b-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 1.75rem;
+  align-content: start;
+}
+
+.b2b-field { display: flex; flex-direction: column; gap: 0.5rem; }
+.b2b-field--wide { grid-column: 1 / -1; }
+
+.b2b-field label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.b2b-field input,
+.b2b-field select,
+.b2b-field textarea {
+  width: 100%;
+  padding: 0.6rem 0;
+  border: 0;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.3);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  outline: none;
+  resize: vertical;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color 0.2s ease;
+}
+
+.b2b-field input:focus,
+.b2b-field select:focus,
+.b2b-field textarea:focus { border-bottom-color: var(--ink); }
+
+.b2b-field input:focus-visible,
+.b2b-field select:focus-visible,
+.b2b-field textarea:focus-visible { box-shadow: 0 1px 0 0 var(--ink); }
+
+.b2b-submit { grid-column: 1 / -1; justify-self: start; margin-top: 0.5rem; }
+
+.b2b-sent h3 { font-family: var(--font-serif); font-weight: 400; font-size: 2rem; margin: 0 0 1rem; }
+.b2b-sent p { max-width: 44ch; line-height: 1.6; color: var(--color-text-muted); margin: 0 0 1.5rem; }
+.b2b-sent .text-link { color: var(--ink); text-transform: none; letter-spacing: 0; font-size: inherit; font-weight: 500; }
+.b2b-again { background: none; border: 0; border-bottom: 1.5px solid currentColor; cursor: pointer; }
+
+@media (max-width: 860px) {
+  .b2b { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .b2b-form { grid-template-columns: 1fr; }
+}

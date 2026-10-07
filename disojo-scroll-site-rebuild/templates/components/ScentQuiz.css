@@ -1,0 +1,143 @@
+/* Sits between the wheel and the story. The background drifts toward whichever scent is
+   leading while you answer; blend/reveal styles live in QuizReveal.css. */
+.quiz {
+  --q-bg: var(--cream-alt);
+  --q-ink: var(--ink);
+  --q-accent: var(--ink);
+  --qe: cubic-bezier(0.22, 1, 0.36, 1);      /* expo-out: fast start, long soft landing */
+  --qe-in: cubic-bezier(0.64, 0, 0.78, 0);   /* exits accelerate away */
+  position: relative;
+  overflow: clip;
+  background: var(--q-bg);
+  color: var(--q-ink);
+  padding-top: clamp(80px, 12vh, 140px);
+  padding-bottom: clamp(80px, 12vh, 140px);
+  min-height: min(100svh, 900px);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.9s var(--qe), color 0.6s ease;
+}
+
+.quiz .ed-title:focus { outline: none; }
+
+.quiz-card {
+  width: 100%;
+  min-height: clamp(360px, 48vh, 480px); /* fixed stage: no height jump between questions */
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 6vw, 112px);
+  align-items: center;
+}
+
+.quiz-side { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+.quiz-kicker { opacity: 0.7; margin: 0; }
+.quiz-heading { font-size: clamp(2rem, 3.8vw, 3.4rem); min-height: 2.1em; }
+
+/* heading: each word rises out of its own mask */
+.qw { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em; }
+.qw > span {
+  display: inline-block;
+  transition: transform 0.45s var(--qe-in), opacity 0.35s ease;
+  transition-delay: calc(var(--i) * 25ms + 120ms);
+  animation: qw-in 0.95s var(--qe) backwards;
+  animation-delay: calc(var(--i) * 70ms + 80ms);
+}
+@keyframes qw-in { from { transform: translateY(108%); } }
+.is-leaving .qw > span { transform: translateY(-108%); }
+
+/* progress: four segments that fill with the answers */
+.quiz-progress { width: min(100%, 340px); display: grid; gap: 0.9rem; margin-top: 0.75rem; }
+.quiz-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.quiz-bar i {
+  height: 2px;
+  background: currentColor;
+  transform-origin: left;
+  transition: transform 0.8s var(--qe);
+  box-shadow: 0 0 0 0 transparent;
+}
+.quiz-bar { position: relative; }
+.quiz-bar::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, currentColor 0 calc(25% - 6px), transparent calc(25% - 6px) 25%); opacity: 0.18; height: 2px; }
+.quiz-bar i { position: relative; }
+.quiz-count { margin: 0; display: flex; gap: 1.5rem; align-items: center; opacity: 0.7; }
+
+/* options: slide in on a stagger; on answer the chosen row fills and the rest slip away */
+.quiz-options { list-style: none; margin: 0; padding: 0; border-top: 1px solid color-mix(in srgb, currentColor 22%, transparent); }
+.quiz-options li {
+  position: relative;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  transition: opacity 0.35s ease, transform 0.45s var(--qe-in);
+  transition-delay: calc(var(--i) * 40ms);
+  animation: qo-in 0.9s var(--qe) backwards;
+  animation-delay: calc(var(--i) * 80ms + 280ms);
+}
+@keyframes qo-in { from { opacity: 0; transform: translateX(34px); } }
+.is-leaving .quiz-options li { opacity: 0; transform: translateX(-26px); }
+/* the chosen row holds for a beat, then follows the others out */
+.is-leaving .quiz-options li.is-picked { opacity: 1; transform: none; transition-delay: 0s; animation: qo-out 0.3s var(--qe-in) 0.3s forwards; }
+.is-leaving .quiz-options li.is-picked .quiz-option-text { transform: translateX(14px); }
+@keyframes qo-out { to { opacity: 0; transform: translateX(-26px); } }
+
+/* the fill that sweeps across the chosen row */
+.quiz-options li::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0.09;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--qe);
+  pointer-events: none;
+}
+.quiz-options li.is-picked::before { transform: scaleX(1); }
+
+.quiz-option {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.5rem 0.75rem 1.5rem 0;
+  min-height: 44px;
+  background: none;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  transition: padding-left 0.5s var(--qe);
+}
+.quiz-option-text { font-size: clamp(1.3rem, 2vw, 1.8rem); letter-spacing: -0.01em; line-height: 1.2; transition: transform 0.5s var(--qe); }
+.quiz-num { opacity: 0.5; }
+.quiz-arrow { opacity: 0; transform: translateX(-10px); transition: opacity 0.35s ease, transform 0.5s var(--qe); font-family: var(--font-sans); }
+.quiz-option:hover, .quiz-option:focus-visible { padding-left: 0.9rem; }
+.quiz-option:hover .quiz-arrow, .quiz-option:focus-visible .quiz-arrow,
+.is-picked .quiz-arrow { opacity: 1; transform: none; }
+.quiz-option:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
+.quiz-option:disabled { cursor: default; }
+
+.quiz-inline {
+  background: none;
+  border: 0;
+  padding: 0 0 2px;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  border-bottom: 1.5px solid currentColor;
+  cursor: pointer;
+}
+.quiz-inline:hover { opacity: 0.6; }
+.quiz-inline:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+@media (max-width: 860px) {
+  .quiz-card { grid-template-columns: 1fr; min-height: 0; }
+  .quiz-heading { min-height: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz, .quiz-option, .quiz-arrow, .quiz-bar i, .quiz-options li::before { transition: none; }
+  .qw > span, .quiz-options li, .is-leaving .quiz-options li.is-picked { animation: none; }
+  .is-leaving .qw > span, .is-leaving .quiz-options li { transition-duration: 0.01s; }
+}

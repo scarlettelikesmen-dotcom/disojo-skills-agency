@@ -1,0 +1,62 @@
+.collection {
+  padding: clamp(96px, 14vh, 160px) clamp(20px, 3.4vw, 56px);
+  background: var(--color-bg);
+}
+
+/* Left-aligned editorial header, same gutter as the nav and hero overlay. */
+.collection-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(40px, 6vh, 72px);
+}
+
+.collection-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.collection-meta {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+  padding-bottom: 0.6rem;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 1.6vw, 28px);
+}
+
+@media (max-width: 1024px) {
+  .collection-grid { grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
+}
+
+/* Phones: a swipeable row instead of four full-width cards stacked down the page. */
+@media (max-width: 640px) {
+  .collection-head { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .collection-meta { padding-bottom: 0; }
+  .collection-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: clamp(20px, 3.4vw, 56px); /* snap to the gutter, not the screen edge */
+    margin: 0 calc(-1 * clamp(20px, 3.4vw, 56px));
+    padding: 0 clamp(20px, 3.4vw, 56px) 8px;
+    scrollbar-width: none;
+  }
+  .collection-grid::-webkit-scrollbar { display: none; }
+  .collection-grid > * { flex: 0 0 78%; scroll-snap-align: start; }
+}

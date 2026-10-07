@@ -1,0 +1,58 @@
+/* Page-transition curtain. Sits above everything (nav, cart, modals) but below the cursor glow. */
+.curtain {
+  --ce: cubic-bezier(0.76, 0, 0.24, 1);
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  pointer-events: none;
+  overflow: hidden;
+  visibility: hidden;
+}
+.curtain.is-closing, .curtain.is-closed, .curtain.is-opening { visibility: visible; }
+.curtain.is-closing, .curtain.is-closed { pointer-events: all; } /* swallow clicks mid-transition */
+
+.curtain-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50.5%; /* a hair of overlap so no seam shows when closed */
+  background:
+    linear-gradient(90deg, rgba(247, 244, 239, 0.05), rgba(247, 244, 239, 0) 1.5px),
+    repeating-linear-gradient(90deg, rgba(247, 244, 239, 0.035) 0 3px, rgba(0, 0, 0, 0.22) 3px 5px, rgba(247, 244, 239, 0) 5px 64px),
+    #141412;
+  will-change: transform;
+}
+.curtain-panel--l { left: 0; transform: translate3d(-101%, 0, 0); box-shadow: 18px 0 40px rgba(0, 0, 0, 0.35); }
+.curtain-panel--r { right: 0; transform: translate3d(101%, 0, 0); box-shadow: -18px 0 40px rgba(0, 0, 0, 0.35); }
+
+.is-closing .curtain-panel--l { animation: cu-in-l 0.85s var(--ce) both; }
+.is-closing .curtain-panel--r { animation: cu-in-r 0.85s var(--ce) both; }
+.is-closed .curtain-panel--l, .is-closed .curtain-panel--r { transform: none; }
+.is-opening .curtain-panel--l { animation: cu-out-l 1.05s var(--ce) both; }
+.is-opening .curtain-panel--r { animation: cu-out-r 1.05s var(--ce) both; }
+@keyframes cu-in-l  { from { transform: translate3d(-101%, 0, 0); } to { transform: none; } }
+@keyframes cu-in-r  { from { transform: translate3d(101%, 0, 0); }  to { transform: none; } }
+@keyframes cu-out-l { from { transform: none; } to { transform: translate3d(-101%, 0, 0); } }
+@keyframes cu-out-r { from { transform: none; } to { transform: translate3d(101%, 0, 0); } }
+
+/* destination name: appears as the panels meet, lifts away as they part */
+.curtain-mark {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 1rem;
+  color: var(--cream);
+  text-align: center;
+  opacity: 0;
+}
+.curtain-kicker { opacity: 0.6; }
+.curtain-title { font-family: var(--font-serif); font-size: clamp(2.6rem, 8vw, 7rem); line-height: 1; letter-spacing: -0.03em; }
+.is-closing .curtain-mark { animation: cu-mark-in 0.55s ease 0.5s both; }
+.is-closed .curtain-mark { opacity: 1; }
+.is-opening .curtain-mark { animation: cu-mark-out 0.5s ease both; }
+@keyframes cu-mark-in  { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes cu-mark-out { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(-14px); } }
+
+@media (prefers-reduced-motion: reduce) { .curtain { display: none; } }
