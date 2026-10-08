@@ -1,0 +1,6 @@
+* { box-sizing: border-box; margin: 0; } body { font-family: system-ui, sans-serif; }
+.demo { height: 100vh; display: grid; grid-template-rows: auto 1fr auto; padding: 24px; transition: background .5s, color .5s; }
+.stage { min-height: 0; } .controls { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; padding-top: 12px; }
+button { font: inherit; padding: 8px 16px; border: 1.5px solid currentColor; border-radius: 99px; background: transparent; color: inherit; cursor: pointer; margin-right: 8px; text-transform: capitalize; }
+button.on { background: currentColor; } button.on { color: inherit; mix-blend-mode: normal; box-shadow: inset 0 0 0 99px rgba(255,255,255,.25); }
+.scroll { position: relative; transition: background .5s, color .5s; } .sticky { position: sticky; top: 0; height: 100vh; padding: 24px; display: grid; grid-template-rows: auto 1fr; }

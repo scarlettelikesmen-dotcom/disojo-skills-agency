@@ -145,3 +145,10 @@ on https://www.on.energy/
   weight=13KB req=405 byType={'Document': 0, 'Stylesheet': 0, 'Image': 11, 'Script': 1, 'Other': 0, 'Media': 0, 'Font': 0, 'Manifest': 0, 'XHR': 1, 'Fetch': 0}
   errs []
 ```
+
+## Asset pipeline findings (2026-10-08, verified by downloading the files)
+- ciaoenergy.com (built by agency SKAALD per Webflow showcase) and palmo.co.in load the **byte-identical** `can.glb` (md5 d3de265a5a20dc62378794162a428a3c, 162,956 bytes, 3 meshes Shell/Bottom/Top, 3,918 vertices, materials "Etiquette" + "Metal", no embedded textures). One generic can template, shared by two unrelated brands: almost certainly a stock/template model (source unknown).
+- Ciao flavours = six flat label textures (AVIF, 188-247 KB each: `ciao-energy_texture_<flavour>.avif`) swapped onto the one can at runtime, plus `hdri2.hdr` (1.4 MB) for reflections, `base.glb` (4 plain metal meshes, no textures), 7 AVIF flavour backgrounds (10-14 KB). Page is Webflow + GSAP/ScrollTrigger + one fixed WebGL canvas.
+- Palmo coconut: 13.6k vertices, two 1024 PNG textures (colour + normal), halves + "milk" as separate nodes animated in code.
+- agrumeafarm.it jars: flat per-flavour `*_result.webp` (about 45-56 KB) from Prismic CMS, same jar angle and lighting for every flavour; tilt/blur is done in code. Whether they are renders or photo composites cannot be proven from the files.
+- Lesson: realism comes from lighting (HDRI), PBR materials and label art, not polygon count. Packaged goods = template mesh + client's label artwork (ask for the dieline / print PDF, not photos).

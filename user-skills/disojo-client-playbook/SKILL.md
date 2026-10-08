@@ -21,6 +21,9 @@ Tejjomay sends assets, work starts immediately and nothing gets invented.
 | 8 | Launch gate, checkout and form wiring, real-device test, handover | `disojo-launch-checklist` |
 | 9 | Push to a remote, deploy a public demo or the client's domain | `disojo-scroll-site-rebuild/scripts/deploy_public.sh` |
 
+## Product 3D? Pick the route first
+Packaged goods (cans, jars, bottles, boxes) -> `disojo-packaged-product-3d` (template model + the client's flat label art, kit included, dieline request to send). Food/organic -> same skill's `references/food-and-other-routes.md`. A real GLB supplied -> `disojo-3d-product-site`.
+
 ## Working agreements (learned the hard way on Postcards)
 - Re-read the client's and Tejjomay's details before generating anything (label wording, camera move, sizes). Wrong outputs cost more than slow ones.
 - Do a whole section, verify it, then show it. No stream of small check-ins.

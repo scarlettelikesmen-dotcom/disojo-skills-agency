@@ -5,6 +5,8 @@ description: Build scroll-driven 3D product-hero websites (one hero object, came
 
 # Disojo 3D Product Site
 
+> Packaged goods (can/jar/bottle/box) have a faster, tested route: see `disojo-packaged-product-3d` (template + label art, runnable kit). Use this skill when a real GLB is supplied or being modelled.
+
 How to build the "one hero object, scroll tells the story" site. Written from observing three live sites on 2026-10-03. Observations are marked as such; nothing here is a measured benchmark. Read `3d-web-experience` first for R3F, GLB compression and its performance targets; this skill is the page-level recipe on top.
 
 ## What the reference sites do (observed)
