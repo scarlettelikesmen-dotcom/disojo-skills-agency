@@ -13,4 +13,4 @@ proprietary license terms, personal use only) and a Postcards example config wit
 
 New Mac: `git clone https://github.com/scarlettelikesmen-dotcom/disojo-skills-agency.git ~/disojo-skills-backup && rsync -a ~/disojo-skills-backup/user-skills/ ~/.claude/skills/`
 (needs access to that GitHub account), then restart Claude Code. Full list: `INVENTORY.md`.
-Memory notes are in `user-skills/disojo-memory-backup/` (restore script included). NOT in this repo: `~/.claude/CLAUDE.md` (kept out on purpose), raw assets. The Postcards code is in its own repo (disojo-solutions/postcards-perfumes-web).
+Memory notes are in `user-skills/disojo-memory-backup/` (restore script included). CLAUDE.md and settings.json are in `claude-config/`. Client website code is on branch `archive-client-code`. NOT here: logins/keys. The Postcards code is in its own repo (disojo-solutions/postcards-perfumes-web).

@@ -15,6 +15,14 @@ echo "snapshot: $(ls "$SKILL/references/memory" | wc -l) files"
 
 [ -d "$REPO/.git" ] || { echo "Desktop repo missing ($REPO): snapshot saved in the skill only"; exit 0; }
 rsync -a --exclude node_modules --exclude dist --exclude .DS_Store "$HOME/.claude/skills/" "$REPO/user-skills/"
+# Master context (CLAUDE.md) and Claude Code settings ride along (Tejjomay approved 2026-10-09). Secret-scanned first.
+mkdir -p "$REPO/claude-config"
+for f in CLAUDE.md settings.json; do
+  if [ -f "$HOME/.claude/$f" ]; then
+    if grep -qE "github_pat_|ghp_[A-Za-z0-9]{20}|AIza[0-9A-Za-z_-]{20,}|sk-ant-|shpat_|storefrontAccessToken" "$HOME/.claude/$f"; then echo "ABORT: secret-looking string in ~/.claude/$f"; exit 1; fi
+    cp "$HOME/.claude/$f" "$REPO/claude-config/$f"
+  fi
+done
 cd "$REPO"
 git add -A
 if git diff --cached --quiet; then echo "nothing new to commit"; exit 0; fi

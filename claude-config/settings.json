@@ -1,0 +1,17 @@
+{
+  "enabledPlugins": {
+    "vercel-plugin@vercel-vercel-plugin": true
+  },
+  "extraKnownMarketplaces": {
+    "vercel-vercel-plugin": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/tejjo/.cache/plugins/github.com-vercel-vercel-plugin"
+      }
+    }
+  },
+  "skipWorkflowUsageWarning": true,
+  "theme": "light",
+  "agentPushNotifEnabled": true,
+  "switchModelsOnFlag": false
+}

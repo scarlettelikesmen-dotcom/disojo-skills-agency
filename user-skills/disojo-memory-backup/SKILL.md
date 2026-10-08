@@ -26,4 +26,4 @@ Desktop repo, commits and pushes. Prints what changed. The repo must stay PRIVAT
 See `RECOVERY.md` (also at the repo root): what is covered, the new-Mac steps, and the known gaps (client code, CLAUDE.md, logins).
 
 ## What is deliberately NOT here
-`~/.claude/CLAUDE.md` (master context) is kept out of git by Tejjomay's choice. Secrets never go in memory: the backup script refuses if it sees one.
+`CLAUDE.md` and `settings.json` ARE backed up now (repo folder `claude-config/`, approved 2026-10-09). Secrets never go in memory: the backup script refuses if it sees one.
