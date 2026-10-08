@@ -39,3 +39,6 @@ Tested only in headless Chrome and a desktop browser so far: plan a real-phone c
 
 ## Design must be new for every client (hard rule, learned on Mochi & Midori)
 The starter is Postcards generalised: use it for plumbing (Lenis, loader store, build + meta scripts, smoke test) and **never ship its look**. Before writing UI, decide and state in one line: palette, type pairing, nav pattern, hero choreography, section set, page transition, footer. Reference build with a deliberately different identity: `~/Desktop/websites ARCHIVE/mochi-midori/site` (circle opens onto the film, full-screen colour chapters with plated cut-outs via rembg, corner nav + full-screen menu, allergen chart instead of FAQ, ticket footer, circle-wipe transition). Do not copy that one either. Measured lessons: a 200 KB Google Fonts CSS (Japanese font) dropped mobile Lighthouse to 57; subset with `&text=` and preload the LCP poster to reach 96. Procedural 3D food looked cheap; prefer real photography.
+
+## Premium non-3D brand/agency site? Use the method that produced Ascender Media
+`disojo-premium-site-method` (read design skills in order, concept-specific identity, illustrative craft demos, pinned sections with fallbacks, verification gates, preview then production). Reference implementation in its `kit/`; live https://www.ascendermedia.in.

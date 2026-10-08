@@ -1,0 +1,41 @@
+.proof { position: relative; padding-block: clamp(88px, 12vw, 160px); }
+.proof .head { max-width: none; }
+.proof .head h2 { font-size: clamp(2.25rem, 4.8vw, 4.1rem); }
+.proof .head p { margin-top: 20px; color: var(--mute); max-width: 44ch; font-size: clamp(1rem, 1.5vw, 1.1875rem); }
+.viewport { margin-top: clamp(32px, 5vw, 56px); overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; padding-inline: var(--gutter); }
+.viewport::-webkit-scrollbar { display: none; }
+.track { display: flex; gap: clamp(16px, 2vw, 28px); width: max-content; padding-right: var(--gutter); }
+.chat { flex: none; scroll-snap-align: start; display: grid; gap: 12px; align-content: start; }
+.chat .bezel { display: block; width: 100%; padding: var(--r-bezel); cursor: zoom-in; transition: transform 0.5s var(--ease-press), border-color 0.3s var(--ease-out); }
+.chat .core { display: block; background: #0b0c0c; }
+.chat:not(.end) { width: min(calc(var(--ch, min(58dvh, 440px)) * var(--ar) + 14px), 84vw); }
+.chat img { width: 100%; height: auto; }
+.chat .bezel:active { transform: scale(0.985); }
+.chat .who { display: flex; justify-content: space-between; align-items: baseline; padding-inline: 8px; }
+.chat .who b { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; font-size: 1.25rem; }
+.chat .who .mono { font-size: 0.75rem; color: var(--dim); }
+.chat.last { width: min(78vw, 340px); align-content: center; }
+.endcard { display: grid; gap: 24px; padding: 8px; }
+.endcard p { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.03em; line-height: 1.12; font-size: clamp(1.5rem, 2.4vw, 2rem); text-wrap: balance; }
+.endcard .btn { justify-self: start; }
+@media (hover: hover) and (pointer: fine) { .chat .bezel:hover { border-color: var(--line-2); } }
+
+/* pinned desktop mode: a tall section, a sticky viewport, the track translated by script */
+.proof.is-pinned { padding-block: 0; }
+.proof.is-pinned .pin { position: sticky; top: 0; height: 100dvh; display: flex; flex-direction: column; justify-content: center; padding-block: 92px 104px; overflow: clip; }
+.proof.is-pinned .viewport { overflow: visible; margin-top: clamp(20px, 3vh, 40px); }
+.proof.is-pinned .track { will-change: transform; }
+.proof.is-pinned { --ch: min(calc(100dvh - 450px), 520px); }
+.proof.is-pinned .chat.last { width: min(26vw, 340px); }
+
+/* lightbox */
+.lightbox { width: min(94vw, 760px); max-height: 94dvh; padding: 0; border: 0; background: transparent; color: var(--bone); overflow: visible; }
+.lightbox::backdrop { background: rgba(5, 5, 6, 0.86); backdrop-filter: blur(8px); }
+.lightbox[open] { animation: lb 0.45s var(--ease-out); }
+@keyframes lb { from { opacity: 0; transform: translateY(14px) scale(0.97); } to { opacity: 1; transform: none; } }
+.lb-inner { position: relative; display: grid; gap: 12px; justify-items: center; }
+.lb-inner img { width: auto; max-width: 100%; max-height: calc(94dvh - 70px); border-radius: 22px; border: 1px solid var(--line-2); box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.9); }
+.lb-inner .mono { color: var(--mute); font-size: 0.8125rem; }
+.lb-x { position: absolute; top: -8px; right: -8px; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-2); background: rgba(16, 16, 18, 0.92); cursor: pointer; transition: transform 0.35s var(--ease-press); }
+.lb-x:active { transform: scale(0.94); }
+@media (max-width: 760px) { .lb-x { top: 6px; right: 6px; } }

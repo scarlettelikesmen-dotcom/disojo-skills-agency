@@ -1,0 +1,22 @@
+.d-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(14px, 2vw, 24px); margin-top: clamp(40px, 6vw, 72px); }
+.d-card .bezel { height: 100%; }
+.d-card .core { height: 100%; padding: clamp(24px, 3vw, 44px); }
+.d-card h3 { font-size: clamp(1.5rem, 2.4vw, 2.1rem); margin-bottom: clamp(24px, 3vw, 40px); }
+.d-card.d-a { grid-column: 1 / span 7; }
+.d-card.d-b { grid-column: 8 / span 5; grid-row: 1 / span 2; }
+.d-card.d-c { grid-column: 1 / span 7; }
+dt { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; font-size: 1.1875rem; line-height: 1.2; }
+dd { margin-top: 6px; color: var(--mute); font-size: 1rem; max-width: 34ch; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 32px; }
+.stack { display: grid; gap: 26px; }
+.stack dd { max-width: 52ch; }
+.d-card.d-b .core { background: linear-gradient(170deg, #1d1410 0%, var(--ink-2) 62%); box-shadow: inset 0 1px 0 rgba(255, 140, 90, 0.18), 0 24px 48px -28px rgba(0, 0, 0, 0.8); }
+.flow { display: grid; gap: 34px; }
+.flow li { display: grid; grid-template-columns: 3.2ch 1fr; gap: 14px; }
+.flow .n { color: var(--safe); font-size: 0.8125rem; padding-top: 5px; }
+.flow b { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; font-size: 1.3125rem; line-height: 1.2; display: block; }
+.flow p { margin-top: 8px; color: var(--mute); max-width: 36ch; }
+@media (max-width: 900px) {
+  .d-card.d-a, .d-card.d-b, .d-card.d-c { grid-column: 1 / -1; grid-row: auto; }
+  .two { grid-template-columns: 1fr; gap: 24px; }
+}
