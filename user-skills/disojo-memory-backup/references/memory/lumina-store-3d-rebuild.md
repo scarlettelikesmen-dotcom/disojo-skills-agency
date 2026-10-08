@@ -20,3 +20,7 @@ The reusable recipe is the skill `~/.claude/skills/disojo-scroll-site-rebuild` (
 
 **Why:** user wants a finished, shareable showpiece to sign clients at 10-20k, and to skip this whole process next time.
 **How to apply:** for a new client site of this type, invoke the skill first; do not re-derive. Keep the user's preferences: finish whole sections before showing, never invent content, state placeholders plainly.
+
+
+## Went live (2026-10-09)
+The rebuild (branch `3d-rebuild`, commit e97eceb on disojo-solutions/postcards-perfumes-web) is deployed to the Vercel project `lumina-store` (scarlettelikesmen-dotcom team), which owns postcardsperfumes.in / www.postcardsperfumes.in. Rollback target (previous production): `lumina-store-dno28zw8a`. Founder verified the testimonials; the only official email is care@postcardsperfumes.in. Dead `src/shopifyClient.js` + `fetchProducts.js` (Shopify storefront token) and the `shopify-buy` dependency were removed; checkout is the cart permalink `https://checkout.postcardsperfumes.in/cart/<id>:<qty>` and was left untouched. `.env.local` (Gemini key) is now git-ignored. TODO for Tejjomay: rotate the Shopify storefront token (still in git history) and the Gemini key. The separate demo project `postcards-rebuild-demo` is still public and indexable (duplicate content): redirect or remove after the case study. Case study on disojo.in is next.
