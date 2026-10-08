@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KÖNIG & VANDENBERG // Master Architecture & Monolithic Habitats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/OrbitControls.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"DM Mono"', 'monospace'],
+                    },
+                    colors: {
+                        draft: '#F8F7F4',
+                        blueprint: '#0A192F',
+                        cad: '#004B87',
+                        pencil: '#2B2D42',
+                        gridline: '#E5E2DC',
+                        vermilion: '#FF4D2E',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #0A192F; color: #F8F7F4; }
+        .grid-paper {
+            background-color: #F8F7F4;
+            background-image: 
+                linear-gradient(to right, #E8E4DC 1px, transparent 1px),
+                linear-gradient(to bottom, #E8E4DC 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .cad-overlay {
+            mix-blend-mode: multiply;
+        }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-draft text-pencil font-sans antialiased overflow-x-hidden">
+
+    <!-- Top Technical Coordinate Bar -->
+    <header class="border-b border-gridline bg-draft/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-18 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-4">
+                <div class="w-9 h-9 border-2 border-blueprint flex items-center justify-center font-mono font-bold text-blueprint text-sm">
+                    KV
+                </div>
+                <div>
+                    <div class="font-bold tracking-tight text-base text-blueprint uppercase">KÖNIG & VANDENBERG</div>
+                    <div class="font-mono text-[9px] text-gray-500 tracking-wider">SWISS FEDERATION REG. ARCHITECTS // BASEL • ZURICH</div>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 font-mono text-xs uppercase tracking-wider text-pencil/70">
+                <a href="#elevation" class="hover:text-blueprint transition-colors">01 / Elevation Model</a>
+                <a href="#monographs" class="hover:text-blueprint transition-colors">02 / Built Monographs</a>
+                <a href="#solar" class="hover:text-blueprint transition-colors">03 / Solar Physics</a>
+                <a href="#mandate" class="hover:text-blueprint transition-colors">04 / Commission Mandate</a>
+            </nav>
+
+            <a href="#mandate" class="font-mono text-xs uppercase font-medium bg-blueprint text-white px-5 py-2.5 hover:bg-vermilion transition-colors">
+                ACQUIRE MANDATE &rarr;
+            </a>
+        </div>
+    </header>
+
+    <!-- Technical Drawing Hero -->
+    <section class="grid-paper border-b border-gridline pt-20 pb-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-gray-500 border-b border-gridline pb-4 mb-10">
+                <div class="flex items-center space-x-3">
+                    <span class="px-2 py-0.5 bg-blueprint text-white font-medium text-[10px]">PROJECT REF: CH-8700</span>
+                    <span>LAT: 47.3769° N, LONG: 8.5417° E</span>
+                </div>
+                <div>PRECISION STANDARD: <span class="text-blueprint font-bold">SIA 102 / SWISS PASSIVHAUS CERTIFIED</span></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-16">
+                <div class="lg:col-span-8">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-blueprint leading-[0.95] mb-6">
+                        ARCHITECTURE<br>
+                        AS PERMANENT<br>
+                        <span class="text-vermilion">GEOGRAPHY.</span>
+                    </h1>
+                    <p class="text-lg text-pencil/80 max-w-2xl font-normal leading-relaxed">
+                        König & Vandenberg constructs monolithic stone and exposed-aggregate concrete private estates that dialogue with Alpine topography for centuries, not seasons.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-4 font-mono text-xs space-y-4 bg-white/70 p-6 border border-gridline">
+                    <div class="flex justify-between border-b border-gridline pb-2">
+                        <span class="text-gray-500">THERMAL TRANSMITTANCE</span>
+                        <span class="font-bold text-blueprint">U = 0.11 W/(m²K)</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gridline pb-2">
+                        <span class="text-gray-500">SEISMIC SHEAR LOAD</span>
+                        <span class="font-bold text-blueprint">CATEGORY 4 RESILIENT</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gridline pb-2">
+                        <span class="text-gray-500">CANTILEVER PROJECTION</span>
+                        <span class="font-bold text-vermilion">14.80 METERS POST-TENSION</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE BLUEPRINT VS PHOTOGRAPHY VS 3D AXONOMETRIC TOGGLE -->
+            <div id="elevation" class="bg-white border-2 border-blueprint p-6 relative shadow-lg">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-gridline pb-4 mb-6 font-mono text-xs">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-500">VIEW MODE:</span>
+                        <button onclick="setView('axon')" id="btn-view-axon" class="px-3 py-1.5 bg-blueprint text-white font-medium tracking-wide">01 / 3D Axonometric Model</button>
+                        <button onclick="setView('photo')" id="btn-view-photo" class="px-3 py-1.5 bg-draft text-blueprint border border-blueprint">02 / Built Photography</button>
+                        <button onclick="setView('blueprint')" id="btn-view-blueprint" class="px-3 py-1.5 bg-draft text-blueprint border border-blueprint">03 / CAD Schematic</button>
+                    </div>
+                    <div class="flex items-center space-x-4 text-gray-500">
+                        <span id="axon-hud-angle" class="hidden sm:inline text-blueprint font-bold">AZIMUTH: 45° // SOLAR ELEV: 66.5°</span>
+                        <div>MONOGRAPH: <span class="text-blueprint font-bold">VILLA ZÜRICHSEE // KÜSNACHT</span></div>
+                    </div>
+                </div>
+
+                <!-- Main Display with 3D Axonometric / Photo / Blueprint Layers -->
+                <div class="relative aspect-[16/9] overflow-hidden bg-[#F2EFE9] border border-gridline select-none">
+                    <!-- 3D Three.js Axonometric Canvas -->
+                    <div id="axon-canvas-wrap" class="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing" data-lenis-prevent>
+                        <canvas id="axonCanvas" class="w-full h-full block"></canvas>
+                        <div class="absolute bottom-4 left-4 font-mono text-[10px] text-blueprint/70 bg-white/80 border border-gridline px-2.5 py-1 backdrop-blur pointer-events-none">
+                            INTERACTIVE: DRAG TO ROTATE AXONOMETRIC // WHEEL TO ZOOM
+                        </div>
+                    </div>
+
+                    <!-- Built Photography Layer -->
+                    <img id="project-hero-img" 
+                         src="./assets/photo1600585154526990dced4db0d.jpg" 
+                         alt="Villa Zürichsee" 
+                         class="w-full h-full object-cover transition-opacity duration-500 absolute inset-0 opacity-0 pointer-events-none">
+
+                    <!-- Blueprint CAD Blueprint Overlay Layer -->
+                    <div id="blueprint-layer" class="absolute inset-0 bg-[#0C2340] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col justify-between p-8 text-white font-mono text-xs">
+                        <div class="flex justify-between border-b border-white/20 pb-4">
+                            <div>DRAWING NO: KV-ARCH-ELEV-04</div>
+                            <div>SCALE: 1:50 METRIC</div>
+                            <div>STRUCTURAL ENGINEER: BÜRO STEIGER AG</div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-6 text-[11px] text-cyan-300">
+                            <div class="border border-cyan-400/40 p-4">
+                                &uarr; REINFORCED SLAB 350MM<br>
+                                C30/37 LOW-CARBON CONCRETE
+                            </div>
+                            <div class="border border-cyan-400/40 p-4 text-center">
+                                TRIPLE-PANE STRUCTURAL GLAZING<br>
+                                SHGC 0.28 // ACOUSTIC RW 48DB
+                            </div>
+                            <div class="border border-cyan-400/40 p-4 text-right">
+                                GEOTHERMAL DEEP BOREHOLES<br>
+                                6 × 250M PROBES
+                            </div>
+                        </div>
+                        <div class="flex justify-between border-t border-white/20 pt-4 text-white/60 text-[10px]">
+                            <span>APPROVED FOR CONSTRUCTION // CANTON ZURICH BUILDING AUTHORITY</span>
+                            <span>ALL MEASUREMENTS IN MILLIMETERS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solar Geometry Interactive Engine -->
+    <section id="solar" class="py-20 px-6 max-w-7xl mx-auto border-b border-gridline">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5">
+                <span class="font-mono text-xs text-vermilion uppercase tracking-widest block mb-2">// BIOCLIMATIC SIMULATION</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-blueprint mb-6">Passive Solar Shading Dynamics</h2>
+                <p class="text-pencil/80 text-sm leading-relaxed mb-8">
+                    Every König & Vandenberg roof cantilever is mathematically calculated to the local solar zenith. Test how our architectural eaves completely block harsh summer heat while inviting low-angled winter sun deep into the living pavilion.
+                </p>
+
+                <!-- Solar Slider -->
+                <div class="bg-white p-6 border border-gridline font-mono text-xs">
+                    <div class="flex justify-between mb-3">
+                        <span class="text-gray-500">SOLAR DECLINATION:</span>
+                        <span id="season-name" class="font-bold text-blueprint">JUNE 21 (SUMMER SOLSTICE)</span>
+                    </div>
+                    <input type="range" min="1" max="4" value="1" id="solar-slider" class="w-full accent-blueprint cursor-pointer" oninput="updateSolar(this.value)">
+                    <div class="flex justify-between text-[10px] text-gray-400 mt-2">
+                        <span>Summer</span>
+                        <span>Autumn</span>
+                        <span>Winter</span>
+                        <span>Spring</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 bg-white p-8 border border-gridline">
+                <div class="font-mono text-xs text-gray-500 border-b border-gridline pb-3 mb-6 flex justify-between">
+                    <span>SOLAR THERMAL ABSORPTION METRIC</span>
+                    <span class="text-blueprint font-bold">LATITUDE 47°N ANALYSIS</span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 text-center font-mono mb-8">
+                    <div class="p-4 bg-draft border border-gridline">
+                        <span class="text-[10px] text-gray-500 block mb-1">SUN ELEVATION</span>
+                        <span id="sun-angle" class="text-2xl font-bold text-blueprint">66.5°</span>
+                    </div>
+                    <div class="p-4 bg-draft border border-gridline">
+                        <span class="text-[10px] text-gray-500 block mb-1">CANTILEVER SHADE</span>
+                        <span id="shade-coverage" class="text-2xl font-bold text-vermilion">100% SHADED</span>
+                    </div>
+                    <div class="p-4 bg-draft border border-gridline">
+                        <span class="text-[10px] text-gray-500 block mb-1">PASSIVE HVAC LOAD</span>
+                        <span id="hvac-load" class="text-2xl font-bold text-blueprint">0.0 kW (ZERO AC)</span>
+                    </div>
+                </div>
+
+                <div class="text-xs text-pencil/70 leading-relaxed font-sans">
+                    By projecting an 8.4-meter concrete cantilever at a 14° downwards pitch, glass facades receive 0% direct solar radiation during peak August heatwaves, maintaining 21.5°C indoor temperature without conventional air conditioning chillers.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Works Monographs -->
+    <section id="monographs" class="py-24 px-6 max-w-7xl mx-auto border-b border-gridline">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+                <span class="font-mono text-xs text-vermilion uppercase tracking-widest block mb-2">// SELECTED MONOGRAPHS</span>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-blueprint">ARCHITECTURAL WORKS</h2>
+            </div>
+            <div class="font-mono text-xs text-gray-500 mt-4 md:mt-0">
+                SWITZERLAND • GERMANY • AUSTRIA
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white border border-gridline group overflow-hidden">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="./assets/photo16006076879204e2a09cf159d.jpg" 
+                         alt="Pavilion Engadin" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <span class="font-mono text-[10px] text-vermilion uppercase block mb-1">ENGADIN VALLEY // 2025</span>
+                    <h3 class="font-bold text-xl text-blueprint mb-2">Piz Nair Alpine Sanctuary</h3>
+                    <p class="text-xs text-pencil/70 leading-relaxed font-light">
+                        Quarried Valser quartzite masonry embedded directly into the bedrock with triple-glazed frameless panoramic glass wall.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gridline group overflow-hidden">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="./assets/photo160056675319017f0baa2a6c3.jpg" 
+                         alt="Lake Constance Pavilion" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <span class="font-mono text-[10px] text-vermilion uppercase block mb-1">LAKE CONSTANCE // 2024</span>
+                    <h3 class="font-bold text-xl text-blueprint mb-2">Bodensee Floating Pavilion</h3>
+                    <p class="text-xs text-pencil/70 leading-relaxed font-light">
+                        Precast white cement pontoon architecture utilizing geothermal lake-water cooling and charred Swiss larch siding.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gridline group overflow-hidden">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="./assets/photo1600585154340be6161a56a0c.jpg" 
+                         alt="Basel Kunst Museum" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <span class="font-mono text-[10px] text-vermilion uppercase block mb-1">BASEL // 2024</span>
+                    <h3 class="font-bold text-xl text-blueprint mb-2">Neue Galerie am Rhein</h3>
+                    <p class="text-xs text-pencil/70 leading-relaxed font-light">
+                        Exposed bush-hammered concrete museum pavilion with northern sawtooth skylights regulating natural daylight to exactly 150 lux.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mandate Inquiry Form -->
+    <section id="mandate" class="py-24 px-6 bg-white">
+        <div class="max-w-3xl mx-auto border-2 border-blueprint p-8 md:p-14">
+            <span class="font-mono text-xs text-vermilion uppercase tracking-widest block mb-2">// ARCHITECTURAL MANDATE</span>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-blueprint mb-4">INITIATE SITE FEASIBILITY</h2>
+            <p class="text-pencil/70 text-sm mb-8 font-light leading-relaxed">
+                The atelier accepts 4 residential mandates and 2 institutional commissions per architectural cycle.
+            </p>
+
+            <form class="space-y-6 font-mono text-xs" onsubmit="event.preventDefault(); alert('Mandate received. Managing Partner will contact your office for an initial cadastral survey review.');">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="text-gray-500 block mb-2 uppercase">Principal Client / Trust</label>
+                        <input type="text" required placeholder="e.g. Von Steiger Familienholding" class="w-full bg-draft border border-gridline px-4 py-3 text-blueprint focus:border-blueprint focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-gray-500 block mb-2 uppercase">Direct Email</label>
+                        <input type="email" required placeholder="office@holding.ch" class="w-full bg-draft border border-gridline px-4 py-3 text-blueprint focus:border-blueprint focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="text-gray-500 block mb-2 uppercase">Plot Location / Canton</label>
+                        <input type="text" required placeholder="e.g. Küsnacht, Canton Zurich" class="w-full bg-draft border border-gridline px-4 py-3 text-blueprint focus:border-blueprint focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-gray-500 block mb-2 uppercase">Anticipated Scope</label>
+                        <select class="w-full bg-draft border border-gridline px-4 py-3 text-blueprint focus:border-blueprint focus:outline-none">
+                            <option>Private Lakefront Residence (> 800 m²)</option>
+                            <option>Alpine Chalet Complex (> 1,200 m²)</option>
+                            <option>Private Art Foundation / Foundation Gallery</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-blueprint text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-vermilion transition-colors">
+                    TRANSMIT CADASTRAL DOSSIER &rarr;
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gridline py-12 px-6 max-w-7xl mx-auto font-mono text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-4">
+        <div>&copy; 2026 KÖNIG & VANDENBERG ARCHITEKTEN ETH SIA BSA. BASEL • ZURICH.</div>
+        <div>ALL SCHEMATICS PROTECTED UNDER SWISS COPYRIGHT ACT.</div>
+    </footer>
+
+    <script>
+        let axonScene, axonCamera, axonRenderer, axonControls;
+        let axonSunLight, axonAmbientLight;
+        let buildingGroup;
+
+        const solarModes = {
+            1: { season: 'JUNE 21 (SUMMER SOLSTICE)', angle: '66.5°', shade: '100% SHADED', load: '0.0 kW (ZERO AC)', sunY: 28, sunX: 12, sunZ: 14 },
+            2: { season: 'SEPTEMBER 21 (AUTUMN EQUINOX)', angle: '43.0°', shade: '60% SHADED', load: '0.5 kW PASSIVE WARMTH', sunY: 18, sunX: 18, sunZ: 18 },
+            3: { season: 'DECEMBER 21 (WINTER SOLSTICE)', angle: '19.5°', shade: '0% SHADE (DEEP PENETRATION)', load: '4.2 kW SOLAR GAIN', sunY: 9, sunX: 25, sunZ: 24 },
+            4: { season: 'MARCH 21 (SPRING EQUINOX)', angle: '43.0°', shade: '60% SHADED', load: '0.5 kW PASSIVE WARMTH', sunY: 18, sunX: 18, sunZ: 18 }
+        };
+
+        function setView(mode) {
+            const canvasWrap = document.getElementById('axon-canvas-wrap');
+            const img = document.getElementById('project-hero-img');
+            const bp = document.getElementById('blueprint-layer');
+            const btnA = document.getElementById('btn-view-axon');
+            const btnP = document.getElementById('btn-view-photo');
+            const btnB = document.getElementById('btn-view-blueprint');
+
+            // Reset buttons
+            [btnA, btnP, btnB].forEach(b => {
+                if (b) b.className = "px-3 py-1.5 bg-draft text-blueprint border border-blueprint font-medium transition-all";
+            });
+
+            if (mode === 'axon') {
+                canvasWrap.style.display = 'block';
+                img.style.opacity = '0';
+                img.style.pointerEvents = 'none';
+                bp.style.opacity = '0';
+                bp.style.pointerEvents = 'none';
+                btnA.className = "px-3 py-1.5 bg-blueprint text-white font-medium tracking-wide";
+                onAxonResize();
+            } else if (mode === 'photo') {
+                canvasWrap.style.display = 'none';
+                img.style.opacity = '1';
+                img.style.pointerEvents = 'auto';
+                bp.style.opacity = '0';
+                bp.style.pointerEvents = 'none';
+                btnP.className = "px-3 py-1.5 bg-blueprint text-white font-medium tracking-wide";
+            } else if (mode === 'blueprint') {
+                canvasWrap.style.display = 'none';
+                img.style.opacity = '0';
+                img.style.pointerEvents = 'none';
+                bp.style.opacity = '1';
+                bp.style.pointerEvents = 'auto';
+                btnB.className = "px-3 py-1.5 bg-blueprint text-white font-medium tracking-wide";
+            }
+        }
+
+        function initAxonScene() {
+            const canvas = document.getElementById('axonCanvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const wrap = document.getElementById('axon-canvas-wrap');
+            const width = wrap.clientWidth;
+            const height = wrap.clientHeight;
+
+            axonScene = new THREE.Scene();
+            axonScene.background = new THREE.Color(0xF2EFE9);
+
+            // Axonometric Perspective (low FOV mimics orthographic axonometry)
+            axonCamera = new THREE.PerspectiveCamera(28, width / height, 0.1, 150);
+            axonCamera.position.set(24, 22, 24);
+
+            axonRenderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: false });
+            axonRenderer.setSize(width, height);
+            axonRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            axonRenderer.shadowMap.enabled = true;
+            axonRenderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+            if (typeof THREE.OrbitControls !== 'undefined') {
+                axonControls = new THREE.OrbitControls(axonCamera, axonRenderer.domElement);
+                axonControls.enableDamping = true;
+                axonControls.dampingFactor = 0.05;
+                axonControls.autoRotate = true;
+                axonControls.autoRotateSpeed = 0.5;
+                axonControls.maxPolarAngle = Math.PI / 2 - 0.02;
+                axonControls.minDistance = 15;
+                axonControls.maxDistance = 65;
+                axonControls.target.set(0, 3, 0);
+            }
+
+            // Lighting
+            axonAmbientLight = new THREE.AmbientLight(0xEEECF2, 0.75);
+            axonScene.add(axonAmbientLight);
+
+            axonSunLight = new THREE.DirectionalLight(0xFFF9E8, 1.6);
+            axonSunLight.position.set(12, 28, 14);
+            axonSunLight.castShadow = true;
+            axonSunLight.shadow.mapSize.width = 2048;
+            axonSunLight.shadow.mapSize.height = 2048;
+            axonSunLight.shadow.camera.near = 5;
+            axonSunLight.shadow.camera.far = 70;
+            const d = 18;
+            axonSunLight.shadow.camera.left = -d;
+            axonSunLight.shadow.camera.right = d;
+            axonSunLight.shadow.camera.top = d;
+            axonSunLight.shadow.camera.bottom = -d;
+            axonSunLight.shadow.bias = -0.0006;
+            axonScene.add(axonSunLight);
+
+            // Swiss Millimeter CAD Grid
+            const grid = new THREE.GridHelper(36, 36, 0x0A192F, 0xD4CFBF);
+            grid.position.y = -0.01;
+            axonScene.add(grid);
+
+            // Construct Modernist Swiss Villa Geometry
+            buildAxonBuilding();
+
+            window.addEventListener('resize', onAxonResize);
+
+            function axonLoop() {
+                requestAnimationFrame(axonLoop);
+                if (axonControls) axonControls.update();
+                if (axonRenderer && axonScene && axonCamera) {
+                    axonRenderer.render(axonScene, axonCamera);
+                }
+            }
+            axonLoop();
+        }
+
+        function onAxonResize() {
+            const wrap = document.getElementById('axon-canvas-wrap');
+            if (!wrap || !axonRenderer || !axonCamera) return;
+            const w = wrap.clientWidth;
+            const h = wrap.clientHeight;
+            axonCamera.aspect = w / h;
+            axonCamera.updateProjectionMatrix();
+            axonRenderer.setSize(w, h);
+        }
+
+        function addAxonMesh(geom, mat, x, y, z, shadow = true) {
+            const mesh = new THREE.Mesh(geom, mat);
+            mesh.position.set(x, y, z);
+            if (shadow) {
+                mesh.castShadow = true;
+                mesh.receiveShadow = true;
+            }
+            // Add Swiss Hairline Edge Lines
+            const edges = new THREE.EdgesGeometry(geom);
+            const line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0x1A2536, linewidth: 1 }));
+            mesh.add(line);
+            buildingGroup.add(mesh);
+            return mesh;
+        }
+
+        function buildAxonBuilding() {
+            buildingGroup = new THREE.Group();
+            axonScene.add(buildingGroup);
+
+            // Materials
+            const plasterMat = new THREE.MeshStandardMaterial({ color: 0xF7F6F2, roughness: 0.85, metalness: 0.05 });
+            const concreteMat = new THREE.MeshStandardMaterial({ color: 0xDAD6CD, roughness: 0.7, metalness: 0.1 });
+            const steelMat = new THREE.MeshStandardMaterial({ color: 0x0A192F, roughness: 0.4, metalness: 0.6 });
+            const glassMat = new THREE.MeshStandardMaterial({ color: 0x8CBAD6, roughness: 0.08, metalness: 0.8, transparent: true, opacity: 0.45 });
+
+            // 1. Terraced Stone Podium
+            addAxonMesh(new THREE.BoxGeometry(28, 0.8, 20), concreteMat, 0, 0.4, 0);
+
+            // 2. Ground Floor Living Pavilion
+            addAxonMesh(new THREE.BoxGeometry(14, 3.4, 9), plasterMat, -2, 2.5, 0);
+
+            // 3. Panoramic Glass Window Wall (Living Room)
+            addAxonMesh(new THREE.BoxGeometry(11, 3.0, 0.1), glassMat, -1.5, 2.4, 4.55);
+
+            // 4. Cantilevered Upper Floor (Master Suite)
+            addAxonMesh(new THREE.BoxGeometry(12, 3.2, 10), plasterMat, 3, 5.8, 1);
+
+            // 5. Upper Terrace Glass
+            addAxonMesh(new THREE.BoxGeometry(9, 2.8, 0.1), glassMat, 3.5, 5.7, 6.05);
+
+            // 6. Massive Passive Solar Overhang Roof Slab (The Cantilever Eaves)
+            addAxonMesh(new THREE.BoxGeometry(16, 0.4, 12), concreteMat, 3, 7.6, 1);
+
+            // 7. Structural Prussian Steel Pilotis (Columns)
+            const colGeom = new THREE.CylinderGeometry(0.12, 0.12, 3.4, 16);
+            addAxonMesh(colGeom, steelMat, 6.5, 2.5, 4.5);
+            addAxonMesh(colGeom, steelMat, 8.5, 2.5, 4.5);
+            addAxonMesh(colGeom, steelMat, 8.5, 2.5, -3.5);
+
+            // 8. Minimalist Entrance Steps
+            addAxonMesh(new THREE.BoxGeometry(4, 0.25, 2), concreteMat, -12, 0.5, 6);
+            addAxonMesh(new THREE.BoxGeometry(4, 0.25, 2), concreteMat, -11, 0.7, 4);
+        }
+
+        function updateSolar(val) {
+            const d = solarModes[val];
+            if (!d) return;
+
+            document.getElementById('season-name').textContent = d.season;
+            document.getElementById('sun-angle').textContent = d.angle;
+            document.getElementById('shade-coverage').textContent = d.shade;
+            document.getElementById('hvac-load').textContent = d.load;
+
+            const hudEl = document.getElementById('axon-hud-angle');
+            if (hudEl) {
+                hudEl.textContent = `AZIMUTH: 45° // SOLAR ELEV: ${d.angle}`;
+            }
+
+            // Animate Directional Light
+            if (axonSunLight) {
+                axonSunLight.position.set(d.sunX, d.sunY, d.sunZ);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initAxonScene();
+
+            try {
+                if (typeof Lenis !== 'undefined') {
+                    const lenis = new Lenis({
+                        autoRaf: true,
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        smoothWheel: true,
+                        anchors: true
+                    });
+                    window.lenis = lenis;
+                }
+            } catch (e) {
+                console.error('Lenis init failed', e);
+            }
+        });
+    </script>
+</body>
+</html>

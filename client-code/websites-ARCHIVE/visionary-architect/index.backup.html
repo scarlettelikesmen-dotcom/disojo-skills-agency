@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visionary Architect | Studio</title>
+  <style>
+    :root { --p: #0f172a; --a: #94a3b8; --bg: #fafafa; --t: #111; }
+    body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--t); overflow-x: hidden; }
+    nav { display: flex; justify-content: space-between; padding: 40px 5vw; position: fixed; width: 100%; top: 0; z-index: 100; mix-blend-mode: difference; color: #fff; box-sizing: border-box; }
+    .logo { font-size: 24px; font-weight: bold; letter-spacing: -1px; text-transform: uppercase; }
+    .menu-btn { width: 50px; height: 14px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
+    .menu-btn span { display: block; height: 2px; background: #fff; width: 100%; }
+    .menu-btn span:last-child { width: 60%; align-self: flex-end; }
+    .hero { height: 100vh; display: flex; align-items: center; padding: 0 5vw; }
+    h1 { font-size: clamp(60px, 12vw, 150px); line-height: 0.85; margin: 0; text-transform: uppercase; letter-spacing: -0.05em; color: var(--p); }
+    h1 em { color: var(--a); font-style: normal; }
+    .grid-layout { display: grid; grid-template-columns: 1fr 1fr; padding: 10vw 5vw; gap: 5vw; align-items: center; }
+    .img-placeholder { background: var(--p); height: 80vh; width: 100%; position: relative; overflow: hidden; }
+    .img-placeholder::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, var(--a), transparent); opacity: 0.5; }
+    .copy p { font-size: 24px; line-height: 1.5; max-width: 500px; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px; background: #ccc; border-top: 2px solid var(--t); border-bottom: 2px solid var(--t); padding: 2px 0; margin-top: 10vw; }
+    .srv { background: var(--bg); padding: 4vw; aspect-ratio: 1; display: flex; flex-direction: column; justify-content: space-between; transition: background 0.4s; }
+    .srv:hover { background: var(--p); color: #fff; }
+    .srv h3 { font-size: 32px; margin: 0; text-transform: uppercase; }
+    .srv p { font-size: 16px; opacity: 0.8; }
+    footer { padding: 10vw 5vw; font-size: 8vw; font-weight: bold; text-align: center; color: var(--a); letter-spacing: -4px; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <nav><div class="logo">Visionary Architect</div><div class="menu-btn"><span></span><span></span></div></nav>
+  <div class="hero"><h1>We Design<br><em>Architectural Design.</em></h1></div>
+  <div class="grid-layout">
+    <div class="copy">
+      <p>Based in Gurugram, Visionary Architect is a visionary studio pushing the boundaries of Urban Planning and Sustainable Builds. We believe in form, function, and fearless execution.</p>
+    </div>
+    <div class="img-placeholder"></div>
+  </div>
+  <div class="services">
+    <div class="srv"><h3>01. Architectural Design</h3><p>End-to-end execution.</p></div>
+    <div class="srv"><h3>02. Urban Planning</h3><p>Unmatched precision.</p></div>
+    <div class="srv"><h3>03. Sustainable Builds</h3><p>Bespoke solutions.</p></div>
+    <div class="srv"><h3>04. Interior Architecture</h3><p>Innovative approach.</p></div>
+  </div>
+  <footer>Let's Build</footer>
+</body>
+</html>

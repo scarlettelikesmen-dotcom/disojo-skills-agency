@@ -1,0 +1,59 @@
+.system { position: relative; height: calc(100dvh * 4.4); --q: 0; }
+.system .pin { position: sticky; top: 0; height: 100dvh; display: flex; align-items: center; overflow: clip; }
+.sys-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr); gap: clamp(32px, 5vw, 84px); align-items: center; padding-block: 90px 110px; }
+.sys-copy h2 { font-size: clamp(2.2rem, 4.6vw, 4rem); max-width: 11ch; }
+.steps { position: relative; margin-top: clamp(28px, 4vw, 48px); min-height: 220px; display: grid; }
+.step { grid-area: 1 / 1; opacity: 0; transform: translateY(18px); pointer-events: none; transition: opacity 0.5s var(--ease-out), transform 0.7s var(--ease-out); }
+.step.on { opacity: 1; transform: none; pointer-events: auto; }
+.step .no { font-size: 0.8125rem; color: var(--mute); }
+.step .no span { color: var(--safe); margin-right: 6px; }
+.step h3 { margin-top: 14px; font-size: clamp(1.6rem, 2.6vw, 2.3rem); max-width: 18ch; }
+.step .body { margin-top: 14px; max-width: 40ch; color: var(--mute); font-size: 1.0625rem; }
+.dots { display: flex; gap: 8px; margin-top: 28px; }
+.dots li { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line-2); font-family: var(--font-mono); font-size: 0.75rem; color: var(--dim); transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out), border-color 0.4s var(--ease-out); }
+.dots li.on { background: var(--bone); color: var(--ink); border-color: var(--bone); }
+.dots li.done { color: var(--mute); }
+
+.board .core { background: var(--ink-2); padding: clamp(14px, 2vw, 24px); }
+.b-head { display: flex; justify-content: space-between; font-size: 0.8125rem; padding: 4px 4px 16px; }
+.b-head .dim { color: var(--dim); }
+.b-body { position: relative; container-type: inline-size; display: grid; gap: 14px; padding-left: 62px; padding-block: 6px; }
+.t-row { position: relative; }
+.t-lab { position: absolute; left: -62px; top: 50%; transform: translateY(-50%); width: 54px; font-size: 0.75rem; color: var(--dim); }
+.t-row.active .t-lab { color: var(--safe); }
+.t-row:not(.active) .sc.wait { color: var(--dim); border-color: var(--line); }
+.t-lane { position: relative; height: 74px; border-radius: 14px; background: rgba(237, 234, 227, 0.035); }
+.sc { position: absolute; top: 6px; bottom: 6px; left: var(--l); width: var(--w); display: grid; align-items: end; padding: 8px 10px; border-radius: 10px; font-style: normal; font-size: 0.8125rem; font-weight: 500; line-height: 1.15; color: var(--mute); border: 1px dashed var(--line-2); transform: translateY(8px); transition: transform 0.6s var(--ease-out), background-color 0.35s var(--ease-out), color 0.35s var(--ease-out); overflow: hidden; }
+.sc.in { transform: none; border-style: solid; border-color: transparent; background: #2a2a2f; color: var(--bone); }
+.t-row.active .sc.in { background: var(--safe); color: var(--ink); }
+.sc.in.done { background: #2a2a2f; color: var(--bone); }
+.ph-wrap { position: absolute; top: -4px; bottom: -4px; left: 62px; right: 0; pointer-events: none; }
+.ph-wrap .ph { position: absolute; top: 0; bottom: 0; left: 0; width: 2px; margin-left: -1px; background: var(--bone); border-radius: 2px; transform: translateX(calc(var(--q) * 100cqw)); }
+.ph-wrap .ph::before { content: ''; position: absolute; top: -2px; left: 50%; width: 12px; height: 12px; margin-left: -6px; background: var(--bone); border-radius: 3px 3px 6px 6px; }
+.is-static .ph-wrap { display: none; }
+
+/* static (reduced motion): no pin, everything visible */
+.system.is-static { height: auto; }
+.is-static .pin { position: static; height: auto; padding-block: clamp(88px, 12vw, 160px); }
+.is-static .steps { display: grid; gap: 36px; min-height: 0; }
+.is-static .step { grid-area: auto; opacity: 1; transform: none; }
+.is-static .dots { display: none; }
+
+@media (max-width: 900px) {
+  .sys-grid { grid-template-columns: 1fr; gap: 14px; padding-block: 84px 96px; align-content: center; }
+  .sys-copy h2 { font-size: 1.75rem; max-width: none; }
+  .steps { margin-top: 10px; min-height: 142px; }
+  .step .no { font-size: 0.75rem; }
+  .step h3 { font-size: 1.3rem; margin-top: 6px; }
+  .step .body { font-size: 0.9375rem; margin-top: 6px; line-height: 1.45; }
+  .dots { margin-top: 10px; }
+  .dots li { padding: 4px 12px; }
+  .board .core { padding: 12px; }
+  .b-head { padding-bottom: 8px; }
+  .b-body { padding-left: 0; gap: 6px; }
+  .t-lab { position: static; transform: none; display: block; width: auto; margin-bottom: 2px; }
+  .t-lane { height: auto; display: flex; flex-wrap: wrap; gap: 5px; padding: 2px 0 4px; background: transparent; }
+  .sc { position: static; width: auto; padding: 7px 11px; align-items: center; font-size: 0.8125rem; border-radius: 999px; }
+  .ph-wrap { display: none; }
+  .is-static .pin { padding-block: 96px 120px; }
+}

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SULTANAT // Royal Awadhi Haute Cuisine & Dum Pukht</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cinzel: ['"Cinzel"', 'serif'],
+                        marcellus: ['"Marcellus"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        emeraldDark: '#07160F',
+                        emeraldVelvet: '#0F291C',
+                        goldLeaf: '#D4AF37',
+                        amberGlow: '#E5A93C',
+                        parchment: '#F5EFE6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #D4AF37; color: #07160F; }
+        .gold-glow {
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+        .handi-border {
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+        .pattern-jali {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-emeraldDark text-parchment font-sans antialiased overflow-x-hidden">
+
+    <!-- Top Royal Banner -->
+    <header class="border-b border-goldLeaf/20 bg-emeraldDark/95 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 border border-goldLeaf flex items-center justify-center font-cinzel text-goldLeaf text-lg font-bold group-hover:bg-goldLeaf group-hover:text-emeraldDark transition-colors">
+                    س
+                </div>
+                <div>
+                    <span class="font-cinzel text-lg tracking-[0.25em] text-goldLeaf uppercase font-bold block">SULTANAT</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-gray-400 block font-light">ROYAL AWADHI HAUTE CUISINE // EST. 1784</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-[0.2em] uppercase text-gray-300 font-light">
+                <a href="#heritage" class="hover:text-goldLeaf transition-colors">The Heritage</a>
+                <a href="#dastarkhwan" class="hover:text-goldLeaf transition-colors">Dastarkhwan Menu</a>
+                <a href="#spices" class="hover:text-goldLeaf transition-colors">Royal Spicery</a>
+                <a href="#majlis" class="hover:text-goldLeaf transition-colors">Private Majlis</a>
+            </nav>
+
+            <a href="#majlis" class="px-5 py-2.5 border border-goldLeaf text-goldLeaf text-xs uppercase tracking-[0.2em] hover:bg-goldLeaf hover:text-emeraldDark transition-all">
+                Reserve Table
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero: Palatial Awadhi Splendor -->
+    <section class="relative min-h-[90vh] flex items-center justify-center px-6 py-20 pattern-jali border-b border-goldLeaf/20 overflow-hidden">
+        <!-- Ambient 3D Rising Wood-Smoke & Ember Canvas -->
+        <canvas id="smoke-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-50 z-[1]"></canvas>
+
+        <div class="absolute inset-0 z-0 opacity-25">
+            <img src="./assets/photo158593742161270a008356fbe.jpg" 
+                 alt="Royal Dum Pukht Banquet" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-emeraldDark via-emeraldDark/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl text-center">
+            <div class="inline-flex items-center space-x-3 px-4 py-1.5 border border-goldLeaf/40 text-goldLeaf text-[10px] tracking-[0.35em] uppercase mb-8">
+                <span>DUM PUKHT CRAFTSMANSHIP</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-goldLeaf"></span>
+                <span>SEALED IN PURDUR DOUGH HANDIS</span>
+            </div>
+
+            <h1 class="font-cinzel text-5xl md:text-7xl lg:text-8xl text-parchment font-normal tracking-wide leading-tight mb-8">
+                The Lost Flavours of the<br>
+                <span class="italic text-goldLeaf gold-glow">Nawabs.</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-sm md:text-base text-gray-300 font-light leading-relaxed mb-10 tracking-wide">
+                Where royal Khansamas simmer whole cuts of tender lamb, Persian saffron, and crushed Damascus rose petals over slow wood coals for sixteen uninterrupted hours.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="#dastarkhwan" class="px-8 py-4 bg-goldLeaf text-emeraldDark font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:bg-white transition-all shadow-xl">
+                    EXPLORE SHAHI TASTING MENUS
+                </a>
+                <a href="#majlis" class="px-8 py-4 border border-goldLeaf/40 text-parchment text-xs tracking-[0.25em] uppercase hover:border-goldLeaf transition-all">
+                    PRIVATE MAJLIS RESERVATION
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dastarkhwan Tasting Menus -->
+    <section id="dastarkhwan" class="py-24 px-6 max-w-6xl mx-auto border-b border-goldLeaf/20">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-[10px] tracking-[0.4em] uppercase text-goldLeaf block mb-2">// HAUTE DEGUSTATION</span>
+            <h2 class="font-cinzel text-4xl md:text-5xl text-parchment font-normal">The Royal Dastarkhwan</h2>
+            <p class="text-gray-400 text-xs mt-3 tracking-wide font-light">
+                Served in custom hand-beaten bronze and 24-karat gold-lined katoris. Select a culinary journey:
+            </p>
+
+            <!-- Menu Selector Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mt-8">
+                <button onclick="setMenu('shahi')" id="btn-menu-shahi" class="px-6 py-2.5 bg-goldLeaf text-emeraldDark font-cinzel text-xs uppercase tracking-widest font-bold transition-all">
+                    01 / Shahi Dum Pukht (7 Courses)
+                </button>
+                <button onclick="setMenu('shikar')" id="btn-menu-shikar" class="px-6 py-2.5 bg-emeraldVelvet text-parchment border border-goldLeaf/30 font-cinzel text-xs uppercase tracking-widest transition-all hover:border-goldLeaf">
+                    02 / Nawabi Shikar (6 Courses)
+                </button>
+                <button onclick="setMenu('bagh')" id="btn-menu-bagh" class="px-6 py-2.5 bg-emeraldVelvet text-parchment border border-goldLeaf/30 font-cinzel text-xs uppercase tracking-widest transition-all hover:border-goldLeaf">
+                    03 / Bagh-e-Kashmir (Imperial Veg)
+                </button>
+            </div>
+        </div>
+
+        <!-- Dynamic Degustation Showcase -->
+        <div class="bg-emeraldVelvet/40 border border-goldLeaf/30 p-8 md:p-14">
+            <div class="flex flex-col md:flex-row justify-between items-baseline border-b border-goldLeaf/20 pb-6 mb-10">
+                <div>
+                    <span id="menu-tag" class="text-[10px] tracking-[0.3em] uppercase text-goldLeaf block mb-1">SIGNATURE IMPERIAL JOURNEY</span>
+                    <h3 id="menu-title" class="font-cinzel text-3xl md:text-4xl text-parchment">Shahi Dastarkhwan 1784</h3>
+                </div>
+                <div class="text-right mt-4 md:mt-0 font-cinzel">
+                    <span id="menu-price" class="text-2xl text-goldLeaf font-bold">₹8,500</span>
+                    <span class="text-xs text-gray-400 block tracking-widest">PER GUEST // PAIRED PAAN CONFECTION</span>
+                </div>
+            </div>
+
+            <div id="menu-courses" class="space-y-8">
+                <!-- Course 1 -->
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                    <div class="max-w-xl">
+                        <div class="font-cinzel text-lg text-parchment font-semibold">I. Galawat ke Kebab & Sheermal</div>
+                        <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">
+                            Melt-in-mouth lamb patties smoked over vetiver roots, cured with 160 secret botanical spices, served on saffron-glazed flatbread.
+                        </p>
+                    </div>
+                    <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">SLOW SMOKED</span>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                    <div class="max-w-xl">
+                        <div class="font-cinzel text-lg text-parchment font-semibold">II. Murgh Awadhi Parda Dum Biryani</div>
+                        <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">
+                            Aged Himalayan basmati rice layered with young poussin, infused with ittar-e-gulab, saffron milk, and sealed under puff pastry.
+                        </p>
+                    </div>
+                    <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">14 HOURS DUM</span>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                    <div class="max-w-xl">
+                        <div class="font-cinzel text-lg text-parchment font-semibold">III. Nalli Nihari Khas</div>
+                        <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">
+                            Slow-cooked marrow shanks stewed overnight in brass deghs, perfumed with long pepper (pipli) and crisp ginger juliennes.
+                        </p>
+                    </div>
+                    <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">OVERNIGHT REDUCTION</span>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between">
+                    <div class="max-w-xl">
+                        <div class="font-cinzel text-lg text-parchment font-semibold">IV. Shahi Tukda & 24K Warq Shrikhand</div>
+                        <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">
+                            Ghee-crisped brioche bathed in thickened rabri, garnished with Persian pistachio slivers and hand-beaten pure gold leaf.
+                        </p>
+                    </div>
+                    <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">24K GOLD LEAF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Royal Spicery Drawer -->
+    <section id="spices" class="py-24 px-6 max-w-7xl mx-auto border-b border-goldLeaf/20">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-[10px] tracking-[0.4em] uppercase text-goldLeaf block mb-2">// HERITAGE BOTANICALS</span>
+            <h2 class="font-cinzel text-4xl text-parchment">The Khansama's Secret Apothecary</h2>
+            <p class="text-gray-400 text-xs mt-2 font-light">
+                Every dish is balanced according to ancient Unani and Ayurvedic harmonic principles. Select a royal botanical to discover its origin:
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div onclick="showSpice(1)" class="bg-emeraldVelvet/50 border border-goldLeaf/30 p-6 text-center cursor-pointer hover:border-goldLeaf transition-all">
+                <div class="w-12 h-12 mx-auto rounded-full bg-amberGlow/20 flex items-center justify-center text-amberGlow font-cinzel text-xl mb-4">
+                    زع
+                </div>
+                <h4 class="font-cinzel text-parchment text-base font-bold">Pampore Saffron</h4>
+                <p class="text-[11px] text-gray-400 mt-2 font-light">Hand-harvested purple crocus stigmas from Kashmir valley.</p>
+            </div>
+
+            <div onclick="showSpice(2)" class="bg-emeraldVelvet/50 border border-goldLeaf/30 p-6 text-center cursor-pointer hover:border-goldLeaf transition-all">
+                <div class="w-12 h-12 mx-auto rounded-full bg-amberGlow/20 flex items-center justify-center text-amberGlow font-cinzel text-xl mb-4">
+                    ورد
+                </div>
+                <h4 class="font-cinzel text-parchment text-base font-bold">Kannauj Gulab Attar</h4>
+                <p class="text-[11px] text-gray-400 mt-2 font-light">Hydro-distilled Damascus rose essence aged in copper degs.</p>
+            </div>
+
+            <div onclick="showSpice(3)" class="bg-emeraldVelvet/50 border border-goldLeaf/30 p-6 text-center cursor-pointer hover:border-goldLeaf transition-all">
+                <div class="w-12 h-12 mx-auto rounded-full bg-amberGlow/20 flex items-center justify-center text-amberGlow font-cinzel text-xl mb-4">
+                    خس
+                </div>
+                <h4 class="font-cinzel text-parchment text-base font-bold">Root Vetiver (Khas)</h4>
+                <p class="text-[11px] text-gray-400 mt-2 font-light">Cooling earth aromatic used to smoke kebabs over cherrywood.</p>
+            </div>
+
+            <div onclick="showSpice(4)" class="bg-emeraldVelvet/50 border border-goldLeaf/30 p-6 text-center cursor-pointer hover:border-goldLeaf transition-all">
+                <div class="w-12 h-12 mx-auto rounded-full bg-amberGlow/20 flex items-center justify-center text-amberGlow font-cinzel text-xl mb-4">
+                    هيل
+                </div>
+                <h4 class="font-cinzel text-parchment text-base font-bold">Smoked Badi Elaichi</h4>
+                <p class="text-[11px] text-gray-400 mt-2 font-light">Wild black cardamom sun-dried over sacred camphor logs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Majlis Dining Reservation -->
+    <section id="majlis" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto bg-emeraldVelvet/40 border border-goldLeaf/40 p-8 md:p-14">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-[10px] tracking-[0.4em] uppercase text-goldLeaf block mb-2">// ROYAL AUDIENCE</span>
+                <h2 class="font-cinzel text-3xl md:text-4xl text-parchment">Reserve The Private Majlis</h2>
+                <p class="text-gray-400 text-xs mt-2 font-light">
+                    An exclusive curtained salon for intimate family gatherings, corporate dignitaries, and celebratory banquets.
+                </p>
+            </div>
+
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Reservation submitted. The Royal Khansama Steward will confirm table availability via phone.');">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="text-[10px] tracking-widest uppercase text-goldLeaf block mb-2">Guest of Honour Name</label>
+                        <input type="text" required placeholder="Nawabzada Farhan Ali" class="w-full bg-emeraldDark border border-goldLeaf/30 px-4 py-3 text-parchment text-sm focus:border-goldLeaf focus:outline-none font-sans">
+                    </div>
+                    <div>
+                        <label class="text-[10px] tracking-widest uppercase text-goldLeaf block mb-2">Telephone Number</label>
+                        <input type="tel" required placeholder="+91 98111 00000" class="w-full bg-emeraldDark border border-goldLeaf/30 px-4 py-3 text-parchment text-sm focus:border-goldLeaf focus:outline-none font-sans">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="text-[10px] tracking-widest uppercase text-goldLeaf block mb-2">Date</label>
+                        <input type="date" required class="w-full bg-emeraldDark border border-goldLeaf/30 px-4 py-3 text-parchment text-sm focus:border-goldLeaf focus:outline-none font-sans">
+                    </div>
+                    <div>
+                        <label class="text-[10px] tracking-widest uppercase text-goldLeaf block mb-2">Seating</label>
+                        <select class="w-full bg-emeraldDark border border-goldLeaf/30 px-4 py-3 text-parchment text-sm focus:border-goldLeaf focus:outline-none font-sans">
+                            <option>Royal Majlis Velvet Booth (4-6 Guests)</option>
+                            <option>Grand Dastarkhwan Hall (20 Guests)</option>
+                            <option>Candlelit Verandah Table (2 Guests)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-[10px] tracking-widest uppercase text-goldLeaf block mb-2">Degustation Plan</label>
+                        <select class="w-full bg-emeraldDark border border-goldLeaf/30 px-4 py-3 text-parchment text-sm focus:border-goldLeaf focus:outline-none font-sans">
+                            <option>Shahi Dum Pukht (7 Courses)</option>
+                            <option>Nawabi Shikar (6 Courses)</option>
+                            <option>Bagh-e-Kashmir Vegetarian (6 Courses)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-goldLeaf text-emeraldDark font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:bg-white transition-all">
+                    SEAL ROYAL RESERVATION &rarr;
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-goldLeaf/20 py-10 px-6 text-center text-xs text-gray-500 font-cinzel">
+        <p>&copy; 2026 SULTANAT ROYAL AWADHI HAUTE CUISINE. NEW DELHI • LONDON.</p>
+        <p class="text-[9px] uppercase tracking-[0.3em] text-goldLeaf/60 mt-1">HERITAGE PRESERVED UNDER THE ROYAL KHANSAMA TRUST.</p>
+    </footer>
+
+    <script>
+        const menus = {
+            shahi: {
+                tag: 'SIGNATURE IMPERIAL JOURNEY',
+                title: 'Shahi Dastarkhwan 1784',
+                price: '₹8,500',
+                html: `
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">I. Galawat ke Kebab & Sheermal</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Melt-in-mouth lamb patties smoked over vetiver roots, cured with 160 secret botanical spices, served on saffron-glazed flatbread.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">SLOW SMOKED</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">II. Murgh Awadhi Parda Dum Biryani</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Aged Himalayan basmati rice layered with young poussin, infused with ittar-e-gulab, saffron milk, and sealed under puff pastry.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">14 HOURS DUM</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">III. Nalli Nihari Khas</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Slow-cooked marrow shanks stewed overnight in brass deghs, perfumed with long pepper and crisp ginger juliennes.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">OVERNIGHT REDUCTION</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">IV. Shahi Tukda & 24K Warq Shrikhand</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Ghee-crisped brioche bathed in thickened rabri, garnished with Persian pistachio slivers and hand-beaten pure gold leaf.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">24K GOLD LEAF</span>
+                    </div>
+                `
+            },
+            shikar: {
+                tag: 'WARRIOR FEAST & WILD HUNT',
+                title: 'Nawabi Shikar Heritage',
+                price: '₹9,800',
+                html: `
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">I. Junglee Maas Charred on Cast Iron</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Braised shank in pure Rajasthani Mathania red chilies, clarified mountain cow ghee, and sea salt crystals.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">FIRE ROASTED</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">II. Bater Mussallam (Stuffed Quail)</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Whole roasted quail filled with minced pine nuts, dried apricots, and caramelized shallot paste.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">WOOD FIRED</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">III. Zaffrani Phirni in Earthen Sakora</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Stone-ground fragrant rice pudding infused with almond cream and wrapped in chilled wet clay pottery.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">EARTHEN CHILLED</span>
+                    </div>
+                `
+            },
+            bagh: {
+                tag: 'IMPERIAL BOTANICAL VEGETARIAN',
+                title: 'Bagh-e-Kashmir Vegetarian',
+                price: '₹7,200',
+                html: `
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">I. Subz Shami Kebab & Mint Emulsion</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Finely ground young green peas and black chickpeas stuffed with dried plum chutney.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">PAN SEARED</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-goldLeaf/10 pb-4">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">II. Paneer Khas-e-Purdah</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Organic milk malai paneer steeped in roasted mace, cashew butter, and green cardamom velouté.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">COPPER POT DUM</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between">
+                        <div class="max-w-xl">
+                            <div class="font-cinzel text-lg text-parchment font-semibold">III. Gulab ki Kheer with Almond Snow</div>
+                            <p class="text-xs text-gray-400 mt-1 font-light leading-relaxed">Sweet cream simmered with fresh Kannauj organic rose petals and dusted with crushed pistachios.</p>
+                        </div>
+                        <span class="text-xs font-mono text-goldLeaf mt-2 sm:mt-0">PERFUMED NECTAR</span>
+                    </div>
+                `
+            }
+        };
+
+        function setMenu(key) {
+            ['shahi', 'shikar', 'bagh'].forEach(k => {
+                const btn = document.getElementById('btn-menu-' + k);
+                if (k === key) {
+                    btn.className = "px-6 py-2.5 bg-goldLeaf text-emeraldDark font-cinzel text-xs uppercase tracking-widest font-bold transition-all";
+                } else {
+                    btn.className = "px-6 py-2.5 bg-emeraldVelvet text-parchment border border-goldLeaf/30 font-cinzel text-xs uppercase tracking-widest transition-all hover:border-goldLeaf";
+                }
+            });
+
+            const m = menus[key];
+            document.getElementById('menu-tag').textContent = m.tag;
+            document.getElementById('menu-title').textContent = m.title;
+            document.getElementById('menu-price').textContent = m.price;
+            document.getElementById('menu-courses').innerHTML = m.html;
+        }
+
+        function showSpice(num) {
+            const spices = [
+                'Pampore Saffron: Harvested at dawn in October, our saffron contains 16% safranal, giving royal biryanis their sacred amber sunset hue.',
+                'Kannauj Gulab: Distilled using centuries-old wood-fired deg and bhapka technique to preserve delicate floral volatile compounds.',
+                'Root Vetiver: Imparts an earthy, rain-soaked forest aroma essential for the authentic Nawabi Galawati kebabs.',
+                'Smoked Badi Elaichi: Dried over fragrant wood fire, releasing camphor-rich notes that balance slow-braised marrow broths.'
+            ];
+            alert(spices[num - 1]);
+        }
+
+        // Ambient 3D Rising Wood-Smoke & Golden Embers Engine
+        (function initSmoke3D() {
+            const canvas = document.getElementById('smoke-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const parent = canvas.parentElement;
+            let width = parent.clientWidth;
+            let height = parent.clientHeight;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+            camera.position.z = 24;
+
+            const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // 1. Soft Smoke Puffs
+            const smokeCount = 140;
+            const smokeGeom = new THREE.BufferGeometry();
+            const smokePos = new Float32Array(smokeCount * 3);
+            const smokeVel = new Float32Array(smokeCount * 3);
+
+            for (let i = 0; i < smokeCount; i++) {
+                smokePos[i * 3] = (Math.random() - 0.5) * 30;
+                smokePos[i * 3 + 1] = (Math.random() - 0.5) * 20;
+                smokePos[i * 3 + 2] = (Math.random() - 0.5) * 8;
+
+                smokeVel[i * 3] = (Math.random() - 0.5) * 0.008;
+                smokeVel[i * 3 + 1] = Math.random() * 0.018 + 0.008; // slow rising
+                smokeVel[i * 3 + 2] = (Math.random() - 0.5) * 0.008;
+            }
+            smokeGeom.setAttribute('position', new THREE.BufferAttribute(smokePos, 3));
+
+            // Smoke particle texture
+            const smokeCanvas = document.createElement('canvas');
+            smokeCanvas.width = 64;
+            smokeCanvas.height = 64;
+            const sCtx = smokeCanvas.getContext('2d');
+            const sGrad = sCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
+            sGrad.addColorStop(0, 'rgba(212, 175, 55, 0.35)');
+            sGrad.addColorStop(0.5, 'rgba(229, 169, 60, 0.15)');
+            sGrad.addColorStop(1, 'rgba(7, 22, 15, 0)');
+            sCtx.fillStyle = sGrad;
+            sCtx.beginPath();
+            sCtx.arc(32, 32, 32, 0, Math.PI * 2);
+            sCtx.fill();
+
+            const smokeTex = new THREE.CanvasTexture(smokeCanvas);
+            const smokeMat = new THREE.PointsMaterial({
+                size: 2.8,
+                map: smokeTex,
+                transparent: true,
+                opacity: 0.45,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false,
+            });
+            const smokePoints = new THREE.Points(smokeGeom, smokeMat);
+            scene.add(smokePoints);
+
+            // 2. Glowing Wood Embers
+            const emberCount = 120;
+            const emberGeom = new THREE.BufferGeometry();
+            const emberPos = new Float32Array(emberCount * 3);
+            const emberVel = new Float32Array(emberCount * 3);
+
+            for (let i = 0; i < emberCount; i++) {
+                emberPos[i * 3] = (Math.random() - 0.5) * 28;
+                emberPos[i * 3 + 1] = (Math.random() - 0.5) * 18;
+                emberPos[i * 3 + 2] = (Math.random() - 0.5) * 6;
+
+                emberVel[i * 3] = (Math.random() - 0.5) * 0.012;
+                emberVel[i * 3 + 1] = Math.random() * 0.03 + 0.015; // faster rising embers
+                emberVel[i * 3 + 2] = (Math.random() - 0.5) * 0.012;
+            }
+            emberGeom.setAttribute('position', new THREE.BufferAttribute(emberPos, 3));
+
+            const emberMat = new THREE.PointsMaterial({
+                size: 0.28,
+                color: 0xE5A93C,
+                transparent: true,
+                opacity: 0.85,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false,
+            });
+            const emberPoints = new THREE.Points(emberGeom, emberMat);
+            scene.add(emberPoints);
+
+            let mouseX = 0, mouseY = 0;
+            window.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 16;
+                mouseY = -((e.clientY - rect.top) / rect.height - 0.5) * 10;
+            });
+
+            window.addEventListener('resize', () => {
+                width = parent.clientWidth;
+                height = parent.clientHeight;
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+                renderer.setSize(width, height);
+            });
+
+            let clock = new THREE.Clock();
+
+            function animate() {
+                requestAnimationFrame(animate);
+                const t = clock.getElapsedTime();
+
+                // Animate smoke
+                const sPos = smokeGeom.attributes.position.array;
+                for (let i = 0; i < smokeCount; i++) {
+                    sPos[i * 3 + 1] += smokeVel[i * 3 + 1];
+                    sPos[i * 3] += Math.sin(t * 0.8 + i) * 0.008;
+
+                    const dx = sPos[i * 3] - mouseX;
+                    const dy = sPos[i * 3 + 1] - mouseY;
+                    const d = Math.sqrt(dx * dx + dy * dy);
+                    if (d < 5) sPos[i * 3] += (dx / d) * 0.03;
+
+                    if (sPos[i * 3 + 1] > 11) {
+                        sPos[i * 3 + 1] = -11;
+                        sPos[i * 3] = (Math.random() - 0.5) * 30;
+                    }
+                }
+                smokeGeom.attributes.position.needsUpdate = true;
+
+                // Animate embers
+                const ePos = emberGeom.attributes.position.array;
+                for (let i = 0; i < emberCount; i++) {
+                    ePos[i * 3 + 1] += emberVel[i * 3 + 1];
+                    ePos[i * 3] += Math.cos(t * 1.5 + i) * 0.01;
+
+                    if (ePos[i * 3 + 1] > 11) {
+                        ePos[i * 3 + 1] = -11;
+                        ePos[i * 3] = (Math.random() - 0.5) * 28;
+                    }
+                }
+                emberGeom.attributes.position.needsUpdate = true;
+
+                renderer.render(scene, camera);
+            }
+            animate();
+        })();
+
+        // Initialize Lenis smooth scroll
+        try {
+            if (typeof Lenis !== 'undefined') {
+                const lenis = new Lenis({
+                    autoRaf: true,
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    smoothWheel: true,
+                    anchors: true
+                });
+                window.lenis = lenis;
+            }
+        } catch (e) {
+            console.error('Lenis init failed', e);
+        }
+    </script>
+</body>
+</html>

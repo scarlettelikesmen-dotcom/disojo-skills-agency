@@ -1,0 +1,30 @@
+.good { padding-top: clamp(90px, 14vh, 170px); padding-bottom: clamp(90px, 14vh, 170px); background: var(--paper-2); }
+.good-head { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(24px, 5vw, 80px); align-items: end; margin-bottom: clamp(32px, 6vh, 64px); }
+.good-title { font-size: clamp(3rem, 8vw, 8rem); }
+.good-note { color: var(--muted); max-width: 44ch; }
+.good-scroll { overflow-x: auto; border-top: 2px solid var(--ink); }
+.good-table { width: 100%; min-width: 860px; border-collapse: collapse; }
+.good-table th, .good-table td { padding: 1.05rem 0.9rem 1.05rem 0; text-align: left; border-bottom: 1px solid rgba(20, 24, 26, 0.18); vertical-align: middle; }
+.good-table thead th { color: var(--muted); font-weight: 700; padding-top: 0.9rem; }
+.good-table tbody th { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; white-space: nowrap; }
+.good-k { color: var(--vermilion); margin-right: 0.8rem; font-weight: 800; }
+.dot { display: inline-block; width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid rgba(20, 24, 26, 0.3); }
+.dot.is-on { background: var(--deep); border-color: var(--deep); }
+.good-txt { font-size: 0.9rem; color: var(--ink); min-width: 12rem; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 48px); margin-top: clamp(56px, 10vh, 110px); }
+.steps li { display: grid; gap: 0.6rem; align-content: start; padding-top: 1.2rem; border-top: 2px solid var(--ink); }
+.steps-n { font-size: 3.4rem; color: var(--vermilion); line-height: 1; }
+.steps h3 { font-size: 1.7rem; font-weight: 600; }
+.steps p { color: var(--muted); max-width: 32ch; }
+@media (max-width: 860px) { .good-head { grid-template-columns: 1fr; } .steps { grid-template-columns: 1fr; } }
+
+.good-cards { display: none; }
+@media (max-width: 760px) {
+  .good-scroll { display: none; }
+  .good-cards { display: grid; border-top: 2px solid var(--ink); }
+  .good-cards li { display: grid; gap: 0.6rem; padding: 1.2rem 0; border-bottom: 1px solid rgba(20, 24, 26, 0.18); }
+  .good-cards h3 { font-size: 1.35rem; font-weight: 600; }
+  .good-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .good-chips .chip { padding: 0.15rem 0.7rem; border: 1.5px solid var(--ink); border-radius: 999px; font-size: 0.78rem; font-weight: 700; }
+  .good-cards .good-txt { min-width: 0; color: var(--muted); }
+}

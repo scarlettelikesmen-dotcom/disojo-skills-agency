@@ -1,0 +1,126 @@
+.discovery-banner {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gold glow in the bg */
+.discovery-banner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translate(50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.discovery-banner-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.discovery-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.discovery-sub {
+  font-size: 0.95rem;
+  color: rgba(245, 237, 224, 0.65);
+  line-height: 1.8;
+  max-width: 440px;
+  margin-bottom: 2rem;
+}
+
+.discovery-scents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.discovery-scent-tag {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  padding: 0.35rem 0.85rem;
+  border-radius: 2px;
+}
+
+.discovery-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Visual — stacked bottles */
+.discovery-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  position: relative;
+}
+
+.discovery-bottle {
+  position: absolute;
+  width: 72px;
+  height: 200px;
+  border-radius: 36px 36px 6px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+}
+
+.discovery-banner:hover .discovery-bottle:nth-child(1) { transform: rotate(-16deg) translateY(-8px) !important; }
+.discovery-banner:hover .discovery-bottle:nth-child(2) { transform: rotate(-6deg) translateY(-4px) !important; }
+.discovery-banner:hover .discovery-bottle:nth-child(3) { transform: rotate(4deg) translateY(-4px) !important; }
+.discovery-banner:hover .discovery-bottle:nth-child(4) { transform: rotate(14deg) translateY(-8px) !important; }
+
+.discovery-bottle-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+}
+
+.discovery-bottle-label span:first-child {
+  font-family: var(--font-sans);
+  font-size: 4.5px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.discovery-bottle-label span:last-child {
+  font-family: var(--font-serif);
+  font-size: 8px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .discovery-banner-inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .discovery-visual {
+    order: -1;
+    height: 240px;
+  }
+}

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Wraps & Fleet Graphics in Delta & Surrey, BC | Print Elements</title>
+  <meta name="description" content="Commercial vehicle wraps, van graphics, car decals, and magnetic signs in Delta, Surrey, and Vancouver. Premium 3M and Avery Dennison vinyl.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      padding: 60px 0 50px;
+      background: radial-gradient(circle at 90% 10%, rgba(0, 162, 232, 0.05) 0%, rgba(230, 0, 126, 0.04) 50%, transparent 100%), #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-container {
+      max-width: 800px;
+    }
+    .page-hero h1 {
+      margin-bottom: 18px;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      color: var(--text-body);
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+    .breadcrumb {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .breadcrumb a:hover {
+      color: var(--cmyk-magenta);
+    }
+    .services-section {
+      padding: 70px 0 90px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+    .process-section {
+      background: var(--bg-slate);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 70px 0;
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .process-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 22px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--cmyk-magenta);
+      color: #ffffff;
+      font-family: 'Archivo Black', sans-serif;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+    }
+    .process-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .process-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    @media (max-width: 992px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .services-grid, .process-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topline Gradient -->
+  <div class="topline-gradient"></div>
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <div class="wrap utility-content">
+      <div class="utility-left">
+        <span class="utility-item">📍 7511 120 Street, Delta, BC — Serving Surrey & Metro Vancouver</span>
+        <span class="utility-item">✉️ <a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></span>
+      </div>
+      <div class="utility-right">
+        <span class="utility-item">📞 <a href="tel:6045410560"><strong>(604) 541-0560</strong></a></span>
+        <span class="tagline-badge">“You think it, we print it”</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Print Elements Logo" class="brand-logo">
+        <div class="brand-text">Print <span>Elements</span></div>
+      </a>
+      <div class="navlinks" id="navlinks">
+        <a href="index.html">Home</a>
+                <div class="nav-dropdown-wrap" id="nav-dropdown-wrap">
+          <span class="nav-dropdown-trigger" id="products-trigger" role="button" tabindex="0">Products ▾</span>
+          <div class="nav-dropdown" id="products-dropdown">
+            <a href="digital-printing.html">
+              <span style="color:var(--cmyk-magenta);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Digital Printing</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Cards, Flyers, Brochures, Stationery</div>
+              </div>
+            </a>
+            <a href="wide-format.html">
+              <span style="color:var(--cmyk-cyan);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Wide Format Signs</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Banners, Signs, Posters, Windows</div>
+              </div>
+            </a>
+            <a href="novelty.html">
+              <span style="color:var(--cmyk-yellow);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Novelty &amp; Promo</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Tumblers, Mugs, Apparel, Merch</div>
+              </div>
+            </a>
+            <a href="vehicle-wraps.html">
+              <span style="color:var(--brand-ink);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Vehicle Wraps</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Full &amp; Partial Fleet Graphics</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#quote">Contact</a>
+        <a class="btn btn-primary" href="index.html#quote">Get a Quote ↗</a>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="wrap hero-container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Products</span>
+          <span>/</span>
+          <span style="color:var(--text-primary);font-weight:600">Vehicle Wraps & Fleet Graphics</span>
+        </div>
+        <div class="eyebrow">Delta & Surrey Fleet Branding</div>
+        <h1>Turn Every Mile Into New Business.</h1>
+        <p>
+          Full commercial wraps, partial decals, trailer graphics, and magnetic car signs. We use certified 3M Cast Vinyl and Avery Dennison materials with UV protective clear laminate for 5–7 year outdoor durability.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#services" class="btn btn-primary">Browse Wrap Services ↓</a>
+          <a href="https://wa.me/16045410560?text=Hi%2C%20I%20am%20looking%20for%20a%20vehicle%20wrap%20quote" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-section" id="services">
+      <div class="wrap">
+        <div class="section-header center">
+          <div class="eyebrow">Vehicle Wrap Services</div>
+          <h2>Commercial & Personal Wraps</h2>
+          <p style="color:var(--text-muted)">From single work trucks to municipal commercial fleets, we handle design, printing, and installation.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Full Vehicle Wrap -->
+          <a class="product-card" href="product.html?id=full-wrap">
+            <div class="product-thumb">
+              <img src="assets/vehicle-wraps.jpg" alt="Full Vehicle Wrap">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">WRAP / 01</span>
+              <h3>Full Vehicle Wrap</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Complete bumper-to-bumper transformation with premium cast vinyl. Protects factory paint while turning heads.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 2. Partial Wrap -->
+          <a class="product-card" href="product.html?id=partial-wrap">
+            <div class="product-thumb">
+              <img src="assets/portfolio-3.jpg" alt="Partial Vehicle Wrap">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">WRAP / 02</span>
+              <h3>Partial Vehicle Wrap</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">High-impact coverage on side panels, tailgate, and hood that seamlessly blends with the base vehicle color.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 3. Decals & Lettering -->
+          <a class="product-card" href="product.html?id=vehicle-decals">
+            <div class="product-thumb">
+              <img src="assets/portfolio-3.jpg" alt="Vehicle Decals">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">WRAP / 03</span>
+              <h3>Vinyl Lettering & Decals</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Cut vinyl logos, phone numbers, website URLs, and business licensing info for work trucks and vans.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 4. Fleet Wraps -->
+          <a class="product-card" href="product.html?id=fleet-wraps">
+            <div class="product-thumb">
+              <img src="assets/vehicle-wraps.jpg" alt="Fleet Wraps">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">FLEET / 04</span>
+              <h3>Commercial Fleet Branding</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Volume fleet pricing for 3+ vehicles. Consistent branding across varied truck, van, and car models.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 5. Magnetic Signs -->
+          <a class="product-card" href="product.html?id=magnetic-signs">
+            <div class="product-thumb">
+              <img src="assets/coroplast.jpg" alt="Magnetic Signs">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">SIGN / 05</span>
+              <h3>Magnetic Door Signs</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Removable heavy 30mil magnetic signs. Perfect for contractors and personal vehicles used for business.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 6. Truck & Van Graphics -->
+          <a class="product-card" href="product.html?id=truck-graphics">
+            <div class="product-thumb">
+              <img src="assets/vehicle-wraps.jpg" alt="Truck Graphics">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">WRAP / 06</span>
+              <h3>Box Truck & Trailer Graphics</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Large flat-panel aluminum graphics for 16ft–26ft cube vans, delivery trucks, and semi-trailers.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-Step Process -->
+    <section class="process-section">
+      <div class="wrap">
+        <div class="section-header center">
+          <div class="eyebrow">How It Works</div>
+          <h2>Our 4-Step Wrap Process</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="step-num">1</div>
+            <h3>Consult & Measure</h3>
+            <p>We review your vehicle make, model, and year, take precise digital measurements, and discuss your branding goals.</p>
+          </div>
+          <div class="process-card">
+            <div class="step-num">2</div>
+            <h3>Custom 3D Proof</h3>
+            <p>Our designers build a full-color 3D render of your vehicle so you see exactly how it will look before any printing begins.</p>
+          </div>
+          <div class="process-card">
+            <div class="step-num">3</div>
+            <h3>High-Def Print</h3>
+            <p>Printed on premium 3M Cast Vinyl using high-definition eco-solvent printers, then laminated with UV protective gloss or matte film.</p>
+          </div>
+          <div class="process-card">
+            <div class="step-num">4</div>
+            <h3>Precision Install</h3>
+            <p>Our experienced installers clean, prep, and apply the wrap with seamless seams, clean post-heating, and zero paint damage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding:70px 0;background:#ffffff;text-align:center">
+      <div class="wrap">
+        <h2 style="margin-bottom:12px">Ready to Brand Your Vehicle?</h2>
+        <p style="color:var(--text-muted);max-width:600px;margin:0 auto 28px">
+          Call our Delta shop directly or send photos of your vehicle for a fast, free turnaround estimate.
+        </p>
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
+          <a href="index.html#quote" class="btn btn-primary">Request a Free Estimate ↗</a>
+          <a href="tel:6045410560" class="btn btn-outline">Call: (604) 541-0560</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="Print Elements" class="brand-logo">
+          <div class="brand-text">Print <span>Elements</span></div>
+        </a>
+        <p>Commercial printing, signs, and custom merchandise in Delta and Surrey, BC. Fast turnaround and professional grade results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product Lines</h4>
+        <ul>
+          <li><a href="digital-printing.html">Digital Printing</a></li>
+          <li><a href="wide-format.html">Wide Format Banners</a></li>
+          <li><a href="novelty.html">Novelty & Merch</a></li>
+          <li><a href="vehicle-wraps.html">Vehicle Wraps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Wrap Services</h4>
+        <ul>
+          <li><a href="product.html?id=full-wrap">Full Wraps</a></li>
+          <li><a href="product.html?id=partial-wrap">Partial Wraps</a></li>
+          <li><a href="product.html?id=vehicle-decals">Vinyl Decals</a></li>
+          <li><a href="product.html?id=fleet-wraps">Fleet Graphics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6045410560">(604) 541-0560</a></li>
+          <li><a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></li>
+          <li>7511 120 Street, Delta, BC</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; 2026 Print Elements. All rights reserved.</span>
+      <span>“You think it, we print it”</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('navlinks');
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  
+    // Products Dropdown click & touch handler
+    const dropdownWrap = document.getElementById('nav-dropdown-wrap');
+    const productsTrigger = document.getElementById('products-trigger');
+    if (dropdownWrap && productsTrigger) {
+      productsTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownWrap.classList.toggle('is-open');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdownWrap.contains(e.target)) {
+          dropdownWrap.classList.remove('is-open');
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>

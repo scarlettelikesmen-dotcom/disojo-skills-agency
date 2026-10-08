@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Print Elements</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      padding: 40px 0 80px;
+      min-height: calc(100vh - 200px);
+    }
+    .breadcrumb {
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .breadcrumb a:hover {
+      color: var(--cmyk-magenta);
+    }
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+    @media(min-width: 900px) {
+      .product-layout {
+        grid-template-columns: 1fr 1.1fr;
+      }
+    }
+
+    /* Product Image Display */
+    .product-image-area {
+      position: sticky;
+      top: 110px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--bg-slate);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-image-area img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .product-image-area:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Info Panel */
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .category-badge {
+      display: inline-block;
+      background: var(--cmyk-magenta-tint);
+      color: var(--cmyk-magenta);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      align-self: flex-start;
+      border: 1px solid rgba(230, 0, 126, 0.2);
+    }
+    .product-title {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      margin-bottom: 6px;
+    }
+    .product-price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--cmyk-magenta);
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .price-note {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .product-desc {
+      color: var(--text-body);
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    /* Features List */
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 16px 20px;
+      background: var(--bg-slate);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .feature-list li {
+      position: relative;
+      padding-left: 26px;
+      font-size: 0.92rem;
+      color: var(--text-body);
+    }
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--cmyk-magenta);
+      font-weight: bold;
+    }
+
+    .turnaround-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      border: 1px solid var(--border);
+      color: var(--text-body);
+      align-self: flex-start;
+    }
+    .turnaround-badge strong {
+      color: var(--cmyk-cyan);
+    }
+
+    /* Options Form */
+    .options-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .option-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .option-label {
+      font-weight: 700;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-primary);
+    }
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg-slate);
+      border: 1.5px solid var(--border);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230F172A%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 10px auto;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    select:focus {
+      outline: none;
+      border-color: var(--cmyk-magenta);
+      background-color: #ffffff;
+    }
+
+    /* Color Swatches */
+    .swatches {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .swatch {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid #e2e8f0;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .swatch:hover {
+      transform: scale(1.1);
+    }
+    .swatch.active {
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--cmyk-magenta);
+      transform: scale(1.1);
+    }
+
+    /* Upload Area */
+    .upload-area {
+      border: 2px dashed var(--cmyk-magenta);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      cursor: pointer;
+      background: var(--cmyk-magenta-tint);
+      transition: all 0.2s ease;
+    }
+    .upload-area:hover {
+      background: #fce7f3;
+      transform: translateY(-2px);
+    }
+    .upload-icon {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    /* Action Buttons Grid */
+    .action-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    @media (max-width: 500px) {
+      .action-buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Related Products */
+    .related-section {
+      margin-top: 90px;
+      border-top: 1px solid var(--border);
+      padding-top: 60px;
+    }
+    .related-title {
+      font-size: 1.8rem;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    /* 404 */
+    .not-found {
+      text-align: center;
+      padding: 100px 20px;
+      display: none;
+    }
+    .not-found h1 {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      color: var(--cmyk-magenta);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topline Gradient -->
+  <div class="topline-gradient"></div>
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <div class="wrap utility-content">
+      <div class="utility-left">
+        <span class="utility-item">📍 7511 120 Street, Delta, BC — Serving Surrey & Metro Vancouver</span>
+        <span class="utility-item">✉️ <a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></span>
+      </div>
+      <div class="utility-right">
+        <span class="utility-item">📞 <a href="tel:6045410560"><strong>(604) 541-0560</strong></a></span>
+        <span class="tagline-badge">“You think it, we print it”</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Print Elements Logo" class="brand-logo">
+        <div class="brand-text">Print <span>Elements</span></div>
+      </a>
+      <div class="navlinks" id="navlinks">
+        <a href="index.html">Home</a>
+                <div class="nav-dropdown-wrap" id="nav-dropdown-wrap">
+          <span class="nav-dropdown-trigger" id="products-trigger" role="button" tabindex="0">Products ▾</span>
+          <div class="nav-dropdown" id="products-dropdown">
+            <a href="digital-printing.html">
+              <span style="color:var(--cmyk-magenta);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Digital Printing</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Cards, Flyers, Brochures, Stationery</div>
+              </div>
+            </a>
+            <a href="wide-format.html">
+              <span style="color:var(--cmyk-cyan);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Wide Format Signs</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Banners, Signs, Posters, Windows</div>
+              </div>
+            </a>
+            <a href="novelty.html">
+              <span style="color:var(--cmyk-yellow);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Novelty &amp; Promo</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Tumblers, Mugs, Apparel, Merch</div>
+              </div>
+            </a>
+            <a href="vehicle-wraps.html">
+              <span style="color:var(--brand-ink);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Vehicle Wraps</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Full &amp; Partial Fleet Graphics</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#quote">Contact</a>
+        <a class="btn btn-primary" href="index.html#quote">Get a Quote ↗</a>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- 404 Message -->
+    <div id="not-found" class="not-found">
+      <h1>Product Not Found</h1>
+      <p style="color:var(--text-muted);margin-bottom:30px">The product you are looking for doesn't exist or has been moved.</p>
+      <a href="index.html" class="btn btn-primary">Return to Homepage ↗</a>
+    </div>
+
+    <!-- Product Content Container -->
+    <div id="product-content">
+      <div class="breadcrumb" id="breadcrumb">
+        <!-- Injected via JS -->
+      </div>
+
+      <div class="product-layout">
+        <!-- Left: Image Area -->
+        <div>
+          <div class="product-image-area">
+            <img id="product-img" src="assets/business-cards.jpg" alt="Product Image">
+          </div>
+        </div>
+
+        <!-- Right: Details & Buying Flow -->
+        <div class="product-info">
+          <div class="category-badge" id="product-category">Category</div>
+          
+          <div>
+            <h1 class="product-title" id="product-name">Product Name</h1>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap">
+              <span style="display:inline-flex;align-items:center;gap:6px;background:var(--cmyk-magenta-tint);color:var(--cmyk-magenta);padding:5px 14px;border-radius:6px;font-weight:800;font-size:0.88rem;border:1px solid rgba(230,0,126,0.2)">
+                🏷️ Custom Quote Based on Specs
+              </span>
+              <span style="font-size:0.86rem;color:var(--text-muted)">Volume discounts & rush options available</span>
+            </div>
+          </div>
+
+          <p class="product-desc" id="product-desc">Description goes here.</p>
+
+          <ul class="feature-list" id="product-features">
+            <!-- Injected via JS -->
+          </ul>
+
+          <div class="turnaround-badge" id="product-turnaround-container">
+            <span>⏱</span> Turnaround: <strong id="product-turnaround">2-3 business days</strong>
+          </div>
+
+          <!-- Options (Swatches & Dropdowns) -->
+          <div class="options-form" id="options-container">
+            <!-- Injected via JS -->
+          </div>
+
+          <!-- Upload Design Button -->
+          <div class="upload-area" id="upload-btn">
+            <span class="upload-icon">📄</span>
+            <p style="font-weight:700;margin-bottom:4px;color:var(--text-primary)">Upload Your Design / Artwork</p>
+            <p style="font-size:0.85rem;color:var(--text-muted)">Drop your design file here or click to email (PDF, AI, PSD, PNG - Max 15MB)</p>
+          </div>
+
+          <!-- Interactive Actions -->
+          <div class="action-buttons" style="grid-template-columns:1fr 1fr;gap:14px">
+            <a href="#" class="btn btn-primary" id="btn-quote" style="grid-column:1/-1;min-height:54px;font-size:1.05rem">Request a Free Quote ↗</a>
+            <a href="#" class="btn btn-whatsapp" id="btn-whatsapp" target="_blank" style="min-height:48px">Chat on WhatsApp</a>
+            <a href="tel:6045410560" class="btn btn-outline" style="min-height:48px">Call (604) 541-0560</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div class="related-section" id="related-section">
+        <h2 class="related-title">You Might Also Like</h2>
+        <div class="related-grid" id="related-grid">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="Print Elements" class="brand-logo">
+          <div class="brand-text">Print <span>Elements</span></div>
+        </a>
+        <p>Commercial printing, signs, and custom merchandise in Delta and Surrey, BC. Fast turnaround and professional grade results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product Lines</h4>
+        <ul>
+          <li><a href="digital-printing.html">Digital Printing</a></li>
+          <li><a href="wide-format.html">Wide Format Banners</a></li>
+          <li><a href="novelty.html">Novelty & Merch</a></li>
+          <li><a href="vehicle-wraps.html">Vehicle Wraps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Products</h4>
+        <ul>
+          <li><a href="product.html?id=business-cards">Business Cards</a></li>
+          <li><a href="product.html?id=wine-tumblers">Wine Tumblers</a></li>
+          <li><a href="product.html?id=roller-banners">Roller Banners</a></li>
+          <li><a href="product.html?id=coroplast-signs">Coroplast Signs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6045410560">(604) 541-0560</a></li>
+          <li><a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></li>
+          <li>7511 120 Street, Delta, BC</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; 2026 Print Elements. All rights reserved.</span>
+      <span>“You think it, we print it”</span>
+    </div>
+  </footer>
+
+  <script>
+    const colorMap = {
+      'Black': '#1a1a1a',
+      'White': '#f8fafc',
+      'Red': '#e11d48',
+      'Blue': '#2563eb',
+      'Green': '#16a34a',
+      'Navy': '#1e3a8a',
+      'Grey': '#64748b',
+      'Orange': '#ea580c',
+      'Pink': '#db2777',
+      'Forest Green': '#14532d',
+      'Royal Blue': '#1d4ed8'
+    };
+
+    const PRODUCTS = {
+      // DIGITAL PRINTING
+      'business-cards': {
+        name: 'Business Cards',
+        category: 'Digital Printing',
+        categoryUrl: 'digital-printing.html',
+        price: 'Custom Quote',
+        image: 'assets/business-cards.jpg',
+        description: 'Make a lasting first impression with professionally printed business cards. Available in standard, slim, square and rounded corner formats with matte, glossy or soft-touch finishes.',
+        features: ['Premium 16pt card stock', 'Matte, Glossy or Soft-Touch finish', 'Full-colour both sides', 'Rounded corners available', 'Same-day and rush options'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['50 cards', '100 cards', '250 cards', '500 cards', '1000 cards'] },
+          { label: 'Finish', type: 'select', choices: ['Matte', 'Glossy', 'Soft-Touch', 'Spot UV'] },
+          { label: 'Size', type: 'select', choices: ['Standard (3.5" x 2")', 'Slim (3.5" x 1.75")', 'Square (2.5" x 2.5")', 'Mini (2.5" x 1.5")'] }
+        ],
+        turnaround: '1-2 business days',
+        relatedIds: ['flyers', 'brochures', 'stationery']
+      },
+      'flyers': {
+        name: 'Flyers & Sell Sheets',
+        category: 'Digital Printing',
+        categoryUrl: 'digital-printing.html',
+        price: 'Custom Quote',
+        image: 'assets/flyers.jpg',
+        description: 'High-impact flyers that grab attention and drive action. Perfect for promotions, events, real estate and any marketing campaign.',
+        features: ['Full-colour printing', 'Multiple paper weights (80lb, 100lb)', 'Single or double sided', 'Fast 24-48hr turnaround', 'Quantity discounts available'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['50', '100', '250', '500', '1000', '2500', '5000'] },
+          { label: 'Size', type: 'select', choices: ['Half Page (5.5" x 8.5")', 'Letter (8.5" x 11")', 'Legal (8.5" x 14")', 'Tabloid (11" x 17")'] },
+          { label: 'Paper Stock', type: 'select', choices: ['60lb Uncoated', '80lb Gloss Text', '100lb Gloss Text', '100lb Silk Cover'] }
+        ],
+        turnaround: '1-2 business days',
+        relatedIds: ['brochures', 'postcards', 'business-cards']
+      },
+      'brochures': {
+        name: 'Brochures',
+        category: 'Digital Printing',
+        categoryUrl: 'digital-printing.html',
+        price: 'Custom Quote',
+        image: 'assets/flyers.jpg',
+        description: 'Professionally folded brochures that tell your story. Available in multiple fold styles on premium coated stocks.',
+        features: ['Multiple fold styles (Tri-fold, Bi-fold, Z-fold)', 'Premium 100lb gloss or silk', 'Sharp colour reproduction', 'Full bleed precision', 'Optional spot UV accents'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['50', '100', '250', '500', '1000'] },
+          { label: 'Fold Type', type: 'select', choices: ['Tri-fold', 'Bi-fold', 'Z-fold', 'Gate fold'] },
+          { label: 'Size', type: 'select', choices: ['Letter (8.5" x 11")', 'Legal (8.5" x 14")', 'Tabloid (11" x 17")'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['flyers', 'postcards', 'booklets']
+      },
+      'postcards': {
+        name: 'Postcards & Mailers',
+        category: 'Digital Printing',
+        categoryUrl: 'digital-printing.html',
+        price: 'Custom Quote',
+        image: 'assets/postcards.jpg',
+        description: 'Eye-catching postcards for direct mail, promotions and event announcements. Canada Post Neighborhood Mail compatible.',
+        features: ['Canada Post EDDM compliant sizes', 'High-gloss UV coating options', 'Heavy 16pt card stock', 'Fast local turnaround', 'Bulk mailing discounts'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['100', '250', '500', '1000', '2500', '5000'] },
+          { label: 'Size', type: 'select', choices: ['4" x 6"', '5" x 7"', '6" x 9"', '6" x 11"', '8.5" x 5.5"'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['flyers', 'stickers', 'menus']
+      },
+      'stationery': {
+        name: 'Letterheads & Envelopes',
+        category: 'Digital Printing',
+        categoryUrl: 'digital-printing.html',
+        price: 'Custom Quote',
+        image: 'assets/menus.jpg',
+        description: 'Professional branded stationery that reinforces your business identity in every formal communication.',
+        features: ['Matching letterhead + envelope sets', 'Premium 70lb bond paper', 'Laser and inkjet printer safe', 'Full-colour design', 'Self-seal envelopes available'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['100', '250', '500', '1000'] },
+          { label: 'Package Type', type: 'select', choices: ['Letterhead Only', 'Envelopes Only', 'Matching Set'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['business-cards', 'booklets', 'menus']
+      },
+      'menus': {
+        name: 'Menus',
+        category: 'Digital Printing',
+        categoryUrl: 'digital-printing.html',
+        price: 'Custom Quote',
+        image: 'assets/menus.jpg',
+        description: 'Restaurant and cafe menus in laminated, spiral-bound or single-sheet formats that look as good as your food.',
+        features: ['Laminated or soft-touch seal', 'Waterproof synthetic stock available', 'Vivid full-colour', 'Wipe-clean surface', 'Single sheet, bi-fold, or booklet'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['25', '50', '100', '250'] },
+          { label: 'Format', type: 'select', choices: ['Laminated Single Sheet', 'Bi-fold', 'Tri-fold', 'Spiral Bound'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['flyers', 'stationery', 'booklets']
+      },
+      'booklets': {
+        name: 'Booklets & Catalogs',
+        category: 'Digital Printing',
+        categoryUrl: 'digital-printing.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-1.jpg',
+        description: 'Saddle-stitched and perfect-bound booklets for product catalogs, annual reports, presentations and programs.',
+        features: ['Saddle-stitch or perfect-bound', '8 to 64+ pages', 'Full-colour inside and cover', 'Heavy cover stock', 'Square-edge spine finishing'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['25', '50', '100', '250', '500'] },
+          { label: 'Page Count', type: 'select', choices: ['8 pages', '12 pages', '16 pages', '24 pages', '32 pages', '48 pages'] },
+          { label: 'Binding', type: 'select', choices: ['Saddle-Stitched (stapled)', 'Spiral Bound'] }
+        ],
+        turnaround: '3-4 business days',
+        relatedIds: ['brochures', 'stationery', 'menus']
+      },
+      'stickers': {
+        name: 'Stickers & Labels',
+        category: 'Digital Printing',
+        categoryUrl: 'digital-printing.html',
+        price: 'Custom Quote',
+        image: 'assets/custom-merch.jpg',
+        description: 'Custom cut, vinyl, and clear stickers for product packaging, branding, promotions and personal use.',
+        features: ['Custom shapes and sizes', 'White vinyl, clear, or holographic', 'Waterproof & scratch resistant', 'Outdoor-rated inks', 'Individual die-cuts or sheets'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['25', '50', '100', '250', '500', '1000'] },
+          { label: 'Material', type: 'select', choices: ['White Gloss Vinyl', 'Matte White', 'Clear Vinyl', 'Holographic'] },
+          { label: 'Cut Shape', type: 'select', choices: ['Circle', 'Square', 'Rectangle', 'Custom Die-Cut'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['business-cards', 'postcards', 'vehicle-decals']
+      },
+
+      // WIDE FORMAT
+      'roller-banners': {
+        name: 'Roller Banners (Pull-Up)',
+        category: 'Wide Format',
+        categoryUrl: 'wide-format.html',
+        price: 'Custom Quote',
+        image: 'assets/banners.jpg',
+        description: 'Retractable pull-up roller banners for trade shows, retail displays and events. Easy to set up, transport and store.',
+        features: ['33"x80" and 47"x80" widths', 'Heavy-duty aluminum base', 'Padded canvas carry bag included', 'UV-resistant matte vinyl', 'Sets up in 30 seconds'],
+        options: [
+          { label: 'Stand Size', type: 'select', choices: ['Standard (33" x 80")', 'Wide (47" x 80")', 'Extra-Wide (60" x 80")'] },
+          { label: 'Finish', type: 'select', choices: ['Anti-Glare Matte', 'Vibrant Gloss'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['vinyl-banners', 'foam-boards', 'fabric-displays']
+      },
+      'vinyl-banners': {
+        name: 'Outdoor Vinyl Banners',
+        category: 'Wide Format',
+        categoryUrl: 'wide-format.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-2.jpg',
+        description: 'Durable outdoor and indoor vinyl banners with hemmed edges and brass grommets for easy hanging in Canadian weather.',
+        features: ['Heavy 13oz or 18oz blockout vinyl', 'Heat-welded reinforced hems', 'Brass grommets every 2 feet', 'Outdoor UV-resistant inks', 'Custom dimensions'],
+        options: [
+          { label: 'Standard Size', type: 'select', choices: ['2\' x 4\'', '3\' x 6\'', '4\' x 8\'', '4\' x 10\'', '5\' x 10\'', 'Custom Size'] },
+          { label: 'Vinyl Weight', type: 'select', choices: ['13oz Standard Outdoor', '18oz Heavy Duty Windproof'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['roller-banners', 'coroplast-signs', 'posters']
+      },
+      'posters': {
+        name: 'Large Format Posters',
+        category: 'Wide Format',
+        categoryUrl: 'wide-format.html',
+        price: 'Custom Quote',
+        image: 'assets/flyers.jpg',
+        description: 'High-resolution poster prints up to 60" wide on premium paper, canvas or vinyl for storefronts, art, and presentations.',
+        features: ['Prints up to 60 inches wide', 'Satin, gloss, or matte paper', 'Ultra-high DPI color depth', 'Mounted or rolled', 'Rush turnaround available'],
+        options: [
+          { label: 'Size', type: 'select', choices: ['18" x 24"', '24" x 36"', '36" x 48"', '48" x 60"'] },
+          { label: 'Paper Finish', type: 'select', choices: ['Satin Photo Paper', 'High Gloss', 'Matte Fine Art', 'Waterproof Poly'] }
+        ],
+        turnaround: '1-2 business days',
+        relatedIds: ['vinyl-banners', 'foam-boards', 'canvas-prints']
+      },
+      'window-graphics': {
+        name: 'Window Graphics & Perforated',
+        category: 'Wide Format',
+        categoryUrl: 'wide-format.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-5.jpg',
+        description: 'Perforated one-way vision window films and frosted vinyl for storefronts and office privacy branding.',
+        features: ['One-way vision (see-through from inside)', 'Opaque vinyl blockout options', 'Frosted etched-glass look', 'Removable adhesive', 'Professional install available'],
+        options: [
+          { label: 'Film Type', type: 'select', choices: ['Perforated (One-Way Vision)', 'Opaque Storefront Vinyl', 'Frosted / Etched Glass', 'Clear Decal'] }
+        ],
+        turnaround: '3-4 business days',
+        relatedIds: ['coroplast-signs', 'vehicle-decals', 'vinyl-banners']
+      },
+      'coroplast-signs': {
+        name: 'Coroplast Yard & Lawn Signs',
+        category: 'Wide Format',
+        categoryUrl: 'wide-format.html',
+        price: 'Custom Quote',
+        image: 'assets/coroplast.jpg',
+        description: 'Lightweight corrugated plastic signs for real estate, election lawn displays, construction sites and directional events.',
+        features: ['Weatherproof 4mm or 8mm corrugated plastic', 'Metal H-stake included', 'Full-colour direct UV print', 'Double or single-sided', 'Bulk volume pricing'],
+        options: [
+          { label: 'Size', type: 'select', choices: ['12" x 18"', '18" x 24"', '24" x 36"', '4\' x 8\''] },
+          { label: 'Thickness', type: 'select', choices: ['4mm Standard', '8mm Heavy Duty'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['vinyl-banners', 'foam-boards', 'window-graphics']
+      },
+      'foam-boards': {
+        name: 'Foam Board Signs',
+        category: 'Wide Format',
+        categoryUrl: 'wide-format.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-3.jpg',
+        description: 'Rigid foam board prints for indoor displays, court presentations, real estate previews, and conferences.',
+        features: ['3/16" or 1/2" foam core', 'Direct flatbed print', 'Ultra-crisp typography', 'Easel backs available', 'Custom contour cuts'],
+        options: [
+          { label: 'Size', type: 'select', choices: ['11" x 17"', '18" x 24"', '24" x 36"', '36" x 48"'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['roller-banners', 'coroplast-signs', 'posters']
+      },
+      'canvas-prints': {
+        name: 'Gallery Canvas Prints',
+        category: 'Wide Format',
+        categoryUrl: 'wide-format.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-1.jpg',
+        description: 'Gallery-quality stretched canvas prints for interior corporate decor, family photography, and art exhibitions.',
+        features: ['Gallery wrap wooden stretchers', 'Vivid archival inks', 'Hanging kit installed', '0.75" or 1.5" thickness', 'Fade-resistant UV clear coat'],
+        options: [
+          { label: 'Size', type: 'select', choices: ['8" x 10"', '12" x 18"', '16" x 24"', '24" x 36"', '36" x 48"'] },
+          { label: 'Wrap Depth', type: 'select', choices: ['0.75" Slim', '1.5" Gallery Stretched'] }
+        ],
+        turnaround: '3-4 business days',
+        relatedIds: ['posters', 'foam-boards', 'fabric-displays']
+      },
+      'fabric-displays': {
+        name: 'Tension Fabric Displays',
+        category: 'Wide Format',
+        categoryUrl: 'wide-format.html',
+        price: 'Custom Quote',
+        image: 'assets/banners.jpg',
+        description: 'Backlit and non-lit fabric tension displays for trade show booths, retail popups, and event media walls.',
+        features: ['Wrinkle-free dye-sublimated fabric', 'Tool-free aluminum frame', 'Double-sided printing option', 'Washable fabric graphic', 'Includes padded travel bag'],
+        options: [
+          { label: 'Display Size', type: 'select', choices: ['8\' x 8\' Booth Backdrop', '10\' x 8\' Trade Show Wall', '10\' x 10\' Curved'] }
+        ],
+        turnaround: '4-5 business days',
+        relatedIds: ['roller-banners', 'vinyl-banners', 'foam-boards']
+      },
+
+      // NOVELTY & MERCH
+      'wine-tumblers': {
+        name: 'Custom Wine Tumblers',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/custom-merch.jpg',
+        description: 'Beautiful mint, white, and black wine tumblers that set the tone for any gathering or corporate gift. Custom full-colour printed with your logo or phrase.',
+        features: ['12oz double-wall insulated stainless steel', 'Keeps drinks cold 9h / hot 3h', 'Spill-resistant clear lid', 'BPA-free & food safe', 'No minimum quantity'],
+        options: [
+          { label: 'Tumbler Color', type: 'swatch', choices: ['Black', 'White', 'Blue'] },
+          { label: 'Quantity', type: 'select', choices: ['1 tumbler', '5 tumblers', '10 tumblers', '25 tumblers', '50 tumblers'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['mugs', 'colour-insert-mugs', 'travel-mugs']
+      },
+      'mugs': {
+        name: 'Custom Ceramic Mugs',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/custom-merch.jpg',
+        description: 'Classic 11oz high-gloss ceramic coffee mugs with edge-to-edge vibrant full-colour printing. Dishwasher and microwave safe.',
+        features: ['11oz premium ceramic', 'Full wraparound dye-sublimation print', 'Microwave and dishwasher safe', 'Vivid photo quality', 'Great for office branding'],
+        options: [
+          { label: 'Quantity', type: 'select', choices: ['1 mug', '5 mugs', '12 mugs', '24 mugs', '50 mugs', '100 mugs'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['colour-insert-mugs', 'wine-tumblers', 'travel-mugs']
+      },
+      'colour-insert-mugs': {
+        name: 'Coffee Mugs with Colour Insert',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/custom-merch.jpg',
+        description: 'Two-tone ceramic mugs featuring a coloured interior and matching handle. The white exterior highlights your logo with maximum contrast.',
+        features: ['11oz ceramic with colored interior', 'Choice of 6 vibrant accent colors', 'Full-color exterior sublimation', 'Comfortable C-handle', 'Dishwasher safe'],
+        options: [
+          { label: 'Interior Color', type: 'swatch', choices: ['Blue', 'Red', 'Black', 'Green', 'Orange', 'Pink'] },
+          { label: 'Quantity', type: 'select', choices: ['1 mug', '6 mugs', '12 mugs', '24 mugs', '48 mugs'] }
+        ],
+        turnaround: '2-3 business days',
+        relatedIds: ['mugs', 'wine-tumblers', 'travel-mugs']
+      },
+      'travel-mugs': {
+        name: 'Travel Mugs & Bottles',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-4.jpg',
+        description: 'Insulated stainless steel travel tumblers and water bottles engineered to keep coffee hot or cold water refreshing on the commute.',
+        features: ['15oz vacuum-sealed stainless steel', 'Leak-proof screw top lid', 'Laser engraved or color print', 'Cup-holder friendly taper', 'Long-lasting finish'],
+        options: [
+          { label: 'Bottle Color', type: 'swatch', choices: ['White', 'Black', 'Blue'] },
+          { label: 'Quantity', type: 'select', choices: ['1 bottle', '5 bottles', '10 bottles', '25 bottles'] }
+        ],
+        turnaround: '3-4 business days',
+        relatedIds: ['mugs', 'wine-tumblers', 'colour-insert-mugs']
+      },
+      'hoodies': {
+        name: 'Custom Hoodies',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-4.jpg',
+        description: 'Cozy fleece pullovers and zip-ups custom printed or embroidered for team uniforms, sports clubs, corporate gifts, and events.',
+        features: ['Heavyweight cotton/poly blend', 'Sizes XS through 3XL', 'Direct-to-garment or screen printed', 'Custom chest and sleeve prints', 'No minimum orders'],
+        options: [
+          { label: 'Size', type: 'select', choices: ['Small', 'Medium', 'Large', 'X-Large', '2X-Large'] },
+          { label: 'Hoodie Color', type: 'select', choices: ['Black', 'White', 'Navy', 'Grey', 'Red'] }
+        ],
+        turnaround: '3-5 business days',
+        relatedIds: ['tshirts', 'wine-tumblers', 'notebooks']
+      },
+      'tshirts': {
+        name: 'Custom T-Shirts',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-4.jpg',
+        description: 'Soft 100% combed ringspun cotton t-shirts printed with sharp high-resolution direct-to-garment or screen print technology.',
+        features: ['100% pre-shrunk cotton', 'Front, back, and sleeve placements', 'Vivid, breathable inks', 'Mens, womens, and youth cuts', 'Bulk volume discounts'],
+        options: [
+          { label: 'Size', type: 'select', choices: ['Small', 'Medium', 'Large', 'X-Large', '2X-Large'] },
+          { label: 'Shirt Color', type: 'select', choices: ['White', 'Black', 'Grey', 'Navy', 'Red', 'Royal Blue'] }
+        ],
+        turnaround: '3-5 business days',
+        relatedIds: ['hoodies', 'pens', 'keychains']
+      },
+      'keychains': {
+        name: 'Custom Keychains',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/custom-merch.jpg',
+        description: 'Durable custom laser-cut acrylic and enamel metal keychains. Ideal for car dealerships, real estate handovers, and event giveaways.',
+        features: ['Crystal clear acrylic or cast metal', 'Double-sided full colour print', 'Sturdy steel split ring included', 'Custom shape contour cuts', 'Low minimums'],
+        options: [
+          { label: 'Material', type: 'select', choices: ['Clear Acrylic', 'Polished Metal', 'Flexible Soft PVC'] },
+          { label: 'Quantity', type: 'select', choices: ['10', '25', '50', '100', '250', '500'] }
+        ],
+        turnaround: '3-4 business days',
+        relatedIds: ['pens', 'notebooks', 'tshirts']
+      },
+      'pens': {
+        name: 'Branded Executive Pens',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/menus.jpg',
+        description: 'High quality metal and soft-touch stylus pens custom printed or laser engraved with your business name and contact number.',
+        features: ['Smooth German ballpoint ink cartridge', 'Laser engraved or UV color printed', 'Black or blue ink options', 'Executive presentation gift boxes available'],
+        options: [
+          { label: 'Pen Style', type: 'select', choices: ['Soft-Touch Metal Stylus', 'Classic Retractable Metal', 'Eco Bamboo Ballpoint'] },
+          { label: 'Quantity', type: 'select', choices: ['50 pens', '100 pens', '250 pens', '500 pens'] }
+        ],
+        turnaround: '3-5 business days',
+        relatedIds: ['keychains', 'notebooks', 'business-cards']
+      },
+      'notebooks': {
+        name: 'Custom Notebooks & Journals',
+        category: 'Novelty & Promo',
+        categoryUrl: 'novelty.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-1.jpg',
+        description: 'Hardcover and spiral notebooks with custom printed covers and ribbon bookmarks. Perfect for onboarding kits and client gifting.',
+        features: ['A5 size (5.5" x 8.5")', '100 lined cream sheets', 'Hardcover with foil or full color print', 'Elastic closure band', 'Interior back pocket'],
+        options: [
+          { label: 'Cover Type', type: 'select', choices: ['Hardcover Matte', 'Faux Leather Engraved', 'Spiral Bound'] },
+          { label: 'Quantity', type: 'select', choices: ['10', '25', '50', '100'] }
+        ],
+        turnaround: '3-5 business days',
+        relatedIds: ['pens', 'hoodies', 'keychains']
+      },
+
+      // VEHICLE WRAPS
+      'full-wrap': {
+        name: 'Full Vehicle Wrap',
+        category: 'Vehicle Wraps',
+        categoryUrl: 'vehicle-wraps.html',
+        price: 'Custom Quote',
+        image: 'assets/vehicle-wraps.jpg',
+        description: 'Complete commercial vehicle wrap that covers the entire exterior of your car, truck, or van. Maximum visibility on British Columbia highways.',
+        features: ['Premium 3M Cast Vinyl or Avery Dennison', 'UV protective gloss or matte overlaminate', 'Certified professional installation', 'Protects original paintwork', '5–7 year outdoor durability'],
+        options: [
+          { label: 'Vehicle Class', type: 'select', choices: ['Pickup Truck (F-150, Sierra)', 'Cargo Van (Transit, Sprinter)', 'Sedan / Hatchback', 'Cube Van / Box Truck'] }
+        ],
+        turnaround: '3-5 business days install',
+        relatedIds: ['partial-wrap', 'fleet-wraps', 'truck-graphics']
+      },
+      'partial-wrap': {
+        name: 'Partial Vehicle Wrap',
+        category: 'Vehicle Wraps',
+        categoryUrl: 'vehicle-wraps.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-3.jpg',
+        description: 'Strategic wrap placement covering 25% to 75% of your vehicle (e.g. rear doors, box sides, and tailgate). High impact at a fraction of the cost.',
+        features: ['Blends with factory paint color', 'Premium 3M air-release vinyl', 'Custom digital preview provided', 'Fast installation turnaround'],
+        options: [
+          { label: 'Coverage', type: 'select', choices: ['Rear Half & Tailgate', 'Side Panels & Rear Doors', 'Doors & Hood Only'] }
+        ],
+        turnaround: '2-3 business days install',
+        relatedIds: ['full-wrap', 'vehicle-decals', 'magnetic-signs']
+      },
+      'vehicle-decals': {
+        name: 'Vehicle Decals & Vinyl Lettering',
+        category: 'Vehicle Wraps',
+        categoryUrl: 'vehicle-wraps.html',
+        price: 'Custom Quote',
+        image: 'assets/portfolio-3.jpg',
+        description: 'Precision cut vinyl logos, phone numbers, services lists, and website URLs for business vehicles. Easy to apply and clean to remove.',
+        features: ['Air-release vinyl for bubble-free finish', 'Outdoor rated 5+ years', 'Pre-masked with transfer tape', 'Custom color matching', 'DIY or shop install'],
+        options: [
+          { label: 'Placement Area', type: 'select', choices: ['Front Doors (Pair)', 'Tailgate Only', 'Rear Window Perforated', 'Full Decal Package'] }
+        ],
+        turnaround: '1-2 business days',
+        relatedIds: ['partial-wrap', 'magnetic-signs', 'coroplast-signs']
+      },
+      'fleet-wraps': {
+        name: 'Fleet Wraps & Branding',
+        category: 'Vehicle Wraps',
+        categoryUrl: 'vehicle-wraps.html',
+        price: 'Custom Quote',
+        image: 'assets/vehicle-wraps.jpg',
+        description: 'Volume branding programs for municipal, commercial, and trade fleets with 3 or more vehicles. Standardized templates across multiple vehicle makes.',
+        features: ['Volume tiered discounts', 'Standardized brand guidelines', 'Dedicated account manager', 'Fast fleet turnaround', '3M certified vinyl warranty'],
+        options: [
+          { label: 'Fleet Size', type: 'select', choices: ['3–5 Vehicles', '6–10 Vehicles', '11–25 Vehicles', '25+ Vehicles'] }
+        ],
+        turnaround: 'Flexible schedule',
+        relatedIds: ['full-wrap', 'truck-graphics', 'partial-wrap']
+      },
+      'magnetic-signs': {
+        name: 'Magnetic Vehicle Door Signs',
+        category: 'Vehicle Wraps',
+        categoryUrl: 'vehicle-wraps.html',
+        price: 'Custom Quote',
+        image: 'assets/coroplast.jpg',
+        description: 'Heavy 30mil magnetic signs that cling firmly to metal car doors at highway speeds. Easily removed when using personal vehicles on weekends.',
+        features: ['Heavy 30mil vehicle magnetic stock', 'Sold in pairs for both front doors', 'Rounded corners to resist wind lift', 'UV and water resistant', 'Full colour print'],
+        options: [
+          { label: 'Pair Size', type: 'select', choices: ['12" x 18" (Pair)', '12" x 24" (Pair)', '18" x 24" (Pair)'] }
+        ],
+        turnaround: '1-2 business days',
+        relatedIds: ['vehicle-decals', 'coroplast-signs', 'partial-wrap']
+      },
+      'truck-graphics': {
+        name: 'Box Truck & Trailer Graphics',
+        category: 'Vehicle Wraps',
+        categoryUrl: 'vehicle-wraps.html',
+        price: 'Custom Quote',
+        image: 'assets/vehicle-wraps.jpg',
+        description: 'Massive flat-panel graphics for 16ft, 20ft, and 26ft cube vans, box trucks, and semi-trailers. Huge mobile billboards on Metro Vancouver roads.',
+        features: ['Large format seamless panels', 'Rivet-safe cast or calendered vinyl', 'High-speed highway wind durability', 'Complete mockup provided'],
+        options: [
+          { label: 'Truck Size', type: 'select', choices: ['16ft Cube Van', '20ft Box Truck', '26ft Commercial Truck', '53ft Semi-Trailer'] }
+        ],
+        turnaround: '3-5 business days',
+        relatedIds: ['full-wrap', 'fleet-wraps', 'partial-wrap']
+      }
+    };
+
+    // Load Product Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get('id') || 'business-cards';
+
+      if (!PRODUCTS[productId]) {
+        document.getElementById('not-found').style.display = 'block';
+        document.getElementById('product-content').style.display = 'none';
+        return;
+      }
+
+      const product = PRODUCTS[productId];
+
+      // Breadcrumb
+      document.getElementById('breadcrumb').innerHTML = `
+        <a href="index.html">Home</a> <span>/</span>
+        <a href="${product.categoryUrl}">${product.category}</a> <span>/</span>
+        <span style="color:var(--text-primary);font-weight:600">${product.name}</span>
+      `;
+
+      // Info
+      document.getElementById('product-name').textContent = product.name;
+      document.getElementById('product-category').textContent = product.category;
+      // price removed
+      document.getElementById('product-desc').textContent = product.description;
+      document.getElementById('product-turnaround').textContent = product.turnaround;
+
+      // Image
+      const imgEl = document.getElementById('product-img');
+      imgEl.src = product.image || 'assets/business-cards.jpg';
+      imgEl.alt = product.name;
+
+      // Features
+      const featList = document.getElementById('product-features');
+      featList.innerHTML = product.features.map(f => `<li>${f}</li>`).join('');
+
+      // Options
+      const optContainer = document.getElementById('options-container');
+      if (product.options && product.options.length > 0) {
+        let html = '';
+        product.options.forEach(opt => {
+          html += `<div class="option-group"><label class="option-label">${opt.label}</label>`;
+          if (opt.type === 'swatch') {
+            html += `<div class="swatches">`;
+            opt.choices.forEach((choice, idx) => {
+              const bg = colorMap[choice] || '#e2e8f0';
+              const active = idx === 0 ? 'active' : '';
+              html += `<div class="swatch ${active}" style="background-color:${bg}" title="${choice}" onclick="selectSwatch(this)"></div>`;
+            });
+            html += `</div>`;
+          } else {
+            html += `<select>`;
+            opt.choices.forEach(c => {
+              html += `<option value="${c}">${c}</option>`;
+            });
+            html += `</select>`;
+          }
+          html += `</div>`;
+        });
+        optContainer.innerHTML = html;
+      } else {
+        optContainer.style.display = 'none';
+      }
+
+      // Buttons
+      function getSelectedOptions() {
+        const selects = document.querySelectorAll('#options-container select');
+        let details = [];
+        selects.forEach(s => {
+          const label = s.parentElement.querySelector('label') ? s.parentElement.querySelector('label').textContent : 'Option';
+          details.push(`${label}: ${s.value}`);
+        });
+        const activeSwatch = document.querySelector('#options-container .swatch.active');
+        if (activeSwatch && activeSwatch.title) {
+          details.push(`Color: ${activeSwatch.title}`);
+        }
+        return details.join(' | ');
+      }
+
+      function updateActionLinks() {
+        const opts = getSelectedOptions();
+        const emailSub = encodeURIComponent(`Quote Request: ${product.name}`);
+        const emailBody = encodeURIComponent(`Hi Print Elements team,\n\nI would like a quote for ${product.name}.\n\nSpecifications:\n${opts || 'Standard Specs'}\n\nPlease let me know pricing and turnaround time.\n\nThank you!`);
+        document.getElementById('btn-quote').href = `mailto:printelements007@gmail.com?subject=${emailSub}&body=${emailBody}`;
+
+        const waText = encodeURIComponent(`Hi Print Elements! I would like a quote for *${product.name}* (${opts || 'Standard Specs'}).`);
+        document.getElementById('btn-whatsapp').href = `https://wa.me/16045410560?text=${waText}`;
+      }
+
+      updateActionLinks();
+      document.querySelectorAll('#options-container select').forEach(s => s.addEventListener('change', updateActionLinks));
+
+      document.getElementById('upload-btn').onclick = () => {
+        window.location.href = `mailto:printelements007@gmail.com?subject=${emailSubject}%20-%20Artwork%20Upload`;
+      };
+
+      // Related Products
+      const relGrid = document.getElementById('related-grid');
+      if (product.relatedIds && product.relatedIds.length > 0) {
+        let relHtml = '';
+        product.relatedIds.forEach(id => {
+          const rel = PRODUCTS[id];
+          if (rel) {
+            relHtml += `
+              <a class="product-card" href="product.html?id=${id}">
+                <div class="product-thumb">
+                  <img src="${rel.image || 'assets/business-cards.jpg'}" alt="${rel.name}">
+                </div>
+                <div class="product-card-body">
+                  <span class="product-tag">${rel.category}</span>
+                  <h3>${rel.name}</h3>
+                  <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta)">Get Quote ↗</div>
+                </div>
+              </a>
+            `;
+          }
+        });
+        relGrid.innerHTML = relHtml;
+      } else {
+        document.getElementById('related-section').style.display = 'none';
+      }
+    });
+
+    function selectSwatch(el) {
+      const parent = el.parentElement;
+      parent.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('navlinks');
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  
+    // Products Dropdown click & touch handler
+    const dropdownWrap = document.getElementById('nav-dropdown-wrap');
+    const productsTrigger = document.getElementById('products-trigger');
+    if (dropdownWrap && productsTrigger) {
+      productsTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownWrap.classList.toggle('is-open');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdownWrap.contains(e.target)) {
+          dropdownWrap.classList.remove('is-open');
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>

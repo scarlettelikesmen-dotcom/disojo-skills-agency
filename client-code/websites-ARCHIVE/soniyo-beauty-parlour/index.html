@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Soniyo Beauty Parlour — Expert hair styling, cuts, colour, facials, threading & waxing in Sector 41, Gurugram. Affordable, professional & painless beauty services.">
+  <title>Soniyo Beauty Parlour | Sector 41, Gurugram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rose:    #9b3a4e;
+      --rose-2:  #b85068;
+      --blush:   #f5e8ec;
+      --petal:   #fdf6f8;
+      --gold:    #b07c3b;
+      --gold-s:  #d4a85a;
+      --charcoal:#1e1118;
+      --ink:     #2f1f27;
+      --ink-2:   #5c3f4d;
+      --muted:   #8a6a75;
+      --line:    rgba(47,31,39,.15);
+      --shadow:  0 28px 72px rgba(47,31,39,.13);
+      --serif:   "Cormorant Garamond", Georgia, serif;
+      --sans:    "DM Sans", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--petal); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 92px 0; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; color: var(--rose); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+    .section-title { margin: 0; max-width: 740px; font-family: var(--serif); font-size: clamp(44px, 6vw, 80px); font-weight: 400; line-height: .95; letter-spacing: -.03em; }
+    .section-title em { color: var(--rose); font-style: normal; }
+    .lead { color: var(--ink-2); font-size: 16px; line-height: 1.75; }
+
+    .topline { position: relative; z-index: 12; border-bottom: 1px solid rgba(255,255,255,.14); background: var(--charcoal); color: #f5e8ec; font-size: 12px; letter-spacing: .06em; }
+    .topline .shell { min-height: 36px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .topline strong { color: var(--gold-s); }
+
+    nav { position: sticky; top: 0; z-index: 15; border-bottom: 1px solid var(--line); background: rgba(253,246,248,.94); backdrop-filter: blur(18px); }
+    .nav-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 26px; }
+    .brand { display: flex; align-items: center; gap: 13px; min-width: max-content; }
+    .brand-mark { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--rose); border-radius: 50%; font-family: var(--serif); font-size: 21px; color: var(--rose); background: #fff; }
+    .brand-copy strong { display: block; font-size: 17px; letter-spacing: .02em; }
+    .brand-copy span { display: block; margin-top: 2px; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 600; }
+    .nav-links a:not(.btn) { position: relative; }
+    .nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -5px; height: 1px; background: var(--rose); transition: right .25s ease; }
+    .nav-links a:hover::after { right: 0; }
+    .btn { min-height: 46px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--rose); border-radius: 2px; background: var(--rose); color: #fff; font-size: 13px; font-weight: 700; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .btn:hover { transform: translateY(-2px); background: var(--rose-2); border-color: var(--rose-2); }
+    .btn.outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .btn.outline:hover { background: var(--ink); color: #fff; }
+    .menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); font-size: 19px; }
+
+    .drawer { display: none; position: fixed; inset: 0; z-index: 50; background: var(--petal); flex-direction: column; padding: 34px 24px; gap: 28px; overflow-y: auto; }
+    .drawer.open { display: flex; }
+    .drawer-top { display: flex; justify-content: space-between; align-items: center; }
+    .close-btn { background: none; border: none; font-size: 26px; color: var(--ink); }
+    .drawer-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+    .drawer-links a { padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 22px; font-family: var(--serif); font-weight: 400; color: var(--ink); }
+    .drawer .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+    .hero { position: relative; min-height: 700px; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 10% 6%, rgba(155,58,78,.14), transparent 34%), linear-gradient(135deg, var(--blush) 0 50%, #f0d5dc 100%); }
+    .hero::after { content: "SB"; position: absolute; left: -28px; bottom: -90px; color: rgba(155,58,78,.05); font-family: var(--serif); font-size: 340px; line-height: 1; pointer-events: none; }
+    .hero-grid { position: relative; z-index: 2; min-height: 700px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: stretch; }
+    .hero-copy { padding: 108px 68px 86px 0; display: flex; flex-direction: column; justify-content: center; }
+    .hero h1 { margin: 0; max-width: 660px; font-family: var(--serif); font-size: clamp(60px, 7.2vw, 104px); font-weight: 400; line-height: .87; letter-spacing: -.04em; }
+    .hero h1 span { display: block; color: var(--rose); }
+    .hero-copy > p:not(.eyebrow) { max-width: 540px; margin: 28px 0 0; color: var(--ink-2); font-size: 16px; line-height: 1.7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 40px; color: var(--muted); font-size: 12px; }
+    .hero-note::before { content: ""; width: 40px; height: 1px; background: var(--rose); }
+    .hero-image { position: relative; margin: 42px 0; min-height: 600px; overflow: hidden; border: 1px solid rgba(155,58,78,.22); background: #e8c5ce; box-shadow: var(--shadow); }
+    .hero-image img { height: 100%; object-fit: cover; object-position: center 45%; }
+    .rating-card, .address-card { position: absolute; z-index: 2; border: 1px solid rgba(47,31,39,.18); background: rgba(253,246,248,.94); backdrop-filter: blur(12px); }
+    .rating-card { top: 24px; left: 24px; padding: 18px 22px; }
+    .rating-card strong { display: block; font-family: var(--serif); font-size: 32px; font-weight: 400; color: var(--rose); }
+    .rating-card span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .rating-stars { color: #e0a030; font-size: 13px; margin: 4px 0; letter-spacing: 2px; }
+    .address-card { right: 24px; bottom: 24px; max-width: 260px; padding: 18px 22px; }
+    .address-card strong { display: block; font-size: 13px; margin-bottom: 6px; }
+    .address-card span { display: block; color: var(--muted); font-size: 11px; line-height: 1.55; }
+
+    .ticker { overflow: hidden; border-bottom: 1px solid var(--line); background: var(--charcoal); color: #f5e8ec; }
+    .ticker-track { width: max-content; min-height: 56px; display: flex; align-items: center; animation: move 26s linear infinite; }
+    .ticker-track span { display: inline-flex; align-items: center; gap: 22px; padding-right: 22px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+    .ticker-track span::after { content: "✦"; color: var(--gold-s); }
+    @keyframes move { to { transform: translateX(-50%); } }
+
+    .intro-grid { display: grid; grid-template-columns: 1fr .78fr; gap: 90px; align-items: end; }
+    .intro-grid .lead { margin: 0; max-width: 530px; }
+    .trust-grid { margin-top: 52px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .trust-item { min-height: 145px; padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.5); }
+    .trust-item strong { display: block; margin-bottom: 12px; font-family: var(--serif); font-size: 36px; font-weight: 400; color: var(--rose); }
+    .trust-item span { color: var(--ink-2); font-size: 12px; line-height: 1.55; }
+
+    .services-section { background: var(--charcoal); color: var(--blush); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .services-section .eyebrow { color: var(--gold-s); }
+    .services-section .section-title em { color: var(--gold-s); }
+    .services-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 44px; }
+    .cat-tabs { display: flex; gap: 0; border: 1px solid rgba(255,255,255,.2); flex-wrap: wrap; }
+    .cat-tab { min-width: 130px; min-height: 46px; padding: 0 18px; border: 0; border-right: 1px solid rgba(255,255,255,.2); background: transparent; color: #d8c0c8; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; transition: background .2s ease, color .2s ease; }
+    .cat-tab:last-child { border-right: 0; }
+    .cat-tab.active { background: var(--gold-s); color: var(--charcoal); }
+    .service-panel { display: none; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(255,255,255,.15); border-left: 1px solid rgba(255,255,255,.15); }
+    .service-panel.active { display: grid; }
+    .service-card { position: relative; min-height: 220px; padding: 32px; border-right: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15); overflow: hidden; transition: background .25s ease; }
+    .service-card:hover { background: rgba(255,255,255,.05); }
+    .service-num { color: var(--gold-s); font-size: 11px; letter-spacing: .12em; }
+    .service-card h3 { margin: 38px 0 10px; font-family: var(--serif); font-size: 32px; font-weight: 400; }
+    .service-card p { max-width: 480px; margin: 0; color: #c8a8b2; font-size: 13px; line-height: 1.65; }
+    .service-card::after { content: "+"; position: absolute; top: 26px; right: 28px; color: var(--gold-s); font-size: 22px; font-weight: 300; }
+
+    .method-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; align-items: start; }
+    .method-visual { position: sticky; top: 104px; min-height: 520px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(145deg, #e8c5ce, #f0d5dc); }
+    .method-visual img { height: 520px; object-fit: cover; object-position: center 20%; filter: saturate(.9); }
+    .method-visual::after { content: "GLOW · STYLE · SHINE"; position: absolute; left: 16px; right: 16px; bottom: 16px; padding: 15px; border: 1px solid rgba(255,255,255,.5); background: rgba(30,17,24,.8); color: #fff; text-align: center; font-size: 10px; font-weight: 700; letter-spacing: .2em; backdrop-filter: blur(8px); }
+    .steps { margin-top: 32px; border-top: 1px solid var(--line); }
+    .step { display: grid; grid-template-columns: 46px 1fr; gap: 22px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .step span { color: var(--rose); font-size: 11px; font-weight: 700; letter-spacing: .1em; padding-top: 5px; }
+    .step h3 { margin: -4px 0 8px; font-family: var(--serif); font-size: 28px; font-weight: 400; }
+    .step p { margin: 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
+
+    .reviews-section { position: relative; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--blush); }
+    .reviews-section .eyebrow { color: var(--rose); }
+    .reviews-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; margin-bottom: 44px; }
+    .rating-badge { display: flex; align-items: center; gap: 12px; padding: 16px 22px; border: 1px solid var(--line); background: #fff; }
+    .rating-badge strong { font-family: var(--serif); font-size: 40px; font-weight: 400; color: var(--rose); line-height: 1; }
+    .rating-badge div span { display: block; color: #e0a030; font-size: 16px; letter-spacing: 2px; }
+    .rating-badge div small { display: block; color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; margin-top: 3px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .review-card { padding: 28px; background: #fff; border: 1px solid var(--line); transition: transform .2s ease, box-shadow .2s ease; }
+    .review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .review-stars { color: #e0a030; font-size: 13px; letter-spacing: 2px; margin-bottom: 14px; }
+    .review-card p { margin: 0 0 18px; color: var(--ink-2); font-size: 13px; line-height: 1.7; }
+    .review-card cite { font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .why-card { padding: 32px; border: 1px solid var(--line); background: rgba(255,255,255,.6); transition: background .2s ease; }
+    .why-card:hover { background: #fff; }
+    .why-icon { font-size: 28px; margin-bottom: 18px; }
+    .why-card h3 { margin: 0 0 10px; font-family: var(--serif); font-size: 26px; font-weight: 400; }
+    .why-card p { margin: 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
+
+    .contact-section { background: var(--charcoal); color: var(--blush); }
+    .contact-section .eyebrow { color: var(--gold-s); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .contact-info h2 { margin: 0 0 20px; font-family: var(--serif); font-size: clamp(38px, 5vw, 66px); font-weight: 400; line-height: .96; }
+    .contact-info h2 em { color: var(--gold-s); font-style: normal; }
+    .contact-info > p { max-width: 460px; color: #c8a8b2; font-size: 15px; line-height: 1.7; margin: 0 0 32px; }
+    .contact-detail { display: flex; flex-direction: column; gap: 14px; }
+    .contact-row { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-row .icon { font-size: 18px; margin-top: 2px; flex-shrink: 0; }
+    .contact-row div strong { display: block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-s); margin-bottom: 4px; }
+    .contact-row div span { color: #d8c0c8; font-size: 14px; line-height: 1.5; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-field { padding: 14px 16px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.06); color: var(--blush); font-size: 13px; outline: none; transition: border-color .2s ease; }
+    .form-field::placeholder { color: rgba(245,232,236,.45); }
+    .form-field:focus { border-color: var(--gold-s); }
+    textarea.form-field { resize: vertical; min-height: 120px; }
+    .btn-submit { min-height: 52px; padding: 0 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--gold-s); background: var(--gold-s); color: var(--charcoal); font-size: 13px; font-weight: 700; letter-spacing: .04em; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+    .btn-submit:hover { background: #c4904a; transform: translateY(-2px); }
+
+    footer { border-top: 1px solid rgba(255,255,255,.08); background: var(--charcoal); color: #7a586a; }
+    .footer-inner { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-inner small { font-size: 11px; letter-spacing: .06em; }
+    .footer-links { display: flex; gap: 22px; font-size: 11px; }
+    .footer-links a { color: var(--gold-s); }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; min-height: unset; }
+      .hero-copy { padding: 72px 0 40px; }
+      .hero-image { min-height: 380px; margin: 0; }
+      .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-head { flex-direction: column; align-items: flex-start; }
+      .service-panel.active { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: 1fr; }
+      .method-visual { position: static; min-height: 300px; }
+      .method-visual img { height: 300px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .reviews-head { flex-direction: column; align-items: flex-start; }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .menu-btn { display: flex; align-items: center; justify-content: center; }
+      .topline .t-right { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topline">
+    <div class="shell">
+      <span>Shop No. 4, Near Hariraj PG, Sector 41, Gurugram</span>
+      <span class="t-right"><strong>+91 99903 00204</strong> &nbsp;·&nbsp; Open Daily</span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="shell">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <div class="brand-copy">
+            <strong>Soniyo</strong>
+            <span>Beauty Parlour · Gurugram</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#experience">Experience</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact" class="btn">Book Now</a>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <div class="drawer-top">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div class="brand-copy"><strong>Soniyo</strong><span>Beauty Parlour</span></div>
+      </div>
+      <button class="close-btn" id="closeBtn">&#10005;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" onclick="closeDrawer()">About</a>
+      <a href="#services" onclick="closeDrawer()">Services</a>
+      <a href="#experience" onclick="closeDrawer()">Experience</a>
+      <a href="#reviews" onclick="closeDrawer()">Reviews</a>
+    </div>
+    <a href="#contact" class="btn" onclick="closeDrawer()">Book Now</a>
+  </div>
+
+  <section class="hero">
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Sector 41, Gurugram</p>
+          <h1>Look your<span>best self.</span></h1>
+          <p>Professional hair styling, skincare, threading &amp; waxing — all under one roof. Expert hands, affordable prices, and a space where you truly feel seen.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Book Appointment</a>
+            <a href="#services" class="btn outline">View Services</a>
+          </div>
+          <div class="hero-note">4.7 / 5 Google Rating &nbsp;·&nbsp; Painless Threading &amp; Waxing &nbsp;·&nbsp; Polite Professional Staff</div>
+        </div>
+        <div class="hero-image">
+          <img src="https://lh3.googleusercontent.com/vt---iHunL7vcgUaMKF2U4kGsX42UbLi3auNoGUZOlPRtucyzLMyu6-kPr9VzE8V95X2vvbtotJplX5mvoWMIOQTB4HVntspSygZ-K67Pg=s750" alt="Soniyo Beauty Parlour">
+          <div class="rating-card">
+            <strong>4.7</strong>
+            <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <span>Google Rating</span>
+          </div>
+          <div class="address-card">
+            <strong>Soniyo Beauty Parlour</strong>
+            <span>Shop No. 4, Near Hariraj PG, Moti Vihar Market, Sector 41, Gurugram 122001</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Hair Styling</span><span>Hair Cut</span><span>Hair Colour</span><span>Hair Straightening</span><span>Facial</span><span>Waxing</span><span>Threading</span><span>Hair Rebonding</span><span>Beard Trimming</span><span>Blow Dry</span><span>Hair Curling</span><span>Beard Shaving</span><span>Hair Styling</span><span>Hair Cut</span><span>Hair Colour</span><span>Hair Straightening</span><span>Facial</span><span>Waxing</span><span>Threading</span><span>Hair Rebonding</span><span>Beard Trimming</span><span>Blow Dry</span><span>Hair Curling</span><span>Beard Shaving</span>
+    </div>
+  </div>
+
+  <section id="about" class="section">
+    <div class="shell">
+      <div class="intro-grid">
+        <div>
+          <p class="eyebrow">Who We Are</p>
+          <h2 class="section-title">A parlour built on <em>trust</em> and expertise.</h2>
+        </div>
+        <div>
+          <p class="lead">Soniyo Beauty Parlour is a go-to destination for women and men in Sector 41, Gurugram. Known for painless threading &amp; waxing, expert hair services, and the warmth that makes every visit feel personal.</p>
+        </div>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><strong>4.7&#9733;</strong><span>Google Rating from happy clients in Gurugram</span></div>
+        <div class="trust-item"><strong>10+</strong><span>Specialized beauty &amp; grooming services on offer</span></div>
+        <div class="trust-item"><strong>100%</strong><span>Commitment to painless, comfortable treatments</span></div>
+        <div class="trust-item"><strong>All</strong><span>Hair, skin &amp; beard services in one convenient spot</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services-section">
+    <div class="shell">
+      <div class="services-head">
+        <div>
+          <p class="eyebrow">What We Offer</p>
+          <h2 class="section-title">Every <em>service</em> you need.</h2>
+        </div>
+        <div class="cat-tabs">
+          <button class="cat-tab active" data-panel="hair">Hair</button>
+          <button class="cat-tab" data-panel="skin">Skin</button>
+          <button class="cat-tab" data-panel="beard">Beard</button>
+        </div>
+      </div>
+      <div class="service-panel active" id="panel-hair">
+        <div class="service-card"><span class="service-num">01</span><h3>Hair Cut</h3><p>Precision cuts for all hair types. From classic styles to contemporary looks — tailored to your face shape and personality.</p></div>
+        <div class="service-card"><span class="service-num">02</span><h3>Hair Styling</h3><p>Expert styling for every occasion — everyday glam, party looks, or formal updos. We set your style and make it last.</p></div>
+        <div class="service-card"><span class="service-num">03</span><h3>Hair Colour</h3><p>Rich, vibrant colours using professional-grade products. Natural tones, highlights, balayage, or bold fashion shades.</p></div>
+        <div class="service-card"><span class="service-num">04</span><h3>Straightening</h3><p>Smooth, sleek results with long-lasting straightening treatments using advanced, hair-safe techniques.</p></div>
+        <div class="service-card"><span class="service-num">05</span><h3>Hair Rebonding</h3><p>Permanently straighten curly or wavy hair for a polished, frizz-free look done by trained professionals.</p></div>
+        <div class="service-card"><span class="service-num">06</span><h3>Blow Dry &amp; Curling</h3><p>Volume, shine, and movement — our blow dry and curling service leaves you feeling polished and ready for anything.</p></div>
+      </div>
+      <div class="service-panel" id="panel-skin">
+        <div class="service-card"><span class="service-num">01</span><h3>Facial</h3><p>Rejuvenating facials tailored to your skin type. Deep cleansing, hydration and glow — all in one relaxing session.</p></div>
+        <div class="service-card"><span class="service-num">02</span><h3>Threading</h3><p>Precise and painless eyebrow and upper lip threading using a technique refined for maximum comfort and clean results.</p></div>
+        <div class="service-card"><span class="service-num">03</span><h3>Waxing</h3><p>Smooth, long-lasting waxing for all body areas using skin-friendly wax. Gentle, quick, and effective.</p></div>
+      </div>
+      <div class="service-panel" id="panel-beard">
+        <div class="service-card"><span class="service-num">01</span><h3>Beard Styling</h3><p>Tailored beard shaping by skilled hands. We assess your face shape and deliver the beard look that suits you best.</p></div>
+        <div class="service-card"><span class="service-num">02</span><h3>Beard Trimming</h3><p>Sharp, tidy trims that keep your beard looking well-groomed and defined. Perfect for regular maintenance.</p></div>
+        <div class="service-card"><span class="service-num">03</span><h3>Beard Shaving</h3><p>Professional clean shave using premium shaving cream and precise technique for a smooth, irritation-free finish.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="shell">
+      <div class="method-grid">
+        <div class="method-visual">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEajqKTa1udeSjC-N8NcbWdKsNsA64ueLUjkqUIi7FgK_V3rDjhqZ_xevmhqXDItvli7vVHZjwYyL6a7p_RwjyN4UmVwxKPS3T-O4fG5cXyhX1clxXoKabmSKny80E_pa1J-YmJIngXxj49" alt="Beauty experience at Soniyo">
+        </div>
+        <div>
+          <p class="eyebrow">The Experience</p>
+          <h2 class="section-title">From walk-in to <em>wow.</em></h2>
+          <p class="lead" style="margin-top:16px;">Every visit to Soniyo is designed to make you feel at ease from the moment you walk in.</p>
+          <div class="steps">
+            <div class="step"><span>01</span><div><h3>Consultation</h3><p>A quick chat about your style, needs, and any concerns — so every service is tailored specifically to you.</p></div></div>
+            <div class="step"><span>02</span><div><h3>Expert Treatment</h3><p>Our professionals get to work using quality products and proven techniques, ensuring comfort and great results.</p></div></div>
+            <div class="step"><span>03</span><div><h3>The Reveal</h3><p>Step in front of the mirror and see the transformation. We ensure you leave looking and feeling your absolute best.</p></div></div>
+            <div class="step"><span>04</span><div><h3>Aftercare Tips</h3><p>Personalised tips to maintain your look longer — because great beauty shouldn't stop at the parlour door.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="section reviews-section">
+    <div class="shell">
+      <div class="reviews-head">
+        <div>
+          <p class="eyebrow">What Clients Say</p>
+          <h2 class="section-title">Real <em>love</em> from real people.</h2>
+        </div>
+        <div class="rating-badge">
+          <strong>4.7</strong>
+          <div><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span><small>Google Reviews</small></div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Absolutely love this place! The threading is so painless and precise. The staff is warm, professional, and always makes you feel comfortable."</p><cite>— Priya S., Sector 41</cite></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Got my hair coloured and styled here. The result was stunning — exactly what I wanted. Very affordable for the quality they deliver!"</p><cite>— Meena R., Gurugram</cite></div>
+        <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Best facial I've had in Gurugram. Skin felt amazing after! Will definitely be coming back every month. Highly recommend Soniyo."</p><cite>— Kavita D., Sector 41</cite></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2 class="section-title">More than a <em>parlour.</em></h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">&#128582;</div><h3>Painless Treatments</h3><p>Threading and waxing techniques refined to minimise discomfort. You'll barely feel a thing — and see stunning results.</p></div>
+        <div class="why-card"><div class="why-icon">&#128176;</div><h3>Affordable Pricing</h3><p>Premium quality beauty services at prices that won't break the bank. Great results should be accessible to everyone.</p></div>
+        <div class="why-card"><div class="why-icon">&#10024;</div><h3>Skilled Professionals</h3><p>Every service is performed by trained, experienced professionals who take pride in their craft and your satisfaction.</p></div>
+        <div class="why-card"><div class="why-icon">&#127968;</div><h3>One-Stop Destination</h3><p>Hair, skin, beard — we do it all. Everything you need for your complete grooming routine is right here.</p></div>
+        <div class="why-card"><div class="why-icon">&#129309;</div><h3>Warm Atmosphere</h3><p>We treat every client like family. From the moment you walk in, you'll feel welcomed, heard, and taken care of.</p></div>
+        <div class="why-card"><div class="why-icon">&#128205;</div><h3>Convenient Location</h3><p>Right in the heart of Sector 41, Gurugram — easy to find, easy to visit. Walk-ins always welcome.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="shell">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Get In Touch</p>
+          <h2>Book your <em>appointment</em> today.</h2>
+          <p>Ready for a transformation? Walk in or get in touch and we'll make sure you're taken care of.</p>
+          <div class="contact-detail">
+            <div class="contact-row"><span class="icon">&#128222;</span><div><strong>Phone</strong><span>+91 99903 00204</span></div></div>
+            <div class="contact-row"><span class="icon">&#128205;</span><div><strong>Address</strong><span>Shop No. 4, Near Hariraj PG,<br>Moti Vihar Market, Sector 41,<br>Gurugram, Haryana 122001</span></div></div>
+            <div class="contact-row"><span class="icon">&#9200;</span><div><strong>Hours</strong><span>Open Daily &nbsp;&middot;&nbsp; Walk-ins Welcome</span></div></div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input class="form-field" type="text" placeholder="Your Name" required>
+            <input class="form-field" type="tel" placeholder="Phone Number" required>
+          </div>
+          <input class="form-field" type="text" placeholder="Service You're Interested In">
+          <input class="form-field" type="text" placeholder="Preferred Date / Time">
+          <textarea class="form-field" placeholder="Anything else you'd like us to know?"></textarea>
+          <button type="submit" class="btn-submit">Send Enquiry &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-inner">
+        <small>&copy; 2026 Soniyo Beauty Parlour. All rights reserved. &nbsp;&middot;&nbsp; Sector 41, Gurugram.</small>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const drawer = document.getElementById('drawer');
+    menuBtn.addEventListener('click', () => { drawer.classList.add('open'); document.body.classList.add('menu-open'); });
+    closeBtn.addEventListener('click', () => closeDrawer());
+    function closeDrawer() { drawer.classList.remove('open'); document.body.classList.remove('menu-open'); }
+
+    document.querySelectorAll('.cat-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.service-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+      });
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = 'Enquiry Sent!';
+      btn.style.background = '#4caf50';
+      btn.style.borderColor = '#4caf50';
+      setTimeout(() => { btn.innerHTML = 'Send Enquiry &rarr;'; btn.style.background = ''; btn.style.borderColor = ''; e.target.reset(); }, 3000);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.trust-item, .service-card, .step, .review-card, .why-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

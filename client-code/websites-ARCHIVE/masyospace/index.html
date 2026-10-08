@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masyospace | Wellness & Lifestyle</title>
+  <style>
+    :root { --p: #1b1f23; --bg: #fdfbf7; --surface: #ffffff; --t: #4a4a4a; --a: #ff9b8a; }
+    body { margin: 0; font-family: 'Quicksand', sans-serif; background: var(--bg); color: var(--t); font-weight: 500; }
+    nav { padding: 30px 50px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 700; color: var(--p); letter-spacing: -0.5px; }
+    .btn { padding: 12px 28px; background: var(--p); color: #fff; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .hero { max-width: 1200px; margin: 60px auto; padding: 0 20px; text-align: center; }
+    .badge { display: inline-block; padding: 8px 16px; background: var(--a); color: var(--p); border-radius: 20px; font-size: 13px; font-weight: 700; margin-bottom: 24px; }
+    h1 { font-size: 64px; color: var(--p); margin: 0 0 24px; line-height: 1.1; letter-spacing: -1px; }
+    .hero p { font-size: 20px; color: #777; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
+    .cards-stack { max-width: 1000px; margin: 100px auto; display: flex; flex-direction: column; gap: -40px; padding: 0 20px; }
+    .w-card { background: var(--surface); border-radius: 30px; padding: 60px; box-shadow: 0 20px 40px rgba(0,0,0,0.04); margin-bottom: 40px; display: flex; align-items: center; gap: 40px; position: relative; overflow: hidden; }
+    .w-card::before { content: ''; position: absolute; width: 150px; height: 150px; background: var(--a); border-radius: 50%; opacity: 0.2; top: -50px; right: -50px; }
+    .w-icon { width: 80px; height: 80px; background: var(--p); border-radius: 24px; display: flex; justify-content: center; align-items: center; color: #fff; font-size: 32px; flex-shrink: 0; }
+    .w-text h3 { font-size: 28px; color: var(--p); margin: 0 0 12px; }
+    .w-text p { font-size: 16px; line-height: 1.7; color: #666; margin: 0; }
+    .testimonial { background: var(--p); color: #fff; border-radius: 40px; margin: 100px 20px; padding: 80px 40px; text-align: center; }
+    .testimonial p { font-size: 28px; font-style: italic; max-width: 800px; margin: 0 auto 30px; line-height: 1.5; }
+    .testimonial span { font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--a); }
+    footer { text-align: center; padding: 40px; color: #999; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <nav><div class="logo">Masyospace</div><a href="#" class="btn">Join Our Community</a></nav>
+  <div class="hero">
+    <div class="badge">Find Your Balance in Gurugram</div>
+    <h1>A sanctuary for<br>growth and focus.</h1>
+    <p>Discover a space designed around your well-being. Whether you're working, relaxing, or connecting, Masyospace provides the perfect environment.</p>
+  </div>
+  <div class="cards-stack">
+    <div class="w-card">
+      <div class="w-icon">✧</div>
+      <div class="w-text"><h3>Premium Workspaces</h3><p>Thoughtfully designed spaces that promote productivity and peace of mind. Natural light, ergonomic setups, and organic aesthetics.</p></div>
+    </div>
+    <div class="w-card">
+      <div class="w-icon">✦</div>
+      <div class="w-text"><h3>Community Events</h3><p>Join a community of like-minded individuals. Engage in workshops, networking events, and wellness sessions curated just for you.</p></div>
+    </div>
+    <div class="w-card">
+      <div class="w-icon">⚝</div>
+      <div class="w-text"><h3>Wellness Amenities</h3><p>Access premium amenities tailored to support your lifestyle, from healthy cafes to quiet meditation zones.</p></div>
+    </div>
+  </div>
+  <div class="testimonial">
+    <p>"Since joining Masyospace, my entire routine has transformed. The energy here is incredibly grounding and inspiring."</p>
+    <span>— Community Member</span>
+  </div>
+  <footer>&copy; 2026 Masyospace. All Rights Reserved.</footer>
+</body>
+</html>

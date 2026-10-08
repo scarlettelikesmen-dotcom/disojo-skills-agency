@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAISON ÉTOILE // Haute Celebrations & Society Galas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        linen: '#FAF8F5',
+                        stoneLight: '#F2EDE4',
+                        ink: '#1A1C1B',
+                        goldLeaf: '#B89047',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #B89047; color: #FAF8F5; }
+        .hairline-border {
+            border: 1px solid rgba(184, 144, 71, 0.25);
+        }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-linen text-ink font-sans antialiased overflow-x-hidden">
+
+    <!-- Refined Editorial Header -->
+    <header class="border-b border-gray-200/70 bg-linen/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 h-20 flex items-center justify-between">
+            <a href="#" class="group">
+                <span class="font-serif text-2xl tracking-[0.2em] uppercase text-ink font-medium block group-hover:text-goldLeaf transition-colors">MAISON ÉTOILE</span>
+                <span class="text-[9px] tracking-[0.3em] uppercase text-gray-500 block font-light">PARIS • LAKE COMO • CAP D'ANTIBES</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-10 text-xs tracking-[0.2em] uppercase text-ink/70">
+                <a href="#celebrations" class="hover:text-goldLeaf transition-colors">Celebrations</a>
+                <a href="#atelier" class="hover:text-goldLeaf transition-colors">The Atelier</a>
+                <a href="#destinations" class="hover:text-goldLeaf transition-colors">Destinations</a>
+                <a href="#concierge" class="hover:text-goldLeaf transition-colors">Concierge</a>
+            </nav>
+
+            <a href="#concierge" class="px-5 py-2.5 border border-ink text-ink text-xs uppercase tracking-[0.2em] hover:bg-ink hover:text-linen transition-all">
+                Private Inquiry &rarr;
+            </a>
+        </div>
+    </header>
+
+    <!-- Editorial Hero: Airy, Spacious & Breathtaking -->
+    <section class="relative pt-24 pb-16 px-6 sm:px-12 max-w-7xl mx-auto overflow-hidden">
+        <!-- Ambient 3D Champagne & Silk Physics Canvas -->
+        <canvas id="champagne-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60 z-0"></canvas>
+
+        <div class="relative z-10 text-center max-w-3xl mx-auto mb-16">
+            <span class="text-[10px] tracking-[0.35em] uppercase text-goldLeaf font-medium block mb-4">
+                EXCLUSIVE ROYAL & PRIVATE ESTATE PRODUCTIONS
+            </span>
+            <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl text-ink font-light leading-[1.05] tracking-tight mb-6">
+                The Architecture of<br>
+                <span class="italic font-normal">Unforgettable</span> Occasions.
+            </h1>
+            <p class="text-gray-600 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
+                Maison Étoile curates the world’s most private society galas, multi-day palatial nuptials, and milestone celebrations across historic Italian villas, Loire Valley châteaux, and Mediterranean cliffs.
+            </p>
+        </div>
+
+        <!-- Grand Staggered Imagery Frame -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-8 overflow-hidden aspect-[16/10] shadow-xl">
+                <img src="./assets/photo1519741497674611481863552.jpg" 
+                     alt="Lake Como Private Gala" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000">
+            </div>
+            <div class="lg:col-span-4 space-y-6">
+                <div class="overflow-hidden aspect-[4/5] shadow-lg">
+                    <img src="./assets/photo14643664006007168b8af9bc3.jpg" 
+                         alt="Candlelit Orangery Dinner" 
+                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000">
+                </div>
+                <div class="p-6 bg-stoneLight/60 border border-gray-200/60">
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-goldLeaf block mb-2">LIMITED MANDATES</span>
+                    <p class="font-serif text-xl text-ink italic leading-snug">
+                        "We accept only ten commissions annually to ensure peerless artistic devotion."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Quote -->
+    <section class="border-y border-gray-200/70 py-16 bg-stoneLight/30 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="font-serif text-2xl sm:text-3xl text-ink italic leading-relaxed font-light mb-4">
+                "Maison Étoile transforms monumental European architecture into deeply personal, sensory worlds where every detail feels touched by grace."
+            </p>
+            <span class="text-[10px] tracking-[0.3em] uppercase text-gray-500 font-medium">VOGUE LIVING INTERNATIONAL</span>
+        </div>
+    </section>
+
+    <!-- Curated Portfolio Monograph -->
+    <section id="celebrations" class="py-24 px-6 sm:px-12 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-gray-200/80 pb-6">
+            <div>
+                <span class="text-[10px] tracking-[0.35em] uppercase text-goldLeaf block mb-2">// MONUMENTAL PORTFOLIO</span>
+                <h2 class="font-serif text-4xl sm:text-5xl text-ink font-light">Curated Celebrations</h2>
+            </div>
+            <div class="text-xs tracking-widest text-gray-500 uppercase mt-4 md:mt-0 font-light">
+                ITALY • FRANCE • MONACO
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden aspect-[3/4] mb-6 shadow-md">
+                    <img src="./assets/photo154481615512df9643f363.jpg" 
+                         alt="Villa Balbiano Gala" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <span class="text-[10px] tracking-[0.3em] uppercase text-goldLeaf block mb-1">LAKE COMO, ITALY</span>
+                <h3 class="font-serif text-2xl text-ink font-normal mb-2">Villa Balbiano Three-Day Nuptials</h3>
+                <p class="text-gray-600 text-xs font-light leading-relaxed">
+                    A multi-day private lakefront celebration featuring midnight Riva water arrivals, bespoke floating greenhouse banquets, and a 40-piece Italian philharmonic orchestra.
+                </p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden aspect-[3/4] mb-6 shadow-md">
+                    <img src="./assets/photo153271293831034cb3982ef74.jpg" 
+                         alt="Chambord Gala" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <span class="text-[10px] tracking-[0.3em] uppercase text-goldLeaf block mb-1">LOIRE VALLEY, FRANCE</span>
+                <h3 class="font-serif text-2xl text-ink font-normal mb-2">Château de Chambord Masquerade</h3>
+                <p class="text-gray-600 text-xs font-light leading-relaxed">
+                    A midsummer imperial ball for 300 international patrons, curated with 18th-century Venetian velvet masks, antique chandeliers, and silent terrace fireworks.
+                </p>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden aspect-[3/4] mb-6 shadow-md">
+                    <img src="./assets/photo15052368582198359eb29e329.jpg" 
+                         alt="Eden Roc Soiree" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <span class="text-[10px] tracking-[0.3em] uppercase text-goldLeaf block mb-1">CAP D'ANTIBES, CÔTE D'AZUR</span>
+                <h3 class="font-serif text-2xl text-ink font-normal mb-2">Eden-Roc Solstice Soirée</h3>
+                <p class="text-gray-600 text-xs font-light leading-relaxed">
+                    An intimate cliffside milestone jubilee with custom acoustic stages overlooking the Mediterranean, paired with vintage Krug cellars and private yacht flotillas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Atelier Philosophy: 4 Pillars -->
+    <section id="atelier" class="py-24 px-6 sm:px-12 bg-stoneLight/40 border-y border-gray-200/70">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-[10px] tracking-[0.35em] uppercase text-goldLeaf block mb-2">// OUR ARTISANAL PILLARS</span>
+                <h2 class="font-serif text-4xl sm:text-5xl text-ink font-light">The Atelier Discipline</h2>
+                <p class="text-gray-600 text-sm mt-3 font-light leading-relaxed">
+                    Every celebration is produced with the surgical precision of an architectural firm and the emotional poetry of a grand opera.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-linen p-8 border border-gray-200/70 shadow-sm">
+                    <span class="font-serif text-2xl text-goldLeaf italic block mb-3">01</span>
+                    <h4 class="font-serif text-xl text-ink mb-2">Spatial Scenography</h4>
+                    <p class="text-gray-600 text-xs leading-relaxed font-light">
+                        Architectural renderings, custom temporary glass pavilions, and custom botanical installations that honor the historic soul of each estate.
+                    </p>
+                </div>
+
+                <div class="bg-linen p-8 border border-gray-200/70 shadow-sm">
+                    <span class="font-serif text-2xl text-goldLeaf italic block mb-3">02</span>
+                    <h4 class="font-serif text-xl text-ink mb-2">Haute Gastronomy</h4>
+                    <p class="text-gray-600 text-xs leading-relaxed font-light">
+                        Collaborations with Europe's three-star Michelin laureates, curating multi-course tasting menus served on custom gilded Limoges china.
+                    </p>
+                </div>
+
+                <div class="bg-linen p-8 border border-gray-200/70 shadow-sm">
+                    <span class="font-serif text-2xl text-goldLeaf italic block mb-3">03</span>
+                    <h4 class="font-serif text-xl text-ink mb-2">Sensory Dramaturgy</h4>
+                    <p class="text-gray-600 text-xs leading-relaxed font-light">
+                        Custom ambient olfactive fragrances diffused into the evening air, paired with tailored acoustic soundscapes from classical harpsichord to modern soul.
+                    </p>
+                </div>
+
+                <div class="bg-linen p-8 border border-gray-200/70 shadow-sm">
+                    <span class="font-serif text-2xl text-goldLeaf italic block mb-3">04</span>
+                    <h4 class="font-serif text-xl text-ink mb-2">Discreet Stewardship</h4>
+                    <p class="text-gray-600 text-xs leading-relaxed font-light">
+                        Uncompromising diplomatic confidentiality, non-disclosure agreements, private aviation coordination, and dedicated guest concierge suites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concierge Inquiry Salon -->
+    <section id="concierge" class="py-24 px-6 sm:px-12 max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="text-[10px] tracking-[0.35em] uppercase text-goldLeaf block mb-2">// PRIVATE SALON</span>
+            <h2 class="font-serif text-4xl text-ink font-light">Initiate A Commission</h2>
+            <p class="text-gray-600 text-xs mt-3 font-light leading-relaxed">
+                Please share the preliminary dimensions of your celebration. The Managing Partner will respond with complete discretion.
+            </p>
+        </div>
+
+        <form class="space-y-6 bg-stoneLight/30 border border-gray-200/80 p-8 sm:p-12 shadow-sm text-xs" onsubmit="event.preventDefault(); alert('Inquiry confidential transmission received. The Maison Étoile concierge will contact your office.');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Host / Representative Name</label>
+                    <input type="text" required placeholder="Lord Julian Vance" class="w-full bg-linen border border-gray-300 px-4 py-3 text-ink focus:border-goldLeaf focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Direct Telephone / Signal</label>
+                    <input type="tel" required placeholder="+33 1 42 68 00 00" class="w-full bg-linen border border-gray-300 px-4 py-3 text-ink focus:border-goldLeaf focus:outline-none">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Celebration Genre</label>
+                    <select class="w-full bg-linen border border-gray-300 px-4 py-3 text-ink focus:border-goldLeaf focus:outline-none">
+                        <option>Multi-Day Palatial Nuptials (150+ Guests)</option>
+                        <option>Private Estate Milestone Anniversary</option>
+                        <option>Confidential Society Masquerade Gala</option>
+                        <option>Superyacht Mediterranean Solstice Soirée</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Destined Territory</label>
+                    <select class="w-full bg-linen border border-gray-300 px-4 py-3 text-ink focus:border-goldLeaf focus:outline-none">
+                        <option>Lake Como & Northern Italian Lakes</option>
+                        <option>French Riviera (Cap d'Antibes & Monaco)</option>
+                        <option>Loire Valley Historic Châteaux</option>
+                        <option>Tuscan Hills & Historic Borghi</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-ink text-linen font-serif text-sm tracking-[0.25em] uppercase hover:bg-goldLeaf hover:text-white transition-all">
+                TRANSMIT CONFIDENTIAL INQUIRY &rarr;
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200/70 py-12 px-6 max-w-7xl mx-auto font-sans text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>&copy; 2026 MAISON ÉTOILE HAUTE ÉVÉNEMENTS. PARIS • LAKE COMO • CAP D'ANTIBES.</div>
+        <div class="text-[10px] tracking-widest text-gray-400 uppercase">ALL COMMISSIONS ARE PROTECTED UNDER STRICT DIPLOMATIC NDAs.</div>
+    </footer>
+
+    <!-- Ambient 3D Champagne Effervescence Engine -->
+    <script>
+        (function initChampagne3D() {
+            const canvas = document.getElementById('champagne-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const parent = canvas.parentElement;
+            let width = parent.clientWidth;
+            let height = parent.clientHeight;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 100);
+            camera.position.z = 25;
+
+            const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // Create Champagne Bubble Particle Field
+            const particleCount = 280;
+            const geometry = new THREE.BufferGeometry();
+            const positions = new Float32Array(particleCount * 3);
+            const velocities = new Float32Array(particleCount * 3);
+
+            for (let i = 0; i < particleCount; i++) {
+                positions[i * 3] = (Math.random() - 0.5) * 35;
+                positions[i * 3 + 1] = (Math.random() - 0.5) * 20;
+                positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+
+                velocities[i * 3] = (Math.random() - 0.5) * 0.01;
+                velocities[i * 3 + 1] = Math.random() * 0.025 + 0.01; // drifting up
+                velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.01;
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+            // Create circular glowing bubble texture procedurally
+            const bubbleCanvas = document.createElement('canvas');
+            bubbleCanvas.width = 64;
+            bubbleCanvas.height = 64;
+            const ctx = bubbleCanvas.getContext('2d');
+            const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+            grad.addColorStop(0, 'rgba(212, 175, 55, 0.9)');
+            grad.addColorStop(0.4, 'rgba(184, 144, 71, 0.5)');
+            grad.addColorStop(1, 'rgba(250, 248, 245, 0)');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(32, 32, 30, 0, Math.PI * 2);
+            ctx.fill();
+
+            const bubbleTexture = new THREE.CanvasTexture(bubbleCanvas);
+
+            const material = new THREE.PointsMaterial({
+                size: 0.65,
+                map: bubbleTexture,
+                transparent: true,
+                opacity: 0.7,
+                blending: THREE.NormalBlending,
+                depthWrite: false,
+            });
+
+            const particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            // Subtle mouse repulsion
+            let mouseX = 0, mouseY = 0;
+            window.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 15;
+                mouseY = -((e.clientY - rect.top) / rect.height - 0.5) * 10;
+            });
+
+            window.addEventListener('resize', () => {
+                width = parent.clientWidth;
+                height = parent.clientHeight;
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+                renderer.setSize(width, height);
+            });
+
+            let clock = new THREE.Clock();
+
+            function animate() {
+                requestAnimationFrame(animate);
+                const pos = geometry.attributes.position.array;
+
+                for (let i = 0; i < particleCount; i++) {
+                    pos[i * 3 + 1] += velocities[i * 3 + 1];
+                    pos[i * 3] += Math.sin(clock.getElapsedTime() + i) * 0.005;
+
+                    // Mouse gentle repulsion
+                    const dx = pos[i * 3] - mouseX;
+                    const dy = pos[i * 3 + 1] - mouseY;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 4) {
+                        pos[i * 3] += (dx / dist) * 0.03;
+                    }
+
+                    // Reset when bubble floats too high
+                    if (pos[i * 3 + 1] > 12) {
+                        pos[i * 3 + 1] = -12;
+                        pos[i * 3] = (Math.random() - 0.5) * 35;
+                    }
+                }
+
+                geometry.attributes.position.needsUpdate = true;
+                renderer.render(scene, camera);
+            }
+            animate();
+        })();
+
+        // Initialize Lenis smooth scroll
+        try {
+            if (typeof Lenis !== 'undefined') {
+                const lenis = new Lenis({
+                    autoRaf: true,
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    smoothWheel: true,
+                    anchors: true
+                });
+                window.lenis = lenis;
+            }
+        } catch (e) {
+            console.error('Lenis init failed', e);
+        }
+    </script>
+</body>
+</html>

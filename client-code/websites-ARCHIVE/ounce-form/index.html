@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUNCE — Early Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Rich coffee palette */
+            --espresso:     #1A0C06;
+            --dark-roast:   #2B1509;
+            --mid-roast:    #4A2112;
+            --warm-brown:   #7A3B1E;
+            --caramel:      #C07840;
+            --gold:         #D4A843;
+            --amber:        #E8832A;
+            --cream:        #F5EDD8;
+            --ivory:        #FBF7EE;
+            --muted-cream:  #C8B89A;
+            --burgundy:     #7A2D3A;
+            --teal-shadow:  #0D3B38;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--espresso);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* ─── Animated Background Orbs ─── */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -20%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212,168,67,0.12), transparent 70%);
+            pointer-events: none;
+            animation: drift 8s ease-in-out infinite alternate;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -20%;
+            left: -15%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(122,45,58,0.15), transparent 70%);
+            pointer-events: none;
+            animation: drift 10s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes drift {
+            from { transform: translate(0, 0) scale(1); }
+            to   { transform: translate(30px, 20px) scale(1.1); }
+        }
+
+        /* ─── Main Wrapper ─── */
+        .wrapper {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ─── Hero Header ─── */
+        .hero {
+            text-align: center;
+            padding: 3.5rem 2rem 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-logo {
+            font-size: 4.5rem;
+            font-weight: 800;
+            letter-spacing: 8px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--amber) 40%, var(--caramel) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: var(--muted-cream);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* ─── Progress Bar ─── */
+        .progress-bar-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            padding: 0 0.5rem;
+        }
+
+        .progress-step {
+            flex: 1;
+            height: 4px;
+            border-radius: 99px;
+            background: var(--dark-roast);
+            transition: background 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-step::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, var(--gold), var(--amber));
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+            border-radius: inherit;
+        }
+
+        .progress-step.done::after { transform: translateX(0); }
+        .progress-step.active::after { transform: translateX(-40%); }
+
+        .progress-label {
+            font-size: 0.8rem;
+            color: var(--muted-cream);
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        /* ─── Step Label ─── */
+        .step-label {
+            text-align: center;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--amber);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ─── Section Heading ─── */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-heading h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .section-heading p {
+            color: var(--muted-cream);
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        /* ─── Form Steps ─── */
+        .form-step {
+            display: none;
+            animation: fadeSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        .form-step.active { display: block; }
+
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── Question Card ─── */
+        .q-card {
+            background: linear-gradient(145deg, var(--dark-roast), rgba(43,21,9,0.9));
+            border: 1px solid rgba(212,168,67,0.12);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .q-card:focus-within {
+            border-color: rgba(212,168,67,0.4);
+            box-shadow: 0 0 0 1px rgba(212,168,67,0.1), 0 12px 40px rgba(0,0,0,0.3);
+        }
+
+        .q-num {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 0.75rem;
+        }
+
+        .q-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .q-sub {
+            font-size: 0.9rem;
+            color: var(--muted-cream);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* ─── Option Buttons (Radio / Checkbox) ─── */
+        .options {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .options.two-col { grid-template-columns: 1fr 1fr; }
+
+        .opt {
+            position: relative;
+        }
+
+        .opt input[type="radio"],
+        .opt input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .opt label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            border: 1.5px solid rgba(255,255,255,0.07);
+            background: rgba(255,255,255,0.03);
+            cursor: pointer;
+            transition: all 0.22s ease;
+            color: var(--cream);
+            font-weight: 400;
+            font-size: 1rem;
+            user-select: none;
+        }
+
+        .opt label:hover {
+            border-color: rgba(212,168,67,0.3);
+            background: rgba(212,168,67,0.06);
+        }
+
+        .opt input:checked + label {
+            border-color: var(--gold);
+            background: linear-gradient(135deg, rgba(212,168,67,0.15), rgba(232,131,42,0.1));
+            box-shadow: 0 0 0 1px rgba(212,168,67,0.2), inset 0 0 20px rgba(212,168,67,0.04);
+            color: var(--ivory);
+            font-weight: 500;
+        }
+
+        /* Custom checkbox/radio indicator */
+        .opt label .indicator {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.2);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.22s ease;
+        }
+
+        .opt input[type="checkbox"] + label .indicator {
+            border-radius: 6px;
+        }
+
+        .opt input:checked + label .indicator {
+            background: linear-gradient(135deg, var(--gold), var(--amber));
+            border-color: transparent;
+        }
+
+        .opt input:checked + label .indicator::after {
+            content: '✓';
+            font-size: 0.75rem;
+            color: var(--espresso);
+            font-weight: 800;
+        }
+
+        .opt-text {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .opt-main { line-height: 1.3; }
+        .opt-sub {
+            font-size: 0.8rem;
+            color: var(--muted-cream);
+            margin-top: 0.2rem;
+            font-weight: 300;
+        }
+
+        /* Other input field inside option */
+        .opt-other-input {
+            margin-top: 0.75rem;
+            width: 100%;
+            padding: 0.6rem 0;
+            background: transparent;
+            border: 0;
+            border-bottom: 1.5px solid rgba(212,168,67,0.3);
+            color: var(--cream);
+            font-family: inherit;
+            font-size: 0.95rem;
+            display: none;
+        }
+        .opt-other-input::placeholder { color: var(--muted-cream); }
+        .opt-other-input:focus { outline: none; border-bottom-color: var(--gold); }
+        .opt input:checked ~ .opt-other-input { display: block; }
+
+        /* ─── Text Inputs ─── */
+        .text-input {
+            width: 100%;
+            padding: 1.1rem 1.25rem;
+            background: rgba(255,255,255,0.04);
+            border: 1.5px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            color: var(--cream);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+        .text-input::placeholder { color: var(--muted-cream); font-weight: 300; }
+        .text-input:focus {
+            outline: none;
+            border-color: rgba(212,168,67,0.5);
+            background: rgba(212,168,67,0.05);
+            box-shadow: 0 0 0 3px rgba(212,168,67,0.08);
+        }
+        textarea.text-input {
+            min-height: 120px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        /* ─── Media Placeholder ─── */
+        .media-block {
+            width: 100%;
+            min-height: 220px;
+            background: linear-gradient(145deg, var(--mid-roast), var(--dark-roast));
+            border: 2px dashed rgba(212,168,67,0.25);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--muted-cream);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .media-block .media-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+        .media-block code {
+            background: rgba(212,168,67,0.1);
+            color: var(--gold);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+
+        /* ─── Navigation Buttons ─── */
+        .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        .btn {
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0);
+            transition: background 0.2s;
+        }
+
+        .btn:hover::before { background: rgba(255,255,255,0.07); }
+        .btn:active { transform: scale(0.97); }
+
+        .btn-next {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--amber) 100%);
+            color: var(--espresso);
+            flex: 1;
+            justify-content: center;
+            font-size: 1.1rem;
+            padding: 1.15rem;
+            box-shadow: 0 6px 24px rgba(212,168,67,0.25), 0 2px 8px rgba(212,168,67,0.15);
+        }
+
+        .btn-next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 32px rgba(212,168,67,0.35), 0 4px 12px rgba(212,168,67,0.2);
+        }
+
+        .btn-back {
+            background: transparent;
+            color: var(--muted-cream);
+            border: 1.5px solid rgba(255,255,255,0.1);
+            padding: 1.1rem 1.5rem;
+        }
+
+        .btn-back:hover {
+            border-color: rgba(255,255,255,0.25);
+            color: var(--cream);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--burgundy) 0%, #A0364A 50%, var(--amber) 100%);
+            color: var(--ivory);
+            flex: 1;
+            justify-content: center;
+            font-size: 1.15rem;
+            padding: 1.25rem;
+            box-shadow: 0 6px 24px rgba(122,45,58,0.3), 0 2px 8px rgba(232,131,42,0.15);
+            background-size: 200% 100%;
+            background-position: left;
+            transition: all 0.4s ease;
+        }
+
+        .btn-submit:hover {
+            background-position: right;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(122,45,58,0.4);
+        }
+
+        /* ─── Perks Card ─── */
+        .perks-card {
+            background: linear-gradient(135deg, rgba(122,45,58,0.25), rgba(74,33,18,0.3));
+            border: 1px solid rgba(122,45,58,0.4);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .perks-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 1.25rem;
+        }
+
+        .perk-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--cream);
+            font-weight: 400;
+        }
+
+        .perk-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(212,168,67,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* ─── Step Counter ─── */
+        .step-counter {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-cream);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .hidden { display: none; }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 480px) {
+            .hero-logo { font-size: 3.5rem; }
+            .options.two-col { grid-template-columns: 1fr; }
+            .section-heading h2 { font-size: 1.6rem; }
+        }
+        /* ─── Success Overlay ─── */
+        #success-overlay {
+            display: none;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.25rem;
+            position: relative;
+            z-index: 1;
+        }
+        #success-overlay.visible { display: flex; }
+        .persona-card {
+            background: linear-gradient(160deg, #2B1509, #1E0E05);
+            border: 1px solid rgba(212,168,67,0.18);
+            border-radius: 28px;
+            padding: 3rem 2.5rem;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+            animation: riseIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        @keyframes riseIn {
+            from { opacity: 0; transform: translateY(40px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .p-icon {
+            width: 90px; height: 90px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; margin: 0 auto 1.5rem;
+        }
+        .p-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 0.75rem; }
+        .p-title { font-size: 2.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; letter-spacing: -0.5px; }
+        .p-desc { font-size: 1.05rem; color: #C8B89A; line-height: 1.7; font-weight: 300; margin-bottom: 1.75rem; }
+        .p-name { color: #F5EDD8; font-weight: 600; }
+        .p-quote { border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; font-style: italic; font-size: 1rem; line-height: 1.6; }
+        .p-confirmed { font-size: 0.9rem; color: #8B7B6A; margin-bottom: 2rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .p-confirmed .tick { color: #6DBF8E; font-weight: 700; }
+        .p-wa {
+            display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+            background: #25D366; color: #fff; text-decoration: none;
+            padding: 1.1rem 1.5rem; border-radius: 14px; font-weight: 600; font-size: 1.05rem;
+            transition: all 0.25s ease; box-shadow: 0 6px 24px rgba(37,211,102,0.25);
+            margin-bottom: 1.25rem;
+        }
+        .p-wa:hover { background: #1EBE59; transform: translateY(-3px); }
+        .p-footer { font-size: 0.8rem; color: #5A4A3A; letter-spacing: 1px; }
+        .p-arrow { font-size: 1.3rem; display: block; margin-bottom: 1rem; animation: bounce 2s ease-in-out infinite; }
+        @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+    </style>
+</head>
+<body>
+    <!-- Success overlay (shown after submit, no page redirect needed) -->
+    <div id="success-overlay"></div>
+
+<div class="wrapper" id="form-wrapper">
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-logo">OUNCE</div>
+        <div class="hero-tagline">A single coffee shot. Café-style in seconds.</div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-wrap">
+        <div class="progress-step active" id="prog-1"></div>
+        <div class="progress-step" id="prog-2"></div>
+        <div class="progress-step" id="prog-3"></div>
+        <span class="progress-label" id="prog-text">Step 1 of 3</span>
+    </div>
+
+    <form name="ounce-early-access" method="POST" netlify netlify-honeypot="bot-field" id="main-form">
+        <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+
+        <!-- ====================== STEP 1 ====================== -->
+        <div class="form-step active" id="step-1">
+            <div class="step-label">Section 1</div>
+            <div class="section-heading">
+                <h2>Tell us about your coffee life ☕</h2>
+                <p>A few quick questions to understand you better.</p>
+            </div>
+
+            <!-- Q1: Age Range -->
+            <div class="q-card">
+                <span class="q-num">01</span>
+                <div class="q-title">What is your age?</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="radio" name="age_range" id="ag1" value="Under 18"><label for="ag1"><span class="indicator"></span><span class="opt-main">Under 18</span></label></div>
+                    <div class="opt"><input type="radio" name="age_range" id="ag2" value="18–24"><label for="ag2"><span class="indicator"></span><span class="opt-main">18 – 24</span></label></div>
+                    <div class="opt"><input type="radio" name="age_range" id="ag3" value="25–30"><label for="ag3"><span class="indicator"></span><span class="opt-main">25 – 30</span></label></div>
+                    <div class="opt"><input type="radio" name="age_range" id="ag4" value="31–40"><label for="ag4"><span class="indicator"></span><span class="opt-main">31 – 40</span></label></div>
+                    <div class="opt"><input type="radio" name="age_range" id="ag5" value="41+"><label for="ag5"><span class="indicator"></span><span class="opt-main">41+</span></label></div>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="q-card">
+                <span class="q-num">02</span>
+                <div class="q-title">Which best describes you?</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="radio" name="profession" id="p1" value="Student"><label for="p1"><span class="indicator"></span><span class="opt-main">Student</span></label></div>
+                    <div class="opt"><input type="radio" name="profession" id="p2" value="Working professional"><label for="p2"><span class="indicator"></span><span class="opt-main">Working professional</span></label></div>
+                    <div class="opt"><input type="radio" name="profession" id="p3" value="Freelancer"><label for="p3"><span class="indicator"></span><span class="opt-main">Freelancer</span></label></div>
+                    <div class="opt"><input type="radio" name="profession" id="p4" value="Founder"><label for="p4"><span class="indicator"></span><span class="opt-main">Founder</span></label></div>
+                    <div class="opt">
+                        <input type="radio" name="profession" id="p5" value="Other">
+                        <label for="p5"><span class="indicator"></span><span class="opt-main">Other</span></label>
+                        <input type="text" name="profession_other" class="opt-other-input" placeholder="Please specify...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="q-card">
+                <span class="q-num">03</span>
+                <div class="q-title">Coffee and I are...</div>
+                <div class="options">
+                    <div class="opt"><input type="radio" name="coffee_rel" id="cr1" value="Can't function without it"><label for="cr1"><span class="indicator"></span><span class="opt-main">☕ Can't function without it.</span></label></div>
+                    <div class="opt"><input type="radio" name="coffee_rel" id="cr2" value="We meet a few times a week"><label for="cr2"><span class="indicator"></span><span class="opt-main">🙂 We meet a few times a week.</span></label></div>
+                    <div class="opt"><input type="radio" name="coffee_rel" id="cr3" value="Mostly when deadlines attack"><label for="cr3"><span class="indicator"></span><span class="opt-main">😴 Mostly when deadlines attack.</span></label></div>
+                    <div class="opt"><input type="radio" name="coffee_rel" id="cr4" value="It's an occasional thing"><label for="cr4"><span class="indicator"></span><span class="opt-main">🤷 It's an occasional thing.</span></label></div>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="q-card">
+                <span class="q-num">03</span>
+                <div class="q-title">When do you usually crave coffee?</div>
+                <div class="q-sub">Choose all that apply.</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="checkbox" name="crave" id="c1" value="Morning"><label for="c1"><span class="indicator"></span><span class="opt-main">Morning</span></label></div>
+                    <div class="opt"><input type="checkbox" name="crave" id="c2" value="During work/study"><label for="c2"><span class="indicator"></span><span class="opt-main">During work/study</span></label></div>
+                    <div class="opt"><input type="checkbox" name="crave" id="c3" value="Afternoon slump"><label for="c3"><span class="indicator"></span><span class="opt-main">Afternoon slump</span></label></div>
+                    <div class="opt"><input type="checkbox" name="crave" id="c4" value="Before the gym"><label for="c4"><span class="indicator"></span><span class="opt-main">Before the gym</span></label></div>
+                    <div class="opt"><input type="checkbox" name="crave" id="c5" value="Late-night work"><label for="c5"><span class="indicator"></span><span class="opt-main">Late-night work</span></label></div>
+                    <div class="opt"><input type="checkbox" name="crave" id="c6" value="While travelling"><label for="c6"><span class="indicator"></span><span class="opt-main">While travelling</span></label></div>
+                    <div class="opt"><input type="checkbox" name="crave" id="c7" value="Social catch-ups"><label for="c7"><span class="indicator"></span><span class="opt-main">Social catch-ups</span></label></div>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="q-card">
+                <span class="q-num">04</span>
+                <div class="q-title">Where do you usually get your coffee?</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="radio" name="buy_loc" id="bl1" value="Home"><label for="bl1"><span class="indicator"></span><span class="opt-main">Home</span></label></div>
+                    <div class="opt"><input type="radio" name="buy_loc" id="bl2" value="Campus"><label for="bl2"><span class="indicator"></span><span class="opt-main">Campus</span></label></div>
+                    <div class="opt"><input type="radio" name="buy_loc" id="bl3" value="Office"><label for="bl3"><span class="indicator"></span><span class="opt-main">Office</span></label></div>
+                    <div class="opt"><input type="radio" name="buy_loc" id="bl4" value="Café"><label for="bl4"><span class="indicator"></span><span class="opt-main">Café</span></label></div>
+                    <div class="opt"><input type="radio" name="buy_loc" id="bl5" value="Delivery"><label for="bl5"><span class="indicator"></span><span class="opt-main">Delivery</span></label></div>
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="q-card">
+                <span class="q-num">05</span>
+                <div class="q-title">Have you ever bought coffee because the packaging looked good?</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="radio" name="packaging_bought" id="pb1" value="Yes"><label for="pb1"><span class="indicator"></span><span class="opt-main">Yes</span></label></div>
+                    <div class="opt"><input type="radio" name="packaging_bought" id="pb2" value="No"><label for="pb2"><span class="indicator"></span><span class="opt-main">No</span></label></div>
+                    <div class="opt"><input type="radio" name="packaging_bought" id="pb3" value="Maybe"><label for="pb3"><span class="indicator"></span><span class="opt-main">Maybe</span></label></div>
+                </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="q-card">
+                <span class="q-num">06</span>
+                <div class="q-title">What's the MOST annoying part about getting your coffee fix?</div>
+                <div class="q-sub">Choose ONE.</div>
+                <div class="options">
+                    <div class="opt"><input type="radio" name="annoyance" id="an1" value="Good coffee takes too long"><label for="an1"><span class="indicator"></span><span class="opt-main">Good coffee takes too long.</span></label></div>
+                    <div class="opt"><input type="radio" name="annoyance" id="an2" value="Café coffee gets expensive"><label for="an2"><span class="indicator"></span><span class="opt-main">Café coffee gets expensive.</span></label></div>
+                    <div class="opt"><input type="radio" name="annoyance" id="an3" value="Instant coffee doesn't feel satisfying"><label for="an3"><span class="indicator"></span><span class="opt-main">Instant coffee doesn't feel satisfying.</span></label></div>
+                    <div class="opt"><input type="radio" name="annoyance" id="an4" value="I don't always have the equipment"><label for="an4"><span class="indicator"></span><span class="opt-main">I don't always have the equipment.</span></label></div>
+                    <div class="opt"><input type="radio" name="annoyance" id="an5" value="I just need caffeine ASAP"><label for="an5"><span class="indicator"></span><span class="opt-main">I just need caffeine ASAP.</span></label></div>
+                    <div class="opt"><input type="radio" name="annoyance" id="an6" value="Honestly I don't have a problem"><label for="an6"><span class="indicator"></span><span class="opt-main">Honestly...I don't have a problem.</span></label></div>
+                </div>
+            </div>
+
+            <div class="nav-row">
+                <button type="button" class="btn btn-next" onclick="goTo(2)">Continue &rarr;</button>
+            </div>
+        </div>
+
+
+        <!-- ====================== STEP 2 ====================== -->
+        <div class="form-step" id="step-2">
+            <div class="step-label">Section 2</div>
+            <div class="section-heading">
+                <h2>Imagine this...</h2>
+                <p>A single coffee shot that turns milk into café-style coffee in seconds.</p>
+            </div>
+
+            <!-- Product Video -->
+            <video
+                src="product.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                style="width:100%; border-radius: 20px; margin-bottom: 2rem; display: block; max-height: 480px; object-fit: cover; box-shadow: 0 12px 40px rgba(0,0,0,0.4);"
+            ></video>
+
+            <!-- Q7 -->
+            <div class="q-card">
+                <span class="q-num">07</span>
+                <div class="q-title">What's your first reaction?</div>
+                <div class="options">
+                    <div class="opt"><input type="radio" name="first_reaction" id="fr1" value="I'd genuinely try this"><label for="fr1"><span class="indicator"></span><span class="opt-main">😍 I'd genuinely try this.</span></label></div>
+                    <div class="opt"><input type="radio" name="first_reaction" id="fr2" value="Interesting, tell me more"><label for="fr2"><span class="indicator"></span><span class="opt-main">🤔 Interesting...tell me more.</span></label></div>
+                    <div class="opt"><input type="radio" name="first_reaction" id="fr3" value="I'd need to taste it first"><label for="fr3"><span class="indicator"></span><span class="opt-main">😐 I'd need to taste it first.</span></label></div>
+                    <div class="opt"><input type="radio" name="first_reaction" id="fr4" value="Probably not for me"><label for="fr4"><span class="indicator"></span><span class="opt-main">🙃 Probably not for me.</span></label></div>
+                </div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="q-card">
+                <span class="q-num">08</span>
+                <div class="q-title">What makes this interesting to you?</div>
+                <div class="q-sub">Choose as many as you like.</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="checkbox" name="interest" id="in1" value="Convenience"><label for="in1"><span class="indicator"></span><span class="opt-main">Convenience</span></label></div>
+                    <div class="opt"><input type="checkbox" name="interest" id="in2" value="Café-style experience"><label for="in2"><span class="indicator"></span><span class="opt-main">Café-style experience</span></label></div>
+                    <div class="opt"><input type="checkbox" name="interest" id="in3" value="Looks premium"><label for="in3"><span class="indicator"></span><span class="opt-main">Looks premium</span></label></div>
+                    <div class="opt"><input type="checkbox" name="interest" id="in4" value="Portable"><label for="in4"><span class="indicator"></span><span class="opt-main">Portable</span></label></div>
+                    <div class="opt"><input type="checkbox" name="interest" id="in5" value="Faster than brewing"><label for="in5"><span class="indicator"></span><span class="opt-main">Faster than brewing</span></label></div>
+                    <div class="opt"><input type="checkbox" name="interest" id="in6" value="Could save money"><label for="in6"><span class="indicator"></span><span class="opt-main">Could save money</span></label></div>
+                    <div class="opt">
+                        <input type="checkbox" name="interest" id="in7" value="Other">
+                        <label for="in7"><span class="indicator"></span><span class="opt-main">Other</span></label>
+                        <input type="text" name="interest_other" class="opt-other-input" placeholder="Specify...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q9 -->
+            <div class="q-card">
+                <span class="q-num">09</span>
+                <div class="q-title">Which flavour would you grab first?</div>
+                <div class="q-sub">Choose as many as you like.</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="checkbox" name="flavour" id="fl1" value="Original"><label for="fl1"><span class="indicator"></span><span class="opt-main">Original</span></label></div>
+                    <div class="opt"><input type="checkbox" name="flavour" id="fl2" value="Vanilla"><label for="fl2"><span class="indicator"></span><span class="opt-main">Vanilla</span></label></div>
+                    <div class="opt"><input type="checkbox" name="flavour" id="fl3" value="Mocha"><label for="fl3"><span class="indicator"></span><span class="opt-main">Mocha</span></label></div>
+                    <div class="opt"><input type="checkbox" name="flavour" id="fl4" value="Hazelnut"><label for="fl4"><span class="indicator"></span><span class="opt-main">Hazelnut</span></label></div>
+                    <div class="opt"><input type="checkbox" name="flavour" id="fl5" value="Caramel"><label for="fl5"><span class="indicator"></span><span class="opt-main">Caramel</span></label></div>
+                    <div class="opt"><input type="checkbox" name="flavour" id="fl6" value="Irish Cream"><label for="fl6"><span class="indicator"></span><span class="opt-main">Irish Cream</span></label></div>
+                    <div class="opt"><input type="checkbox" name="flavour" id="fl7" value="Cinnamon"><label for="fl7"><span class="indicator"></span><span class="opt-main">Cinnamon</span></label></div>
+                    <div class="opt"><input type="checkbox" name="flavour" id="fl8" value="Surprise me"><label for="fl8"><span class="indicator"></span><span class="opt-main">Surprise me.</span></label></div>
+                    <div class="opt">
+                        <input type="checkbox" name="flavour" id="fl9" value="Other">
+                        <label for="fl9"><span class="indicator"></span><span class="opt-main">Other</span></label>
+                        <input type="text" name="flavour_other" class="opt-other-input" placeholder="Specify...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q10 -->
+            <div class="q-card">
+                <span class="q-num">10</span>
+                <div class="q-title">Imagine you tried OUNCE and loved it. What would you buy?</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="radio" name="purchase" id="pu1" value="One shot"><label for="pu1"><span class="indicator"></span><span class="opt-main">One shot</span></label></div>
+                    <div class="opt"><input type="radio" name="purchase" id="pu2" value="Pack of 3"><label for="pu2"><span class="indicator"></span><span class="opt-main">Pack of 3</span></label></div>
+                    <div class="opt"><input type="radio" name="purchase" id="pu3" value="Pack of 5"><label for="pu3"><span class="indicator"></span><span class="opt-main">Pack of 5</span></label></div>
+                    <div class="opt"><input type="radio" name="purchase" id="pu4" value="Variety Pack"><label for="pu4"><span class="indicator"></span><span class="opt-main">Variety Pack</span></label></div>
+                    <div class="opt"><input type="radio" name="purchase" id="pu5" value="Gift Box"><label for="pu5"><span class="indicator"></span><span class="opt-main">Gift Box</span></label></div>
+                </div>
+            </div>
+
+            <!-- Q11 -->
+            <div class="q-card">
+                <span class="q-num">11</span>
+                <div class="q-title">Where would you EXPECT to discover a brand like OUNCE?</div>
+                <div class="q-sub">Not where you'd buy it. Choose all that apply.</div>
+                <div class="options two-col">
+                    <div class="opt"><input type="checkbox" name="discover" id="d1" value="Instagram"><label for="d1"><span class="indicator"></span><span class="opt-main">Instagram</span></label></div>
+                    <div class="opt"><input type="checkbox" name="discover" id="d2" value="Blinkit"><label for="d2"><span class="indicator"></span><span class="opt-main">Blinkit</span></label></div>
+                    <div class="opt"><input type="checkbox" name="discover" id="d3" value="Zepto"><label for="d3"><span class="indicator"></span><span class="opt-main">Zepto</span></label></div>
+                    <div class="opt"><input type="checkbox" name="discover" id="d4" value="Cafés"><label for="d4"><span class="indicator"></span><span class="opt-main">Cafés</span></label></div>
+                    <div class="opt"><input type="checkbox" name="discover" id="d5" value="Flea markets"><label for="d5"><span class="indicator"></span><span class="opt-main">Flea markets</span></label></div>
+                    <div class="opt"><input type="checkbox" name="discover" id="d6" value="Friends"><label for="d6"><span class="indicator"></span><span class="opt-main">Friends</span></label></div>
+                    <div class="opt"><input type="checkbox" name="discover" id="d7" value="Influencers"><label for="d7"><span class="indicator"></span><span class="opt-main">Influencers</span></label></div>
+                    <div class="opt"><input type="checkbox" name="discover" id="d8" value="College events"><label for="d8"><span class="indicator"></span><span class="opt-main">College events</span></label></div>
+                </div>
+            </div>
+
+            <!-- Q12 -->
+            <div class="q-card">
+                <span class="q-num">12</span>
+                <div class="q-title">For one premium coffee shot, what price feels...</div>
+                <div class="options">
+                    <div class="opt"><input type="radio" name="price" id="pr1" value="Under ₹89"><label for="pr1"><span class="indicator"></span><div class="opt-text"><span class="opt-main">Under ₹89</span><span class="opt-sub">Surprisingly cheap</span></div></label></div>
+                    <div class="opt"><input type="radio" name="price" id="pr2" value="Around ₹99"><label for="pr2"><span class="indicator"></span><div class="opt-text"><span class="opt-main">Around ₹99</span><span class="opt-sub">Feels fair</span></div></label></div>
+                    <div class="opt"><input type="radio" name="price" id="pr3" value="Around ₹119"><label for="pr3"><span class="indicator"></span><div class="opt-text"><span class="opt-main">Around ₹119</span><span class="opt-sub">Still reasonable</span></div></label></div>
+                    <div class="opt"><input type="radio" name="price" id="pr4" value="₹149+"><label for="pr4"><span class="indicator"></span><div class="opt-text"><span class="opt-main">₹149+</span><span class="opt-sub">Only if it's exceptional</span></div></label></div>
+                </div>
+            </div>
+
+            <div class="nav-row">
+                <button type="button" class="btn btn-back" onclick="goTo(1)">&larr; Back</button>
+                <button type="button" class="btn btn-next" onclick="goTo(3)">Almost there &rarr;</button>
+            </div>
+        </div>
+
+
+        <!-- ====================== STEP 3 ====================== -->
+        <div class="form-step" id="step-3">
+            <div class="step-label">Section 3</div>
+            <div class="section-heading">
+                <h2>We'd love your thoughts.</h2>
+                <p>Two quick questions, then you're in.</p>
+            </div>
+
+            <!-- Q13 -->
+            <div class="q-card">
+                <span class="q-num">13</span>
+                <div class="q-title" style="color: var(--gold);">👉 I'd buy OUNCE if...</div>
+                <div class="q-sub">Finish the sentence — your words might literally become our next ad.</div>
+                <input type="text" name="buy_if" class="text-input" placeholder="...your honest answer here" required>
+            </div>
+
+            <!-- Q14 -->
+            <div class="q-card">
+                <span class="q-num">14</span>
+                <div class="q-title">Anything you'd change?</div>
+                <div class="q-sub">Maybe a flavour. Maybe the packaging. Maybe the format. Maybe something we've never thought of.</div>
+                <textarea name="change_anything" class="text-input" placeholder="Your thoughts..."></textarea>
+            </div>
+
+
+            <div class="q-card">
+                <div class="q-title" style="margin-bottom: 0.4rem;">Want early access? + first dibs on pre-order pricing?</div>
+                <div class="q-sub" style="margin-bottom: 1.5rem;">Drop your details and you'll hear from us first.</div>
+
+                <input type="text" name="customer_name" id="customer_name" class="text-input" placeholder="Your Name" required style="margin-top: 0; margin-bottom: 1rem;">
+                <input type="tel" name="customer_phone" id="customer_phone" class="text-input" placeholder="Phone Number" required style="margin-top: 0; margin-bottom: 1.5rem;">
+
+                <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; color: var(--muted-cream); font-size: 0.95rem; font-weight: 400; line-height: 1.5;">
+                    <input type="checkbox" name="whatsapp_notify" value="yes" style="width: 18px; height: 18px; accent-color: #25D366; margin-top: 2px; flex-shrink: 0; cursor: pointer;">
+                    Notify me on WhatsApp when pre-ordering is available
+                </label>
+            </div>
+
+            <div class="nav-row">
+                <button type="button" class="btn btn-back" onclick="goTo(2)">&larr; Back</button>
+                <button type="submit" class="btn btn-submit">Submit &amp; Join ☕</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<script>
+    const totalSteps = 3;
+
+    // Questions required in each step
+    // Each entry: { type: 'radio'|'checkbox'|'text', name: '...', label: '...' }
+    const stepRequirements = {
+        1: [
+            { type: 'radio',    name: 'age_range',          label: 'Q1 — What is your age?' },
+            { type: 'radio',    name: 'profession',         label: 'Q2 — Which best describes you?' },
+            { type: 'radio',    name: 'coffee_rel',         label: 'Q3 — Coffee and I are...' },
+            { type: 'checkbox', name: 'crave',              label: 'Q4 — When do you crave coffee?' },
+            { type: 'radio',    name: 'buy_loc',            label: 'Q5 — Where do you get your coffee?' },
+            { type: 'radio',    name: 'packaging_bought',   label: 'Q6 — Bought coffee for packaging?' },
+            { type: 'radio',    name: 'annoyance',          label: 'Q7 — Most annoying part?' }
+        ],
+        2: [
+            { type: 'radio',    name: 'first_reaction',    label: 'Q7 — First reaction?' },
+            { type: 'checkbox', name: 'interest',          label: 'Q8 — What makes this interesting?' },
+            { type: 'checkbox', name: 'flavour',           label: 'Q9 — Which flavour would you grab?' },
+            { type: 'radio',    name: 'purchase',          label: 'Q10 — What would you buy?' },
+            { type: 'checkbox', name: 'discover',          label: 'Q11 — Where would you discover OUNCE?' },
+            { type: 'radio',    name: 'price',             label: 'Q12 — What price feels right?' }
+        ],
+        3: [
+            { type: 'text', name: 'buy_if',          label: '"I\'d buy OUNCE if..."' },
+            { type: 'text', name: 'customer_name',   label: 'Your Name' },
+            { type: 'text', name: 'customer_phone',  label: 'Phone Number' }
+        ]
+    };
+
+    function validate(step) {
+        const reqs = stepRequirements[step];
+        for (const req of reqs) {
+            if (req.type === 'radio') {
+                const checked = document.querySelector(`input[name="${req.name}"]:checked`);
+                if (!checked) { showError(req.label); return false; }
+            } else if (req.type === 'checkbox') {
+                const checked = document.querySelectorAll(`input[name="${req.name}"]:checked`);
+                if (checked.length === 0) { showError(req.label); return false; }
+            } else if (req.type === 'text') {
+                const el = document.querySelector(`[name="${req.name}"]`);
+                if (!el || el.value.trim() === '') { showError(req.label); return false; }
+            }
+        }
+        return true;
+    }
+
+    function showError(label) {
+        // Remove any existing toast
+        const old = document.getElementById('toast');
+        if (old) old.remove();
+
+        const toast = document.createElement('div');
+        toast.id = 'toast';
+        toast.textContent = `Please answer: ${label}`;
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #7A2D3A, #A0364A);
+            color: #FBF7EE;
+            padding: 1rem 1.75rem;
+            border-radius: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            z-index: 9999;
+            animation: slideUp 0.3s ease;
+            max-width: 90vw;
+            text-align: center;
+        `;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3500);
+    }
+
+    function goTo(targetStep) {
+        const currentStep = parseInt(document.querySelector('.form-step.active').id.split('-')[1]);
+        if (targetStep > currentStep) {
+            if (!validate(currentStep)) return;
+        }
+        document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+        document.getElementById('step-' + targetStep).classList.add('active');
+        updateProgress(targetStep);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress(currentStep) {
+        for (let i = 1; i <= totalSteps; i++) {
+            const bar = document.getElementById('prog-' + i);
+            bar.classList.remove('done', 'active');
+            if (i < currentStep) bar.classList.add('done');
+            else if (i === currentStep) bar.classList.add('active');
+        }
+        document.getElementById('prog-text').textContent = `Step ${currentStep} of ${totalSteps}`;
+    }
+
+    // ── Persona engine ──────────────────────────────────────────────
+    function getPersona(rel, crave, annoyance, profession) {
+        const craveArr = crave || [];
+        if ((rel === "Can't function without it") && (craveArr.includes("Late-night work") || annoyance === "I just need caffeine ASAP")) {
+            return 'midnight';
+        }
+        if (profession === "Founder" || annoyance === "I just need caffeine ASAP" || craveArr.includes("Before the gym")) {
+            return 'power';
+        }
+        if ((rel === "Can't function without it") && craveArr.includes("Morning")) {
+            return 'ritual';
+        }
+        if (craveArr.includes("Social catch-ups") || rel === "We meet a few times a week") {
+            return 'social';
+        }
+        if (annoyance === "Instant coffee doesn't feel satisfying" || annoyance === "Café coffee gets expensive") {
+            return 'craft';
+        }
+        if (craveArr.includes("While travelling") || profession === "Freelancer") {
+            return 'wanderer';
+        }
+        return 'ritual';
+    }
+
+    // ── Persona data ────────────────────────────────────────────────
+    const personas = {
+        midnight: { icon:'🌙', bg:'rgba(30,14,50,0.9)', ringA:'#7B4FBF', ringB:'#C07840', labelColor:'#B07FEF', label:'YOUR COFFEE PERSONA', titleColor:'#E8D4FF', title:'The Midnight Roast', desc: n=>`<span class="p-name">${n}</span>, you don't drink coffee to wake up — you drink it to survive. Deadlines are your timezone, and 2am is just another hour.`, quoteColor:'#C8A8F0', quoteBg:'rgba(123,79,191,0.12)', quote:'"The night is long. The cup is short. Make it count."' },
+        power:    { icon:'⚡', bg:'rgba(50,30,10,0.9)', ringA:'#D4A843', ringB:'#E8832A', labelColor:'#D4A843', label:'YOUR COFFEE PERSONA', titleColor:'#F5EDD8', title:'The Power Shot', desc: n=>`<span class="p-name">${n}</span>, you don't sip — you execute. Coffee is a tool. You need it fast, strong, and ready to go. No queues. No fuss. Just results.`, quoteColor:'#D4A843', quoteBg:'rgba(212,168,67,0.1)', quote:'"No time for slow. No room for weak."' },
+        ritual:   { icon:'☀️', bg:'rgba(40,20,5,0.9)',  ringA:'#C07840', ringB:'#D4A843', labelColor:'#C07840', label:'YOUR COFFEE PERSONA', titleColor:'#F5EDD8', title:'The Daily Ritual', desc: n=>`<span class="p-name">${n}</span>, your morning doesn't start with an alarm — it starts with that first cup. Coffee isn't just a drink for you, it's a moment. Intentional, warm, and yours.`, quoteColor:'#C8962A', quoteBg:'rgba(192,120,64,0.1)', quote:'"Before the world demands anything, the cup gives everything."' },
+        social:   { icon:'✨', bg:'rgba(10,30,40,0.9)', ringA:'#4AABB8', ringB:'#D4A843', labelColor:'#4AABB8', label:'YOUR COFFEE PERSONA', titleColor:'#E8F5F8', title:'The Social Brew', desc: n=>`<span class="p-name">${n}</span>, for you, coffee is never just coffee — it's the reason to gather. The best conversations happen over a warm cup.`, quoteColor:'#4AABB8', quoteBg:'rgba(74,171,184,0.1)', quote:'"Coffee is the excuse. The people are the reason."' },
+        craft:    { icon:'🎨', bg:'rgba(30,10,15,0.9)', ringA:'#A03650', ringB:'#D4A843', labelColor:'#D47A8F', label:'YOUR COFFEE PERSONA', titleColor:'#FFF0F3', title:'The Craft Collector', desc: n=>`<span class="p-name">${n}</span>, you don't just drink coffee — you curate it. The packaging, the aroma, the experience — it all matters.`, quoteColor:'#D47A8F', quoteBg:'rgba(160,54,80,0.12)', quote:'"A great cup isn\'t made. It\'s composed."' },
+        wanderer: { icon:'🌍', bg:'rgba(10,25,20,0.9)', ringA:'#3A9E7A', ringB:'#D4A843', labelColor:'#3AB88A', label:'YOUR COFFEE PERSONA', titleColor:'#E8FFF5', title:'The Wandering Cup', desc: n=>`<span class="p-name">${n}</span>, home is wherever your coffee is. Whether it's a corner café in a new city or a quick cup between projects, coffee is your constant.`, quoteColor:'#3AB88A', quoteBg:'rgba(58,158,122,0.1)', quote:'"Every city tastes different. Every cup tells a story."' },
+    };
+
+    function showPersona(name, key) {
+        const p = personas[key] || personas['ritual'];
+        document.getElementById('success-overlay').innerHTML = `
+            <div class="persona-card">
+                <div class="p-icon" style="background:${p.bg}; box-shadow: 0 0 0 3px ${p.ringA}, 0 0 0 5px ${p.ringB}40;">${p.icon}</div>
+                <div class="p-label" style="color:${p.labelColor};">${p.label}</div>
+                <div class="p-title" style="color:${p.titleColor};">${p.title}</div>
+                <div class="p-desc">${p.desc(name)}</div>
+                <div class="p-quote" style="background:${p.quoteBg}; color:${p.quoteColor};">${p.quote}</div>
+                <div class="p-confirmed"><span class="tick">✓</span> You're on the waitlist — we'll ping you before anyone else.</div>
+                <span class="p-arrow">👇</span>
+                <a href="https://chat.whatsapp.com/JZS1CdIbZpKIMZBWrLHtsx" class="p-wa" target="_blank">☕ Join the OUNCE Community</a>
+                <div class="p-footer">OUNCE · Made for people who mean it.</div>
+            </div>`;
+        document.getElementById('form-wrapper').style.display = 'none';
+        document.getElementById('success-overlay').classList.add('visible');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ── Form submit ─────────────────────────────────────────────────
+    document.getElementById('main-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!validate(3)) return;
+
+        const form   = e.target;
+        const data   = new FormData(form);
+        const craveVals = [...form.querySelectorAll('input[name="crave"]:checked')].map(el => el.value);
+        const rel        = data.get('coffee_rel') || '';
+        const annoyance  = data.get('annoyance') || '';
+        const profession = data.get('profession') || '';
+        const name       = (data.get('customer_name') || 'Friend').split(' ')[0];
+        const persona    = getPersona(rel, craveVals, annoyance, profession);
+
+        // Explicitly tell Netlify which form this is
+        data.append('form-name', 'ounce-early-access');
+
+        // Fire-and-forget to Netlify — show result immediately regardless
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(data).toString()
+        }).catch(() => {});
+
+        // Show persona card inline — no redirect, no 404 ever
+        showPersona(name, persona);
+    });
+</script>
+</body>
+</html>

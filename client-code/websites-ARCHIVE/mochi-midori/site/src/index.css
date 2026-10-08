@@ -1,0 +1,33 @@
+:root {
+  --paper: #F5F1E6;
+  --paper-2: #EAE4D2;
+  --ink: #14181A;
+  --deep: #1B3020;
+  --matcha: #74953A;
+  --sakura: #F2C2CD;
+  --vermilion: #C8412B;
+  --muted: #566159;
+  --serif: 'Shippori Mincho B1', 'Hiragino Mincho ProN', Georgia, serif;
+  --sans: 'Zen Kaku Gothic New', 'Hiragino Sans', system-ui, sans-serif;
+  --gutter: clamp(20px, 3.4vw, 56px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--deep); }
+body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+img, video { display: block; max-width: 100%; }
+ul, ol { list-style: none; }
+:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.gutter { padding-left: var(--gutter); padding-right: var(--gutter); }
+.label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.display { font-family: var(--serif); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; }
+.btn { display: inline-flex; align-items: center; gap: 0.8rem; padding: 0.95rem 1.6rem; border: 1.5px solid currentColor; border-radius: 999px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.3s, color 0.3s, transform 0.2s; }
+.btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn:active { transform: scale(0.97); }
+.btn--solid { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn--solid:hover { background: var(--vermilion); border-color: var(--vermilion); }
+.no-scroll { overflow: hidden !important; }
+@media (prefers-reduced-motion: reduce) { * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }

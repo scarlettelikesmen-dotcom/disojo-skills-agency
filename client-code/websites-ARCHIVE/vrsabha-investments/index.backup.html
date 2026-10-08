@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vrsabha Investments — Trusted stock broker, investment advisor, and insurance consultant based in Bhorakalan, Gurugram. We build and protect your wealth.">
+  <title>Vrsabha Investments | Stock Broking & Wealth Management, Gurugram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --emerald:   #0d2b22;
+      --forest:    #164537;
+      --pine:      #246b57;
+      --brass:     #c29f60;
+      --brass-s:   #dabd85;
+      --parchment: #f9f8f5;
+      --white:     #ffffff;
+      --ink:       #151b18;
+      --ink-2:     #38423c;
+      --muted:     #798c83;
+      --line:      rgba(13,43,34,.12);
+      --shadow:    0 24px 64px rgba(13,43,34,.15);
+      --serif:     "Cormorant Garamond", Georgia, serif;
+      --sans:      "DM Sans", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--parchment); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 92px 0; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; color: var(--pine); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+    .section-title { margin: 0; max-width: 740px; font-family: var(--serif); font-size: clamp(44px, 6vw, 80px); font-weight: 400; line-height: .92; letter-spacing: -.03em; color: var(--emerald); }
+    .section-title em { color: var(--brass); font-style: normal; }
+    .lead { color: var(--ink-2); font-size: 17px; line-height: 1.7; }
+
+    .topline { position: relative; z-index: 12; background: var(--emerald); color: #9bbab0; font-size: 12px; letter-spacing: .06em; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .topline .shell { min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .topline strong { color: var(--brass-s); }
+    .topline .t-right { display: flex; gap: 24px; }
+
+    nav { position: sticky; top: 0; z-index: 15; border-bottom: 1px solid rgba(0,0,0,.08); background: rgba(249,248,245,.96); backdrop-filter: blur(16px); }
+    .nav-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 26px; }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: max-content; }
+    .brand-mark { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--pine); color: var(--pine); font-family: var(--serif); font-size: 22px; background: var(--white); font-weight: 600; letter-spacing: .02em; }
+    .brand-copy strong { display: block; font-size: 17px; font-family: var(--serif); font-weight: 600; color: var(--emerald); letter-spacing: .02em; }
+    .brand-copy span { display: block; margin-top: 2px; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 32px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .nav-links a:not(.btn) { position: relative; padding: 10px 0; color: var(--emerald); }
+    .nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 4px; height: 1px; background: var(--brass); transition: right .3s ease; }
+    .nav-links a:hover::after { right: 0; }
+    .btn { min-height: 46px; padding: 0 24px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--emerald); background: var(--emerald); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em; transition: transform .25s, background .25s; }
+    .btn:hover { transform: translateY(-2px); background: var(--forest); }
+    .btn.brass { background: var(--brass); border-color: var(--brass); color: var(--emerald); }
+    .btn.brass:hover { background: var(--brass-s); border-color: var(--brass-s); }
+    .btn.outline { background: transparent; color: var(--emerald); }
+    .btn.outline:hover { background: var(--emerald); color: #fff; }
+    .menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--emerald); font-size: 20px; }
+
+    .drawer { display: none; position: fixed; inset: 0; z-index: 50; background: var(--parchment); flex-direction: column; padding: 34px 24px; gap: 28px; overflow-y: auto; }
+    .drawer.open { display: flex; }
+    .drawer-top { display: flex; justify-content: space-between; align-items: center; }
+    .close-btn { background: none; border: none; font-size: 26px; color: var(--emerald); }
+    .drawer-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+    .drawer-links a { padding: 20px 0; border-bottom: 1px solid var(--line); font-size: 24px; font-family: var(--serif); font-weight: 400; color: var(--emerald); }
+    .drawer .btn { width: 100%; justify-content: center; margin-top: 16px; }
+
+    /* HERO */
+    .hero { position: relative; min-height: 90vh; overflow: hidden; border-bottom: 1px solid var(--line); display: flex; align-items: center; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 100% 0%, rgba(36,107,87,.08) 0%, transparent 50%), radial-gradient(circle at 0% 100%, rgba(194,159,96,.12) 0%, transparent 40%); }
+    .hero-grid { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1.1fr .9fr; gap: 72px; align-items: center; padding: 80px 0; }
+    .hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(56px, 7vw, 96px); font-weight: 400; line-height: .9; letter-spacing: -.03em; color: var(--emerald); }
+    .hero h1 em { display: block; color: var(--brass); font-style: normal; }
+    .hero-copy > p { max-width: 500px; margin: 28px 0 0; color: var(--ink-2); font-size: 17px; line-height: 1.7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+    .hero-visual { position: relative; }
+    .hero-card { position: relative; z-index: 2; background: var(--emerald); padding: 48px; box-shadow: var(--shadow); color: #fff; }
+    .hero-card::after { content: ""; position: absolute; inset: -1px; border: 1px solid rgba(218,189,133,.4); pointer-events: none; }
+    .card-stat { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .card-stat strong { font-family: var(--serif); font-size: 48px; font-weight: 400; color: var(--brass-s); line-height: 1; }
+    .card-stat span { font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: #9bbab0; }
+    .hero-card p { margin: 0; font-size: 14px; line-height: 1.6; color: #c4d4cf; }
+    
+    .ticker { overflow: hidden; border-bottom: 1px solid var(--line); background: var(--emerald); color: var(--brass-s); }
+    .ticker-track { width: max-content; min-height: 52px; display: flex; align-items: center; animation: move 25s linear infinite; }
+    .ticker-track span { display: inline-flex; align-items: center; gap: 24px; padding-right: 24px; font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; white-space: nowrap; }
+    .ticker-track span::after { content: "•"; color: #9bbab0; font-size: 16px; }
+    @keyframes move { to { transform: translateX(-50%); } }
+
+    /* ABOUT */
+    .intro-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 80px; align-items: end; }
+    .intro-grid .lead { margin: 0; }
+    .trust-grid { margin-top: 60px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .trust-item { padding: 32px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white); }
+    .trust-item strong { display: block; font-family: var(--serif); font-size: 36px; font-weight: 600; color: var(--emerald); margin-bottom: 12px; }
+    .trust-item span { color: var(--ink-2); font-size: 13px; line-height: 1.6; display: block; }
+
+    /* SERVICES */
+    .services-section { background: var(--emerald); color: #fff; }
+    .services-section .eyebrow { color: var(--brass-s); }
+    .services-section .section-title { color: #fff; }
+    .services-head { margin-bottom: 56px; }
+    .services-head .lead { color: #9bbab0; margin-top: 20px; max-width: 580px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .srv-card { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1); padding: 40px; transition: background .3s, transform .3s; }
+    .srv-card:hover { background: rgba(255,255,255,.06); transform: translateY(-4px); border-color: rgba(218,189,133,.4); }
+    .srv-icon { color: var(--brass-s); font-size: 32px; margin-bottom: 24px; }
+    .srv-card h3 { margin: 0 0 16px; font-family: var(--serif); font-size: 28px; font-weight: 400; color: #fff; }
+    .srv-card p { margin: 0; color: #c4d4cf; font-size: 14px; line-height: 1.65; }
+
+    /* APPROACH */
+    .approach-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: start; }
+    .approach-visual { background: var(--pine); color: #fff; padding: 48px; box-shadow: var(--shadow); position: sticky; top: 110px; }
+    .approach-visual h3 { font-family: var(--serif); font-size: 40px; font-weight: 400; margin: 0 0 20px; line-height: 1.1; color: var(--brass-s); }
+    .approach-visual p { margin: 0; font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.9); }
+    .steps { margin-top: 32px; border-top: 1px solid var(--line); }
+    .step { display: grid; grid-template-columns: 46px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .step span { color: var(--brass); font-family: var(--serif); font-size: 24px; font-weight: 600; font-style: italic; }
+    .step h3 { margin: -2px 0 8px; font-family: var(--serif); font-size: 26px; font-weight: 600; color: var(--emerald); }
+    .step p { margin: 0; color: var(--ink-2); font-size: 14px; line-height: 1.65; }
+
+    /* CONTACT */
+    .contact-section { background: var(--emerald); color: #fff; border-top: 1px solid rgba(255,255,255,.1); }
+    .contact-section .eyebrow { color: var(--brass-s); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .contact-info h2 { margin: 0 0 24px; font-family: var(--serif); font-size: clamp(40px, 6vw, 68px); font-weight: 400; line-height: .95; color: #fff; }
+    .contact-info h2 em { color: var(--brass-s); font-style: normal; }
+    .contact-info > p { color: #9bbab0; font-size: 16px; line-height: 1.7; margin: 0 0 40px; max-width: 460px; }
+    .c-details { display: flex; flex-direction: column; gap: 24px; }
+    .c-row { display: flex; align-items: flex-start; gap: 18px; }
+    .c-row .icon { font-size: 20px; margin-top: 2px; }
+    .c-row div strong { display: block; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--brass-s); margin-bottom: 6px; }
+    .c-row div span { color: #fff; font-size: 15px; line-height: 1.6; }
+    
+    .c-form { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1); padding: 48px; display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { padding: 16px 20px; border: 1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.15); color: #fff; font-size: 14px; outline: none; transition: border-color .3s; }
+    .form-field::placeholder { color: rgba(255,255,255,.4); }
+    .form-field:focus { border-color: var(--brass-s); }
+    textarea.form-field { resize: vertical; min-height: 140px; }
+    .btn-submit { min-height: 56px; margin-top: 8px; border: none; background: var(--brass); color: var(--emerald); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; transition: background .3s; }
+    .btn-submit:hover { background: var(--brass-s); }
+
+    footer { background: #081a14; color: #5a7368; border-top: 1px solid rgba(255,255,255,.05); }
+    .footer-inner { padding: 40px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-inner small { font-size: 12px; letter-spacing: .05em; }
+    .footer-links { display: flex; gap: 24px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; }
+    .footer-links a { color: var(--brass-s); }
+
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; padding: 60px 0; gap: 48px; }
+      .hero h1 { font-size: clamp(52px, 11vw, 80px); }
+      .intro-grid { grid-template-columns: 1fr; gap: 48px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .approach-grid { grid-template-columns: 1fr; gap: 48px; }
+      .approach-visual { position: static; }
+      .contact-grid { grid-template-columns: 1fr; gap: 56px; }
+      .c-form { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .menu-btn { display: flex; align-items: center; justify-content: center; }
+      .topline .t-right { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topline">
+    <div class="shell">
+      <span>Near Bada Mandir, Bhorakalan, Gurugram, Delhi/NCR</span>
+      <span class="t-right"><strong>Stock Broking &amp; Advisory</strong></span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="shell">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-mark">V</div>
+          <div class="brand-copy">
+            <strong>Vrsabha Investments</strong>
+            <span>Wealth Management</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About Firm</a>
+          <a href="#services">Our Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact" class="btn">Client Portal</a>
+        </div>
+        <button class="menu-btn" id="menuBtn">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <div class="drawer-top">
+      <div class="brand">
+        <div class="brand-mark">V</div>
+        <div class="brand-copy"><strong>Vrsabha Investments</strong><span>Gurugram</span></div>
+      </div>
+      <button class="close-btn" id="closeBtn">&#10005;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" onclick="closeDrawer()">About Firm</a>
+      <a href="#services" onclick="closeDrawer()">Our Services</a>
+      <a href="#approach" onclick="closeDrawer()">Approach</a>
+    </div>
+    <a href="#contact" class="btn" onclick="closeDrawer()">Client Portal</a>
+  </div>
+
+  <section class="hero">
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Financial Services &nbsp;·&nbsp; Gurugram</p>
+          <h1>Protecting and growing your <em>wealth.</em></h1>
+          <p>Vrsabha Investments provides expert stock broking, comprehensive investment advisory, and insurance solutions designed to secure your financial future.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn brass">Schedule a Consultation</a>
+            <a href="#services" class="btn outline">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="card-stat">
+              <strong>15+</strong>
+              <span>Years of Market Expertise</span>
+            </div>
+            <div class="card-stat" style="border:none; padding:0; margin:0;">
+              <strong>100%</strong>
+              <span>Client-Centric Approach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Stock Broking</span><span>Investment Advisory</span><span>Insurance Consulting</span><span>Portfolio Management</span><span>Mutual Funds</span><span>Wealth Protection</span><span>Stock Broking</span><span>Investment Advisory</span><span>Insurance Consulting</span><span>Portfolio Management</span><span>Mutual Funds</span><span>Wealth Protection</span>
+    </div>
+  </div>
+
+  <section id="about" class="section">
+    <div class="shell">
+      <div class="intro-grid">
+        <div>
+          <p class="eyebrow">About The Firm</p>
+          <h2 class="section-title">Clarity in a complex <em>market.</em></h2>
+        </div>
+        <div>
+          <p class="lead">Based near Bada Mandir, Bhorakalan, Vrsabha Investments is a premier financial services firm serving the Gurugram and Delhi/NCR region. We believe that true wealth management goes beyond chasing returns—it's about understanding risk, protecting assets, and providing transparent, actionable advice to our clients.</p>
+        </div>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><strong>Registered</strong><span>Fully compliant and registered stock brokers and advisors.</span></div>
+        <div class="trust-item"><strong>Objective</strong><span>Unbiased financial advice tailored to your specific goals.</span></div>
+        <div class="trust-item"><strong>Secure</strong><span>Bank-grade security and confidentiality for all client data.</span></div>
+        <div class="trust-item"><strong>Accessible</strong><span>Local expertise with global market insights.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services-section">
+    <div class="shell">
+      <div class="services-head">
+        <p class="eyebrow">Our Offerings</p>
+        <h2 class="section-title">Comprehensive <em>financial</em> solutions.</h2>
+        <p class="lead">From active trading to long-term wealth preservation, our services cover the entire financial spectrum.</p>
+      </div>
+      <div class="services-grid">
+        <div class="srv-card">
+          <div class="srv-icon">📈</div>
+          <h3>Stock Broking</h3>
+          <p>Execute trades efficiently across equities, derivatives, and commodities. We provide robust platforms, research reports, and real-time market insights to empower your trading decisions.</p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-icon">💼</div>
+          <h3>Investment Advisory</h3>
+          <p>Customized portfolio strategies designed around your risk tolerance and financial goals. We help you navigate mutual funds, bonds, and structured products with expert guidance.</p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-icon">🛡️</div>
+          <h3>Insurance Solutions</h3>
+          <p>Protect your family and assets against the unexpected. We offer comprehensive life, health, and general insurance consulting to ensure you are adequately covered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="section">
+    <div class="shell">
+      <div class="approach-grid">
+        <div class="approach-visual">
+          <h3>The Vrsabha Difference</h3>
+          <p>We don't believe in one-size-fits-all financial planning. Every portfolio we build and every trade we execute is backed by rigorous research and a deep understanding of our client's ultimate objectives.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Our Process</p>
+          <h2 class="section-title">A disciplined <em>approach.</em></h2>
+          <div class="steps">
+            <div class="step">
+              <span>I</span>
+              <div>
+                <h3>Discovery</h3>
+                <p>We start by understanding your current financial standing, your short and long-term goals, and your comfort level with market volatility.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>II</span>
+              <div>
+                <h3>Strategy Design</h3>
+                <p>Our analysts construct a diversified portfolio or trading plan tailored specifically to meet your defined objectives.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>III</span>
+              <div>
+                <h3>Execution</h3>
+                <p>We implement the strategy using efficient trading mechanisms, ensuring optimal pricing and transparency at every step.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>IV</span>
+              <div>
+                <h3>Review &amp; Rebalance</h3>
+                <p>Markets change, and so do your needs. We provide continuous monitoring and periodic rebalancing to keep your investments on track.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="shell">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Get In Touch</p>
+          <h2>Take control of your <em>financial future.</em></h2>
+          <p>Whether you are a seasoned trader or just beginning to build your portfolio, our advisors are here to help.</p>
+          <div class="c-details">
+            <div class="c-row"><span class="icon">📍</span><div><strong>Office Location</strong><span>Near Bada Mandir, Bhorakalan,<br>Gurugram, Delhi/NCR</span></div></div>
+            <div class="c-row"><span class="icon">🕒</span><div><strong>Trading Hours</strong><span>Mon – Fri: 9:00 AM – 3:30 PM<br>Advisory: 10:00 AM – 6:00 PM</span></div></div>
+          </div>
+        </div>
+        <form class="c-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input class="form-field" type="text" placeholder="Full Name" required>
+            <input class="form-field" type="tel" placeholder="Phone Number" required>
+          </div>
+          <input class="form-field" type="email" placeholder="Email Address">
+          <select class="form-field">
+            <option value="" disabled selected>Primary Interest</option>
+            <option value="broking">Stock Broking</option>
+            <option value="advisory">Investment Advisory</option>
+            <option value="insurance">Insurance Consulting</option>
+          </select>
+          <textarea class="form-field" placeholder="How can we help you achieve your financial goals?"></textarea>
+          <button type="submit" class="btn-submit">Request a Call Back</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-inner">
+        <small>&copy; 2026 Vrsabha Investments. All rights reserved. &nbsp;·&nbsp; Gurugram, Delhi/NCR.</small>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const drawer = document.getElementById('drawer');
+    menuBtn.addEventListener('click', () => { drawer.classList.add('open'); document.body.classList.add('menu-open'); });
+    closeBtn.addEventListener('click', () => closeDrawer());
+    function closeDrawer() { drawer.classList.remove('open'); document.body.classList.remove('menu-open'); }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = 'Request Received';
+      btn.style.background = '#4caf50';
+      btn.style.color = '#fff';
+      setTimeout(() => { btn.textContent = 'Request a Call Back'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.trust-item, .srv-card, .step').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.cnav { position: fixed; inset: 0 0 auto 0; z-index: 120; display: flex; justify-content: space-between; align-items: center; padding: 22px var(--gutter); pointer-events: none; transition: color 0.35s; }
+.cnav--light { color: var(--paper); }
+.cnav--dark { color: var(--ink); }
+.cnav > * { pointer-events: auto; }
+.cnav-logo { display: inline-flex; align-items: center; gap: 0.7rem; }
+.cnav-mark { width: 30px; height: 30px; background: currentColor; -webkit-mask: url(/images/mark.png) center / contain no-repeat; mask: url(/images/mark.png) center / contain no-repeat; }
+.cnav-name { font-size: 1.25rem; font-weight: 600; letter-spacing: 0; }
+.cnav-btn { display: inline-flex; align-items: center; gap: 0.8rem; padding: 0.7rem 1.1rem 0.7rem 1.3rem; border: 1.5px solid currentColor; border-radius: 999px; transition: transform 0.25s var(--ease); }
+.cnav-btn:hover { transform: scale(1.05); }
+.cnav-lines { display: grid; gap: 5px; width: 20px; }
+.cnav-lines i { display: block; height: 1.5px; background: currentColor; transition: transform 0.4s var(--ease); }
+.cnav-btn[aria-expanded='true'] .cnav-lines i:first-child { transform: translateY(3.2px) rotate(20deg); }
+.cnav-btn[aria-expanded='true'] .cnav-lines i:last-child { transform: translateY(-3.2px) rotate(-20deg); }
+.menu { position: fixed; inset: 0; z-index: 110; display: grid; align-content: space-between; padding: 110px 0 30px; background: var(--ink); color: var(--paper); clip-path: circle(0 at calc(100% - 70px) 44px); transition: clip-path 0.8s var(--ease); visibility: hidden; }
+.menu.is-open { clip-path: circle(150vmax at calc(100% - 70px) 44px); visibility: visible; }
+.menu-links { display: grid; gap: clamp(0.4rem, 2vh, 1.4rem); }
+.menu-link { display: flex; align-items: baseline; gap: 1.2rem; width: fit-content; font-size: clamp(3rem, 10vw, 9rem); transition: transform 0.5s var(--ease), color 0.3s; }
+.menu-link:hover { transform: translateX(1.2rem); color: var(--sakura); }
+.menu-num { font-family: var(--serif); font-size: 0.3em; font-weight: 500; color: var(--vermilion); }
+.menu-foot { display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; opacity: 0.7; }
+.menu-foot a:hover { color: var(--sakura); }

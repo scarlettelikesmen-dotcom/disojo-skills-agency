@@ -1,0 +1,7 @@
+.loader { position: fixed; inset: 0; z-index: 1000; display: grid; place-content: center; justify-items: center; gap: 1.2rem; background: var(--deep); color: var(--paper); clip-path: circle(150vmax at 50% 50%); transition: clip-path 1s var(--ease); }
+.loader.is-out { clip-path: circle(0 at 50% 50%); pointer-events: none; }
+.loader-mark { position: relative; width: 120px; height: 120px; }
+.loader-mark img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.18; }
+.loader-mark::after { content: ''; position: absolute; inset: 0; background: var(--sakura); -webkit-mask: url(/images/mark.png) center / contain no-repeat; mask: url(/images/mark.png) center / contain no-repeat; clip-path: inset(calc(100% - var(--fill)) 0 0 0); transition: clip-path 0.3s linear; }
+.loader-name { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 600; }
+.loader-pct { opacity: 0.6; }

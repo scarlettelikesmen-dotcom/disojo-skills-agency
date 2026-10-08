@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/parse-card.js": {
+      "maxDuration": 30
+    },
+    "api/sync-to-sheet.js": {
+      "maxDuration": 30
+    }
+  }
+}

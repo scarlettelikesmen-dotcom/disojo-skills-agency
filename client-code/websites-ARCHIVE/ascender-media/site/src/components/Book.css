@@ -1,0 +1,43 @@
+.b-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.b-copy h2 { font-size: clamp(2.4rem, 5.4vw, 4.6rem); }
+.b-copy .sub { margin-top: 24px; max-width: 40ch; color: var(--mute); font-size: clamp(1.0625rem, 1.5vw, 1.25rem); }
+.contact { margin-top: clamp(32px, 4vw, 52px); display: grid; gap: 12px; max-width: 420px; }
+.contact a { display: flex; align-items: center; gap: 16px; min-height: 64px; padding: 10px 18px 10px 10px; border-radius: 999px; border: 1px solid var(--line-2); transition: border-color 0.3s var(--ease-out), background-color 0.3s var(--ease-out), transform 0.4s var(--ease-press); overflow-wrap: anywhere; }
+.contact .ic { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 50%; background: rgba(237, 234, 227, 0.07); }
+.contact small { display: block; font-size: 0.6875rem; color: var(--dim); line-height: 1.2; }
+.contact a:active { transform: scale(0.98); }
+@media (hover: hover) and (pointer: fine) { .contact a:hover { border-color: rgba(237, 234, 227, 0.42); background: rgba(237, 234, 227, 0.04); } }
+
+.b-panel .core { padding: clamp(16px, 2.4vw, 28px); background: var(--ink-2); }
+.b-tabs { display: flex; width: 100%; }
+.b-tabs button { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+[role='tabpanel'][hidden] { display: none; }
+.b-panel [role='tabpanel'] { margin-top: 22px; }
+
+.cal { min-height: 440px; display: grid; }
+.cal-idle { display: grid; gap: 22px; align-content: center; justify-items: start; padding: clamp(8px, 2vw, 24px); }
+.cal-idle .lead { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.03em; line-height: 1.12; font-size: clamp(1.5rem, 2.6vw, 2.1rem); max-width: 20ch; text-wrap: balance; }
+.alt { color: var(--mute); font-size: 0.9375rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-2); min-height: 44px; display: inline-flex; align-items: center; }
+.cal iframe { width: 100%; height: 680px; border: 0; border-radius: 18px; background: var(--ink-3); }
+.cal:has(iframe) { gap: 8px; }
+
+.form { display: grid; gap: 18px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: grid; gap: 8px; }
+.field label { font-size: 0.9375rem; font-weight: 500; color: var(--bone); }
+.field input, .field select, .field textarea { width: 100%; min-height: 52px; padding: 13px 16px; border-radius: var(--r-field); border: 1px solid var(--line-2); background: var(--ink); color: var(--bone); font-size: 1rem; transition: border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out); }
+.field textarea { resize: vertical; min-height: 124px; line-height: 1.5; }
+.field select { appearance: none; -webkit-appearance: none; padding-right: 44px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 256 256'><path fill='none' stroke='%23a8a49c' stroke-width='12' stroke-linecap='round' stroke-linejoin='round' d='m208 96-80 80-80-80'/></svg>"); background-repeat: no-repeat; background-position: right 16px center; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--safe); box-shadow: 0 0 0 4px var(--safe-soft); }
+.field [aria-invalid='true'] { border-color: #ff8a65; }
+.err { display: flex; align-items: center; gap: 6px; color: #ff9d80; font-size: 0.875rem; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; }
+.fine { color: var(--dim); font-size: 0.875rem; }
+.fail { display: flex; gap: 8px; align-items: flex-start; padding: 14px 16px; border-radius: 16px; background: rgba(255, 138, 101, 0.08); border: 1px solid rgba(255, 138, 101, 0.4); color: #ffbca6; font-size: 0.9375rem; }
+.fail a { text-decoration: underline; text-underline-offset: 3px; }
+.done { display: grid; gap: 12px; justify-items: start; padding: clamp(16px, 3vw, 32px) 4px; color: var(--bone); }
+.done svg { color: var(--safe); }
+.done h3 { font-size: 1.9rem; }
+.done p { color: var(--mute); }
+@media (max-width: 900px) { .b-grid { grid-template-columns: 1fr; } .row2 { grid-template-columns: 1fr; } .cal iframe { height: 620px; } }

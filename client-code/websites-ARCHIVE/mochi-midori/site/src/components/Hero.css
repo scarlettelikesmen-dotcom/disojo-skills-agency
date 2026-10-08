@@ -1,0 +1,27 @@
+.hero { position: relative; height: 500vh; background: var(--deep); color: var(--paper); }
+.hero-stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: clip; }
+.hero-word { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; align-items: center; font-size: clamp(3rem, 8vw, 10rem); font-weight: 800; z-index: 2; pointer-events: none; }
+.hero-w { display: block; will-change: transform; white-space: nowrap; }
+.hero-w--l { text-align: right; padding-right: 0.12em; }
+.hero-w--r { text-align: left; padding-left: 0.12em; color: var(--sakura); }
+.hero-win { position: absolute; inset: 0; z-index: 1; clip-path: circle(11vmax at 50% 50%); will-change: clip-path; }
+.hero-win video { width: 100%; height: 100%; object-fit: cover; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 26, 16, 0.58), rgba(14, 26, 16, 0.04) 50%, rgba(14, 26, 16, 0.22)); }
+.hero-kicker { position: absolute; z-index: 3; left: var(--gutter); bottom: 34px; opacity: 0.8; }
+.hero-jp { position: absolute; z-index: 3; right: var(--gutter); top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; font-family: var(--serif); font-weight: 800; font-size: clamp(2.2rem, 5vw, 5rem); letter-spacing: 0.3em; color: var(--paper); opacity: 0.9; mix-blend-mode: difference; pointer-events: none; }
+.hero-seal { position: absolute; z-index: 3; right: var(--gutter); bottom: 26px; }
+.hero-hint { position: absolute; z-index: 3; left: 50%; bottom: 34px; transform: translateX(-50%); }
+.hero-line { position: absolute; z-index: 3; left: var(--gutter); bottom: 12vh; max-width: 15ch; font-size: clamp(2.4rem, 6vw, 5.4rem); }
+.hero-end { position: absolute; z-index: 4; left: var(--gutter); bottom: 12vh; display: grid; gap: 1.6rem; justify-items: start; }
+.hero-end-text { font-size: clamp(2.2rem, 5.5vw, 5rem); max-width: 14ch; }
+.hero-end .btn:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+@media (max-aspect-ratio: 1 / 1) {
+  .hero-word { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; align-items: end; justify-items: center; font-size: clamp(3.4rem, 21vw, 7rem); }
+  .hero-w--l, .hero-w--r { text-align: center; padding: 0; }
+  .hero-w--r { align-self: start; }
+  .hero-win { top: 50%; bottom: auto; height: 54svh; transform: translateY(-50%); clip-path: circle(12vmax at 50% 50%); }
+  .hero-jp, .hero-hint { display: none; }
+  .hero-line { bottom: 16vh; max-width: 12ch; }
+  .hero-end { bottom: 14vh; }
+}
+@media (prefers-reduced-motion: reduce) { .hero { height: 100svh; } }

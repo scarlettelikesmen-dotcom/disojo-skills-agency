@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KØBENHAVN SMILE // Biophilic Dental Sanctuary & Porcelain Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/OrbitControls.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"DM Serif Display"', 'serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        nordicWhite: '#FBFBFA',
+                        blondeOak: '#F4EFEA',
+                        pineSage: '#1B2E24',
+                        slateStone: '#333D37',
+                        porcelain: '#FFFFFF',
+                        ceramicAccent: '#52796F',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #1B2E24; color: #FFFFFF; }
+        .wood-texture {
+            background-color: #F4EFEA;
+            background-image: linear-gradient(0deg, rgba(0,0,0,0.02) 50%, transparent 50%);
+            background-size: 100% 4px;
+        }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-nordicWhite text-slateStone font-sans antialiased overflow-x-hidden">
+
+    <!-- Top Nordic Sanctuary Navigation -->
+    <header class="border-b border-gray-200/60 bg-nordicWhite/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-full bg-pineSage text-white flex items-center justify-center font-serif text-sm">
+                    KØ
+                </div>
+                <div>
+                    <span class="font-semibold tracking-wider text-base text-pineSage uppercase block">KØBENHAVN SMILE</span>
+                    <span class="font-mono text-[9px] text-gray-500 tracking-wider block">BIOPHILIC DENTAL SANCTUARY // COPENHAGEN • DELHI</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest text-slateStone/70">
+                <a href="#shade-guide" class="hover:text-pineSage transition-colors">Ceramic Shade Guide</a>
+                <a href="#sanctuary" class="hover:text-pineSage transition-colors">Zero-Anxiety Spa</a>
+                <a href="#artistry" class="hover:text-pineSage transition-colors">Prep-less Veneers</a>
+                <a href="#booking" class="hover:text-pineSage transition-colors">Appointments</a>
+            </nav>
+
+            <a href="#booking" class="px-5 py-2.5 bg-pineSage text-white text-xs uppercase tracking-widest hover:bg-ceramicAccent transition-all rounded-none">
+                RESERVE SANCTUARY SUITE &rarr;
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero: Scandinavian Warmth -->
+    <section class="py-24 px-6 border-b border-gray-200/60 bg-blondeOak">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 bg-white text-pineSage text-[10px] tracking-[0.25em] uppercase font-mono mb-8 border border-gray-200">
+                    <span>SWISS CAD/CAM DIGITAL SMILE DESIGN</span>
+                </div>
+
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-pineSage font-normal leading-[1.05] tracking-tight mb-8">
+                    Where Dental<br>
+                    Science Meets<br>
+                    <span class="italic font-light text-ceramicAccent">Nordic Stillness.</span>
+                </h1>
+
+                <p class="text-slateStone/80 max-w-xl text-base font-light leading-relaxed mb-10">
+                    Reimagining dentistry as a rejuvenating retreat. Handcrafted microscopic feldspathic veneers, warm acoustic oak slats, zero medical odor, and twilight sedation designed for complete sensory serenity.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5 font-mono text-xs">
+                    <a href="#shade-guide" class="px-8 py-4 bg-pineSage text-white uppercase tracking-widest text-center hover:bg-ceramicAccent transition-all">
+                        EXPLORE PORCELAIN SHADES
+                    </a>
+                    <a href="#sanctuary" class="px-8 py-4 border border-pineSage text-pineSage uppercase tracking-widest text-center hover:bg-white transition-all">
+                        OUR ZERO-ANXIETY AMENITIES
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sanctuary Interior Image -->
+            <div class="lg:col-span-5">
+                <div class="relative aspect-[4/5] overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="./assets/photo162990961365428e377c37b09.jpg" 
+                         alt="Nordic Dental Clinic Suite" class="w-full h-full object-cover">
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/95 p-5 shadow-lg">
+                        <span class="font-mono text-[9px] text-ceramicAccent uppercase tracking-widest block mb-1">ACOUSTIC ISOLATION SUITE</span>
+                        <p class="text-xs text-slateStone leading-relaxed font-light">
+                            Designed with sound-absorbing Danish oak acoustic battens, noise-canceling Bose spatial audio, and diffuse circadian lighting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Ceramic Shade & Translucency Selector -->
+    <section id="shade-guide" class="py-24 px-6 max-w-6xl mx-auto border-b border-gray-200/60">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="font-mono text-xs text-ceramicAccent uppercase tracking-widest block mb-2">// RESTORATIVE CERAMIC ATELIER</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-pineSage font-normal">Porcelain Ingot & Shade Guide</h2>
+            <p class="text-slateStone/70 text-sm mt-3 font-light leading-relaxed">
+                Every veneer is custom-milled from German IPS e.max lithium disilicate blocks to match your natural facial symmetry:
+            </p>
+
+            <!-- Shade Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mt-8 font-mono text-xs">
+                <button onclick="setShade('bl1')" id="btn-shade-bl1" class="px-5 py-2.5 bg-pineSage text-white uppercase tracking-widest transition-all">
+                    BL1 / Ultra Luminous
+                </button>
+                <button onclick="setShade('bl3')" id="btn-shade-bl3" class="px-5 py-2.5 bg-white border border-gray-300 text-slateStone uppercase tracking-widest transition-all hover:border-pineSage">
+                    BL3 / European Bright
+                </button>
+                <button onclick="setShade('a1')" id="btn-shade-a1" class="px-5 py-2.5 bg-white border border-gray-300 text-slateStone uppercase tracking-widest transition-all hover:border-pineSage">
+                    A1 / Natural Youthful
+                </button>
+                <button onclick="setShade('a2')" id="btn-shade-a2" class="px-5 py-2.5 bg-white border border-gray-300 text-slateStone uppercase tracking-widest transition-all hover:border-pineSage">
+                    A2 / Warm Organic Depth
+                </button>
+            </div>
+        </div>
+
+        <!-- Dynamic Output -->
+        <div class="bg-blondeOak border border-gray-200 p-8 md:p-14">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span id="shade-tag" class="font-mono text-xs uppercase tracking-widest text-ceramicAccent block">
+                        INGOT SPECIFICATION: IVOCLAR BL1 OPAL
+                    </span>
+                    <h3 id="shade-title" class="font-serif text-3xl md:text-4xl text-pineSage">
+                        High-Reflectance Hollywood Radiant Ceramic
+                    </h3>
+                    <p id="shade-desc" class="text-slateStone/80 text-sm leading-relaxed font-light">
+                        Milled to an ultra-thin 0.25mm thickness requiring zero enamel shaving. Micro-layered with incisal blue opalescence that absorbs and refracts sunlight exactly like natural enamel prism crystals.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-300 font-mono text-xs">
+                        <div>
+                            <span class="text-gray-500 text-[10px] block uppercase">FLEXURAL STRENGTH</span>
+                            <span class="font-bold text-pineSage">530 MPa</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-500 text-[10px] block uppercase">ENAMEL REMOVAL</span>
+                            <span class="font-bold text-ceramicAccent">0.0 MM (PREP-LESS)</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-500 text-[10px] block uppercase">EXPECTED SPAN</span>
+                            <span class="font-bold text-pineSage">20+ YEARS GTY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-white p-7 border border-gray-200 flex flex-col justify-between shadow-sm relative">
+                    <div>
+                        <div class="flex justify-between items-center border-b border-gray-200 pb-3 mb-4 font-mono text-[10px]">
+                            <span class="text-ceramicAccent font-semibold uppercase tracking-wider">3D CAD/CAM DIGITAL TWIN</span>
+                            <span id="veneer-spec-badge" class="text-pineSage font-medium">IPS e.max HT BL1</span>
+                        </div>
+
+                        <!-- 3D Veneer Canvas Container -->
+                        <div class="relative w-full h-64 bg-gradient-to-b from-[#F9F7F5] to-[#EFECE8] border border-gray-200 overflow-hidden mb-4 group" data-lenis-prevent>
+                            <canvas id="veneer-canvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+
+                            <!-- Top HUD -->
+                            <div class="absolute top-2.5 left-3 right-3 flex justify-between items-center pointer-events-none font-mono text-[9px] text-slateStone/70">
+                                <span class="bg-white/80 px-2 py-0.5 backdrop-blur-sm">0.25mm PREP-LESS</span>
+                                <span id="veneer-translucency-val" class="bg-white/80 px-2 py-0.5 backdrop-blur-sm text-ceramicAccent font-medium">TRANSLUCENCY: 44.5%</span>
+                            </div>
+
+                            <!-- Bottom View Mode Tabs -->
+                            <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between font-mono text-[9px]">
+                                <div class="flex space-x-1">
+                                    <button type="button" onclick="setVeneerRenderMode('ceramic')" id="vbtn-ceramic" class="px-2 py-0.5 bg-pineSage text-white font-semibold">CERAMIC</button>
+                                    <button type="button" onclick="setVeneerRenderMode('translucent')" id="vbtn-translucent" class="px-2 py-0.5 bg-white/90 border border-gray-300 text-slateStone hover:border-pineSage">X-RAY/DENTIN</button>
+                                    <button type="button" onclick="setVeneerRenderMode('wireframe')" id="vbtn-wireframe" class="px-2 py-0.5 bg-white/90 border border-gray-300 text-slateStone hover:border-pineSage">CAD WIRE</button>
+                                </div>
+                                <span class="text-gray-400 text-[8px] hidden sm:inline">360° ORBIT</span>
+                            </div>
+                        </div>
+
+                        <div class="font-mono text-[11px] text-slateStone/70 leading-relaxed mb-4">
+                            Trios 5 AI scanner captures 3,000 frames/sec with micron edge alignment. Inspect incisal mamelon depth in 3D.
+                        </div>
+                    </div>
+
+                    <a href="#booking" class="w-full py-3 bg-pineSage text-white font-mono text-xs uppercase tracking-widest text-center hover:bg-ceramicAccent transition-colors">
+                        SCAN DIGITAL SMILE TWIN &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zero-Anxiety Spa Amenities -->
+    <section id="sanctuary" class="py-24 px-6 max-w-7xl mx-auto border-b border-gray-200/60">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+                <span class="font-mono text-xs text-ceramicAccent uppercase tracking-widest block mb-2">// THE SANCTUARY RITUAL</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-pineSage font-normal">Holistic Comfort Protocol</h2>
+            </div>
+            <div class="font-mono text-xs text-gray-500 mt-4 md:mt-0">
+                ENGINEERED FOR PATIENTS WITH SEVERE DENTAL ANXIETY
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 border border-gray-200 shadow-sm">
+                <div class="w-12 h-12 bg-blondeOak flex items-center justify-center font-mono text-pineSage font-bold text-sm mb-6">
+                    01
+                </div>
+                <h3 class="font-serif text-2xl text-pineSage mb-3">Warm Linen & Aromatherapy</h3>
+                <p class="text-xs text-slateStone/70 leading-relaxed font-light">
+                    Heated organic cotton blankets, warm lavender face compress, and custom-diffused Norwegian pine essential oils completely replace clinical hospital scents.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 border border-gray-200 shadow-sm">
+                <div class="w-12 h-12 bg-blondeOak flex items-center justify-center font-mono text-pineSage font-bold text-sm mb-6">
+                    02
+                </div>
+                <h3 class="font-serif text-2xl text-pineSage mb-3">Twilight Sedation Suite</h3>
+                <p class="text-xs text-slateStone/70 leading-relaxed font-light">
+                    Administered by board-certified anesthesiologists. Drift into a blissful, dream-like state while comprehensive cosmetic rehabilitation is completed in a single afternoon.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 border border-gray-200 shadow-sm">
+                <div class="w-12 h-12 bg-blondeOak flex items-center justify-center font-mono text-pineSage font-bold text-sm mb-6">
+                    03
+                </div>
+                <h3 class="font-serif text-2xl text-pineSage mb-3">Ceiling Nature Cinema</h3>
+                <p class="text-xs text-slateStone/70 leading-relaxed font-light">
+                    4K OLED ceiling-mounted displays paired with noise-cancelling headphones streaming 8K aerial drone walks over Scandinavian fjords and alpine lakes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Form -->
+    <section id="booking" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="font-mono text-xs text-ceramicAccent uppercase tracking-widest block mb-2">// PRIVATE SUITE RESERVATION</span>
+            <h2 class="font-serif text-3xl md:text-4xl text-pineSage font-normal">Schedule A Sanctuary Visit</h2>
+            <p class="text-slateStone/70 text-xs mt-2 font-light">
+                We accept only 4 patient suites per day to dedicate uninterrupted time and clinical focus to your smile.
+            </p>
+        </div>
+
+        <form class="space-y-6 bg-blondeOak border border-gray-200 p-8 md:p-12 font-mono text-xs" onsubmit="event.preventDefault(); alert('Appointment request registered. The Patient Concierge will reach out to confirm your private suite arrival.');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase">Full Name</label>
+                    <input type="text" required placeholder="Frederik Lindqvist" class="w-full bg-white border border-gray-300 px-4 py-3 text-pineSage focus:border-pineSage focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase">Direct Mobile</label>
+                    <input type="tel" required placeholder="+45 32 10 00 00" class="w-full bg-white border border-gray-300 px-4 py-3 text-pineSage focus:border-pineSage focus:outline-none">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase">Treatment Interest</label>
+                    <select class="w-full bg-white border border-gray-300 px-4 py-3 text-pineSage focus:border-pineSage focus:outline-none">
+                        <option>Prep-less Feldspathic Porcelain Veneers (Complete Arch)</option>
+                        <option>Microscopic Ceramic Inlays & Crown Replacement</option>
+                        <option>Full-Mouth Dental Implant Sanctuary Rehabilitation</option>
+                        <option>Zero-Pain Biological Hygiene & Enamel Remineralization</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase">Anxiety Accommodations</label>
+                    <select class="w-full bg-white border border-gray-300 px-4 py-3 text-pineSage focus:border-pineSage focus:outline-none">
+                        <option>Twilight IV Conscious Sedation Requested</option>
+                        <option>Nitrous Oxide Happy Gas Relaxation</option>
+                        <option>Standard Sensory Suite (Headphones + Blanket)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-pineSage text-white font-mono text-xs font-bold uppercase tracking-widest hover:bg-ceramicAccent transition-colors">
+                CONFIRM SANCTUARY SUITE RESERVATION &rarr;
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200/60 py-12 px-6 max-w-7xl mx-auto font-mono text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-4">
+        <div>&copy; 2026 KØBENHAVN SMILE SANCTUARY APS. COPENHAGEN • NEW DELHI.</div>
+        <div>DANISH HEALTH AUTHORITY & CE MEDICAL ACCREDITED.</div>
+    </footer>
+
+    <script>
+        const shades = {
+            bl1: {
+                tag: 'INGOT SPECIFICATION: IVOCLAR BL1 OPAL',
+                title: 'High-Reflectance Hollywood Radiant Ceramic',
+                desc: 'Milled to an ultra-thin 0.25mm thickness requiring zero enamel shaving. Micro-layered with incisal blue opalescence that absorbs and refracts sunlight exactly like natural enamel prism crystals.'
+            },
+            bl3: {
+                tag: 'INGOT SPECIFICATION: IVOCLAR BL3 DENTIN',
+                title: 'European Subtle Luminous Ceramic',
+                desc: 'A sophisticated ivory shade that brightens smiles by 5 shades without looking artificial or stark. Features gentle amber warmth at the cervical root margin with crystal clear biting edges.'
+            },
+            a1: {
+                tag: 'INGOT SPECIFICATION: VITA A1 CLASSIC',
+                title: 'Natural Youthful Enamel with High Translucency',
+                desc: 'Recreates the pristine enamel of a healthy 20-year-old with multi-tonal vertical mamelons and subtle surface micro-texture that scatters soft ambient lighting.'
+            },
+            a2: {
+                tag: 'INGOT SPECIFICATION: VITA A2 CHROMA',
+                title: 'Warm Organic Biomimetic Restoration',
+                desc: 'Blends imperceptibly with adjacent natural teeth. Ideal for single-tooth restorations, matching mature enamel depth with rich internal warmth.'
+            }
+        };
+
+        function setShade(key) {
+            ['bl1', 'bl3', 'a1', 'a2'].forEach(k => {
+                const btn = document.getElementById('btn-shade-' + k);
+                if (k === key) {
+                    btn.className = "px-5 py-2.5 bg-pineSage text-white uppercase tracking-widest transition-all";
+                } else {
+                    btn.className = "px-5 py-2.5 bg-white border border-gray-300 text-slateStone uppercase tracking-widest transition-all hover:border-pineSage";
+                }
+            });
+
+            const s = shades[key];
+            document.getElementById('shade-tag').textContent = s.tag;
+            document.getElementById('shade-title').textContent = s.title;
+            document.getElementById('shade-desc').textContent = s.desc;
+
+            if (typeof updateVeneerShade === 'function') {
+                updateVeneerShade(key);
+            }
+        }
+
+        // --- 3D PORCELAIN VENEER CAD/CAM ENGINE (Three.js) ---
+        let veneerScene, veneerCamera, veneerRenderer, veneerControls;
+        let veneerMesh, dentinMesh, wireMesh;
+        let veneerEnamelMat, dentinMat;
+        let veneerRenderMode = 'ceramic';
+        let currentVeneerShade = 'bl1';
+
+        const shadeColorMap = {
+            bl1: { hex: 0xFFFFFF, att: 0xE2F2FA, badge: 'IPS e.max HT BL1', trans: '48.5%' },
+            bl3: { hex: 0xFAF7EE, att: 0xFAF1E0, badge: 'IPS e.max LT BL3', trans: '38.0%' },
+            a1:  { hex: 0xF5EFE4, att: 0xF2E4D0, badge: 'VITA Enamel A1', trans: '42.0%' },
+            a2:  { hex: 0xEEE2CD, att: 0xE8D5B7, badge: 'VITA Enamel A2', trans: '34.5%' }
+        };
+
+        function createToothGeometry() {
+            // Sculpted anatomical central incisor veneer shell
+            const geo = new THREE.BoxGeometry(1.6, 2.3, 0.65, 12, 16, 8);
+            const pos = geo.attributes.position;
+            const v = new THREE.Vector3();
+
+            for (let i = 0; i < pos.count; i++) {
+                v.fromBufferAttribute(pos, i);
+
+                const normY = v.y / 1.15; // -1 at incisal, +1 at cervical margin
+
+                // Cervical neck taper (top)
+                if (normY > 0.2) {
+                    const taper = 1.0 - (normY - 0.2) * 0.35;
+                    v.x *= taper;
+                    v.z *= (1.0 - (normY - 0.2) * 0.25);
+                }
+
+                // Incisal edge flare and flattening (bottom)
+                if (normY < -0.2) {
+                    const flare = 1.0 + (-normY - 0.2) * 0.18;
+                    v.x *= flare;
+                    // Flatten labio-lingual thickness at incisal edge
+                    v.z *= (1.0 - (-normY - 0.2) * 0.45);
+                    // Slight mamelon scalloping
+                    v.y += Math.sin(v.x * 6.0) * 0.04;
+                }
+
+                // Labial convex contour (front face)
+                if (v.z > 0) {
+                    v.z += (1.0 - Math.pow(v.x / 0.8, 2)) * 0.12 * (1.0 - Math.abs(normY) * 0.5);
+                }
+
+                pos.setXYZ(i, v.x, v.y, v.z);
+            }
+            geo.computeVertexNormals();
+            return geo;
+        }
+
+        function initVeneerEngine() {
+            const canvas = document.getElementById('veneer-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const rect = canvas.getBoundingClientRect();
+            const width = rect.width || canvas.clientWidth || 400;
+            const height = rect.height || canvas.clientHeight || 256;
+
+            veneerScene = new THREE.Scene();
+            veneerCamera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
+            veneerCamera.position.set(0, 0, 5.2);
+
+            veneerRenderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                antialias: true,
+                alpha: true,
+                powerPreference: 'high-performance'
+            });
+            veneerRenderer.setSize(width, height);
+            veneerRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            veneerControls = new THREE.OrbitControls(veneerCamera, canvas);
+            veneerControls.enableDamping = true;
+            veneerControls.dampingFactor = 0.05;
+            veneerControls.enableZoom = false;
+            veneerControls.enablePan = false;
+
+            // Nordic Soft Circadian Studio Lighting
+            const ambient = new THREE.AmbientLight(0xfffbf5, 1.3);
+            veneerScene.add(ambient);
+
+            const keyDir = new THREE.DirectionalLight(0xffffff, 2.2);
+            keyDir.position.set(4, 5, 4);
+            veneerScene.add(keyDir);
+
+            const blueRim = new THREE.PointLight(0xa5d8ff, 2.0, 15);
+            blueRim.position.set(-3, -2, -2);
+            veneerScene.add(blueRim);
+
+            const softFill = new THREE.PointLight(0xffedd5, 1.5, 12);
+            softFill.position.set(2, -3, 3);
+            veneerScene.add(softFill);
+
+            // Geometries
+            const toothGeo = createToothGeometry();
+
+            // Enamel Shell Material
+            veneerEnamelMat = new THREE.MeshPhysicalMaterial({
+                color: shadeColorMap.bl1.hex,
+                metalness: 0.02,
+                roughness: 0.12,
+                transmission: 0.50,
+                ior: 1.52,
+                thickness: 0.6,
+                clearcoat: 1.0,
+                clearcoatRoughness: 0.04,
+                attenuationColor: new THREE.Color(shadeColorMap.bl1.att),
+                attenuationDistance: 1.2,
+                transparent: true,
+                opacity: 0.98
+            });
+
+            veneerMesh = new THREE.Mesh(toothGeo, veneerEnamelMat);
+            veneerScene.add(veneerMesh);
+
+            // Internal Dentin Core
+            const dentinGeo = new THREE.BoxGeometry(1.2, 1.8, 0.35, 6, 8, 4);
+            dentinMat = new THREE.MeshStandardMaterial({
+                color: 0xedd6ae,
+                metalness: 0.05,
+                roughness: 0.6,
+                transparent: true,
+                opacity: 0.85
+            });
+            dentinMesh = new THREE.Mesh(dentinGeo, dentinMat);
+            dentinMesh.position.set(0, 0.1, -0.05);
+            veneerMesh.add(dentinMesh);
+
+            // CAD Wireframe Overlay
+            const wireMat = new THREE.MeshBasicMaterial({
+                color: 0x52796F,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.0
+            });
+            wireMesh = new THREE.Mesh(toothGeo, wireMat);
+            veneerMesh.add(wireMesh);
+
+            window.addEventListener('resize', () => {
+                if (!canvas) return;
+                const w = canvas.clientWidth;
+                const h = canvas.clientHeight;
+                if (w && h) {
+                    veneerCamera.aspect = w / h;
+                    veneerCamera.updateProjectionMatrix();
+                    veneerRenderer.setSize(w, h);
+                }
+            });
+
+            animateVeneer();
+        }
+
+        function setVeneerRenderMode(mode) {
+            veneerRenderMode = mode;
+            ['ceramic', 'translucent', 'wireframe'].forEach(m => {
+                const btn = document.getElementById('vbtn-' + m);
+                if (!btn) return;
+                if (m === mode) {
+                    btn.className = "px-2 py-0.5 bg-pineSage text-white font-semibold";
+                } else {
+                    btn.className = "px-2 py-0.5 bg-white/90 border border-gray-300 text-slateStone hover:border-pineSage";
+                }
+            });
+
+            if (mode === 'ceramic') {
+                veneerEnamelMat.transmission = 0.35;
+                veneerEnamelMat.opacity = 0.98;
+                dentinMesh.visible = false;
+                wireMesh.material.opacity = 0.0;
+            } else if (mode === 'translucent') {
+                veneerEnamelMat.transmission = 0.82;
+                veneerEnamelMat.opacity = 0.65;
+                dentinMesh.visible = true;
+                wireMesh.material.opacity = 0.15;
+            } else if (mode === 'wireframe') {
+                veneerEnamelMat.transmission = 0.1;
+                veneerEnamelMat.opacity = 0.35;
+                dentinMesh.visible = true;
+                wireMesh.material.opacity = 0.85;
+            }
+        }
+
+        function updateVeneerShade(key) {
+            currentVeneerShade = key;
+            const s = shadeColorMap[key];
+            if (!s || !veneerEnamelMat) return;
+
+            veneerEnamelMat.color.setHex(s.hex);
+            veneerEnamelMat.attenuationColor.setHex(s.att);
+
+            document.getElementById('veneer-spec-badge').textContent = s.badge;
+            document.getElementById('veneer-translucency-val').textContent = 'TRANSLUCENCY: ' + s.trans;
+        }
+
+        let veneerClock = 0;
+        function animateVeneer() {
+            requestAnimationFrame(animateVeneer);
+            veneerClock += 0.01;
+
+            if (veneerControls) veneerControls.update();
+
+            if (veneerMesh) {
+                // Subtle gentle turntable drift
+                veneerMesh.rotation.y += 0.007;
+                veneerMesh.position.y = Math.sin(veneerClock) * 0.06;
+            }
+
+            if (veneerRenderer && veneerScene && veneerCamera) {
+                veneerRenderer.render(veneerScene, veneerCamera);
+            }
+        }
+
+        // Init
+        window.addEventListener('DOMContentLoaded', () => {
+            initVeneerEngine();
+
+            try {
+                if (typeof Lenis !== 'undefined') {
+                    const lenis = new Lenis({
+                        autoRaf: true,
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        smoothWheel: true,
+                        anchors: true
+                    });
+                    window.lenis = lenis;
+                }
+            } catch (e) {
+                console.error('Lenis init failed', e);
+            }
+        });
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initVeneerEngine();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AR Strategic Consultants — Gurugram-based management consulting firm led by Manish Srivastava. Specialising in business transformation, corporate strategy, M&A, and startup scale-up.">
+  <title>AR Strategic Consultants | Business Strategy & Transformation, Gurugram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --slate:   #1a1f2e;
+      --slate-2: #252c3f;
+      --amber:   #c8892a;
+      --amber-s: #e0a845;
+      --smoke:   #f2f3f5;
+      --paper:   #fafafa;
+      --ink:     #131720;
+      --ink-2:   #3d4459;
+      --muted:   #6b7291;
+      --line:    rgba(26,31,46,.12);
+      --shadow:  0 28px 72px rgba(26,31,46,.14);
+      --serif:   "Cormorant Garamond", Georgia, serif;
+      --sans:    "DM Sans", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 96px 0; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; color: var(--amber); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+    .section-title { margin: 0; max-width: 760px; font-family: var(--serif); font-size: clamp(44px, 6vw, 82px); font-weight: 400; line-height: .94; letter-spacing: -.03em; }
+    .section-title em { color: var(--amber); font-style: normal; }
+    .lead { color: var(--ink-2); font-size: 16px; line-height: 1.75; }
+
+    .topline { position: relative; z-index: 12; background: var(--slate); color: #a8afc7; font-size: 12px; letter-spacing: .06em; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .topline .shell { min-height: 36px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .topline strong { color: var(--amber-s); }
+    .topline .t-right { display: flex; gap: 24px; }
+
+    nav { position: sticky; top: 0; z-index: 15; border-bottom: 1px solid var(--line); background: rgba(250,250,250,.96); backdrop-filter: blur(20px); }
+    .nav-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 26px; }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: max-content; }
+    .brand-mark { width: 44px; height: 44px; display: grid; place-items: center; background: var(--slate); color: var(--amber-s); font-family: var(--serif); font-size: 18px; font-weight: 600; letter-spacing: .04em; }
+    .brand-copy strong { display: block; font-size: 16px; letter-spacing: .01em; }
+    .brand-copy span { display: block; margin-top: 2px; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 600; }
+    .nav-links a:not(.btn) { position: relative; }
+    .nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -5px; height: 1px; background: var(--amber); transition: right .25s ease; }
+    .nav-links a:hover::after { right: 0; }
+    .btn { min-height: 46px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--slate); background: var(--slate); color: #fff; font-size: 13px; font-weight: 700; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); background: var(--slate-2); }
+    .btn.amber { background: var(--amber); border-color: var(--amber); }
+    .btn.amber:hover { background: var(--amber-s); border-color: var(--amber-s); }
+    .btn.outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .btn.outline:hover { background: var(--ink); color: #fff; }
+    .menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: 19px; }
+
+    .drawer { display: none; position: fixed; inset: 0; z-index: 50; background: var(--paper); flex-direction: column; padding: 34px 24px; gap: 28px; overflow-y: auto; }
+    .drawer.open { display: flex; }
+    .drawer-top { display: flex; justify-content: space-between; align-items: center; }
+    .close-btn { background: none; border: none; font-size: 26px; color: var(--ink); }
+    .drawer-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+    .drawer-links a { padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 22px; font-family: var(--serif); font-weight: 400; color: var(--ink); }
+    .drawer .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+    /* HERO */
+    .hero { position: relative; min-height: 100vh; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--slate); display: flex; align-items: center; }
+    .hero-bg-text { position: absolute; right: -40px; top: 50%; transform: translateY(-50%); font-family: var(--serif); font-size: 28vw; font-weight: 400; color: rgba(255,255,255,.03); line-height: 1; pointer-events: none; white-space: nowrap; }
+    .hero-grid { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; padding: 120px 0; }
+    .hero-copy { color: #e8eaf0; }
+    .hero-copy .eyebrow { color: var(--amber-s); }
+    .hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(56px, 7vw, 100px); font-weight: 400; line-height: .88; letter-spacing: -.04em; color: #fff; }
+    .hero h1 em { display: block; color: var(--amber-s); font-style: normal; }
+    .hero-copy > p { max-width: 520px; margin: 28px 0 0; color: #8b93ae; font-size: 16px; line-height: 1.72; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 38px; color: #6b7291; font-size: 12px; letter-spacing: .04em; }
+    .hero-note::before { content: ""; width: 40px; height: 1px; background: var(--amber); }
+
+    .hero-panel { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); padding: 40px; display: flex; flex-direction: column; gap: 28px; }
+    .founder-block { display: flex; align-items: center; gap: 18px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .founder-avatar { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--amber), var(--amber-s)); display: grid; place-items: center; font-family: var(--serif); font-size: 26px; color: var(--slate); font-weight: 600; flex-shrink: 0; }
+    .founder-info strong { display: block; color: #fff; font-size: 18px; letter-spacing: .01em; }
+    .founder-info span { display: block; margin-top: 4px; color: var(--amber-s); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .founder-info small { display: block; margin-top: 4px; color: #8b93ae; font-size: 12px; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.1); }
+    .hero-stat { background: var(--slate); padding: 20px 16px; text-align: center; }
+    .hero-stat strong { display: block; font-family: var(--serif); font-size: 32px; font-weight: 400; color: var(--amber-s); line-height: 1; }
+    .hero-stat span { display: block; margin-top: 5px; font-size: 9px; color: #8b93ae; letter-spacing: .12em; text-transform: uppercase; }
+    .expertise-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 6px 12px; border: 1px solid rgba(200,137,42,.35); background: rgba(200,137,42,.08); color: var(--amber-s); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+
+    /* TICKER */
+    .ticker { overflow: hidden; border-bottom: 1px solid var(--line); background: var(--amber); }
+    .ticker-track { width: max-content; min-height: 52px; display: flex; align-items: center; animation: move 28s linear infinite; }
+    .ticker-track span { display: inline-flex; align-items: center; gap: 20px; padding-right: 20px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; color: var(--slate); }
+    .ticker-track span::after { content: "✦"; color: var(--slate); opacity: .4; }
+    @keyframes move { to { transform: translateX(-50%); } }
+
+    /* ABOUT */
+    .intro-grid { display: grid; grid-template-columns: 1fr .78fr; gap: 90px; align-items: end; }
+    .intro-grid .lead { margin: 0; }
+    .trust-grid { margin-top: 52px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .trust-item { min-height: 145px; padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.7); }
+    .trust-item strong { display: block; margin-bottom: 12px; font-family: var(--serif); font-size: 36px; font-weight: 400; color: var(--amber); }
+    .trust-item span { color: var(--ink-2); font-size: 12px; line-height: 1.55; }
+
+    /* SERVICES */
+    .services-section { background: var(--slate); color: #c8ccd8; }
+    .services-section .eyebrow { color: var(--amber-s); }
+    .services-section .section-title em { color: var(--amber-s); }
+    .services-head { margin-bottom: 48px; }
+    .services-head .lead { color: #8b93ae; margin-top: 16px; max-width: 560px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.1); border-left: 1px solid rgba(255,255,255,.1); }
+    .service-card { position: relative; min-height: 250px; padding: 36px; border-right: 1px solid rgba(255,255,255,.1); border-bottom: 1px solid rgba(255,255,255,.1); overflow: hidden; transition: background .25s ease; }
+    .service-card:hover { background: rgba(255,255,255,.05); }
+    .service-num { color: var(--amber-s); font-size: 11px; letter-spacing: .14em; }
+    .service-card h3 { margin: 38px 0 12px; font-family: var(--serif); font-size: 30px; font-weight: 400; color: #fff; }
+    .service-card p { max-width: 440px; margin: 0; color: #8b93ae; font-size: 13px; line-height: 1.65; }
+    .service-card::after { content: "→"; position: absolute; top: 30px; right: 32px; color: var(--amber-s); font-size: 18px; opacity: 0; transition: opacity .25s; }
+    .service-card:hover::after { opacity: 1; }
+
+    /* FOUNDER */
+    .founder-section { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--smoke); }
+    .founder-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 72px; align-items: start; }
+    .founder-visual { position: sticky; top: 96px; background: var(--slate); padding: 48px; display: flex; flex-direction: column; gap: 28px; border: 1px solid rgba(255,255,255,.06); }
+    .big-initial { font-family: var(--serif); font-size: 120px; font-weight: 400; color: var(--amber); line-height: 1; margin: 0; }
+    .founder-name { font-family: var(--serif); font-size: 36px; font-weight: 400; color: #fff; margin: 0; line-height: 1.1; }
+    .founder-role { color: var(--amber-s); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-top: 6px; }
+    .founder-desc { color: #8b93ae; font-size: 13px; line-height: 1.7; margin: 0; }
+    .cred-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .cred-item { display: flex; align-items: center; gap: 10px; color: #a8afc7; font-size: 12px; }
+    .cred-item::before { content: "✦"; color: var(--amber-s); font-size: 10px; flex-shrink: 0; }
+    .steps { margin-top: 32px; border-top: 1px solid var(--line); }
+    .step { display: grid; grid-template-columns: 46px 1fr; gap: 22px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .step span { color: var(--amber); font-size: 11px; font-weight: 700; letter-spacing: .1em; padding-top: 5px; }
+    .step h3 { margin: -4px 0 8px; font-family: var(--serif); font-size: 28px; font-weight: 400; }
+    .step p { margin: 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
+
+    /* WHY */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .why-card { padding: 32px; border: 1px solid var(--line); background: rgba(255,255,255,.7); transition: background .2s, box-shadow .2s; }
+    .why-card:hover { background: #fff; box-shadow: var(--shadow); }
+    .why-icon { font-size: 28px; margin-bottom: 18px; }
+    .why-card h3 { margin: 0 0 10px; font-family: var(--serif); font-size: 26px; font-weight: 400; }
+    .why-card p { margin: 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
+
+    /* CONTACT */
+    .contact-section { background: var(--slate); color: #c8ccd8; }
+    .contact-section .eyebrow { color: var(--amber-s); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .contact-info h2 { margin: 0 0 20px; font-family: var(--serif); font-size: clamp(38px, 5vw, 64px); font-weight: 400; line-height: .96; color: #fff; }
+    .contact-info h2 em { color: var(--amber-s); font-style: normal; }
+    .contact-info > p { color: #8b93ae; font-size: 15px; line-height: 1.7; margin: 0 0 32px; }
+    .contact-detail { display: flex; flex-direction: column; gap: 16px; }
+    .contact-row { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-row .icon { font-size: 18px; margin-top: 2px; flex-shrink: 0; }
+    .contact-row div strong { display: block; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--amber-s); margin-bottom: 4px; }
+    .contact-row div span { color: #a8afc7; font-size: 14px; line-height: 1.5; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-field { padding: 14px 16px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: #c8ccd8; font-size: 13px; outline: none; transition: border-color .2s; }
+    .form-field::placeholder { color: rgba(200,204,216,.38); }
+    .form-field:focus { border-color: var(--amber-s); }
+    textarea.form-field { resize: vertical; min-height: 120px; }
+    .btn-submit { min-height: 52px; padding: 0 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--amber-s); background: var(--amber-s); color: var(--slate); font-size: 13px; font-weight: 700; letter-spacing: .04em; cursor: pointer; transition: background .2s, transform .2s; }
+    .btn-submit:hover { background: var(--amber); transform: translateY(-2px); }
+
+    footer { border-top: 1px solid rgba(255,255,255,.07); background: var(--slate); color: #3d4459; }
+    .footer-inner { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-inner small { font-size: 11px; letter-spacing: .06em; }
+    .footer-links { display: flex; gap: 22px; font-size: 11px; }
+    .footer-links a { color: var(--amber-s); }
+
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; padding: 80px 0 60px; gap: 48px; }
+      .hero h1 { font-size: clamp(52px, 10vw, 80px); }
+      .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .founder-grid { grid-template-columns: 1fr; }
+      .founder-visual { position: static; }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .menu-btn { display: flex; align-items: center; justify-content: center; }
+      .topline .t-right { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topline">
+    <div class="shell">
+      <span>AR Strategic Consultants &nbsp;&middot;&nbsp; Gurugram, Haryana</span>
+      <span class="t-right"><strong>+91 79492 87940</strong></span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="shell">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-mark">AR</div>
+          <div class="brand-copy">
+            <strong>AR Strategic Consultants</strong>
+            <span>Business Strategy &nbsp;&middot;&nbsp; Gurugram</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#founder">Founder</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#contact" class="btn amber">Get In Touch</a>
+        </div>
+        <button class="menu-btn" id="menuBtn">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <div class="drawer-top">
+      <div class="brand">
+        <div class="brand-mark">AR</div>
+        <div class="brand-copy"><strong>AR Strategic</strong><span>Consultants</span></div>
+      </div>
+      <button class="close-btn" id="closeBtn">&#10005;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" onclick="closeDrawer()">About</a>
+      <a href="#services" onclick="closeDrawer()">Services</a>
+      <a href="#founder" onclick="closeDrawer()">Founder</a>
+      <a href="#why-us" onclick="closeDrawer()">Why Us</a>
+    </div>
+    <a href="#contact" class="btn amber" onclick="closeDrawer()">Get In Touch</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg-text">AR</div>
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Management Consulting &nbsp;&middot;&nbsp; Gurugram</p>
+          <h1>Strategy that <em>transforms</em> businesses.</h1>
+          <p>AR Strategic Consultants partners with enterprises, SMEs, and startups to drive transformative growth — through sharp strategy, disciplined execution, and 30+ years of leadership experience.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn amber">Start a Conversation</a>
+            <a href="#services" class="btn outline" style="color:#fff; border-color:rgba(255,255,255,.3);">Our Services</a>
+          </div>
+          <div class="hero-note">Business Transformation &nbsp;&middot;&nbsp; M&amp;A &nbsp;&middot;&nbsp; Startup Scale-Up &nbsp;&middot;&nbsp; Corporate Strategy</div>
+        </div>
+        <div class="hero-panel">
+          <div class="founder-block">
+            <div class="founder-avatar">MS</div>
+            <div class="founder-info">
+              <strong>Manish Srivastava</strong>
+              <span>Founder &amp; Principal Consultant</span>
+              <small>30+ Years C-Suite Experience</small>
+            </div>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><strong>30+</strong><span>Years Experience</span></div>
+            <div class="hero-stat"><strong>50+</strong><span>Projects Delivered</span></div>
+            <div class="hero-stat"><strong>10+</strong><span>Industries Served</span></div>
+          </div>
+          <div class="expertise-tags">
+            <span class="tag">Business Transformation</span>
+            <span class="tag">M&amp;A Advisory</span>
+            <span class="tag">Corporate Strategy</span>
+            <span class="tag">Startup Scale-Up</span>
+            <span class="tag">Market Entry</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Business Transformation</span><span>Corporate Strategy</span><span>Mergers &amp; Acquisitions</span><span>Startup Scale-Up</span><span>Market Entry</span><span>Operational Excellence</span><span>Digital Integration</span><span>Investment Facilitation</span><span>Business Transformation</span><span>Corporate Strategy</span><span>Mergers &amp; Acquisitions</span><span>Startup Scale-Up</span><span>Market Entry</span><span>Operational Excellence</span><span>Digital Integration</span><span>Investment Facilitation</span>
+    </div>
+  </div>
+
+  <section id="about" class="section">
+    <div class="shell">
+      <div class="intro-grid">
+        <div>
+          <p class="eyebrow">Who We Are</p>
+          <h2 class="section-title">Strategy meets <em>execution.</em></h2>
+        </div>
+        <div>
+          <p class="lead">AR Strategic Consultants is a Gurugram-based management consulting firm that helps enterprises and entrepreneurs navigate complex business challenges. Led by Manish Srivastava — a seasoned C-suite advisor with over three decades of experience — we deliver strategies that are not just insightful, but executable.</p>
+        </div>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><strong>30+</strong><span>Years of combined C-suite and consulting leadership experience</span></div>
+        <div class="trust-item"><strong>50+</strong><span>Strategic projects successfully delivered across industries</span></div>
+        <div class="trust-item"><strong>10+</strong><span>Industry verticals served from startups to large enterprises</span></div>
+        <div class="trust-item"><strong>100%</strong><span>Client-first approach — tailored strategies, zero templated solutions</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services-section">
+    <div class="shell">
+      <div class="services-head">
+        <p class="eyebrow">What We Do</p>
+        <h2 class="section-title">End-to-end <em>strategic</em> consulting.</h2>
+        <p class="lead">From vision to value — our services cover every phase of a business's strategic journey.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card"><span class="service-num">01</span><h3>Business Transformation</h3><p>We stabilise operations, restructure processes, and implement change programs that revive distressed businesses or accelerate high-potential ones.</p></div>
+        <div class="service-card"><span class="service-num">02</span><h3>Corporate Strategy</h3><p>Designing actionable roadmaps for market positioning, capital allocation, and competitive differentiation — built for long-term resilience.</p></div>
+        <div class="service-card"><span class="service-num">03</span><h3>Mergers &amp; Acquisitions</h3><p>End-to-end M&amp;A guidance — from target identification and due diligence to negotiation, deal structuring, and post-merger integration.</p></div>
+        <div class="service-card"><span class="service-num">04</span><h3>Startup Scale-Up</h3><p>Strategic support for early-stage and growth-stage startups — go-to-market strategy, investor readiness, revenue model optimisation, and team structuring.</p></div>
+        <div class="service-card"><span class="service-num">05</span><h3>Market Entry &amp; Expansion</h3><p>Comprehensive market entry strategy for businesses entering new geographies or segments — from feasibility to full launch execution.</p></div>
+        <div class="service-card"><span class="service-num">06</span><h3>Investment Facilitation</h3><p>Connecting businesses with strategic investors, structuring deals, and preparing investment-ready business plans and pitch decks.</p></div>
+        <div class="service-card"><span class="service-num">07</span><h3>Operational Excellence</h3><p>Process optimisation, cost restructuring, and performance management frameworks to drive efficiency across your organisation.</p></div>
+        <div class="service-card"><span class="service-num">08</span><h3>Digital Integration</h3><p>Helping traditional businesses harness digital technologies — from ERP and automation to data analytics and digital go-to-market models.</p></div>
+        <div class="service-card"><span class="service-num">09</span><h3>Portfolio Architecture</h3><p>Designing business portfolio structures that balance growth, risk, and returns — for conglomerates, family businesses, and holding companies.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder" class="section founder-section">
+    <div class="shell">
+      <div class="founder-grid">
+        <div class="founder-visual">
+          <p class="big-initial">MS</p>
+          <h2 class="founder-name">Manish Srivastava</h2>
+          <p class="founder-role">Founder &amp; Principal Consultant</p>
+          <p class="founder-desc">A battle-tested business strategist and C-suite advisor with over 30 years of experience guiding enterprises through transformation, growth, and complex strategic challenges.</p>
+          <div class="cred-list">
+            <div class="cred-item">30+ years of C-suite and advisory leadership</div>
+            <div class="cred-item">Track record of reviving distressed companies</div>
+            <div class="cred-item">Expert in M&amp;A, JVs, and digital transformation</div>
+            <div class="cred-item">Served 10+ industry verticals across India</div>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Our Approach</p>
+          <h2 class="section-title">How we turn <em>strategy into results.</em></h2>
+          <p class="lead" style="margin-top:16px;">We don't deliver reports that gather dust. Every engagement is built on deep understanding, honest diagnosis, and a clear path to execution.</p>
+          <div class="steps">
+            <div class="step"><span>01</span><div><h3>Discovery &amp; Diagnosis</h3><p>We begin with a thorough assessment of your business — its challenges, opportunities, and competitive landscape. No assumptions, just facts.</p></div></div>
+            <div class="step"><span>02</span><div><h3>Strategy Development</h3><p>We co-create a tailored strategic roadmap — realistic, prioritised, and built for your specific context and capabilities.</p></div></div>
+            <div class="step"><span>03</span><div><h3>Execution Support</h3><p>We stay engaged through implementation — guiding, course-correcting, and ensuring milestones are hit on time and on target.</p></div></div>
+            <div class="step"><span>04</span><div><h3>Value Realisation</h3><p>We measure outcomes against objectives, document learnings, and build internal capability so your team continues to win independently.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" class="section" style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="shell">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2 class="section-title">Consulting that <em>delivers.</em></h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">&#127919;</div><h3>Battle-Tested Experience</h3><p>Our advice is grounded in 30+ years of real-world corporate leadership — not academic frameworks. We've been in the room where decisions were made.</p></div>
+        <div class="why-card"><div class="why-icon">&#129504;</div><h3>Bespoke Strategies</h3><p>No cookie-cutter solutions. Every engagement starts from scratch with deep listening, and ends with a strategy built precisely for your business.</p></div>
+        <div class="why-card"><div class="why-icon">&#128200;</div><h3>Results Orientation</h3><p>We measure our success by your outcomes — not deliverable counts. Our engagement model is built around accountability and measurable impact.</p></div>
+        <div class="why-card"><div class="why-icon">&#129309;</div><h3>Long-Term Partnership</h3><p>We build relationships, not transactions. Many of our clients return for multiple engagements because we become a trusted part of their leadership ecosystem.</p></div>
+        <div class="why-card"><div class="why-icon">&#127758;</div><h3>Cross-Industry Expertise</h3><p>From manufacturing to fintech, retail to healthcare — our exposure across 10+ industries brings fresh perspective and transferable insights to every engagement.</p></div>
+        <div class="why-card"><div class="why-icon">&#9889;</div><h3>Agile &amp; Responsive</h3><p>We move at the speed of business. Whether you need a 90-day turnaround plan or a 5-year vision, we match our pace to your urgency.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="shell">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Get In Touch</p>
+          <h2>Let's build your <em>next chapter.</em></h2>
+          <p>Whether you're navigating a turnaround, planning a strategic pivot, or preparing for an M&amp;A — we'd love to explore how we can help.</p>
+          <div class="contact-detail">
+            <div class="contact-row"><span class="icon">&#128222;</span><div><strong>Phone</strong><span>+91 79492 87940</span></div></div>
+            <div class="contact-row"><span class="icon">&#128205;</span><div><strong>Location</strong><span>Gurugram, Haryana, India</span></div></div>
+            <div class="contact-row"><span class="icon">&#9200;</span><div><strong>Availability</strong><span>Mon – Sat &nbsp;&middot;&nbsp; By Appointment</span></div></div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input class="form-field" type="text" placeholder="Your Name" required>
+            <input class="form-field" type="tel" placeholder="Phone Number" required>
+          </div>
+          <input class="form-field" type="email" placeholder="Email Address">
+          <input class="form-field" type="text" placeholder="Company / Organisation">
+          <input class="form-field" type="text" placeholder="Nature of Engagement (e.g. M&A, Transformation)">
+          <textarea class="form-field" placeholder="Briefly describe your strategic challenge or goal..."></textarea>
+          <button type="submit" class="btn-submit">Request a Consultation &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-inner">
+        <small>&copy; 2026 AR Strategic Consultants. All rights reserved. &nbsp;&middot;&nbsp; Gurugram, Haryana.</small>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#founder">Founder</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const drawer = document.getElementById('drawer');
+    menuBtn.addEventListener('click', () => { drawer.classList.add('open'); document.body.classList.add('menu-open'); });
+    closeBtn.addEventListener('click', () => closeDrawer());
+    function closeDrawer() { drawer.classList.remove('open'); document.body.classList.remove('menu-open'); }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = 'Request Sent!';
+      btn.style.background = '#4caf50';
+      btn.style.borderColor = '#4caf50';
+      setTimeout(() => { btn.innerHTML = 'Request a Consultation &rarr;'; btn.style.background = ''; btn.style.borderColor = ''; e.target.reset(); }, 3000);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.trust-item, .service-card, .step, .why-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

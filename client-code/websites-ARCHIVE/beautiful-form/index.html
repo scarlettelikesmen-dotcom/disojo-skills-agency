@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <!-- Modern Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Premium color palette */
+            --primary: #6366f1; /* Indigo */
+            --primary-hover: #4f46e5;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+            --border-focus: #6366f1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Beautiful subtle gradient background */
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 3rem 1rem;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 640px;
+        }
+
+        /* Google-Forms style top header card */
+        .form-header {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-top: 12px solid var(--primary);
+        }
+
+        .form-header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+
+        .form-header p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Individual Question Cards */
+        .form-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        /* Highlight the card currently being filled out */
+        .form-card:focus-within {
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+        
+        .required {
+            color: #ef4444; /* Red for required asterisk */
+            margin-left: 4px;
+        }
+
+        /* Google form style inputs (bottom border only) */
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.5rem 0;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            background-color: transparent;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--text-main);
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-bottom: 2px solid var(--border-focus);
+            margin-bottom: -1px; /* prevents layout shift */
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 40px;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        .radio-option input, .checkbox-option input {
+            width: 1.25rem;
+            height: 1.25rem;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 0.75rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .footer-text {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+        
+        /* Netlify spam prevention */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Netlify form setup -->
+    <form class="form-container" name="premium-survey" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        
+        <!-- Spam honeypot field -->
+        <p class="hidden">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <!-- Form Header -->
+        <div class="form-header">
+            <h1>Event Registration</h1>
+            <p>Please fill out the details below. This is a premium standalone form that you can send to anyone via a single link.</p>
+        </div>
+
+        <!-- Question Card 1 -->
+        <div class="form-card">
+            <div class="form-group">
+                <label for="name">Full Name<span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your answer" required>
+            </div>
+        </div>
+
+        <!-- Question Card 2 -->
+        <div class="form-card">
+            <div class="form-group">
+                <label for="email">Email Address<span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+        </div>
+
+        <!-- Question Card 3 -->
+        <div class="form-card">
+            <div class="form-group">
+                <label>How did you hear about us?</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="source" value="Social Media" required> Social Media
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="source" value="Friend or Colleague"> Friend or Colleague
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="source" value="Other"> Other
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Card 4 -->
+        <div class="form-card">
+            <div class="form-group">
+                <label for="comments">Any additional questions or comments?</label>
+                <textarea id="comments" name="comments" placeholder="Your answer"></textarea>
+            </div>
+        </div>
+
+        <!-- Submit Section -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <button type="submit" class="submit-btn">Submit</button>
+            <span style="color: var(--text-muted); font-size: 0.875rem;">Never submit passwords.</span>
+        </div>
+        
+        <p class="footer-text">Powered by Netlify Forms</p>
+
+    </form>
+
+</body>
+</html>

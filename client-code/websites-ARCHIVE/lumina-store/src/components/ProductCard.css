@@ -1,0 +1,105 @@
+/* No card chrome: the photo is the card. */
+.pcard {
+  position: relative;
+}
+
+.pcard-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.pcard-open:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
+
+.pcard-media {
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--cream-alt);
+}
+
+.pcard-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.pcard-open:hover .pcard-media img { transform: scale(1.035); }
+
+.pcard-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pcard-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1.4vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.pcard-num {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-right: 0.6rem;
+  vertical-align: 0.2em;
+  color: var(--color-text-muted);
+}
+
+.pcard-price {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pcard-place {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Quick add: sits on the photo, revealed on hover (always visible on touch). */
+.pcard-add {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(247, 244, 239, 0.92);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pcard:hover .pcard-add,
+.pcard-add:focus-visible { opacity: 1; transform: none; }
+.pcard-add:hover { background: var(--ink); color: var(--cream); }
+.pcard-add:active { transform: scale(0.95); }
+.pcard-add:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+@media (hover: none) {
+  .pcard-add { opacity: 1; transform: none; }
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disojo | Architecture Studio Previews</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+    .terminal-scroll::-webkit-scrollbar { width: 5px; }
+    .terminal-scroll::-webkit-scrollbar-track { background: transparent; }
+    .terminal-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 9999px; }
+    .q-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background-color: #ffffff;
+      color: #000000;
+      border: 2px solid #000000;
+      border-radius: 9999px;
+      padding: 10px 20px;
+      box-shadow: 3px 3px 0px #000000;
+      transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .q-btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 5px 5px 0px #000000;
+    }
+    .q-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px #000000;
+    }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen antialiased select-none">
+
+  <!-- ── Top Floating Comparison Bar ── -->
+  <div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
+    <div class="flex items-center gap-1 p-1.5 rounded-full bg-[#14151a]/90 backdrop-blur-xl border border-white/15 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+      <div class="flex items-center gap-2 pl-3 pr-2 hidden md:flex">
+        <img src="/disojo-mark.png" alt="Disojo" class="h-5 w-auto object-contain">
+        <span class="text-[11px] font-mono font-bold tracking-widest text-zinc-400 uppercase">
+          LABS PREVIEW:
+        </span>
+      </div>
+
+      <button id="tab-swiss" onclick="switchView('swiss')" class="px-4 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 bg-white text-black shadow-md cursor-pointer">
+        01. Swiss Minimalist (Basement)
+      </button>
+
+      <button id="tab-editorial" onclick="switchView('editorial')" class="px-4 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 text-zinc-400 hover:text-white hover:bg-white/10 cursor-pointer">
+        02. QCQ Editorial (Done Right)
+      </button>
+
+      <button id="tab-split" onclick="switchView('split')" class="px-3.5 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 text-zinc-400 hover:text-white hover:bg-white/10 hidden sm:block cursor-pointer">
+        ◫ Side-by-Side
+      </button>
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════════════ -->
+  <!-- VIEW 1: SWISS MINIMALIST (Basement Studio / MetaLab / Linear)              -->
+  <!-- ═════════════════════════════════════════════════════════════════════════ -->
+  <section id="view-swiss" class="relative min-h-screen w-full bg-[#090a0d] text-zinc-100 px-6 sm:px-12 pt-28 pb-20 flex flex-col justify-between overflow-hidden">
+    <!-- Subtle architectural dot grid -->
+    <div class="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-40"></div>
+
+    <!-- Swiss Minimalist Navbar -->
+    <div class="mx-auto w-full max-w-7xl flex items-center justify-between pb-10 border-b border-white/[0.06] mb-8">
+      <div class="flex items-center gap-3">
+        <img src="/disojo-mark.png" alt="Disojo" class="h-7 w-auto object-contain">
+        <span class="font-bold tracking-tight text-white text-lg">DISOJO</span>
+        <span class="text-white/20 font-mono text-xs hidden sm:inline">/</span>
+        <span class="text-[11px] font-mono tracking-widest text-zinc-500 uppercase hidden sm:inline">
+          ARCHITECTURE STUDIO // MUMBAI
+        </span>
+      </div>
+      <div class="flex items-center gap-6 text-xs font-mono tracking-wider uppercase text-zinc-400 hidden md:flex">
+        <span class="text-zinc-200">01. Case Files</span>
+        <span class="hover:text-white transition-colors cursor-pointer">02. Stack</span>
+        <span class="hover:text-white transition-colors cursor-pointer">03. Retainer</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[10.5px] font-mono text-zinc-400">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>CAPACITY: 1 SEAT OPEN</span>
+        </div>
+        <a href="https://cal.com/disojo-solutions/discovery-call" target="_blank" class="px-4 py-1.5 rounded-lg bg-white text-black text-xs font-semibold hover:bg-zinc-200 transition-colors">
+          Book Audit ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- Swiss Hero Grid -->
+    <div class="relative mx-auto w-full max-w-7xl my-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Left Column -->
+      <div class="lg:col-span-6 flex flex-col items-start z-10">
+        <div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-[11px] font-mono tracking-wider text-zinc-400 mb-6">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+          <span class="uppercase text-zinc-300">Operational Architecture & Engineering</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-[4.5rem] font-normal tracking-[-0.04em] leading-[0.95] text-white">
+          Your business is growing. <br>
+          <span class="text-zinc-500 font-light">Your systems aren't.</span>
+        </h1>
+
+        <p class="mt-6 text-base sm:text-lg font-normal leading-relaxed text-zinc-400 max-w-xl">
+          We audit operational bottlenecks and engineer bespoke mobile, cloud, and automated platforms—permanently replacing messy spreadsheets before missed follow-ups cost real revenue.
+        </p>
+
+        <!-- Direct Actions -->
+        <div class="mt-8 flex flex-wrap items-center gap-3.5 w-full sm:w-auto">
+          <a href="https://cal.com/disojo-solutions/discovery-call" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white text-black font-semibold text-sm tracking-tight hover:bg-zinc-200 transition-all text-center shadow-sm cursor-pointer">
+            Book 20-Min Architecture Call ↗
+          </a>
+          <a href="#projects" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-zinc-900/90 text-zinc-300 font-medium text-sm tracking-tight border border-zinc-800 hover:border-zinc-700 hover:text-white transition-all text-center cursor-pointer">
+            Inspect Client Case Files ↓
+          </a>
+        </div>
+
+        <!-- Trust Telemetry -->
+        <div class="mt-10 pt-6 border-t border-zinc-800/80 w-full flex items-center justify-between sm:justify-start gap-8 text-xs font-mono text-zinc-500">
+          <div>
+            <span class="block text-zinc-200 text-sm font-semibold font-sans">₹3.4L</span>
+            <span>KDC Platform Scale</span>
+          </div>
+          <div class="h-6 w-px bg-zinc-800"></div>
+          <div>
+            <span class="block text-zinc-200 text-sm font-semibold font-sans">42 hrs/wk</span>
+            <span>Founder Time Reclaimed</span>
+          </div>
+          <div class="h-6 w-px bg-zinc-800"></div>
+          <div>
+            <span class="block text-zinc-200 text-sm font-semibold font-sans">100%</span>
+            <span>Zero SaaS Lock-in</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Industrial Architectural Console -->
+      <div class="lg:col-span-6 z-10 w-full">
+        <div class="relative rounded-2xl border border-white/[0.12] bg-[#101217] shadow-[0_20px_50px_rgba(0,0,0,0.6)] overflow-hidden">
+          
+          <!-- Console Header with Docked Rocker Switch -->
+          <div class="px-4 py-3 bg-[#15181f] border-b border-white/[0.08] flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <button onclick="triggerFailover('swiss')" class="h-3 w-3 rounded-full bg-red-500/80 hover:bg-red-500 transition-colors cursor-pointer" title="Simulate interrupt"></button>
+              <button onclick="clearBuffer('swiss')" class="h-3 w-3 rounded-full bg-amber-500/80 hover:bg-amber-500 transition-colors cursor-pointer" title="Clear buffer"></button>
+              <button onclick="runSwissCmd('healthcheck()', '✓ All 14 daemons nominal. 0 dropped hooks.')" class="h-3 w-3 rounded-full bg-emerald-500/80 hover:bg-emerald-500 transition-colors cursor-pointer" title="Health check"></button>
+              <span class="ml-2 font-mono text-[11px] text-zinc-400 font-medium">disojo-kernel // v3.2.0</span>
+            </div>
+
+            <!-- Docked Rocker Switch -->
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest hidden sm:inline">MODE:</span>
+              <div class="flex items-center p-0.5 rounded-lg bg-black/60 border border-white/[0.1]">
+                <button id="swiss-btn-manual" onclick="toggleRocker('swiss', 'manual')" class="px-2 py-0.5 rounded text-[10px] font-mono text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">
+                  MANUAL
+                </button>
+                <button id="swiss-btn-auto" onclick="toggleRocker('swiss', 'auto')" class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40 transition-all cursor-pointer">
+                  AUTO ⚡
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Console Terminal Body -->
+          <div id="swiss-terminal-content" class="terminal-scroll p-5 bg-[#0a0c10] h-[220px] overflow-y-auto space-y-2 font-mono text-xs text-zinc-300 select-text">
+            <div><span class="text-zinc-500">[11:28:00]</span> disojo-kernel v3.2.0 initialized.</div>
+            <div><span class="text-zinc-500">[11:28:01]</span> Worker pool: 14 background daemons active.</div>
+            <div><span class="text-zinc-500">[11:28:01]</span> Pipeline sync: CRM, WhatsApp & Cloud DB nominal.</div>
+            <div><span class="text-zinc-500">[11:28:02]</span> Distributed state: 0 stale caches, 0 dropped hooks.</div>
+            <div class="text-emerald-400"><span class="text-zinc-500">[11:28:02]</span> Autonomous workflows nominal · Zero manual busywork</div>
+            <div class="flex items-center text-zinc-400 pt-1">
+              <span class="text-emerald-400 mr-1.5">disojo-kernel &gt;</span>
+              <span class="inline-block w-2 h-4 bg-zinc-400 animate-pulse"></span>
+            </div>
+          </div>
+
+          <!-- Quick Action Execution Strip -->
+          <div class="p-3 bg-[#13161c] border-t border-white/[0.08] flex items-center gap-2">
+            <button onclick="runSwissCmd('kill(&quot;sheets&quot;)', '✓ 14 manual Excel processes terminated. 0 errors.')" class="flex-1 px-2.5 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] font-mono text-zinc-300 hover:text-white transition-colors text-center cursor-pointer">
+              &gt; kill(sheets)
+            </button>
+            <button onclick="runSwissCmd('fix(&quot;followups&quot;)', '⚡ Instant 1.2s auto-reply across WhatsApp & email deployed.')" class="flex-1 px-2.5 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] font-mono text-zinc-300 hover:text-white transition-colors text-center cursor-pointer">
+              &gt; fix(followups)
+            </button>
+            <button onclick="runSwissCmd('reclaim(&quot;time&quot;)', '✓ 42 founder hours/week saved from manual admin.')" class="flex-1 px-2.5 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] font-mono text-zinc-300 hover:text-white transition-colors text-center cursor-pointer">
+              &gt; reclaim(time)
+            </button>
+          </div>
+
+          <!-- Status Telemetry Strip -->
+          <div class="px-4 py-2 bg-[#0d0e12] border-t border-white/[0.06] flex items-center justify-between text-[10.5px] font-mono text-zinc-500">
+            <span class="flex items-center gap-1.5">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+              <span>DAEMONS: 14/14</span>
+            </span>
+            <span>LATENCY: 12ms</span>
+            <span>ENV: PRODUCTION (MUMBAI)</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════════════ -->
+  <!-- VIEW 2: QCQ EDITORIAL (Done Right with 10/10 French Agency Craft)         -->
+  <!-- ═════════════════════════════════════════════════════════════════════════ -->
+  <section id="view-editorial" class="relative min-h-screen w-full px-6 sm:px-12 pt-28 pb-20 flex flex-col justify-between overflow-hidden hidden" style="background-color: #ff5046;">
+    
+    <!-- Editorial Navbar -->
+    <div class="mx-auto w-full max-w-7xl flex items-center justify-between pb-8 mb-4">
+      <div class="flex items-center gap-3">
+        <div class="px-3.5 py-1 rounded-full bg-white border-2 border-black font-mono font-bold text-xs shadow-[2px_2px_0px_#000] text-black">
+          DISOJO
+        </div>
+        <div class="px-3 py-1 rounded-full bg-white border-2 border-black font-mono font-bold text-xs shadow-[2px_2px_0px_#000] text-black hidden sm:inline-block">
+          SOLUTIONS
+        </div>
+      </div>
+      <div class="flex items-center gap-6 text-sm font-semibold text-black hidden md:flex">
+        <span class="hover:underline cursor-pointer">Projets</span>
+        <span class="hover:underline cursor-pointer">Expertises</span>
+        <span class="hover:underline cursor-pointer">Agence</span>
+        <span class="hover:underline cursor-pointer">Contact</span>
+      </div>
+      <div>
+        <a href="https://cal.com/disojo-solutions/discovery-call" target="_blank" class="px-4 py-2 rounded-full bg-black text-white text-xs font-bold border-2 border-black shadow-[3px_3px_0px_#ffffff] hover:scale-105 transition-transform inline-block">
+          Book Audit ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- Top Headline Section -->
+    <div class="mx-auto w-full max-w-7xl my-auto">
+      <div class="inline-flex items-center gap-2 rounded-full border-2 border-black bg-white px-3.5 py-1 text-xs font-mono font-black uppercase tracking-wider text-black shadow-[3px_3px_0px_#000000] mb-6">
+        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>OPERATIONAL ARCHITECTURE & PRODUCT ENGINEERING</span>
+      </div>
+
+      <!-- Ultra-Light Airy Typography (The QCQ Secret) with High Contrast -->
+      <h1 class="text-black font-light tracking-[-0.04em] leading-[0.92] text-[clamp(2.75rem,7vw,6.5rem)] select-none">
+        Your business is growing. <br>
+        <span class="font-medium text-black">Your systems aren't.</span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-[clamp(1.05rem,1.35vw,1.25rem)] font-medium leading-relaxed text-black/90">
+        Disojo audits business bottlenecks, architects the digital fix, and engineers bespoke platforms that permanently eliminate manual overhead before missed follow-ups cost real revenue.
+      </p>
+    </div>
+
+    <!-- Bottom Stage: Harmonized White Neo-Brutalist Console (Left) + Conversational Prompt Stack (Right) -->
+    <div class="mx-auto w-full max-w-7xl mt-12 grid grid-cols-1 lg:grid-cols-12 items-end gap-12">
+      
+      <!-- Left: Harmonized White Vector Console -->
+      <div class="lg:col-span-7 flex flex-col justify-end w-full">
+        <div class="relative rounded-2xl border-3 border-black bg-white text-black shadow-[8px_8px_0px_#000000] p-4 sm:p-5 w-full max-w-[580px] select-none font-mono">
+          
+          <!-- Header with macOS Dots + Integrated Rocker Switch -->
+          <div class="flex items-center justify-between border-b-2 border-black pb-3 mb-3">
+            <div class="flex items-center gap-2">
+              <button onclick="triggerFailover('editorial')" class="h-3.5 w-3.5 rounded-full bg-[#ff5046] border border-black cursor-pointer hover:scale-110 transition-transform" title="Simulate interrupt"></button>
+              <button onclick="clearBuffer('editorial')" class="h-3.5 w-3.5 rounded-full bg-[#ffbd2e] border border-black cursor-pointer hover:scale-110 transition-transform" title="Clear buffer"></button>
+              <button onclick="runEditorialCmd('disojo.status()', '✓ Core daemon 100% healthy. 0 errors.')" class="h-3.5 w-3.5 rounded-full bg-[#27c93f] border border-black cursor-pointer hover:scale-110 transition-transform" title="Diagnostic check"></button>
+              <span class="ml-2 text-xs font-black text-black tracking-tight">disojo-cli -- bash</span>
+            </div>
+
+            <!-- Tactile Rocker Switch -->
+            <div class="flex items-center gap-1.5 p-1 rounded-xl bg-black/5 border-2 border-black">
+              <button id="ed-btn-manual" onclick="toggleRocker('editorial', 'manual')" class="px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-tight text-black/50 hover:text-black transition-all cursor-pointer">
+                MANUAL
+              </button>
+              <button id="ed-btn-auto" onclick="toggleRocker('editorial', 'auto')" class="px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-tight bg-amber-400 text-black shadow-[1px_1px_0px_#000] border border-black transition-all cursor-pointer">
+                AUTO ⚡
+              </button>
+            </div>
+          </div>
+
+          <!-- Terminal CRT Screen -->
+          <div id="editorial-terminal-content" class="terminal-scroll h-[185px] overflow-y-auto space-y-1.5 text-[11px] bg-[#0c0a09] p-3.5 rounded-xl border-2 border-black text-amber-400 shadow-[inset_0_2px_8px_rgba(0,0,0,0.9)] select-text">
+            <div>[11:28:00] disojo-os v3.2.0 boot sequence initialized.</div>
+            <div>[11:28:00] Core runtime mounted on edge-cluster-01.</div>
+            <div>[11:28:01] Worker pool: 14 background daemons online.</div>
+            <div>[11:28:01] Pipeline sync: CRM, WhatsApp & Email active.</div>
+            <div>[11:28:01] Distributed state: 0 stale caches, 0 dropped hooks.</div>
+            <div>[11:28:02] Autonomous workflows nominal · Zero busywork</div>
+            <div class="flex items-center text-amber-400 pt-0.5">
+              <span class="opacity-80">$ </span>
+              <span class="inline-block w-1.5 h-3.5 bg-amber-400 animate-pulse ml-1"></span>
+            </div>
+          </div>
+
+          <!-- Command Execution Strip -->
+          <div class="mt-3 pt-2.5 border-t-2 border-black/15 flex items-center justify-between gap-2">
+            <button onclick="runEditorialCmd('disojo.kill(&quot;spreadsheets&quot;)', '✓ 14 manual Excel processes terminated. 0 errors.')" class="flex-1 rounded-xl border-2 border-black bg-neutral-100 hover:bg-black hover:text-white text-black py-1.5 px-2 text-[10.5px] font-black shadow-[2px_2px_0px_#000000] active:translate-y-0.5 transition-all text-center whitespace-nowrap cursor-pointer">
+              &gt; kill(sheets)
+            </button>
+            <button onclick="runEditorialCmd('disojo.fix(&quot;followups&quot;)', '⚡ Instant 1.2s auto-reply across WhatsApp & email.')" class="flex-1 rounded-xl border-2 border-black bg-neutral-100 hover:bg-black hover:text-white text-black py-1.5 px-2 text-[10.5px] font-black shadow-[2px_2px_0px_#000000] active:translate-y-0.5 transition-all text-center whitespace-nowrap cursor-pointer">
+              &gt; fix(followups)
+            </button>
+            <button onclick="runEditorialCmd('disojo.reclaim(&quot;time&quot;)', '✓ 42 founder hours/week saved from admin.')" class="flex-1 rounded-xl border-2 border-black bg-neutral-100 hover:bg-black hover:text-white text-black py-1.5 px-2 text-[10.5px] font-black shadow-[2px_2px_0px_#000000] active:translate-y-0.5 transition-all text-center whitespace-nowrap cursor-pointer">
+              &gt; reclaim(time)
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Conversational Prompt Stack (The Secret to QCQ's Charm) -->
+      <div class="lg:col-span-5 flex flex-col items-start lg:items-end justify-end">
+        <div class="w-full max-w-sm space-y-2.5">
+          <p class="text-black text-sm font-black uppercase tracking-wider mb-3">
+            How can we help you?
+          </p>
+
+          <a href="#projects" class="q-btn w-full group">
+            <span class="font-semibold text-sm">I want to see your client case studies</span>
+            <span class="text-black font-bold group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+
+          <a href="#expertise" class="q-btn w-full group">
+            <span class="font-semibold text-sm">Diagnose where my business leaks revenue</span>
+            <span class="text-black font-bold group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+
+          <a href="#retainer" class="q-btn w-full group">
+            <span class="font-semibold text-sm">Explain your ₹7,500/mo retainer model</span>
+            <span class="text-black font-bold group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+
+          <a href="https://wa.me/917738073307?text=Hi%20Disojo%2C%20I%27d%20like%20to%20discuss%20a%20project" target="_blank" class="q-btn w-full group">
+            <span class="font-semibold text-sm">WhatsApp Tejjo directly</span>
+            <span class="text-black font-bold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+          </a>
+
+          <a href="https://cal.com/disojo-solutions/discovery-call" target="_blank" class="q-btn w-full group bg-black text-white hover:bg-neutral-900 border-2 border-black shadow-[4px_4px_0px_#ffffff]">
+            <span class="font-black text-sm text-white">Book a 20-min architecture call</span>
+            <span class="text-white font-bold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JavaScript for Interactive Controls and Switching -->
+  <script>
+    function switchView(mode) {
+      const swiss = document.getElementById('view-swiss');
+      const editorial = document.getElementById('view-editorial');
+      const btnSwiss = document.getElementById('tab-swiss');
+      const btnEd = document.getElementById('tab-editorial');
+      const btnSplit = document.getElementById('tab-split');
+
+      if (mode === 'swiss') {
+        swiss.classList.remove('hidden', 'w-1/2');
+        editorial.classList.add('hidden');
+        document.body.className = "bg-[#090a0d] text-white min-h-screen antialiased select-none";
+        
+        btnSwiss.className = "px-4 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 bg-white text-black shadow-md cursor-pointer";
+        btnEd.className = "px-4 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 text-zinc-400 hover:text-white hover:bg-white/10 cursor-pointer";
+        btnSplit.className = "px-3.5 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 text-zinc-400 hover:text-white hover:bg-white/10 hidden sm:block cursor-pointer";
+      } else if (mode === 'editorial') {
+        swiss.classList.add('hidden');
+        editorial.classList.remove('hidden', 'w-1/2');
+        document.body.className = "bg-[#ff5046] text-black min-h-screen antialiased select-none";
+        
+        btnSwiss.className = "px-4 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 text-zinc-400 hover:text-white hover:bg-white/10 cursor-pointer";
+        btnEd.className = "px-4 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 bg-white text-black shadow-md cursor-pointer";
+        btnSplit.className = "px-3.5 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 text-zinc-400 hover:text-white hover:bg-white/10 hidden sm:block cursor-pointer";
+      } else if (mode === 'split') {
+        swiss.classList.remove('hidden');
+        editorial.classList.remove('hidden');
+        swiss.classList.add('w-1/2', 'float-left', 'border-r-2', 'border-white/20');
+        editorial.classList.add('w-1/2', 'float-left');
+        document.body.className = "bg-black text-white min-h-screen antialiased select-none flex";
+
+        btnSwiss.className = "px-4 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 text-zinc-400 hover:text-white hover:bg-white/10 cursor-pointer";
+        btnEd.className = "px-4 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 text-zinc-400 hover:text-white hover:bg-white/10 cursor-pointer";
+        btnSplit.className = "px-3.5 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 bg-white text-black shadow-md hidden sm:block cursor-pointer";
+      }
+    }
+
+    function runSwissCmd(cmd, out) {
+      const el = document.getElementById('swiss-terminal-content');
+      const time = new Date().toTimeString().split(' ')[0];
+      const div = document.createElement('div');
+      div.className = "text-white font-semibold";
+      div.innerHTML = `<span class="text-zinc-500">[${time}]</span> $ ${cmd}<br><span class="text-emerald-400 font-normal">[${time}] ${out}</span>`;
+      el.insertBefore(div, el.lastElementChild);
+      el.scrollTop = el.scrollHeight;
+    }
+
+    function runEditorialCmd(cmd, out) {
+      const el = document.getElementById('editorial-terminal-content');
+      const time = new Date().toTimeString().split(' ')[0];
+      const div = document.createElement('div');
+      div.className = "text-white";
+      div.innerHTML = `<span class="opacity-70">[${time}]</span> $ ${cmd}<br><span class="text-amber-400">[${time}] ${out}</span>`;
+      el.insertBefore(div, el.lastElementChild);
+      el.scrollTop = el.scrollHeight;
+    }
+
+    function toggleRocker(theme, mode) {
+      const time = new Date().toTimeString().split(' ')[0];
+      if (theme === 'swiss') {
+        const btnM = document.getElementById('swiss-btn-manual');
+        const btnA = document.getElementById('swiss-btn-auto');
+        if (mode === 'manual') {
+          btnM.className = "px-2 py-0.5 rounded text-[10px] font-mono bg-red-500/20 text-red-300 font-bold border border-red-500/40 transition-all cursor-pointer";
+          btnA.className = "px-2 py-0.5 rounded text-[10px] font-mono text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer";
+          runSwissCmd("policy --mode=manual", "WARNING: Manual override active. Bottlenecks enabled.");
+        } else {
+          btnM.className = "px-2 py-0.5 rounded text-[10px] font-mono text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer";
+          btnA.className = "px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40 transition-all cursor-pointer";
+          runSwissCmd("policy --mode=auto", "Autonomous pipelines active. Zero busywork.");
+        }
+      } else {
+        const btnM = document.getElementById('ed-btn-manual');
+        const btnA = document.getElementById('ed-btn-auto');
+        if (mode === 'manual') {
+          btnM.className = "px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-tight bg-red-500 text-white shadow-[1px_1px_0px_#000] border border-black transition-all cursor-pointer";
+          btnA.className = "px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-tight text-black/50 hover:text-black transition-all cursor-pointer";
+          runEditorialCmd("switch: MANUAL", "Manual mode warning: Human bottleneck detected");
+        } else {
+          btnM.className = "px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-tight text-black/50 hover:text-black transition-all cursor-pointer";
+          btnA.className = "px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-tight bg-amber-400 text-black shadow-[1px_1px_0px_#000] border border-black font-black transition-all cursor-pointer";
+          runEditorialCmd("switch: AUTO", "Autonomous workflows engaged · Zero busywork");
+        }
+      }
+    }
+
+    function clearBuffer(theme) {
+      const el = document.getElementById(theme === 'swiss' ? 'swiss-terminal-content' : 'editorial-terminal-content');
+      el.innerHTML = `
+        <div class="text-zinc-500">[SYSTEM] Buffer cleared. Daemons listening.</div>
+        <div class="flex items-center text-${theme === 'swiss' ? 'zinc-400' : 'amber-400'} pt-0.5">
+          <span class="${theme === 'swiss' ? 'text-emerald-400' : 'opacity-80'}">${theme === 'swiss' ? 'disojo-kernel &gt;' : '$ '}</span>
+          <span class="inline-block w-1.5 h-3.5 bg-${theme === 'swiss' ? 'zinc-400' : 'amber-400'} animate-pulse ml-1"></span>
+        </div>
+      `;
+    }
+
+    function triggerFailover(theme) {
+      const el = document.getElementById(theme === 'swiss' ? 'swiss-terminal-content' : 'editorial-terminal-content');
+      let countdown = 5;
+      el.innerHTML = `
+        <div class="text-red-400 font-bold flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-red-500 animate-ping"></span>
+          <span>[SIGTERM INTERCEPTED] System protected by root supervisor.</span>
+        </div>
+        <p class="text-zinc-400 text-xs">Production systems don't quit during business hours.</p>
+        <div class="text-emerald-400 text-xs pt-1">✓ 14 active client workflows preserved</div>
+        <div id="${theme}-cd" class="text-amber-400 text-xs pt-2">Restoring in 5s...</div>
+      `;
+      const iv = setInterval(() => {
+        countdown--;
+        const cd = document.getElementById(`${theme}-cd`);
+        if (cd) cd.textContent = `Restoring in ${countdown}s...`;
+        if (countdown <= 0) {
+          clearInterval(iv);
+          clearBuffer(theme);
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

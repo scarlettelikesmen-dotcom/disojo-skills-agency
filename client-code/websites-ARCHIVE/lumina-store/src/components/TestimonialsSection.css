@@ -1,0 +1,68 @@
+/* The one dark band on the page: a pause between the browsing sections.
+   Tall section + sticky stage: scrolling through it slides the quotes sideways. */
+.voices {
+  background: #141412;
+  color: var(--cream);
+}
+
+.voices-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--nav-height);
+  overflow: clip;
+}
+
+.voices-head {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: clamp(32px, 6vh, 72px);
+}
+
+.voices-row {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 31%; /* ~3 quotes in view, the 4th peeking in */
+  will-change: transform;
+}
+
+.voice {
+  padding: 0 clamp(20px, 2.4vw, 40px);
+  border-left: 1px solid rgba(247, 244, 239, 0.16);
+}
+
+.voice:first-child { padding-left: 0; border-left: 0; }
+
+.voice blockquote { margin: 0; display: flex; flex-direction: column; height: 100%; }
+
+.voice-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1.7vw, 1.6rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0 0 2rem;
+}
+
+.voice-by { margin-top: auto; color: rgba(247, 244, 239, 0.6); }
+
+@media (max-width: 640px) {
+  .voices-head { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .voices-row { grid-auto-columns: 82%; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .voices-row { grid-auto-columns: 46%; }
+}
+
+/* no pinning for reduced motion: a plain swipeable row */
+@media (prefers-reduced-motion: reduce) {
+  .voices-stage { position: static; height: auto; padding: clamp(96px, 14vh, 160px) 0; }
+  .voices-row { overflow-x: auto; scrollbar-width: none; will-change: auto; }
+  .voices-row::-webkit-scrollbar { display: none; }
+}

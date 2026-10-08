@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHETYPE 3D — Spatial CGI &amp; Architectural Visualization Studio</title>
+    <meta name="description" content="Archetype 3D is an architectural CGI and spatial visualization studio based in Zurich and Tokyo. Real-time path tracing, physical light transport, and unbuilt spatial monographs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/OrbitControls.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"Space Mono"', 'monospace'],
+                    },
+                    colors: {
+                        basalt: '#0f1013',
+                        slate: '#1a1c22',
+                        concrete: '#e2e4e9',
+                        acid: '#FF5400',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #FF5400; color: #fff; }
+        .grid-blueprint {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .wireframe-filter {
+            filter: contrast(200%) invert(90%) hue-rotate(180deg) brightness(0.9);
+        }
+        .clay-filter {
+            filter: grayscale(100%) contrast(140%) brightness(1.2);
+        }
+        .dusk-filter {
+            filter: hue-rotate(-25deg) saturate(160%) brightness(0.85);
+        }
+        .night-filter {
+            filter: brightness(0.4) contrast(150%) hue-rotate(190deg);
+        }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-basalt text-concrete font-sans antialiased overflow-x-hidden flex min-h-screen">
+
+    <!-- Fixed Left Vertical Architectural Dock -->
+    <aside class="fixed top-0 left-0 h-screen w-20 md:w-24 bg-slate/80 backdrop-blur-xl border-r border-white/10 z-50 flex flex-col justify-between items-center py-8">
+        <!-- Logo Stamp -->
+        <a href="#" class="group flex flex-col items-center">
+            <div class="w-10 h-10 bg-white text-black font-mono font-bold flex items-center justify-center text-xs group-hover:bg-acid group-hover:text-white transition-colors">
+                A3D
+            </div>
+            <span class="font-mono text-[9px] text-gray-500 uppercase mt-2 tracking-widest text-center">ZURICH<br>TOKYO</span>
+        </a>
+
+        <!-- Vertical Navigation Text -->
+        <nav class="flex flex-col space-y-10 items-center font-mono text-xs uppercase tracking-widest text-gray-400 [writing-mode:vertical-rl] rotate-180">
+            <a href="#viewport" class="hover:text-acid transition-colors">01 / Viewport</a>
+            <a href="#projects" class="hover:text-acid transition-colors">02 / Portfolio</a>
+            <a href="#pipeline" class="hover:text-acid transition-colors">03 / Pipeline</a>
+            <a href="#commission" class="hover:text-acid transition-colors">04 / Inquiry</a>
+        </nav>
+
+        <!-- Status Light -->
+        <div class="flex flex-col items-center space-y-2">
+            <div class="w-2 h-2 rounded-full bg-acid animate-pulse"></div>
+            <span class="font-mono text-[8px] text-gray-400">UNREAL 5.5</span>
+        </div>
+    </aside>
+
+    <!-- Main Content Canvas (Offset by sidebar) -->
+    <main class="ml-20 md:ml-24 flex-1 min-h-screen">
+
+        <!-- Top Status Sub-Header -->
+        <header class="border-b border-white/10 px-8 py-5 flex flex-wrap justify-between items-center bg-basalt/60 backdrop-blur-md sticky top-0 z-40">
+            <div class="flex items-center space-x-6 font-mono text-xs text-gray-400">
+                <span class="text-white font-bold tracking-widest uppercase">ARCHETYPE 3D</span>
+                <span class="hidden sm:inline text-gray-600">|</span>
+                <span class="hidden sm:inline">SPATIAL CGI &amp; ARCHITECTURAL VISUALIZATION</span>
+            </div>
+
+            <div class="flex items-center space-x-6 font-mono text-xs">
+                <div class="hidden md:flex items-center space-x-2 text-gray-400">
+                    <span>ZURICH:</span>
+                    <span class="text-white">10:45 CET</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-2 text-gray-400">
+                    <span>TOKYO:</span>
+                    <span class="text-white">18:45 JST</span>
+                </div>
+                <a href="#commission" class="px-4 py-2 border border-acid text-acid hover:bg-acid hover:text-white transition-all text-xs font-bold uppercase tracking-wider">
+                    COMMISSION STUDIO
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero: Architectural Monolith Viewport -->
+        <section id="viewport" class="p-8 lg:p-14 border-b border-white/10 grid-blueprint">
+            <div class="max-w-6xl">
+                <div class="font-mono text-xs text-acid uppercase tracking-widest mb-4">
+                    ARCHITECTURAL CGI // ZURICH &amp; TOKYO
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight text-white leading-[1.05] mb-6">
+                    Visualizing unbuilt<br>
+                    architecture with<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-acid to-orange-400">photographic honesty.</span>
+                </h1>
+                <p class="text-gray-300 max-w-2xl text-base md:text-lg font-light leading-relaxed mb-10">
+                    We craft unbuilt spaces for architectural practices, developers, and cultural foundations. Measured daylight transport, physically based materials, and atmospheric fidelity from competition entry to monograph.
+                </p>
+            </div>
+
+            <!-- INTERACTIVE RENDER VIEWPORT -->
+            <div class="bg-slate border border-white/15 p-4 md:p-6 relative rounded-sm shadow-2xl">
+                <!-- Viewport Control Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4 font-mono text-xs">
+                    <!-- Source Mode Selector (3D WebGL vs 8K Photo) -->
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-400 mr-1 uppercase text-[10px]">ENGINE:</span>
+                        <button onclick="setViewSource('3d')" id="btn-src-3d" class="px-3 py-1.5 bg-acid text-white font-bold text-xs uppercase transition-all tracking-wider">
+                            3D WebGL Pavilion
+                        </button>
+                        <button onclick="setViewSource('photo')" id="btn-src-photo" class="px-3 py-1.5 bg-basalt text-gray-400 hover:text-white text-xs uppercase transition-all tracking-wider">
+                            8K Master Still
+                        </button>
+                    </div>
+
+                    <!-- Render Shader Mode Switcher -->
+                    <div id="shader-controls-group" class="flex items-center space-x-2">
+                        <span class="text-gray-400 mr-1 uppercase text-[10px]">SHADER:</span>
+                        <button onclick="setShader('photo')" id="btn-shader-photo" class="px-2.5 py-1 bg-white/15 text-white font-bold text-xs uppercase transition-all">
+                            01 / Photoreal PBR
+                        </button>
+                        <button onclick="setShader('clay')" id="btn-shader-clay" class="px-2.5 py-1 bg-basalt text-gray-400 hover:text-white text-xs uppercase transition-all">
+                            02 / Clay AO
+                        </button>
+                        <button onclick="setShader('wire')" id="btn-shader-wire" class="px-2.5 py-1 bg-basalt text-gray-400 hover:text-white text-xs uppercase transition-all">
+                            03 / CAD Blueprint
+                        </button>
+                    </div>
+
+                    <!-- Lighting / Daylight Switcher -->
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-400 mr-1 uppercase text-[10px]">SUN AZIMUTH:</span>
+                        <button onclick="setLight('noon')" id="btn-light-noon" class="px-2.5 py-1 bg-white/10 text-white text-xs uppercase">Noon Zenith</button>
+                        <button onclick="setLight('dusk')" id="btn-light-dusk" class="px-2.5 py-1 bg-transparent text-gray-400 hover:text-white text-xs uppercase">Alpine Dusk</button>
+                        <button onclick="setLight('night')" id="btn-light-night" class="px-2.5 py-1 bg-transparent text-gray-400 hover:text-white text-xs uppercase">Nocturne</button>
+                    </div>
+
+                    <!-- 3D Camera Controls -->
+                    <div id="cam-controls-group" class="flex items-center space-x-2">
+                        <button onclick="toggleAutoRotate()" id="btn-autorotate" class="px-2 py-1 bg-basalt border border-white/15 text-gray-300 hover:text-acid text-xs uppercase transition-all">
+                            ORBIT: AUTO
+                        </button>
+                        <button onclick="resetCameraView()" class="px-2 py-1 bg-basalt border border-white/15 text-gray-300 hover:text-white text-xs uppercase transition-all">
+                            RESET CAM
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Camera Presets Quick Bar -->
+                <div class="flex flex-wrap items-center gap-2 mb-3 font-mono text-[11px] text-gray-400">
+                    <span class="text-[10px] uppercase text-gray-500 mr-1">CAMERA PERSPECTIVE:</span>
+                    <button onclick="setCameraPreset(0)" id="btn-preset-0" class="px-2.5 py-1 bg-white/10 text-white rounded-none border border-white/10 hover:border-acid transition-all">
+                        01 / VANTAGE OVERVIEW
+                    </button>
+                    <button onclick="setCameraPreset(1)" id="btn-preset-1" class="px-2.5 py-1 bg-basalt text-gray-400 rounded-none border border-white/10 hover:border-acid hover:text-white transition-all">
+                        02 / POOL &amp; TERRACE
+                    </button>
+                    <button onclick="setCameraPreset(2)" id="btn-preset-2" class="px-2.5 py-1 bg-basalt text-gray-400 rounded-none border border-white/10 hover:border-acid hover:text-white transition-all">
+                        03 / CANTILEVER LOUVERS
+                    </button>
+                    <button onclick="setCameraPreset(3)" id="btn-preset-3" class="px-2.5 py-1 bg-basalt text-gray-400 rounded-none border border-white/10 hover:border-acid hover:text-white transition-all">
+                        04 / INTERIOR CORE
+                    </button>
+                </div>
+
+                <!-- Main Viewport Canvas Image / 3D WebGL Stage -->
+                <div class="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-[#0a0b0e] select-none">
+                    <!-- WebGL Canvas -->
+                    <div id="webgl-viewport" class="absolute inset-0 w-full h-full" data-lenis-prevent>
+                        <canvas id="monolith-canvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+                    </div>
+
+                    <!-- Static Image (Shown when 8K Photo Still is toggled) -->
+                    <img id="viewport-img" src="./assets/photo1600585154340be6161a56a0c.jpg" 
+                         alt="Architectural Monolith Render" 
+                         class="w-full h-full object-cover transition-opacity duration-500 absolute inset-0 opacity-0 pointer-events-none">
+                    
+                    <!-- Coordinate crosshair overlay & Telemetry HUD -->
+                    <div class="absolute top-4 left-4 font-mono text-[10px] text-white/80 bg-black/70 border border-white/10 backdrop-blur px-2.5 py-1 flex items-center space-x-2 pointer-events-none">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span id="hud-cam">CAM: PERSPECTIVE 40° // ORBIT ACTIVE</span>
+                    </div>
+
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-acid bg-black/70 border border-acid/30 backdrop-blur px-2.5 py-1 flex items-center space-x-2 pointer-events-none">
+                        <span id="hud-telemetry">AZ: 45° // EL: 25° // DIST: 28.0M // 60 FPS</span>
+                    </div>
+
+                    <div class="absolute bottom-4 left-4 font-mono text-[9px] text-gray-400 bg-black/70 border border-white/10 backdrop-blur px-2.5 py-1 pointer-events-none hidden sm:block">
+                        INTERACTIVE: DRAG TO ORBIT // WHEEL TO ZOOM // SHIFT+DRAG TO PAN
+                    </div>
+
+                    <div class="absolute bottom-4 right-4 font-mono text-[10px] text-gray-300 bg-black/70 border border-white/10 backdrop-blur px-2.5 py-1 pointer-events-none">
+                        <span id="hud-geometry">ARCHITECTURAL MESH // 38,400 QUADS</span>
+                    </div>
+                </div>
+
+                <!-- Viewport Footer Specs -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 pt-4 border-t border-white/10 font-mono text-xs">
+                    <div>
+                        <span class="text-gray-500 text-[10px] block">PROJECT CODENAME</span>
+                        <span class="text-white font-bold">VILLA HORIZON // ENGADIN VALLEY</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 text-[10px] block">PRIMARY MATERIAL</span>
+                        <span class="text-white font-bold">BOARD-FORMED SWISS CONCRETE &amp; BASALT</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 text-[10px] block">LIGHT TRANSPORT</span>
+                        <span class="text-white font-bold" id="spec-render-time">SPECTRAL PATH TRACING // 60 FPS</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 text-[10px] block">DELIVERY SPECIFICATION</span>
+                        <span class="text-acid font-bold">16-BIT EXR / 8K PRINT SPEC</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Spatial Works Grid -->
+        <section id="projects" class="p-8 lg:p-14 border-b border-white/10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="font-mono text-xs text-acid uppercase tracking-widest block mb-2">// SELECTED COMMISSIONS</span>
+                    <h2 class="text-3xl md:text-5xl font-black uppercase text-white tracking-tight">SPATIAL PORTFOLIO</h2>
+                </div>
+                <div class="font-mono text-xs text-gray-400 mt-4 md:mt-0">
+                    MONOGRAPHS &amp; COMPETITION COMMISSIONS // 2024–2026
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate border border-white/10 group overflow-hidden">
+                    <div class="relative aspect-[16/10] overflow-hidden">
+                        <img src="./assets/photo1600607687939ce8a6c25118c.jpg" 
+                             alt="Cantilever House Lake Zurich" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-black/70 px-3 py-1 font-mono text-[10px] text-white">
+                            ZURICH • KAUFMANN ARCHITEKTUR
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-2xl font-bold uppercase text-white">CANTILEVER HOUSE // LAKE ZURICH</h3>
+                            <span class="font-mono text-xs text-acid">01 // RESIDENTIAL</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light">
+                            Morning diffuse mist study across bush-hammered concrete, charred larch cladding, and frameless low-iron glass overlooking Lake Zurich.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate border border-white/10 group overflow-hidden">
+                    <div class="relative aspect-[16/10] overflow-hidden">
+                        <img src="./assets/photo1513694203232719a280e022f.jpg" 
+                             alt="Kunsthalle Pavilion Kyoto" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-black/70 px-3 py-1 font-mono text-[10px] text-white">
+                            KYOTO • TANGE &amp; ASSOCIATES
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-2xl font-bold uppercase text-white">KUNSTHALLE PAVILION // KYOTO</h3>
+                            <span class="font-mono text-xs text-acid">02 // CULTURAL</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light">
+                            Natural zenithal light entering subterranean gallery courtyards, calculated to summer solstice solar azimuth and seasonal rain acoustics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate border border-white/10 group overflow-hidden">
+                    <div class="relative aspect-[16/10] overflow-hidden">
+                        <img src="./assets/photo160056675337612c8ab7fb75b.jpg" 
+                             alt="Alpine Retreat Vals" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-black/70 px-3 py-1 font-mono text-[10px] text-white">
+                            VALS • STUDIO ZUMTHOR COLLAB
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-2xl font-bold uppercase text-white">ALPINE RETREAT // VALS</h3>
+                            <span class="font-mono text-xs text-acid">03 // LANDSCAPE</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light">
+                            Locally quarried quartzite slabs set against snowfall lighting, thermal fog drift, and interior warm pine illumination.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-slate border border-white/10 group overflow-hidden">
+                    <div class="relative aspect-[16/10] overflow-hidden">
+                        <img src="./assets/photo15129177740809991f1c4c750.jpg" 
+                             alt="Rammed Earth Tower Atacama" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-black/70 px-3 py-1 font-mono text-[10px] text-white">
+                            ATACAMA • BAROZZI VEIGA
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-2xl font-bold uppercase text-white">RAMMED EARTH TOWER // ATACAMA</h3>
+                            <span class="font-mono text-xs text-acid">04 // INSTITUTIONAL</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light">
+                            Thermal shading studies, parametric clay fins, and golden-hour desert horizon scattering evaluated for passive energy performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline & Engine -->
+        <section id="pipeline" class="p-8 lg:p-14 border-b border-white/10 bg-slate">
+            <div class="max-w-4xl mb-12">
+                <span class="font-mono text-xs text-acid uppercase tracking-widest block mb-2">// TECHNICAL PIPELINE</span>
+                <h2 class="text-3xl md:text-5xl font-black uppercase text-white">Rigorous technical production.</h2>
+                <p class="text-gray-400 text-sm mt-3 font-light max-w-xl">
+                    Every render is built from first physical principles—calibrated materials, measured spectral response, and authentic camera optics.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 font-mono text-xs">
+                <div class="p-6 bg-basalt border border-white/10">
+                    <div class="text-acid text-base font-bold mb-4">01. BIM &amp; NURBS INGESTION</div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Direct ingestion of Rhino 3D, Revit BIM, and Archicad data into clean quad-surface meshes without loss of curved geometric tolerance.
+                    </p>
+                </div>
+                <div class="p-6 bg-basalt border border-white/10">
+                    <div class="text-acid text-base font-bold mb-4">02. SPECTRAL MATERIALS</div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Physical spectrophotometer material calibration. Exact measured IOR, anisotropic reflections, and micro-roughness displacement maps.
+                    </p>
+                </div>
+                <div class="p-6 bg-basalt border border-white/10">
+                    <div class="text-acid text-base font-bold mb-4">03. ATMOSPHERE &amp; OPTICS</div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Geographically accurate solar angles, overcast Rayleigh scattering, and lens dispersion modeled on large-format cinema glass.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commission Briefing Form -->
+        <section id="commission" class="p-8 lg:p-14 bg-basalt">
+            <div class="max-w-3xl">
+                <span class="font-mono text-xs text-acid uppercase tracking-widest block mb-2">// STUDIO INQUIRY</span>
+                <h2 class="text-3xl md:text-5xl font-black uppercase text-white mb-4">Initiate Architectural Project</h2>
+                <p class="text-gray-400 mb-8 font-light text-sm md:text-base">
+                    Archetype 3D accepts six studio commissions per quarter to ensure uncompromising photoreal craftsmanship.
+                </p>
+
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Project details submitted. The Studio Principal will respond within 24 hours.');">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
+                        <div>
+                            <label class="text-gray-400 block mb-2 uppercase">Architectural Practice / Studio</label>
+                            <input type="text" required placeholder="e.g. Herzog &amp; de Meuron" class="w-full bg-slate border border-white/15 px-4 py-3 text-white focus:border-acid focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="text-gray-400 block mb-2 uppercase">Contact Lead Email</label>
+                            <input type="email" required placeholder="director@practice.ch" class="w-full bg-slate border border-white/15 px-4 py-3 text-white focus:border-acid focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
+                        <div>
+                            <label class="text-gray-400 block mb-2 uppercase">Scale of Intervention</label>
+                            <select class="w-full bg-slate border border-white/15 px-4 py-3 text-white focus:border-acid focus:outline-none">
+                                <option>Private Villa (&lt; 1,500 m²)</option>
+                                <option>Mid-Rise / Institutional (1,500 – 15,000 m²)</option>
+                                <option>Masterplan / Cultural Complex (&gt; 15,000 m²)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-gray-400 block mb-2 uppercase">Delivery Output Format</label>
+                            <select class="w-full bg-slate border border-white/15 px-4 py-3 text-white focus:border-acid focus:outline-none">
+                                <option>8K Stills + Print Exhibition Monograph</option>
+                                <option>Cinema 4K CGI Film (60fps Anamorphic)</option>
+                                <option>Real-Time Interactive Walkthrough (Unreal Engine 5.5)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-acid text-white font-mono text-xs uppercase font-bold tracking-widest hover:bg-white hover:text-black transition-colors">
+                        Submit Project Details &rarr;
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Minimal Footer -->
+        <footer class="p-8 border-t border-white/10 font-mono text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-4">
+            <div>&copy; 2026 ARCHETYPE 3D GMBH. ZURICH • TOKYO. ALL RENDERS COPYRIGHTED.</div>
+            <div>STATUS: UNREAL ENGINE 5.5 / PATH TRACER PIPELINE ONLINE</div>
+        </footer>
+
+    </main>
+
+    <script>
+        let currentEngine = '3d';
+        let currentShader = 'photo';
+        let currentLight = 'noon';
+        let autoRotateActive = true;
+
+        // Three.js State
+        let scene, camera, renderer, controls;
+        let ambientLight, sunLight, skyLight, interiorLight;
+        let monolithGroup, edgeGroup, gridHelper;
+        let meshList = [];
+        let edgeList = [];
+        let frameCount = 0;
+        let lastTime = performance.now();
+        let fps = 60;
+
+        function initThreeScene() {
+            const container = document.getElementById('webgl-viewport');
+            const canvas = document.getElementById('monolith-canvas');
+            if (!container || !canvas || typeof THREE === 'undefined') return;
+
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            // Scene & Background
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x0a0c10);
+            scene.fog = new THREE.FogExp2(0x0a0c10, 0.012);
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 200);
+            camera.position.set(22, 11, 24);
+
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: false });
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+            // OrbitControls
+            if (typeof THREE.OrbitControls !== 'undefined') {
+                controls = new THREE.OrbitControls(camera, renderer.domElement);
+                controls.enableDamping = true;
+                controls.dampingFactor = 0.05;
+                controls.autoRotate = true;
+                controls.autoRotateSpeed = 0.7;
+                controls.maxPolarAngle = Math.PI / 2 - 0.03;
+                controls.minDistance = 14;
+                controls.maxDistance = 75;
+                controls.target.set(0, 4, 0);
+            }
+
+            // Lights
+            ambientLight = new THREE.AmbientLight(0x404854, 0.6);
+            scene.add(ambientLight);
+
+            skyLight = new THREE.HemisphereLight(0x556677, 0x111620, 0.5);
+            scene.add(skyLight);
+
+            sunLight = new THREE.DirectionalLight(0xfff7ea, 1.5);
+            sunLight.position.set(30, 42, 22);
+            sunLight.castShadow = true;
+            sunLight.shadow.mapSize.width = 2048;
+            sunLight.shadow.mapSize.height = 2048;
+            sunLight.shadow.camera.near = 10;
+            sunLight.shadow.camera.far = 90;
+            const d = 25;
+            sunLight.shadow.camera.left = -d;
+            sunLight.shadow.camera.right = d;
+            sunLight.shadow.camera.top = d;
+            sunLight.shadow.camera.bottom = -d;
+            sunLight.shadow.bias = -0.0005;
+            scene.add(sunLight);
+
+            // Interior Warm Glowing Hearth Light
+            interiorLight = new THREE.PointLight(0xff9933, 0.0, 24, 1.4);
+            interiorLight.position.set(-1, 3.2, 2.0);
+            scene.add(interiorLight);
+
+            // Exterior Pool Uplight
+            const poolLight = new THREE.PointLight(0x38bdf8, 0.4, 15, 2.0);
+            poolLight.position.set(8, 1.6, 4);
+            scene.add(poolLight);
+
+            // Grid Coordinate Floor
+            gridHelper = new THREE.GridHelper(64, 32, 0xff5400, 0x1e2430);
+            gridHelper.position.y = -0.01;
+            scene.add(gridHelper);
+
+            // Build High-End Architectural Pavilion
+            buildArchitecturalMonolith();
+
+            // Handle Resize
+            window.addEventListener('resize', onWindowResize);
+
+            // Animate Loop
+            animate();
+        }
+
+        function createArchBlock(w, h, d, x, y, z, matType, role) {
+            const geom = new THREE.BoxGeometry(w, h, d);
+            const mesh = new THREE.Mesh(geom);
+            mesh.position.set(x, y, z);
+            mesh.castShadow = true;
+            mesh.receiveShadow = true;
+            mesh.userData = { matType, role, w, h, d };
+
+            // Wireframe Edges for Blueprint & Clay modes
+            const edgeGeom = new THREE.EdgesGeometry(geom);
+            const edgeColor = (role === 'louvers' || role === 'accent') ? 0x00e5ff : 0xff5400;
+            const edgeMat = new THREE.LineBasicMaterial({ color: edgeColor, transparent: true, opacity: 0.0 });
+            const edges = new THREE.LineSegments(edgeGeom, edgeMat);
+            mesh.add(edges);
+
+            meshList.push(mesh);
+            edgeList.push(edges);
+            monolithGroup.add(mesh);
+            return mesh;
+        }
+
+        function createArchCylinder(rTop, rBot, h, x, y, z, matType, role, segs = 16) {
+            const geom = new THREE.CylinderGeometry(rTop, rBot, h, segs);
+            const mesh = new THREE.Mesh(geom);
+            mesh.position.set(x, y, z);
+            mesh.castShadow = true;
+            mesh.receiveShadow = true;
+            mesh.userData = { matType, role, w: rTop*2, h, d: rTop*2 };
+
+            const edgeGeom = new THREE.EdgesGeometry(geom);
+            const edgeColor = 0xff5400;
+            const edgeMat = new THREE.LineBasicMaterial({ color: edgeColor, transparent: true, opacity: 0.0 });
+            const edges = new THREE.LineSegments(edgeGeom, edgeMat);
+            mesh.add(edges);
+
+            meshList.push(mesh);
+            edgeList.push(edges);
+            monolithGroup.add(mesh);
+            return mesh;
+        }
+
+        let poolWaterMesh = null;
+
+        function buildArchitecturalMonolith() {
+            monolithGroup = new THREE.Group();
+            scene.add(monolithGroup);
+
+            // 1. Massive Stepped Travertine Foundation Plinth
+            createArchBlock(44, 1.1, 34, 0, 0.55, 0, 'basalt', 'plinth');
+
+            // 2. Reflecting Pool Basin (Recessed)
+            poolWaterMesh = createArchBlock(20, 0.12, 15, 8, 1.14, 4, 'pool', 'pool');
+            poolWaterMesh.receiveShadow = true;
+
+            // Pool Coping Border Frame
+            createArchBlock(20.8, 0.22, 0.4, 8, 1.22, -3.7, 'basalt', 'border');
+            createArchBlock(20.8, 0.22, 0.4, 8, 1.22, 11.7, 'basalt', 'border');
+            createArchBlock(0.4, 0.22, 15.8, -2.6, 1.22, 4, 'basalt', 'border');
+            createArchBlock(0.4, 0.22, 15.8, 18.6, 1.22, 4, 'basalt', 'border');
+
+            // 3. Floating Basalt Entry Stepping Pavers
+            createArchBlock(4.6, 0.25, 2.2, -8, 1.26, 11, 'concrete', 'steps');
+            createArchBlock(4.6, 0.25, 2.2, -5, 1.26, 8, 'concrete', 'steps');
+            createArchBlock(4.6, 0.25, 2.2, -2, 1.26, 5, 'concrete', 'steps');
+
+            // 4. Ground Floor Living Pavilion Slab
+            createArchBlock(18, 0.35, 11, -2, 1.28, 0.5, 'concrete', 'living_slab');
+
+            // 5. Slender Steel Structural Columns (Black Anodized)
+            const colCoords = [
+                [-10, 3.2, 5.5],
+                [-5, 3.2, 5.5],
+                [0, 3.2, 5.5],
+                [5, 3.2, 5.5],
+                [-10, 3.2, -4.5],
+                [5, 3.2, -4.5],
+            ];
+            colCoords.forEach(c => {
+                createArchCylinder(0.12, 0.12, 3.8, c[0], c[1], c[2], 'steel', 'columns', 12);
+            });
+
+            // 6. Floor-to-Ceiling Glass Curtain Walls with Thin Mullions
+            createArchBlock(14.8, 3.6, 0.1, -2, 3.2, 5.2, 'glass', 'glass');
+            createArchBlock(0.1, 3.6, 9.6, -10.2, 3.2, 0.4, 'glass', 'glass');
+            createArchBlock(0.1, 3.6, 9.6, 6.2, 3.2, 0.4, 'glass', 'glass');
+
+            // 7. Interior Living Core Features (visible through glass)
+            // Minimalist Long Teak Dining Table & Benches
+            createArchBlock(4.2, 0.14, 1.2, -2, 1.9, 1.2, 'wood', 'table');
+            createArchBlock(0.12, 0.55, 1.1, -3.8, 1.6, 1.2, 'wood', 'table_leg');
+            createArchBlock(0.12, 0.55, 1.1, -0.2, 1.6, 1.2, 'wood', 'table_leg');
+            createArchBlock(4.0, 0.1, 0.4, -2, 1.6, 2.2, 'wood', 'bench');
+            createArchBlock(4.0, 0.1, 0.4, -2, 1.6, 0.2, 'wood', 'bench');
+
+            // Architectural Fireplace Monolith & Hearth
+            createArchBlock(2.2, 3.4, 0.9, -6.5, 3.1, 1.5, 'basalt', 'hearth');
+            createArchBlock(1.0, 0.25, 0.4, -6.5, 2.0, 1.98, 'accent', 'fire');
+
+            // Warm Timber Wall Panel / Library Unit
+            createArchBlock(0.2, 3.4, 6.5, -9.8, 3.1, -1.0, 'wood', 'library');
+
+            // 8. Brutalist Vertical Shear Core & Stair Tower (Swiss Monolith)
+            createArchBlock(5.6, 13.0, 7.8, -8.6, 7.0, -2.0, 'basalt', 'core');
+
+            // 9. Upper Floor Transverse Cantilever (Dramatic Overhang over Pool)
+            createArchBlock(16.5, 3.8, 11.5, 4.5, 7.6, 1.8, 'concrete', 'cantilever_mass');
+
+            // Upper Floor Master Suite Glass Front & Corner Balcony
+            createArchBlock(12.5, 3.1, 0.1, 4.5, 7.5, 7.4, 'glass', 'glass');
+            createArchBlock(0.1, 3.1, 4.2, 12.6, 7.5, 5.3, 'glass', 'glass');
+
+            // Glass Terrace Balustrade / Railing
+            createArchBlock(15.5, 0.85, 0.06, 4.5, 6.2, 7.6, 'glass', 'rail');
+
+            // 10. Solar Brise-Soleil / Architectural Vertical Teak Louvers (Angled Shading Fins)
+            for (let i = 0; i < 12; i++) {
+                const finX = -1.2 + (i * 1.15);
+                const louverMesh = createArchBlock(0.08, 3.4, 0.75, finX, 7.5, 7.7, 'wood', 'louvers');
+                louverMesh.rotation.y = 0.35; // 20-degree sun angle
+            }
+
+            // 11. Floating Roof Canopy with Geometric Negative Space
+            createArchBlock(18.2, 0.55, 13.2, 4.5, 9.8, 1.8, 'concrete', 'roof_canopy');
+
+            // 12. Architect's Human Scale Figure (1.8m silhouette on pool terrace)
+            const humanTorso = createArchBlock(0.35, 1.1, 0.2, 6.5, 2.0, 8.5, 'basalt', 'human');
+            const humanHead = createArchCylinder(0.12, 0.12, 0.28, 6.5, 2.7, 8.5, 'basalt', 'human', 12);
+
+            applyShaderMaterials();
+        }
+
+        function applyShaderMaterials() {
+            if (!meshList.length) return;
+
+            meshList.forEach((mesh, index) => {
+                const { matType } = mesh.userData;
+                const edges = edgeList[index];
+
+                if (currentShader === 'photo') {
+                    // PBR Realistic Architectural Materials
+                    edges.material.opacity = 0.0;
+                    if (matType === 'concrete') {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0xc4c9d2,
+                            roughness: 0.65,
+                            metalness: 0.08,
+                        });
+                    } else if (matType === 'basalt') {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0x181a20,
+                            roughness: 0.82,
+                            metalness: 0.24,
+                        });
+                    } else if (matType === 'steel') {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0x14161a,
+                            roughness: 0.35,
+                            metalness: 0.88,
+                        });
+                    } else if (matType === 'glass') {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0x98bcd8,
+                            roughness: 0.03,
+                            metalness: 0.92,
+                            transparent: true,
+                            opacity: 0.32,
+                        });
+                    } else if (matType === 'pool') {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0x061120,
+                            roughness: 0.02,
+                            metalness: 0.96,
+                        });
+                    } else if (matType === 'wood') {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0x543b28,
+                            roughness: 0.72,
+                            metalness: 0.06,
+                        });
+                    } else { // accent / fire
+                        mesh.material = new THREE.MeshBasicMaterial({
+                            color: 0xff5400,
+                        });
+                    }
+                } else if (currentShader === 'clay') {
+                    // Architectural Museum Clay Ambient Occlusion
+                    edges.material.opacity = 0.22;
+                    edges.material.color.setHex(0x666666);
+
+                    if (matType === 'glass') {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0xffffff,
+                            roughness: 0.2,
+                            metalness: 0.0,
+                            transparent: true,
+                            opacity: 0.22,
+                        });
+                    } else if (matType === 'pool') {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0xd0ceca,
+                            roughness: 0.45,
+                            metalness: 0.0,
+                        });
+                    } else {
+                        mesh.material = new THREE.MeshStandardMaterial({
+                            color: 0xf5f4ee,
+                            roughness: 0.94,
+                            metalness: 0.0,
+                        });
+                    }
+                } else if (currentShader === 'wire') {
+                    // CAD Blueprint Matrix Wireframe
+                    edges.material.opacity = 1.0;
+                    edges.material.color.setHex((mesh.userData.role === 'louvers' || mesh.userData.role === 'fire') ? 0x00e5ff : 0xff5400);
+
+                    mesh.material = new THREE.MeshBasicMaterial({
+                        color: 0x05070c,
+                        transparent: true,
+                        opacity: 0.84,
+                    });
+                }
+            });
+
+            // Adjust grid helper in wireframe mode
+            if (gridHelper) {
+                gridHelper.visible = (currentShader === 'wire' || currentShader === 'clay');
+                if (currentShader === 'wire') {
+                    gridHelper.material.opacity = 0.85;
+                } else {
+                    gridHelper.material.opacity = 0.2;
+                }
+            }
+        }
+
+        function updateLighting() {
+            if (!sunLight || !ambientLight || !interiorLight) return;
+
+            if (currentLight === 'noon') {
+                scene.background = new THREE.Color(0x0a0c10);
+                scene.fog.color.setHex(0x0a0c10);
+                sunLight.position.set(32, 45, 24);
+                sunLight.color.setHex(0xfff8ee);
+                sunLight.intensity = 1.7;
+                ambientLight.color.setHex(0x404854);
+                ambientLight.intensity = 0.65;
+                skyLight.color.setHex(0x556677);
+                interiorLight.intensity = 0.0;
+            } else if (currentLight === 'dusk') {
+                scene.background = new THREE.Color(0x140e1e);
+                scene.fog.color.setHex(0x140e1e);
+                sunLight.position.set(46, 13, -22);
+                sunLight.color.setHex(0xff7520);
+                sunLight.intensity = 1.9;
+                ambientLight.color.setHex(0x281938);
+                ambientLight.intensity = 0.45;
+                skyLight.color.setHex(0xff4081);
+                interiorLight.intensity = 2.6;
+            } else if (currentLight === 'night') {
+                scene.background = new THREE.Color(0x04060a);
+                scene.fog.color.setHex(0x04060a);
+                sunLight.position.set(-22, 30, -18);
+                sunLight.color.setHex(0x5c8ce6);
+                sunLight.intensity = 0.6;
+                ambientLight.color.setHex(0x08101e);
+                ambientLight.intensity = 0.3;
+                skyLight.color.setHex(0x162438);
+                interiorLight.intensity = 4.5;
+            }
+        }
+
+        // Camera Animation & Preset System
+        const cameraPresets = [
+            { pos: new THREE.Vector3(22, 11, 24), target: new THREE.Vector3(0, 4, 0) },    // 01 / Overview
+            { pos: new THREE.Vector3(14, 4.4, 17), target: new THREE.Vector3(4, 3.2, 3) },  // 02 / Pool & Terrace
+            { pos: new THREE.Vector3(8, 11, 15), target: new THREE.Vector3(3.5, 7.5, 3) }, // 03 / Cantilever & Louvers
+            { pos: new THREE.Vector3(-4, 3.8, 11), target: new THREE.Vector3(-1.5, 3.0, 2) } // 04 / Interior Core
+        ];
+
+        let targetCamPos = null;
+        let targetCamTarget = null;
+        let isCamTransitioning = false;
+
+        function setCameraPreset(index) {
+            const preset = cameraPresets[index];
+            if (!preset || !camera || !controls) return;
+
+            targetCamPos = preset.pos.clone();
+            targetCamTarget = preset.target.clone();
+            isCamTransitioning = true;
+
+            for (let i = 0; i < 4; i++) {
+                const btn = document.getElementById('btn-preset-' + i);
+                if (btn) {
+                    if (i === index) {
+                        btn.className = "px-2.5 py-1 bg-acid text-white font-bold rounded-none border border-acid transition-all";
+                    } else {
+                        btn.className = "px-2.5 py-1 bg-basalt text-gray-400 rounded-none border border-white/10 hover:border-acid hover:text-white transition-all";
+                    }
+                }
+            }
+        }
+
+        function onWindowResize() {
+            const container = document.getElementById('webgl-viewport');
+            if (!container || !renderer || !camera) return;
+            const w = container.clientWidth;
+            const h = container.clientHeight;
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // FPS calculation
+            frameCount++;
+            const now = performance.now();
+            if (now - lastTime >= 500) {
+                fps = Math.round((frameCount * 1000) / (now - lastTime));
+                frameCount = 0;
+                lastTime = now;
+            }
+
+            // Smooth Camera Glide Interpolation
+            if (isCamTransitioning && targetCamPos && targetCamTarget && controls) {
+                camera.position.lerp(targetCamPos, 0.05);
+                controls.target.lerp(targetCamTarget, 0.05);
+                if (camera.position.distanceTo(targetCamPos) < 0.1 && controls.target.distanceTo(targetCamTarget) < 0.1) {
+                    camera.position.copy(targetCamPos);
+                    controls.target.copy(targetCamTarget);
+                    isCamTransitioning = false;
+                }
+            }
+
+            // Water Ripple Procedural Shimmer
+            if (poolWaterMesh && currentShader === 'photo') {
+                const time = now * 0.002;
+                poolWaterMesh.position.y = 1.14 + Math.sin(time) * 0.008;
+            }
+
+            if (controls) {
+                controls.update();
+
+                // Live Camera Telemetry Readout
+                const azDeg = Math.round(controls.getAzimuthalAngle() * (180 / Math.PI));
+                const elDeg = Math.round(controls.getPolarAngle() * (180 / Math.PI));
+                const dist = (camera.position.distanceTo(controls.target)).toFixed(1);
+                
+                const telEl = document.getElementById('hud-telemetry');
+                if (telEl) {
+                    telEl.textContent = `AZ: ${azDeg}° // EL: ${elDeg}° // DIST: ${dist}M // ${fps} FPS`;
+                }
+            }
+
+            if (renderer && scene && camera) {
+                renderer.render(scene, camera);
+            }
+        }
+
+        // UI Action Handlers
+        function setViewSource(src) {
+            currentEngine = src;
+            const webglWrap = document.getElementById('webgl-viewport');
+            const img = document.getElementById('viewport-img');
+            const btn3d = document.getElementById('btn-src-3d');
+            const btnPhoto = document.getElementById('btn-src-photo');
+            const camControls = document.getElementById('cam-controls-group');
+            const hudCam = document.getElementById('hud-cam');
+            const hudGeom = document.getElementById('hud-geometry');
+
+            if (src === '3d') {
+                webglWrap.style.display = 'block';
+                img.style.opacity = '0';
+                img.style.pointerEvents = 'none';
+                btn3d.className = "px-3 py-1.5 bg-acid text-white font-bold text-xs uppercase transition-all tracking-wider";
+                btnPhoto.className = "px-3 py-1.5 bg-basalt text-gray-400 hover:text-white text-xs uppercase transition-all tracking-wider";
+                camControls.style.display = 'flex';
+                if (hudCam) hudCam.textContent = '3D WEBGL VIRTUAL VIEWPORT // ORBIT ACTIVE';
+                if (hudGeom) hudGeom.textContent = 'ARCHITECTURAL MESH // 38,400 QUADS';
+                onWindowResize();
+            } else {
+                img.style.opacity = '1';
+                img.style.pointerEvents = 'auto';
+                btnPhoto.className = "px-3 py-1.5 bg-acid text-white font-bold text-xs uppercase transition-all tracking-wider";
+                btn3d.className = "px-3 py-1.5 bg-basalt text-gray-400 hover:text-white text-xs uppercase transition-all tracking-wider";
+                camControls.style.display = 'none';
+                if (hudCam) hudCam.textContent = 'CAM: SONY VENICE 2 // 35MM ANAMORPHIC f/2.8';
+                if (hudGeom) hudGeom.textContent = 'GEOMETRY: 48,290,140 POLYGONS // RAY BOUNCES: 32';
+                updateStaticImageFilters();
+            }
+        }
+
+        function updateStaticImageFilters() {
+            const img = document.getElementById('viewport-img');
+            if (!img) return;
+            img.className = 'w-full h-full object-cover transition-all duration-500 absolute inset-0';
+
+            if (currentShader === 'wire') {
+                img.classList.add('wireframe-filter');
+            } else if (currentShader === 'clay') {
+                img.classList.add('clay-filter');
+            } else {
+                if (currentLight === 'dusk') img.classList.add('dusk-filter');
+                if (currentLight === 'night') img.classList.add('night-filter');
+            }
+        }
+
+        function setShader(mode) {
+            currentShader = mode;
+            ['photo', 'clay', 'wire'].forEach(m => {
+                const btn = document.getElementById('btn-shader-' + m);
+                if (btn) {
+                    if (m === mode) {
+                        btn.className = "px-2.5 py-1 bg-white/20 text-white font-bold text-xs uppercase transition-all";
+                    } else {
+                        btn.className = "px-2.5 py-1 bg-basalt text-gray-400 hover:text-white text-xs uppercase transition-all";
+                    }
+                }
+            });
+
+            applyShaderMaterials();
+            updateStaticImageFilters();
+        }
+
+        function setLight(mode) {
+            currentLight = mode;
+            ['noon', 'dusk', 'night'].forEach(l => {
+                const btn = document.getElementById('btn-light-' + l);
+                if (btn) {
+                    if (l === mode) {
+                        btn.className = "px-2.5 py-1 bg-white/20 text-white text-xs uppercase";
+                    } else {
+                        btn.className = "px-2.5 py-1 bg-transparent text-gray-400 hover:text-white text-xs uppercase";
+                    }
+                }
+            });
+
+            updateLighting();
+            updateStaticImageFilters();
+        }
+
+        function toggleAutoRotate() {
+            autoRotateActive = !autoRotateActive;
+            if (controls) controls.autoRotate = autoRotateActive;
+            const btn = document.getElementById('btn-autorotate');
+            if (btn) {
+                btn.textContent = autoRotateActive ? 'ORBIT: AUTO' : 'ORBIT: PAUSED';
+                btn.className = autoRotateActive 
+                    ? "px-2 py-1 bg-acid/20 border border-acid text-acid text-xs uppercase transition-all"
+                    : "px-2 py-1 bg-basalt border border-white/15 text-gray-400 hover:text-white text-xs uppercase transition-all";
+            }
+        }
+
+        function resetCameraView() {
+            setCameraPreset(0);
+        }
+
+        // Initialize on DOM load
+        window.addEventListener('DOMContentLoaded', () => {
+            initThreeScene();
+
+            try {
+                if (typeof Lenis !== 'undefined') {
+                    const lenis = new Lenis({
+                        autoRaf: true,
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        smoothWheel: true,
+                        anchors: true
+                    });
+                    window.lenis = lenis;
+                }
+            } catch (e) {
+                console.error('Lenis init failed', e);
+            }
+        });
+    </script>
+</body>
+</html>

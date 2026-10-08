@@ -1,0 +1,30 @@
+#cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  /* Warm golden amber — NOT blue, NOT purple */
+  background: radial-gradient(
+    circle,
+    rgba(201, 168, 76, 0.09) 0%,
+    rgba(201, 168, 76, 0.04) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  mix-blend-mode: multiply;
+}
+
+/* On dark sections, use a slightly lighter/warmer glow */
+.section-dark ~ #cursor-glow,
+.section-dark #cursor-glow {
+  background: radial-gradient(
+    circle,
+    rgba(201, 168, 76, 0.12) 0%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+}

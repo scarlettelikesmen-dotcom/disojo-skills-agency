@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr Tahiliani's Clinic is a private dermatology clinic in Pali Market, Bandra West, Mumbai.">
+  <title>Dr Tahiliani's Clinic | Dermatology in Bandra West</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #251916;
+      --oxblood: #6f2429;
+      --wine: #92383e;
+      --clay: #c87963;
+      --paper: #f5efe4;
+      --ivory: #fcf9f2;
+      --sage: #aeb9a3;
+      --line: rgba(37,25,22,.2);
+      --muted: #6f615b;
+      --shadow: 0 25px 70px rgba(48,25,20,.13);
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 92px 0; }
+    .eyebrow { margin: 0 0 18px; display: flex; align-items: center; gap: 12px; color: var(--oxblood); font-size: 10px; font-weight: 600; letter-spacing: .19em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 38px; height: 1px; background: currentColor; }
+    .title { margin: 0; max-width: 780px; font-family: var(--serif); font-size: clamp(48px, 6.4vw, 84px); font-weight: 300; line-height: .96; letter-spacing: -.04em; }
+    .title em { color: var(--oxblood); font-style: italic; }
+    .lead { color: var(--muted); font-size: 16px; line-height: 1.78; }
+    .btn { min-height: 49px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid var(--ink); border-radius: 0; background: var(--ink); color: #fff; font-size: 12px; font-weight: 600; transition: transform .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-2px); background: var(--oxblood); border-color: var(--oxblood); }
+    .btn.light { color: var(--ink); background: var(--ivory); }
+    .btn.light:hover { color: #fff; background: var(--oxblood); }
+    .btn.ghost { color: var(--ink); background: transparent; }
+
+    .topbar { min-height: 35px; display: flex; align-items: center; color: #eaded7; background: var(--ink); font-size: 10px; letter-spacing: .06em; }
+    .topbar .shell { display: flex; justify-content: space-between; gap: 20px; }
+    .topbar strong { color: #efaa95; }
+    nav { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: rgba(245,239,228,.92); backdrop-filter: blur(18px); }
+    .nav-inner { min-height: 78px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 35px; }
+    .brand { display: inline-flex; align-items: center; gap: 13px; min-width: max-content; }
+    .monogram { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--oxblood); border-radius: 50%; color: var(--oxblood); font-family: var(--serif); font-size: 19px; font-style: italic; }
+    .brand-copy strong { display: block; font-family: var(--serif); font-size: 18px; font-weight: 500; letter-spacing: -.02em; }
+    .brand-copy span { display: block; margin-top: 3px; color: var(--oxblood); font-size: 8px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; justify-content: center; gap: 28px; }
+    .nav-links a { font-size: 12px; font-weight: 600; }
+    .nav-links a:hover { color: var(--oxblood); }
+    .menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: 20px; }
+
+    .hero { position: relative; min-height: 705px; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--paper); }
+    .hero::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0, transparent calc(25% - 1px), rgba(37,25,22,.06) calc(25% - 1px), rgba(37,25,22,.06) 25%); pointer-events: none; }
+    .hero-grid { position: relative; z-index: 2; min-height: 705px; display: grid; grid-template-columns: 1.06fr .94fr; align-items: stretch; }
+    .hero-copy { padding: 105px 70px 80px 0; display: flex; flex-direction: column; justify-content: center; }
+    .hero h1 { margin: 0; max-width: 670px; font-family: var(--serif); font-size: clamp(70px, 9vw, 122px); font-weight: 300; line-height: .79; letter-spacing: -.065em; }
+    .hero h1 span { display: block; color: var(--oxblood); font-style: italic; }
+    .hero-copy > p:not(.eyebrow) { max-width: 540px; margin: 30px 0 0; color: var(--muted); font-size: 16px; line-height: 1.72; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 33px; }
+    .hero-footnote { margin-top: 43px; padding-top: 18px; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+    .hero-art { position: relative; overflow: hidden; min-height: 705px; border-left: 1px solid var(--line); background: #d8c3b6; }
+    .portrait-field { position: absolute; inset: 0; background:
+      radial-gradient(ellipse at 54% 31%, rgba(252,249,242,.98) 0 8%, transparent 8.5%),
+      radial-gradient(ellipse at 51% 47%, #d4a08d 0 16%, transparent 16.5%),
+      radial-gradient(ellipse at 50% 70%, var(--oxblood) 0 33%, transparent 33.5%),
+      linear-gradient(145deg, #ddc6b7, #aeb9a3);
+      filter: saturate(.85);
+    }
+    .portrait-field::before { content: ""; position: absolute; width: 285px; height: 380px; left: calc(50% - 142px); top: 100px; border: 1px solid rgba(252,249,242,.7); border-radius: 48% 48% 18% 18%; box-shadow: 0 0 0 28px rgba(252,249,242,.08), 0 0 0 56px rgba(252,249,242,.05); }
+    .portrait-field::after { content: "DERMATOLOGY"; position: absolute; left: 25px; bottom: 27px; color: rgba(252,249,242,.8); font-family: var(--serif); font-size: clamp(44px, 5vw, 72px); letter-spacing: -.04em; writing-mode: vertical-rl; transform: rotate(180deg); }
+    .case-card { position: absolute; z-index: 3; right: 22px; top: 25px; width: 210px; padding: 19px; border: 1px solid rgba(37,25,22,.25); background: rgba(252,249,242,.9); backdrop-filter: blur(11px); }
+    .case-card b { display: block; color: var(--oxblood); font-family: var(--serif); font-size: 28px; font-weight: 400; }
+    .case-card span { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; line-height: 1.5; text-transform: uppercase; letter-spacing: .08em; }
+    .location-tag { position: absolute; z-index: 3; right: 22px; bottom: 22px; max-width: 245px; padding: 20px; color: #fff; background: rgba(37,25,22,.88); backdrop-filter: blur(10px); }
+    .location-tag strong { display: block; font-family: var(--serif); font-size: 20px; font-weight: 400; }
+    .location-tag span { display: block; margin-top: 6px; color: #d6c6bd; font-size: 10px; line-height: 1.5; }
+
+    .ticker { overflow: hidden; border-bottom: 1px solid var(--line); background: var(--oxblood); color: #fff; }
+    .ticker-track { width: max-content; min-height: 57px; display: flex; align-items: center; animation: ticker 28s linear infinite; }
+    .ticker-track span { display: inline-flex; align-items: center; gap: 26px; padding-right: 26px; font-family: var(--serif); font-size: 16px; font-style: italic; white-space: nowrap; }
+    .ticker-track span::after { content: "·"; color: #efaa95; font-size: 24px; font-style: normal; }
+    @keyframes ticker { to { transform: translateX(-50%); } }
+
+    .intro-grid { display: grid; grid-template-columns: 1.12fr .68fr; gap: 90px; align-items: end; }
+    .intro-grid .lead { margin: 0; }
+    .principles { margin-top: 50px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .principle { min-height: 180px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(252,249,242,.35); }
+    .principle span { color: var(--oxblood); font-size: 10px; font-weight: 600; letter-spacing: .12em; }
+    .principle h3 { margin: 31px 0 10px; font-family: var(--serif); font-size: 29px; font-weight: 400; letter-spacing: -.025em; }
+    .principle p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+
+    .concerns { color: #f7ede7; background: var(--ink); }
+    .concerns .eyebrow { color: #efaa95; }
+    .concern-head { display: grid; grid-template-columns: 1fr .65fr; gap: 70px; align-items: end; margin-bottom: 42px; }
+    .concern-head .lead { margin: 0; color: #baa9a1; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .tab { min-height: 42px; padding: 0 17px; border: 1px solid rgba(255,255,255,.22); border-radius: 0; background: transparent; color: #dbcac1; font-size: 10px; font-weight: 600; letter-spacing: .04em; }
+    .tab.active { border-color: #efaa95; background: #efaa95; color: var(--ink); }
+    .concern-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(255,255,255,.19); border-left: 1px solid rgba(255,255,255,.19); }
+    .concern-card { position: relative; min-height: 225px; padding: 31px; border-right: 1px solid rgba(255,255,255,.19); border-bottom: 1px solid rgba(255,255,255,.19); }
+    .concern-card[hidden] { display: none; }
+    .concern-card small { color: #efaa95; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    .concern-card h3 { margin: 39px 0 10px; font-family: var(--serif); font-size: 32px; font-weight: 300; letter-spacing: -.025em; }
+    .concern-card p { max-width: 480px; margin: 0; color: #baa9a1; font-size: 12px; line-height: 1.65; }
+    .concern-card::after { content: "↗"; position: absolute; top: 26px; right: 28px; color: #efaa95; font-size: 18px; }
+
+    .consult-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 75px; align-items: stretch; }
+    .note-visual { position: relative; min-height: 570px; padding: 43px; overflow: hidden; border: 1px solid var(--line); background: var(--ivory); box-shadow: var(--shadow); }
+    .note-visual::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent 0, transparent 43px, rgba(37,25,22,.09) 43px, rgba(37,25,22,.09) 44px); }
+    .note-date { position: relative; z-index: 2; display: flex; justify-content: space-between; color: var(--muted); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+    .note-title { position: relative; z-index: 2; margin: 88px 0 0; font-family: var(--serif); font-size: clamp(48px, 5vw, 70px); font-weight: 300; line-height: .94; letter-spacing: -.04em; }
+    .note-title em { display: block; color: var(--oxblood); }
+    .note-list { position: relative; z-index: 2; margin-top: 53px; }
+    .note-list span { min-height: 44px; display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 12px; }
+    .note-list span::before { content: "✓"; color: var(--oxblood); }
+    .signature { position: absolute; z-index: 2; right: 36px; bottom: 35px; color: var(--oxblood); font-family: var(--serif); font-size: 30px; font-style: italic; transform: rotate(-5deg); }
+    .consult-copy { padding: 35px 0; display: flex; flex-direction: column; justify-content: center; }
+    .consult-copy .lead { max-width: 590px; margin: 27px 0 0; }
+    .steps { margin: 34px 0; border-top: 1px solid var(--line); }
+    .step { padding: 19px 0; display: grid; grid-template-columns: 42px 1fr; gap: 17px; border-bottom: 1px solid var(--line); }
+    .step b { color: var(--oxblood); font-size: 10px; }
+    .step h3 { margin: -5px 0 7px; font-family: var(--serif); font-size: 26px; font-weight: 400; }
+    .step p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.62; }
+
+    .quiet { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--sage); }
+    .quiet-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 80px; align-items: center; }
+    .quiet-number { font-family: var(--serif); font-size: clamp(115px, 16vw, 220px); font-weight: 300; line-height: .72; letter-spacing: -.08em; color: var(--ink); }
+    .quiet blockquote { margin: 0; font-family: var(--serif); font-size: clamp(35px, 4.1vw, 57px); font-weight: 300; line-height: 1.07; letter-spacing: -.035em; }
+    .quiet p { margin: 22px 0 0; color: #495047; font-size: 12px; line-height: 1.6; }
+
+    .contact-card { display: grid; grid-template-columns: .92fr 1.08fr; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .contact-info { padding: 50px; background: var(--ivory); }
+    .contact-info .title { font-size: clamp(44px, 5vw, 67px); }
+    .details { margin-top: 36px; border-top: 1px solid var(--line); }
+    .row { padding: 18px 0; display: grid; grid-template-columns: 84px 1fr; gap: 17px; border-bottom: 1px solid var(--line); font-size: 12px; line-height: 1.6; }
+    .row strong { color: var(--oxblood); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+    .form { padding: 50px; color: #fff; background: var(--oxblood); }
+    .form h3 { margin: 0; font-family: var(--serif); font-size: 39px; font-weight: 300; }
+    .form > p { margin: 10px 0 29px; color: #e0beb3; font-size: 12px; line-height: 1.6; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { display: block; margin-bottom: 7px; color: #f0b4a2; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    .field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: 12px 0; border: 0; border-bottom: 1px solid rgba(255,255,255,.35); border-radius: 0; outline: 0; color: #fff; background: transparent; }
+    .field select { color-scheme: dark; }
+    .field textarea { min-height: 76px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #fff; }
+    .form .btn { width: 100%; margin-top: 22px; }
+    .map { height: 355px; margin-top: 22px; border: 1px solid var(--line); filter: sepia(.25) saturate(.75); }
+    .map iframe { width: 100%; height: 100%; border: 0; }
+
+    footer { padding: 50px 0 24px; color: #ddcec6; background: #1b1210; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr .7fr .7fr; gap: 55px; padding-bottom: 41px; }
+    .footer-brand p { max-width: 390px; margin: 18px 0 0; color: #a18d84; font-size: 12px; line-height: 1.7; }
+    .footer-col h4 { margin: 0 0 17px; color: #efaa95; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
+    .footer-col a { display: block; margin-top: 11px; color: #cfbdb5; font-size: 12px; }
+    .footer-bottom { padding-top: 20px; display: flex; justify-content: space-between; gap: 18px; border-top: 1px solid rgba(255,255,255,.14); color: #806d65; font-size: 10px; }
+    .whatsapp { position: fixed; right: 22px; bottom: 22px; z-index: 25; min-height: 56px; padding: 0 20px; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,.7); border-radius: 999px; background: #1f9d59; color: #fff; box-shadow: 0 16px 38px rgba(17,72,42,.25); font-size: 13px; font-weight: 600; transition: transform .2s ease; }
+    .whatsapp:hover { transform: translateY(-3px); }
+    .wa { width: 25px; height: 25px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 930px) {
+      .shell { width: min(100% - 28px, 740px); }
+      .section { padding: 72px 0; }
+      .nav-inner { grid-template-columns: 1fr auto auto; min-height: 68px; }
+      .nav-links { position: fixed; inset: 68px 0 auto; padding: 28px 20px; display: none; flex-direction: column; align-items: stretch; border-bottom: 1px solid var(--line); background: var(--paper); }
+      .nav-links.open { display: flex; }
+      .menu-btn { display: block; }
+      .hero-grid, .consult-grid, .contact-card { grid-template-columns: 1fr; }
+      .hero-copy { padding: 80px 0 50px; }
+      .hero-art { min-height: 590px; border-top: 1px solid var(--line); border-left: 0; }
+      .intro-grid, .concern-head, .quiet-grid { grid-template-columns: 1fr; gap: 35px; }
+      .principles { grid-template-columns: 1fr 1fr; }
+      .principle:last-child { grid-column: 1 / -1; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 590px) {
+      .topbar .shell { justify-content: center; text-align: center; }
+      .topbar span:last-child { display: none; }
+      .nav-inner > .btn { display: none; }
+      .brand-copy span { font-size: 7px; }
+      .hero h1 { font-size: 66px; }
+      .hero-copy > p:not(.eyebrow) { font-size: 14px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-footnote { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .hero-art { min-height: 510px; }
+      .portrait-field::before { width: 230px; height: 330px; left: calc(50% - 115px); top: 86px; }
+      .case-card { width: 165px; right: 11px; top: 12px; padding: 15px; }
+      .location-tag { right: 11px; bottom: 11px; max-width: 215px; }
+      .title { font-size: 49px; }
+      .principles, .concern-grid { grid-template-columns: 1fr; }
+      .principle:last-child { grid-column: auto; }
+      .concern-card { min-height: 205px; padding: 25px; }
+      .note-visual { min-height: 520px; padding: 28px; }
+      .contact-info, .form { padding: 35px 24px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { flex-direction: column; }
+      .whatsapp { right: 12px; bottom: 12px; min-height: 52px; padding: 0 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .ticker-track { animation: none; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="shell"><span><strong>Private dermatology clinic</strong> in Bandra West</span><span>Listed hours today: 9:30 am–6 pm · Please confirm before visiting</span></div></div>
+  <nav>
+    <div class="shell nav-inner">
+      <a class="brand" href="#home"><span class="monogram">DT</span><span class="brand-copy"><strong>Dr Tahiliani's Clinic</strong><span>Dermatology · Bandra West</span></span></a>
+      <div class="nav-links" id="navLinks"><a href="#practice">The practice</a><a href="#concerns">Concerns</a><a href="#consultation">Consultation</a><a href="#contact">Contact</a></div>
+      <a class="btn" href="#contact">Request appointment <span>↗</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Dermatology in Pali Market</p>
+          <h1>Skin care, with <span>time to listen.</span></h1>
+          <p>A discreet Bandra practice for thoughtful dermatology consultations, clear clinical conversations and care shaped around the individual.</p>
+          <div class="hero-actions"><a class="btn" href="#contact">Request an appointment <span>↗</span></a><a class="btn ghost" href="#concerns">Explore concerns</a></div>
+          <div class="hero-footnote"><span>Gasper Enclave · Bandra West</span><span>By appointment · +91 79774 80926</span></div>
+        </div>
+        <div class="hero-art reveal">
+          <div class="portrait-field"></div>
+          <div class="case-card"><b>Private practice</b><span>Dermatology consultations in a considered clinical setting</span></div>
+          <div class="location-tag"><strong>Pali Market, Bandra West</strong><span>A 201/202, Gasper Enclave, next to Gold's Gym.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker"><div class="ticker-track">
+      <span>Clinical dermatology</span><span>Acne concerns</span><span>Pigmentation</span><span>Hair + scalp</span><span>Skin health</span><span>Ongoing review</span>
+      <span>Clinical dermatology</span><span>Acne concerns</span><span>Pigmentation</span><span>Hair + scalp</span><span>Skin health</span><span>Ongoing review</span>
+    </div></div>
+
+    <section class="section" id="practice">
+      <div class="shell">
+        <div class="intro-grid reveal">
+          <div><p class="eyebrow">A considered practice</p><h2 class="title">The first treatment is <em>understanding.</em></h2></div>
+          <p class="lead">Skin concerns can be visible, persistent and personal. A useful consultation begins with context: what changed, what has already been tried and what your skin needs now.</p>
+        </div>
+        <div class="principles reveal">
+          <article class="principle"><span>01 / Listen</span><h3>Your history matters</h3><p>Symptoms, routines, previous treatment and everyday triggers all contribute to the clinical picture.</p></article>
+          <article class="principle"><span>02 / Explain</span><h3>Clarity before action</h3><p>Understanding the concern and the purpose of a plan helps make care more manageable.</p></article>
+          <article class="principle"><span>03 / Review</span><h3>Skin changes over time</h3><p>Follow-up allows a plan to respond to progress, tolerance and changing priorities.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section concerns" id="concerns">
+      <div class="shell">
+        <div class="concern-head reveal">
+          <div><p class="eyebrow">Consultation guide</p><h2 class="title">What would you like to <em style="color:#efaa95">discuss?</em></h2></div>
+          <p class="lead">These are broad dermatology concern areas, not a diagnosis or treatment promise. A consultation determines the appropriate next step.</p>
+        </div>
+        <div class="tabs reveal"><button class="tab active" data-filter="all">All concerns</button><button class="tab" data-filter="skin">Skin</button><button class="tab" data-filter="hair">Hair + scalp</button><button class="tab" data-filter="ongoing">Ongoing care</button></div>
+        <div class="concern-grid reveal">
+          <article class="concern-card" data-category="skin"><small>Skin / 01</small><h3>Acne + breakouts</h3><p>Consultation for active breakouts, recurring acne and the marks or texture that may follow.</p></article>
+          <article class="concern-card" data-category="skin"><small>Skin / 02</small><h3>Pigmentation + tone</h3><p>Assessment of uneven tone, dark patches and changes in pigmentation before choosing an approach.</p></article>
+          <article class="concern-card" data-category="skin"><small>Skin / 03</small><h3>Rashes + irritation</h3><p>Clinical review of itching, sensitivity, inflammation or a rash that is new, recurring or persistent.</p></article>
+          <article class="concern-card" data-category="hair"><small>Hair / 04</small><h3>Hair + scalp concerns</h3><p>Evaluation of hair fall, thinning and scalp symptoms with attention to possible contributing factors.</p></article>
+          <article class="concern-card" data-category="ongoing"><small>Review / 05</small><h3>Long-term skin conditions</h3><p>Ongoing dermatology support for conditions that benefit from monitoring and adjusted care over time.</p></article>
+          <article class="concern-card" data-category="ongoing"><small>Review / 06</small><h3>General skin consultation</h3><p>A starting point when you have noticed a change, have several concerns or are unsure what you need.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="consultation">
+      <div class="shell consult-grid">
+        <div class="note-visual reveal">
+          <div class="note-date"><span>Consultation note</span><span>Bandra · Mumbai</span></div>
+          <h2 class="note-title">Observe.<br><em>Understand.</em><br>Plan.</h2>
+          <div class="note-list"><span>Relevant history</span><span>Focused examination</span><span>Clear next steps</span><span>Review when needed</span></div>
+          <div class="signature">Dr Tahiliani's Clinic</div>
+        </div>
+        <div class="consult-copy reveal">
+          <p class="eyebrow">Your appointment</p><h2 class="title">Come with questions. Leave with <em>a direction.</em></h2>
+          <p class="lead">A premium consultation should feel unhurried and useful. Bring a list of current products or medication, previous reports if relevant and a timeline of the concern.</p>
+          <div class="steps">
+            <div class="step"><b>01</b><div><h3>Before you arrive</h3><p>Note when the concern began, what changes it and what has already been tried.</p></div></div>
+            <div class="step"><b>02</b><div><h3>During consultation</h3><p>Discuss symptoms, history and expectations before any plan is considered.</p></div></div>
+            <div class="step"><b>03</b><div><h3>After the visit</h3><p>Follow the advised routine and return for review when recommended or if the concern changes.</p></div></div>
+          </div>
+          <a class="btn" href="#contact">Book your consultation <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiet">
+      <div class="shell quiet-grid reveal">
+        <div class="quiet-number">DT</div>
+        <div><p class="eyebrow">A quieter kind of care</p><blockquote>Clinical enough to be precise. Personal enough to be heard.</blockquote><p>The clinic’s online listing identifies it as a dermatologist practice. Specific treatment suitability and outcomes require individual examination.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="shell">
+        <div class="contact-card reveal">
+          <div class="contact-info">
+            <p class="eyebrow">Visit the clinic</p><h2 class="title">Begin with an <em>appointment.</em></h2>
+            <div class="details">
+              <div class="row"><strong>Address</strong><span>A 201/202, Gasper Enclave, Dr Ambedkar Road, next to Gold's Gym, Pali Market, Bandra West, Mumbai 400050</span></div>
+              <div class="row"><strong>Call</strong><a href="tel:+917977480926">+91 79774 80926</a></div>
+              <div class="row"><strong>Hours</strong><span>Thursday listing: 9:30 am–6 pm. Please call or WhatsApp to confirm current timings.</span></div>
+              <div class="row"><strong>Maps</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Dr%20Tahiliani%27s%20Clinic&amp;query_place_id=ChIJ_aERpg3J5zsRFXfoK4nG7dc" target="_blank" rel="noopener">Open Google Maps ↗</a></div>
+            </div>
+          </div>
+          <form class="form" id="bookingForm">
+            <h3>Request an appointment</h3><p>Share a few details and continue to WhatsApp with your consultation request ready to send.</p>
+            <div class="form-grid">
+              <div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Your name"></div>
+              <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" required inputmode="tel" placeholder="+91"></div>
+              <div class="field full"><label for="concern">Concern</label><select id="concern" name="concern"><option>Acne / breakouts</option><option>Pigmentation</option><option>Rash / irritation</option><option>Hair / scalp concern</option><option>Ongoing skin condition</option><option>General consultation</option></select></div>
+              <div class="field full"><label for="note">Brief note</label><textarea id="note" name="note" placeholder="Optional"></textarea></div>
+            </div>
+            <button class="btn light" type="submit">Continue on WhatsApp <span>↗</span></button>
+          </form>
+        </div>
+        <div class="map"><iframe title="Dr Tahiliani's Clinic location in Bandra West" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=19.0619615,72.8293708&amp;z=16&amp;output=embed"></iframe></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="brand" href="#home"><span class="monogram" style="color:#efaa95;border-color:#efaa95">DT</span><span class="brand-copy"><strong style="color:#fff">Dr Tahiliani's Clinic</strong><span style="color:#efaa95">Dermatology · Bandra West</span></span></a><p>A private dermatologist practice in Pali Market, Bandra West. Website content is general information and does not replace medical consultation.</p></div>
+        <div class="footer-col"><h4>Explore</h4><a href="#practice">The practice</a><a href="#concerns">Concerns</a><a href="#consultation">Consultation</a><a href="#contact">Appointment</a></div>
+        <div class="footer-col"><h4>Contact</h4><a href="tel:+917977480926">+91 79774 80926</a><a href="#contact">Pali Market, Bandra</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Dr%20Tahiliani%27s%20Clinic&amp;query_place_id=ChIJ_aERpg3J5zsRFXfoK4nG7dc" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Dr Tahiliani's Clinic</span><span>Consultation · Clarity · Continuity</span></div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/917977480926?text=Hi%20Dr%20Tahiliani%27s%20Clinic%2C%20I%27d%20like%20to%20request%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat with Dr Tahiliani's Clinic on WhatsApp"><span class="wa">◔</span><span>WhatsApp clinic</span></a>
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      document.body.classList.toggle("menu-open", open);
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.textContent = open ? "×" : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      document.body.classList.remove("menu-open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.textContent = "☰";
+    }));
+    const cards = [...document.querySelectorAll(".concern-card")];
+    document.querySelectorAll(".tab").forEach(tab => tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab").forEach(item => item.classList.toggle("active", item === tab));
+      cards.forEach(card => card.hidden = tab.dataset.filter !== "all" && card.dataset.category !== tab.dataset.filter);
+    }));
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+    }), { threshold: .1 });
+    document.querySelectorAll(".reveal").forEach(item => observer.observe(item));
+    document.getElementById("bookingForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const message = ["Hi Dr Tahiliani's Clinic, I would like to request an appointment.", "", "Name: " + data.get("name"), "Phone: " + data.get("phone"), "Concern: " + data.get("concern"), data.get("note") ? "Note: " + data.get("note") : ""].filter(Boolean).join("\n");
+      window.open("https://wa.me/917977480926?text=" + encodeURIComponent(message), "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>

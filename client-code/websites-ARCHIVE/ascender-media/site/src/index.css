@@ -1,0 +1,131 @@
+/* Latin-only variable fonts, self-hosted (about 94 KB in total; the two used above the fold are preloaded). */
+@font-face { font-family: 'Bricolage Grotesque Variable'; font-style: normal; font-display: swap; font-weight: 200 800; src: url('/fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2-variations'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Geist Variable'; font-style: normal; font-display: swap; font-weight: 100 900; src: url('/fonts/geist-latin-wght-normal.woff2') format('woff2-variations'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Geist Mono Variable'; font-style: normal; font-display: swap; font-weight: 100 900; src: url('/fonts/geist-mono-latin-wght-normal.woff2') format('woff2-variations'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* Identity: film black, bone, one safelight accent. Dark theme only. Shape rule: pills for anything you press,
+   28px outer / 22px inner for double-bezel cards (6px bezel), 16px for fields. */
+:root {
+  --ink: #0a0a0b;
+  --ink-2: #101012;
+  --ink-3: #17171a;
+  --ink-4: #1f1f23;
+  --bone: #edeae3;
+  --mute: #a8a49c;
+  --dim: #8c8880;
+  --safe: #ff5a1f;
+  --safe-soft: rgba(255, 90, 31, 0.14);
+  --line: rgba(237, 234, 227, 0.1);
+  --line-2: rgba(237, 234, 227, 0.2);
+
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Geist Variable', 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-press: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-cut: cubic-bezier(0.7, 0, 0.2, 1);
+
+  --r-card: 28px;
+  --r-bezel: 6px;
+  --r-inner: 22px;
+  --r-field: 16px;
+  --gutter: clamp(16px, 4.2vw, 64px);
+  --max: 1360px;
+  --dock-h: 88px; /* room for the floating transport bar */
+
+  /* z scale */
+  --z-content: 1;
+  --z-hud: 40;
+  --z-menu: 50;
+  --z-modal: 60;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--ink); color-scheme: dark; }
+html.no-scroll { overflow: hidden; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+img, svg, video { display: block; max-width: 100%; }
+h1, h2, h3, p, dl, dd, ul, ol { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--safe); color: var(--ink); }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.035em; line-height: 1.02; text-wrap: balance; }
+p { text-wrap: pretty; }
+.num { font-variant-numeric: tabular-nums; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; letter-spacing: 0; }
+
+:focus-visible { outline: 2px solid var(--safe); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+.sec { position: relative; padding-block: clamp(88px, 12vw, 176px); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Skip link */
+.skip { position: fixed; left: 12px; top: 12px; z-index: calc(var(--z-modal) + 1); padding: 10px 16px; border-radius: 999px; background: var(--bone); color: var(--ink); transform: translateY(-160%); transition: transform 0.25s var(--ease-out); }
+.skip:focus-visible { transform: none; }
+
+/* Film grain: one fixed, non-interactive layer. */
+.grain { position: fixed; inset: 0; z-index: 45; pointer-events: none; opacity: 0.035; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.2 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+
+/* ---------- Buttons: pill with a nested icon island ---------- */
+.btn {
+  --pad: 6px;
+  display: inline-flex; align-items: center; gap: 14px;
+  min-height: 52px; padding: var(--pad) var(--pad) var(--pad) 26px;
+  border-radius: 999px; border: 1px solid transparent;
+  background: var(--safe); color: var(--ink);
+  font-weight: 600; font-size: 1rem; letter-spacing: -0.01em; white-space: nowrap; cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 12px 28px -10px rgba(255, 90, 31, 0.5), 0 2px 6px -2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.45s var(--ease-press), box-shadow 0.45s var(--ease-press), background-color 0.3s var(--ease-out);
+}
+.btn .ico { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(10, 10, 11, 0.9); color: var(--bone); transition: transform 0.45s var(--ease-press); }
+.btn:active { transform: scale(0.97); }
+.btn[disabled] { opacity: 0.55; cursor: not-allowed; }
+.btn.ghost { background: transparent; color: var(--bone); border-color: var(--line-2); box-shadow: none; padding-left: 24px; }
+.btn.ghost .ico { background: rgba(237, 234, 227, 0.08); color: var(--bone); }
+.btn.sm { min-height: 44px; --pad: 4px; padding-left: 20px; gap: 10px; font-size: 0.9375rem; }
+.btn.sm .ico { width: 36px; height: 36px; }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover .ico { transform: translate(2px, -2px) scale(1.06); }
+  .btn:not(.ghost):hover { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 18px 36px -12px rgba(255, 90, 31, 0.62), 0 2px 6px -2px rgba(0, 0, 0, 0.5); }
+  .btn.ghost:hover { border-color: rgba(237, 234, 227, 0.4); background: rgba(237, 234, 227, 0.04); }
+}
+
+/* ---------- Double bezel ---------- */
+.bezel { padding: var(--r-bezel); border-radius: var(--r-card); background: rgba(237, 234, 227, 0.04); border: 1px solid var(--line); }
+.bezel > .core { border-radius: var(--r-inner); background: var(--ink-2); box-shadow: inset 0 1px 0 rgba(237, 234, 227, 0.08), 0 24px 48px -28px rgba(0, 0, 0, 0.8); overflow: hidden; }
+
+/* ---------- Section heads (one pattern: stacked) ---------- */
+.head { max-width: 62rem; }
+.head h2 { font-size: clamp(2.25rem, 5.6vw, 4.75rem); }
+.head p { margin-top: 22px; max-width: 46ch; color: var(--mute); font-size: clamp(1rem, 1.5vw, 1.1875rem); }
+.tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--mute); padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 999px; }
+.tag i { width: 6px; height: 6px; border-radius: 50%; background: var(--safe); }
+
+/* ---------- Reveal on scroll: opacity + translate only ---------- */
+.rv { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out), transform 1s var(--ease-out); transition-delay: calc(var(--d, 0) * 1ms); }
+.rv.in { opacity: 1; transform: none; }
+/* Word-cut: each word slides up out of a mask, like a jump cut */
+.cut { display: block; }
+.cut .w { display: inline-block; overflow: clip; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+.cut .w > span { display: inline-block; transform: translateY(108%); transition: transform 0.95s var(--ease-out); transition-delay: calc(var(--i) * 70ms + var(--base, 0) * 1ms); }
+.cut.in .w > span { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rv, .cut .w > span { opacity: 1 !important; transform: none !important; transition: none !important; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}

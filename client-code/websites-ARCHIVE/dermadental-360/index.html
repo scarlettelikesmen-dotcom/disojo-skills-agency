@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER 360 // Craniofacial Aesthetics & Cosmetic Dentistry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/OrbitControls.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        alabaster: '#FAF9F6',
+                        cashmere: '#F0EAE1',
+                        graphite: '#181A1E',
+                        taupeAccent: '#948B80',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #948B80; color: #FAF9F6; }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-alabaster text-graphite font-sans antialiased overflow-x-hidden">
+
+    <!-- Refined Medical Navigation -->
+    <header class="border-b border-gray-200/70 bg-alabaster/95 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-9 h-9 border border-graphite flex items-center justify-center font-serif text-graphite text-base font-medium">
+                    360
+                </div>
+                <div>
+                    <span class="font-serif text-xl tracking-[0.15em] uppercase text-graphite font-medium block">ATELIER 360</span>
+                    <span class="text-[9px] tracking-[0.25em] uppercase text-gray-500 block font-light">CRANIOFACIAL AESTHETICS & COSMETIC DENTISTRY</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-[0.2em] uppercase text-graphite/70">
+                <a href="#philosophy" class="hover:text-taupeAccent transition-colors">The Synergy</a>
+                <a href="#kinematics" class="hover:text-taupeAccent transition-colors">3D Kinematics</a>
+                <a href="#disciplines" class="hover:text-taupeAccent transition-colors">Disciplines</a>
+                <a href="#consultation" class="hover:text-taupeAccent transition-colors">Consultation</a>
+            </nav>
+
+            <a href="#consultation" class="px-5 py-2.5 bg-graphite text-alabaster text-xs uppercase tracking-[0.2em] hover:bg-taupeAccent transition-all">
+                Book Consultation &rarr;
+            </a>
+        </div>
+    </header>
+
+    <!-- Serene Hero Section -->
+    <section class="pt-24 pb-20 px-6 sm:px-12 border-b border-gray-200/70">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 bg-cashmere text-graphite text-[10px] tracking-[0.25em] uppercase font-medium mb-8">
+                    <span>INTEGRATED DERMAL & ORAL MEDICINE</span>
+                </div>
+
+                <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl text-graphite font-light leading-[1.05] tracking-tight mb-8">
+                    The Harmony of<br>
+                    Craniofacial Form &<br>
+                    <span class="italic font-normal text-taupeAccent">Smile Architecture.</span>
+                </h1>
+
+                <p class="text-gray-600 max-w-xl text-base md:text-lg font-light leading-relaxed mb-10">
+                    A smile never exists in isolation. Atelier 360 unifies aesthetic dermatology and microscopic porcelain dentistry as one coordinated discipline, restoring bone-deep structural support and natural facial youthfulness.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5 text-xs">
+                    <a href="#disciplines" class="px-8 py-4 bg-graphite text-alabaster uppercase tracking-[0.2em] text-center hover:bg-taupeAccent transition-all">
+                        EXPLORE THE DISCIPLINES
+                    </a>
+                    <a href="#consultation" class="px-8 py-4 border border-graphite text-graphite uppercase tracking-[0.2em] text-center hover:bg-white transition-all">
+                        REQUEST EVALUATION
+                    </a>
+                </div>
+            </div>
+
+            <!-- Serene Model & Suite Photography -->
+            <div class="lg:col-span-5">
+                <div class="relative aspect-[4/5] overflow-hidden shadow-xl border-4 border-white">
+                    <img src="./assets/photo1570172619644dfd03ed5d881.jpg" 
+                         alt="Craniofacial Harmony Portrait" class="w-full h-full object-cover">
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/95 p-6 shadow-md">
+                        <span class="text-[9px] tracking-[0.3em] uppercase text-taupeAccent block mb-1">THE 360 PRINCIPLE</span>
+                        <p class="font-serif text-lg text-graphite italic leading-snug">
+                            "When bite height is aligned with jawline contouring, the entire lower face naturally lifts without artificial volume."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Dual Synergy Disciplines -->
+    <section id="disciplines" class="py-24 px-6 sm:px-12 max-w-7xl mx-auto border-b border-gray-200/70">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-gray-200/70 pb-6">
+            <div>
+                <span class="text-[10px] tracking-[0.3em] uppercase text-taupeAccent block mb-2">// CO-ORDINATED EXPERTISE</span>
+                <h2 class="font-serif text-4xl sm:text-5xl text-graphite font-light">Dual Aesthetic Continua</h2>
+            </div>
+            <div class="text-xs tracking-widest text-gray-500 uppercase mt-4 md:mt-0 font-light">
+                DERMAL VECTORING • SMILE ARCHITECTURE
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Wing 1: Craniofacial Aesthetics -->
+            <div class="bg-white p-10 border border-gray-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-baseline mb-6">
+                        <span class="text-[10px] tracking-[0.3em] uppercase text-taupeAccent font-semibold">DISCIPLINE 01</span>
+                        <span class="font-mono text-xs text-gray-400">FACIAL TISSUE</span>
+                    </div>
+                    <h3 class="font-serif text-3xl text-graphite font-normal mb-4">Aesthetic Dermatology & Contour</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light mb-8">
+                        Sub-dermal micro-focused ultrasound, bio-stimulatory collagen inducers, and precise mandibular sharpening designed to restore youthful tension across the cheekbones, jawline, and perioral perimeter.
+                    </p>
+                    <ul class="space-y-3 text-xs text-gray-600 border-t border-gray-100 pt-6">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-taupeAccent font-serif italic text-sm">✦</span>
+                            <span>SMAS Ultrasound Vector Jawline Sharpening</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-taupeAccent font-serif italic text-sm">✦</span>
+                            <span>Perioral Lip Architecture & Philtrum Refinement</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-taupeAccent font-serif italic text-sm">✦</span>
+                            <span>Cellular Exosome & Polynucleotide Infusions</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Wing 2: Cosmetic Dentistry -->
+            <div class="bg-white p-10 border border-gray-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-baseline mb-6">
+                        <span class="text-[10px] tracking-[0.3em] uppercase text-taupeAccent font-semibold">DISCIPLINE 02</span>
+                        <span class="font-mono text-xs text-gray-400">ORAL ARCHITECTURE</span>
+                    </div>
+                    <h3 class="font-serif text-3xl text-graphite font-normal mb-4">Cosmetic Dentistry & Smile Design</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light mb-8">
+                        Hand-layered microscopic feldspathic porcelain veneers and occlusal vertical dimension rehabilitation that provide the essential skeletal framework supporting the lips and lower facial third.
+                    </p>
+                    <ul class="space-y-3 text-xs text-gray-600 border-t border-gray-100 pt-6">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-taupeAccent font-serif italic text-sm">✦</span>
+                            <span>Prep-less Feldspathic Porcelain Veneers</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-taupeAccent font-serif italic text-sm">✦</span>
+                            <span>Occlusal Vertical Height & Bite Rejuvenation</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-taupeAccent font-serif italic text-sm">✦</span>
+                            <span>3D AI Facial Symmetry & Smile Alignment</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Craniofacial Kinematics & Bite Vector Simulator -->
+    <section id="kinematics" class="py-24 px-6 sm:px-12 max-w-7xl mx-auto border-b border-gray-200/70">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-[10px] tracking-[0.35em] uppercase text-taupeAccent block mb-2">// BIOMECHANICAL DIGITAL TWIN</span>
+            <h2 class="font-serif text-4xl sm:text-5xl text-graphite font-light">Craniofacial Kinematics & Bite Vector Lab</h2>
+            <p class="text-gray-600 text-sm md:text-base mt-3 font-light leading-relaxed">
+                Experience why dental bite elevation directly dictates facial youthfulness. Adjust the occlusal vertical dimension below to observe real-time lower facial third expansion and soft tissue tension in 3D.
+            </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+            <!-- 3D Viewport -->
+            <div class="lg:col-span-8 relative h-[500px] bg-gradient-to-b from-[#FAF9F6] to-[#F0EAE1] flex items-center justify-center border-b lg:border-b-0 lg:border-r border-gray-200 group" data-lenis-prevent>
+                <canvas id="cranio-canvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+
+                <!-- Top Telemetry Overlay -->
+                <div class="absolute top-4 left-4 right-4 flex justify-between items-center pointer-events-none font-mono text-[10px] text-graphite/80">
+                    <span class="bg-white/85 backdrop-blur-sm px-3 py-1 border border-gray-200 uppercase tracking-wider">
+                        CRANIOFACIAL PHI MATRIX // 60 FPS
+                    </span>
+                    <span id="cranio-status-badge" class="bg-white/85 backdrop-blur-sm px-3 py-1 border border-taupeAccent/40 text-taupeAccent font-semibold uppercase tracking-wider">
+                        BITE ARCHITECTURE: RESTORED
+                    </span>
+                </div>
+
+                <!-- Bottom Viewport Controls -->
+                <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-[9px]">
+                    <div class="flex space-x-1.5">
+                        <button type="button" onclick="setCranioMode('phi')" id="cbtn-phi" class="px-2.5 py-1 bg-graphite text-alabaster font-semibold">01 / PHI GRID</button>
+                        <button type="button" onclick="setCranioMode('tension')" id="cbtn-tension" class="px-2.5 py-1 bg-white/90 border border-gray-300 text-graphite hover:border-graphite">02 / MUSCLE VECTORS</button>
+                        <button type="button" onclick="setCranioMode('skeletal')" id="cbtn-skeletal" class="px-2.5 py-1 bg-white/90 border border-gray-300 text-graphite hover:border-graphite">03 / SKELETAL</button>
+                    </div>
+                    <span class="bg-white/70 px-2 py-1 backdrop-blur-sm text-gray-500 hidden sm:inline tracking-wider">DRAG 360° • PROFILE VIEW</span>
+                </div>
+            </div>
+
+            <!-- Kinematic Sliders & Clinical Metrics -->
+            <div class="lg:col-span-4 p-8 sm:p-10 flex flex-col justify-between bg-alabaster">
+                <div>
+                    <div class="text-[10px] tracking-[0.25em] uppercase text-taupeAccent font-semibold mb-2">OCCLUSAL REHABILITATION</div>
+                    <h3 class="font-serif text-2xl text-graphite mb-6">Vertical Dimension Control</h3>
+
+                    <!-- OVD Slider -->
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <div class="flex justify-between items-center font-mono text-xs mb-2">
+                                <span class="text-gray-600 uppercase">OCCLUSAL HEIGHT (OVD)</span>
+                                <span id="ovd-value-display" class="font-bold text-graphite text-sm">+2.5 mm</span>
+                            </div>
+                            <input type="range" min="-30" max="35" value="25" step="1" id="ovd-slider" 
+                                   class="w-full accent-taupeAccent bg-gray-200 h-2 cursor-pointer" 
+                                   oninput="updateCranioOVD(this.value)">
+                            <div class="flex justify-between font-mono text-[10px] text-gray-400 mt-1">
+                                <span>-3.0mm (Severe Collapse)</span>
+                                <span>+3.5mm (Elevated)</span>
+                            </div>
+                        </div>
+
+                        <!-- Clinical Telemetry Readouts -->
+                        <div class="border-t border-gray-200 pt-6 space-y-3 font-mono text-xs">
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Lower Facial Height:</span>
+                                <span id="metric-lower-height" class="text-graphite font-bold">68.5 mm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Nasolabial Crease Depth:</span>
+                                <span id="metric-crease-depth" class="text-emerald-700 font-bold">-64% (Smoothed)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Mandibular Vector Angle:</span>
+                                <span id="metric-mandibular-angle" class="text-graphite font-bold">122.4° (Optimal)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Golden Ratio Phi Match:</span>
+                                <span id="metric-phi-score" class="text-taupeAccent font-bold">98.2% Harmony</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-500 leading-relaxed font-light mb-6">
+                        Notice how elevating the posterior bite immediately tensions the masseter and platysma vectors, eliminating the need for overfilling soft tissues.
+                    </p>
+                </div>
+
+                <a href="#consultation" class="w-full py-3.5 bg-graphite text-alabaster font-mono text-xs uppercase tracking-widest text-center hover:bg-taupeAccent hover:text-white transition-all">
+                    REQUEST 3D CRANIOFACIAL SCAN &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why the Synergy Matters -->
+    <section id="philosophy" class="py-24 px-6 sm:px-12 bg-cashmere/40 border-b border-gray-200/70">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-[10px] tracking-[0.35em] uppercase text-taupeAccent block mb-3">// CLINICAL RATIONALE</span>
+            <h2 class="font-serif text-4xl sm:text-5xl text-graphite font-light mb-8">Why Isolated Treatments Fall Short</h2>
+            <p class="text-gray-600 text-base md:text-lg font-light leading-relaxed mb-12">
+                As adults age, natural molar wear gradually reduces the vertical height of the lower face by several millimeters. When this occurs, facial soft tissues begin to fold, creating premature nasolabial creases and jawline slackening. Treating the skin alone with excessive filler leads to unnatural puffiness. At Atelier 360, our dental architects restore the underlying skeletal height first, allowing our aesthetic physicians to tighten the overlying skin naturally and effortlessly.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left text-xs">
+                <div class="bg-alabaster p-6 border border-gray-200 shadow-sm">
+                    <span class="font-serif text-2xl text-taupeAccent italic block mb-2">01</span>
+                    <h4 class="font-serif text-lg text-graphite mb-1">Joint Medical Board</h4>
+                    <p class="text-gray-500 font-light leading-relaxed">Both specialists examine your 3D facial scans concurrently in a single diagnostic session.</p>
+                </div>
+                <div class="bg-alabaster p-6 border border-gray-200 shadow-sm">
+                    <span class="font-serif text-2xl text-taupeAccent italic block mb-2">02</span>
+                    <h4 class="font-serif text-lg text-graphite mb-1">Structural Rejuvenation</h4>
+                    <p class="text-gray-500 font-light leading-relaxed">Restore internal bite height so cheek and lip tissues are supported from within.</p>
+                </div>
+                <div class="bg-alabaster p-6 border border-gray-200 shadow-sm">
+                    <span class="font-serif text-2xl text-taupeAccent italic block mb-2">03</span>
+                    <h4 class="font-serif text-lg text-graphite mb-1">Authentic Expression</h4>
+                    <p class="text-gray-500 font-light leading-relaxed">Achieve an effortlessly youthful result with zero stiffness or over-filled appearance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Consultation Booking -->
+    <section id="consultation" class="py-24 px-6 sm:px-12 max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="text-[10px] tracking-[0.35em] uppercase text-taupeAccent block mb-2">// PRIVATE DIAGNOSTIC SUITE</span>
+            <h2 class="font-serif text-4xl text-graphite font-light">Schedule An Evaluation</h2>
+            <p class="text-gray-600 text-xs mt-3 font-light leading-relaxed">
+                Consultations are conducted in our private diagnostic suites. We accept a limited number of appointments weekly to provide meticulous clinical focus.
+            </p>
+        </div>
+
+        <form class="space-y-6 bg-white border border-gray-200 p-8 sm:p-12 shadow-sm text-xs" onsubmit="event.preventDefault(); alert('Consultation inquiry received. The Patient Concierge will reach out to confirm your diagnostic suite appointment.');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Full Name</label>
+                    <input type="text" required placeholder="Elena Rostova" class="w-full bg-alabaster border border-gray-300 px-4 py-3 text-graphite focus:border-taupeAccent focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Direct Telephone</label>
+                    <input type="tel" required placeholder="+91 98111 99887" class="w-full bg-alabaster border border-gray-300 px-4 py-3 text-graphite focus:border-taupeAccent focus:outline-none">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Primary Consultation Area</label>
+                    <select class="w-full bg-alabaster border border-gray-300 px-4 py-3 text-graphite focus:border-taupeAccent focus:outline-none">
+                        <option>Comprehensive Craniofacial & Smile Evaluation (Both)</option>
+                        <option>Cosmetic Porcelain Veneers & Bite Harmony</option>
+                        <option>Craniofacial Tightening & Mandibular Vectoring</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Preferred Location</label>
+                    <select class="w-full bg-alabaster border border-gray-300 px-4 py-3 text-graphite focus:border-taupeAccent focus:outline-none">
+                        <option>New Delhi (Vasant Vihar Medical Pavilion)</option>
+                        <option>London (Harley Street Suite)</option>
+                        <option>Dubai (DIFC Wellness Pavilion)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-graphite text-alabaster font-serif text-sm tracking-[0.25em] uppercase hover:bg-taupeAccent hover:text-white transition-all">
+                CONFIRM SUITE EVALUATION &rarr;
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200/70 py-12 px-6 max-w-7xl mx-auto font-sans text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>&copy; 2026 ATELIER 360 CRANIOFACIAL & DENTAL INSTITUTE. CE MEDICAL ACCREDITED.</div>
+        <div class="text-[10px] tracking-widest text-gray-400 uppercase">CLASS 100 STERILE SURGICAL SUITES // STRICT PATIENT PRIVACY.</div>
+    </footer>
+
+    <script>
+        // --- 3D CRANIOFACIAL KINEMATICS & BITE VECTOR ENGINE (Three.js) ---
+        let cranioScene, cranioCamera, cranioRenderer, cranioControls;
+        let cranioGroup, skullGroup, mandibleGroup;
+        let masseterLines = [], phiPlanes = [];
+        let cranioMode = 'phi';
+        let currentOVD = 25; // default +2.5mm
+
+        function initCranioEngine() {
+            const canvas = document.getElementById('cranio-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const rect = canvas.getBoundingClientRect();
+            const width = rect.width || canvas.clientWidth || 600;
+            const height = rect.height || canvas.clientHeight || 500;
+
+            cranioScene = new THREE.Scene();
+            cranioCamera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
+            cranioCamera.position.set(2.8, 0.5, 6.2);
+
+            cranioRenderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                antialias: true,
+                alpha: true,
+                powerPreference: 'high-performance'
+            });
+            cranioRenderer.setSize(width, height);
+            cranioRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            cranioControls = new THREE.OrbitControls(cranioCamera, canvas);
+            cranioControls.enableDamping = true;
+            cranioControls.dampingFactor = 0.05;
+            cranioControls.enableZoom = true;
+            cranioControls.minDistance = 4;
+            cranioControls.maxDistance = 11;
+
+            // Lights
+            const ambient = new THREE.AmbientLight(0xfffdfa, 1.4);
+            cranioScene.add(ambient);
+
+            const keyLight = new THREE.DirectionalLight(0xffffff, 2.0);
+            keyLight.position.set(4, 6, 5);
+            cranioScene.add(keyLight);
+
+            const fillLight = new THREE.PointLight(0x948B80, 1.8, 15);
+            fillLight.position.set(-4, -2, -3);
+            cranioScene.add(fillLight);
+
+            // Master Group
+            cranioGroup = new THREE.Group();
+            cranioScene.add(cranioGroup);
+
+            buildCraniofacialModel();
+
+            window.addEventListener('resize', () => {
+                if (!canvas) return;
+                const w = canvas.clientWidth;
+                const h = canvas.clientHeight;
+                if (w && h) {
+                    cranioCamera.aspect = w / h;
+                    cranioCamera.updateProjectionMatrix();
+                    cranioRenderer.setSize(w, h);
+                }
+            });
+
+            animateCranio();
+        }
+
+        function buildCraniofacialModel() {
+            // 1. Skull / Cranium (Upper head & Maxilla)
+            skullGroup = new THREE.Group();
+            cranioGroup.add(skullGroup);
+
+            // Cranial wireframe dome
+            const craniumGeo = new THREE.IcosahedronGeometry(1.85, 2);
+            const craniumWireMat = new THREE.MeshBasicMaterial({
+                color: 0x948B80,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.45
+            });
+            const craniumMesh = new THREE.Mesh(craniumGeo, craniumWireMat);
+            craniumMesh.scale.set(1.0, 1.2, 1.15);
+            craniumMesh.position.set(0, 0.4, 0);
+            skullGroup.add(craniumMesh);
+
+            // Maxilla (upper dental arch)
+            const maxillaGeo = new THREE.TorusGeometry(0.75, 0.12, 8, 24, Math.PI);
+            const boneMat = new THREE.MeshStandardMaterial({
+                color: 0xF0EAE1,
+                metalness: 0.1,
+                roughness: 0.4
+            });
+            const maxillaMesh = new THREE.Mesh(maxillaGeo, boneMat);
+            maxillaMesh.rotation.x = Math.PI / 2;
+            maxillaMesh.position.set(0, -0.45, 0.85);
+            skullGroup.add(maxillaMesh);
+
+            // Zygomatic arches (cheekbone markers)
+            const zygomaGeo = new THREE.SphereGeometry(0.12, 12, 12);
+            const leftZygoma = new THREE.Mesh(zygomaGeo, boneMat);
+            leftZygoma.position.set(1.4, -0.1, 0.6);
+            skullGroup.add(leftZygoma);
+
+            const rightZygoma = new THREE.Mesh(zygomaGeo, boneMat);
+            rightZygoma.position.set(-1.4, -0.1, 0.6);
+            skullGroup.add(rightZygoma);
+
+            // 2. Mandible Group (Articulated lower jaw pivoted at TMJ condyle)
+            mandibleGroup = new THREE.Group();
+            mandibleGroup.position.set(0, -0.1, -0.2); // TMJ pivot
+            cranioGroup.add(mandibleGroup);
+
+            // Mandible jawbone arch
+            const mandibleGeo = new THREE.TorusGeometry(0.85, 0.14, 8, 24, Math.PI);
+            const mandibleMesh = new THREE.Mesh(mandibleGeo, boneMat);
+            mandibleMesh.rotation.x = Math.PI / 2;
+            mandibleMesh.position.set(0, -0.65, 0.95);
+            mandibleGroup.add(mandibleMesh);
+
+            // Chin / Menton prominence
+            const chinGeo = new THREE.BoxGeometry(0.65, 0.4, 0.4);
+            const chinMesh = new THREE.Mesh(chinGeo, boneMat);
+            chinMesh.position.set(0, -0.75, 1.45);
+            mandibleGroup.add(chinMesh);
+
+            // Gonial angles (jaw corners)
+            const angleGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.6, 8);
+            const leftRamus = new THREE.Mesh(angleGeo, boneMat);
+            leftRamus.position.set(1.1, -0.35, 0.1);
+            leftRamus.rotation.z = 0.2;
+            mandibleGroup.add(leftRamus);
+
+            const rightRamus = new THREE.Mesh(angleGeo, boneMat);
+            rightRamus.position.set(-1.1, -0.35, 0.1);
+            rightRamus.rotation.z = -0.2;
+            mandibleGroup.add(rightRamus);
+
+            // 3. Masseter & SMAS Muscle Tension Lines
+            const lineMat = new THREE.LineBasicMaterial({
+                color: 0x52796F,
+                linewidth: 2,
+                transparent: true,
+                opacity: 0.85
+            });
+
+            const pointsL = [new THREE.Vector3(1.4, -0.1, 0.6), new THREE.Vector3(1.1, -0.85, 0.3)];
+            const geoL = new THREE.BufferGeometry().setFromPoints(pointsL);
+            const lineL = new THREE.Line(geoL, lineMat);
+            cranioGroup.add(lineL);
+            masseterLines.push({ line: lineL, p1: pointsL[0], p2: pointsL[1], side: 'left' });
+
+            const pointsR = [new THREE.Vector3(-1.4, -0.1, 0.6), new THREE.Vector3(-1.1, -0.85, 0.3)];
+            const geoR = new THREE.BufferGeometry().setFromPoints(pointsR);
+            const lineR = new THREE.Line(geoR, lineMat);
+            cranioGroup.add(lineR);
+            masseterLines.push({ line: lineR, p1: pointsR[0], p2: pointsR[1], side: 'right' });
+
+            // 4. Golden Ratio Phi Horizontal Planes
+            const planeGeo = new THREE.PlaneGeometry(3.6, 0.02);
+            const planeMat = new THREE.MeshBasicMaterial({ color: 0x948B80, transparent: true, opacity: 0.6 });
+
+            const levels = [
+                { y: 1.6, label: 'TRICHION (HAIRLINE)' },
+                { y: 0.5, label: 'GLABELLA (BROW)' },
+                { y: -0.4, label: 'SUBNASALE (NOSE BASE)' },
+                { y: -1.3, label: 'MENTON (CHIN)' }
+            ];
+
+            levels.forEach(lvl => {
+                const p = new THREE.Mesh(planeGeo, planeMat);
+                p.position.set(0, lvl.y, 1.2);
+                cranioGroup.add(p);
+                phiPlanes.push(p);
+            });
+
+            // Initial OVD position
+            applyOVDToMesh(currentOVD);
+        }
+
+        function setCranioMode(mode) {
+            cranioMode = mode;
+            ['phi', 'tension', 'skeletal'].forEach(m => {
+                const btn = document.getElementById('cbtn-' + m);
+                if (!btn) return;
+                if (m === mode) {
+                    btn.className = "px-2.5 py-1 bg-graphite text-alabaster font-semibold";
+                } else {
+                    btn.className = "px-2.5 py-1 bg-white/90 border border-gray-300 text-graphite hover:border-graphite";
+                }
+            });
+
+            if (mode === 'phi') {
+                phiPlanes.forEach(p => p.visible = true);
+                masseterLines.forEach(l => l.line.material.opacity = 0.3);
+            } else if (mode === 'tension') {
+                phiPlanes.forEach(p => p.visible = false);
+                masseterLines.forEach(l => l.line.material.opacity = 0.95);
+            } else if (mode === 'skeletal') {
+                phiPlanes.forEach(p => p.visible = true);
+                masseterLines.forEach(l => l.line.material.opacity = 0.7);
+            }
+        }
+
+        function updateCranioOVD(rawVal) {
+            const val = parseFloat(rawVal);
+            currentOVD = val;
+            const mm = (val / 10).toFixed(1);
+            document.getElementById('ovd-value-display').textContent = (val >= 0 ? '+' : '') + mm + ' mm';
+
+            // Update clinical metrics
+            const lowerHeight = (66.0 + (val * 0.1)).toFixed(1);
+            document.getElementById('metric-lower-height').textContent = lowerHeight + ' mm';
+
+            const creaseDepth = val < 0 ? '+35% (Deepened)' : (val > 15 ? '-64% (Smoothed)' : 'Normal Baseline');
+            document.getElementById('metric-crease-depth').textContent = creaseDepth;
+            document.getElementById('metric-crease-depth').className = val < 0 ? 'text-amber-700 font-bold' : 'text-emerald-700 font-bold';
+
+            const mandAngle = (120.0 + (val * 0.08)).toFixed(1);
+            document.getElementById('metric-mandibular-angle').textContent = mandAngle + '° (Optimal)';
+
+            const phiScore = Math.min(99.4, 91.0 + Math.max(0, val * 0.28)).toFixed(1);
+            document.getElementById('metric-phi-score').textContent = phiScore + '% Harmony';
+
+            const badge = document.getElementById('cranio-status-badge');
+            if (badge) {
+                if (val < 0) {
+                    badge.textContent = 'BITE COLLAPSE: -' + Math.abs(mm) + 'MM';
+                    badge.className = 'bg-white/85 backdrop-blur-sm px-3 py-1 border border-amber-500/40 text-amber-700 font-semibold uppercase tracking-wider';
+                } else {
+                    badge.textContent = 'BITE ARCHITECTURE: RESTORED (+' + mm + 'MM)';
+                    badge.className = 'bg-white/85 backdrop-blur-sm px-3 py-1 border border-taupeAccent/40 text-taupeAccent font-semibold uppercase tracking-wider';
+                }
+            }
+
+            applyOVDToMesh(val);
+        }
+
+        function applyOVDToMesh(val) {
+            if (!mandibleGroup) return;
+
+            // Invert kinematics: negative val collapses jaw upwards and backwards; positive opens and balances
+            const deltaY = (val / 10) * 0.04;
+            const deltaRot = (val / 10) * -0.015;
+
+            mandibleGroup.position.y = -0.1 - deltaY;
+            mandibleGroup.rotation.x = deltaRot;
+
+            // Update dynamic masseter lines
+            masseterLines.forEach(item => {
+                const p2 = item.side === 'left' ? 
+                    new THREE.Vector3(1.1, -0.85 - deltaY, 0.3) : 
+                    new THREE.Vector3(-1.1, -0.85 - deltaY, 0.3);
+                item.line.geometry.setFromPoints([item.p1, p2]);
+
+                if (val < 0) {
+                    item.line.material.color.setHex(0xB76E79); // slack/unsupported
+                } else {
+                    item.line.material.color.setHex(0x52796F); // taut youthful tone
+                }
+            });
+
+            // Adjust lowest phi plane (Menton / Chin)
+            if (phiPlanes[3]) {
+                phiPlanes[3].position.y = -1.3 - deltaY;
+            }
+        }
+
+        let cranioClock = 0;
+        function animateCranio() {
+            requestAnimationFrame(animateCranio);
+            cranioClock += 0.01;
+
+            if (cranioControls) cranioControls.update();
+
+            if (cranioGroup) {
+                // Gentle continuous turntable drift
+                cranioGroup.rotation.y += 0.005;
+                cranioGroup.position.y = Math.sin(cranioClock) * 0.04;
+            }
+
+            if (cranioRenderer && cranioScene && cranioCamera) {
+                cranioRenderer.render(cranioScene, cranioCamera);
+            }
+        }
+
+        // Init
+        window.addEventListener('DOMContentLoaded', () => {
+            initCranioEngine();
+
+            try {
+                if (typeof Lenis !== 'undefined') {
+                    const lenis = new Lenis({
+                        autoRaf: true,
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        smoothWheel: true,
+                        anchors: true
+                    });
+                    window.lenis = lenis;
+                }
+            } catch (e) {
+                console.error('Lenis init failed', e);
+            }
+        });
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initCranioEngine();
+        }
+    </script>
+</body>
+</html>

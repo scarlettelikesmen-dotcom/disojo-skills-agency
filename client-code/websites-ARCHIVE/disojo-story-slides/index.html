@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disojo // 9:16 Mobile Story Preview</title>
+<style>
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    background: #0D0F14;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 { font-size: 24px; margin-bottom: 8px; font-weight: 700; }
+  p { color: #9CA3AF; margin-bottom: 30px; font-size: 14px; }
+  .grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .phone-frame {
+    width: 360px;
+    height: 640px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 0 12px #1F2430;
+    position: relative;
+    background: #000;
+  }
+  .phone-frame iframe {
+    width: 1080px;
+    height: 1920px;
+    border: none;
+    transform: scale(0.333333);
+    transform-origin: top left;
+  }
+  .label {
+    text-align: center;
+    margin-top: 16px;
+    font-weight: 600;
+    color: #E5E7EB;
+  }
+</style>
+</head>
+<body>
+  <h1>Disojo // 9:16 Mobile Story Deck</h1>
+  <p>Engineered for comfortable mobile reading on iPhone / OLED displays.</p>
+  <div class="grid">
+    <div>
+      <div class="phone-frame">
+        <iframe src="slide_01.html"></iframe>
+      </div>
+      <div class="label">Slide 01 — System Architecture</div>
+    </div>
+    <div>
+      <div class="phone-frame">
+        <iframe src="slide_02.html"></iframe>
+      </div>
+      <div class="label">Slide 02 — The Problem</div>
+    </div>
+  </div>
+</body>
+</html>

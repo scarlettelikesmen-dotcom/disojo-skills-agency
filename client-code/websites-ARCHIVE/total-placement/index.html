@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Placement | Corporate Consulting</title>
+  <style>
+    :root { --p: #1e3a8a; --a: #94a3b8; --bg: #f8fafc; --t: #0f172a; --panel: #ffffff; }
+    body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--t); }
+    .split { display: flex; min-height: 100vh; }
+    .split-l { width: 40%; background: var(--p); color: #fff; position: fixed; height: 100vh; padding: 60px 40px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
+    .split-r { width: 60%; margin-left: 40%; padding: 60px 80px; box-sizing: border-box; }
+    .logo { font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--a); }
+    .split-l h1 { font-size: 56px; line-height: 1.1; margin: 40px 0 20px; font-weight: 600; letter-spacing: -1px; }
+    .split-l p { font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 400px; }
+    .btn { display: inline-block; padding: 16px 32px; background: var(--a); color: var(--p); font-weight: 600; text-decoration: none; margin-top: 40px; border-radius: 4px; }
+    .section-title { font-size: 14px; text-transform: uppercase; font-weight: 700; color: var(--p); letter-spacing: 1px; margin-bottom: 24px; border-bottom: 2px solid var(--a); padding-bottom: 12px; display: inline-block; }
+    .card-grid { display: grid; gap: 24px; margin-bottom: 80px; }
+    .card { background: var(--panel); padding: 32px; border: 1px solid #e2e8f0; border-left: 4px solid var(--p); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .card h3 { margin: 0 0 12px; font-size: 20px; }
+    .card p { margin: 0; color: #64748b; font-size: 15px; line-height: 1.6; }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 80px; }
+    .stat-box { background: var(--p); color: #fff; padding: 32px; border-radius: 4px; }
+    .stat-box strong { display: block; font-size: 48px; color: var(--a); margin-bottom: 8px; }
+    .accordion { border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden; }
+    .acc-item { border-bottom: 1px solid #e2e8f0; padding: 24px; background: var(--panel); }
+    .acc-item:last-child { border: none; }
+    .acc-item h4 { margin: 0; font-size: 16px; display: flex; justify-content: space-between; }
+    .acc-item h4::after { content: '+'; color: var(--a); font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="split">
+    <div class="split-l">
+      <div>
+        <div class="logo">Total Placement</div>
+        <h1>Elevating Corporate Standards.</h1>
+        <p>Expert consulting, precise execution, and robust strategies tailored for enterprise success in Gurugram.</p>
+        <a href="#" class="btn">Client Portal Login</a>
+      </div>
+      <div style="font-size: 12px; opacity: 0.5;">&copy; 2026 Total Placement Pvt. Ltd.</div>
+    </div>
+    <div class="split-r">
+      <div class="section-title">Core Competencies</div>
+      <div class="card-grid">
+        <div class="card"><h3>Executive Search</h3><p>Data-driven approaches to optimize your Executive Search operations, ensuring compliance and efficiency.</p></div>
+        <div class="card"><h3>Staffing Solutions</h3><p>Comprehensive strategies for Staffing Solutions that align with your long-term business objectives.</p></div>
+        <div class="card"><h3>Payroll Management</h3><p>Dedicated teams specializing in Payroll Management to streamline your internal processes.</p></div>
+        <div class="card"><h3>IT Recruitment</h3><p>Advanced metrics and reporting for IT Recruitment to drive actionable insights.</p></div>
+      </div>
+      
+      <div class="section-title">By The Numbers</div>
+      <div class="stats">
+        <div class="stat-box"><strong>500+</strong><span>Enterprise Clients</span></div>
+        <div class="stat-box"><strong>98%</strong><span>Retention Rate</span></div>
+      </div>
+
+      <div class="section-title">Methodology FAQs</div>
+      <div class="accordion">
+        <div class="acc-item"><h4>How do we begin the engagement?</h4></div>
+        <div class="acc-item"><h4>What is the typical project timeline?</h4></div>
+        <div class="acc-item"><h4>Do you offer continuous support?</h4></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOVEREIGN CREST // Multi-Family Office & Private Wealth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/OrbitControls.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        racingGreen: '#071A14',
+                        forestVault: '#0E2E24',
+                        goldLeaf: '#C5A059',
+                        parchment: '#F6F3EC',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #C5A059; color: #071A14; }
+        .crest-border {
+            border: 1px solid rgba(197, 160, 89, 0.25);
+        }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-racingGreen text-parchment font-sans antialiased overflow-x-hidden">
+
+    <!-- Top Mayfair Sovereign Header -->
+    <header class="border-b border-goldLeaf/20 bg-racingGreen/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-4">
+                <div class="w-10 h-10 border border-goldLeaf flex items-center justify-center font-serif text-xl font-bold text-goldLeaf">
+                    SC
+                </div>
+                <div>
+                    <div class="font-serif text-lg tracking-[0.2em] uppercase text-parchment font-semibold">SOVEREIGN CREST</div>
+                    <div class="font-mono text-[9px] text-gray-400 tracking-widest">MULTI-FAMILY OFFICE // MAYFAIR • GENEVA • SINGAPORE</div>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase text-gray-300">
+                <a href="#philosophy" class="hover:text-goldLeaf transition-colors">Philosophy</a>
+                <a href="#calculator" class="hover:text-goldLeaf transition-colors">Compounding Engine</a>
+                <a href="#memorandum" class="hover:text-goldLeaf transition-colors">CIO Letter</a>
+                <a href="#mandate" class="hover:text-goldLeaf transition-colors">Private Mandate</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <div class="hidden lg:flex items-center space-x-2 font-mono text-[10px] text-gray-400 border border-goldLeaf/20 px-3 py-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>AUM: <span class="text-parchment font-bold">£4.25 BILLION</span></span>
+                </div>
+                <a href="#mandate" class="px-5 py-2.5 bg-goldLeaf text-racingGreen font-medium text-xs tracking-widest uppercase hover:bg-white transition-all">
+                    CLIENT VAULT &rarr;
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero: Generational Wealth Preservation -->
+    <section class="py-24 px-6 border-b border-goldLeaf/20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1 border border-goldLeaf/30 text-goldLeaf text-[10px] tracking-[0.3em] uppercase mb-8">
+                    <span>FIDUCIARY STEWARDSHIP FOR 42 ULTRA-AFFLUENT DYNASTIES</span>
+                </div>
+
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-parchment font-light leading-[1.05] tracking-tight mb-8">
+                    Perpetuating<br>
+                    Dynastic Capital Across<br>
+                    <span class="italic text-goldLeaf font-normal">Centuries.</span>
+                </h1>
+
+                <p class="text-parchment/80 max-w-xl text-base font-light leading-relaxed mb-10">
+                    Sovereign Crest operates as an independent multi-family office in Mayfair, London. We insulate generational balance sheets through sovereign-grade direct private equity, real assets, and bespoke cross-border jurisdictional structuring.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="#calculator" class="px-8 py-4 bg-goldLeaf text-racingGreen font-medium text-xs tracking-widest uppercase text-center hover:bg-white transition-all">
+                        RUN WEALTH ENGINE SIMULATION
+                    </a>
+                    <a href="#memorandum" class="px-8 py-4 border border-goldLeaf/40 text-parchment text-xs tracking-widest uppercase text-center hover:border-goldLeaf transition-all">
+                        READ Q3 CIO MEMORANDUM
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-forestVault/70 border border-goldLeaf/30 p-8 shadow-2xl relative">
+                <div class="flex justify-between items-center border-b border-goldLeaf/20 pb-4 mb-4">
+                    <span class="font-mono text-xs text-goldLeaf uppercase tracking-widest">FIDUCIARY CAPITAL TOPOLOGY</span>
+                    <span class="font-mono text-xs text-gray-400">Q3 2026 // LIVE</span>
+                </div>
+
+                <!-- 3D Gyroscopic Armillary Viewport -->
+                <div class="relative w-full h-64 border border-goldLeaf/20 bg-racingGreen/80 mb-6 overflow-hidden group" data-lenis-prevent>
+                    <canvas id="armillary-canvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+                    
+                    <!-- HUD Telemetry -->
+                    <div class="absolute top-2.5 left-3 right-3 flex justify-between items-center pointer-events-none font-mono text-[9px] text-goldLeaf/90 tracking-wider">
+                        <span>3D ASSET GYROSCOPE</span>
+                        <span id="armillary-hud-status" class="text-emerald-400 font-semibold">EQUILIBRIUM: 100%</span>
+                    </div>
+
+                    <!-- Mode Selectors -->
+                    <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between font-mono text-[9px]">
+                        <div class="flex space-x-1">
+                            <button type="button" onclick="setArmillaryMode('orbital')" id="arm-btn-orbital" class="px-2 py-0.5 border border-goldLeaf bg-goldLeaf text-racingGreen font-semibold">ORBITAL</button>
+                            <button type="button" onclick="setArmillaryMode('stress')" id="arm-btn-stress" class="px-2 py-0.5 border border-goldLeaf/30 text-parchment/70 bg-racingGreen/90 hover:border-goldLeaf transition-colors">STRESS-SHIELD</button>
+                            <button type="button" onclick="setArmillaryMode('dynastic')" id="arm-btn-dynastic" class="px-2 py-0.5 border border-goldLeaf/30 text-parchment/70 bg-racingGreen/90 hover:border-goldLeaf transition-colors">DYNASTIC</button>
+                        </div>
+                        <span class="text-gray-400 font-mono text-[8px] hidden sm:inline tracking-widest">DRAG • ORBIT</span>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-xs font-mono text-gray-400 mb-1">
+                            <span>PRIVATE REAL ASSETS & TIMBER</span>
+                            <span class="text-parchment font-bold">34.5%</span>
+                        </div>
+                        <div class="w-full bg-racingGreen h-1.5">
+                            <div class="bg-goldLeaf h-1.5" style="width: 34.5%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-mono text-gray-400 mb-1">
+                            <span>DIRECT PRIVATE EQUITY & TECH FOUNDERS</span>
+                            <span class="text-parchment font-bold">28.0%</span>
+                        </div>
+                        <div class="w-full bg-racingGreen h-1.5">
+                            <div class="bg-goldLeaf h-1.5" style="width: 28.0%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-mono text-gray-400 mb-1">
+                            <span>SENIOR SECURED PRIVATE CREDIT</span>
+                            <span class="text-parchment font-bold">22.5%</span>
+                        </div>
+                        <div class="w-full bg-racingGreen h-1.5">
+                            <div class="bg-goldLeaf h-1.5" style="width: 22.5%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-mono text-gray-400 mb-1">
+                            <span>SWISS PHYSICAL GOLD & LIQUIDITY</span>
+                            <span class="text-parchment font-bold">15.0%</span>
+                        </div>
+                        <div class="w-full bg-racingGreen h-1.5">
+                            <div class="bg-goldLeaf h-1.5" style="width: 15.0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-goldLeaf/20 flex justify-between items-center font-mono text-xs">
+                    <span class="text-gray-400">30-YEAR ROLLING IRR:</span>
+                    <span class="text-goldLeaf font-bold text-base">12.4% NET</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dynastic Compounding Engine -->
+    <section id="calculator" class="py-24 px-6 max-w-7xl mx-auto border-b border-goldLeaf/20">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-mono text-xs text-goldLeaf uppercase tracking-widest block mb-2">// MATHEMATICS OF PRESERVATION</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-parchment font-light">Dynastic Compounding Simulator</h2>
+            <p class="text-parchment/70 text-sm mt-3 font-light leading-relaxed">
+                Explore the power of sovereign unconstrained multi-decade compounding when shielded from capital dilution and high inflation.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 bg-forestVault/40 border border-goldLeaf/30 p-8 md:p-14">
+            <!-- Sliders -->
+            <div class="lg:col-span-6 space-y-8">
+                <div>
+                    <div class="flex justify-between items-center mb-2 font-mono text-xs">
+                        <span class="text-gray-300 uppercase">COMMITTED BALANCE SHEET</span>
+                        <span id="capital-val" class="text-goldLeaf font-bold text-base">£25,000,000</span>
+                    </div>
+                    <input type="range" min="5" max="100" value="25" step="5" id="capital-slider" 
+                           class="w-full accent-amber-500 bg-racingGreen h-2 cursor-pointer" 
+                           oninput="runCalc()">
+                    <div class="flex justify-between font-mono text-[10px] text-gray-500 mt-1">
+                        <span>£5M (Minimum Mandate)</span>
+                        <span>£100M+ (Bespoke Family Trust)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2 font-mono text-xs">
+                        <span class="text-gray-300 uppercase">GENERATIONAL HORIZON</span>
+                        <span id="horizon-val" class="text-goldLeaf font-bold text-base">20 YEARS</span>
+                    </div>
+                    <input type="range" min="5" max="30" value="20" step="5" id="horizon-slider" 
+                           class="w-full accent-amber-500 bg-racingGreen h-2 cursor-pointer" 
+                           oninput="runCalc()">
+                    <div class="flex justify-between font-mono text-[10px] text-gray-500 mt-1">
+                        <span>5 Years</span>
+                        <span>15 Years (Next Gen)</span>
+                        <span>30 Years (Centennial)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="font-mono text-xs text-gray-300 uppercase block mb-3">ALLOCATION PROFILE</span>
+                    <div class="grid grid-cols-3 gap-3 font-mono text-xs">
+                        <button onclick="setProfile('endowment', 0.084)" id="btn-endowment" class="p-3 bg-racingGreen border border-goldLeaf/30 text-gray-300 text-left hover:border-goldLeaf">
+                            <span class="block text-goldLeaf font-bold">8.4%</span>
+                            <span class="text-[10px] text-gray-400">Endowment</span>
+                        </button>
+                        <button onclick="setProfile('balanced', 0.116)" id="btn-balanced" class="p-3 bg-racingGreen border-2 border-goldLeaf text-white text-left">
+                            <span class="block text-goldLeaf font-bold">11.6%</span>
+                            <span class="text-[10px] text-gray-400">Multi-Asset</span>
+                        </button>
+                        <button onclick="setProfile('direct', 0.152)" id="btn-direct" class="p-3 bg-racingGreen border border-goldLeaf/30 text-gray-300 text-left hover:border-goldLeaf">
+                            <span class="block text-goldLeaf font-bold">15.2%</span>
+                            <span class="text-[10px] text-gray-400">Direct Equity</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculated Output Card -->
+            <div class="lg:col-span-6 bg-racingGreen border border-goldLeaf/40 p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between border-b border-goldLeaf/20 pb-4 mb-6 font-mono text-xs text-gray-400">
+                        <span>PROJECTED CORPUS AFTER HORIZON</span>
+                        <span class="text-goldLeaf font-bold">NET OF FEES</span>
+                    </div>
+
+                    <div class="mb-8">
+                        <div id="projected-corpus" class="font-serif text-5xl md:text-6xl text-parchment font-semibold mb-2">
+                            £224.8M
+                        </div>
+                        <span class="font-mono text-xs text-emerald-400 block">
+                            +£199.8M NET CAPITAL PRESERVATION GAIN
+                        </span>
+                    </div>
+
+                    <div class="space-y-4 font-mono text-xs border-t border-goldLeaf/15 pt-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Projected Annual Dividend Yield</span>
+                            <span id="annual-yield" class="text-parchment font-bold">£8.99M / YEAR</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Tax Jurisdictional Shielding</span>
+                            <span class="text-goldLeaf font-bold">Jersey / Swiss Treuhand</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Direct Physical Gold Allocation</span>
+                            <span id="gold-holding" class="text-parchment font-bold">£33.7M Allocated</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-goldLeaf/20">
+                    <a href="#mandate" class="w-full py-4 bg-goldLeaf text-racingGreen font-medium text-xs tracking-widest uppercase block text-center hover:bg-white transition-all">
+                        REQUEST CONFIDENTIAL MANDATE DISCUSSION &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CIO Memorandum -->
+    <section id="memorandum" class="py-24 px-6 max-w-4xl mx-auto border-b border-goldLeaf/20">
+        <div class="border border-goldLeaf/30 p-8 md:p-14 bg-forestVault/30">
+            <div class="flex items-center justify-between border-b border-goldLeaf/20 pb-6 mb-8">
+                <div>
+                    <span class="font-mono text-xs text-goldLeaf uppercase tracking-widest block mb-1">CIO QUARTERLY MEMORANDUM</span>
+                    <h3 class="font-serif text-2xl md:text-3xl text-parchment font-semibold">The Great Real Asset Rotation</h3>
+                </div>
+                <div class="text-right font-mono text-xs text-gray-400">
+                    MAYFAIR, LONDON<br>
+                    Q3 2026
+                </div>
+            </div>
+
+            <div class="space-y-6 text-parchment/80 font-serif text-base md:text-lg leading-relaxed font-light">
+                <p>
+                    <span class="font-semibold text-parchment">To the Dynastic Principals:</span> As public equity markets grapple with historic concentration and currency volatility, our investment committee has accelerated our allocation into non-correlated hard collateral. Over the past twelve months, we have completed acquisitions of 4,200 hectares of sustainable forestry in Scandinavia, senior secured loans to medical robotics pioneers, and physically allocated allocated gold bullion stored in subterranean Zurich vaults.
+                </p>
+                <p>
+                    Our mandate has never been to chase quarterly headlines; it is to ensure that a family's purchasing power in 2076 is ten times stronger than it was in 1976. In an era of monetary expansion, true wealth belongs to those who own productive, scarce, irreplaceable assets.
+                </p>
+                <div class="pt-6 border-t border-goldLeaf/20 flex items-center justify-between font-sans text-xs">
+                    <div>
+                        <div class="font-serif text-base text-parchment font-bold">Lord Alistair Sterling-Crest</div>
+                        <div class="text-gray-400 font-mono text-[10px]">Chief Investment Officer, Sovereign Crest Ltd.</div>
+                    </div>
+                    <div class="w-16 h-8 opacity-60 font-serif italic text-goldLeaf text-xl">
+                        A. Sterling
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mandate Inquiry -->
+    <section id="mandate" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="font-mono text-xs text-goldLeaf uppercase tracking-widest block mb-2">// DISCREET PROTOCOL</span>
+            <h2 class="font-serif text-3xl md:text-4xl text-parchment font-light">Initiate Fiduciary Dialogue</h2>
+            <p class="text-parchment/70 text-xs mt-2 font-light">
+                Client onboarding is subject to committee sanction and strict international Know-Your-Customer verification.
+            </p>
+        </div>
+
+        <form class="space-y-6 bg-forestVault/40 border border-goldLeaf/30 p-8 md:p-12" onsubmit="event.preventDefault(); alert('Mandate submission received. The Senior Partner will reach out via end-to-end encrypted dispatch.');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
+                <div>
+                    <label class="text-gray-400 block mb-2 uppercase">Principal / Trustee Full Name</label>
+                    <input type="text" required placeholder="Sir Arthur Sterling" class="w-full bg-racingGreen border border-goldLeaf/30 px-4 py-3 text-parchment focus:border-goldLeaf focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-gray-400 block mb-2 uppercase">Encrypted Telephone / Signal</label>
+                    <input type="tel" required placeholder="+44 20 7946 0000" class="w-full bg-racingGreen border border-goldLeaf/30 px-4 py-3 text-parchment focus:border-goldLeaf focus:outline-none">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
+                <div>
+                    <label class="text-gray-400 block mb-2 uppercase">Investable Liquid Corpus</label>
+                    <select class="w-full bg-racingGreen border border-goldLeaf/30 px-4 py-3 text-parchment focus:border-goldLeaf focus:outline-none">
+                        <option>£5M – £25M (Private Family Mandate)</option>
+                        <option>£25M – £100M (Multi-Jurisdictional Trust)</option>
+                        <option>£100M+ (Sovereign / Single Family Office Partnership)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-gray-400 block mb-2 uppercase">Primary Structuring Objective</label>
+                    <select class="w-full bg-racingGreen border border-goldLeaf/30 px-4 py-3 text-parchment focus:border-goldLeaf focus:outline-none">
+                        <option>Centennial Dynastic Succession & Estate Protection</option>
+                        <option>Direct Private Equity & Alternative Co-Investments</option>
+                        <option>Swiss Physical Collateral & Jurisdictional Relocation</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-goldLeaf text-racingGreen font-medium text-xs font-mono uppercase tracking-widest hover:bg-white transition-all">
+                TRANSMIT FIDUCIARY MEMO &rarr;
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-goldLeaf/20 py-12 px-6 max-w-7xl mx-auto font-mono text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-4">
+        <div>&copy; 2026 SOVEREIGN CREST FAMILY OFFICE LTD. MAYFAIR • GENEVA. AUTHORISED & REGULATED BY THE FCA.</div>
+        <div>STRICT CONFIDENTIALITY GOVERNED UNDER PRIVILEGE.</div>
+    </footer>
+
+    <script>
+        let currentRate = 0.116;
+
+        function setProfile(key, rate) {
+            currentRate = rate;
+            ['endowment', 'balanced', 'direct'].forEach(k => {
+                const btn = document.getElementById('btn-' + k);
+                if (k === key) {
+                    btn.className = "p-3 bg-racingGreen border-2 border-goldLeaf text-white text-left";
+                } else {
+                    btn.className = "p-3 bg-racingGreen border border-goldLeaf/30 text-gray-300 text-left hover:border-goldLeaf";
+                }
+            });
+            runCalc();
+        }
+
+        function runCalc() {
+            const capM = parseFloat(document.getElementById('capital-slider').value);
+            const years = parseInt(document.getElementById('horizon-slider').value);
+
+            document.getElementById('capital-val').textContent = '£' + capM.toLocaleString() + ',000,000';
+            document.getElementById('horizon-val').textContent = years + ' YEARS';
+
+            // Compound interest: A = P * (1 + r)^t
+            const futureM = capM * Math.pow(1 + currentRate, years);
+            const annualYieldM = futureM * 0.04;
+            const goldM = futureM * 0.15;
+
+            document.getElementById('projected-corpus').textContent = '£' + futureM.toFixed(1) + 'M';
+            document.getElementById('annual-yield').textContent = '£' + annualYieldM.toFixed(2) + 'M / YEAR';
+            document.getElementById('gold-holding').textContent = '£' + goldM.toFixed(1) + 'M Allocated';
+
+            if (typeof updateArmillaryFromSimulator === 'function') {
+                updateArmillaryFromSimulator(futureM, currentRate);
+            }
+        }
+
+        // --- 3D CAPITAL TOPOLOGY GYROSCOPE ENGINE (Three.js) ---
+        let armillaryScene, armillaryCamera, armillaryRenderer, armillaryControls;
+        let armillaryRings = [];
+        let armillaryCoreGroup, armillaryCoreMesh, armillaryDust;
+        let armillaryMode = 'orbital';
+        let armillarySpeedMultiplier = 1.0;
+        let targetCoreScale = 1.0;
+
+        function initArmillary() {
+            const canvas = document.getElementById('armillary-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const rect = canvas.getBoundingClientRect();
+            const width = rect.width || canvas.clientWidth || 400;
+            const height = rect.height || canvas.clientHeight || 256;
+
+            armillaryScene = new THREE.Scene();
+            armillaryCamera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
+            armillaryCamera.position.set(0, 1.8, 6.5);
+
+            armillaryRenderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                antialias: true,
+                alpha: true,
+                powerPreference: 'high-performance'
+            });
+            armillaryRenderer.setSize(width, height);
+            armillaryRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            armillaryControls = new THREE.OrbitControls(armillaryCamera, canvas);
+            armillaryControls.enableDamping = true;
+            armillaryControls.dampingFactor = 0.05;
+            armillaryControls.enableZoom = false;
+            armillaryControls.enablePan = false;
+            armillaryControls.autoRotate = false;
+
+            // Lights
+            const ambient = new THREE.AmbientLight(0xfef5e7, 1.2);
+            armillaryScene.add(ambient);
+
+            const goldKeyLight = new THREE.PointLight(0xC5A059, 3.5, 30);
+            goldKeyLight.position.set(4, 5, 4);
+            armillaryScene.add(goldKeyLight);
+
+            const fillCyanLight = new THREE.PointLight(0x40E0D0, 1.2, 25);
+            fillCyanLight.position.set(-4, -3, -3);
+            armillaryScene.add(fillCyanLight);
+
+            // Group
+            armillaryCoreGroup = new THREE.Group();
+            armillaryScene.add(armillaryCoreGroup);
+
+            // Core icosahedron (Swiss Gold & Sovereign Anchor)
+            const coreGeo = new THREE.IcosahedronGeometry(0.72, 0);
+            const coreMat = new THREE.MeshStandardMaterial({
+                color: 0xC5A059,
+                metalness: 0.95,
+                roughness: 0.18,
+                emissive: 0x3d2c0b,
+                emissiveIntensity: 0.2
+            });
+            armillaryCoreMesh = new THREE.Mesh(coreGeo, coreMat);
+            armillaryCoreGroup.add(armillaryCoreMesh);
+
+            const coreWireGeo = new THREE.IcosahedronGeometry(0.74, 1);
+            const coreWireMat = new THREE.MeshBasicMaterial({
+                color: 0xffe8a3,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.35
+            });
+            const coreWire = new THREE.Mesh(coreWireGeo, coreWireMat);
+            armillaryCoreGroup.add(coreWire);
+
+            // Concentric Rings
+            const ringSpecs = [
+                { r: 1.35, t: 0.022, rot: [0.6, 0.4, 0.2], speed: 0.009, name: 'Real Assets' },
+                { r: 1.85, t: 0.020, rot: [-0.5, 0.8, -0.3], speed: -0.013, name: 'Private Equity' },
+                { r: 2.30, t: 0.018, rot: [0.3, -0.7, 0.9], speed: 0.007, name: 'Private Credit' },
+                { r: 2.70, t: 0.015, rot: [-0.8, -0.2, 0.5], speed: -0.005, name: 'Swiss Gold Meridian' }
+            ];
+
+            const ringMat = new THREE.MeshStandardMaterial({
+                color: 0xC5A059,
+                metalness: 0.9,
+                roughness: 0.25
+            });
+
+            ringSpecs.forEach((spec) => {
+                const ringGroup = new THREE.Group();
+                ringGroup.rotation.set(spec.rot[0], spec.rot[1], spec.rot[2]);
+
+                const geo = new THREE.TorusGeometry(spec.r, spec.t, 16, 80);
+                const mesh = new THREE.Mesh(geo, ringMat);
+                ringGroup.add(mesh);
+
+                // Add an orbiting fiduciary node sphere
+                const nodeGeo = new THREE.SphereGeometry(0.065, 12, 12);
+                const nodeMat = new THREE.MeshBasicMaterial({ color: 0xfff3cf });
+                const nodeMesh = new THREE.Mesh(nodeGeo, nodeMat);
+                nodeMesh.position.set(spec.r, 0, 0);
+                ringGroup.add(nodeMesh);
+
+                armillaryCoreGroup.add(ringGroup);
+                armillaryRings.push({
+                    group: ringGroup,
+                    baseRot: [...spec.rot],
+                    speed: spec.speed
+                });
+            });
+
+            // Ambient Gold Floating Dust Particles
+            const dustCount = 140;
+            const dustGeo = new THREE.BufferGeometry();
+            const dustPositions = new Float32Array(dustCount * 3);
+            for (let i = 0; i < dustCount; i++) {
+                const r = 1.0 + Math.random() * 2.8;
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.acos(2 * Math.random() - 1);
+                dustPositions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+                dustPositions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+                dustPositions[i * 3 + 2] = r * Math.cos(phi);
+            }
+            dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPositions, 3));
+            const dustMat = new THREE.PointsMaterial({
+                color: 0xC5A059,
+                size: 0.045,
+                transparent: true,
+                opacity: 0.65
+            });
+            armillaryDust = new THREE.Points(dustGeo, dustMat);
+            armillaryCoreGroup.add(armillaryDust);
+
+            window.addEventListener('resize', () => {
+                if (!canvas) return;
+                const w = canvas.clientWidth;
+                const h = canvas.clientHeight;
+                if (w && h) {
+                    armillaryCamera.aspect = w / h;
+                    armillaryCamera.updateProjectionMatrix();
+                    armillaryRenderer.setSize(w, h);
+                }
+            });
+
+            animateArmillary();
+        }
+
+        function setArmillaryMode(mode) {
+            armillaryMode = mode;
+            ['orbital', 'stress', 'dynastic'].forEach(m => {
+                const btn = document.getElementById('arm-btn-' + m);
+                if (!btn) return;
+                if (m === mode) {
+                    btn.className = "px-2 py-0.5 border border-goldLeaf bg-goldLeaf text-racingGreen font-semibold";
+                } else {
+                    btn.className = "px-2 py-0.5 border border-goldLeaf/30 text-parchment/70 bg-racingGreen/90 hover:border-goldLeaf transition-colors";
+                }
+            });
+
+            const statusEl = document.getElementById('armillary-hud-status');
+            if (statusEl) {
+                if (mode === 'orbital') {
+                    statusEl.textContent = 'EQUILIBRIUM: 100%';
+                    statusEl.className = 'text-emerald-400 font-semibold';
+                    armillarySpeedMultiplier = 1.0;
+                } else if (mode === 'stress') {
+                    statusEl.textContent = 'DEFENSIVE COHESION';
+                    statusEl.className = 'text-amber-300 font-semibold';
+                    armillarySpeedMultiplier = 0.45;
+                } else if (mode === 'dynastic') {
+                    statusEl.textContent = 'EXPANSION: 15.2% IRR';
+                    statusEl.className = 'text-goldLeaf font-semibold';
+                    armillarySpeedMultiplier = 1.75;
+                }
+            }
+        }
+
+        function animateArmillary() {
+            requestAnimationFrame(animateArmillary);
+
+            if (armillaryControls) armillaryControls.update();
+
+            if (armillaryCoreMesh) {
+                armillaryCoreMesh.rotation.y += 0.008 * armillarySpeedMultiplier;
+                armillaryCoreMesh.rotation.x += 0.005 * armillarySpeedMultiplier;
+                const cur = armillaryCoreMesh.scale.x;
+                const next = cur + (targetCoreScale - cur) * 0.08;
+                armillaryCoreMesh.scale.set(next, next, next);
+            }
+
+            if (armillaryDust) {
+                armillaryDust.rotation.y -= 0.002 * armillarySpeedMultiplier;
+            }
+
+            armillaryRings.forEach((r, idx) => {
+                if (armillaryMode === 'stress') {
+                    r.group.rotation.x += (0.2 * idx - r.group.rotation.x) * 0.05;
+                    r.group.rotation.y += r.speed * 0.4;
+                } else {
+                    r.group.rotation.x += r.speed * armillarySpeedMultiplier;
+                    r.group.rotation.y += (r.speed * 1.3) * armillarySpeedMultiplier;
+                    r.group.rotation.z += (r.speed * 0.7) * armillarySpeedMultiplier;
+                }
+            });
+
+            if (armillaryRenderer && armillaryScene && armillaryCamera) {
+                armillaryRenderer.render(armillaryScene, armillaryCamera);
+            }
+        }
+
+        function updateArmillaryFromSimulator(futureM, rate) {
+            targetCoreScale = Math.min(1.4, Math.max(0.75, 0.75 + (futureM / 600)));
+            if (armillaryMode === 'orbital') {
+                armillarySpeedMultiplier = 0.8 + (rate * 5);
+            }
+        }
+
+        // Init
+        runCalc();
+        window.addEventListener('DOMContentLoaded', () => {
+            initArmillary();
+
+            try {
+                if (typeof Lenis !== 'undefined') {
+                    const lenis = new Lenis({
+                        autoRaf: true,
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        smoothWheel: true,
+                        anchors: true
+                    });
+                    window.lenis = lenis;
+                }
+            } catch (e) {
+                console.error('Lenis init failed', e);
+            }
+        });
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initArmillary();
+        }
+    </script>
+</body>
+</html>

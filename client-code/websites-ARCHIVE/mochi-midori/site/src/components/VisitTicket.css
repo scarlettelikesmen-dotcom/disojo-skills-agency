@@ -1,0 +1,11 @@
+.visit { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 6vw, 96px); align-items: center; padding-top: clamp(90px, 14vh, 170px); padding-bottom: clamp(90px, 14vh, 170px); background: var(--deep); color: var(--paper); }
+.visit-arch { aspect-ratio: 4 / 5; overflow: hidden; border-radius: 999px 999px 6px 6px; }
+.visit-arch img { width: 100%; height: 100%; object-fit: cover; object-position: 66% 50%; }
+.ticket { position: relative; display: grid; gap: 1.4rem; padding: clamp(28px, 4vw, 56px); background: var(--paper); color: var(--ink); --r: 12px; -webkit-mask: radial-gradient(circle var(--r) at 0 50%, #0000 98%, #000) left / 51% 28px repeat-y, radial-gradient(circle var(--r) at 100% 50%, #0000 98%, #000) right / 51% 28px repeat-y; mask: radial-gradient(circle var(--r) at 0 50%, #0000 98%, #000) left / 51% 28px repeat-y, radial-gradient(circle var(--r) at 100% 50%, #0000 98%, #000) right / 51% 28px repeat-y; transform: rotate(-1.2deg); }
+.ticket-top { color: #A93220; }
+.ticket-title { font-size: clamp(2.4rem, 5vw, 4.6rem); }
+.ticket-addr { display: grid; font-style: normal; font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+.ticket-hours { border-top: 1.5px dashed rgba(20, 24, 26, 0.5); }
+.ticket-hours li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.7rem 0; border-bottom: 1.5px dashed rgba(20, 24, 26, 0.5); font-weight: 500; }
+.ticket-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+@media (max-width: 860px) { .visit { grid-template-columns: 1fr; } .visit-arch { aspect-ratio: 1 / 1; } }

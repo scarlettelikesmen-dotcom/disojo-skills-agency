@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography Specimen Lab // Disojo Studio</title>
+  
+  <!-- Fontshare Fonts (Cabinet Grotesk, Satoshi, General Sans) -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,200,300,400,500,700,800,900&f[]=satoshi@300,400,500,700&f[]=general-sans@300,400,500,600&display=swap" rel="stylesheet">
+  
+  <!-- Google Fonts (Space Grotesk, Inter Tight, Geist, Plus Jakarta Sans, Instrument Sans, Schibsted Grotesk, Space Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'Freigeist-Con-Light';
+      src: url('./fonts/freigeist-con-light.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP-Neue-Montreal';
+      src: url('./fonts/pp-neue-montreal-book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP-Neue-Montreal';
+      src: url('./fonts/pp-neue-montreal-medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP-Neue-Montreal';
+      src: url('./fonts/pp-neue-montreal-bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Soehne';
+      src: url('./fonts/soehne-buch.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Soehne';
+      src: url('./fonts/soehne-kraftig.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #FAF8F5;
+      --card-bg: #FFFFFF;
+      --card-border: #E5DFD6;
+      --ink: #111111;
+      --ink-muted: #73716A;
+      --accent-orange: #FF9B50;
+      --accent-green: #1A7F4B;
+      --pill-bg: #EDE7E0;
+    }
+
+    body.dark-mode {
+      --bg: #0B0F17;
+      --card-bg: #121620;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --ink: #F8FAFC;
+      --ink-muted: #94A3B8;
+      --pill-bg: #1C2230;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'Instrument Sans', -apple-system, sans-serif;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      min-height: 100vh;
+      padding-bottom: 90px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--card-border);
+      padding: 18px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(26, 127, 75, 0.12);
+      color: var(--accent-green);
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .badge-live::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-green);
+    }
+
+    .controls-panel {
+      padding: 22px 36px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: sticky;
+      top: 61px;
+      z-index: 40;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .control-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--ink-muted);
+    }
+
+    .preset-btn {
+      background: var(--pill-bg);
+      border: 1px solid var(--card-border);
+      color: var(--ink);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-family: 'Space Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .preset-btn:hover, .preset-btn.active {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    .slider-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--pill-bg);
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    .slider-group input[type="range"] {
+      cursor: pointer;
+    }
+
+    .custom-input-box {
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .custom-input-box:focus {
+      border-color: var(--ink);
+    }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      padding-top: 4px;
+    }
+
+    .nav-pill {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--pill-bg);
+      transition: color 0.15s;
+    }
+
+    .nav-pill:hover {
+      color: var(--ink);
+    }
+
+    .specimen-grid {
+      max-width: 1440px;
+      margin: 36px auto;
+      padding: 0 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .font-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 36px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+
+    .font-card:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .font-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 16px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .font-meta-left {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .font-name {
+      font-family: 'Space Mono', monospace;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .font-foundry {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .font-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'Space Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-paid {
+      background: #FFF1F0;
+      color: #EF4444;
+      border: 1px solid #FECACA;
+    }
+
+    .badge-free {
+      background: #E8F5E9;
+      color: #1A7F4B;
+      border: 1px solid #C8E6C9;
+    }
+
+    .badge-current {
+      background: rgba(255, 155, 80, 0.15);
+      color: #C85A17;
+      border: 1px solid rgba(255, 155, 80, 0.35);
+    }
+
+    .specimen-text {
+      line-height: var(--line-height, 1.18);
+      letter-spacing: var(--letter-spacing, -0.02em);
+      font-size: var(--font-size, 46px);
+      font-weight: var(--font-weight, 400);
+      word-break: break-word;
+      transition: font-size 0.1s ease;
+    }
+
+    /* Font Family Bindings */
+    .font-freigeist {
+      font-family: 'Freigeist-Con-Light', sans-serif;
+      font-weight: 300 !important;
+    }
+
+    .font-space {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .font-satoshi {
+      font-family: 'Satoshi', sans-serif;
+    }
+
+    .font-inter-tight {
+      font-family: 'Inter Tight', sans-serif;
+    }
+
+    .font-geist {
+      font-family: 'Geist', sans-serif;
+    }
+
+    .font-cabinet {
+      font-family: 'Cabinet Grotesk', sans-serif;
+    }
+
+    .font-montreal {
+      font-family: 'PP-Neue-Montreal', sans-serif;
+    }
+
+    .font-jakarta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .font-general {
+      font-family: 'General Sans', sans-serif;
+    }
+
+    .font-instrument {
+      font-family: 'Instrument Sans', sans-serif;
+    }
+
+    .font-schibsted {
+      font-family: 'Schibsted Grotesk', sans-serif;
+    }
+
+    .font-soehne {
+      font-family: 'Soehne', sans-serif;
+    }
+
+    .character-ribbon {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .key-glyphs {
+      font-size: 20px;
+      color: var(--ink);
+      letter-spacing: 7px;
+    }
+
+    .theme-toggle-btn {
+      background: var(--ink);
+      color: var(--bg);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-group">
+      <div class="brand-title">Disojo Typography Lab</div>
+      <div class="badge-live">Live Comparison (12 Curated Typefaces)</div>
+    </div>
+    <div>
+      <button class="theme-toggle-btn" onclick="toggleDarkMode()">Toggle Dark / Studio Canvas</button>
+    </div>
+  </header>
+
+  <div class="controls-panel">
+    <div class="controls-row">
+      <span class="control-label">Text Presets:</span>
+      <button class="preset-btn active" onclick="setPreset(1, this)">1. Quatrecentquatre Agency Statement</button>
+      <button class="preset-btn" onclick="setPreset(2, this)">2. Disojo Master Hero Hook</button>
+      <button class="preset-btn" onclick="setPreset(3, this)">3. Bespoke Engineering Copy</button>
+      <button class="preset-btn" onclick="setPreset(4, this)">4. Telemetry & Numeral Stress Test</button>
+    </div>
+
+    <div class="controls-row">
+      <div class="slider-group">
+        <span class="control-label">Size: <strong id="sizeVal">46px</strong></span>
+        <input type="range" id="sizeSlider" min="24" max="80" value="46" oninput="updateSize(this.value)">
+      </div>
+
+      <div class="slider-group">
+        <span class="control-label">Weight: <strong id="weightVal">400</strong></span>
+        <input type="range" id="weightSlider" min="300" max="700" step="100" value="400" oninput="updateWeight(this.value)">
+      </div>
+
+      <div class="slider-group">
+        <span class="control-label">Tracking: <strong id="trackVal">-0.02em</strong></span>
+        <input type="range" id="trackSlider" min="-0.06" max="0.04" step="0.005" value="-0.02" oninput="updateTrack(this.value)">
+      </div>
+
+      <div class="slider-group">
+        <span class="control-label">Line-Height: <strong id="lhVal">1.18</strong></span>
+        <input type="range" id="lhSlider" min="0.95" max="1.5" step="0.02" value="1.18" oninput="updateLh(this.value)">
+      </div>
+    </div>
+
+    <div>
+      <input type="text" id="customTextInput" class="custom-input-box" placeholder="Type custom headline to preview live across all 12 typefaces..." oninput="updateCustomText(this.value)">
+    </div>
+
+    <div class="quick-nav">
+      <span class="control-label">Jump To:</span>
+      <a class="nav-pill" href="#font-freigeist">1. Freigeist (QCQ Ref)</a>
+      <a class="nav-pill" href="#font-space">2. Space Grotesk</a>
+      <a class="nav-pill" href="#font-satoshi">3. Satoshi</a>
+      <a class="nav-pill" href="#font-inter-tight">4. Inter Tight</a>
+      <a class="nav-pill" href="#font-geist">5. Geist</a>
+      <a class="nav-pill" href="#font-cabinet">6. Cabinet Grotesk</a>
+      <a class="nav-pill" href="#font-montreal">7. PP Neue Montreal</a>
+      <a class="nav-pill" href="#font-jakarta">8. Plus Jakarta Sans</a>
+      <a class="nav-pill" href="#font-general">9. General Sans</a>
+      <a class="nav-pill" href="#font-instrument">10. Instrument Sans</a>
+      <a class="nav-pill" href="#font-schibsted">11. Schibsted Grotesk</a>
+      <a class="nav-pill" href="#font-soehne">12. Söhne (Current)</a>
+    </div>
+  </div>
+
+  <div class="specimen-grid">
+
+    <!-- Card 1: Freigeist Condensed Light -->
+    <div class="font-card" id="font-freigeist">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">1. Freigeist Condensed Light</span>
+          <span class="font-foundry">By René Bieder (Exact Quatrecentquatre reference)</span>
+        </div>
+        <div>
+          <span class="font-badge badge-paid">Commercial (~)</span>
+        </div>
+      </div>
+      <div class="specimen-text font-freigeist target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Signature Glyphs (Curved 'r' spur & tall condensed x-height):</span>
+        <span class="key-glyphs font-freigeist">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 2: Space Grotesk -->
+    <div class="font-card" id="font-space">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">2. Space Grotesk</span>
+          <span class="font-foundry">By Florian Karsten (Requested · Derived from Space Mono)</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Google Fonts</span>
+        </div>
+      </div>
+      <div class="specimen-text font-space target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Brutalist tech geometry, idiosyncratic open loops & sharp terminals:</span>
+        <span class="key-glyphs font-space">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 3: Satoshi -->
+    <div class="font-card" id="font-satoshi">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">3. Satoshi</span>
+          <span class="font-foundry">By Indian Type Foundry / Fontshare (Modernist Agency Masterpiece)</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Open License</span>
+        </div>
+      </div>
+      <div class="specimen-text font-satoshi target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Ultra-clean modernist neo-grotesque with refined optical curves:</span>
+        <span class="key-glyphs font-satoshi">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 4: Inter Tight -->
+    <div class="font-card" id="font-inter-tight">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">4. Inter Tight</span>
+          <span class="font-foundry">By Rasmus Andersson / Google Fonts (Tailored for Large Headlines)</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Google Fonts</span>
+        </div>
+      </div>
+      <div class="specimen-text font-inter-tight target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Condensed tracking & vertical rhythm (nearest compact cadence to Freigeist):</span>
+        <span class="key-glyphs font-inter-tight">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 5: Geist -->
+    <div class="font-card" id="font-geist">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">5. Geist</span>
+          <span class="font-foundry">By Vercel & Guillermo Rauch / Google Fonts</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Google Fonts</span>
+        </div>
+      </div>
+      <div class="specimen-text font-geist target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Razor-sharp engineering precision & neutral Swiss discipline:</span>
+        <span class="key-glyphs font-geist">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 6: Cabinet Grotesk -->
+    <div class="font-card" id="font-cabinet">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">6. Cabinet Grotesk</span>
+          <span class="font-foundry">By Indian Type Foundry / Fontshare</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Open License</span>
+        </div>
+      </div>
+      <div class="specimen-text font-cabinet target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Distinct wide punch, playful geometric terminals & neo-brutalist cuts:</span>
+        <span class="key-glyphs font-cabinet">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 7: PP Neue Montreal -->
+    <div class="font-card" id="font-montreal">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">7. PP Neue Montreal</span>
+          <span class="font-foundry">By Pangram Pangram (Global Agency Gold Standard)</span>
+        </div>
+        <div>
+          <span class="font-badge badge-paid">Commercial () / Free for testing</span>
+        </div>
+      </div>
+      <div class="specimen-text font-montreal target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Pristine Swiss geometry & high-luxury European agency authority:</span>
+        <span class="key-glyphs font-montreal">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 8: Plus Jakarta Sans -->
+    <div class="font-card" id="font-jakarta">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">8. Plus Jakarta Sans</span>
+          <span class="font-foundry">By Tokotype / Gumpita Rahayu / Google Fonts</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Google Fonts</span>
+        </div>
+      </div>
+      <div class="specimen-text font-jakarta target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Clean geometric grotesque with open counters & contemporary warmth:</span>
+        <span class="key-glyphs font-jakarta">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 9: General Sans -->
+    <div class="font-card" id="font-general">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">9. General Sans</span>
+          <span class="font-foundry">By Indian Type Foundry / Fontshare</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Open License</span>
+        </div>
+      </div>
+      <div class="specimen-text font-general target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>French rationalist grotesque with high aesthetic posture:</span>
+        <span class="key-glyphs font-general">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 10: Instrument Sans -->
+    <div class="font-card" id="font-instrument">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">10. Instrument Sans</span>
+          <span class="font-foundry">By Instrument / Google Fonts</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Google Fonts</span>
+        </div>
+      </div>
+      <div class="specimen-text font-instrument target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Silicon Valley software precision & clean terminals:</span>
+        <span class="key-glyphs font-instrument">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 11: Schibsted Grotesk -->
+    <div class="font-card" id="font-schibsted">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">11. Schibsted Grotesk</span>
+          <span class="font-foundry">By Bakken & Bæck / Google Fonts</span>
+        </div>
+        <div>
+          <span class="font-badge badge-free">100% Free / Google Fonts</span>
+        </div>
+      </div>
+      <div class="specimen-text font-schibsted target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Nordic editorial newsroom grotesque with human warmth:</span>
+        <span class="key-glyphs font-schibsted">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+    <!-- Card 12: Söhne (Current Disojo Font) -->
+    <div class="font-card" id="font-soehne">
+      <div class="font-card-header">
+        <div class="font-meta-left">
+          <span class="font-name">12. Söhne (Current Disojo Font)</span>
+          <span class="font-foundry">By Klim Type Foundry</span>
+        </div>
+        <div>
+          <span class="font-badge badge-current">Active on Disojo.in</span>
+        </div>
+      </div>
+      <div class="specimen-text font-soehne target-text">
+        Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.
+      </div>
+      <div class="character-ribbon">
+        <span>Akzidenz-Grotesk memory & authoritative architectural structure:</span>
+        <span class="key-glyphs font-soehne">r g a Q R & ? 0123456789</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const presets = {
+      1: "Our web agency has made a name for itself with its expertise, strategic depth and creative ingenuity. Our customers confirm it. We deliver on what we promise: clever digital solutions, designed to evolve.",
+      2: "Disojo is an independent software studio. We design, engineer, and deploy operating systems for businesses that demand precision.",
+      3: "We engineer custom operating suites, roll-call stations, and automated workflows for businesses that have outgrown spreadsheets.",
+      4: "₹3,25,000 Milestone · 39 Batches · 7 Kits · 226 Active Learners · 94% Retention Rate"
+    };
+
+    function setPreset(id, btn) {
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const text = presets[id];
+      document.getElementById('customTextInput').value = '';
+      applyText(text);
+    }
+
+    function updateCustomText(val) {
+      if (!val.trim()) {
+        const activeBtn = document.querySelector('.preset-btn.active');
+        const id = activeBtn ? parseInt(activeBtn.getAttribute('onclick').match(/\d+/)[0]) : 1;
+        applyText(presets[id]);
+      } else {
+        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        applyText(val);
+      }
+    }
+
+    function applyText(text) {
+      document.querySelectorAll('.target-text').forEach(el => {
+        el.textContent = text;
+      });
+    }
+
+    function updateSize(val) {
+      document.getElementById('sizeVal').textContent = val + 'px';
+      document.querySelectorAll('.target-text').forEach(el => {
+        el.style.setProperty('--font-size', val + 'px');
+      });
+    }
+
+    function updateWeight(val) {
+      document.getElementById('weightVal').textContent = val;
+      document.querySelectorAll('.target-text').forEach(el => {
+        el.style.setProperty('--font-weight', val);
+      });
+    }
+
+    function updateTrack(val) {
+      document.getElementById('trackVal').textContent = val + 'em';
+      document.querySelectorAll('.target-text').forEach(el => {
+        el.style.setProperty('--letter-spacing', val + 'em');
+      });
+    }
+
+    function updateLh(val) {
+      document.getElementById('lhVal').textContent = val;
+      document.querySelectorAll('.target-text').forEach(el => {
+        el.style.setProperty('--line-height', val);
+      });
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>

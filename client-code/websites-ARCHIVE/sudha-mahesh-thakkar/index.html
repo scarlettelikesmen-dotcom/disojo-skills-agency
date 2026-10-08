@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudha Mahesh Thakkar | The Future of Turmeric Processing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FAFAF7; /* Very light creamy white */
+            --bg-grid: #EAEaea;
+            --text-main: #111111;
+            --text-muted: #666666;
+            --accent: #E59600; /* Deep Mustard / Turmeric */
+            --accent-glow: rgba(229, 150, 0, 0.2);
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --card-border: rgba(0, 0, 0, 0.06);
+            --glass: rgba(255, 255, 255, 0.75);
+            --ease: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Subtle Grid Background - Light Mode */
+        .bg-grid {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, var(--card-border) 1px, transparent 1px),
+                              linear-gradient(to bottom, var(--card-border) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, .font-mono {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5vw;
+            position: relative;
+        }
+
+        /* Glass Navbar */
+        nav {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            background: var(--glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--card-border);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .nav-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5vw;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* The Logo (Tilak + Text) */
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .logo-icon {
+            width: 28px; height: 28px;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-top {
+            font-size: 0.55rem;
+            color: #D32F2F; /* Red color for Jai Shri Swaminarayan */
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .logo-bottom {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links { 
+            display: flex; 
+            gap: 2.5rem; 
+            padding: 0.8rem 5vw;
+            width: 100%;
+            box-sizing: border-box;
+            overflow-x: auto;
+            white-space: nowrap;
+            background: #F3EBE1; /* matching the beige color in the screenshot */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .nav-links::-webkit-scrollbar { display: none; }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text-main); }
+
+        /* Magic Button (Light Mode Adapt) */
+        .btn-magic {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 2rem;
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 100px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+        }
+        
+        .btn-magic::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 150%; height: 150%;
+            background: conic-gradient(transparent, transparent, transparent, var(--accent));
+            animation: rotate 4s linear infinite;
+            transform-origin: center;
+            z-index: -2;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .btn-magic::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: var(--white, #FFFFFF);
+            border-radius: 100px;
+            z-index: -1;
+        }
+        
+        .btn-magic:hover::before { opacity: 1; }
+        .btn-magic:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+        .btn-magic.dark {
+            background: var(--text-main); color: #FFF; border-color: transparent;
+        }
+        .btn-magic.dark::after { background: var(--text-main); }
+
+        @keyframes rotate {
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Magnetic Effect Class */
+        .magnetic {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-top: 140px;
+            text-align: center;
+        }
+        
+        .hero-glow {
+            position: absolute;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+            top: 40%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            filter: blur(60px);
+            opacity: 0.6;
+            animation: breathe 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes breathe {
+            0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.4; }
+            100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.7; }
+        }
+
+        /* Hero Floating Images (Parallax) */
+        .hero-images {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .h-img {
+            position: absolute;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            border: 6px solid #FFF;
+            transition: transform 0.2s linear;
+            will-change: transform;
+        }
+        
+        .h-img img { width: 100%; height: 100%; object-fit: cover; }
+        .h-img-1 { width: 280px; height: 380px; left: 8%; top: 25%; transform: rotate(-8deg); }
+        .h-img-2 { width: 260px; height: 340px; right: 8%; bottom: 15%; transform: rotate(6deg); }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--accent);
+            border-radius: 100px;
+            background: rgba(229, 150, 0, 0.05);
+            font-size: 0.75rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .badge-dot {
+            width: 6px; height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse-badge 2s infinite;
+        }
+
+        @keyframes pulse-badge {
+            0% { box-shadow: 0 0 0 0 rgba(229, 150, 0, 0.4); }
+            70% { box-shadow: 0 0 0 6px transparent; }
+            100% { box-shadow: 0 0 0 0 transparent; }
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 6vw, 6.5rem);
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            position: relative;
+        }
+        
+        .hero h1 span {
+            color: var(--accent);
+            display: inline-block;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        /* Image Gallery Marquee (Film Strip) */
+        .gallery-section {
+            padding: 4vw 0;
+            background: var(--bg);
+            overflow: hidden;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .gallery-track-wrapper {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            white-space: nowrap;
+        }
+
+        .gallery-track {
+            display: flex;
+            gap: 20px;
+            padding: 0 10px;
+            animation: marquee-gallery 40s linear infinite;
+        }
+
+        .gallery-track:hover {
+            animation-play-state: paused;
+        }
+
+        .gallery-item {
+            width: 350px;
+            height: 250px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.4s var(--ease);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(10%) contrast(110%);
+        }
+
+        @keyframes marquee-gallery {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Marquee Text */
+        .marquee-wrapper {
+            width: 100%;
+            padding: 3rem 0;
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+            background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+            overflow: hidden;
+            display: flex;
+            white-space: nowrap;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee-item {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1.5px var(--text-main);
+            margin-right: 4rem;
+            text-transform: uppercase;
+        }
+        
+        .marquee-item span { color: var(--accent); -webkit-text-stroke: 0; }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Bento Grid */
+        .bento-section { padding: 8vw 0; }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 4rem;
+            text-align: center;
+            letter-spacing: -0.03em;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 320px;
+            gap: 1.5rem;
+            perspective: 1000px;
+        }
+
+        /* Spotlight Card Effect + Tilt */
+        .bento-card {
+            position: relative;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+        }
+        
+        .bento-card:hover { border-color: rgba(229, 150, 0, 0.3); box-shadow: 0 20px 40px rgba(229, 150, 0, 0.05); }
+
+        /* The spotlight overlay (warm gold for light mode) */
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(229, 150, 0, 0.08), transparent 40%);
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .bento-card:hover::before { opacity: 1; }
+
+        .bento-card > * { position: relative; z-index: 1; transform: translateZ(20px); }
+
+        .bento-card.large { grid-column: span 2; grid-row: span 2; }
+        .bento-card.tall { grid-row: span 2; }
+        
+        /* Image Background for Card */
+        .bento-card.image-bg {
+            padding: 0;
+            border: none;
+        }
+        .bento-card.image-bg img {
+            width: 100%; height: 100%; object-fit: cover;
+            border-radius: 24px;
+        }
+
+        .card-icon {
+            width: 54px; height: 54px;
+            background: rgba(229, 150, 0, 0.08);
+            border: 1px solid rgba(229, 150, 0, 0.2);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2; fill: none; }
+
+        .bento-card h3 { font-size: 2.2rem; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+        .bento-card p { color: var(--text-muted); line-height: 1.6; font-size: 1rem; }
+
+        .stat-huge { font-size: 4.5rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; line-height: 1; }
+
+        /* Legacy Editorial Split Section */
+        .legacy-section { padding: 8vw 0; background: var(--bg); border-top: 1px solid var(--card-border); }
+        .legacy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; align-items: center; }
+        .legacy-visual img { width: 100%; height: 600px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+
+        /* Process Pipeline */
+        .pipeline { padding: 8vw 0; border-top: 1px solid var(--card-border); background: #FFF; }
+        .pipeline-wrapper {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .pipeline-line {
+            position: absolute;
+            left: 24px; top: 0; bottom: 0;
+            width: 2px;
+            background: var(--card-border);
+        }
+        
+        .pipeline-progress {
+            position: absolute;
+            left: 24px; top: 0;
+            width: 2px;
+            background: var(--accent);
+            height: 0%; /* updated via JS */
+            box-shadow: 0 0 15px var(--accent);
+            transition: height 0.1s ease-out;
+        }
+
+        .step {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 4rem;
+            opacity: 0.4;
+            transition: all 0.5s;
+            transform: translateX(-10px);
+        }
+        
+        .step.active { opacity: 1; transform: translateX(0); }
+
+        .step-dot {
+            position: absolute;
+            left: 17px; top: 5px;
+            width: 16px; height: 16px;
+            background: var(--bg);
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            z-index: 2;
+            transition: all 0.5s;
+        }
+        
+        .step.active .step-dot {
+            border-color: var(--accent);
+            background: var(--accent);
+            box-shadow: 0 0 15px rgba(229, 150, 0, 0.5);
+            transform: scale(1.2);
+        }
+
+        .step-num { font-family: 'Space Grotesk'; font-size: 0.85rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 0.5rem; font-weight: 600;}
+        .step h4 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .step p { color: var(--text-muted); line-height: 1.6; font-size: 1.1rem;}
+
+        /* Contact & Interactive Map Box */
+        .map-section {
+            padding: 8vw 0;
+            background: var(--bg);
+            border-top: 1px solid var(--card-border);
+        }
+
+        .map-card {
+            background: var(--white, #FFF);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 4rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 4rem 0 2rem;
+            background: #FFF;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 700; font-family: 'Space Grotesk'; }
+        .footer-desc { color: var(--text-muted); font-size: 0.95rem; max-width: 350px; line-height: 1.6; }
+        
+        .f-col h5 { color: var(--text-main); font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 1.5rem; font-family:'Space Grotesk'; }
+        .f-col ul { list-style: none; }
+        .f-col li { margin-bottom: 0.8rem; }
+        .f-col a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .f-col a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            display: flex; justify-content: space-between;
+            border-top: 1px solid var(--card-border);
+            padding-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-family: 'Space Grotesk';
+        }
+
+        /* Scroll Reveal Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Sticky WhatsApp CTA */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 64px;
+            height: 64px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 34px;
+            height: 34px;
+            fill: currentColor;
+        }
+
+        .wa-ping {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #25D366;
+            opacity: 0.6;
+            z-index: -1;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        /* Typewriter Effect cursor */
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background-color: var(--accent);
+            animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 900px) {
+            .bento-grid { grid-template-columns: 1fr; grid-auto-rows: minmax(300px, auto); }
+            .bento-card.large, .bento-card.tall { grid-column: span 1; grid-row: auto; }
+            .legacy-grid { grid-template-columns: 1fr; }
+            .footer-grid, .map-card { grid-template-columns: 1fr; gap: 2rem; }
+            .hero h1 { font-size: clamp(3rem, 10vw, 4rem); }
+            .h-img { display: none; } /* Hide parallax images on mobile */
+            .pillar-grid { grid-template-columns: 1fr !important; margin-bottom: 0 !important; }
+            .contact-grid, .about-grid, .form-inputs-grid, .pipeline-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+            .cert-row { flex-wrap: wrap; justify-content: center !important; gap: 1rem; }
+            .cert-row div { font-size: 0.85rem !important; width: 45%; text-align: center; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes rotate-slow {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <!-- Sticky WhatsApp CTA -->
+    <a href="https://wa.me/919373893999" class="whatsapp-float magnetic" target="_blank" aria-label="Chat on WhatsApp">
+        <div class="wa-ping"></div>
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"/></svg>
+    </a>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-top">
+            <a href="#" class="logo-area">
+                <div class="logo-icon">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="36" height="36" fill="#DA291C" rx="2"/>
+                        <text x="18" y="18" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" fill="white" text-anchor="middle" dominant-baseline="middle">S.M.T</text>
+                        <path d="M6 29 Q 18 25 30 30" stroke="#FFB000" stroke-width="4" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-top">Jai Shri Swaminarayan</span>
+                    <span class="logo-bottom">Sudha Mahesh Thakkar</span>
+                </div>
+            </a>
+            <a href="#contact" class="btn-magic dark magnetic">Contact Sales</a>
+        </div>
+        <div class="nav-links">
+            <a href="#why-us" class="magnetic">Why Us</a>
+            <a href="#procurement" class="magnetic">Procurement</a>
+            <a href="#processing" class="magnetic">Processing & Storage</a>
+            <a href="#why-us" class="magnetic">Our Facility</a>
+            <a href="#about" class="magnetic">About Us</a>
+            <a href="#contact" class="magnetic">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Top Scrolling Pill (Pointer 1 & 2) -->
+    <div style="background: var(--accent); padding: 0.5rem 0; overflow: hidden; border-bottom: 1px solid rgba(0,0,0,0.05); border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="marquee-content-right" style="animation: scroll-right 30s linear infinite; display: flex; white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 2px; color: var(--text-main); font-size: 0.9rem;">
+            <div class="marquee-item">sudha mahesh thakkar.est.2000</div>
+            <span style="margin: 0 2rem;">•</span>
+            <div class="marquee-item">sudha mahesh thakkar.est.2000</div>
+            <span style="margin: 0 2rem;">•</span>
+            <div class="marquee-item">sudha mahesh thakkar.est.2000</div>
+            <span style="margin: 0 2rem;">•</span>
+            <div class="marquee-item">sudha mahesh thakkar.est.2000</div>
+            <span style="margin: 0 2rem;">•</span>
+            <div class="marquee-item">sudha mahesh thakkar.est.2000</div>
+            <span style="margin: 0 2rem;">•</span>
+            <div class="marquee-item">sudha mahesh thakkar.est.2000</div>
+        </div>
+    </div>
+    <style>
+        @keyframes scroll-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+
+
+    <!-- Hero -->
+    <section class="hero" style="background-image: url('assets/media__1781634450084.jpg'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 0;"></div>
+        <div class="hero-images" style="display: none;">
+            <div class="h-img h-img-1"><img src="assets/media__1781634458843.jpg" alt="Processing Machinary"></div>
+            <div class="h-img h-img-2"><img src="assets/media__1781634458841.jpg" alt="Warehouse Bags"></div>
+        </div>
+        
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="reveal">
+                <div class="hero-badge">
+                    <div class="badge-dot"></div>
+                    Sangli Turmeric Hub • Est. 2000
+                </div>
+                <h1 style="color: var(--bg);">The Gold Standard in <br><span>Turmeric Processing</span></h1>
+                <p id="typewriter-text" style="min-height: 3rem; color: var(--bg);"></p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <a href="#why-us" class="btn-magic dark magnetic">WHY US</a>
+                    <a href="#pipeline" class="btn-magic magnetic">View Process</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Row -->
+    <section style="background: #FFF; padding: 2.5rem 0; border-bottom: 1px solid var(--card-border);">
+        <div class="container">
+            <div class="cert-row" style="display: flex; justify-content: space-between; align-items: center; opacity: 0.7; max-width: 800px; margin: 0 auto; filter: grayscale(100%);">
+                <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: 1px; color: var(--text-muted);"><span style="color: var(--accent);">✔</span> FSSAI CERTIFIED</div>
+                <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: 1px; color: var(--text-muted);"><span style="color: var(--accent);">✔</span> ISO 9001:2015</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <div class="marquee-item">100% TRACEABLE <span>•</span> EXPORT GRADE <span>•</span> 7000MT POLISH WHOLE TURMERIC <span>•</span> 5000MT POWDER TURMERIC <span>•</span> ZERO ADULTERATION <span>•</span></div>
+            <div class="marquee-item">100% TRACEABLE <span>•</span> EXPORT GRADE <span>•</span> 7000MT POLISH WHOLE TURMERIC <span>•</span> 5000MT POWDER TURMERIC <span>•</span> ZERO ADULTERATION <span>•</span></div>
+        </div>
+    </div>
+
+    
+    <!-- Why Us Section (Yellow Pillar Design) -->
+    <section id="why-us" style="padding: 8vw 0 12vw; background: #FFF9E6; position: relative; overflow: hidden; z-index: 1;">
+        <!-- Fun floating elements -->
+        <div style="position: absolute; top: 10%; left: 5%; width: 100px; height: 100px; background: rgba(229,150,0,0.1); border-radius: 50%; filter: blur(20px); animation: float 6s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: 20%; right: 5%; width: 150px; height: 150px; background: rgba(229,150,0,0.15); border-radius: 50%; filter: blur(30px); animation: float 8s ease-in-out infinite reverse;"></div>
+        <svg style="position: absolute; top: 20%; right: 15%; animation: rotate-slow 20s linear infinite; opacity: 0.5;" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7"/></svg>
+        <svg style="position: absolute; bottom: 30%; left: 10%; animation: rotate-slow 15s linear infinite reverse; opacity: 0.3;" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            
+            <h2 style="font-size: clamp(2.5rem, 4vw, 4rem); margin-bottom: 1.5rem; letter-spacing: -0.02em;" class="reveal">Why Trusted Brands Choose Us</h2>
+            <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 700px; line-height: 1.6; margin-bottom: 4rem;" class="reveal">By managing the entire value cycle from local farms to dispatch, we eliminate intermediaries to secure pure composition guidelines and consistent wholesale price sheets.</p>
+            
+            <div class="pillar-grid reveal" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem;">
+                
+                <!-- Card 1 -->
+                <div class="pillar-card magnetic" style="background: #FFF; padding: 2rem; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid var(--card-border); transition: transform 0.3s; position: relative;">
+                    <div style="font-family: 'Space Grotesk'; font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">PILLAR 01 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">100%</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 1rem;">directly from farmer.</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Sourced directly, bypassing middlemen to secure absolute crop traceability.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pillar-card magnetic" style="background: #FFF; padding: 2rem; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid var(--card-border); transition: transform 0.3s; position: relative;">
+                    <div style="font-family: 'Space Grotesk'; font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">PILLAR 02 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">2,000 MT</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 1rem;">massive storage facility</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Massive facility built to buffer market volatility and sustain continuous supply.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pillar-card magnetic" style="background: #FFF; padding: 2rem; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid var(--card-border); transition: transform 0.3s; position: relative;">
+                    <div style="font-family: 'Space Grotesk'; font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">PILLAR 03 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">7,000 MT</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 1rem;">modern processing plant</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">State-of-the-art grading screens and dust-less polishing drums.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="pillar-card magnetic" style="background: #FFF; padding: 2rem; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid var(--card-border); transition: transform 0.3s; position: relative;">
+                    <div style="font-family: 'Space Grotesk'; font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">PILLAR 04 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 17h4V5H2v12h3M20 17h2v-9h-4M14 8h5l3 4v5h-2"/></svg></div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Bulk B2B</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 1rem;">Wholesale Readiness</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Tailored packaging, custom mesh selections, and streamlined freight dispatch.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="pillar-card magnetic" style="background: #FFF; padding: 2rem; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid var(--card-border); transition: transform 0.3s; position: relative;">
+                    <div style="font-family: 'Space Grotesk'; font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">PILLAR 05 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">25+ years</h3>
+                    <h4 style="font-size: 1rem; margin-bottom: 1rem;">Industry Standing</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Established repute, delivering quality turmeric for over two decades.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Break 1 -->
+    <div class="container" style="margin-bottom: 4rem; margin-top: 4rem;">
+        <div style="background: #111111; border-radius: 20px; padding: 4rem; text-align: center; color: var(--bg);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--bg);">Ready to Source?</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem;">Get in touch with our sourcing experts today.</p>
+            <a href="#contact" class="btn-magic light magnetic" style="color: #111111; background: var(--bg);">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Products Catalog Section -->
+    <section id="products" style="padding: 6rem 0; background: var(--bg);">
+        <div class="container">
+            <h2 class="section-title reveal" style="text-align: center; margin-bottom: 4rem;">Our Catalog: Premium Turmeric Products</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/client_powder.png" alt="Turmeric Powder" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Turmeric Powder</h3>
+                    </div>
+                </div>
+                <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/client_finger.png" alt="Turmeric Finger" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Turmeric Finger</h3>
+                    </div>
+                </div>
+                <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/client_bulbs.png" alt="Turmeric Bulbs" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Turmeric Bulbs</h3>
+                    </div>
+                </div>
+                <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/client_powder_curcumin.png" alt="Curcumin Powder" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Curcumin Powder</h3>
+                    </div>
+                </div>
+                <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/client_finger_high_curcumin.png" alt="Finger High Curcumin" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Finger High Curcumin</h3>
+                    </div>
+                </div>
+                <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/client_internal_closeup.png" alt="Internal Closeup" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Internal Closeup</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <div class="container" style="margin-bottom: 4rem;">
+        <div style="background: #111111; border-radius: 20px; padding: 4rem; text-align: center; color: var(--bg);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--bg);">Ready to Source?</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem;">Get in touch with our sourcing experts today.</p>
+            <a href="#contact" class="btn-magic light magnetic" style="color: #111111; background: var(--bg);">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Pipeline Section -->
+    <section id="pipeline" class="pipeline">
+        <div class="container">
+            
+            
+            
+            <div class="pipeline-grid" style="display: grid; grid-template-columns: 1fr 350px; gap: 4rem; align-items: start;">
+                <div class="pipeline-wrapper" style="margin-top: 0;">
+
+                <div class="pipeline-line"></div>
+                <div class="pipeline-progress" id="pipelineProgress"></div>
+
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-num">01 / SOURCING</div>
+                    <h4>Farm Gate Procurement</h4>
+                    <p>Direct harvest acquisition from verified local farmers in the Sangli and Krishna River basin. Bypassing middlemen ensures transparent pricing and unmatched crop traceability.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-num">02 / STORAGE</div>
+                    <h4>Raw Material Warehouse</h4>
+                    <p>Harvested roots are received at our Sangli facility, sorted by lot number, and stored in our 2000 mt moisture-free depot to preserve native quality.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-num">03 / MILLING 1</div>
+                    <h4>Automated Polishing</h4>
+                    <p>7,000 MT annual capacity drums remove outer skin and impurities to reveal the bright golden core, producing premium double-polished fingers.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-num">04 / MILLING 2</div>
+                    <h4>Ultra-Fine Powdering</h4>
+                    <p>Low-heat steel pulverizers grind the fingers into 5,000 MT of export-grade powder annually, retaining all essential volatile oils.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-num">05 / DISPATCH</div>
+                    <h4>Logistics & Export</h4>
+                    <p>Sealed in airtight, moisture-proof packaging and dispatched globally with certified batch assay analyses. Connected directly to major shipping networks.</p>
+                </div>
+            </div>
+            <div style="position: sticky; top: 120px; background: var(--bg-card); border-radius: 20px; padding: 2rem; border: 1px solid rgba(0,0,0,0.05);">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Need customized processing?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">Our facility can accommodate specific grading and polishing requests.</p>
+                <a href="#contact" class="btn-magic dark magnetic" style="width: 100%; text-align: center;">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Infrastructure Bento Box -->
+    <section id="processing" class="bento-section">
+        <div class="container">
+            <h2 class="section-title reveal">Processing & Storage Matrix</h2>
+            <div class="bento-grid">
+                
+                <!-- Large Output Card -->
+                <div class="bento-card large reveal">
+                    <div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="stat-huge">12,000<span style="font-size:1.5rem; color:var(--text-muted);">+ MT/YR</span></div>
+                        <h3>Total Output Capacity</h3>
+                        <p style="max-width: 400px; font-size: 1.1rem; margin-top:1rem;">Combining our 7,000 MT polishing lines and 5,000 MT powdering systems, we operate one of Sangli's most massive contiguous turmeric processing architectures.</p>
+                    </div>
+                </div>
+
+                <!-- Small Card 1 -->
+                <div class="bento-card reveal" style="transition-delay: 0.1s;">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                    <h3>1,000 MT</h3>
+                    <p>Climate-controlled warehouse capacity ensuring year-round supply stability and moisture-free raw roots.</p>
+                </div>
+
+                <!-- Image Card (Replaces text to inject photo) -->
+                <div class="bento-card image-bg tall reveal" style="transition-delay: 0.2s;">
+                    <img src="assets/media__1781634458841.jpg" alt="Storage Depot">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">B2B Storage Readiness</h3>
+                        <p style="color: #ddd;">Massive bulk container drops built for rapid port dispatch.</p>
+                    </div>
+                </div>
+
+                <!-- Small Card 2 -->
+                <div class="bento-card reveal">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                    <h3>Curcumin Rich</h3>
+                    <p>Raw materials sourced specifically from high-yield river basins.</p>
+                </div>
+
+                <!-- Small Card 3 -->
+                <div class="bento-card reveal" style="transition-delay: 0.1s;">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                    <h3>Zero Adulteration</h3>
+                    <p>Closed-loop processing prevents cross-contamination. 100% pure.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Visual Tour (Infinite Marquee of Photos) -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="step-num reveal" style="text-align: center; margin-bottom: 1rem;">VISUAL WALKTHROUGH</div>
+            <h2 class="section-title reveal" style="margin-bottom: 2rem;">Our Facility</h2>
+        </div>
+        <div class="gallery-track-wrapper reveal">
+            <div class="gallery-track">
+                <!-- Group 1 -->
+                <div class="gallery-item"><img src="assets/media__1781634410026.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634410100.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634410105.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450076.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450078.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450080.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450084.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450209.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634458753.jpg" alt="Facility Image"></div>
+                <!-- Group 2 (Duplicate for infinite seamless scroll) -->
+                <div class="gallery-item"><img src="assets/media__1781634410026.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634410100.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634410105.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450076.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450078.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450080.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450084.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634450209.jpg" alt="Facility Image"></div>
+                <div class="gallery-item"><img src="assets/media__1781634458753.jpg" alt="Facility Image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Break 3 -->
+    <div class="container" style="margin-bottom: 4rem; margin-top: 4rem;">
+        <div style="background: #111111; border-radius: 20px; padding: 4rem; text-align: center; color: var(--bg);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--bg);">Ready to Source?</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem;">Get in touch with our sourcing experts today.</p>
+            <a href="#contact" class="btn-magic light magnetic" style="color: #111111; background: var(--bg);">Contact Us</a>
+        </div>
+    </div>
+
+    
+    <!-- About Us -->
+    <section id="about" style="padding: 8vw 0; background: #FFF; border-top: 1px solid var(--card-border);">
+        <div class="container">
+            <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="reveal">
+                    <div class="step-num" style="margin-bottom: 1rem;">OUR STORY</div>
+                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -0.02em;">About Us</h2>
+                    <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem;">Led by a deep-rooted commitment to quality and transparency, Sudha Mahesh Thakkar operates one of the most advanced turmeric processing units in the Sangli region.</p>
+                    <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.8;">Our vision is simple: to bridge the gap between traditional agricultural sourcing and modern, high-tech B2B processing, ensuring the world gets nothing but the absolute best turmeric.</p>
+                </div>
+                <div class="reveal">
+                    <div style="background: var(--bg); border-radius: 24px; padding: 3rem; border: 1px solid var(--card-border); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top:-50px; right:-50px; width: 150px; height: 150px; background: rgba(229,150,0,0.1); border-radius: 50%; filter: blur(30px);"></div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Our Core Values</h3>
+                        <ul style="list-style: none; color: var(--text-muted); line-height: 2;">
+                            <li style="display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height:6px; background: var(--accent); border-radius: 50%;"></div> Purity Without Compromise</li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height:6px; background: var(--accent); border-radius: 50%;"></div> Farmer-First Procurement</li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height:6px; background: var(--accent); border-radius: 50%;"></div> Technological Excellence</li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height:6px; background: var(--accent); border-radius: 50%;"></div> Global Export Readiness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form Section -->
+    <section id="contact" style="padding: 8rem 0; background: #111111; color: var(--bg);">
+        <div class="container">
+            <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: var(--bg);">Get in Touch</h2>
+                    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem;">Ready to source the highest quality turmeric from Sangli? Reach out to our team.</p>
+                    <div style="margin-bottom: 1rem;"><strong style="color: var(--accent);">Email:</strong> maheshnanjithakkar@rediffmail.com</div>
+                    <div style="margin-bottom: 1rem;"><strong style="color: var(--accent);">Phone:</strong> +91 93738 93999</div>
+                    <div><strong style="color: var(--accent);">Location:</strong> Sangli Turmeric Hub, Maharashtra, India</div>
+                </div>
+                <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="form-inputs-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <input type="text" placeholder="Your Name" style="padding: 1rem; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: var(--bg); font-family: inherit;">
+                        <input type="email" placeholder="Your Email" style="padding: 1rem; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: var(--bg); font-family: inherit;">
+                    </div>
+                    <input type="text" placeholder="Estimated Order Volume (in Metric Tons)" style="padding: 1rem; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: var(--bg); font-family: inherit;">
+                    <input type="text" placeholder="Destination Port/Country" style="padding: 1rem; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: var(--bg); font-family: inherit;">
+                    <textarea placeholder="Your Message" rows="5" style="padding: 1rem; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: var(--bg); font-family: inherit; resize: vertical;"></textarea>
+                    <button type="submit" class="btn-magic light magnetic" style="color: #111111; background: var(--bg); border: none; cursor: pointer; padding: 1rem; font-family: inherit; font-weight: 700;">Request Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="logo-area" style="margin-bottom: 1.5rem;">
+                        <div class="logo-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="36" height="36" fill="#DA291C" rx="2"/>
+                                <text x="18" y="18" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" fill="white" text-anchor="middle" dominant-baseline="middle">S.M.T</text>
+                                <path d="M6 29 Q 18 25 30 30" stroke="#FFB000" stroke-width="4" stroke-linecap="round" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-top">Jai Shri Swaminarayan</span>
+                            <span class="logo-bottom">Sudha Mahesh Thakkar</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">Authentic agricultural suppliers and B2B processing providers. Sourced transparently from verified networks in Sangli, Maharashtra and processed under strict food-safety guidelines.</p>
+                </div>
+                <div class="f-col">
+                    <h5>DIRECTORY</h5>
+                    <ul>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#pipeline">Process Pipeline</a></li>
+                        <li><a href="#procurement">Logistics & Sourcing</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="f-col">
+                    <h5>SOURCING CREDENTIALS</h5>
+                    <ul>
+                        <li style="color:var(--text-muted); font-size:0.9rem;">C/O Ghanshyam Industries</li>
+                        <li style="color:var(--text-muted); font-size:0.9rem;">Gat No. 51/52, Savali - Miraj Rd</li>
+                        <li style="color:var(--text-muted); font-size:0.9rem;">Tal. Miraj, Distt. Sangli-416410</li>
+                        <li style="color:var(--text-muted); font-size:0.9rem; margin-top:1rem; border-top:1px solid var(--card-border); padding-top:1rem; font-weight:600;">25+ years of trade credibility.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SUDHA MAHESH THAKKAR. SOURCED FROM SANGLI. ALL RIGHTS RESERVED.</p>
+                <a href="#" style="color:var(--text-muted); text-decoration:none;">TOP &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Mouse Parallax Effect
+        const heroImages = document.querySelectorAll('.h-img');
+        const heroSection = document.querySelector('.hero');
+        
+        if (heroSection && heroImages.length) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const x = (e.clientX / window.innerWidth - 0.5) * 40;
+                const y = (e.clientY / window.innerHeight - 0.5) * 40;
+                
+                heroImages[0].style.transform = `rotate(-8deg) translate(${x}px, ${y}px)`;
+                heroImages[1].style.transform = `rotate(6deg) translate(${-x * 0.8}px, ${-y * 0.8}px)`;
+            });
+            heroSection.addEventListener('mouseleave', () => {
+                heroImages[0].style.transform = `rotate(-8deg) translate(0, 0)`;
+                heroImages[1].style.transform = `rotate(6deg) translate(0, 0)`;
+            });
+        }
+
+        // Spotlight & 3D Tilt effect for bento cards
+        document.querySelectorAll('.bento-card:not(.image-bg)').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                // Spotlight
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+
+                // 3D Tilt Effect
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5; // Max rotation 5deg
+                const rotateY = ((x - centerX) / centerX) * 5;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+            });
+        });
+
+        // Magnetic Effect for links and buttons
+        document.querySelectorAll('.magnetic').forEach(elem => {
+            elem.addEventListener('mousemove', e => {
+                const rect = elem.getBoundingClientRect();
+                const h = rect.width / 2;
+                const v = rect.height / 2;
+                const x = e.clientX - rect.left - h;
+                const y = e.clientY - rect.top - v;
+                // Move element slightly towards the mouse
+                elem.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+            elem.addEventListener('mouseleave', () => {
+                elem.style.transform = `translate(0px, 0px)`;
+            });
+        });
+
+        // Intersection Observer for fade-in elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Pipeline Scroll Logic
+        const pipelineWrapper = document.querySelector('.pipeline-wrapper');
+        const progressBar = document.getElementById('pipelineProgress');
+        const steps = document.querySelectorAll('.step');
+
+        window.addEventListener('scroll', () => {
+            if(!pipelineWrapper) return;
+            
+            const rect = pipelineWrapper.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            const start = rect.top - (windowHeight / 2);
+            const total = rect.height;
+            let progress = Math.max(0, Math.min(100, (Math.abs(start < 0 ? start : 0) / total) * 100));
+            
+            if (rect.top > windowHeight / 2) progress = 0;
+            if (rect.bottom < windowHeight / 2) progress = 100;
+
+            progressBar.style.height = `${progress}%`;
+
+            steps.forEach((step, index) => {
+                const stepPos = (index / (steps.length - 1)) * 100;
+                if (progress >= stepPos - 10) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+        });
+
+        // Typewriter Effect for Hero
+        const textToType = "Delivering massive scale, uncompromising purity, and 100% traceability from Sangli to the world.";
+        const typeContainer = document.getElementById('typewriter-text');
+        let typeIndex = 0;
+
+        function typeWriter() {
+            if (typeIndex < textToType.length) {
+                typeContainer.innerHTML = textToType.substring(0, typeIndex + 1) + '<span class="cursor"></span>';
+                typeIndex++;
+                setTimeout(typeWriter, 30); // Typing speed
+            } else {
+                typeContainer.innerHTML = textToType + '<span class="cursor"></span>';
+            }
+        }
+        
+        // Start typewriter after a short delay
+        setTimeout(typeWriter, 500);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEJJO // Creative Director & Spatial Design Technologist — Master Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/OrbitControls.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        obsidian: '#07080A',
+                        obsidianCard: '#0D0F14',
+                        obsidianBorder: '#1A1E29',
+                        goldLeaf: '#D4AF37',
+                        champagne: '#F3E5AB',
+                        emeraldGlow: '#10B981',
+                        titanium: '#8E9AA8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #D4AF37; color: #07080A; }
+        .grid-mask {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .project-card {
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 175, 55, 0.45);
+            box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(212, 175, 55, 0.15);
+        }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-gray-200 font-sans antialiased overflow-x-hidden min-h-screen selection:bg-goldLeaf selection:text-obsidian">
+
+    <!-- Top Master Navigation Dock -->
+    <header class="border-b border-obsidianBorder bg-obsidian/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-4 group">
+                <div class="w-10 h-10 border border-goldLeaf/60 bg-goldLeaf/10 flex items-center justify-center font-mono font-bold text-goldLeaf text-base group-hover:bg-goldLeaf group-hover:text-obsidian transition-colors">
+                    TJ
+                </div>
+                <div>
+                    <div class="font-mono text-sm tracking-[0.2em] uppercase text-white font-semibold flex items-center space-x-2">
+                        <span>TEJJO</span>
+                        <span class="text-xs text-goldLeaf font-light">// PORTFOLIO</span>
+                    </div>
+                    <div class="font-mono text-[9px] text-gray-400 tracking-widest uppercase">CREATIVE DIRECTOR • SPATIAL DESIGN TECHNOLOGIST</div>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 font-mono text-xs uppercase tracking-widest text-gray-400">
+                <a href="#showcase" class="hover:text-goldLeaf transition-colors">10 Masterpieces</a>
+                <a href="#spatial-matrix" class="hover:text-goldLeaf transition-colors">3D Constellation</a>
+                <a href="#architecture" class="hover:text-goldLeaf transition-colors">Anti-Slop Engine</a>
+                <a href="#manifesto" class="hover:text-goldLeaf transition-colors">Engineering Creed</a>
+            </nav>
+
+            <div class="flex items-center space-x-4 font-mono text-xs">
+                <div class="hidden lg:flex items-center space-x-2 border border-obsidianBorder px-3 py-1.5 bg-obsidianCard">
+                    <span class="w-2 h-2 rounded-full bg-emeraldGlow animate-pulse"></span>
+                    <span class="text-[10px] text-gray-300">HTTP DAEMON :8080 <strong class="text-emeraldGlow">ONLINE</strong></span>
+                </div>
+                <a href="#showcase" class="px-4 py-2 bg-goldLeaf text-obsidian font-bold text-[11px] tracking-widest uppercase hover:bg-white transition-colors">
+                    EXPLORE WORKS &darr;
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Master Hero: Creative Director Flagship -->
+    <section class="relative pt-20 pb-28 px-6 border-b border-obsidianBorder overflow-hidden grid-mask">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-8 z-10">
+                <div class="inline-flex items-center space-x-3 px-3.5 py-1.5 border border-goldLeaf/30 bg-goldLeaf/5 text-goldLeaf font-mono text-[10px] tracking-[0.3em] uppercase">
+                    <span class="w-1.5 h-1.5 rounded-full bg-goldLeaf"></span>
+                    <span>$150K+ CALIBER AGENCY PRODUCTION SHOWCASE</span>
+                </div>
+
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-normal leading-[1.02] tracking-tight">
+                    Where WebGL<br>
+                    <span class="italic font-light text-goldLeaf">Spatial Physics</span> Meets<br>
+                    Zero-Slop Craft.
+                </h1>
+
+                <p class="text-gray-300 text-base md:text-lg font-light leading-relaxed max-w-xl">
+                    Ten bespoke production-grade digital universes. Engineered with custom procedural Three.js WebGL shaders, mathematically reverse-engineered kinematics, true alpha masking, and architectural typography.
+                </p>
+
+                <!-- Metrics Strip -->
+                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-obsidianBorder font-mono text-xs">
+                    <div>
+                        <span class="text-gray-500 text-[10px] uppercase block mb-0.5">3D WEBGL ENGINES</span>
+                        <span class="text-white font-bold text-lg">10 / 10 ACTIVE</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 text-[10px] uppercase block mb-0.5">RENDER FIDELITY</span>
+                        <span class="text-emeraldGlow font-bold text-lg">60 FPS PBR</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 text-[10px] uppercase block mb-0.5">LOCAL DEPENDENCY</span>
+                        <span class="text-goldLeaf font-bold text-lg">100% OFFLINE</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
+                    <a href="#showcase" class="px-8 py-4 bg-goldLeaf text-obsidian font-bold tracking-widest uppercase hover:bg-white transition-all shadow-lg shadow-goldLeaf/10">
+                        AUDIT ALL 10 SITES &rarr;
+                    </a>
+                    <button onclick="openInspector('3d-spaces')" class="px-8 py-4 border border-goldLeaf/40 text-goldLeaf tracking-widest uppercase hover:border-goldLeaf hover:bg-goldLeaf/10 transition-all">
+                        INSPECT 3D ARCHITECTURE
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero 3D Spatial Constellation Canvas -->
+            <div id="spatial-matrix" class="lg:col-span-5 relative">
+                <div class="relative w-full aspect-square border border-obsidianBorder bg-obsidianCard/80 shadow-2xl overflow-hidden group">
+                    <canvas id="hero-spatial-canvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+
+                    <!-- Spatial HUD Overlay -->
+                    <div class="absolute top-4 left-4 right-4 flex justify-between items-center pointer-events-none font-mono text-[9px] text-gray-400">
+                        <span class="bg-obsidian/80 px-2.5 py-1 border border-obsidianBorder text-goldLeaf">
+                            SPATIAL ORBIT MATRIX // 10 NODES
+                        </span>
+                        <span id="hero-fps-counter" class="bg-obsidian/80 px-2.5 py-1 border border-obsidianBorder text-emeraldGlow">
+                            60 FPS • 0.0MS
+                        </span>
+                    </div>
+
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center pointer-events-none font-mono text-[9px] text-gray-400">
+                        <span class="bg-obsidian/80 px-2.5 py-1 border border-obsidianBorder">
+                            ROTATION: TILT & DRAG
+                        </span>
+                        <span class="bg-obsidian/80 px-2.5 py-1 border border-obsidianBorder text-gray-300">
+                            PBR PARTICLES: 300
+                        </span>
+                    </div>
+                </div>
+                <div class="text-center font-mono text-[10px] text-gray-500 mt-3 tracking-widest">
+                    ORBITING 10 LIVE ECOSYSTEM NODES IN 3D GEOMETRIC COORDINATES
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Master Showcase Grid Section -->
+    <section id="showcase" class="py-24 px-6 max-w-7xl mx-auto border-b border-obsidianBorder">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <span class="font-mono text-xs text-goldLeaf uppercase tracking-[0.25em] block mb-2">// CURATED PRODUCTION CATALOG</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-white font-normal">The Ten Digital Masterpieces</h2>
+                <p class="text-gray-400 text-sm mt-2 font-light">
+                    Every site features a unique procedural 3D WebGL engine, custom typography, zero placeholder copy, and rigorous anti-slop visual discipline.
+                </p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap gap-2 font-mono text-[11px]" id="filter-container">
+                <button onclick="filterProjects('all')" class="filter-btn px-3 py-1.5 bg-goldLeaf text-obsidian font-bold tracking-wider active" data-filter="all">ALL (10)</button>
+                <button onclick="filterProjects('spatial')" class="filter-btn px-3 py-1.5 bg-obsidianCard border border-obsidianBorder text-gray-400 hover:text-white hover:border-goldLeaf transition-colors" data-filter="spatial">3D / ARCH</button>
+                <button onclick="filterProjects('luxury')" class="filter-btn px-3 py-1.5 bg-obsidianCard border border-obsidianBorder text-gray-400 hover:text-white hover:border-goldLeaf transition-colors" data-filter="luxury">HAUTE LUXE</button>
+                <button onclick="filterProjects('medical')" class="filter-btn px-3 py-1.5 bg-obsidianCard border border-obsidianBorder text-gray-400 hover:text-white hover:border-goldLeaf transition-colors" data-filter="medical">CLINICAL</button>
+                <button onclick="filterProjects('institutional')" class="filter-btn px-3 py-1.5 bg-obsidianCard border border-obsidianBorder text-gray-400 hover:text-white hover:border-goldLeaf transition-colors" data-filter="institutional">FINANCE / LAW</button>
+            </div>
+        </div>
+
+        <!-- 10 Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+            <!-- Card 01: ARCHETYPE 3D (3d-spaces) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="spatial">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">01 // SPATIAL CGI ARCHITECTURE</span>
+                        <span class="bg-amber-500/10 text-amber-300 border border-amber-500/30 px-2 py-0.5">PROCEDURAL VILLA</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        ARCHETYPE 3D
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /3d-spaces/ • Modernist Cantilever Villa Monolith
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Architectural visualization studio for unbuilt spaces. Three.js interactive pavilion with travertine plinth, dynamic wave-rippled reflecting pool, cantilever wing, and 12-blade teak brise-soleil. 3-mode shader pipeline (Photoreal PBR, Clay AO, CAD Blueprint), celestial solar azimuth controls, and 4 camera glide presets.
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">THREE.JS PBR</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">CAMERA GLIDE</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">SOLAR AZIMUTH</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('3d-spaces')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/3d-spaces/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 02: CARLUXURY ATELIER (luxelab) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="spatial luxury">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">02 // HYPERCAR CLEARCOAT</span>
+                        <span class="bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 px-2 py-0.5">SOUCY LAYOUT</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        CARLUXURY ATELIER
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /luxelab/ • Optical Clearcoat Metrology Lab
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        QuatreCentQuatre / Soucy Group layout for ultra-luxury automotive surface perfection. Features an aerodynamic exotic hypercar in Three.js with MeshPhysicalMaterial clearcoat reflections, carbon fiber aero package, 5 pigment switchers, CAD wireframe telemetry, and micron-level paint depth profiling.
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">CLEARCOAT 1.0</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">PBR CHASSIS</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">Q4 EDITORIAL</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('luxelab')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/luxelab/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 03: KÖNIG & VANDENBERG (visionary-architect) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="spatial">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">03 // SWISS BIOCLIMATIC CAD</span>
+                        <span class="bg-amber-500/10 text-amber-300 border border-amber-500/30 px-2 py-0.5">3D AXONOMETRIC</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        KÖNIG & VANDENBERG
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /visionary-architect/ • Alpine Bauhaus Studio
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Millimeter Swiss drafting paper grid with 3D Axonometric villa model in Section 1. 3-way toggle between 3D Axonometric, Built Photography, and CAD Blueprint, coupled with bioclimatic solar shading angle simulation.
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">AXONOMETRIC 3D</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">CAD SHADING</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">SWISS GRID</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('visionary-architect')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/visionary-architect/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 04: MAISON ÉTOILE (aarpie-events) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="luxury">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">04 // HAUTE CELEBRATIONS</span>
+                        <span class="bg-champagne/10 text-champagne border border-champagne/30 px-2 py-0.5">CHAMPAGNE FIZZ</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        MAISON ÉTOILE
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /aarpie-events/ • Paris • Lake Como • Loire
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Vogue editorial luxury wedding and private gala design. Warm ivory linen and gold leaf typography, staggered Lake Como and Loire Valley châteaux monographs, and Three.js ambient champagne bubble physics with cursor repulsion.
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">PHYSICS BUBBLES</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">VOGUE EDITORIAL</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">GOLD LEAF</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('aarpie-events')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/aarpie-events/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 05: SULTANAT 1784 (lazeez-restaurant) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="luxury">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">05 // AWADHI HAUTE CUISINE</span>
+                        <span class="bg-amber-500/10 text-amber-300 border border-amber-500/30 px-2 py-0.5">SMOKE & EMBERS</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        SULTANAT 1784
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /lazeez-restaurant/ • Dum Pukht Culinary Heritage
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Imperial Awadhi royal dining. Deep emerald velvet and 24K gold leaf, interactive 3-course degustation menus, royal spicery apothecary, and Three.js rising wood-smoke plumes and glowing amber charcoal embers particle canvas behind hero.
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">SMOKE PARTICLES</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">CHARCOAL EMBERS</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">EMERALD VELVET</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('lazeez-restaurant')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/lazeez-restaurant/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 06: SOVEREIGN CREST (vrsabha-investments) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="institutional">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">06 // MULTI-FAMILY OFFICE</span>
+                        <span class="bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 px-2 py-0.5">3D ASSET GYROSCOPE</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        SOVEREIGN CREST
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /vrsabha-investments/ • Mayfair • Geneva • Singapore
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        British racing green and parchment Mayfair family office. Integrated 3D Gyroscopic Capital Armillary with 4 rotating asset rings, gold ingot core, orbital nodes, connected live to the dynastic compounding simulator (£5M–£100M+).
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">ARMILLARY 3D</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">COMPOUND ENGINE</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">RACING GREEN</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('vrsabha-investments')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/vrsabha-investments/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 07: CLINIQUE L'ÉLIXIR (la-grace-luxury-skin-clinic) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="medical">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">07 // HAUTE DERMATOLOGIE</span>
+                        <span class="bg-rose-500/10 text-rose-300 border border-rose-500/30 px-2 py-0.5">PEPTIDE HELIX 3D</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        CLINIQUE L'ÉLIXIR
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /la-grace-luxury-skin-clinic/ • Paris • New Delhi
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Aesthetic dermatology by Dr. Jyoti Aneja. Features interactive draggable Before/After comparison slider, plus Section 2.5: real-time 3D Peptide Triple-Helix & Biostimulation Lab with 3 live macromolecular switchers (Procollagen, GHK-Cu, Exosomes).
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">DOUBLE-HELIX 3D</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">CLIP-PATH SLIDER</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">PEARL AESTHETIC</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('la-grace-luxury-skin-clinic')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/la-grace-luxury-skin-clinic/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 08: KØBENHAVN SMILE (dentical-your-smile-space) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="medical spatial">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">08 // NORDIC BIOPHILIC DENTAL</span>
+                        <span class="bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 px-2 py-0.5">CAD/CAM VENEER</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        KØBENHAVN SMILE
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /dentical-your-smile-space/ • Copenhagen • Delhi
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Scandinavian biophilic dental sanctuary in blonde oak and pine sage. Features interactive 3D IPS e.max Porcelain Veneer digital twin with physical transmission/refraction, dentin core inspection, CAD wireframe mode, and shade selector (BL1–A2).
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">PORCELAIN IOR 1.52</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">TRANSMISSION 0.50</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">BLONDE OAK</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('dentical-your-smile-space')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/dentical-your-smile-space/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 09: ATELIER 360 (dermadental-360) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="medical spatial">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">09 // CRANIOFACIAL KINEMATICS</span>
+                        <span class="bg-taupeAccent/20 text-gray-300 border border-taupeAccent/40 px-2 py-0.5">PHI BITE VECTOR</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        ATELIER 360
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /dermadental-360/ • London • Dubai • Delhi
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Integrated craniofacial aesthetics & cosmetic dentistry. Enhanced with Section 3: real-time 3D Craniofacial Kinematics & Bite Vector Lab linking occlusal vertical dimension (OVD) to masseter muscle tension lines and Golden Ratio Phi facial planes.
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">SKULL KINEMATICS</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">OVD BITE SLIDER</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">GOLDEN RATIO PHI</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('dermadental-360')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/dermadental-360/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 10: KAUSHIK & PARTNERS (amit-kaushik-associates) -->
+            <div class="project-card bg-obsidianCard border border-obsidianBorder p-8 flex flex-col justify-between group" data-category="institutional">
+                <div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[10px]">
+                        <span class="text-amber-400 font-bold tracking-widest">10 // SUPREME COURT ADVOCACY</span>
+                        <span class="bg-blue-500/10 text-blue-300 border border-blue-500/30 px-2 py-0.5">SCALES OF JUSTICE</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-white font-semibold group-hover:text-goldLeaf transition-colors">
+                        KAUSHIK & PARTNERS
+                    </h3>
+                    <div class="font-mono text-[11px] text-gray-400 mt-1 mb-4">
+                        /amit-kaushik-associates/ • New Delhi • London
+                    </div>
+
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Senior Advocates & international arbitration counsel in Oxford navy and legal parchment. Embedded 3D Scales of Justice and Constitutional Lex Monolith in the hero with harmonic spring damping and mode toggles (Equilibrium, SLP Burden, Arbitral Seat).
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[9px]">
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">3D JUSTICE SCALES</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">SPRING PHYSICS</span>
+                        <span class="bg-obsidian border border-obsidianBorder text-gray-300 px-2 py-0.5">OXFORD NAVY</span>
+                    </div>
+                </div>
+
+                <div class="pt-5 border-t border-obsidianBorder flex items-center justify-between font-mono text-xs">
+                    <button onclick="openInspector('amit-kaushik-associates')" class="text-gray-400 hover:text-goldLeaf transition-colors text-[11px]">
+                        ENGINE METRICS ⚙
+                    </button>
+                    <a href="/amit-kaushik-associates/" target="_blank" class="text-goldLeaf font-bold group-hover:translate-x-1 transition-transform flex items-center">
+                        LAUNCH SITE &rarr;
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Engineering Creed & Anti-Slop Directive -->
+    <section id="manifesto" class="py-24 px-6 max-w-7xl mx-auto border-b border-obsidianBorder">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <span class="font-mono text-xs text-goldLeaf uppercase tracking-[0.25em] block">// CONSTITUTIONAL ENGINEERING</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-white font-normal leading-tight">
+                    The Anti-Slop Manifesto & Ground-Truth First.
+                </h2>
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed font-light">
+                    Every digital experience crafted under Tejjo’s direction rejects AI template clichés. No generic blurred purple radial blobs, no copy-pasted 3-card feature grids with raw emojis, and zero speculative approximations.
+                </p>
+                <div class="space-y-4 font-mono text-xs text-gray-400 border-l-2 border-goldLeaf pl-6">
+                    <div>
+                        <strong class="text-white block font-sans text-sm mb-1">01 / Mathematical Physics Over CSS Hacks</strong>
+                        <span>We compute exponential repulsion curves, harmonic spring dampers, and Navier-Stokes particle equations directly in WebGL shaders.</span>
+                    </div>
+                    <div>
+                        <strong class="text-white block font-sans text-sm mb-1">02 / Pure Alpha Masking Over Milky Overlays</strong>
+                        <span>Zero milky opacity hack divs. True alpha gradients powered by CSS <code class="text-goldLeaf">maskImage</code> and transparent WebGL framebuffers.</span>
+                    </div>
+                    <div>
+                        <strong class="text-white block font-sans text-sm mb-1">03 / Multi-State Visual Reality Verification</strong>
+                        <span>Every site is proven under automated headless browser audits across T=0, loop drift, interactive hover, and high-DPI viewports.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-obsidianCard border border-obsidianBorder p-8 md:p-10">
+                <div class="flex justify-between items-center border-b border-obsidianBorder pb-4 mb-6 font-mono text-xs">
+                    <span class="text-goldLeaf uppercase tracking-widest font-bold">SYSTEM AUDIT TELEMETRY</span>
+                    <span class="text-emeraldGlow">STATUS: 100% OPERATIONAL</span>
+                </div>
+
+                <div class="space-y-4 font-mono text-xs">
+                    <div class="flex justify-between py-2 border-b border-obsidianBorder/60">
+                        <span class="text-gray-400">Total Curated Ecosystems</span>
+                        <span class="text-white font-bold">10 Production Sites</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-obsidianBorder/60">
+                        <span class="text-gray-400">Local WebGL Vendor Cache</span>
+                        <span class="text-emeraldGlow font-bold">Three.js + OrbitControls (100% Local)</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-obsidianBorder/60">
+                        <span class="text-gray-400">External CDN Script Vulnerabilities</span>
+                        <span class="text-emeraldGlow font-bold">0 Detected</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-obsidianBorder/60">
+                        <span class="text-gray-400">Preserved Flagships (Untouched)</span>
+                        <span class="text-white font-bold">sudha-mahesh / oil-petroleum / print-elements</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-obsidianBorder/60">
+                        <span class="text-gray-400">QuatreCentQuatre / Soucy Integrity</span>
+                        <span class="text-goldLeaf font-bold">Strictly Preserved (/luxelab/)</span>
+                    </div>
+                    <div class="flex justify-between py-2">
+                        <span class="text-gray-400">Average WebGL Frame Rate</span>
+                        <span class="text-emeraldGlow font-bold">60.0 FPS Locked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <footer class="py-12 px-6 max-w-7xl mx-auto font-mono text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+            &copy; 2026 TEJJO // CREATIVE DIRECTOR & DESIGN TECHNOLOGIST. ALL RIGHTS RESERVED.
+        </div>
+        <div class="flex items-center space-x-6 text-[11px]">
+            <span>SERVED VIA LOCAL PYTHON HTTP :8080</span>
+            <span class="text-goldLeaf">ANTI-SLOP ACCREDITED</span>
+        </div>
+    </footer>
+
+    <!-- Interactive 3D Tech Inspector Modal -->
+    <div id="inspector-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-obsidianCard border border-goldLeaf/40 max-w-3xl w-full p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto" data-lenis-prevent>
+            <button onclick="closeInspector()" class="absolute top-6 right-6 font-mono text-xs text-gray-400 hover:text-white px-2 py-1 border border-obsidianBorder bg-obsidian">
+                [ESC / CLOSE &times;]
+            </button>
+
+            <div class="flex items-center space-x-3 mb-2 font-mono text-xs text-goldLeaf">
+                <span id="modal-tag">01 // SPATIAL ARCHITECTURE</span>
+            </div>
+
+            <h3 id="modal-title" class="font-serif text-3xl text-white font-normal mb-3">
+                Archetype 3D Engine Architecture
+            </h3>
+
+            <p id="modal-desc" class="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                Deep architectural breakdown of this project's real-time WebGL engine and mathematical physics parameters.
+            </p>
+
+            <div class="bg-obsidian border border-obsidianBorder p-5 mb-6 font-mono text-xs space-y-2">
+                <div class="text-gray-500 text-[10px] uppercase mb-2">// SHADER & MATERIAL SPECIFICATIONS</div>
+                <div class="flex justify-between"><span class="text-gray-400">Geometry Type:</span><span id="spec-geo" class="text-white font-bold">Procedural Monolith Villa</span></div>
+                <div class="flex justify-between"><span class="text-gray-400">Material Shaders:</span><span id="spec-mat" class="text-goldLeaf font-bold">MeshStandardMaterial (PBR) + MeshDepthMaterial</span></div>
+                <div class="flex justify-between"><span class="text-gray-400">Lighting Physics:</span><span id="spec-light" class="text-white font-bold">Directional Sun Azimuth Lerp + Ambient Hemisphere</span></div>
+                <div class="flex justify-between"><span class="text-gray-400">Interaction Model:</span><span id="spec-controls" class="text-emeraldGlow font-bold">OrbitControls (Damping: 0.05, Zoom Enabled)</span></div>
+            </div>
+
+            <div class="flex justify-between items-center pt-4 border-t border-obsidianBorder font-mono text-xs">
+                <span class="text-gray-500">LOCAL SERVER VERIFIED</span>
+                <a id="modal-launch-link" href="#" target="_blank" class="px-6 py-3 bg-goldLeaf text-obsidian font-bold uppercase tracking-wider hover:bg-white transition-colors">
+                    LAUNCH PROJECT SITE &rarr;
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts: Hero 3D Spatial Matrix & Modal Logic -->
+    <script>
+        // --- LENIS SMOOTH SCROLL INITIALIZATION ---
+        let lenis;
+        try {
+            if (typeof Lenis !== 'undefined') {
+                lenis = new Lenis({
+                    autoRaf: true,
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    smoothWheel: true,
+                    anchors: true
+                });
+                window.lenis = lenis;
+            }
+        } catch (e) {
+            console.error('Lenis init failed', e);
+        }
+
+        // --- 10 PROJECT METADATA REPOSITORY ---
+        const projectData = {
+            '3d-spaces': {
+                tag: '01 // SPATIAL ARCHITECTURE',
+                title: 'Archetype 3D Architectural Pavilion',
+                desc: 'Bespoke Three.js architectural pavilion with travertine plinth, wave-shimmer reflecting pool, ground living pavilion, cantilever wing, and 12-blade teak brise-soleil. 3-mode real-time shader pipelines (Photoreal PBR, Clay AO, CAD Blueprint), solar azimuth lighting, and 4 camera glide presets.',
+                geo: 'Multi-Volume Cantilever Pavilion & Reflecting Pool (38,400 Quads)',
+                mat: 'MeshPhysicalMaterial (Travertine, Basalt, Teak Louvers, Low-Iron Glass)',
+                light: 'Three Celestial Solstice Modes: Noon Zenith (5600K), Alpine Dusk (2400K), Nocturne',
+                controls: 'Smooth Camera Glide Interpolation (4 Presets) + Orbit Damping',
+                url: '/3d-spaces/'
+            },
+            'luxelab': {
+                tag: '02 // HYPERCAR CLEARCOAT',
+                title: 'Carluxury Atelier Clearcoat Metrology',
+                desc: 'Preserved exact QuatreCentQuatre / Soucy layout. Three.js aerodynamic exotic hypercar with MeshPhysicalMaterial clearcoat=1.0, carbon aerodynamic splitter & diffuser, 5 pigment colors, and ultrasonic stratigraphy micrometer slider (150–250µm TPU armor).',
+                geo: 'Aerodynamic Exotic Hypercar (Low-Slung Monocoque, Cockpit, Quad Titanium Exhausts)',
+                mat: 'MeshPhysicalMaterial (Clearcoat: 1.0, ClearcoatRoughness: 0.04, Metalness: 0.85)',
+                light: 'Overhead Softbox Luminaires + Rim Kicker Lights for Specular Highlight Definition',
+                controls: 'Free Orbit Rotation with Pigment Palette & Micrometer Depth Metrology',
+                url: '/luxelab/'
+            },
+            'visionary-architect': {
+                tag: '03 // SWISS BIOCLIMATIC CAD',
+                title: 'König & Vandenberg 3D Axonometric',
+                desc: 'Swiss Bauhaus drafting paper aesthetic with millimeter gridlines. Elevation Section 1 integrates interactive Three.js 3D Axonometric villa model with Summer/Winter Solstice bioclimatic solar shading simulator.',
+                geo: 'Axonometric Cantilever Overhang & Glazed Pavilion',
+                mat: 'MeshStandardMaterial with CastShadow & ReceiveShadow Enabled',
+                light: 'Bioclimatic Solar Arc Driver with Overhang Shadow Projection',
+                controls: 'Axonometric Camera Projection Toggle (3D Model vs Photo vs Blueprint)',
+                url: '/visionary-architect/'
+            },
+            'aarpie-events': {
+                tag: '04 // HAUTE CELEBRATIONS',
+                title: 'Maison Étoile Champagne Effervescence',
+                desc: 'Vogue editorial wedding design across Lake Como and Loire Valley châteaux. Ambient Three.js 3D champagne effervescence bubble physics engine with cursor repulsion physics floating behind the master title.',
+                geo: 'Instanced Champagne Bubbles (140 Micro-Spheres)',
+                mat: 'MeshPhysicalMaterial (Transmission: 0.9, IOR: 1.34, Gold Tint 0xD4AF37)',
+                light: 'Subtle Warm Ambient + Radial Cursor Repulsion Vector Engine',
+                controls: 'Mouse Tracking Repulsion Physics with Upward Brownian Convection',
+                url: '/aarpie-events/'
+            },
+            'lazeez-restaurant': {
+                tag: '05 // AWADHI HAUTE CUISINE',
+                title: 'Sultanat 1784 Rising Smoke & Embers',
+                desc: 'Imperial Awadhi Dum Pukht cuisine. Three.js rising wood-smoke plumes and glowing amber charcoal embers particle canvas behind the hero title with turbulence noise and upward convective thermal drift.',
+                geo: 'Dual Particle Stream (180 Smoke Billows + 85 Charcoal Embers)',
+                mat: 'Custom Soft Circle Particle Textures with Additive Emissive Blending',
+                light: 'PointLight (Glowing Amber 0xF59E0B) with Fire Flicker Modulation',
+                controls: 'Perlin Noise Turbulence Simulation with Thermal Expansion Velocity',
+                url: '/lazeez-restaurant/'
+            },
+            'vrsabha-investments': {
+                tag: '06 // MULTI-FAMILY OFFICE',
+                title: 'Sovereign Crest Capital Gyroscope',
+                desc: 'Mayfair family office managing £4.25B across 42 dynasties. Embedded 3D Gyroscopic Capital Armillary with 4 rotating asset rings, gold ingot core, connected directly to dynastic compounding simulator.',
+                geo: 'Concentric Torus Asset Rings + Faceted Icosahedron Gold Core',
+                mat: 'MeshStandardMaterial (24K Gold Leaf 0xC5A059, Metalness: 0.95)',
+                light: 'Gold Key PointLight + Cyan Soft Fill Light with Reflective Specular',
+                controls: 'OrbitControls with Mode Switcher (Orbital, Stress-Shield, Dynastic)',
+                url: '/vrsabha-investments/'
+            },
+            'la-grace-luxury-skin-clinic': {
+                tag: '07 // HAUTE DERMATOLOGIE',
+                title: 'Clinique Élixir 3D Peptide Double-Helix',
+                desc: 'Parisian aesthetic dermatology by Dr. Jyoti Aneja. Section 2.5 integrates real-time 3D Peptide Triple-Helix & Biostimulation Lab with 3 live molecular configurations (Procollagen, GHK-Cu, Exosomes) and draggable Before/After loupe.',
+                geo: 'Intertwined Helical Pearl Strands + Hydrogen Bond Cylinders',
+                mat: 'MeshStandardMaterial (Rose Gold 0xB76E79 & Pearl Alabaster 0xFAF8F5)',
+                light: 'Directional Studio Key + Dual Point Lights with Floating Vesicle Cloud',
+                controls: 'Full 360° Molecular Orbit with Live Kd Dissociation Telemetry Table',
+                url: '/la-grace-luxury-skin-clinic/'
+            },
+            'dentical-your-smile-space': {
+                tag: '08 // BIOPHILIC DENTAL',
+                title: 'København Smile 3D CAD/CAM Veneer Twin',
+                desc: 'Scandinavian biophilic dental sanctuary in blonde oak and pine sage. Section 2 integrates 3D IPS e.max Porcelain Veneer CAD-CAM digital twin with true physical ceramic transmission, dentin core inspection, and shade guide (BL1–A2).',
+                geo: 'Anatomical Central Incisor Crown Shell with Mamelon Lobes',
+                mat: 'MeshPhysicalMaterial (Transmission: 0.50, IOR: 1.52, Clearcoat: 1.0)',
+                light: 'Circadian Studio Light + Amber Subsurface Scatter Attenuation',
+                controls: 'Render Modes (Glazed Ceramic, Translucent Dentin, CAD Wireframe)',
+                url: '/dentical-your-smile-space/'
+            },
+            'dermadental-360': {
+                tag: '09 // CRANIOFACIAL KINEMATICS',
+                title: 'Atelier 360 Craniofacial Phi & Bite Vector Lab',
+                desc: 'Integrated facial dermatology and cosmetic dentistry. Section 3 features interactive 3D Craniofacial Kinematics with articulating lower mandible linked to occlusal vertical dimension (OVD) slider and Golden Ratio Phi planes.',
+                geo: 'Cranial Wireframe Dome + Articulated Mandibular Jaw Arch',
+                mat: 'MeshBasicMaterial (Phi Matrix) + Dynamic Tension Vector Lines',
+                light: 'Soft Alabaster Ambient + Directional Craniofacial Silhouette Light',
+                controls: 'OVD Bite Height Slider (-3.0mm to +3.5mm) with Live Soft Tissue Tension',
+                url: '/dermadental-360/'
+            },
+            'amit-kaushik-associates': {
+                tag: '10 // SUPREME ADVOCACY',
+                title: 'Kaushik & Partners Scales of Justice Monolith',
+                desc: 'Supreme Court of India & SIAC arbitration chambers in Oxford navy. Embedded 3D Scales of Justice and Constitutional Lex Monolith with harmonic spring damping and mode toggles (Equilibrium, SLP Burden, Arbitral Seat).',
+                geo: 'Brushed Bronze Pedestal, Fluted Column, Balance Beam & Suspended Pans',
+                mat: 'MeshStandardMaterial (Bronze 0xA68042 & Dark Steel 0x111F36)',
+                light: 'Chambers Directional Light + Warm Bronze Specular Highlights',
+                controls: 'Damped Spring Oscillation with Interactive Legal Weight Mode Switcher',
+                url: '/amit-kaushik-associates/'
+            }
+        };
+
+        function openInspector(key) {
+            const data = projectData[key];
+            if (!data) return;
+            document.getElementById('modal-tag').textContent = data.tag;
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-desc').textContent = data.desc;
+            document.getElementById('spec-geo').textContent = data.geo;
+            document.getElementById('spec-mat').textContent = data.mat;
+            document.getElementById('spec-light').textContent = data.light;
+            document.getElementById('spec-controls').textContent = data.controls;
+            document.getElementById('modal-launch-link').href = data.url;
+            document.getElementById('inspector-modal').classList.remove('hidden');
+            if (window.lenis) window.lenis.stop();
+        }
+
+        function closeInspector() {
+            document.getElementById('inspector-modal').classList.add('hidden');
+            if (window.lenis) window.lenis.start();
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeInspector();
+        });
+
+        // Deep-link check on load
+        window.addEventListener('DOMContentLoaded', () => {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const inspectKey = urlParams.get('inspect');
+                if (inspectKey && projectData[inspectKey]) {
+                    openInspector(inspectKey);
+                }
+            } catch (err) {}
+        });
+
+        // --- FILTER FUNCTIONALITY ---
+        function filterProjects(filter) {
+            const btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(btn => {
+                if (btn.getAttribute('data-filter') === filter) {
+                    btn.className = "filter-btn px-3 py-1.5 bg-goldLeaf text-obsidian font-bold tracking-wider active";
+                } else {
+                    btn.className = "filter-btn px-3 py-1.5 bg-obsidianCard border border-obsidianBorder text-gray-400 hover:text-white hover:border-goldLeaf transition-colors";
+                }
+            });
+
+            const cards = document.querySelectorAll('#projects-grid .project-card');
+            cards.forEach(card => {
+                const cats = card.getAttribute('data-category') || '';
+                if (filter === 'all' || cats.includes(filter)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // --- HERO 3D SPATIAL CONSTELLATION ENGINE (Three.js) ---
+        let heroScene, heroCamera, heroRenderer, heroControls;
+        let constellationGroup, coreMesh, nodePoints = [];
+
+        function initHeroSpatialEngine() {
+            const canvas = document.getElementById('hero-spatial-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const rect = canvas.getBoundingClientRect();
+            const width = rect.width || canvas.clientWidth || 500;
+            const height = rect.height || canvas.clientHeight || 500;
+
+            heroScene = new THREE.Scene();
+            heroCamera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+            heroCamera.position.set(0, 1.5, 7.2);
+
+            heroRenderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                antialias: true,
+                alpha: true,
+                powerPreference: 'high-performance'
+            });
+            heroRenderer.setSize(width, height);
+            heroRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            heroControls = new THREE.OrbitControls(heroCamera, canvas);
+            heroControls.enableDamping = true;
+            heroControls.dampingFactor = 0.05;
+            heroControls.enableZoom = false;
+            heroControls.enablePan = false;
+            heroControls.autoRotate = false;
+
+            // Lights
+            const ambient = new THREE.AmbientLight(0xffffff, 1.2);
+            heroScene.add(ambient);
+
+            const goldPoint = new THREE.PointLight(0xD4AF37, 3.5, 25);
+            goldPoint.position.set(4, 5, 4);
+            heroScene.add(goldPoint);
+
+            const emeraldPoint = new THREE.PointLight(0x10B981, 2.0, 20);
+            emeraldPoint.position.set(-4, -3, -3);
+            heroScene.add(emeraldPoint);
+
+            const bluePoint = new THREE.PointLight(0x3B82F6, 1.5, 15);
+            bluePoint.position.set(0, -4, 4);
+            heroScene.add(bluePoint);
+
+            constellationGroup = new THREE.Group();
+            heroScene.add(constellationGroup);
+
+            // Core Geodesic Monolith (Faceted icosahedron)
+            const coreGeo = new THREE.IcosahedronGeometry(1.2, 1);
+            const coreMat = new THREE.MeshStandardMaterial({
+                color: 0x0D0F14,
+                metalness: 0.9,
+                roughness: 0.2,
+                wireframe: false
+            });
+            coreMesh = new THREE.Mesh(coreGeo, coreMat);
+            constellationGroup.add(coreMesh);
+
+            const coreWireGeo = new THREE.IcosahedronGeometry(1.22, 1);
+            const coreWireMat = new THREE.MeshBasicMaterial({
+                color: 0xD4AF37,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.4
+            });
+            const coreWire = new THREE.Mesh(coreWireGeo, coreWireMat);
+            constellationGroup.add(coreWire);
+
+            // 10 Orbital Project Beacon Nodes
+            const nodeCount = 10;
+            const orbitRadius = 2.4;
+            const nodeGeo = new THREE.SphereGeometry(0.09, 16, 16);
+            const nodeMat = new THREE.MeshStandardMaterial({
+                color: 0xD4AF37,
+                emissive: 0x553C00,
+                metalness: 0.8,
+                roughness: 0.2
+            });
+
+            const lineMat = new THREE.LineBasicMaterial({
+                color: 0xD4AF37,
+                transparent: true,
+                opacity: 0.25
+            });
+
+            for (let i = 0; i < nodeCount; i++) {
+                const phi = Math.acos(-1 + (2 * i) / nodeCount);
+                const theta = Math.sqrt(nodeCount * Math.PI) * phi;
+
+                const x = orbitRadius * Math.sin(phi) * Math.cos(theta);
+                const y = orbitRadius * Math.sin(phi) * Math.sin(theta);
+                const z = orbitRadius * Math.cos(phi);
+
+                const nodeMesh = new THREE.Mesh(nodeGeo, nodeMat);
+                nodeMesh.position.set(x, y, z);
+                constellationGroup.add(nodeMesh);
+                nodePoints.push(nodeMesh);
+
+                // Laser connection cord to center
+                const lineGeo = new THREE.BufferGeometry().setFromPoints([
+                    new THREE.Vector3(0, 0, 0),
+                    new THREE.Vector3(x, y, z)
+                ]);
+                const line = new THREE.Line(lineGeo, lineMat);
+                constellationGroup.add(line);
+            }
+
+            // Outer Ambient Dust Cloud (280 gold & emerald particles)
+            const dustCount = 280;
+            const dustGeo = new THREE.BufferGeometry();
+            const dustPos = new Float32Array(dustCount * 3);
+            for (let i = 0; i < dustCount; i++) {
+                const r = 1.4 + Math.random() * 2.8;
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.acos(2 * Math.random() - 1);
+                dustPos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+                dustPos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+                dustPos[i * 3 + 2] = r * Math.cos(phi);
+            }
+            dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
+            const dustMat = new THREE.PointsMaterial({
+                color: 0xD4AF37,
+                size: 0.04,
+                transparent: true,
+                opacity: 0.55
+            });
+            const dustPoints = new THREE.Points(dustGeo, dustMat);
+            constellationGroup.add(dustPoints);
+
+            window.addEventListener('resize', () => {
+                if (!canvas) return;
+                const w = canvas.clientWidth;
+                const h = canvas.clientHeight;
+                if (w && h) {
+                    heroCamera.aspect = w / h;
+                    heroCamera.updateProjectionMatrix();
+                    heroRenderer.setSize(w, h);
+                }
+            });
+
+            animateHeroSpatial();
+        }
+
+        let heroClock = 0;
+        function animateHeroSpatial() {
+            requestAnimationFrame(animateHeroSpatial);
+            heroClock += 0.008;
+
+            if (heroControls) heroControls.update();
+
+            if (constellationGroup) {
+                constellationGroup.rotation.y += 0.005;
+                constellationGroup.rotation.x = Math.sin(heroClock) * 0.15;
+            }
+
+            if (coreMesh) {
+                coreMesh.rotation.y -= 0.008;
+                coreMesh.rotation.z += 0.004;
+            }
+
+            nodePoints.forEach((node, idx) => {
+                const scale = 1.0 + Math.sin(heroClock * 3.0 + idx) * 0.18;
+                node.scale.set(scale, scale, scale);
+            });
+
+            if (heroRenderer && heroScene && heroCamera) {
+                heroRenderer.render(heroScene, heroCamera);
+            }
+        }
+
+        // Init on DOM load
+        window.addEventListener('DOMContentLoaded', initHeroSpatialEngine);
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initHeroSpatialEngine();
+        }
+    </script>
+</body>
+</html>

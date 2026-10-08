@@ -1,0 +1,168 @@
+{
+  "client_id": "kdc-001",
+  "client_name": "Kunal Athreya",
+  "organization": "Kunal Drum Class (KDC)",
+  "primary_email": "kunalsdrumclass@gmail.com",
+  "primary_location": "Chembur Studio, Mumbai",
+  "secret_key": "kdc-mumbai-9f4a21",
+  "portal_slug": "kdc-mumbai-9f4a21",
+  "portal_url": "https://clientportal.disojo.in/portal/kdc-mumbai-9f4a21",
+  "created_at": "2026-09-16T20:30:00+05:30",
+  "last_updated": "2026-09-16T20:30:00+05:30",
+  "engagement_summary": {
+    "project_title": "KDC Enterprise Operating System & Mobile Suite",
+    "service_tier": "Bespoke Enterprise Systems Architecture",
+    "total_contract_value_inr": 325000,
+    "monthly_retainer_inr": 7500,
+    "retainer_terms": "₹7,500/month base for Year 1, increasing by 7% annually every single year. Multi-Center Expansion: ₹10,000 setup + ₹4,000/mo per additional active center.",
+    "commercial_status": "Active - Sprint 1 Initiated",
+    "current_phase": "Sprint 1 Active (Architecture & Schemas) · Milestone 1 Cleared"
+  },
+  "ledger": {
+    "total_billed_inr": 16500,
+    "total_collected_inr": 16500,
+    "outstanding_balance_inr": 308500,
+    "milestones": [
+      {
+        "id": "M1",
+        "number": 1,
+        "title": "Kickoff, System Architecture, & Database Schema",
+        "amount_inr": 16500,
+        "percentage": 5.08,
+        "status": "SETTLED",
+        "paid_date": "2026-09-16",
+        "payment_breakdown": [
+          {
+            "mode": "UPI / Online",
+            "amount_inr": 1000,
+            "date": "2026-09-14",
+            "reference": "IMPS/UPI Kickoff Token"
+          },
+          {
+            "mode": "Cash in Hand",
+            "amount_inr": 15500,
+            "date": "2026-09-16",
+            "reference": "Direct Cash Settlement"
+          }
+        ],
+        "invoice_ref": "DS-2026-001",
+        "deliverables": [
+          "Complete 39-Batch & 7-Kit Operational Architecture",
+          "Master Requirements Specification Bible (12-State Confirmation Logic)",
+          "Executive Project Charter & Governance Protocol",
+          "Deterministic 226-Student Demo Roster Engine",
+          "Disojo Private Client Portal Provisioning"
+        ]
+      },
+      {
+        "id": "M2",
+        "number": 2,
+        "title": "Complete Multi-Platform Build — Staged & Ready for Client Testing",
+        "amount_inr": 48750,
+        "percentage": 15.0,
+        "status": "IN_PROGRESS",
+        "target_date": "2026-10-15",
+        "trigger": "After we are done with the whole app and the system is ready for Kunal Sir to test",
+        "deliverables": [
+          "Complete Student Mobile App (iOS & Android) with clean student view",
+          "Tutor Command Station with 39-Batch Navigator & 7-Kit live roll call",
+          "Supabase Cloud Database Schema with secure Row Level Security",
+          "Admin Master Web Portal with Point 9 Discretionary Comps & Roster Search"
+        ]
+      },
+      {
+        "id": "M3",
+        "number": 3,
+        "title": "Client Testing, Revision Rounds & Governance Approval",
+        "amount_inr": 97500,
+        "percentage": 30.0,
+        "status": "UPCOMING",
+        "target_date": "2026-10-25",
+        "trigger": "Once Kunal Sir has tested and approved all revision rounds",
+        "deliverables": [
+          "Studio Staging Beta Testing with active KDC tutors in Chembur",
+          "Automated Batch Rescheduling & Waitlist Engine verification",
+          "Fine-tuned attendance grace rules and student notification flows",
+          "Client Sign-Off & formal approval on all revision rounds"
+        ]
+      },
+      {
+        "id": "M4",
+        "number": 4,
+        "title": "Production Deployment, App Store Go-Live & Student Rollout",
+        "amount_inr": 162500,
+        "percentage": 50.0,
+        "status": "UPCOMING",
+        "target_date": "2026-11-15",
+        "trigger": "Once the app is live and running and students can download it from App Store / Google Play",
+        "deliverables": [
+          "Apple App Store & Google Play Store Production Submissions & Approvals",
+          "Production Cloud Infrastructure & Edge CDN Handover",
+          "Full KDC Student Database Migration (Chembur Studio)",
+          "Staff Training & 24/7 Priority Go-Live Support Handover"
+        ]
+      }
+    ]
+  },
+  "system_modules": [
+    {
+      "name": "Student Mobile Application",
+      "platform": "iOS & Android (Expo / React Native)",
+      "status": "Architecture Staged",
+      "summary": "Clean, friction-free mobile experience for students & parents.",
+      "features": [
+        "Personalized batch schedule & time-slot viewer",
+        "Physical drum station / kit assignment indicator",
+        "Attendance history & session tracking",
+        "Zero tutor controls (clean, secure student view)"
+      ]
+    },
+    {
+      "name": "Tutor Command Station",
+      "platform": "Dedicated Studio Tablet / Web / Mobile Interface",
+      "status": "Prototype Built (39 Batches, 226 Roster Students)",
+      "summary": "Engineered for physical classroom roll-call with zero paper registers.",
+      "features": [
+        "39-Batch instant switcher across all days/slots",
+        "7 Physical drum kit stations live tracker",
+        "One-tap attendance states: Present, Absent, No-Show",
+        "Point 7 Next-Day Grace banner & roster directory search"
+      ]
+    },
+    {
+      "name": "Admin Master Web Portal",
+      "platform": "Desktop Web Dashboard",
+      "status": "Internal Staging Ready",
+      "summary": "Kunal Sir's centralized command center for studio-wide governance.",
+      "features": [
+        "39-Batch interactive master schedule matrix",
+        "Point 9 Discretionary Comp injection with audit logging",
+        "Complete student database management & enrollment search",
+        "Multi-center architectural readiness (Chembur + future centers)"
+      ]
+    },
+    {
+      "name": "Payments & Billing Infrastructure",
+      "platform": "Modular Cloud Billing Service",
+      "status": "PAUSED_PENDING_CLIENT_FINALIZATION",
+      "summary": "Official hold per client directive (Sep 15). Modular adapter ready.",
+      "features": [
+        "Modular architecture supporting Razorpay, direct UPI QR, or manual bank reconciliation",
+        "Automated monthly invoice receipt generation",
+        "Ready to plug in live gateway whenever finalized by Kunal Sir"
+      ]
+    }
+  ],
+  "governance": {
+    "client_action_item": "Export existing student contact spreadsheet when convenient",
+    "staging_access": "Private preview builds delivered via TestFlight & secure web URLs"
+  },
+  "agency": {
+    "name": "Disojo Solutions",
+    "founder": "Tejjo Bareja",
+    "msme_registration": "UDYAM-MH-18-0539895",
+    "email": "contact@disojo.in",
+    "phone": "+91 77380 73307",
+    "location": "Mumbai, India"
+  }
+}

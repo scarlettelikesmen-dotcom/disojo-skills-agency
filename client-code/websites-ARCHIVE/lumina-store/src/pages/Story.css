@@ -1,0 +1,92 @@
+/* ===========================
+   Story Page
+   =========================== */
+
+.story-page {
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+/* === Half-height hero === */
+.story-hero {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.story-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+.story-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 21, 16, 0.15);
+}
+
+/* === Philosophy body === */
+.story-body {
+  padding: 6rem 0 8rem;
+}
+
+.story-container {
+  max-width: 700px;
+}
+
+.story-philosophy-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+
+.story-divider {
+  width: 3rem;
+  height: 2px;
+  background: var(--terracotta);
+  margin-bottom: 2.5rem;
+}
+
+.story-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.story-paragraphs p {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+}
+
+.story-paragraphs p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.story-closing {
+  font-family: var(--font-serif) !important;
+  font-size: 1.4rem !important;
+  font-style: italic;
+  color: var(--forest) !important;
+  margin-top: 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .story-hero {
+    height: 50vh;
+  }
+
+  .story-body {
+    padding: 4rem 0 6rem;
+  }
+}

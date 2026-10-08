@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Print Elements in Delta, BC. Digital printing, wide format signs, vehicle wraps, business cards, banners, flyers and custom branded products. You think it, we print it.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Print Elements | Commercial Printing in Delta & Surrey, BC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 70px 0 60px;
+      background: radial-gradient(circle at 85% 20%, rgba(230, 0, 126, 0.05) 0%, rgba(0, 162, 232, 0.05) 40%, rgba(255, 210, 0, 0.04) 70%, transparent 100%), #ffffff;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .hero-tagline {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      color: var(--cmyk-magenta);
+      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .hero-h1 {
+      margin-bottom: 20px;
+      line-height: 1.05;
+    }
+    .hero-copy {
+      font-size: 1.12rem;
+      color: var(--text-body);
+      max-width: 580px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-item b {
+      display: block;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.6rem;
+      color: var(--text-primary);
+    }
+    .stat-item span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .hero-visual {
+      position: relative;
+    }
+    .hero-card-stack {
+      position: relative;
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-card-stack img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+    .hero-badge-float {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: #ffffff;
+      padding: 14px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--cmyk-magenta-tint);
+      color: var(--cmyk-magenta);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      font-weight: 900;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 80px 0;
+    }
+    .section-header {
+      margin-bottom: 44px;
+    }
+    .section-header.center {
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section-header.split {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Category Tiles (The 4 Main Categories) */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .category-card .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    .category-card.digital { --card-accent: var(--cmyk-magenta); }
+    .category-card.digital .card-icon { background: var(--cmyk-magenta-tint); color: var(--cmyk-magenta); }
+    .category-card.wide { --card-accent: var(--cmyk-cyan); }
+    .category-card.wide .card-icon { background: var(--cmyk-cyan-tint); color: var(--cmyk-cyan); }
+    .category-card.novelty { --card-accent: var(--cmyk-yellow); }
+    .category-card.novelty .card-icon { background: var(--cmyk-yellow-tint); color: #b45309; }
+    .category-card.wraps { --card-accent: var(--brand-ink); }
+    .category-card.wraps .card-icon { background: var(--bg-muted); color: var(--brand-ink); }
+
+    .category-card h3 {
+      margin-bottom: 10px;
+    }
+    .category-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    .category-card .card-cta {
+      font-weight: 800;
+      font-size: 0.84rem;
+      letter-spacing: 0.06em;
+      color: var(--cmyk-magenta);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    /* Why Us / Value Prop */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .value-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+    .value-card h3 {
+      margin: 14px 0 8px;
+    }
+    .value-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Portfolio Section */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 16px;
+    }
+    .portfolio-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 240px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .portfolio-item.tall {
+      grid-row: span 2;
+      min-height: 496px;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.04);
+    }
+    .portfolio-label {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: 800;
+      font-size: 0.86rem;
+      color: var(--text-primary);
+    }
+
+        /* Reviews */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .review-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .stars {
+      color: var(--cmyk-yellow);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+    .review-card q {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-body);
+      font-style: italic;
+    }
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .reviewer img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+    .reviewer-info b {
+      display: block;
+      color: var(--text-primary);
+      font-size: 0.92rem;
+    }
+    .reviewer-info span {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+
+    /* Quote & Contact Section */
+    .quote-section {
+      background: var(--bg-slate);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .contact-card-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .contact-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--cmyk-magenta-tint);
+      color: var(--cmyk-magenta);
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .contact-card-body span {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+    .contact-card-body b {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+
+    form {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    form label {
+      display: grid;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-primary);
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      border: 1.5px solid var(--border);
+      background: var(--bg-slate);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      transition: border-color 0.2s;
+    }
+    form input:focus, form select:focus, form textarea:focus {
+      outline: none;
+      border-color: var(--cmyk-magenta);
+      background: #ffffff;
+    }
+    form textarea {
+      grid-column: 1 / -1;
+      height: 120px;
+      resize: vertical;
+    }
+    form .form-btn {
+      grid-column: 1 / -1;
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .categories-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .portfolio-item.tall { grid-row: auto; min-height: 240px; }
+      .quote-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .values-grid, .reviews-grid { grid-template-columns: 1fr; }
+      .categories-grid, .product-grid { grid-template-columns: 1fr; }
+      form { grid-template-columns: 1fr; }
+    }
+      /* Who We Are & What We Bring */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-image-card {
+      background: radial-gradient(circle at 50% 50%, rgba(230, 0, 126, 0.05) 0%, rgba(0, 162, 232, 0.04) 60%, #ffffff 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .about-logo-wrapper {
+      max-width: 340px;
+      padding: 10px;
+      transition: transform 0.4s ease;
+    }
+    .about-image-card:hover .about-logo-wrapper {
+      transform: scale(1.03);
+    }
+    .about-logo-img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.08));
+    }
+    .about-badge-card {
+      position: absolute;
+      bottom: -18px;
+      right: 20px;
+      background: #ffffff;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .about-badge-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--cmyk-yellow-tint);
+      color: #b45309;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+    }
+    .table-points {
+      display: grid;
+      gap: 16px;
+    }
+    .point-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--bg-slate);
+      padding: 16px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .point-item:hover {
+      transform: translateX(4px);
+      border-color: var(--cmyk-magenta);
+      background: #ffffff;
+    }
+    .point-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 992px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-image-card { max-width: 440px; margin: 0 auto; }
+      .about-badge-card { position: static; margin-top: 20px; }
+    }
+
+</style>
+</head>
+<body>
+
+  <!-- Topline CMYK Gradient -->
+  <div class="topline-gradient"></div>
+
+  <!-- Utility Contact Bar -->
+  <div class="utility-bar">
+    <div class="wrap utility-content">
+      <div class="utility-left">
+        <span class="utility-item">📍 7511 120 Street, Delta, BC — Serving Surrey & Metro Vancouver</span>
+        <span class="utility-item">✉️ <a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></span>
+      </div>
+      <div class="utility-right">
+        <span class="utility-item">📞 <a href="tel:6045410560"><strong>(604) 541-0560</strong></a> / <a href="tel:7783211010">(778) 321-1010</a></span>
+        <span class="tagline-badge">“You think it, we print it”</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Header -->
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Print Elements Logo" class="brand-logo">
+        <div class="brand-text">Print <span>Elements</span></div>
+      </a>
+      <div class="navlinks" id="navlinks">
+        <a href="index.html">Home</a>
+                <div class="nav-dropdown-wrap" id="nav-dropdown-wrap">
+          <span class="nav-dropdown-trigger" id="products-trigger" role="button" tabindex="0">Products ▾</span>
+          <div class="nav-dropdown" id="products-dropdown">
+            <a href="digital-printing.html">
+              <span style="color:var(--cmyk-magenta);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Digital Printing</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Cards, Flyers, Brochures, Stationery</div>
+              </div>
+            </a>
+            <a href="wide-format.html">
+              <span style="color:var(--cmyk-cyan);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Wide Format Signs</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Banners, Signs, Posters, Windows</div>
+              </div>
+            </a>
+            <a href="novelty.html">
+              <span style="color:var(--cmyk-yellow);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Novelty &amp; Promo</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Tumblers, Mugs, Apparel, Merch</div>
+              </div>
+            </a>
+            <a href="vehicle-wraps.html">
+              <span style="color:var(--brand-ink);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Vehicle Wraps</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Full &amp; Partial Fleet Graphics</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#quote">Contact</a>
+        <a class="btn btn-primary" href="#quote">Get a Quote ↗</a>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <span class="hero-tagline">You think it, we print it.</span>
+          <h1 class="hero-h1">Commercial Printing in Delta & Surrey.</h1>
+          <p class="hero-copy">
+            High-definition digital prints, large-format signs, commercial vehicle wraps, and custom branded promotional items. Printed locally with crisp detail and rapid turnaround.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote">Request Free Quote ↗</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/16045410560?text=Hi%2C%20I%20would%20like%20a%20printing%20quote" target="_blank">Chat on WhatsApp</a>
+            <a class="btn btn-outline" href="#categories">Browse Categories ↓</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <b>24–48h</b>
+              <span>Rush Turnaround</span>
+            </div>
+            <div class="stat-item">
+              <b>1,200+</b>
+              <span>Local Projects Done</span>
+            </div>
+            <div class="stat-item">
+              <b>4.9 / 5</b>
+              <span>Google Verified Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <img src="assets/business-cards.jpg" alt="Print Elements Sample Works">
+            <div class="hero-badge-float">
+              <div class="badge-icon">✓</div>
+              <div>
+                <strong style="display:block;font-size:0.95rem;color:var(--text-primary)">Local Production</strong>
+                <span style="font-size:0.8rem;color:var(--text-muted)">Delta, Surrey & Metro Vancouver</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Tiles (The 4 Pillars) -->
+    <section id="categories" style="background:var(--bg-slate);border-bottom:1px solid var(--border)">
+      <div class="wrap">
+        <div class="section-header center">
+          <div class="eyebrow">Product Catalog</div>
+          <h2>Explore By Category</h2>
+          <p style="color:var(--text-muted)">Everything your business needs from business cards to full commercial fleet wraps.</p>
+        </div>
+        <div class="categories-grid">
+          <!-- 1. Digital Printing -->
+          <a class="category-card digital" href="digital-printing.html">
+            <div class="card-icon">🖨️</div>
+            <h3>Digital Printing</h3>
+            <p>Business cards, flyers, brochures, postcards, and office stationery with rich colour fidelity.</p>
+            <span class="card-cta">View 8 Products →</span>
+          </a>
+
+          <!-- 2. Wide Format -->
+          <a class="category-card wide" href="wide-format.html">
+            <div class="card-icon">📢</div>
+            <h3>Wide Format</h3>
+            <p>Roll-up banners, outdoor vinyl, rigid coroplast signs, window graphics, and posters up to 60" wide.</p>
+            <span class="card-cta">View 8 Products →</span>
+          </a>
+
+          <!-- 3. Novelty -->
+          <a class="category-card novelty" href="novelty.html">
+            <div class="card-icon">🎁</div>
+            <h3>Novelty & Promo</h3>
+            <p>Custom wine tumblers, ceramic mugs, travel cups, hoodies, tees, and branded promotional merch.</p>
+            <span class="card-cta">View 9 Products →</span>
+          </a>
+
+          <!-- 4. Vehicle Wraps -->
+          <a class="category-card wraps" href="vehicle-wraps.html">
+            <div class="card-icon">🚗</div>
+            <h3>Vehicle Wraps</h3>
+            <p>Full commercial wraps, partial wraps, vehicle decals, and magnetic door signs with 3M vinyl.</p>
+            <span class="card-cta">View 6 Services →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Products Grid -->
+    <section id="products">
+      <div class="wrap">
+        <div class="section-header split">
+          <div>
+            <div class="eyebrow">Fast Turnaround</div>
+            <h2>Popular Products</h2>
+          </div>
+          <a href="digital-printing.html" class="btn btn-outline">View Full Catalog →</a>
+        </div>
+        <div class="product-grid">
+          <!-- 1. Business cards -->
+          <a class="product-card" href="product.html?id=business-cards">
+            <div class="product-thumb">
+              <img src="assets/business-cards.jpg" alt="Business Cards">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">CMYK / 01</span>
+              <h3>Business Cards</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">16pt premium matte, gloss, or soft-touch finishes.</p>
+              <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta);font-weight:700">Get a Quote ↗</div>
+            </div>
+          </a>
+
+          <!-- 2. Flyers -->
+          <a class="product-card" href="product.html?id=flyers">
+            <div class="product-thumb">
+              <img src="assets/flyers.jpg" alt="Flyers and Brochures">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">PRINT / 02</span>
+              <h3>Flyers & Brochures</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Tri-fold, bi-fold, and single sheet promotional material.</p>
+              <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta);font-weight:700">Get a Quote ↗</div>
+            </div>
+          </a>
+
+          <!-- 3. Banners -->
+          <a class="product-card" href="product.html?id=roller-banners">
+            <div class="product-thumb">
+              <img src="assets/banners.jpg" alt="Banners and Displays">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">XL / 03</span>
+              <h3>Banners & Displays</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Heavy-duty roll-up banners with aluminum stands.</p>
+              <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta);font-weight:700">Get a Quote ↗</div>
+            </div>
+          </a>
+
+          <!-- 4. Vehicle Wraps -->
+          <a class="product-card" href="vehicle-wraps.html">
+            <div class="product-thumb">
+              <img src="assets/vehicle-wraps.jpg" alt="Vehicle Graphics">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">WRAP / 04</span>
+              <h3>Vehicle Graphics</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Commercial van, truck, and car vinyl wraps.</p>
+              <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta);font-weight:700">Get a Quote ↗</div>
+            </div>
+          </a>
+
+          <!-- 5. Coroplast -->
+          <a class="product-card" href="product.html?id=coroplast-signs">
+            <div class="product-thumb">
+              <img src="assets/coroplast.jpg" alt="Coroplast Signs">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">SIGN / 05</span>
+              <h3>Signs & Coroplast</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Lawn, real estate, and outdoor weatherproof signs.</p>
+              <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta);font-weight:700">Get a Quote ↗</div>
+            </div>
+          </a>
+
+          <!-- 6. Custom Merch -->
+          <a class="product-card" href="novelty.html">
+            <div class="product-thumb">
+              <img src="assets/custom-merch.jpg" alt="Custom Merch">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">MERCH / 06</span>
+              <h3>Custom Merch & Tumblers</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Wine tumblers, coffee mugs, apparel and gifts.</p>
+              <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta);font-weight:700">Get a Quote ↗</div>
+            </div>
+          </a>
+
+          <!-- 7. Postcards -->
+          <a class="product-card" href="product.html?id=postcards">
+            <div class="product-thumb">
+              <img src="assets/postcards.jpg" alt="Postcards and Mailers">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">MAIL / 07</span>
+              <h3>Postcards & Mailers</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Canada Post direct mail compliant postcards.</p>
+              <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta);font-weight:700">Get a Quote ↗</div>
+            </div>
+          </a>
+
+          <!-- 8. Menus -->
+          <a class="product-card" href="product.html?id=menus">
+            <div class="product-thumb">
+              <img src="assets/menus.jpg" alt="Menus and Stationery">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag">OFFICE / 08</span>
+              <h3>Menus & Stationery</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Laminated wipe-clean menus, letterheads and envelopes.</p>
+              <div class="product-price-tag" style="margin-top:auto;color:var(--cmyk-magenta);font-weight:700">Get a Quote ↗</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Are & What We Bring to the Table -->
+    <section id="about" style="background:#ffffff;padding:90px 0;border-top:1px solid var(--border)">
+      <div class="wrap about-grid">
+        <div class="about-visual">
+          <div class="about-image-card">
+            <div class="about-logo-wrapper">
+              <img src="assets/logo.png" alt="Print Elements Official Logo" class="about-logo-img">
+            </div>
+            <div class="about-badge-card">
+              <div class="about-badge-icon">✨</div>
+              <div>
+                <strong style="display:block;font-size:0.92rem;color:var(--text-primary)">Artisan Precision</strong>
+                <span style="font-size:0.78rem;color:var(--text-muted)">Delta &amp; Surrey Local Shop</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="eyebrow">Dedicated Production Studio</div>
+          <h2 style="margin-bottom:16px;font-size:clamp(1.8rem,3vw,2.4rem)">Who Are <span style="color:var(--cmyk-magenta)">We?</span></h2>
+          <p style="font-size:1.02rem;color:var(--text-body);line-height:1.7;margin-bottom:14px">
+            <strong>Print Elements</strong> is a team of dedicated print specialists based in Delta, BC. We help businesses, organizations, and creators stand out with high-definition visual marketing materials — spanning precision digital print, commercial wide-format signs, custom novelty merchandise, and vehicle wraps.
+          </p>
+          <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.7;margin-bottom:28px">
+            We believe that at the heart of our success is your complete delight. Whether it’s 100 business cards or outfitting an entire commercial fleet, <em>our quality speaks for our work</em>.
+          </p>
+
+          <div style="height:1px;background:var(--border);margin-bottom:28px"></div>
+
+          <h2 style="margin-bottom:16px;font-size:clamp(1.8rem,3vw,2.4rem)">What We Bring to the <span style="color:var(--cmyk-magenta)">Table</span></h2>
+          <div class="table-points">
+            <div class="point-item">
+              <div class="point-icon">⏱️</div>
+              <div>
+                <h4 style="font-size:1rem;margin-bottom:4px;color:var(--text-primary)">Committed Timelines</h4>
+                <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.5">We pledge to honor your deadlines. With fast local production and rush 24–48h options, your jobs are ready when you need them.</p>
+              </div>
+            </div>
+
+            <div class="point-item">
+              <div class="point-icon">💎</div>
+              <div>
+                <h4 style="font-size:1rem;margin-bottom:4px;color:var(--text-primary)">Breathtaking Print Standards</h4>
+                <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.5">Once you deal with us, your printing standards will become your status symbol. Vibrant CMYK inks, sharp vectors, and premium stocks on every run.</p>
+              </div>
+            </div>
+
+            <div class="point-item">
+              <div class="point-icon">🏷️</div>
+              <div>
+                <h4 style="font-size:1rem;margin-bottom:4px;color:var(--text-primary)">True Value for Money</h4>
+                <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.5">Direct commercial pricing, zero surprise hidden fees, and complimentary digital design proofing so you know exactly what you get.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap">
+            <a href="#quote" class="btn btn-primary">Request a Quote ↗</a>
+            <a href="tel:6045410560" class="btn btn-outline">Call (604) 541-0560</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="services" style="background:var(--bg-slate);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div class="wrap">
+        <div class="section-header center">
+          <div class="eyebrow">Local Advantage</div>
+          <h2>Why Surrey & Delta Businesses Trust Us</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div style="font-size:2rem;color:var(--cmyk-magenta)">⚡</div>
+            <h3>Fast Local Turnaround</h3>
+            <p>Need it tomorrow? Many popular digital print and banner jobs can be produced with same-day or 24-hour rush turnaround right in Delta.</p>
+          </div>
+          <div class="value-card">
+            <div style="font-size:2rem;color:var(--cmyk-cyan)">🎯</div>
+            <h3>Exact Colour Calibration</h3>
+            <p>We run rigorous CMYK color matching across all digital presses and wide-format printers so your brand looks identical everywhere.</p>
+          </div>
+          <div class="value-card">
+            <div style="font-size:2rem;color:var(--cmyk-yellow)">🛡️</div>
+            <h3>Free Design & File Review</h3>
+            <p>Upload your PDF, AI, or PSD. We check resolution, bleed, and safe margins before printing to make sure there are zero print surprises.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Showcase -->
+    <section id="work">
+      <div class="wrap">
+        <div class="section-header split">
+          <div>
+            <div class="eyebrow">Portfolio</div>
+            <h2>Recent Work In Delta & Surrey</h2>
+          </div>
+          <a href="#quote" class="btn btn-outline">Start Your Project →</a>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item tall">
+            <img src="assets/portfolio-1.jpg" alt="Business Cards and Everyday Print">
+            <div class="portfolio-label">Business Cards & Branding Collateral</div>
+          </div>
+          <div class="portfolio-item">
+            <img src="assets/portfolio-2.jpg" alt="Roll-up Banners and Displays">
+            <div class="portfolio-label">Trade Show & Event Displays</div>
+          </div>
+          <div class="portfolio-item">
+            <img src="assets/portfolio-3.jpg" alt="Vehicle Graphics">
+            <div class="portfolio-label">Commercial Vehicle Lettering</div>
+          </div>
+          <div class="portfolio-item">
+            <img src="assets/portfolio-4.jpg" alt="Custom Merchandise">
+            <div class="portfolio-label">Custom Branded Drinkware & Apparel</div>
+          </div>
+          <div class="portfolio-item">
+            <img src="assets/portfolio-5.jpg" alt="Signs and Wide Format">
+            <div class="portfolio-label">Storefront Window & Wall Graphics</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+        <!-- Reviews -->
+    <section id="reviews" style="background:var(--bg-slate);border-top:1px solid var(--border)">
+      <div class="wrap">
+        <div class="section-header center">
+          <div class="eyebrow">Testimonials</div>
+          <h2>What Our Clients Say</h2>
+          <p style="color:var(--text-muted)">Real reviews from Lower Mainland business owners and entrepreneurs.</p>
+        </div>
+        <div class="reviews-grid">
+          <!-- 1. Randy Mann -->
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <q>Talk about any factor on which you would like to rate a printing service, print elements comes out on top.</q>
+            <div class="reviewer">
+              <img src="assets/review-1.jpg" alt="Randy Mann">
+              <div class="reviewer-info">
+                <b>Randy Mann</b>
+                <span>Owner- Randy Mann Homes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Sanjay Gupta -->
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <q>It's a pleasure to see the dedication &amp; commitment of the team here to produce the finest quality of prints</q>
+            <div class="reviewer">
+              <img src="assets/review-2.jpg" alt="Sanjay Gupta">
+              <div class="reviewer-info">
+                <b>Sanjay Gupta</b>
+                <span>Owner- Sanjay Gupta Financial Securities Advisor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Jasmine S -->
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <q>A heartfelt thank you to Vijay at Print Elements. He's helped me meet all my printing deadlines on such short notice. I've had banners, brochures and business cards printed by Print Elements and the turn around time has been days. Highly recommended - I will be using you guys for all my printing needs!</q>
+            <div class="reviewer">
+              <img src="assets/review-3.jpg" alt="Jasmine S" style="object-fit:contain;background:#fff;padding:2px">
+              <div class="reviewer-info">
+                <b>Jasmine S</b>
+                <span>Owner- Jus Sage Immigration Consulting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote / Contact Section -->
+    <section class="quote-section" id="quote">
+      <div class="wrap quote-grid">
+        <div>
+          <div class="eyebrow">Get Started</div>
+          <h2>Request a Free Fast Quote</h2>
+          <p style="color:var(--text-muted);margin-top:12px">
+            Tell us about your print project, quantities, or send over your file. We typically respond within 1-2 business hours.
+          </p>
+          <div class="contact-card-list">
+            <div class="contact-card">
+              <div class="contact-card-icon">📞</div>
+              <div class="contact-card-body">
+                <span>Phone & Direct Call</span>
+                <b><a href="tel:6045410560">(604) 541-0560</a> / <a href="tel:7783211010">(778) 321-1010</a></b>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">✉️</div>
+              <div class="contact-card-body">
+                <span>Email Orders & Artwork</span>
+                <b><a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></b>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div class="contact-card-body">
+                <span>Workshop Location</span>
+                <b>7511 120 Street, Delta, BC, V4C 0C1</b>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">💬</div>
+              <div class="contact-card-body">
+                <span>WhatsApp Messaging</span>
+                <b><a href="https://wa.me/16045410560" target="_blank">Chat with our print specialist</a></b>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action="mailto:printelements007@gmail.com" method="get" enctype="text/plain">
+          <label>
+            Full Name *
+            <input type="text" name="name" placeholder="John Doe" required>
+          </label>
+          <label>
+            Company
+            <input type="text" name="company" placeholder="Business Name">
+          </label>
+          <label>
+            Email Address *
+            <input type="email" name="email" placeholder="john@example.com" required>
+          </label>
+          <label>
+            Phone Number *
+            <input type="tel" name="phone" placeholder="(604) 000-0000" required>
+          </label>
+          <label style="grid-column:1/-1">
+            Service Required *
+            <select name="service">
+              <option value="Business cards">Business Cards</option>
+              <option value="Flyers or brochures">Flyers or Brochures</option>
+              <option value="Banners or signs">Wide Format / Banners / Signs</option>
+              <option value="Vehicle wraps">Vehicle Wrap or Decals</option>
+              <option value="Novelty merchandise">Novelty / Tumblers / Mugs / Apparel</option>
+              <option value="Custom package">Custom Printing Project</option>
+            </select>
+          </label>
+          <label style="grid-column:1/-1">
+            Project Details & Quantity
+            <textarea name="details" placeholder="Describe size, quantities, paper type, turnaround needed..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary form-btn">Submit Quote Request ↗</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="Print Elements" class="brand-logo">
+          <div class="brand-text">Print <span>Elements</span></div>
+        </a>
+        <p>Your trusted local partner for premium commercial printing, signs, vehicle wraps, and custom promotional merchandise in Delta and Surrey, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="digital-printing.html">Digital Printing</a></li>
+          <li><a href="wide-format.html">Wide Format Banners</a></li>
+          <li><a href="novelty.html">Novelty & Merch</a></li>
+          <li><a href="vehicle-wraps.html">Vehicle Wraps</a></li>
+          <li><a href="product.html?id=business-cards">Business Cards</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Our Capabilities</a></li>
+          <li><a href="#work">Portfolio</a></li>
+          <li><a href="#reviews">Testimonials</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+          <li><a href="https://wa.me/16045410560" target="_blank">WhatsApp Chat</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6045410560">(604) 541-0560</a></li>
+          <li><a href="tel:7783211010">(778) 321-1010</a></li>
+          <li><a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></li>
+          <li>7511 120 Street, Delta, BC</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; 2026 Print Elements. All rights reserved.</span>
+      <span>“You think it, we print it” — Delta, BC</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('navlinks');
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  
+    // Products Dropdown click & touch handler
+    const dropdownWrap = document.getElementById('nav-dropdown-wrap');
+    const productsTrigger = document.getElementById('products-trigger');
+    if (dropdownWrap && productsTrigger) {
+      productsTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownWrap.classList.toggle('is-open');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdownWrap.contains(e.target)) {
+          dropdownWrap.classList.remove('is-open');
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>

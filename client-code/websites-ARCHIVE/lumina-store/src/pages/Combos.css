@@ -1,0 +1,305 @@
+.combos-page {
+  padding: 8rem 0 10rem; /* extra padding for bottom sticky bar */
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+.combos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.combos-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.combos-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--ink);
+}
+
+.combos-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.combo-tab {
+  background: var(--cream-alt);
+  border: 1px solid var(--cream-border);
+  padding: 1.5rem 2.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  width: 240px;
+  text-align: left;
+}
+
+.combo-tab h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.combo-tab p {
+  font-size: 0.85rem;
+  color: var(--terracotta);
+}
+
+.combo-tab:hover {
+  border-color: var(--forest);
+}
+
+.combo-tab.active {
+  background: var(--forest);
+  border-color: var(--forest);
+}
+
+.combo-tab.active h3 {
+  color: #fff;
+}
+
+.combo-badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background: var(--terracotta);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.combos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.combo-card {
+  background: #fff;
+  border: 1px solid var(--cream-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.combo-card-visual {
+  aspect-ratio: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.combo-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.combo-card-body {
+  padding: 1.25rem;
+}
+
+.combo-card-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.combo-card-body p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.combo-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.combo-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.qty-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--cream);
+  padding: 0.25rem;
+  border-radius: 20px;
+  border: 1px solid var(--cream-border);
+}
+
+.qty-selector button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: var(--ink);
+  transition: background 0.2s;
+}
+
+.qty-selector button:hover:not(:disabled) {
+  background: rgba(0,0,0,0.05);
+}
+
+.qty-selector button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.qty-selector span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 12px;
+  text-align: center;
+}
+
+/* Glassmorphism Sticky Bar */
+.combos-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1.25rem 0;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+}
+
+.combos-sticky-bar.visible {
+  transform: translateY(0);
+}
+
+.sticky-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 900px;
+}
+
+.sticky-progress-wrap {
+  flex: 1;
+}
+
+.sticky-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.sticky-progress-bg {
+  height: 4px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sticky-progress-fill {
+  height: 100%;
+  background: var(--terracotta);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sticky-action {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sticky-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.sticky-original {
+  font-size: 0.75rem;
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.sticky-discounted {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.sticky-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+}
+
+.sticky-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .combos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .combos-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sticky-bar-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .sticky-progress-wrap {
+    width: 100%;
+  }
+  
+  .sticky-action {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .combos-grid {
+    grid-template-columns: 1fr;
+  }
+}

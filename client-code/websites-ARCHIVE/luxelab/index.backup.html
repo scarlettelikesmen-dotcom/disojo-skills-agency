@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxeLAB Detailing | Premium Studio</title>
+  <style>
+    :root { --bg: #0a0a0a; --surface: #171717; --t: #f5f5f5; --p: #0a0a0a; --a: #d4d4d4; }
+    body { margin: 0; background: var(--bg); color: var(--t); font-family: 'Cinzel', serif; }
+    nav { display: flex; justify-content: center; padding: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .logo { font-size: 28px; letter-spacing: 4px; text-transform: uppercase; color: var(--a); }
+    .hero { text-align: center; padding: 120px 20px; }
+    h1 { font-size: 64px; font-weight: 300; margin: 0 0 20px; letter-spacing: 2px; }
+    .subtitle { font-family: sans-serif; color: #888; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+    .cta-bar { position: sticky; top: 0; background: var(--a); color: var(--bg); text-align: center; padding: 20px; font-family: sans-serif; font-weight: bold; letter-spacing: 1px; z-index: 50; text-transform: uppercase; }
+    .tier-container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+    .tier { background: var(--surface); margin-bottom: 40px; display: flex; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
+    .tier-img { width: 40%; background: #222; position: relative; }
+    .tier-img::before { content: 'BEFORE'; position: absolute; top: 20px; left: 20px; background: rgba(0,0,0,0.5); padding: 5px 10px; font-family: sans-serif; font-size: 12px; }
+    .tier-content { padding: 60px; width: 60%; box-sizing: border-box; }
+    .tier-content h2 { font-size: 36px; margin: 0 0 10px; color: var(--a); }
+    .tier-content p { font-family: sans-serif; line-height: 1.6; color: #aaa; font-size: 15px; margin-bottom: 30px; }
+    .feature-list { font-family: sans-serif; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 13px; color: #ddd; }
+    .feature-list li::before { content: '✓'; color: var(--a); margin-right: 10px; }
+    .book-btn { margin-top: 40px; display: inline-block; padding: 15px 40px; border: 1px solid var(--a); color: var(--a); text-decoration: none; font-family: sans-serif; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+    .book-btn:hover { background: var(--a); color: var(--bg); }
+    footer { text-align: center; padding: 60px; font-family: sans-serif; font-size: 12px; color: #555; border-top: 1px solid rgba(255,255,255,0.05); }
+  </style>
+</head>
+<body>
+  <nav><div class="logo">LuxeLAB Detailing</div></nav>
+  <div class="hero">
+    <div class="subtitle">Gurugram's Premier Studio</div>
+    <h1>PERFECTION IS A PROCESS.</h1>
+  </div>
+  <div class="cta-bar">Book Your Consultation Today | +91 9999 888 777</div>
+  
+  <div class="tier-container">
+    <div class="tier">
+      <div class="tier-img"></div>
+      <div class="tier-content">
+        <h2>Signature Premium PPF</h2>
+        <p>Our flagship service designed to completely restore and protect. We use only the highest grade materials for unmatched durability and finish.</p>
+        <ul class="feature-list">
+          <li>Multi-stage preparation</li>
+          <li>Premium application</li>
+          <li>5-Year Warranty</li>
+          <li>Complimentary Maintenance</li>
+        </ul>
+        <a href="#" class="book-btn">Inquire Now</a>
+      </div>
+    </div>
+    <div class="tier" style="flex-direction: row-reverse;">
+      <div class="tier-img"></div>
+      <div class="tier-content">
+        <h2>Advanced Graphene Coating</h2>
+        <p>Precision execution tailored to the most demanding standards. This package ensures longevity and a breathtaking aesthetic outcome.</p>
+        <ul class="feature-list">
+          <li>Deep cleansing</li>
+          <li>Micro-abrasion correction</li>
+          <li>Hydrophobic layer</li>
+          <li>Interior sanitization</li>
+        </ul>
+        <a href="#" class="book-btn">Inquire Now</a>
+      </div>
+    </div>
+  </div>
+  <footer>LuxeLAB Detailing STUDIO &copy; 2026. LUXURY REDEFINED.</footer>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amit Kaushik & Associates — Trusted CA & CS firm in Gurugram offering accounting, auditing, income tax, GST, company secretarial and corporate compliance services.">
+  <title>Amit Kaushik & Associates | CA & CS Firm, Gurugram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:    #0f2340;
+      --navy-2:  #1a3a5c;
+      --gold:    #b8973a;
+      --gold-s:  #d4ae5a;
+      --ice:     #f0f4f8;
+      --paper:   #fafbfd;
+      --ink:     #111d2e;
+      --ink-2:   #3a4d62;
+      --muted:   #6b7f96;
+      --line:    rgba(15,35,64,.13);
+      --shadow:  0 28px 72px rgba(15,35,64,.12);
+      --serif:   "Cormorant Garamond", Georgia, serif;
+      --sans:    "DM Sans", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 92px 0; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+    .section-title { margin: 0; max-width: 740px; font-family: var(--serif); font-size: clamp(44px, 6vw, 80px); font-weight: 400; line-height: .95; letter-spacing: -.03em; }
+    .section-title em { color: var(--gold); font-style: normal; }
+    .lead { color: var(--ink-2); font-size: 16px; line-height: 1.75; }
+
+    .topline { position: relative; z-index: 12; border-bottom: 1px solid rgba(255,255,255,.12); background: var(--navy); color: #c8d8ea; font-size: 12px; letter-spacing: .06em; }
+    .topline .shell { min-height: 36px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .topline strong { color: var(--gold-s); }
+    .topline .t-right { display: flex; gap: 20px; }
+
+    nav { position: sticky; top: 0; z-index: 15; border-bottom: 1px solid var(--line); background: rgba(250,251,253,.95); backdrop-filter: blur(18px); }
+    .nav-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 26px; }
+    .brand { display: flex; align-items: center; gap: 13px; min-width: max-content; }
+    .brand-mark { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 2px; font-family: var(--serif); font-size: 20px; color: var(--gold); background: #fff; font-weight: 600; }
+    .brand-copy strong { display: block; font-size: 16px; letter-spacing: .02em; }
+    .brand-copy span { display: block; margin-top: 2px; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 600; }
+    .nav-links a:not(.btn) { position: relative; }
+    .nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -5px; height: 1px; background: var(--gold); transition: right .25s ease; }
+    .nav-links a:hover::after { right: 0; }
+    .btn { min-height: 46px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--navy); border-radius: 2px; background: var(--navy); color: #fff; font-size: 13px; font-weight: 700; transition: transform .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-2px); background: var(--navy-2); }
+    .btn.outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .btn.outline:hover { background: var(--ink); color: #fff; }
+    .btn.gold { background: var(--gold); border-color: var(--gold); color: #fff; }
+    .btn.gold:hover { background: var(--gold-s); border-color: var(--gold-s); }
+    .menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 2px; background: transparent; color: var(--ink); font-size: 19px; }
+
+    .drawer { display: none; position: fixed; inset: 0; z-index: 50; background: var(--paper); flex-direction: column; padding: 34px 24px; gap: 28px; overflow-y: auto; }
+    .drawer.open { display: flex; }
+    .drawer-top { display: flex; justify-content: space-between; align-items: center; }
+    .close-btn { background: none; border: none; font-size: 26px; color: var(--ink); }
+    .drawer-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+    .drawer-links a { padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 22px; font-family: var(--serif); font-weight: 400; color: var(--ink); }
+    .drawer .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+    .hero { position: relative; min-height: 700px; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 92% 8%, rgba(184,151,58,.12), transparent 34%), linear-gradient(135deg, #e8eef5 0 48%, #d4e0ec 100%); }
+    .hero::after { content: "AK"; position: absolute; right: -20px; bottom: -80px; color: rgba(15,35,64,.05); font-family: var(--serif); font-size: 360px; line-height: 1; pointer-events: none; }
+    .hero-grid { position: relative; z-index: 2; min-height: 700px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: stretch; }
+    .hero-copy { padding: 108px 68px 86px 0; display: flex; flex-direction: column; justify-content: center; }
+    .hero h1 { margin: 0; max-width: 660px; font-family: var(--serif); font-size: clamp(58px, 7vw, 100px); font-weight: 400; line-height: .88; letter-spacing: -.04em; }
+    .hero h1 span { display: block; color: var(--gold); }
+    .hero-copy > p:not(.eyebrow) { max-width: 540px; margin: 28px 0 0; color: var(--ink-2); font-size: 16px; line-height: 1.7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 40px; color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+    .hero-note::before { content: ""; width: 40px; height: 1px; background: var(--gold); }
+    .hero-visual { position: relative; margin: 42px 0; min-height: 600px; overflow: hidden; border: 1px solid rgba(15,35,64,.2); background: linear-gradient(145deg, #1a3a5c, #0f2340); box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: flex-end; padding: 0; }
+    .hero-visual-bg { position: absolute; inset: 0; background: linear-gradient(145deg, #162d4a 0%, #0c1e33 100%); }
+    .hero-visual-content { position: relative; z-index: 2; padding: 40px; }
+    .credential-badge { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid rgba(212,174,90,.35); background: rgba(212,174,90,.1); margin-bottom: 12px; }
+    .credential-badge span { color: var(--gold-s); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .hero-visual h2 { margin: 0 0 8px; font-family: var(--serif); font-size: 48px; font-weight: 400; color: #fff; line-height: 1; }
+    .hero-visual p { margin: 0; color: #8ba8c4; font-size: 13px; line-height: 1.6; max-width: 340px; }
+    .stat-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .stat-pill { padding: 10px 18px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.05); }
+    .stat-pill strong { display: block; font-family: var(--serif); font-size: 24px; font-weight: 400; color: var(--gold-s); line-height: 1; }
+    .stat-pill span { display: block; font-size: 9px; color: #8ba8c4; letter-spacing: .1em; text-transform: uppercase; margin-top: 3px; }
+    .float-card { position: absolute; z-index: 3; top: 28px; right: 28px; padding: 18px 22px; border: 1px solid rgba(212,174,90,.3); background: rgba(250,251,253,.96); backdrop-filter: blur(12px); }
+    .float-card strong { display: block; font-family: var(--serif); font-size: 28px; font-weight: 400; color: var(--navy); }
+    .float-card span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+    .ticker { overflow: hidden; border-bottom: 1px solid var(--line); background: var(--navy); color: #c8d8ea; }
+    .ticker-track { width: max-content; min-height: 56px; display: flex; align-items: center; animation: move 30s linear infinite; }
+    .ticker-track span { display: inline-flex; align-items: center; gap: 22px; padding-right: 22px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+    .ticker-track span::after { content: "✦"; color: var(--gold-s); }
+    @keyframes move { to { transform: translateX(-50%); } }
+
+    .intro-grid { display: grid; grid-template-columns: 1fr .78fr; gap: 90px; align-items: end; }
+    .intro-grid .lead { margin: 0; max-width: 530px; }
+    .trust-grid { margin-top: 52px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .trust-item { min-height: 145px; padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.7); }
+    .trust-item strong { display: block; margin-bottom: 12px; font-family: var(--serif); font-size: 36px; font-weight: 400; color: var(--navy); }
+    .trust-item span { color: var(--ink-2); font-size: 12px; line-height: 1.55; }
+
+    .services-section { background: var(--navy); color: #c8d8ea; border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .services-section .eyebrow { color: var(--gold-s); }
+    .services-section .section-title em { color: var(--gold-s); }
+    .services-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 44px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.12); border-left: 1px solid rgba(255,255,255,.12); }
+    .service-card { position: relative; min-height: 240px; padding: 34px; border-right: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); overflow: hidden; transition: background .25s ease; }
+    .service-card:hover { background: rgba(255,255,255,.06); }
+    .service-num { color: var(--gold-s); font-size: 11px; letter-spacing: .12em; }
+    .service-card h3 { margin: 36px 0 10px; font-family: var(--serif); font-size: 30px; font-weight: 400; color: #fff; }
+    .service-card p { max-width: 440px; margin: 0; color: #8ba8c4; font-size: 13px; line-height: 1.65; }
+    .service-card::after { content: "+"; position: absolute; top: 28px; right: 30px; color: var(--gold-s); font-size: 22px; font-weight: 300; }
+
+    .method-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; align-items: start; }
+    .method-visual { position: sticky; top: 104px; min-height: 520px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(145deg, #1a3a5c, #0c1e33); display: flex; flex-direction: column; justify-content: flex-end; }
+    .method-visual-inner { padding: 36px; position: relative; z-index: 2; }
+    .method-visual::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, rgba(184,151,58,.15), transparent 60%); }
+    .method-title { font-family: var(--serif); font-size: 56px; font-weight: 400; color: #fff; line-height: .9; margin: 0 0 16px; }
+    .method-title em { color: var(--gold-s); font-style: normal; }
+    .method-tag { display: inline-flex; gap: 8px; padding: 8px 14px; border: 1px solid rgba(212,174,90,.3); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-s); }
+    .steps { margin-top: 32px; border-top: 1px solid var(--line); }
+    .step { display: grid; grid-template-columns: 46px 1fr; gap: 22px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .step span { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .1em; padding-top: 5px; }
+    .step h3 { margin: -4px 0 8px; font-family: var(--serif); font-size: 28px; font-weight: 400; }
+    .step p { margin: 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .why-card { padding: 32px; border: 1px solid var(--line); background: rgba(255,255,255,.7); transition: background .2s ease, box-shadow .2s ease; }
+    .why-card:hover { background: #fff; box-shadow: var(--shadow); }
+    .why-icon { font-size: 28px; margin-bottom: 18px; }
+    .why-card h3 { margin: 0 0 10px; font-family: var(--serif); font-size: 26px; font-weight: 400; }
+    .why-card p { margin: 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
+
+    .contact-section { background: var(--navy); color: #c8d8ea; }
+    .contact-section .eyebrow { color: var(--gold-s); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .contact-info h2 { margin: 0 0 20px; font-family: var(--serif); font-size: clamp(38px, 5vw, 64px); font-weight: 400; line-height: .96; color: #fff; }
+    .contact-info h2 em { color: var(--gold-s); font-style: normal; }
+    .contact-info > p { max-width: 460px; color: #8ba8c4; font-size: 15px; line-height: 1.7; margin: 0 0 32px; }
+    .contact-detail { display: flex; flex-direction: column; gap: 16px; }
+    .contact-row { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-row .icon { font-size: 18px; margin-top: 2px; flex-shrink: 0; }
+    .contact-row div strong { display: block; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-s); margin-bottom: 4px; }
+    .contact-row div span { color: #a8c0d6; font-size: 14px; line-height: 1.5; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-field { padding: 14px 16px; border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.06); color: #c8d8ea; font-size: 13px; outline: none; transition: border-color .2s ease; }
+    .form-field::placeholder { color: rgba(200,216,234,.4); }
+    .form-field:focus { border-color: var(--gold-s); }
+    textarea.form-field { resize: vertical; min-height: 120px; }
+    .btn-submit { min-height: 52px; padding: 0 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--gold-s); background: var(--gold-s); color: var(--navy); font-size: 13px; font-weight: 700; letter-spacing: .04em; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+    .btn-submit:hover { background: #c49a40; transform: translateY(-2px); }
+
+    footer { border-top: 1px solid rgba(255,255,255,.08); background: var(--navy); color: #4d6a88; }
+    .footer-inner { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-inner small { font-size: 11px; letter-spacing: .06em; }
+    .footer-links { display: flex; gap: 22px; font-size: 11px; }
+    .footer-links a { color: var(--gold-s); }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; min-height: unset; }
+      .hero-copy { padding: 72px 0 40px; }
+      .hero-visual { min-height: 360px; margin: 0; }
+      .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-head { flex-direction: column; align-items: flex-start; }
+      .services-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: 1fr; }
+      .method-visual { position: static; min-height: 280px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .menu-btn { display: flex; align-items: center; justify-content: center; }
+      .topline .t-right { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topline">
+    <div class="shell">
+      <span>2nd Floor, Thakran Market, Islampur Village, Subhash Chowk, Gurugram</span>
+      <span class="t-right"><strong>+91 99710 01175</strong></span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="shell">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-mark">AK</div>
+          <div class="brand-copy">
+            <strong>Amit Kaushik &amp; Associates</strong>
+            <span>CA &amp; CS Firm &nbsp;·&nbsp; Gurugram</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#contact" class="btn">Get Consultation</a>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <div class="drawer-top">
+      <div class="brand">
+        <div class="brand-mark">AK</div>
+        <div class="brand-copy"><strong>Amit Kaushik &amp; Assoc.</strong><span>CA &amp; CS Firm</span></div>
+      </div>
+      <button class="close-btn" id="closeBtn">&#10005;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" onclick="closeDrawer()">About</a>
+      <a href="#services" onclick="closeDrawer()">Services</a>
+      <a href="#process" onclick="closeDrawer()">Process</a>
+      <a href="#why-us" onclick="closeDrawer()">Why Us</a>
+    </div>
+    <a href="#contact" class="btn" onclick="closeDrawer()">Get Consultation</a>
+  </div>
+
+  <section class="hero">
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">CA &amp; CS Firm &nbsp;·&nbsp; Gurugram</p>
+          <h1>Your finances.<span>Our expertise.</span></h1>
+          <p>A full-service accounting, taxation and corporate compliance firm trusted by businesses and individuals across Gurugram. Accurate. Reliable. Always on time.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Free Consultation</a>
+            <a href="#services" class="btn outline">Our Services</a>
+          </div>
+          <div class="hero-note">CA &middot; CS &middot; GST &middot; Income Tax &middot; Corporate Compliance</div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-bg"></div>
+          <div class="float-card">
+            <strong>10+</strong>
+            <span>Years Experience</span>
+          </div>
+          <div class="hero-visual-content">
+            <div class="credential-badge"><span>&#10003; Practicing Company Secretary</span></div>
+            <h2>Amit Kaushik &amp; Associates</h2>
+            <p>Trusted advisors for accounting, taxation, GST, and corporate compliance in Gurugram, Haryana.</p>
+            <div class="stat-pills">
+              <div class="stat-pill"><strong>500+</strong><span>Clients Served</span></div>
+              <div class="stat-pill"><strong>100%</strong><span>Compliance Rate</span></div>
+              <div class="stat-pill"><strong>15+</strong><span>Service Areas</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Income Tax</span><span>GST Registration</span><span>Accounting</span><span>Auditing</span><span>Company Secretary</span><span>Corporate Compliance</span><span>Business Registration</span><span>TDS Filing</span><span>ROC Filing</span><span>Financial Advisory</span><span>Income Tax</span><span>GST Registration</span><span>Accounting</span><span>Auditing</span><span>Company Secretary</span><span>Corporate Compliance</span><span>Business Registration</span><span>TDS Filing</span><span>ROC Filing</span><span>Financial Advisory</span>
+    </div>
+  </div>
+
+  <section id="about" class="section">
+    <div class="shell">
+      <div class="intro-grid">
+        <div>
+          <p class="eyebrow">Who We Are</p>
+          <h2 class="section-title">Built on <em>precision</em> and trust.</h2>
+        </div>
+        <div>
+          <p class="lead">Amit Kaushik &amp; Associates is a Gurugram-based professional firm offering end-to-end financial, taxation, and corporate compliance services. We work closely with startups, SMEs, and individuals to ensure they stay compliant, tax-efficient, and financially sound.</p>
+        </div>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><strong>500+</strong><span>Clients served across Gurugram and Delhi NCR</span></div>
+        <div class="trust-item"><strong>15+</strong><span>Specialised service areas under one roof</span></div>
+        <div class="trust-item"><strong>100%</strong><span>Compliance track record across all filings</span></div>
+        <div class="trust-item"><strong>10+</strong><span>Years of professional practice and expertise</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services-section">
+    <div class="shell">
+      <div class="services-head">
+        <div>
+          <p class="eyebrow">What We Do</p>
+          <h2 class="section-title">Comprehensive <em>services</em> for every need.</h2>
+        </div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card"><span class="service-num">01</span><h3>Income Tax</h3><p>ITR filing for individuals, firms, and corporates. Tax planning strategies to legally minimise liability and maximise savings.</p></div>
+        <div class="service-card"><span class="service-num">02</span><h3>GST Services</h3><p>GST registration, monthly/quarterly filing, reconciliation, and advisory. Full compliance handled seamlessly.</p></div>
+        <div class="service-card"><span class="service-num">03</span><h3>Accounting &amp; Bookkeeping</h3><p>Accurate day-to-day bookkeeping, ledger maintenance, and financial statement preparation for businesses of all sizes.</p></div>
+        <div class="service-card"><span class="service-num">04</span><h3>Auditing</h3><p>Statutory audit, internal audit, and tax audit services ensuring full transparency and regulatory compliance for your business.</p></div>
+        <div class="service-card"><span class="service-num">05</span><h3>Company Secretary</h3><p>Corporate law compliance, secretarial audits, board resolutions, ROC filings and all statutory obligations handled professionally.</p></div>
+        <div class="service-card"><span class="service-num">06</span><h3>Business Registration</h3><p>Company incorporation, LLP formation, partnership deeds, MSME registration and all startup-related legal formalities.</p></div>
+        <div class="service-card"><span class="service-num">07</span><h3>TDS &amp; Payroll</h3><p>TDS computation, deduction, challan payments and returns. Complete payroll processing with full statutory compliance.</p></div>
+        <div class="service-card"><span class="service-num">08</span><h3>Financial Advisory</h3><p>Business structuring, investment planning, cash flow management, and strategic financial advisory to grow your wealth.</p></div>
+        <div class="service-card"><span class="service-num">09</span><h3>ROC Compliance</h3><p>Annual returns, form filings, event-based compliance, and company law advisory to keep your business always in good standing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section">
+    <div class="shell">
+      <div class="method-grid">
+        <div class="method-visual">
+          <div class="method-visual-inner">
+            <div class="method-tag">Our Approach</div>
+            <h2 class="method-title">Simple.<br><em>Smooth.</em><br>Sorted.</h2>
+            <p style="color:#8ba8c4; font-size:13px; line-height:1.6; margin:16px 0 0;">From first meeting to final filing — we handle everything so you can focus on your business.</p>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">How We Work</p>
+          <h2 class="section-title">From query to <em>compliance.</em></h2>
+          <p class="lead" style="margin-top:16px;">Our streamlined process ensures nothing slips through the cracks. Here's how we work with every client:</p>
+          <div class="steps">
+            <div class="step"><span>01</span><div><h3>Initial Consultation</h3><p>We begin with a free consultation to understand your business, financial situation, and compliance needs. No jargon, just clarity.</p></div></div>
+            <div class="step"><span>02</span><div><h3>Document Collection</h3><p>We provide a clear checklist of required documents and handle the collection process efficiently — online or in-person.</p></div></div>
+            <div class="step"><span>03</span><div><h3>Processing &amp; Filing</h3><p>Our expert team processes your case with precision, handles all filings, and keeps you updated at every step.</p></div></div>
+            <div class="step"><span>04</span><div><h3>Delivery &amp; Compliance</h3><p>You receive your complete documentation and we ensure all obligations are met before every deadline. No last-minute panic.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" class="section" style="background: var(--ice); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="shell">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2 class="section-title">More than just <em>accountants.</em></h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">&#9989;</div><h3>Deadline Guarantee</h3><p>We never miss a filing deadline. Our internal tracking system ensures every return, form and compliance is submitted on time, every time.</p></div>
+        <div class="why-card"><div class="why-icon">&#128274;</div><h3>Complete Confidentiality</h3><p>Your financial data is handled with the highest levels of security and professional discretion. We take data privacy seriously.</p></div>
+        <div class="why-card"><div class="why-icon">&#129504;</div><h3>Expert Professionals</h3><p>Our team comprises qualified Chartered Accountants and Company Secretaries with deep expertise across industries and compliance domains.</p></div>
+        <div class="why-card"><div class="why-icon">&#128222;</div><h3>Always Accessible</h3><p>We believe in being available when you need us most. Reach out by phone, WhatsApp, or email — we respond promptly.</p></div>
+        <div class="why-card"><div class="why-icon">&#128200;</div><h3>Growth-Focused</h3><p>We don't just file your returns — we help you plan strategically, structure your business optimally, and grow your financial health.</p></div>
+        <div class="why-card"><div class="why-icon">&#127970;</div><h3>Local &amp; Trusted</h3><p>Based right in Gurugram, we understand the local business ecosystem. Hundreds of clients in the area trust us with their finances.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="shell">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Get In Touch</p>
+          <h2>Book your <em>free consultation</em> today.</h2>
+          <p>Have a tax question, need compliance help, or want to register your business? Let's talk — the first consultation is on us.</p>
+          <div class="contact-detail">
+            <div class="contact-row"><span class="icon">&#128222;</span><div><strong>Phone</strong><span>+91 99710 01175</span></div></div>
+            <div class="contact-row"><span class="icon">&#128205;</span><div><strong>Address</strong><span>2nd Floor, Thakran Market,<br>Opp. Indian Oil Petrol Pump,<br>Islampur Village, Subhash Chowk,<br>Gurugram, Haryana</span></div></div>
+            <div class="contact-row"><span class="icon">&#9200;</span><div><strong>Hours</strong><span>Mon – Sat &nbsp;&middot;&nbsp; 10:00 AM – 7:00 PM</span></div></div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input class="form-field" type="text" placeholder="Your Name" required>
+            <input class="form-field" type="tel" placeholder="Phone Number" required>
+          </div>
+          <input class="form-field" type="email" placeholder="Email Address">
+          <input class="form-field" type="text" placeholder="Service Required (e.g. ITR Filing, GST)">
+          <textarea class="form-field" placeholder="Tell us briefly about your requirement..."></textarea>
+          <button type="submit" class="btn-submit">Request Free Consultation &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-inner">
+        <small>&copy; 2026 Amit Kaushik &amp; Associates. All rights reserved. &nbsp;&middot;&nbsp; Gurugram, Haryana.</small>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const drawer = document.getElementById('drawer');
+    menuBtn.addEventListener('click', () => { drawer.classList.add('open'); document.body.classList.add('menu-open'); });
+    closeBtn.addEventListener('click', () => closeDrawer());
+    function closeDrawer() { drawer.classList.remove('open'); document.body.classList.remove('menu-open'); }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = 'Request Sent!';
+      btn.style.background = '#4caf50';
+      btn.style.borderColor = '#4caf50';
+      setTimeout(() => { btn.innerHTML = 'Request Free Consultation &rarr;'; btn.style.background = ''; btn.style.borderColor = ''; e.target.reset(); }, 3000);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.trust-item, .service-card, .step, .why-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

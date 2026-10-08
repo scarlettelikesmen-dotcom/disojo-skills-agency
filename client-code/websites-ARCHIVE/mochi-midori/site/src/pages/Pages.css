@@ -1,0 +1,24 @@
+.page { padding-top: clamp(120px, 20vh, 220px); background: var(--paper); }
+.page-head { display: grid; gap: 1.4rem; margin-bottom: clamp(36px, 7vh, 90px); }
+.page-kicker { color: #A93220; }
+.page-title { font-size: clamp(3.4rem, 11vw, 11rem); }
+.page-lead { max-width: 40ch; font-family: var(--serif); font-size: clamp(1.2rem, 2vw, 1.8rem); font-weight: 500; line-height: 1.4; }
+.about-photo img { width: 100%; max-height: 66vh; object-fit: cover; border-radius: 3px; }
+.about-body { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 6vw, 112px); padding-top: clamp(48px, 8vh, 100px); padding-bottom: clamp(90px, 14vh, 170px); }
+.about-body p { color: var(--muted); max-width: 52ch; margin-bottom: 1.2rem; }
+.about-values li { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem; padding: 1.4rem 0; border-top: 1.5px solid var(--ink); }
+.about-values li:last-child { border-bottom: 1.5px solid var(--ink); }
+.about-n { font-size: 2.6rem; color: var(--vermilion); line-height: 1; }
+.about-values h2 { font-size: 1.7rem; font-weight: 600; margin-bottom: 0.3rem; }
+.about-values p { margin: 0; }
+.visit-page .visit { margin-top: 0; }
+.contact-body { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 112px); padding-top: clamp(70px, 12vh, 140px); padding-bottom: clamp(90px, 14vh, 170px); }
+.contact-details { display: grid; gap: 1.1rem; align-content: start; }
+.contact-details a { width: fit-content; font-family: var(--serif); font-size: 1.5rem; font-weight: 500; border-bottom: 1.5px solid transparent; }
+.contact-details a:hover { border-bottom-color: currentColor; }
+.contact-form { display: grid; gap: 1.3rem; }
+.contact-form label { display: grid; gap: 0.4rem; }
+.contact-form input, .contact-form textarea { padding: 0.8rem 0; border: 0; border-bottom: 1.5px solid rgba(20, 24, 26, 0.4); background: transparent; font: inherit; color: inherit; outline: none; border-radius: 0; }
+.contact-form input:focus, .contact-form textarea:focus { border-bottom-color: var(--vermilion); }
+.contact-form .btn { justify-self: start; }
+@media (max-width: 860px) { .about-body, .contact-body { grid-template-columns: 1fr; } }

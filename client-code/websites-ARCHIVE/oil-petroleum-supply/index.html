@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Petroleum | Bulk Supply & Industrial Energy Logistics</title>
+    <style>
+        /* Base Apple-Inspired Design System */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --text-muted: #666666;
+            --border-color: #e5e5e5;
+            --black-solid: #111111;
+            --nav-bg: rgba(255, 255, 255, 0.9);
+            --nav-scrolled: rgba(17, 17, 17, 0.95);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .snap-container {
+            width: 100%;
+        }
+
+        section {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 6%;
+            position: relative;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            z-index: 100;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+        }
+
+        nav.scrolled {
+            background: var(--nav-scrolled);
+            border-bottom: 1px solid #222;
+            color: #fff;
+        }
+
+        nav.scrolled a { color: #fff; }
+        
+        .logo-wrap {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.45rem;
+            letter-spacing: -0.03em;
+        }
+
+        .logo-tag {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        nav.scrolled .logo-tag {
+            color: #888;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links a:hover { opacity: 0.5; }
+
+        .nav-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: rgba(0,0,0,0.02);
+        }
+
+        nav.scrolled .nav-status {
+            border-color: #333;
+            background: rgba(255,255,255,0.05);
+            color: #ddd;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #10b981;
+            display: inline-block;
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+        }
+
+        /* Typography & Layout */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-dark .eyebrow {
+            color: #888;
+        }
+
+        h1 {
+            font-size: clamp(3.5rem, 7.5vw, 6.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.02;
+            margin-bottom: 1.75rem;
+        }
+
+        h2 {
+            font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 3rem;
+        }
+
+        p.lead {
+            font-size: clamp(1.2rem, 1.9vw, 1.65rem);
+            color: var(--text-muted);
+            max-width: 820px;
+            line-height: 1.45;
+            margin-bottom: 2.75rem;
+            font-weight: 400;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--black-solid);
+            color: #fff;
+            padding: 1.1rem 2.6rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: all 0.25s ease;
+            letter-spacing: -0.01em;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--text-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--text-color);
+            color: #fff;
+        }
+
+        .section-dark .btn-outline {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .section-dark .btn-outline:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Hero Mini Metrics */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            margin-top: 4.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .hero-stat-item .val {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-stat-item .lbl {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .hero-stat-item .sub {
+            font-size: 0.72rem;
+            color: #888;
+            margin-top: 0.2rem;
+        }
+
+        /* Grids & Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2px;
+            background: var(--border-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .card {
+            background: #fff;
+            padding: 3.25rem 2.75rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background 0.2s;
+        }
+
+        .card:hover {
+            background: #fafafa;
+        }
+
+        .card-top {
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.55rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.65;
+            font-size: 0.96rem;
+        }
+
+        .card-number {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        /* Technical specs badges on product cards */
+        .spec-list {
+            margin-top: 1.75rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+            font-size: 0.82rem;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+        }
+
+        .spec-row strong {
+            color: #111;
+            font-weight: 600;
+        }
+
+        /* Dark Section for Contrast */
+        .section-dark {
+            background: var(--black-solid);
+            color: #fff;
+        }
+        
+        .section-dark .grid { background: #262626; border-color: #262626; }
+        .section-dark .card { background: var(--black-solid); color: #fff; }
+        .section-dark .card:hover { background: #181818; }
+        .section-dark .text-muted { color: #8e8e8e; }
+        .section-dark p.lead { color: #b3b3b3; }
+        .section-dark .card-number { color: #777; }
+        .section-dark .spec-list { border-top-color: #262626; }
+        .section-dark .spec-row { color: #888; }
+        .section-dark .spec-row strong { color: #fff; }
+
+        /* Operation Row Details */
+        .op-row {
+            padding: 2.5rem 0;
+            border-bottom: 1px solid #282828;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2.5rem;
+            align-items: baseline;
+        }
+
+        .op-row:first-child {
+            padding-top: 1rem;
+        }
+
+        .op-row:last-child {
+            border-bottom: none;
+        }
+
+        .op-row h3 {
+            font-size: 1.85rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .op-row .meta {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.35rem;
+        }
+
+        .op-row p {
+            color: #a3a3a3;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .op-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+
+        .op-stats span {
+            color: #777;
+        }
+
+        /* Capacity Meters */
+        .capacity-bar-wrap {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .capacity-bar {
+            width: 100%;
+            height: 4px;
+            background: var(--border-color);
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .capacity-bar-fill {
+            width: 86.4%;
+            height: 100%;
+            background: var(--text-color);
+            transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .capacity-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 2.2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #888;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 1.15rem;
+            color: var(--text-color);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-bottom-color: var(--text-color);
+        }
+
+        .section-dark .form-control {
+            color: #fff;
+            border-bottom-color: #333;
+        }
+
+        .section-dark .form-control:focus {
+            border-bottom-color: #fff;
+        }
+
+        select.form-control option {
+            background: #111;
+            color: #fff;
+        }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .op-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            section { padding: 90px 6% 40px; }
+            .card { padding: 2.2rem 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo-wrap">
+            <div class="logo">Apex Petroleum</div>
+            <div class="logo-tag">Bulk Supply & Logistics</div>
+        </div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#products">Products</a>
+            <a href="#services">Operations</a>
+            <a href="#about">Resources</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="snap-container" id="scroller">
+        
+        <!-- 1. Hero -->
+        <section id="hero">
+            <div class="container reveal">
+                <div class="eyebrow">
+                    <span>Industrial Petroleum Logistics</span>
+                    <span>&bull;</span>
+                    <span>Direct Terminal Allocation</span>
+                </div>
+                <h1>Industrial Oil<br>Supply Engine.</h1>
+                <p class="lead">Precision logistics, high-capacity bulk storage, and zero-downtime hydrocarbon distribution for heavy industry, smelting plants, and continuous thermal operations.</p>
+                
+                <div class="btn-group">
+                    <a href="#services" class="btn">Explore Our Operations</a>
+                    <a href="#enquiry" class="btn btn-outline">Request Wholesale Sheet</a>
+                </div>
+
+                <!-- Fabricated Operational Data Metrics -->
+                <div class="hero-stats">
+                    <div class="hero-stat-item">
+                        <div class="val" id="count-barrels">4,821,940</div>
+                        <div class="lbl">Barrels Dispatched YTD</div>
+                        <div class="sub">Verified via Coriolis mass metering</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="val">18.2M L</div>
+                        <div class="lbl">Buffer Reserve Capacity</div>
+                        <div class="sub">Subterranean & atmospheric tanks</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="val">99.987%</div>
+                        <div class="lbl">On-Spec Quality Rate</div>
+                        <div class="sub">Continuous ASTM D396 assaying</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="val">&lt; 45 min</div>
+                        <div class="lbl">Dispatch SLA Window</div>
+                        <div class="sub">Dedicated heavy fleet on standby</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Why Us -->
+        <section id="why-us" class="section-dark">
+            <div class="container">
+                <div class="eyebrow reveal">
+                    <span>Operational Standards</span>
+                    <span>&bull;</span>
+                    <span>Sovereign-Grade Supply</span>
+                </div>
+                <h2 class="reveal">Why Us.</h2>
+                <div class="grid reveal">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-number">01.</div>
+                            <h3>Unmatched Reliability</h3>
+                            <p class="text-muted">Zero-downtime guaranteed supply chains. Continuous pipeline monitoring and triple-redundant carrier contracts ensure your blast furnaces and generators never pause for fuel shortages.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Burn Continuity Guarantee</span><strong>100.0%</strong></div>
+                            <div class="spec-row"><span>Emergency Reserve Access</span><strong>24/7 Dispatch</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-number">02.</div>
+                            <h3>Massive Storage</h3>
+                            <p class="text-muted">18.2 Million Liters of high-capacity storage buffer market price spikes and geopolitical crude fluctuations, securing guaranteed dispatch volume even through peak seasonal shortages.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Primary Cavern Storage</span><strong>12.4M Liters</strong></div>
+                            <div class="spec-row"><span>Atmospheric Terminal Tanks</span><strong>5.8M Liters</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-number">03.</div>
+                            <h3>Flexible Scale</h3>
+                            <p class="text-muted">From 50,000-ton bulk maritime tanker loads direct to manifold, down to modular 200L epoxy-lined steel barrels for specialized workshops, calibrated to your exact operational burn rate.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Minimum Dispatch</span><strong>200L Drum</strong></div>
+                            <div class="spec-row"><span>Maximum Parcel Size</span><strong>40,000 MT Tanker</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-number">04.</div>
+                            <h3>Fleet Logistics</h3>
+                            <p class="text-muted">A dedicated internal fleet of multi-compartment insulated road tankers and specialized rapid-dispatch tempo trucks, equipped with GPS satellite telemetry and tamper-proof digital flow meters.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Active Fleet Count</span><strong>28 Units</strong></div>
+                            <div class="spec-row"><span>Digital Meter Precision</span><strong>±0.02% Error Margin</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-number">05.</div>
+                            <h3>Direct Lab Testing</h3>
+                            <p class="text-muted">Every tanker leaves with an on-site lab report checking density, flash point, and water content before rollout. Your boilers and burners receive clean, consistent oil without unexpected nozzle clogging or high ash buildup.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Pre-Dispatch Sampling</span><strong>Every Batch</strong></div>
+                            <div class="spec-row"><span>Testing Benchmark</span><strong>IS 1593 / ASTM Standards</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-number">06.</div>
+                            <h3>Accurate Quantity Audits</h3>
+                            <p class="text-muted">No estimation or volume discrepancies at offload. We cross-verify every shipment with electronic dip tapes, certified weighbridge receipts, and temperature-adjusted density calculations so your invoices match actual plant intake.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Measurement Method</span><strong>Weighbridge & Dip Tape</strong></div>
+                            <div class="spec-row"><span>Volume Correction</span><strong>Standard 15°C Factored</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Products -->
+        <section id="products">
+            <div class="container">
+                <div class="eyebrow reveal">
+                    <span>Certified Inventory</span>
+                    <span>&bull;</span>
+                    <span>ISO 8217 & ASTM Compliant</span>
+                </div>
+                <h2 class="reveal">Products & Specifications.</h2>
+                <div class="grid reveal">
+                    <div class="card">
+                        <div>
+                            <h3>Furnace Oil (FO 180 / 380)</h3>
+                            <p>High-calorific heavy residual fuel oil optimized for industrial blast furnaces, rolling mills, and continuous steam boilers with minimal carbon buildup.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Calorific Energy Value</span><strong>10,250 kcal/kg</strong></div>
+                            <div class="spec-row"><span>Kinematic Viscosity @ 50°C</span><strong>178 cSt</strong></div>
+                            <div class="spec-row"><span>Flash Point (Pensky-Martens)</span><strong>> 68°C</strong></div>
+                            <div class="spec-row"><span>Ash Content (wt%)</span><strong>&lt; 0.04%</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3>Light Distillate Oil (LDO / LSO)</h3>
+                            <p>Premium low-pour-point distillate formulated for medium-speed marine diesel engines, thermal fluid heaters, and precision metallurgical applications.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Density @ 15°C</span><strong>0.848 kg/L</strong></div>
+                            <div class="spec-row"><span>Cetane Index</span><strong>54.2</strong></div>
+                            <div class="spec-row"><span>Sulphur (wt%)</span><strong>&lt; 0.05% Low-Sulfur</strong></div>
+                            <div class="spec-row"><span>Pour Point</span><strong>-6°C</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3>High-Octane Speed Fuel</h3>
+                            <p>Engineered performance diesel with specialized detergency packs and cetane enhancers, designed for high-stress turbine generators and peak-load units.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Cetane Rating</span><strong>60.4 Boosted</strong></div>
+                            <div class="spec-row"><span>Water Content</span><strong>&lt; 0.005%</strong></div>
+                            <div class="spec-row"><span>Particulate Count</span><strong>ISO 14/12/9 Clean</strong></div>
+                            <div class="spec-row"><span>Emissions Tier</span><strong>Euro VI Compliant</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3>Industrial Lubricants</h3>
+                            <p>Heavy-duty synthetic gear, hydraulic, and spindle oils formulated with extreme-pressure zinc-free additives to extend component service life under extreme shear.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>ISO Viscosity Grades</span><strong>VG 32 to VG 460</strong></div>
+                            <div class="spec-row"><span>Four-Ball Wear Scar</span><strong>0.32 mm</strong></div>
+                            <div class="spec-row"><span>FZG Gear Test Rating</span><strong>Stage 14+ Pass</strong></div>
+                            <div class="spec-row"><span>Oxidation Lifetime</span><strong>> 8,000 Hours</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3>Bonded Oil Storage</h3>
+                            <p>Custom atmospheric and heated tank storage reserves in our highly compliant facilities with nitrogen blanketing and ultrasonic ullage sensors.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Terminal Security</span><strong>ISPS Level 1</strong></div>
+                            <div class="spec-row"><span>Temperature Control</span><strong>±0.5°C Stability</strong></div>
+                            <div class="spec-row"><span>Vapor Recovery System</span><strong>99.4% Efficiency</strong></div>
+                            <div class="spec-row"><span>Dedicated Offtake Valve</span><strong>Yes</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3>Tempo & Drum Logistics</h3>
+                            <p>Rapid, point-of-use distribution direct to factory floors, workshops, and brick kilns utilizing calibrated onboard flow meters and dispensing hoses.</p>
+                        </div>
+                        <div class="spec-list">
+                            <div class="spec-row"><span>Hose Dispense Reach</span><strong>50 Meters</strong></div>
+                            <div class="spec-row"><span>Certified Drum Grade</span><strong>UN 1A1/X1.8/300</strong></div>
+                            <div class="spec-row"><span>Onboard Meter Receipt</span><strong>Automated Print</strong></div>
+                            <div class="spec-row"><span>Urban Access Clearance</span><strong>All Zones</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Services / Operations -->
+        <section id="services" class="section-dark">
+            <div class="container">
+                <div class="eyebrow reveal">
+                    <span>Supply Chain Architecture</span>
+                    <span>&bull;</span>
+                    <span>Terminal-to-Burner</span>
+                </div>
+                <h2 class="reveal">How We Operate.</h2>
+                <p class="lead reveal">We don't just supply oil. We architect the entire distribution pipeline from coastal terminals and refinery racks directly to your intake manifolds.</p>
+                
+                <div style="margin-top: 3rem; display: flex; flex-direction: column;">
+                    <div class="op-row reveal">
+                        <div>
+                            <h3>Tanker Load Supply</h3>
+                            <div class="meta">Heavy Industrial Direct</div>
+                        </div>
+                        <div>
+                            <p>For high-burn manufacturing hubs, steel mills, and regional power generators, our heavy fleet deploys direct multi-tonnage tanker loads seamlessly connected with your intake manifolds via dry-break couplings.</p>
+                            <div class="op-stats">
+                                <div><span>Dispatched Lot:</span> 12,000 – 40,000 Liters</div>
+                                <div><span>Turnaround Time:</span> Under 90 Minutes</div>
+                                <div><span>Verification:</span> Weighbridge & Coriolis Meter</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="op-row reveal">
+                        <div>
+                            <h3>Modular Form Supply</h3>
+                            <div class="meta">Workshop & Kiln Delivery</div>
+                        </div>
+                        <div>
+                            <p>Epoxy-coated steel barrels, nitrogen-purged IBC totes, and localized packaging for specialized machinery, forging workshops, and brick kiln operations requiring modular, safe storage handling.</p>
+                            <div class="op-stats">
+                                <div><span>Packaging:</span> 210L Steel Drums / 1000L Totes</div>
+                                <div><span>Delivery Fleet:</span> Rapid Agile Tempo Units</div>
+                                <div><span>Safety:</span> Anti-Static Liner Standard</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="op-row reveal">
+                        <div>
+                            <h3>Strategic Warehousing</h3>
+                            <div class="meta">Risk Offload Facility</div>
+                        </div>
+                        <div>
+                            <p>Completely offloading your inventory holding and price exposure risk by maintaining your strategic fuel buffer in our regulated, temperature-controlled cavern and terminal storage facilities.</p>
+                            <div class="op-stats">
+                                <div><span>Storage Capacity:</span> 18.2 Million Liters</div>
+                                <div><span>Audit Protocol:</span> Bi-Weekly Third-Party Lab Check</div>
+                                <div><span>Regulatory:</span> Petroleum & Explosives Safety Compliant</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. About / Resources -->
+        <section id="about">
+            <div class="container">
+                <div class="eyebrow reveal">
+                    <span>Infrastructure Dossier</span>
+                    <span>&bull;</span>
+                    <span>Direct Assets</span>
+                </div>
+                <h2 class="reveal">Resources & Scale.</h2>
+                <div class="grid reveal" style="grid-template-columns: 1fr 1fr; margin-bottom: 3.5rem;">
+                    <div class="card" style="padding: 3.5rem;">
+                        <div style="font-size: 3.8rem; font-weight: 800; letter-spacing: -0.05em; line-height: 1; margin-bottom: 1.25rem;">28x</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Dedicated Tanker Fleet</h3>
+                        <p>Our company-owned heavy transport division guarantees we are never exposed to third-party freight delays or union strikes during critical seasonal shortages.</p>
+                        <div class="spec-list" style="margin-top: 1.5rem;">
+                            <div class="spec-row"><span>Telemetry:</span><strong>Live Inmarsat Satellite Link</strong></div>
+                            <div class="spec-row"><span>Driver Accreditation:</span><strong>HAZCHEM Grade 1 Certified</strong></div>
+                        </div>
+                    </div>
+                    <div class="card" style="padding: 3.5rem;">
+                        <div style="font-size: 3.8rem; font-weight: 800; letter-spacing: -0.05em; line-height: 1; margin-bottom: 1.25rem;">Live</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Batch Assay & Tracking</h3>
+                        <p>Real-time vehicle GPS coordinates and an instant spectrometry certificate dispatched alongside every shipment ensuring 100% transparency on calorific yield and sulfur wt%.</p>
+                        <div class="spec-list" style="margin-top: 1.5rem;">
+                            <div class="spec-row"><span>Lab Certification:</span><strong>ICP-MS Spectrometry</strong></div>
+                            <div class="spec-row"><span>Tamper-Proof Seals:</span><strong>Digital RFID Lock Code</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em;">Storage Capacity Allocation:</p>
+                        <span style="font-size: 0.95rem; font-weight: 600; color: var(--text-color);">15.7M / 18.2M Liters Committed (86.4%)</span>
+                    </div>
+
+                    <div class="capacity-bar-wrap">
+                        <div class="capacity-bar">
+                            <div class="capacity-bar-fill"></div>
+                        </div>
+                        <div class="capacity-meta">
+                            <span>Cavern Sector Alpha (Furnace Oil): 89%</span>
+                            <span>Atmospheric Tank Beta (LDO): 82%</span>
+                            <span>Specialty Lubricant Vaults: 91%</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-muted" style="font-size: 0.95rem; max-width: 800px; line-height: 1.6;">Operating multiple highly regulated warehousing sectors capable of maintaining vast buffer reserves, protected by automated nitrogen blanketing, foam fire-suppression envelopes, and ultrasonic leak detection matrices.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Enquiry Form -->
+        <section id="enquiry" class="section-dark">
+            <div class="container reveal">
+                <div style="max-width: 650px; margin: 0 auto;">
+                    <div class="eyebrow" style="justify-content: center; margin-bottom: 1rem;">
+                        <span>Commercial Desk</span>
+                        <span>&bull;</span>
+                        <span>Rapid Quoting</span>
+                    </div>
+                    <h2 style="text-align: center; margin-bottom: 0.75rem;">Enquire Now.</h2>
+                    <p class="lead" style="text-align: center; margin-bottom: 3.5rem; font-size: 1.15rem;">Request a wholesale commercial rate sheet or schedule contract logistics allocation.</p>
+                    
+                    <form id="enquiryForm" onsubmit="handleMailTo(event)">
+                        <div class="form-group">
+                            <label class="form-label">Full Name / Trading Entity</label>
+                            <input type="text" id="eqName" class="form-control" placeholder="e.g. Sterling Industrial Forgings Ltd." required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Corporate Email</label>
+                            <input type="email" id="eqEmail" class="form-control" placeholder="procurement@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Required Fuel Grade</label>
+                            <select id="eqProduct" class="form-control" required style="border-radius: 0; cursor: pointer;">
+                                <option value="Furnace Oil (FO 180 / 380)">Furnace Oil (FO 180 / 380 CST)</option>
+                                <option value="Light Distillate Oil (LDO / LSO)">Light Distillate Oil (LDO / LSO)</option>
+                                <option value="High-Octane Industrial Speed Diesel">High-Octane Industrial Speed Diesel</option>
+                                <option value="Industrial Synthetic Lubricants">Industrial Synthetic Lubricants</option>
+                                <option value="Strategic Tank Storage Lease">Strategic Tank Storage Allocation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Estimated Monthly Burn Rate / Volume</label>
+                            <input type="text" id="eqSubject" class="form-control" placeholder="e.g. 50,000 Liters / month via Tanker" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Delivery Destination & Operational Notes</label>
+                            <textarea id="eqMessage" class="form-control" placeholder="Specify plant location, intake coupling size, or delivery schedule requirements..." rows="3" style="resize: none;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline" style="width: 100%; margin-top: 1rem; padding: 1.2rem; font-size: 1rem;">Submit Dispatch Enquiry</button>
+                    </form>
+                    <script>
+                        function handleMailTo(e) {
+                            e.preventDefault();
+                            const name = encodeURIComponent(document.getElementById('eqName').value);
+                            const email = encodeURIComponent(document.getElementById('eqEmail').value);
+                            const product = encodeURIComponent(document.getElementById('eqProduct').value);
+                            const volume = encodeURIComponent(document.getElementById('eqSubject').value);
+                            const message = encodeURIComponent(document.getElementById('eqMessage').value);
+                            
+                            const subject = `Apex Petroleum Supply RFQ: ${product} (${volume})`;
+                            const body = `Entity / Name: ${name}%0D%0AEmail: ${email}%0D%0ARequested Grade: ${product}%0D%0AVolume: ${volume}%0D%0A%0D%0AMessage & Site Notes:%0D%0A${message}`;
+                            window.location.href = `mailto:youremail@gmail.com?subject=${subject}&body=${body}`;
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact -->
+        <section id="contact">
+            <div class="container reveal">
+                <div class="eyebrow" style="margin-bottom: 1.5rem;">
+                    <span>Headquarters & Terminal Desk</span>
+                </div>
+                <div class="grid" style="grid-template-columns: 1fr 1.1fr;">
+                    <div class="card" style="display: flex; flex-direction: column; justify-content: center; padding: 4rem 3.5rem;">
+                        <h2 style="margin-bottom: 2rem; font-size: 2.8rem;">Contact Us.</h2>
+                        
+                        <div style="margin-bottom: 2.2rem;">
+                            <p style="font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-color); margin-bottom: 0.4rem;">Terminal & Tank Farm</p>
+                            <p class="text-muted" style="line-height: 1.6;">Terminal Berth 4, Deepwater Industrial Corridor<br>Sector 12, Heavy Industry Zone, 000000</p>
+                        </div>
+                        <div style="margin-bottom: 2.2rem;">
+                            <p style="font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-color); margin-bottom: 0.4rem;">Direct Dispatch Desk</p>
+                            <p class="text-muted">+91 00000 00000 / +91 00000 00001 (24/7 Hotline)</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-color); margin-bottom: 0.4rem;">Commercial Procurement Email</p>
+                            <p class="text-muted">youremail@gmail.com / dispatch@apexpetroleum.com</p>
+                        </div>
+                    </div>
+                    <div class="card" style="padding: 0; position: relative; overflow: hidden;">
+                        <!-- Grayscale Google Maps iframe -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.646048154563!2d72.8361!3d19.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjIiTiA3MsKwNTAnMTAuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; filter: grayscale(100%) contrast(1.2) opacity(0.85); min-height: 460px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                <div style="margin-top: 4.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; letter-spacing: 0.02em;">
+                    &copy; 2026 Apex Petroleum Logistics. All rights reserved. ASTM D396 / ISO 8217 Certified Operations.
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scroll Physics & Interaction JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            const reveals = document.querySelectorAll('.reveal');
+            
+            // Intersection Observer for Reveal Animations
+            const observerOptions = {
+                root: null,
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        
+                        // Add stagger to grid children if it's a grid container
+                        if (entry.target.classList.contains('grid')) {
+                            const cards = entry.target.querySelectorAll('.card');
+                            cards.forEach((card, index) => {
+                                card.style.opacity = '0';
+                                card.style.transform = 'translateY(25px)';
+                                setTimeout(() => {
+                                    card.style.transition = 'all 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0)';
+                                }, index * 90);
+                            });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            reveals.forEach(el => observer.observe(el));
+
+            // Navigation Style on Scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth Scroll for Nav Links
+            document.querySelectorAll('.nav-links a, .btn-group a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            targetSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+            
+            // Trigger initial scroll event to set nav state if reloaded midway
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            }
+
+            // Live barrel counter subtle ticking
+            let count = 4821940;
+            setInterval(() => {
+                count += Math.floor(Math.random() * 4) + 1;
+                const el = document.getElementById('count-barrels');
+                if (el) el.innerText = count.toLocaleString();
+            }, 1800);
+        });
+    </script>
+</body>
+</html>

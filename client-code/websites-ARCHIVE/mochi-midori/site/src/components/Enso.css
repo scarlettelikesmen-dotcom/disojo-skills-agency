@@ -1,0 +1,5 @@
+.enso { --x: 50%; --y: 50%; position: fixed; inset: 0; z-index: 900; display: grid; place-items: center; background: var(--deep); pointer-events: none; clip-path: circle(0 at var(--x) var(--y)); }
+.enso img { width: 96px; height: 96px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0; transition: opacity 0.3s; }
+.enso.is-grow { clip-path: circle(150vmax at var(--x) var(--y)); transition: clip-path 0.7s var(--ease); pointer-events: all; }
+.enso.is-grow img, .enso.is-shrink img { opacity: 0.9; }
+.enso.is-shrink { clip-path: circle(0 at 50% 50%); transition: clip-path 0.8s var(--ease); }

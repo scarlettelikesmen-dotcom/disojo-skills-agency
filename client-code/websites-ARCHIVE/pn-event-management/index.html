@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PN Event Management - Premier event planning and coordination in Gurugram. Specializing in corporate events, weddings, and seamless logistics.">
+  <title>PN Event Management | Gurugram's Premier Event Planners</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --void:    #0a0812;
+      --plum:    #1f1426;
+      --berry:   #6d1f46;
+      --gold:    #d4af37;
+      --gold-s:  #ebd275;
+      --ice:     #f8f6f9;
+      --paper:   #ffffff;
+      --ink:     #110c14;
+      --ink-2:   #403645;
+      --muted:   #8a7f91;
+      --line:    rgba(212,175,55,.15);
+      --shadow:  0 28px 72px rgba(10,8,18,.25);
+      --serif:   "Cormorant Garamond", Georgia, serif;
+      --sans:    "DM Sans", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 100px 0; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 20px; color: var(--berry); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+    .section-title { margin: 0; max-width: 760px; font-family: var(--serif); font-size: clamp(48px, 7vw, 86px); font-weight: 400; line-height: .92; letter-spacing: -.03em; }
+    .section-title em { color: var(--gold); font-style: italic; }
+    .lead { color: var(--ink-2); font-size: 17px; line-height: 1.75; }
+
+    .topline { position: relative; z-index: 12; background: var(--void); color: #c4b8cb; font-size: 12px; letter-spacing: .06em; border-bottom: 1px solid rgba(255,255,255,.05); }
+    .topline .shell { min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .topline strong { color: var(--gold-s); }
+    .topline .t-right { display: flex; gap: 24px; }
+
+    nav { position: sticky; top: 0; z-index: 15; border-bottom: 1px solid rgba(0,0,0,.08); background: rgba(255,255,255,.95); backdrop-filter: blur(20px); }
+    .nav-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 26px; }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: max-content; }
+    .brand-mark { width: 50px; height: 50px; display: grid; place-items: center; background: var(--void); border: 1px solid var(--gold); color: var(--gold-s); font-family: var(--serif); font-size: 20px; font-weight: 600; letter-spacing: .04em; }
+    .brand-copy strong { display: block; font-size: 17px; letter-spacing: .02em; }
+    .brand-copy span { display: block; margin-top: 2px; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 32px; font-size: 13px; font-weight: 600; }
+    .nav-links a:not(.btn) { position: relative; padding: 10px 0; }
+    .nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px; background: var(--berry); transition: right .3s ease; }
+    .nav-links a:hover::after { right: 0; }
+    .btn { min-height: 48px; padding: 0 24px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--void); background: var(--void); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .04em; transition: transform .25s, background .25s; }
+    .btn:hover { transform: translateY(-2px); background: var(--plum); }
+    .btn.gold { background: var(--gold); border-color: var(--gold); color: var(--void); }
+    .btn.gold:hover { background: var(--gold-s); border-color: var(--gold-s); }
+    .btn.outline { background: transparent; color: var(--void); }
+    .btn.outline:hover { background: var(--void); color: #fff; }
+    .menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: 20px; }
+
+    .drawer { display: none; position: fixed; inset: 0; z-index: 50; background: var(--paper); flex-direction: column; padding: 34px 24px; gap: 28px; overflow-y: auto; }
+    .drawer.open { display: flex; }
+    .drawer-top { display: flex; justify-content: space-between; align-items: center; }
+    .close-btn { background: none; border: none; font-size: 26px; color: var(--ink); }
+    .drawer-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+    .drawer-links a { padding: 20px 0; border-bottom: 1px solid var(--line); font-size: 24px; font-family: var(--serif); font-weight: 400; color: var(--ink); }
+    .drawer .btn { width: 100%; justify-content: center; margin-top: 16px; }
+
+    /* HERO */
+    .hero { position: relative; min-height: 100vh; overflow: hidden; background: var(--void); display: flex; align-items: center; color: #fff; }
+    .hero-bg { position: absolute; inset: 0; opacity: 0.4; background-image: radial-gradient(circle at 80% 20%, var(--berry) 0%, transparent 40%), radial-gradient(circle at 20% 80%, rgba(212,175,55,0.15) 0%, transparent 40%); }
+    .hero-grid { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; padding: 140px 0; }
+    .hero-copy .eyebrow { color: var(--gold-s); }
+    .hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(60px, 8vw, 110px); font-weight: 400; line-height: .88; letter-spacing: -.03em; }
+    .hero h1 em { display: block; color: var(--gold); font-style: italic; font-weight: 300; }
+    .hero-copy > p { max-width: 520px; margin: 32px 0 0; color: #d0c8d4; font-size: 17px; line-height: 1.7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 42px; }
+    .hero-visual { position: relative; height: 600px; display: flex; align-items: center; justify-content: center; }
+    .hero-visual-card { position: relative; width: 100%; max-width: 440px; height: 100%; max-height: 540px; border: 1px solid rgba(212,175,55,.3); background: rgba(255,255,255,.02); backdrop-filter: blur(10px); padding: 40px; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero-visual-card::before, .hero-visual-card::after { content: ""; position: absolute; width: 12px; height: 12px; border: 1px solid var(--gold); }
+    .hero-visual-card::before { top: -6px; left: -6px; border-right: none; border-bottom: none; }
+    .hero-visual-card::after { bottom: -6px; right: -6px; border-left: none; border-top: none; }
+    .event-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .e-tag { padding: 8px 14px; border: 1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.3); color: var(--gold-s); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .hero-stat-block { border-top: 1px solid rgba(212,175,55,.2); padding-top: 32px; }
+    .hero-stat-block strong { display: block; font-family: var(--serif); font-size: 48px; font-weight: 400; color: #fff; line-height: 1; margin-bottom: 8px; }
+    .hero-stat-block span { font-size: 12px; color: #d0c8d4; letter-spacing: .1em; text-transform: uppercase; }
+
+    /* TICKER */
+    .ticker { overflow: hidden; border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); background: var(--plum); }
+    .ticker-track { width: max-content; min-height: 56px; display: flex; align-items: center; animation: move 24s linear infinite; }
+    .ticker-track span { display: inline-flex; align-items: center; gap: 24px; padding-right: 24px; font-size: 13px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; white-space: nowrap; color: var(--gold-s); }
+    .ticker-track span::after { content: "✧"; color: var(--berry); font-size: 16px; }
+    @keyframes move { to { transform: translateX(-50%); } }
+
+    /* INTRO */
+    .intro-grid { display: grid; grid-template-columns: 1fr .85fr; gap: 80px; align-items: end; }
+    .intro-grid .lead { margin: 0; }
+    .metrics-grid { margin-top: 60px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(0,0,0,.04); border: 1px solid rgba(0,0,0,.04); }
+    .metric { background: #fff; padding: 40px 32px; }
+    .metric strong { display: block; font-family: var(--serif); font-size: 44px; color: var(--berry); font-weight: 400; line-height: 1; margin-bottom: 12px; }
+    .metric span { color: var(--ink-2); font-size: 13px; line-height: 1.6; display: block; }
+
+    /* SERVICES */
+    .services-section { background: var(--void); color: #fff; position: relative; }
+    .services-section::before { content: ""; position: absolute; inset: 0; background: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="rgba(212,175,55,0.08)"/></svg>'); opacity: 0.5; }
+    .services-inner { position: relative; z-index: 2; }
+    .services-head { text-align: center; margin-bottom: 64px; display: flex; flex-direction: column; align-items: center; }
+    .services-head .section-title { text-align: center; }
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .srv-card { position: relative; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.02); padding: 48px; transition: transform .3s, background .3s, border-color .3s; }
+    .srv-card:hover { transform: translateY(-4px); background: rgba(255,255,255,.04); border-color: var(--gold); }
+    .srv-icon { color: var(--gold); font-size: 32px; margin-bottom: 24px; }
+    .srv-card h3 { margin: 0 0 16px; font-family: var(--serif); font-size: 34px; font-weight: 400; color: #fff; }
+    .srv-card p { margin: 0 0 24px; color: #d0c8d4; font-size: 15px; line-height: 1.7; }
+    .srv-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px; }
+    .srv-list li { display: flex; align-items: center; gap: 12px; color: #a8a0ae; font-size: 13px; }
+    .srv-list li::before { content: ""; width: 4px; height: 4px; background: var(--berry); border-radius: 50%; }
+
+    /* PROCESS */
+    .process-section { background: var(--ice); }
+    .process-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
+    .process-sticky { position: sticky; top: 120px; }
+    .process-steps { display: flex; flex-direction: column; gap: 24px; }
+    .p-step { background: #fff; border: 1px solid rgba(0,0,0,.06); padding: 40px; display: grid; grid-template-columns: 50px 1fr; gap: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.02); transition: box-shadow .3s, transform .3s; }
+    .p-step:hover { box-shadow: 0 20px 40px rgba(0,0,0,.06); transform: translateY(-2px); }
+    .p-num { font-family: var(--serif); font-size: 40px; font-style: italic; color: var(--gold); line-height: 1; }
+    .p-step h3 { margin: 0 0 12px; font-family: var(--serif); font-size: 28px; font-weight: 500; color: var(--ink); }
+    .p-step p { margin: 0; color: var(--ink-2); font-size: 14px; line-height: 1.7; }
+
+    /* CONTACT */
+    .contact-section { background: var(--void); color: #fff; border-top: 1px solid rgba(255,255,255,.05); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .contact-info h2 { margin: 0 0 24px; font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); font-weight: 400; line-height: .95; color: #fff; }
+    .contact-info h2 em { color: var(--gold); font-style: italic; font-weight: 300; }
+    .contact-info > p { color: #d0c8d4; font-size: 16px; line-height: 1.7; margin: 0 0 40px; max-width: 480px; }
+    .c-details { display: flex; flex-direction: column; gap: 24px; }
+    .c-row { display: flex; align-items: flex-start; gap: 18px; }
+    .c-row .icon { font-size: 20px; margin-top: 2px; }
+    .c-row div strong { display: block; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--berry); margin-bottom: 6px; }
+    .c-row div span { color: #fff; font-size: 15px; line-height: 1.6; }
+    
+    .c-form { background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.1); padding: 48px; display: flex; flex-direction: column; gap: 16px; }
+    .c-form-title { margin: 0 0 20px; font-family: var(--serif); font-size: 28px; font-weight: 400; color: var(--gold-s); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { padding: 16px 20px; border: 1px solid rgba(255,255,255,.15); background: transparent; color: #fff; font-size: 14px; outline: none; transition: border-color .3s; }
+    .form-field::placeholder { color: rgba(255,255,255,.4); }
+    .form-field:focus { border-color: var(--gold); }
+    textarea.form-field { resize: vertical; min-height: 140px; }
+    .btn-submit { min-height: 56px; margin-top: 8px; border: none; background: var(--gold); color: var(--void); font-size: 14px; font-weight: 700; letter-spacing: .05em; transition: background .3s; }
+    .btn-submit:hover { background: var(--gold-s); }
+
+    footer { background: #05040a; color: #5a5160; border-top: 1px solid rgba(255,255,255,.05); }
+    .footer-inner { padding: 40px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-inner small { font-size: 12px; letter-spacing: .05em; }
+    .footer-links { display: flex; gap: 24px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; }
+    .footer-links a { color: var(--gold); }
+
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; padding: 100px 0 60px; gap: 48px; }
+      .hero h1 { font-size: clamp(52px, 11vw, 80px); }
+      .hero-visual { height: 400px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 48px; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; gap: 48px; }
+      .process-sticky { position: static; }
+      .contact-grid { grid-template-columns: 1fr; gap: 56px; }
+      .c-form { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .menu-btn { display: flex; align-items: center; justify-content: center; }
+      .topline .t-right { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topline">
+    <div class="shell">
+      <span>547A/22, Gurugram, Haryana 122015</span>
+      <span class="t-right"><strong>+91 80475 52406</strong></span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="shell">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-mark">PN</div>
+          <div class="brand-copy">
+            <strong>PN Event Management</strong>
+            <span>Premier Planners &nbsp;·&nbsp; Gurugram</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact" class="btn">Plan Your Event</a>
+        </div>
+        <button class="menu-btn" id="menuBtn">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <div class="drawer-top">
+      <div class="brand">
+        <div class="brand-mark">PN</div>
+        <div class="brand-copy"><strong>PN Events</strong><span>Gurugram</span></div>
+      </div>
+      <button class="close-btn" id="closeBtn">&#10005;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" onclick="closeDrawer()">About</a>
+      <a href="#services" onclick="closeDrawer()">Services</a>
+      <a href="#process" onclick="closeDrawer()">Process</a>
+    </div>
+    <a href="#contact" class="btn" onclick="closeDrawer()">Plan Your Event</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Professional Event Planners</p>
+          <h1>Moments made <em>memorable.</em></h1>
+          <p>From grand corporate conventions to intimate luxury weddings, PN Event Management handles every detail with precision, creativity, and flawless execution.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn gold">Book a Consultation</a>
+            <a href="#services" class="btn outline" style="border: 1px solid rgba(255,255,255,.2); color: #fff;">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <div>
+              <div class="event-tags">
+                <span class="e-tag">Corporate Events</span>
+                <span class="e-tag">Weddings</span>
+                <span class="e-tag">Brand Launches</span>
+              </div>
+              <h2 style="font-family: var(--serif); font-size: 36px; font-weight: 400; margin: 24px 0 16px;">Crafting perfection.</h2>
+              <p style="color: #d0c8d4; font-size: 14px; line-height: 1.6; margin: 0;">We take the stress out of planning. You dream it, we design, manage, and execute it flawlessly.</p>
+            </div>
+            <div class="hero-stat-block">
+              <strong>150+</strong>
+              <span>Successful Events Hosted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Corporate Conventions</span><span>Luxury Weddings</span><span>Brand Activations</span><span>Logistics &amp; Travel</span><span>Venue Setup</span><span>Entertainment Management</span><span>Corporate Conventions</span><span>Luxury Weddings</span><span>Brand Activations</span><span>Logistics &amp; Travel</span><span>Venue Setup</span><span>Entertainment Management</span>
+    </div>
+  </div>
+
+  <section id="about" class="section">
+    <div class="shell">
+      <div class="intro-grid">
+        <div>
+          <p class="eyebrow">About PN Events</p>
+          <h2 class="section-title">Bringing your vision to <em>life.</em></h2>
+        </div>
+        <div>
+          <p class="lead">Based in Gurugram, PN Event Management Pvt. Ltd. is a premier event planning agency dedicated to delivering exceptional experiences. Whether it's a high-stakes business summit or a multi-day wedding celebration, we combine logistical expertise with creative design to ensure your event is nothing short of spectacular.</p>
+        </div>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric"><strong>100%</strong><span>Customized event strategies tailored to your exact needs and budget.</span></div>
+        <div class="metric"><strong>360&deg;</strong><span>End-to-end management from venue sourcing to post-event wrap up.</span></div>
+        <div class="metric"><strong>24/7</strong><span>Dedicated support and on-ground coordination during your event.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services-section">
+    <div class="services-inner shell">
+      <div class="services-head">
+        <p class="eyebrow">Our Expertise</p>
+        <h2 class="section-title">Comprehensive <em>management.</em></h2>
+        <p class="lead" style="max-width: 600px; margin-top: 20px; color: #d0c8d4;">We handle the heavy lifting so you can enjoy the moment. Discover our core service areas.</p>
+      </div>
+      <div class="services-grid">
+        <div class="srv-card">
+          <div class="srv-icon">🏛️</div>
+          <h3>Corporate Events</h3>
+          <p>Professional planning for business meetings, annual conventions, and corporate retreats that reflect your brand's excellence.</p>
+          <ul class="srv-list">
+            <li>Venue sourcing &amp; contracting</li>
+            <li>AV production &amp; stage setup</li>
+            <li>Guest registration &amp; hospitality</li>
+          </ul>
+        </div>
+        <div class="srv-card">
+          <div class="srv-icon">💍</div>
+          <h3>Luxury Weddings</h3>
+          <p>Turning your dream day into reality with bespoke wedding planning, breathtaking decor, and seamless guest management.</p>
+          <ul class="srv-list">
+            <li>Theme conceptualization &amp; decor</li>
+            <li>Catering &amp; culinary management</li>
+            <li>Entertainment &amp; artist booking</li>
+          </ul>
+        </div>
+        <div class="srv-card">
+          <div class="srv-icon">✈️</div>
+          <h3>Logistics &amp; Travel</h3>
+          <p>Complete coordination for overseas tours, destination events, and group travel to ensure everyone arrives comfortably and on time.</p>
+          <ul class="srv-list">
+            <li>Flight bookings &amp; visa assistance</li>
+            <li>Hotel &amp; lodging arrangements</li>
+            <li>Ground transportation fleets</li>
+          </ul>
+        </div>
+        <div class="srv-card">
+          <div class="srv-icon">🎨</div>
+          <h3>Event Production</h3>
+          <p>Transforming empty spaces into immersive environments with cutting-edge lighting, sound, and custom fabrication.</p>
+          <ul class="srv-list">
+            <li>Custom set design &amp; fabrication</li>
+            <li>Lighting &amp; sound engineering</li>
+            <li>On-site technical support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section process-section">
+    <div class="shell">
+      <div class="process-grid">
+        <div class="process-sticky">
+          <p class="eyebrow">How We Work</p>
+          <h2 class="section-title">A seamless <em>process.</em></h2>
+          <p class="lead" style="margin-top: 24px;">Great events don't happen by accident. They are the result of meticulous planning and flawless execution.</p>
+        </div>
+        <div class="process-steps">
+          <div class="p-step">
+            <span class="p-num">1</span>
+            <div>
+              <h3>Consultation &amp; Vision</h3>
+              <p>We start by listening. Understanding your goals, audience, budget, and aesthetic preferences to form the foundation of the event.</p>
+            </div>
+          </div>
+          <div class="p-step">
+            <span class="p-num">2</span>
+            <div>
+              <h3>Design &amp; Planning</h3>
+              <p>Our team develops a comprehensive proposal including venue options, design concepts, timelines, and logistical frameworks.</p>
+            </div>
+          </div>
+          <div class="p-step">
+            <span class="p-num">3</span>
+            <div>
+              <h3>Coordination</h3>
+              <p>We handle all vendor negotiations, contract management, and pre-event setup, keeping you informed without overwhelming you.</p>
+            </div>
+          </div>
+          <div class="p-step">
+            <span class="p-num">4</span>
+            <div>
+              <h3>Execution</h3>
+              <p>On the day of the event, our on-ground team ensures every detail runs like clockwork, allowing you to be a guest at your own event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="shell">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Let's Connect</p>
+          <h2>Start planning your next <em>event.</em></h2>
+          <p>Reach out to discuss your upcoming corporate event, wedding, or travel logistics. Let's make it extraordinary.</p>
+          <div class="c-details">
+            <div class="c-row"><span class="icon">📞</span><div><strong>Phone</strong><span>+91 80475 52406</span></div></div>
+            <div class="c-row"><span class="icon">✉️</span><div><strong>Email</strong><span>msgvishal12@gmail.com</span></div></div>
+            <div class="c-row"><span class="icon">📍</span><div><strong>Office</strong><span>547A/22, Gurugram, Haryana 122015</span></div></div>
+          </div>
+        </div>
+        <div class="c-form-wrapper">
+          <form class="c-form" onsubmit="handleSubmit(event)">
+            <h3 class="c-form-title">Send an Inquiry</h3>
+            <div class="form-row">
+              <input class="form-field" type="text" placeholder="Full Name" required>
+              <input class="form-field" type="tel" placeholder="Phone Number" required>
+            </div>
+            <input class="form-field" type="email" placeholder="Email Address" required>
+            <select class="form-field">
+              <option value="" disabled selected>Select Event Type</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="wedding">Wedding</option>
+              <option value="travel">Travel & Logistics</option>
+              <option value="other">Other</option>
+            </select>
+            <textarea class="form-field" placeholder="Tell us about your event (dates, guest count, requirements)..." required></textarea>
+            <button type="submit" class="btn-submit">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-inner">
+        <small>&copy; 2026 PN Event Management Pvt. Ltd. All rights reserved. &nbsp;·&nbsp; Gurugram.</small>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const drawer = document.getElementById('drawer');
+    menuBtn.addEventListener('click', () => { drawer.classList.add('open'); document.body.classList.add('menu-open'); });
+    closeBtn.addEventListener('click', () => closeDrawer());
+    function closeDrawer() { drawer.classList.remove('open'); document.body.classList.remove('menu-open'); }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = 'Inquiry Sent Successfully!';
+      btn.style.background = '#6d1f46';
+      btn.style.color = '#ffffff';
+      setTimeout(() => { btn.textContent = 'Submit Inquiry'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.metric, .srv-card, .p-step').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

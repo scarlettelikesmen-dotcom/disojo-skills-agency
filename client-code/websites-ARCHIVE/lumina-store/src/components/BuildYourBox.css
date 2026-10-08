@@ -1,0 +1,304 @@
+.build-box-section {
+  padding: 8rem 0;
+  background-color: var(--cream-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle postcard watermark behind */
+.build-box-section::before {
+  content: 'BUILD YOUR BOX';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 14vw, 14rem);
+  font-weight: 700;
+  color: var(--cream-border);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.45;
+  letter-spacing: -0.04em;
+}
+
+/* Header */
+.build-box-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.build-box-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin: 0.75rem auto 1.25rem;
+  line-height: 1.65;
+}
+
+.build-box-price-badge {
+  display: inline-block;
+  background: var(--terracotta);
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.25rem;
+  border-radius: 100px;
+}
+
+/* Progress */
+.build-box-progress {
+  max-width: 520px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.progress-track {
+  height: 3px;
+  background: var(--cream-border);
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--warm-gray);
+  border-radius: 100px;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s;
+}
+
+.progress-fill--done {
+  background: var(--terracotta);
+}
+
+.progress-label {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+  transition: color 0.3s;
+}
+
+/* Grid */
+.build-box-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cards */
+.box-card {
+  background: var(--cream-card);
+  border: 1px solid var(--cream-border);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.box-card--selected {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 1px var(--terracotta), 0 12px 32px rgba(196, 108, 78, 0.12);
+}
+
+.box-card--disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.box-card:hover:not(.box-card--disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(43, 43, 43, 0.1);
+}
+
+/* Card visual */
+.box-card-visual {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.box-card-visual img,
+.box-card-gradient {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.box-card:hover .box-card-visual img {
+  transform: scale(1.05);
+}
+
+.box-card-qty-badge {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(196, 108, 78, 0.4);
+}
+
+/* Card body */
+.box-card-body {
+  padding: 1.1rem 1rem 0.6rem;
+  flex: 1;
+}
+
+.box-card-mood {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--terracotta);
+  margin-bottom: 0.2rem;
+}
+
+.box-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.box-card-notes {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Stepper */
+.box-card-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid var(--cream-border);
+  background: var(--cream);
+}
+
+.stepper-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--cream-border);
+  background: transparent;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.stepper-btn:hover:not(:disabled) {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: var(--cream);
+}
+
+.stepper-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.stepper-count {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 1.2rem;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.box-card--selected .stepper-count {
+  color: var(--terracotta);
+}
+
+/* CTA */
+.build-box-cta {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.build-box-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--warm-gray);
+  color: var(--ink);
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border-radius: 2px;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+  margin-bottom: 0.75rem;
+}
+
+.build-box-submit--ready {
+  background: var(--terracotta);
+  color: var(--cream);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(196, 108, 78, 0.3);
+}
+
+.build-box-submit--ready:hover {
+  background: var(--brown);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(74, 53, 41, 0.3);
+}
+
+.build-box-hint {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .build-box-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .build-box-section { padding: 5rem 0; }
+  .build-box-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .box-card-name { font-size: 0.9rem; }
+}

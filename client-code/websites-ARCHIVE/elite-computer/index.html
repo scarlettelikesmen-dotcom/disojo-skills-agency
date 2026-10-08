@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elite Computer, CAD & PLC - Premium services in Gurugram.">
+  <title>Elite Computer, CAD & PLC | Gurugram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:   #0a192f;
+      --primary-d: #020c1b;
+      --accent:    #64ffda;
+      --accent-l:  #8affdf;
+      --bg:        #ffffff;
+      --surface:   #f8f9fa;
+      --text:      #333;
+      --text-m:    #666;
+      --line:      rgba(0,0,0,0.1);
+      --shadow:    0 24px 64px rgba(0,0,0,0.08);
+      --serif:     "Cormorant Garamond", Georgia, serif;
+      --sans:      "DM Sans", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; overflow-x: hidden; color: var(--text); background: var(--bg); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 92px 0; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+    .section-title { margin: 0; max-width: 740px; font-family: var(--serif); font-size: clamp(44px, 6vw, 80px); font-weight: 400; line-height: .92; letter-spacing: -.03em; color: var(--primary); }
+    .section-title em { color: var(--accent); font-style: normal; }
+    .lead { color: var(--text-m); font-size: 17px; line-height: 1.7; }
+
+    .topline { position: relative; z-index: 12; background: var(--primary); color: rgba(255,255,255,0.7); font-size: 12px; letter-spacing: .06em; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .topline .shell { min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .topline strong { color: var(--accent); }
+    .topline .t-right { display: flex; gap: 24px; }
+
+    nav { position: sticky; top: 0; z-index: 15; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); backdrop-filter: blur(16px); }
+    .nav-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 26px; }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: max-content; }
+    .brand-mark { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--primary); color: var(--primary); font-family: var(--serif); font-size: 22px; background: var(--surface); font-weight: 600; letter-spacing: .02em; }
+    .brand-copy strong { display: block; font-size: 17px; font-family: var(--serif); font-weight: 600; color: var(--primary); letter-spacing: .02em; }
+    .brand-copy span { display: block; margin-top: 2px; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--text-m); }
+    .nav-links { display: flex; align-items: center; gap: 32px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .nav-links a:not(.btn) { position: relative; padding: 10px 0; color: var(--primary); }
+    .nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 4px; height: 1px; background: var(--accent); transition: right .3s ease; }
+    .nav-links a:hover::after { right: 0; }
+    .btn { min-height: 46px; padding: 0 24px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--primary); background: var(--primary); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em; transition: transform .25s, background .25s; }
+    .btn:hover { transform: translateY(-2px); background: var(--primary-d); }
+    .btn.accent { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+    .btn.accent:hover { background: var(--accent-l); border-color: var(--accent-l); }
+    .btn.outline { background: transparent; color: var(--primary); }
+    .btn.outline:hover { background: var(--primary); color: #fff; }
+
+    .hero { position: relative; min-height: 90vh; overflow: hidden; border-bottom: 1px solid var(--line); display: flex; align-items: center; }
+    .hero-grid { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1.1fr .9fr; gap: 72px; align-items: center; padding: 80px 0; }
+    .hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(56px, 7vw, 96px); font-weight: 400; line-height: .9; letter-spacing: -.03em; color: var(--primary); }
+    .hero h1 em { display: block; color: var(--accent); font-style: normal; }
+    .hero-copy > p { max-width: 500px; margin: 28px 0 0; color: var(--text-m); font-size: 17px; line-height: 1.7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+    .hero-card { background: var(--primary); padding: 48px; box-shadow: var(--shadow); color: #fff; position: relative; }
+    .card-stat { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .card-stat strong { font-family: var(--serif); font-size: 48px; font-weight: 400; color: var(--accent); line-height: 1; }
+    .card-stat span { font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+    
+    .ticker { overflow: hidden; border-bottom: 1px solid var(--line); background: var(--primary-d); color: var(--accent); }
+    .ticker-track { width: max-content; min-height: 52px; display: flex; align-items: center; animation: move 25s linear infinite; }
+    .ticker-track span { display: inline-flex; align-items: center; gap: 24px; padding-right: 24px; font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; white-space: nowrap; }
+    .ticker-track span::after { content: "•"; color: rgba(255,255,255,0.5); font-size: 16px; }
+    @keyframes move { to { transform: translateX(-50%); } }
+
+    .services-section { background: var(--primary); color: #fff; }
+    .services-section .eyebrow { color: var(--accent); }
+    .services-section .section-title { color: #fff; }
+    .services-head { margin-bottom: 56px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .srv-card { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1); padding: 40px; transition: transform .3s; }
+    .srv-card:hover { background: rgba(255,255,255,.06); transform: translateY(-4px); border-color: var(--accent); }
+    .srv-icon { color: var(--accent); font-size: 32px; margin-bottom: 24px; }
+    .srv-card h3 { margin: 0 0 16px; font-family: var(--serif); font-size: 28px; font-weight: 400; color: #fff; }
+    .srv-card p { margin: 0; color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.65; }
+
+    .contact-section { background: var(--primary-d); color: #fff; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .c-form { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1); padding: 48px; display: flex; flex-direction: column; gap: 16px; }
+    .form-field { padding: 16px 20px; border: 1px solid rgba(255,255,255,.15); background: transparent; color: #fff; font-size: 14px; }
+    .btn-submit { min-height: 56px; background: var(--accent); color: var(--primary); font-weight: 700; border: none; }
+    
+    footer { background: #000; color: #666; padding: 40px 0; font-size: 12px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <div class="topline">
+    <div class="shell">
+      <span>Gurugram, Delhi/NCR</span>
+      <span class="t-right"><strong>Premium Services</strong></span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="shell">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-mark">E</div>
+          <div class="brand-copy">
+            <strong>Elite Computer, CAD & PLC</strong>
+            <span>IT & Tech Training</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">IT & Tech Training &nbsp;·&nbsp; Gurugram</p>
+          <h1>Experience <em>excellence.</em></h1>
+          <p>Welcome to Elite Computer, CAD & PLC. We deliver unparalleled IT & Tech Training services tailored specifically for your needs in Gurugram.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn accent">Contact Us</a>
+            <a href="#services" class="btn outline">View Services</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="card-stat">
+              <strong>100%</strong>
+              <span>Client Satisfaction</span>
+            </div>
+            <div class="card-stat" style="border:none; padding:0; margin:0;">
+              <strong>Premium</strong>
+              <span>Quality Guaranteed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>CAD Training</span><span>PLC Programming</span><span>Industrial Automation</span><span>IT Courses</span><span>CAD Training</span><span>PLC Programming</span><span>Industrial Automation</span><span>IT Courses</span>
+    </div>
+  </div>
+
+  <section id="services" class="section services-section">
+    <div class="shell">
+      <div class="services-head">
+        <p class="eyebrow">Our Offerings</p>
+        <h2 class="section-title">Comprehensive <em>solutions.</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="srv-card">
+          <div class="srv-icon">✦</div>
+          <h3>CAD Training</h3>
+          <p>Delivering high-quality execution and exceptional results for all your CAD Training requirements.</p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-icon">✦</div>
+          <h3>PLC Programming</h3>
+          <p>Expertise and precision guaranteed. We handle PLC Programming with professional care.</p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-icon">✦</div>
+          <h3>Industrial Automation</h3>
+          <p>State-of-the-art approaches to Industrial Automation designed to exceed your expectations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="shell">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Get in <em>touch.</em></h2>
+          <p>Ready to start? Reach out to our team at Elite Computer, CAD & PLC today.</p>
+        </div>
+        <form class="c-form">
+          <input class="form-field" type="text" placeholder="Full Name" required>
+          <input class="form-field" type="tel" placeholder="Phone Number" required>
+          <textarea class="form-field" placeholder="How can we help?"></textarea>
+          <button type="submit" class="btn-submit">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="shell">
+      &copy; 2026 Elite Computer, CAD & PLC. All rights reserved. &nbsp;·&nbsp; Gurugram.
+    </div>
+  </footer>
+
+</body>
+</html>

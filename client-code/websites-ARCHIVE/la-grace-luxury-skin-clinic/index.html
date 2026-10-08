@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLINIQUE ÉLIXIR // Haute Dermatologie & Cellular Longevity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/vendor/three.min.js"></script>
+    <script src="./assets/vendor/OrbitControls.js"></script>
+    <script src="./assets/vendor/lenis.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        pearl: '#FAFAF8',
+                        roseDust: '#F3EAE6',
+                        roseAccent: '#B76E79',
+                        charcoal: '#1A1D1A',
+                        sand: '#ECE5DD',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #B76E79; color: #fff; }
+        .pearl-glow {
+            box-shadow: 0 20px 40px -15px rgba(183, 110, 121, 0.12);
+        }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-pearl text-charcoal font-sans antialiased overflow-x-hidden">
+
+    <!-- Top Clinic Banner -->
+    <header class="border-b border-roseDust bg-pearl/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full border border-roseAccent flex items-center justify-center font-serif text-roseAccent text-lg italic">
+                    É
+                </div>
+                <div>
+                    <span class="font-serif text-xl tracking-[0.15em] uppercase text-charcoal font-medium block">CLINIQUE ÉLIXIR</span>
+                    <span class="text-[9px] tracking-[0.25em] uppercase text-gray-500 block">HAUTE DERMATOLOGIE // DR. JYOTI ANEJA • PARIS • DELHI</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase text-charcoal/70">
+                <a href="#comparison" class="hover:text-roseAccent transition-colors">Clinical Results</a>
+                <a href="#biostimulation" class="hover:text-roseAccent transition-colors">Peptide Lab</a>
+                <a href="#prescription" class="hover:text-roseAccent transition-colors">Skin Prescription</a>
+                <a href="#consultation" class="hover:text-roseAccent transition-colors">Consultation</a>
+            </nav>
+
+            <a href="#consultation" class="px-5 py-2.5 bg-roseAccent text-white text-xs uppercase tracking-widest hover:bg-charcoal transition-all">
+                BOOK EVALUATION &rarr;
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero: Cellular Perfection -->
+    <section class="py-20 px-6 border-b border-roseDust bg-roseDust/30">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1 bg-white border border-roseAccent/30 text-roseAccent text-[10px] tracking-[0.25em] uppercase mb-8">
+                    <span>CELLULAR REPROGRAMMING & BIO-STIMULATION</span>
+                </div>
+
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-charcoal font-normal leading-[1.05] tracking-tight mb-8">
+                    The Science of<br>
+                    <span class="italic text-roseAccent font-light">Ageless Skin</span><br>
+                    Architecture.
+                </h1>
+
+                <p class="text-charcoal/80 max-w-xl text-base font-light leading-relaxed mb-10">
+                    Founded by Dr. Jyoti Aneja (MD Dermatologie, Fellow Paris VII), Clinique Élixir merges Swiss regenerative peptide science with FDA-cleared pico-laser acoustics to restore subcutaneous youthful tension.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="#prescription" class="px-8 py-4 bg-charcoal text-white text-xs tracking-widest uppercase text-center hover:bg-roseAccent transition-all">
+                        DESIGN BESPOKE SKIN PROTOCOL
+                    </a>
+                    <a href="#comparison" class="px-8 py-4 border border-charcoal/30 text-charcoal text-xs tracking-widest uppercase text-center hover:border-charcoal transition-all">
+                        VIEW CLINICAL BEFORE / AFTER
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Clinic Image -->
+            <div class="lg:col-span-5">
+                <div class="relative aspect-[4/5] rounded-none overflow-hidden shadow-2xl border-8 border-white">
+                    <img src="./assets/photo1570172619644dfd03ed5d881.jpg" 
+                         alt="Luminous Skin Model" class="w-full h-full object-cover">
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-5 border border-roseDust">
+                        <div class="font-serif text-lg text-charcoal italic">"True skin elevation does not freeze facial emotion; it restores youthful radiance from the cellular nucleus."</div>
+                        <div class="text-[10px] uppercase tracking-widest text-roseAccent mt-2 font-medium">DR. JYOTI ANEJA // FOUNDING MEDICAL DIRECTOR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Draggable Interactive Before / After Comparison Slider -->
+    <section id="comparison" class="py-24 px-6 max-w-6xl mx-auto border-b border-roseDust">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-[10px] tracking-[0.3em] uppercase text-roseAccent block mb-2">// PHOTONIC MICROSCOPY</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-charcoal font-normal">Measurable Cellular Rejuvenation</h2>
+            <p class="text-charcoal/70 text-sm mt-3 font-light leading-relaxed">
+                Drag the interactive comparison divider below to inspect 90-day post-treatment dermoscopic density.
+            </p>
+        </div>
+
+        <div class="relative w-full max-w-4xl mx-auto aspect-[16/10] overflow-hidden select-none border-4 border-white shadow-2xl" id="slider-container" data-lenis-prevent>
+            <!-- After Image (Base) -->
+            <img src="./assets/photo15223373607888b13dee7a37e.jpg" 
+                 alt="After Treatment Glow" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+            
+            <div class="absolute bottom-6 right-6 bg-white/90 px-4 py-1.5 text-xs font-serif uppercase tracking-widest text-charcoal z-10 pointer-events-none">
+                POST-ELIXIR PROTOCOL (DAY 90)
+            </div>
+
+            <!-- Before Image (Clipped Overlay) -->
+            <img id="before-img" src="./assets/photo15223373607888b13dee7a37e.jpg" 
+                 alt="Before Treatment" 
+                 class="absolute inset-0 w-full h-full object-cover filter contrast-75 brightness-90 grayscale-[35%] pointer-events-none" 
+                 style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+            
+            <div class="absolute bottom-6 left-6 bg-charcoal/90 px-4 py-1.5 text-xs font-serif uppercase tracking-widest text-white z-10 pointer-events-none">
+                BASELINE DERMOSCOPY (DAY 0)
+            </div>
+
+            <!-- Divider Line with Handle -->
+            <div id="slider-handle" class="absolute top-0 bottom-0 left-1/2 w-1 bg-white cursor-ew-resize z-20 flex items-center justify-center -translate-x-1/2">
+                <div class="w-8 h-8 rounded-full bg-roseAccent text-white flex items-center justify-center text-xs font-bold shadow-lg">
+                    &#x2194;
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12 text-center text-xs">
+            <div class="p-4 bg-roseDust/40">
+                <span class="text-2xl font-serif text-charcoal font-bold block mb-1">+48.6%</span>
+                <span class="text-gray-600 uppercase tracking-widest">Type-1 Collagen Density Increase</span>
+            </div>
+            <div class="p-4 bg-roseDust/40">
+                <span class="text-2xl font-serif text-charcoal font-bold block mb-1">-72.4%</span>
+                <span class="text-gray-600 uppercase tracking-widest">Deep Epidermal Melanin Volume</span>
+            </div>
+            <div class="p-4 bg-roseDust/40">
+                <span class="text-2xl font-serif text-charcoal font-bold block mb-1">0 Days</span>
+                <span class="text-gray-600 uppercase tracking-widest">Zero Social Downtime Required</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Cellular Peptide Double-Helix & Biostimulation Metrology Lab -->
+    <section id="biostimulation" class="py-24 px-6 max-w-7xl mx-auto border-b border-roseDust">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-[10px] tracking-[0.3em] uppercase text-roseAccent block mb-2">// REGENERATIVE BIOPHYSICS</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-charcoal font-normal">Subcutaneous Peptide Architecture</h2>
+            <p class="text-charcoal/70 text-sm mt-3 font-light leading-relaxed">
+                Interact with the 3D molecular double-helix model below. Our bio-stimulation vectors activate deep dermal fibroblasts to cross-link procollagen fibrils at the nanoscopic scale.
+            </p>
+        </div>
+
+        <div class="bg-white border border-roseDust pearl-glow grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+            <!-- 3D Canvas Viewport -->
+            <div class="lg:col-span-8 relative h-[480px] bg-gradient-to-b from-[#FAF8F5] to-[#F3EAE6] flex items-center justify-center border-b lg:border-b-0 lg:border-r border-roseDust group" data-lenis-prevent>
+                <canvas id="helix-canvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+
+                <!-- Floating HUD Badges -->
+                <div class="absolute top-4 left-4 right-4 flex justify-between items-center pointer-events-none font-mono text-[10px] text-charcoal/80">
+                    <span class="bg-white/80 backdrop-blur-sm px-3 py-1 border border-roseDust uppercase tracking-wider">
+                        3D MOLECULAR KINEMATICS // 60 FPS
+                    </span>
+                    <span id="helix-receptor-status" class="bg-white/80 backdrop-blur-sm px-3 py-1 border border-roseAccent/40 text-roseAccent font-medium uppercase tracking-wider">
+                        RECEPTOR AFFINITY: ACTIVE
+                    </span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center pointer-events-none font-mono text-[9px] text-gray-500">
+                    <span class="bg-white/70 px-2.5 py-1 backdrop-blur-sm">ORBIT: 360° • ZOOM: PINCH/SCROLL</span>
+                    <span class="bg-white/70 px-2.5 py-1 backdrop-blur-sm">ENERGY RESOLUTION: 0.1Å</span>
+                </div>
+            </div>
+
+            <!-- Interactive Molecular Controls & Telemetry -->
+            <div class="lg:col-span-4 p-8 flex flex-col justify-between bg-pearl">
+                <div>
+                    <div class="text-[10px] tracking-[0.25em] uppercase text-roseAccent font-medium mb-2">MOLECULAR SELECTOR</div>
+                    <h3 class="font-serif text-2xl text-charcoal mb-6">Bioactive Nanostructures</h3>
+
+                    <div class="space-y-3 mb-8">
+                        <button onclick="setHelixMolecule('collagen')" id="btn-mol-collagen" class="w-full p-3.5 border-2 border-roseAccent bg-white text-left text-xs transition-all shadow-sm">
+                            <div class="flex justify-between items-center">
+                                <span class="font-serif text-base text-charcoal font-medium">Type-I Procollagen</span>
+                                <span class="font-mono text-[10px] text-roseAccent font-semibold">ALPHA TRIPLE-HELIX</span>
+                            </div>
+                            <p class="text-charcoal/60 text-[11px] mt-1 font-light leading-snug">
+                                Native triple-helical structure providing tensile modulus to the dermal extracellular matrix.
+                            </p>
+                        </button>
+
+                        <button onclick="setHelixMolecule('ghk')" id="btn-mol-ghk" class="w-full p-3.5 border border-roseDust bg-white/70 hover:border-roseAccent text-left text-xs transition-all">
+                            <div class="flex justify-between items-center">
+                                <span class="font-serif text-base text-charcoal font-medium">Copper GHK-Cu</span>
+                                <span class="font-mono text-[10px] text-gray-500 font-semibold">PEPTIDE CHELATE</span>
+                            </div>
+                            <p class="text-charcoal/60 text-[11px] mt-1 font-light leading-snug">
+                                Tripeptide chelate with copper ions; accelerates wound remodel and elastin transcript induction.
+                            </p>
+                        </button>
+
+                        <button onclick="setHelixMolecule('exosome')" id="btn-mol-exosome" class="w-full p-3.5 border border-roseDust bg-white/70 hover:border-roseAccent text-left text-xs transition-all">
+                            <div class="flex justify-between items-center">
+                                <span class="font-serif text-base text-charcoal font-medium">Stem Exosome Vesicle</span>
+                                <span class="font-mono text-[10px] text-gray-500 font-semibold">BILAYER VECTOR</span>
+                            </div>
+                            <p class="text-charcoal/60 text-[11px] mt-1 font-light leading-snug">
+                                Nanoscale extracellular vesicle carrying 1,000+ miRNA signaling cascades to reverse senescence.
+                            </p>
+                        </button>
+                    </div>
+
+                    <!-- Live Molecular Telemetry Table -->
+                    <div class="border-t border-roseDust pt-6 space-y-3 font-mono text-xs">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Molecular Mass:</span>
+                            <span id="mol-mass" class="text-charcoal font-medium">3,412 Da</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Dissociation Constant (Kd):</span>
+                            <span id="mol-kd" class="text-roseAccent font-medium">0.42 nM (High)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Fibroblast Upregulation:</span>
+                            <span id="mol-upreg" class="text-emerald-700 font-medium">+312%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Cross-Link Stability:</span>
+                            <span id="mol-halflife" class="text-charcoal font-medium">90 Days In Vivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-roseDust mt-6">
+                    <a href="#prescription" class="w-full py-3 bg-charcoal text-white text-xs uppercase tracking-widest block text-center hover:bg-roseAccent transition-colors">
+                        FORMULATE PROTOCOL &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Skin Regimen Configurator -->
+    <section id="prescription" class="py-24 px-6 max-w-6xl mx-auto border-b border-roseDust">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-[10px] tracking-[0.3em] uppercase text-roseAccent block mb-2">// DIAGNOSTIC ATELIER</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-charcoal font-normal">Cellular Skin Prescription</h2>
+            <p class="text-charcoal/70 text-sm mt-3 font-light leading-relaxed">
+                Select your primary clinical objective to generate Dr. Aneja’s multi-wave protocol:
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-3 mt-8">
+                <button onclick="setPrescription('lifting')" id="btn-rx-lifting" class="px-5 py-2.5 bg-roseAccent text-white text-xs uppercase tracking-widest font-medium transition-all">
+                    01 / SMAS Vector Lifting
+                </button>
+                <button onclick="setPrescription('pigment')" id="btn-rx-pigment" class="px-5 py-2.5 bg-white border border-roseDust text-charcoal text-xs uppercase tracking-widest transition-all hover:border-roseAccent">
+                    02 / Melasma & Glass Glow
+                </button>
+                <button onclick="setPrescription('exosome')" id="btn-rx-exosome" class="px-5 py-2.5 bg-white border border-roseDust text-charcoal text-xs uppercase tracking-widest transition-all hover:border-roseAccent">
+                    03 / Stem Exosome Infusion
+                </button>
+            </div>
+        </div>
+
+        <!-- Dynamic Output -->
+        <div class="bg-white border border-roseDust p-8 md:p-14 pearl-glow">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span id="rx-tag" class="text-xs uppercase tracking-widest text-roseAccent font-medium block">
+                        PROTOCOL REF: ELX-SMAS-700
+                    </span>
+                    <h3 id="rx-title" class="font-serif text-3xl md:text-4xl text-charcoal">
+                        Ultraformer MPT Micro-Pulsed High-Intensity Focused Ultrasound
+                    </h3>
+                    <p id="rx-desc" class="text-charcoal/80 text-sm leading-relaxed font-light">
+                        Targeting the Superficial Musculoaponeurotic System (SMAS) at 4.5mm, 3.0mm, and 1.5mm depths. Induces immediate thermal coagulation points that trigger neocollagenesis and instant jawline contour sharpening without incisions.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-roseDust text-xs">
+                        <div>
+                            <span class="text-gray-500 uppercase tracking-widest block mb-1">Session Frequency:</span>
+                            <span id="rx-freq" class="font-medium text-charcoal">Single Annual Session</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-500 uppercase tracking-widest block mb-1">Active Peptides:</span>
+                            <span id="rx-peptides" class="font-medium text-charcoal">Copper Tripeptide-1 + Acetyl Hexapeptide-8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-roseDust/30 p-8 border border-roseDust flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mb-2">CLINICAL EXCELLENCE GUARANTEE</div>
+                        <div class="font-serif text-2xl text-charcoal mb-4">Administered Exclusively by Dr. Jyoti Aneja</div>
+                        <p class="text-xs text-charcoal/70 leading-relaxed font-light mb-6">
+                            Zero junior practitioners. Every laser pass, energy calibration, and injectable vector is executed personally by our founding medical director.
+                        </p>
+                    </div>
+                    <a href="#consultation" class="w-full py-3 bg-charcoal text-white text-xs uppercase tracking-widest text-center hover:bg-roseAccent transition-colors">
+                        RESERVE DIAGNOSTIC SLOT &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Booking -->
+    <section id="consultation" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="text-[10px] tracking-[0.3em] uppercase text-roseAccent block mb-2">// PRIVATE APPOINTMENT</span>
+            <h2 class="font-serif text-3xl md:text-4xl text-charcoal font-normal">Private Consultation Request</h2>
+            <p class="text-charcoal/70 text-xs mt-2 font-light">
+                Consultations are hosted in our private aesthetic suites with complete client confidentiality.
+            </p>
+        </div>
+
+        <form class="space-y-6 bg-white border border-roseDust p-8 md:p-12 pearl-glow text-xs" onsubmit="event.preventDefault(); alert('Consultation request transmitted. The Clinic Concierge will confirm your private suite appointment.');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Full Name</label>
+                    <input type="text" required placeholder="Madame Camille de Laurent" class="w-full bg-pearl border border-roseDust px-4 py-3 text-charcoal focus:border-roseAccent focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Telephone Number</label>
+                    <input type="tel" required placeholder="+91 98111 22334" class="w-full bg-pearl border border-roseDust px-4 py-3 text-charcoal focus:border-roseAccent focus:outline-none">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Primary Consultation Concern</label>
+                    <select class="w-full bg-pearl border border-roseDust px-4 py-3 text-charcoal focus:border-roseAccent focus:outline-none">
+                        <option>Non-Surgical SMAS Face & Neck Vector Lift</option>
+                        <option>Dermal Melasma & Photodamage Clearance</option>
+                        <option>Cellular Exosome & Salmon PDRN Bio-Remodeling</option>
+                        <option>Sub-Orbital Tear Trough & Periorbital Awakening</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-gray-600 block mb-2 uppercase tracking-wider">Clinic Location</label>
+                    <select class="w-full bg-pearl border border-roseDust px-4 py-3 text-charcoal focus:border-roseAccent focus:outline-none">
+                        <option>New Delhi (Vasant Vihar Medical Pavilion)</option>
+                        <option>Paris (8ème Arrondissement, Place de la Madeleine)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-roseAccent text-white font-serif text-sm tracking-widest uppercase hover:bg-charcoal transition-all">
+                CONFIRM PRIVATE CONSULTATION &rarr;
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-roseDust py-12 px-6 max-w-7xl mx-auto text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-4">
+        <div>&copy; 2026 CLINIQUE ÉLIXIR DE DERMATOLOGIE. PARIS • NEW DELHI. ALL CLINICAL PROTOCOLS CE-MARKED.</div>
+        <div>STRICT MEDICAL CONFIDENTIALITY COMPLIANT WITH HIPAA & GDPR.</div>
+    </footer>
+
+    <script>
+        // Interactive Slider Drag
+        const container = document.getElementById('slider-container');
+        const beforeImg = document.getElementById('before-img');
+        const handle = document.getElementById('slider-handle');
+
+        let isDown = false;
+
+        function move(e) {
+            if (!isDown) return;
+            const rect = container.getBoundingClientRect();
+            let clientX = e.clientX;
+            if (e.touches && e.touches.length > 0) clientX = e.touches[0].clientX;
+            let x = clientX - rect.left;
+            if (x < 10) x = 10;
+            if (x > rect.width - 10) x = rect.width - 10;
+
+            const pct = (x / rect.width) * 100;
+            if (beforeImg) {
+                beforeImg.style.clipPath = `polygon(0 0, ${pct}% 0, ${pct}% 100%, 0 100%)`;
+            }
+            if (handle) {
+                handle.style.left = pct + '%';
+            }
+        }
+
+        container.addEventListener('mousedown', () => isDown = true);
+        window.addEventListener('mouseup', () => isDown = false);
+        window.addEventListener('mousemove', move);
+
+        container.addEventListener('touchstart', () => isDown = true);
+        window.addEventListener('touchend', () => isDown = false);
+        window.addEventListener('touchmove', move);
+
+        // Prescription Selector
+        const prescriptions = {
+            lifting: {
+                tag: 'PROTOCOL REF: ELX-SMAS-700',
+                title: 'Ultraformer MPT Micro-Pulsed High-Intensity Focused Ultrasound',
+                desc: 'Targeting the Superficial Musculoaponeurotic System (SMAS) at 4.5mm, 3.0mm, and 1.5mm depths. Induces immediate thermal coagulation points that trigger neocollagenesis and instant jawline contour sharpening without incisions.',
+                freq: 'Single Annual Session',
+                peptides: 'Copper Tripeptide-1 + Acetyl Hexapeptide-8'
+            },
+            pigment: {
+                tag: 'PROTOCOL REF: ELX-PICO-532',
+                title: 'PicoSure Pro 755nm Alexandrite Acoustic Pigment Dissolution',
+                desc: 'Delivering picosecond acoustic shockwaves to shatter stubborn dermal melanin clusters into dust-sized particles without generating thermal tissue damage, paired with cold tranexamic acid mesotherapy.',
+                freq: '3 Bi-Weekly Sessions',
+                peptides: 'Glutathione 2000mg + Oligopeptide-68'
+            },
+            exosome: {
+                tag: 'PROTOCOL REF: ELX-EXO-BIO',
+                title: 'Swiss Lyophilized Stem Cell Exosomes & Polydeoxyribonucleotide (PDRN)',
+                desc: 'Infusing 5 billion ultrapure plant and umbilical cord exosomes packed with 1,000 signaling proteins to reactivate dormant dermal fibroblasts, erasing micro-crepiness and boosting skin elasticity.',
+                freq: 'Course of 4 Monthly Sessions',
+                peptides: 'rh-Oligopeptide-1 (EGF) + Fibronectin Peptides'
+            }
+        };
+
+        function setPrescription(key) {
+            ['lifting', 'pigment', 'exosome'].forEach(k => {
+                const btn = document.getElementById('btn-rx-' + k);
+                if (k === key) {
+                    btn.className = "px-5 py-2.5 bg-roseAccent text-white text-xs uppercase tracking-widest font-medium transition-all";
+                } else {
+                    btn.className = "px-5 py-2.5 bg-white border border-roseDust text-charcoal text-xs uppercase tracking-widest transition-all hover:border-roseAccent";
+                }
+            });
+
+            const p = prescriptions[key];
+            document.getElementById('rx-tag').textContent = p.tag;
+            document.getElementById('rx-title').textContent = p.title;
+            document.getElementById('rx-desc').textContent = p.desc;
+            document.getElementById('rx-freq').textContent = p.freq;
+            document.getElementById('rx-peptides').textContent = p.peptides;
+        }
+
+        // --- 3D CELLULAR PEPTIDE DOUBLE-HELIX ENGINE (Three.js) ---
+        let helixScene, helixCamera, helixRenderer, helixControls;
+        let helixGroup, helixParticles;
+        let currentMolType = 'collagen';
+
+        const molData = {
+            collagen: {
+                mass: '3,412 Da',
+                kd: '0.42 nM (High)',
+                upreg: '+312%',
+                halflife: '90 Days In Vivo',
+                receptor: 'RECEPTOR AFFINITY: ACTIVE'
+            },
+            ghk: {
+                mass: '340.38 Da',
+                kd: '0.15 nM (Ultra-High)',
+                upreg: '+420%',
+                halflife: '48 Hours Active',
+                receptor: 'COPPER ION CHELATE: BOUND'
+            },
+            exosome: {
+                mass: '120 nm (Bilayer)',
+                kd: '0.08 nM (Sub-cellular)',
+                upreg: '+580%',
+                halflife: '180 Days Epigenetic',
+                receptor: 'VESICLE FUSION: PRIME'
+            }
+        };
+
+        function initPeptideHelix() {
+            const canvas = document.getElementById('helix-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            const rect = canvas.getBoundingClientRect();
+            const width = rect.width || canvas.clientWidth || 600;
+            const height = rect.height || canvas.clientHeight || 480;
+
+            helixScene = new THREE.Scene();
+            helixCamera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+            helixCamera.position.set(0, 0, 7.5);
+
+            helixRenderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                antialias: true,
+                alpha: true,
+                powerPreference: 'high-performance'
+            });
+            helixRenderer.setSize(width, height);
+            helixRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            helixControls = new THREE.OrbitControls(helixCamera, canvas);
+            helixControls.enableDamping = true;
+            helixControls.dampingFactor = 0.05;
+            helixControls.enableZoom = true;
+            helixControls.minDistance = 4;
+            helixControls.maxDistance = 12;
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0xfff7f5, 1.4);
+            helixScene.add(ambientLight);
+
+            const keyLight = new THREE.DirectionalLight(0xffffff, 2.2);
+            keyLight.position.set(5, 8, 6);
+            helixScene.add(keyLight);
+
+            const roseLight = new THREE.PointLight(0xB76E79, 2.8, 20);
+            roseLight.position.set(-4, -2, 3);
+            helixScene.add(roseLight);
+
+            const cyanLight = new THREE.PointLight(0x40E0D0, 1.2, 15);
+            cyanLight.position.set(4, -4, -3);
+            helixScene.add(cyanLight);
+
+            // Container Group
+            helixGroup = new THREE.Group();
+            helixScene.add(helixGroup);
+
+            // Build initial geometry
+            buildMoleculeGeometry('collagen');
+
+            // Floating microvesicles / exosome dust
+            const pCount = 120;
+            const pGeo = new THREE.BufferGeometry();
+            const pPos = new Float32Array(pCount * 3);
+            for (let i = 0; i < pCount; i++) {
+                pPos[i * 3] = (Math.random() - 0.5) * 7;
+                pPos[i * 3 + 1] = (Math.random() - 0.5) * 8;
+                pPos[i * 3 + 2] = (Math.random() - 0.5) * 5;
+            }
+            pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+            const pMat = new THREE.PointsMaterial({
+                color: 0xB76E79,
+                size: 0.055,
+                transparent: true,
+                opacity: 0.5
+            });
+            helixParticles = new THREE.Points(pGeo, pMat);
+            helixScene.add(helixParticles);
+
+            window.addEventListener('resize', () => {
+                if (!canvas) return;
+                const w = canvas.clientWidth;
+                const h = canvas.clientHeight;
+                if (w && h) {
+                    helixCamera.aspect = w / h;
+                    helixCamera.updateProjectionMatrix();
+                    helixRenderer.setSize(w, h);
+                }
+            });
+
+            animatePeptideHelix();
+        }
+
+        function buildMoleculeGeometry(type) {
+            // Clear existing children from helixGroup
+            while (helixGroup.children.length > 0) {
+                const obj = helixGroup.children[0];
+                helixGroup.remove(obj);
+                if (obj.geometry) obj.geometry.dispose();
+            }
+
+            const pearlMat = new THREE.MeshStandardMaterial({
+                color: 0xFAF8F5,
+                metalness: 0.4,
+                roughness: 0.2
+            });
+            const roseMat = new THREE.MeshStandardMaterial({
+                color: 0xB76E79,
+                metalness: 0.6,
+                roughness: 0.3
+            });
+            const goldMat = new THREE.MeshStandardMaterial({
+                color: 0xD4AF37,
+                metalness: 0.8,
+                roughness: 0.2
+            });
+            const copperMat = new THREE.MeshStandardMaterial({
+                color: 0x20B2AA,
+                metalness: 0.7,
+                roughness: 0.3
+            });
+
+            if (type === 'collagen') {
+                // Triple-Helix structure: 3 strands intertwined
+                const steps = 34;
+                const heightSpan = 6.4;
+                const radius = 1.15;
+                const twists = 2.4;
+
+                const sphereGeo = new THREE.SphereGeometry(0.12, 16, 16);
+                const rungGeo = new THREE.CylinderGeometry(0.035, 0.035, 1, 8);
+
+                for (let i = 0; i < steps; i++) {
+                    const t = (i / steps);
+                    const y = (t - 0.5) * heightSpan;
+                    const angle = t * Math.PI * 2 * twists;
+
+                    // Strand 1 (Rose Accent)
+                    const x1 = Math.cos(angle) * radius;
+                    const z1 = Math.sin(angle) * radius;
+                    const s1 = new THREE.Mesh(sphereGeo, roseMat);
+                    s1.position.set(x1, y, z1);
+                    helixGroup.add(s1);
+
+                    // Strand 2 (Pearl)
+                    const x2 = Math.cos(angle + (Math.PI * 2 / 3)) * radius;
+                    const z2 = Math.sin(angle + (Math.PI * 2 / 3)) * radius;
+                    const s2 = new THREE.Mesh(sphereGeo, pearlMat);
+                    s2.position.set(x2, y, z2);
+                    helixGroup.add(s2);
+
+                    // Strand 3 (Warm Gold)
+                    const x3 = Math.cos(angle + (Math.PI * 4 / 3)) * radius;
+                    const z3 = Math.sin(angle + (Math.PI * 4 / 3)) * radius;
+                    const s3 = new THREE.Mesh(sphereGeo, goldMat);
+                    s3.position.set(x3, y, z3);
+                    helixGroup.add(s3);
+
+                    // Hydrogen cross-link rung between strand 1 & 2
+                    if (i % 2 === 0) {
+                        const midX = (x1 + x2) / 2;
+                        const midZ = (z1 + z2) / 2;
+                        const dist = Math.hypot(x2 - x1, z2 - z1);
+                        const rung = new THREE.Mesh(rungGeo, pearlMat);
+                        rung.position.set(midX, y, midZ);
+                        rung.scale.set(1, dist, 1);
+                        rung.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), new THREE.Vector3(x2 - x1, 0, z2 - z1).normalize());
+                        helixGroup.add(rung);
+
+                        // Receptor bead
+                        const beadGeo = new THREE.SphereGeometry(0.065, 12, 12);
+                        const bead = new THREE.Mesh(beadGeo, roseMat);
+                        bead.position.set(midX, y, midZ);
+                        helixGroup.add(bead);
+                    }
+                }
+            } else if (type === 'ghk') {
+                // Copper GHK-Cu Chelate Structure
+                const steps = 26;
+                const heightSpan = 5.6;
+                const radius = 1.35;
+                const twists = 1.8;
+
+                const sphereGeo = new THREE.SphereGeometry(0.14, 16, 16);
+                const cuCoreGeo = new THREE.IcosahedronGeometry(0.18, 0);
+
+                for (let i = 0; i < steps; i++) {
+                    const t = (i / steps);
+                    const y = (t - 0.5) * heightSpan;
+                    const angle = t * Math.PI * 2 * twists;
+
+                    const x1 = Math.cos(angle) * radius;
+                    const z1 = Math.sin(angle) * radius;
+                    const x2 = Math.cos(angle + Math.PI) * radius;
+                    const z2 = Math.sin(angle + Math.PI) * radius;
+
+                    const s1 = new THREE.Mesh(sphereGeo, goldMat);
+                    s1.position.set(x1, y, z1);
+                    helixGroup.add(s1);
+
+                    const s2 = new THREE.Mesh(sphereGeo, roseMat);
+                    s2.position.set(x2, y, z2);
+                    helixGroup.add(s2);
+
+                    // Central copper chelation core every 2 steps
+                    if (i % 2 === 0) {
+                        const cu = new THREE.Mesh(cuCoreGeo, copperMat);
+                        cu.position.set((x1 + x2) / 2, y, (z1 + z2) / 2);
+                        helixGroup.add(cu);
+
+                        // Bonds to both strands
+                        const bondGeo = new THREE.CylinderGeometry(0.025, 0.025, radius, 8);
+                        const bond = new THREE.Mesh(bondGeo, pearlMat);
+                        bond.position.set(0, y, 0);
+                        bond.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), new THREE.Vector3(x1, 0, z1).normalize());
+                        helixGroup.add(bond);
+                    }
+                }
+            } else if (type === 'exosome') {
+                // Nanoscale Bilayer Exosome Sphere with Surface Surface Receptors
+                const vesicleGeo = new THREE.IcosahedronGeometry(1.6, 2);
+                const vesicleWireMat = new THREE.MeshBasicMaterial({
+                    color: 0xB76E79,
+                    wireframe: true,
+                    transparent: true,
+                    opacity: 0.4
+                });
+                const vesicle = new THREE.Mesh(vesicleGeo, vesicleWireMat);
+                helixGroup.add(vesicle);
+
+                const innerCoreGeo = new THREE.SphereGeometry(1.1, 24, 24);
+                const innerCoreMat = new THREE.MeshStandardMaterial({
+                    color: 0xF3EAE6,
+                    metalness: 0.2,
+                    roughness: 0.4,
+                    transparent: true,
+                    opacity: 0.85
+                });
+                const inner = new THREE.Mesh(innerCoreGeo, innerCoreMat);
+                helixGroup.add(inner);
+
+                // Surface receptor glycoprotein stalks
+                const stalkCount = 42;
+                const stalkGeo = new THREE.CylinderGeometry(0.03, 0.03, 0.5, 8);
+                const receptorHeadGeo = new THREE.SphereGeometry(0.09, 12, 12);
+
+                for (let i = 0; i < stalkCount; i++) {
+                    const phi = Math.acos(-1 + (2 * i) / stalkCount);
+                    const theta = Math.sqrt(stalkCount * Math.PI) * phi;
+
+                    const dir = new THREE.Vector3(
+                        Math.cos(theta) * Math.sin(phi),
+                        Math.sin(theta) * Math.sin(phi),
+                        Math.cos(phi)
+                    ).normalize();
+
+                    const stalk = new THREE.Mesh(stalkGeo, pearlMat);
+                    stalk.position.copy(dir.clone().multiplyScalar(1.6 + 0.25));
+                    stalk.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir);
+                    helixGroup.add(stalk);
+
+                    const head = new THREE.Mesh(receptorHeadGeo, (i % 2 === 0) ? roseMat : copperMat);
+                    head.position.copy(dir.clone().multiplyScalar(1.6 + 0.5));
+                    helixGroup.add(head);
+                }
+            }
+        }
+
+        function setHelixMolecule(type) {
+            currentMolType = type;
+            ['collagen', 'ghk', 'exosome'].forEach(k => {
+                const btn = document.getElementById('btn-mol-' + k);
+                if (!btn) return;
+                if (k === type) {
+                    btn.className = "w-full p-3.5 border-2 border-roseAccent bg-white text-left text-xs transition-all shadow-sm";
+                } else {
+                    btn.className = "w-full p-3.5 border border-roseDust bg-white/70 hover:border-roseAccent text-left text-xs transition-all";
+                }
+            });
+
+            const d = molData[type];
+            if (d) {
+                document.getElementById('mol-mass').textContent = d.mass;
+                document.getElementById('mol-kd').textContent = d.kd;
+                document.getElementById('mol-upreg').textContent = d.upreg;
+                document.getElementById('mol-halflife').textContent = d.halflife;
+                document.getElementById('helix-receptor-status').textContent = d.receptor;
+            }
+
+            buildMoleculeGeometry(type);
+        }
+
+        let helixClock = 0;
+        function animatePeptideHelix() {
+            requestAnimationFrame(animatePeptideHelix);
+            helixClock += 0.012;
+
+            if (helixControls) helixControls.update();
+
+            if (helixGroup) {
+                helixGroup.rotation.y += 0.009;
+                helixGroup.position.y = Math.sin(helixClock) * 0.12;
+            }
+
+            if (helixParticles) {
+                helixParticles.rotation.y -= 0.002;
+            }
+
+            if (helixRenderer && helixScene && helixCamera) {
+                helixRenderer.render(helixScene, helixCamera);
+            }
+        }
+
+        // Init Peptide Helix
+        window.addEventListener('DOMContentLoaded', () => {
+            initPeptideHelix();
+
+            try {
+                if (typeof Lenis !== 'undefined') {
+                    const lenis = new Lenis({
+                        autoRaf: true,
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        smoothWheel: true,
+                        anchors: true
+                    });
+                    window.lenis = lenis;
+                }
+            } catch (e) {
+                console.error('Lenis init failed', e);
+            }
+        });
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initPeptideHelix();
+        }
+    </script>
+</body>
+</html>

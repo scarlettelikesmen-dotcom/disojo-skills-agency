@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novelty Printing & Custom Merchandise in Delta & Surrey, BC | Print Elements</title>
+  <meta name="description" content="Custom printed wine tumblers, ceramic mugs, travel cups, hoodies, t-shirts, pens, and promotional merchandise in Delta and Surrey, BC.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      padding: 60px 0 50px;
+      background: radial-gradient(circle at 90% 10%, rgba(255, 210, 0, 0.08) 0%, rgba(230, 0, 126, 0.04) 50%, transparent 100%), #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-container {
+      max-width: 800px;
+    }
+    .page-hero h1 {
+      margin-bottom: 18px;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      color: var(--text-body);
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+    .breadcrumb {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .breadcrumb a:hover {
+      color: var(--cmyk-magenta);
+    }
+    .products-section {
+      padding: 70px 0 90px;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+    .upload-callout {
+      background: linear-gradient(135deg, var(--cmyk-magenta-tint) 0%, #ffffff 100%);
+      border: 2px dashed var(--cmyk-magenta);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin: 50px 0 20px;
+    }
+    .upload-callout h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .upload-callout p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    @media (max-width: 992px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topline Gradient -->
+  <div class="topline-gradient"></div>
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <div class="wrap utility-content">
+      <div class="utility-left">
+        <span class="utility-item">📍 7511 120 Street, Delta, BC — Serving Surrey & Metro Vancouver</span>
+        <span class="utility-item">✉️ <a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></span>
+      </div>
+      <div class="utility-right">
+        <span class="utility-item">📞 <a href="tel:6045410560"><strong>(604) 541-0560</strong></a></span>
+        <span class="tagline-badge">“You think it, we print it”</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Print Elements Logo" class="brand-logo">
+        <div class="brand-text">Print <span>Elements</span></div>
+      </a>
+      <div class="navlinks" id="navlinks">
+        <a href="index.html">Home</a>
+                <div class="nav-dropdown-wrap" id="nav-dropdown-wrap">
+          <span class="nav-dropdown-trigger" id="products-trigger" role="button" tabindex="0">Products ▾</span>
+          <div class="nav-dropdown" id="products-dropdown">
+            <a href="digital-printing.html">
+              <span style="color:var(--cmyk-magenta);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Digital Printing</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Cards, Flyers, Brochures, Stationery</div>
+              </div>
+            </a>
+            <a href="wide-format.html">
+              <span style="color:var(--cmyk-cyan);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Wide Format Signs</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Banners, Signs, Posters, Windows</div>
+              </div>
+            </a>
+            <a href="novelty.html">
+              <span style="color:var(--cmyk-yellow);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Novelty &amp; Promo</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Tumblers, Mugs, Apparel, Merch</div>
+              </div>
+            </a>
+            <a href="vehicle-wraps.html">
+              <span style="color:var(--brand-ink);font-size:1.2rem;line-height:1">●</span>
+              <div>
+                <div style="font-weight:800">Vehicle Wraps</div>
+                <div style="font-size:0.75rem;font-weight:500;color:var(--text-muted)">Full &amp; Partial Fleet Graphics</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#quote">Contact</a>
+        <a class="btn btn-primary" href="index.html#quote">Get a Quote ↗</a>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="wrap hero-container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Products</span>
+          <span>/</span>
+          <span style="color:var(--text-primary);font-weight:600">Novelty & Merchandise</span>
+        </div>
+        <div class="eyebrow">Custom Drinkware & Merch</div>
+        <h1>Your Brand on Everything.</h1>
+        <p>
+          Custom printed wine tumblers, ceramic coffee mugs, insulated travel cups, embroidered hoodies, custom t-shirts, keychains, and pens. Send us your design and we handle the rest!
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#catalog" class="btn btn-primary">Browse 9 Products ↓</a>
+          <a href="https://wa.me/16045410560?text=Hi%2C%20I%20need%20a%20quote%20for%20custom%20merchandise" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products-section" id="catalog">
+      <div class="wrap">
+        <div class="section-header center">
+          <div class="eyebrow">Drinkware & Promo Merch</div>
+          <h2>Popular Custom Items</h2>
+          <p style="color:var(--text-muted)">Order individually or in bulk for corporate gifting, team uniforms, and retail events.</p>
+        </div>
+
+        <div class="products-grid">
+          <!-- 1. Wine Tumblers -->
+          <a class="product-card" href="product.html?id=wine-tumblers">
+            <div class="product-thumb">
+              <img src="assets/custom-merch.jpg" alt="Wine Tumblers">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">MERCH / 01</span>
+              <h3>Custom Wine Tumblers</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">12oz double-wall insulated stainless steel. Keeps drinks cold for 9 hours. Mint, white, and black options.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 2. Ceramic Mugs -->
+          <a class="product-card" href="product.html?id=mugs">
+            <div class="product-thumb">
+              <img src="assets/custom-merch.jpg" alt="Custom Mugs">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">MERCH / 02</span>
+              <h3>Custom Ceramic Mugs</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">11oz glossy white ceramic mug with full wraparound high-resolution dye sublimation printing.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 3. Mugs with Colour Insert -->
+          <a class="product-card" href="product.html?id=colour-insert-mugs">
+            <div class="product-thumb">
+              <img src="assets/custom-merch.jpg" alt="Colour Insert Mugs">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">MERCH / 03</span>
+              <h3>Mugs with Colour Insert</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Two-tone 11oz mugs with colored inner rim and handle (Blue, Red, Black, Green, Orange, Pink).</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 4. Travel Mugs -->
+          <a class="product-card" href="product.html?id=travel-mugs">
+            <div class="product-thumb">
+              <img src="assets/portfolio-4.jpg" alt="Travel Mugs">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">MERCH / 04</span>
+              <h3>Travel Mugs & Bottles</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">15oz vacuum insulated stainless steel travel mug with spill-resistant lid. Full color print.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 5. Hoodies -->
+          <a class="product-card" href="product.html?id=hoodies">
+            <div class="product-thumb">
+              <img src="assets/portfolio-4.jpg" alt="Custom Hoodies">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">APPAREL / 05</span>
+              <h3>Custom Hoodies & Sweatshirts</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Premium fleece pullovers with screen print, DTG, or direct embroidery. Sizes XS to 3XL.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 6. T-Shirts -->
+          <a class="product-card" href="product.html?id=tshirts">
+            <div class="product-thumb">
+              <img src="assets/portfolio-4.jpg" alt="Custom T-Shirts">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">APPAREL / 06</span>
+              <h3>Custom T-Shirts</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">100% ringspun cotton t-shirts in all colors. Full color chest, back, and sleeve printing.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 7. Keychains -->
+          <a class="product-card" href="product.html?id=keychains">
+            <div class="product-thumb">
+              <img src="assets/custom-merch.jpg" alt="Custom Keychains">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">PROMO / 07</span>
+              <h3>Acrylic & Metal Keychains</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Custom laser-cut shapes and full-color direct print keychains. Great for event giveaways.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 8. Pens -->
+          <a class="product-card" href="product.html?id=pens">
+            <div class="product-thumb">
+              <img src="assets/menus.jpg" alt="Branded Pens">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">PROMO / 08</span>
+              <h3>Branded Executive Pens</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">Smooth click-top and executive metal stylus pens laser engraved or screen printed with your logo.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 9. Notebooks -->
+          <a class="product-card" href="product.html?id=notebooks">
+            <div class="product-thumb">
+              <img src="assets/portfolio-1.jpg" alt="Custom Notebooks">
+            </div>
+            <div class="product-card-body">
+              <span class="product-tag" style="color:var(--cmyk-magenta)">PROMO / 09</span>
+              <h3>Custom Notebooks & Journals</h3>
+              <p style="font-size:0.88rem;color:var(--text-muted)">A5 and A4 spiral and softcover journals with custom printed covers and lined or dotted pages.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)">
+                <span class="product-price-tag" style="font-size:0.92rem;color:var(--text-primary)">Custom Quote</span>
+                <span style="color:var(--cmyk-magenta);font-weight:700;font-size:0.85rem">Get Quote ↗</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Upload Your Design Callout -->
+        <div class="upload-callout">
+          <h3>Have Your Own Design Ready?</h3>
+          <p>
+            Just send us your artwork file (PDF, PNG, AI, or PSD) to <strong>printelements007@gmail.com</strong> or through WhatsApp, and we will send back a free digital mockup before printing!
+          </p>
+          <a href="mailto:printelements007@gmail.com?subject=Custom%20Design%20Upload" class="btn btn-primary">Email Your Design File ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="Print Elements" class="brand-logo">
+          <div class="brand-text">Print <span>Elements</span></div>
+        </a>
+        <p>Commercial printing, signs, and custom merchandise in Delta and Surrey, BC. Fast turnaround and professional grade results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product Lines</h4>
+        <ul>
+          <li><a href="digital-printing.html">Digital Printing</a></li>
+          <li><a href="wide-format.html">Wide Format Banners</a></li>
+          <li><a href="novelty.html">Novelty & Merch</a></li>
+          <li><a href="vehicle-wraps.html">Vehicle Wraps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Merch</h4>
+        <ul>
+          <li><a href="product.html?id=wine-tumblers">Wine Tumblers</a></li>
+          <li><a href="product.html?id=mugs">Ceramic Mugs</a></li>
+          <li><a href="product.html?id=hoodies">Custom Hoodies</a></li>
+          <li><a href="product.html?id=tshirts">Custom T-Shirts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6045410560">(604) 541-0560</a></li>
+          <li><a href="mailto:printelements007@gmail.com">printelements007@gmail.com</a></li>
+          <li>7511 120 Street, Delta, BC</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; 2026 Print Elements. All rights reserved.</span>
+      <span>“You think it, we print it”</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('navlinks');
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  
+    // Products Dropdown click & touch handler
+    const dropdownWrap = document.getElementById('nav-dropdown-wrap');
+    const productsTrigger = document.getElementById('products-trigger');
+    if (dropdownWrap && productsTrigger) {
+      productsTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownWrap.classList.toggle('is-open');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdownWrap.contains(e.target)) {
+          dropdownWrap.classList.remove('is-open');
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>
