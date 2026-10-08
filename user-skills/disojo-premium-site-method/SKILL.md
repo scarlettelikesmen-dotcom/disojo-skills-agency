@@ -8,12 +8,13 @@ description: The repeatable method behind the Ascender Media flagship (Lighthous
 Live: https://www.ascendermedia.in. Rollback target for that project: `social-growth-agency-9pzpqpkcw`. Code: `kit/` (Vite + React + Lenis + Phosphor, no GSAP, no three.js). Plan it came from: `references/ascender-plan.md`. Measured: mobile Lighthouse 99 / 100 / 100 / 100, smoke 34/34, JS 93 KB gzip, fonts 94 KB.
 
 ## The method, in order (do not skip step 1)
-1. **Read before building.** `design-taste-frontend` (Design Read + dials), `high-end-visual-design`, `anti-slop-design`, `ui-ux-pro-max`, `make-interfaces-feel-better`, `emil-design-eng`, `motion-foundations`, plus `disojo-client-intake` and the playbook. Read the client's real files (every screenshot, the live site's copy and its source). The skills conflict in places; resolve like this: no Inter, no Instrument Serif/Fraunces, emphasis by weight not by a random serif word, max 1 eyebrow per 3 sections, max 1 marquee, no em dashes, no FAQ accordion, one theme for the whole page, 4 text elements max in the hero, one label per CTA intent ("Book a call" everywhere).
+1. **Read before building.** The full rules are copied into this skill so it works on its own: `references/design-rules-digest.md` (merged, with every banned tell) and verbatim originals in `references/source-skills/`. Read the digest first, then the originals when a rule needs detail.
+   (older line follows) `design-taste-frontend` (Design Read + dials), `high-end-visual-design`, `anti-slop-design`, `ui-ux-pro-max`, `make-interfaces-feel-better`, `emil-design-eng`, `motion-foundations`, plus `disojo-client-intake` and the playbook. Read the client's real files (every screenshot, the live site's copy and its source). The skills conflict in places; resolve like this: no Inter, no Instrument Serif/Fraunces, emphasis by weight not by a random serif word, max 1 eyebrow per 3 sections, max 1 marquee, no em dashes, no FAQ accordion, one theme for the whole page, 4 text elements max in the hero, one label per CTA intent ("Book a call" everywhere).
 2. **Audit the live site for lies.** Ascender's old form faked "Message sent" with a timer. Find these, replace them, tell the client.
 3. **Write the Design Read and dials** (here 8 / 7 / 3) and pick a concept from the client's craft, not from a template: Ascender sells editing, so the page is an editing suite (timecode HUD, transport-bar dock, tracks, playhead, "export presets", "render complete" footer). Palette = one accent. See `references/identity-checklist.md`.
 4. **Only real content.** All copy, prices and numbers in one `src/data/content.js`. If the client will not share work (Ascender: no reels), proof = their real chats; demos built in code are labelled "illustrative". Never imply client footage.
 5. **Build section by section, each with a different layout family** (hero split, ruler band + ledger, tabbed demo panel, pinned tracks, unequal price cards, pinned horizontal chat wall, asymmetric bento of facts, tabbed booking panel, slim end card).
-6. **Verify yourself**: `npm run build`, `scripts/smoke.cjs` (intercepts the form request so nothing is emailed), `scripts/tour.cjs` screenshots at 1440 and 390 and LOOK at them, Lighthouse mobile. Fix, repeat. Only then show.
+6. **Verify yourself** with `references/quality-gates.md`: `python3 scripts/design_lint.py <project>` (0 FAIL), `npm run build`, `scripts/smoke.cjs` (intercepts the form request so nothing is emailed), `scripts/tour.cjs` screenshots at 1440 and 390 and LOOK at them, `scripts/lighthouse_summary.sh <url>`. Fix, repeat. Only then show.
 7. **Deploy**: public preview to its own project with an `X-Robots-Tag: noindex` header (see `references/deploy.md`), show the link, production only when the client says go.
 
 ## Hard-won rules (each one cost a bug here)
@@ -26,6 +27,15 @@ Live: https://www.ascendermedia.in. Rollback target for that project: `social-gr
 - **Calendly**: lazy iframe on click plus an "open in new tab" link; never load their script up front.
 - **Forms**: labels above, inline errors that clear as you type, honeypot, aria-live success, mailto fallback on failure. Provider lives in one function (`src/lib/submit.js`). Tell the client about any one-time activation.
 - **Mistakes to avoid in deploy files**: `vercel.json` header entries need `source`; the first Ascender deploy failed on that and the smoke test then ran against the old version. Always confirm the deploy printed `Aliased:` before testing.
+
+## Files in this skill
+- `references/design-rules-digest.md`, `references/source-skills/*` (verbatim anti-slop, taste, high-end, ui-ux, make-interfaces-feel-better, emil, motion, review-animations, no-ai-slop)
+- `references/quality-gates.md` (ordered gates), `references/identity-checklist.md`, `references/patterns.md`, `references/deploy.md`, `references/ascender-plan.md`
+- `scripts/design_lint.py` (mechanical anti-slop + CSS class-collision lint), `scripts/lighthouse_summary.sh`, `scripts/smoke.cjs`, `scripts/tour.cjs`, `scripts/og/` (OG image from the site's own fonts)
+- `kit/` (the complete reference site)
+
+## Audit result on Ascender (2026-10-09)
+Lint found one real `transition: all` and pure-black values (fixed and redeployed). Rule deviations that remain are listed in design-rules-digest section 8. Production: 97-99 / 100 / 100 / 100.
 
 ## Pattern library
 `references/patterns.md` lists every reusable mechanism (dock, word-cut headline, pinned sections, lightbox, pricing store, forms) with file paths, plus the copy-voice rules. Every client site also carries the credit line "Developed by Disojo Solutions" linking to https://disojo.in in the footer's right corner.
