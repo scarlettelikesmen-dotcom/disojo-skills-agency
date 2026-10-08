@@ -22,5 +22,8 @@ Desktop repo, commits and pushes. Prints what changed. The repo must stay PRIVAT
 3. `bash ~/.claude/skills/disojo-memory-backup/scripts/restore_memory.sh` (copies the snapshot back; refuses to overwrite a newer file unless `--force`).
 4. Memory is keyed to the project folder path. If the project lives somewhere else now, pass the memory dir: `restore_memory.sh <dir>`.
 
+## Full disaster recovery
+See `RECOVERY.md` (also at the repo root): what is covered, the new-Mac steps, and the known gaps (client code, CLAUDE.md, logins).
+
 ## What is deliberately NOT here
 `~/.claude/CLAUDE.md` (master context) is kept out of git by Tejjomay's choice. Secrets never go in memory: the backup script refuses if it sees one.
