@@ -4,3 +4,4 @@
 - [Disojo site skill set](reference-scroll-site-skill.md) — playbook, intake, archetypes, starter, motion recipes, launch checklist; start with disojo-client-playbook
 - [How Tejjomay wants me to work](feedback-working-style.md) — finish whole sections before showing, never invent content, re-read details, be direct
 - [Master context file](reference-master-context.md) — ~/.claude/CLAUDE.md is the always-loaded master context; keep it updated
+- [Unique design per client](feedback-unique-design-per-client.md) — never reuse the Postcards/starter look; fresh identity, nav, scroll logic and footer per client
