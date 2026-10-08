@@ -25,7 +25,10 @@ export default function Footer() {
             <li><a href={CAL_URL} target="_blank" rel="noopener noreferrer">Book a call</a></li>
           </ul>
         </div>
-        <p className="legal">© 2026 Ascender Media. All rights reserved.</p>
+        <div className="legal-row">
+          <p className="legal">© 2026 Ascender Media. All rights reserved.</p>
+          <p className="legal credit">Developed by <a href="https://disojo.in" target="_blank" rel="noopener">Disojo Solutions</a></p>
+        </div>
       </div>
     </footer>
   );

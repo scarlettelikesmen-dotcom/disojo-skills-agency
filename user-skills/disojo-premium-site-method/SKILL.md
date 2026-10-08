@@ -27,6 +27,9 @@ Live: https://www.ascendermedia.in. Rollback target for that project: `social-gr
 - **Forms**: labels above, inline errors that clear as you type, honeypot, aria-live success, mailto fallback on failure. Provider lives in one function (`src/lib/submit.js`). Tell the client about any one-time activation.
 - **Mistakes to avoid in deploy files**: `vercel.json` header entries need `source`; the first Ascender deploy failed on that and the smoke test then ran against the old version. Always confirm the deploy printed `Aliased:` before testing.
 
+## Pattern library
+`references/patterns.md` lists every reusable mechanism (dock, word-cut headline, pinned sections, lightbox, pricing store, forms) with file paths, plus the copy-voice rules. Every client site also carries the credit line "Developed by Disojo Solutions" linking to https://disojo.in in the footer's right corner.
+
 ## Handover checklist (copy into the project README)
 Form delivery + activation, what is illustrative, what is AI (nothing, here), unverified labels or stats (Ascender: "Beckett" name, "24h" stat vs plan turnaround), rotate any key pasted in chat, repo remote (day one), rollback URL.
 
