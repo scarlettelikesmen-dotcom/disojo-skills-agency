@@ -6,3 +6,4 @@
 - [Master context file](reference-master-context.md) — ~/.claude/CLAUDE.md is the always-loaded master context; keep it updated
 - [Unique design per client](feedback-unique-design-per-client.md) — never reuse the Postcards/starter look; fresh identity, nav, scroll logic and footer per client
 - [Packaged product 3D](reference-packaged-product-3d.md) — template model + label art kit, how reference sites source 3D assets, food routes
+- [Ascender Media rebuild](project-ascender-media-rebuild.md) — preview URL, status, open decisions
