@@ -42,6 +42,11 @@ for c, fs in cls_def.items():
     if len(fs) > 1: add(fails, os.path.join(root, 'src'), 0, f'class .{c} defined at top level in several CSS files: {sorted(fs)} (namespace it)', '')
     elif len(c) <= 2: add(warns, os.path.join(root, 'src'), 0, f'very short class .{c} ({sorted(fs)}); collision risk', '')
 txt = ''.join(open(f, encoding='utf8', errors='ignore').read() for f in files if os.path.exists(f) and f.endswith('.css'))
+pub = os.path.join(root, 'public')
+for fn in ('favicon.svg', 'vite.svg'):
+    fp = os.path.join(pub, fn)
+    if os.path.exists(fp) and '863bff' in open(fp, errors='ignore').read().lower(): fails.append(f'public/{fn} is the default Vite purple bolt: replace with a brand favicon')
+if not any(os.path.exists(os.path.join(pub, n)) for n in ('favicon.ico', 'favicon.png', 'favicon-32.png')): warns.append('no favicon file in public/')
 if 'prefers-reduced-motion' not in txt: fails.append('no prefers-reduced-motion handling in CSS')
 if '(hover: hover)' not in txt: warns.append('no (hover: hover) gating found')
 if 'focus-visible' not in txt: fails.append('no :focus-visible styles')

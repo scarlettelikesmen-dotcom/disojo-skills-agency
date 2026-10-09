@@ -11,6 +11,7 @@
 - Every number, price, name, contact detail traceable to the client? Every non-real thing labelled illustrative? Client's "no" respected (e.g. no reels)?
 - One CTA label per intent. No em dashes. No banned tells (digest section 4). Copy self-audit done on every visible string.
 - 7-axis gate (anti-slop purity, 1-to-3 hierarchy, typography, spacing/radius math, motion feel, a11y/keyboard, mobile linearity): each >= 4/5.
+- Favicon, apple-touch-icon and share image are brand-made (Postcards shipped the Vite purple bolt for weeks; the lint now fails on it). Check the browser tab at 16-32px.
 - Audit the client's current live site for dishonest behaviour (fake forms, dead links) and report it.
 ## C. Deploy gate
 Preview first (noindex, own project) -> client says go -> production via linked tmp dir -> verify `Aliased:` printed, www and apex 200, rerun smoke + Lighthouse on the real domain, record rollback URL in the README.
