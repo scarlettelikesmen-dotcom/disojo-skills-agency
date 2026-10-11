@@ -1,22 +1,12 @@
-.endcap { padding: clamp(56px, 8vw, 104px) 0 calc(var(--dock-h) + 48px); border-top: 1px solid var(--line); background: var(--ink-2); }
-.endcap .endbar { height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
-.endcap .endbar i { display: block; height: 100%; background: var(--safe); }
-.endcap-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-top: 22px; }
-.rend { display: inline-flex; align-items: center; gap: 12px; font-size: 0.8125rem; color: var(--mute); }
-.dotok { width: 8px; height: 8px; border-radius: 50%; background: var(--safe); }
-.tcend { color: var(--bone); }
-.top { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 6px 0 18px; border-radius: 999px; border: 1px solid var(--line-2); background: transparent; cursor: pointer; font-weight: 500; transition: border-color 0.3s var(--ease-out), transform 0.4s var(--ease-press); }
-.top .ico { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(237, 234, 227, 0.08); transition: transform 0.4s var(--ease-press); }
-.top:active { transform: scale(0.97); }
-@media (hover: hover) and (pointer: fine) { .top:hover { border-color: rgba(237, 234, 227, 0.42); } .top:hover .ico { transform: translateY(-2px); } }
-.endcap-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; margin-top: clamp(40px, 6vw, 72px); align-items: start; }
-.f-who .nm { margin-top: 14px; font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; letter-spacing: -0.03em; }
-.f-who .ds { margin-top: 8px; color: var(--mute); max-width: 38ch; }
+.foot { padding: clamp(56px, 8vw, 104px) 0 36px; border-top: 1px solid var(--line-2); }
+.f-top { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto; gap: 40px; align-items: start; }
+.f-who .nm { margin-top: 14px; font-family: var(--font-display); font-weight: 620; font-size: 1.5rem; letter-spacing: -0.03em; }
+.f-who .ds { margin-top: 8px; color: var(--sub); max-width: 38ch; }
 .links { display: grid; gap: 2px; }
-.links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--bone); overflow-wrap: anywhere; text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 5px; transition: text-decoration-color 0.3s var(--ease-out); }
-@media (hover: hover) and (pointer: fine) { .links a:hover { text-decoration-color: var(--safe); } }
-.legal-row { margin-top: clamp(40px, 6vw, 72px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 24px; }
-.legal { color: var(--dim); font-size: 0.875rem; }
-.credit a { display: inline-flex; align-items: center; min-height: 44px; color: var(--bone); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; transition: text-decoration-color 0.3s var(--ease-out); }
-@media (hover: hover) and (pointer: fine) { .credit a:hover { text-decoration-color: var(--safe); } }
-@media (max-width: 760px) { .endcap-grid { grid-template-columns: 1fr; } }
+.links a { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 5px; transition: text-decoration-color 0.3s var(--ease-out); }
+.top { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line-2); background: transparent; cursor: pointer; transition: transform 0.4s var(--ease-press), border-color 0.3s var(--ease-out); }
+.top:active { transform: scale(0.95); }
+.f-row { margin-top: clamp(40px, 6vw, 72px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 24px; color: var(--mute); font-size: 0.875rem; }
+.credit a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) { .links a:hover, .credit a:hover { text-decoration-color: var(--accent); } .top:hover { border-color: var(--ink); } }
+@media (max-width: 760px) { .f-top { grid-template-columns: 1fr; } }

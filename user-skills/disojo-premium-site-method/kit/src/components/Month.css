@@ -1,0 +1,8 @@
+.month-grid { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); gap: clamp(32px, 6vw, 100px); align-items: start; }
+.m-title { position: sticky; top: 110px; font-size: clamp(2.25rem, 5vw, 4.25rem); max-width: 9ch; }
+.steps { display: grid; }
+.step { display: grid; gap: 16px; padding-block: clamp(36px, 5vw, 64px); border-top: 1px solid var(--line-2); }
+.step:last-child { border-bottom: 1px solid var(--line-2); }
+.step h3 { font-size: clamp(3.4rem, 9vw, 8rem); letter-spacing: -0.06em; line-height: 0.9; }
+.step p { max-width: 38ch; color: var(--sub); font-size: clamp(1.0625rem, 1.6vw, 1.3125rem); }
+@media (max-width: 860px) { .month-grid { grid-template-columns: 1fr; gap: 12px; } .m-title { position: static; max-width: none; } .step h3 { font-size: clamp(3rem, 16vw, 5rem); } }

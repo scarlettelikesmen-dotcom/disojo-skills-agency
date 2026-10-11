@@ -14,3 +14,6 @@ Measured on the preview: Lighthouse mobile 99 perf / 100 a11y / 100 best practic
 
 **Why:** user asked for a finished flagship, public link, no raw bits, before any contact.
 **How to apply:** open items are form backend choice (FormSubmit used, needs one-time activation email), repo URL, "Beckett" name check, 24h stat vs plan turnaround, approval of H1 "Send the footage. We handle the rest." The old live form was fake (timer only). See [[feedback-unique-design-per-client]].
+
+
+**2026-10-11 v2:** client said v1 reads as slop. Built v2 (light paper, cobalt, proof-first: real chats in the hero and a pinned wall, bento, verbs, one-panel pricing). Preview https://ascender-media-preview.vercel.app (smoke 36/36, Lighthouse 100/100/100, SEO 69 only from noindex). NOT yet on ascendermedia.in (still v1) until the client approves. Plan: Ascender PLAN-v2.md. No fake reels; option A (own sample reels) still open.

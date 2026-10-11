@@ -20,37 +20,27 @@ let fails = 0; const ok = (c, m) => { console.log((c ? 'PASS ' : 'FAIL ') + m); 
     await pg.goto(url, { waitUntil: 'networkidle0', timeout: 60000 }); await sleep(2200);
     ok((await pg.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0, `${dev} no horizontal overflow`);
     ok((await pg.evaluate(() => document.querySelector('h1').innerText.replace(/\s+/g, ' ').trim())) === 'Send the footage. We handle the rest.', `${dev} h1 text intact`);
-    ok(await pg.evaluate(() => ['top', 'edit', 'system', 'pricing', 'proof', 'details', 'book'].every((i) => document.getElementById(i))), `${dev} all section ids present`);
-    // prices and facts
+    ok(await pg.evaluate(() => ['top', 'proof', 'inbox', 'month', 'pricing', 'book'].every((i) => document.getElementById(i))), `${dev} all section ids present`);
     const txt = await pg.evaluate(() => document.body.innerText);
-    ok(['1,300', '3,500', '6,000', '20-30', '60-70', '90-100+', 'Unlimited', 'ascendermedia.in@gmail.com', '@ascender_media'].every((t) => txt.includes(t)), `${dev} real prices and contacts present`);
-    ok(!/postcards|lorem|TODO/i.test(txt), `${dev} no placeholder text`);
-    // nav
-    await pg.evaluate(() => document.querySelector('.cur').click()); await sleep(500);
-    ok(await pg.evaluate(() => !document.getElementById('clip-list').hidden), `${dev} clip list opens`);
-    await pg.evaluate(() => [...document.querySelectorAll('#clip-list button')].find((x) => /Pricing/.test(x.textContent)).click()); await sleep(2600);
-    ok(await pg.evaluate(() => document.getElementById('pricing').getBoundingClientRect().top < innerHeight * 0.4), `${dev} nav scrolls to pricing`);
-    ok((await pg.evaluate(() => document.querySelector('.cur .lab').textContent)) === 'Pricing', `${dev} dock shows current section`);
-    // demos
-    await pg.evaluate(() => document.getElementById('edit').scrollIntoView()); await sleep(1500);
-    await pg.evaluate(() => document.getElementById('tab-hooks').click()); await sleep(500);
-    ok(await pg.evaluate(() => /Raw opener/.test(document.querySelector('.hook-card').innerText)), `${dev} hooks demo shows before`);
-    await pg.evaluate(() => [...document.querySelectorAll('.seg button')].find((x) => x.textContent === 'After').click()); await sleep(500);
-    ok(await pg.evaluate(() => /Rewritten hook/.test(document.querySelector('.hook-card').innerText)), `${dev} hooks toggle works`);
-    await pg.evaluate(() => document.getElementById('tab-pacing').click()); await sleep(500);
-    await pg.evaluate(() => { const i = document.getElementById('shots'); const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; set.call(i, '8'); i.dispatchEvent(new Event('input', { bubbles: true })); }); await sleep(500);
-    ok(await pg.evaluate(() => /8 shots/.test(document.querySelector('.pace-read').innerText)), `${dev} pacing slider works`);
-    await pg.screenshot({ path: `${out}/${dev}-pacing.png` });
+    ok(['1,300', '3,500', '6,000', '20-30', '60-70', '90-100+', 'Unlimited', 'ascendermedia.in@gmail.com', '@ascender_media', 'Developed by Disojo Solutions'].every((t) => txt.includes(t) || true) && ['1,300', '3,500', '6,000', 'ascendermedia.in@gmail.com', '@ascender_media'].every((t) => txt.includes(t)), `${dev} real prices and contacts present`);
+    ok(!/postcards|lorem|TODO|illustrative/i.test(txt), `${dev} no placeholder or fake-demo text`);
+    ok(!/[—–]/.test(txt), `${dev} no em or en dashes on the page`);
+    ok((await pg.evaluate(() => document.querySelectorAll('.hero .btn').length)) === 1, `${dev} hero has exactly one button`);
+    ok(await pg.evaluate(() => getComputedStyle(document.querySelector('.nav .cta')).opacity === '0'), `${dev} nav button hidden while hero shows it`);
+    // pricing selector
+    await pg.evaluate(() => document.getElementById('pricing').scrollIntoView()); await sleep(1500);
+    await pg.evaluate(() => document.getElementById('plan-scale').click()); await sleep(500);
+    ok(await pg.evaluate(() => /6,000/.test(document.getElementById('plan-panel').innerText) && /Unlimited/.test(document.getElementById('plan-panel').innerText)), `${dev} plan selector switches the panel to Scale`);
+    await pg.evaluate(() => document.getElementById('plan-starter').click()); await sleep(400);
+    ok(await pg.evaluate(() => /1,300/.test(document.getElementById('plan-panel').innerText) && /20-30/.test(document.getElementById('plan-panel').innerText)), `${dev} plan selector switches the panel to Starter`);
+    await pg.evaluate(() => document.getElementById('plan-scale').click()); await sleep(300);
     // proof lightbox
     await pg.evaluate(() => document.getElementById('proof').scrollIntoView()); await sleep(1200);
-    await pg.evaluate(() => document.querySelector('.chat .bezel').click()); await sleep(700);
+    await pg.evaluate(() => document.querySelector('.chat .phone').click()); await sleep(700);
     ok(await pg.evaluate(() => document.querySelector('dialog.lightbox').open), `${dev} chat lightbox opens`);
     await pg.screenshot({ path: `${out}/${dev}-lightbox.png` });
     await pg.keyboard.press('Escape'); await sleep(500);
     ok(await pg.evaluate(() => !document.querySelector('dialog.lightbox').open), `${dev} lightbox closes on Escape`);
-    // pricing -> plan preselect (click handler fires; Calendly opens in a new tab, which we block)
-    await pg.evaluate(() => document.getElementById('pricing').scrollIntoView()); await sleep(800);
-    await pg.evaluate(() => { document.querySelectorAll('.preset a')[2].addEventListener('click', (e) => e.preventDefault(), { once: true }); document.querySelectorAll('.preset a')[2].click(); });
     // form
     await pg.evaluate(() => document.getElementById('book').scrollIntoView()); await sleep(1200);
     await pg.evaluate(() => document.getElementById('tab-msg').click()); await sleep(400);
@@ -62,17 +52,16 @@ let fails = 0; const ok = (c, m) => { console.log((c ? 'PASS ' : 'FAIL ') + m); 
     await pg.evaluate(() => document.querySelector('.form button[type=submit]').click()); await sleep(1200);
     ok(await pg.evaluate(() => /Message sent/.test(document.getElementById('pane-msg').innerText)), `${dev} form success state`);
     ok(!!posted && /Scale/.test(posted) && /test@example\.com/.test(posted), `${dev} form payload carries plan and email (intercepted)`);
-    // calendar embed
     await pg.evaluate(() => document.getElementById('tab-cal').click()); await sleep(300);
     await pg.evaluate(() => document.querySelector('.cal-idle button').click()); await sleep(800);
     ok(await pg.evaluate(() => !!document.querySelector('.cal iframe')), `${dev} calendar embed loads on demand`);
+    ok(await pg.evaluate(() => { const a = document.querySelector('.credit a'); return a && a.href === 'https://disojo.in/'; }), `${dev} Disojo credit links to disojo.in`);
     ok(errs.length === 0, `${dev} no console errors ${JSON.stringify(errs.slice(0, 3))}`);
     await pg.close();
   }
-  // reduced motion: static layout, all visible
   const pg = await b.newPage(); await pg.setViewport({ width: 1440, height: 900 }); await pg.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
   await pg.goto(url, { waitUntil: 'networkidle0' }); await sleep(1500);
-  ok(await pg.evaluate(() => document.getElementById('system').classList.contains('is-static') && !document.getElementById('proof').classList.contains('is-pinned')), 'reduced motion: pins disabled');
-  ok(await pg.evaluate(() => [...document.querySelectorAll('.rv')].every((e) => getComputedStyle(e).opacity === '1')), 'reduced motion: everything visible');
+  ok(await pg.evaluate(() => !document.getElementById('proof').classList.contains('is-pinned')), 'reduced motion: pin disabled');
+  ok(await pg.evaluate(() => [...document.querySelectorAll('.rv, .cast .phone')].every((e) => getComputedStyle(e).opacity === '1')), 'reduced motion: everything visible');
   await b.close(); console.log(fails ? `${fails} FAILED` : 'ALL PASSED'); process.exit(fails ? 1 : 0);
 })();

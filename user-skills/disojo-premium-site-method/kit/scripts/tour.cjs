@@ -4,7 +4,7 @@ const [url, out, dev = 'desktop'] = process.argv.slice(2);
 require('fs').mkdirSync(out, { recursive: true });
 const vp = dev === 'phone' ? { width: 390, height: 844, deviceScaleFactor: 2, isMobile: true, hasTouch: true } : { width: 1440, height: 900 };
 // [name, selector, fraction of its own scroll travel (pinned) or offset below its top]
-const STOPS = [['hero', '#top', 0], ['ruler', '.ruler-sec', 0], ['edit', '#edit', 0], ['edit2', '#edit', 0.55], ['sys0', '#system', 0.05], ['sys1', '#system', 0.42], ['sys2', '#system', 0.78], ['pricing', '#pricing', 0], ['pricing2', '#pricing', 0.5], ['proof0', '#proof', 0.0], ['proof1', '#proof', 0.5], ['proof2', '#proof', 1], ['details', '#details', 0], ['book', '#book', 0], ['footer', '.endcap', 0]];
+const STOPS = [['hero', '#top', 0], ['proof0', '#proof', 0], ['proof1', '#proof', 0.5], ['proof2', '#proof', 1], ['inbox', '#inbox', 0], ['month', '#month', 0], ['pricing', '#pricing', 0], ['book', '#book', 0], ['footer', '.foot', 0]];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 (async () => {
   const b = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: 'new' });

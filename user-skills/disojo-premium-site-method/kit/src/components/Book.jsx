@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, EnvelopeSimple, InstagramLogo, CalendarBlank, ChatCircleText, CheckCircle, WarningCircle } from '@phosphor-icons/react';
-import { CAL_URL, EMAIL, IG_HANDLE, IG_URL } from '../data/content.js';
+import { CAL_URL, EMAIL, IG_HANDLE, IG_URL, START } from '../data/content.js';
 import { useInView } from '../lib/motion.js';
 import { usePlan, setPlan } from '../lib/planStore.js';
 import { sendMessage } from '../lib/submit.js';
 import './Book.css';
 
-const CAL_EMBED = `${CAL_URL}?hide_gdpr_banner=1&background_color=101012&text_color=edeae3&primary_color=ff5a1f`;
+const CAL_EMBED = `${CAL_URL}?hide_gdpr_banner=1&background_color=fbfbf9&text_color=0e0e10&primary_color=2b45f5`;
 const PLAN_OPTIONS = [['unsure', 'Not sure yet'], ['starter', 'Starter, $1,300 a month'], ['growth', 'Growth, $3,500 a month'], ['scale', 'Scale, $6,000 a month']];
 
 function Calendar() {
@@ -116,12 +116,15 @@ export default function Book() {
         <div className={`b-copy rv${seen ? ' in' : ''}`}>
           <h2>Ready to make content less random?</h2>
           <p className="sub">Book a free 30-minute strategy call. We'll look at your current content, your offer and what a realistic growth system could look like.</p>
+          <ol className="start">
+            {START.slice(1).map(([k, v]) => <li key={k}><b>{k}</b> {v}</li>)}
+          </ol>
           <ul className="contact">
-            <li><a href={`mailto:${EMAIL}`}><span className="ic"><EnvelopeSimple size={22} weight="light" /></span><span><small className="mono">Email</small>{EMAIL}</span></a></li>
-            <li><a href={IG_URL} target="_blank" rel="noopener noreferrer"><span className="ic"><InstagramLogo size={22} weight="light" /></span><span><small className="mono">Instagram</small>{IG_HANDLE}</span></a></li>
+            <li><a href={`mailto:${EMAIL}`}><span className="ic"><EnvelopeSimple size={22} weight="light" /></span><span><small>Email</small>{EMAIL}</span></a></li>
+            <li><a href={IG_URL} target="_blank" rel="noopener noreferrer"><span className="ic"><InstagramLogo size={22} weight="light" /></span><span><small>Instagram</small>{IG_HANDLE}</span></a></li>
           </ul>
         </div>
-        <div className={`bezel b-panel rv${seen ? ' in' : ''}`} style={{ '--d': 160 }}>
+        <div className={`b-panel rv${seen ? ' in' : ''}`} style={{ '--d': 160 }}>
           <div className="core">
             <div className="seg b-tabs" role="tablist" aria-label="How to reach us">
               <button role="tab" id="tab-cal" aria-selected={tab === 'cal'} aria-controls="pane-cal" className={tab === 'cal' ? 'on' : ''} onClick={() => setTab('cal')}><CalendarBlank size={18} weight="light" /> Calendar</button>

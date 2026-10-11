@@ -1,0 +1,5 @@
+.nav { position: fixed; z-index: var(--z-nav); top: max(14px, env(safe-area-inset-top)); left: var(--gutter); right: var(--gutter); display: flex; align-items: center; justify-content: space-between; pointer-events: none; }
+.nav > * { pointer-events: auto; }
+.brand { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 4px 18px 4px 10px; border-radius: 999px; font-family: var(--font-display); font-weight: 620; letter-spacing: -0.03em; font-size: 1.0625rem; background: rgba(243, 243, 240, 0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line); }
+.nav .cta { transition: transform 0.45s var(--ease-press), opacity 0.4s var(--ease-out), box-shadow 0.45s var(--ease-press), background-color 0.3s var(--ease-out); }
+.nav .cta.away { opacity: 0; pointer-events: none; transform: scale(0.92); }

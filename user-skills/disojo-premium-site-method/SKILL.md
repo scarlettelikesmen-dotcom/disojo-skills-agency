@@ -5,7 +5,7 @@ description: The repeatable method behind the Ascender Media flagship (Lighthous
 
 # Disojo premium site method (reference build: Ascender Media, 2026-10-09)
 
-Live: https://www.ascendermedia.in. Rollback target for that project: `social-growth-agency-9pzpqpkcw`. Code: `kit/` (Vite + React + Lenis + Phosphor, no GSAP, no three.js). Plan it came from: `references/ascender-plan.md`. Measured: mobile Lighthouse 99 / 100 / 100 / 100, smoke 34/34, JS 93 KB gzip, fonts 94 KB.
+Live (v1): https://www.ascendermedia.in, rollback `social-growth-agency-9pzpqpkcw`. v2 redesign (light, proof-first) preview: https://ascender-media-preview.vercel.app, not on the real domain until approved. `kit/` now holds v2 (v1 source is not kept; plan in references/ascender-plan-v2.md). Code: `kit/` (Vite + React + Lenis + Phosphor, no GSAP, no three.js). Plan it came from: `references/ascender-plan.md`. Measured: mobile Lighthouse 99 / 100 / 100 / 100, smoke 34/34, JS 93 KB gzip, fonts 94 KB.
 
 ## The method, in order (do not skip step 1)
 1. **Read before building.** The full rules are copied into this skill so it works on its own: `references/design-rules-digest.md` (merged, with every banned tell) and verbatim originals in `references/source-skills/`. Read the digest first, then the originals when a rule needs detail. Then the live skills: `design-taste-frontend` (Design Read + dials), `high-end-visual-design`, `anti-slop-design`, `ui-ux-pro-max`, `make-interfaces-feel-better`, `emil-design-eng`, `motion-foundations`, plus `disojo-client-intake` and the playbook. Read the client's real files (every screenshot, the live site's copy and its source). The skills conflict in places; resolve like this: no Inter, no Instrument Serif/Fraunces, emphasis by weight not by a random serif word, max 1 eyebrow per 3 sections, max 1 marquee, no em dashes, no FAQ accordion, one theme for the whole page, 4 text elements max in the hero, one label per CTA intent ("Book a call" everywhere).
@@ -15,6 +15,16 @@ Live: https://www.ascendermedia.in. Rollback target for that project: `social-gr
 5. **Build section by section, each with a different layout family** (hero split, ruler band + ledger, tabbed demo panel, pinned tracks, unequal price cards, pinned horizontal chat wall, asymmetric bento of facts, tabbed booking panel, slim end card).
 6. **Verify yourself** with `references/quality-gates.md`: `python3 scripts/design_lint.py <project>` (0 FAIL), `npm run build`, `scripts/smoke.cjs` (intercepts the form request so nothing is emailed), `scripts/tour.cjs` screenshots at 1440 and 390 and LOOK at them, `scripts/lighthouse_summary.sh <url>`. Fix, repeat. Only then show.
 7. **Deploy**: public preview to its own project with an `X-Robots-Tag: noindex` header (see `references/deploy.md`), show the link, production only when the client says go.
+
+## v2 lessons (the first Ascender build was called slop by the client; v2 fixed it)
+- **Never build a metaphor ABOUT the client's craft and decorate it** (v1: editing-suite timecode, dock, fake editor, numbered labels). It reads as a themed template. Build for the visitor: show the client's real proof as the visual.
+- **No fake product UI in the hero**, even labelled "illustrative". If the client has no showable work, use real artefacts they do have (here: six real chat screenshots as dark phones on paper) and say what is not shown. Never fake reels or pass AI footage off as theirs.
+- **Hero = headline + one sentence + ONE button + one picture.** Nothing else. Two buttons, stats, pills = AI tell. One CTA label everywhere, and hide the nav CTA while the hero or booking section already shows it.
+- **Break equal-card pricing**: one panel + a segmented selector that carries all prices.
+- **Bento = exactly the cells you have, with real variation** (ink tile, accent tile, paper tile). Stats only as plain facts in context, not a counter ledger. Cut filler stats ("1 system").
+- **Check the page's theme against the proof material**: dark screenshots sit best on a light page.
+- **LCP**: do not gate the first text behind a reveal transition or font-ready delay; and do NOT preload a hero image unless measured (it slowed local Lighthouse). Judge performance on the deployed URL (gzip), not `vite preview` (uncompressed: scored 90 locally, 100 on Vercel).
+- The page-reading order for the redesign skills: positioning-audit, social-proof-mining, no-ai-slop before touching code; smoke test also asserts: one hero button, no em dashes, no "illustrative" text.
 
 ## Hard-won rules (each one cost a bug here)
 - **Namespace CSS classes per component.** Generic names (`.c`, `.end`, `.bar`, `.now`, `.done`, `.who`, `.ph`) collided across files and produced overlapping cards and a boxed card. If a layout overlaps unexpectedly, measure with `getBoundingClientRect` before guessing.
