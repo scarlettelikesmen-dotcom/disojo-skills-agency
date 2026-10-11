@@ -23,3 +23,6 @@ Tejjomay liked v2's look but found it too thin; asked to bring back the old site
 
 ## v3b (2026-10-11): "less raw" pass, same preview URL
 Added nav bar (links + CTA that hides on hero/book), removed hero "Illustrative" note (craft demos keep their sample labels). Then the no-footage plan (PLAN-v4.md): ink scenes (How it runs, Pricing, Footer), two-column heads with real facts, left timeline rail, grain, hero with fanned chats + pointer depth, code-made kinetic Reel in the bento, live caption/carousel/30-day cells, volume grid in Pricing tied to slider, verbatim Quotes section, giant footer wordmark. Skipped icon tiles on purpose (client calls icon tiles slop). Not done: real footage/stock/AI clips (needs their yes + download approval), team photos. Live smoke 52/52, Lighthouse mobile 96/100/100. Still not on ascendermedia.in.
+
+## LIVE: v3b on ascendermedia.in (2026-10-11)
+Deployed at Tejjomay's explicit request. New production deployment social-growth-agency-6sxt66vip. Rollback = previous production social-growth-agency-m5b9sg2h9 (v1, dark/orange): `vercel promote <url>` from a dir linked to project social-growth-agency. Verified on www: smoke ALL PASSED, Lighthouse mobile 99/100/100/100. v3 preview project ascender-media-v3-preview and v2 preview ascender-media-preview still exist (noindex); retire when no longer needed.
