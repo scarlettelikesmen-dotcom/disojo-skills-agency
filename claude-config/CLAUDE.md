@@ -49,6 +49,8 @@ Do not rebuild from scratch what these already do.
 ## Shipped
 - **Ascender Media**: flagship rebuild live on ascendermedia.in since 2026-10-09 (Vercel project social-growth-agency; rollback social-growth-agency-9pzpqpkcw). Code `~/Desktop/websites ARCHIVE/ascender-media/site` (no remote yet). Memory `project-ascender-media-rebuild`.
 
+- **Print Elements** (Delta BC print shop, USD 4k order): full rebuild in `~/Desktop/websites ARCHIVE/print-elements-v2`, preview https://print-elements-v2-preview.vercel.app (not on a real domain). Memory `project-print-elements-rebuild`.
+
 ## Environment notes
 - macOS, zsh. Project work for sites: `~/Desktop/websites ARCHIVE/`. Skills live in `~/.claude/skills`, mirrored to the private GitHub repo scarlettelikesmen-dotcom/disojo-skills-agency (working copy ~/Desktop/DISOJO SOLUTIONS/skills); Memory notes are backed up via skill `disojo-memory-backup` (run its backup_memory.sh after memory changes); CLAUDE.md and settings.json are backed up in the same repo under `claude-config/` (approved 2026-10-09); client website code is on the repo branch `archive-client-code`; recovery steps in RECOVERY.md. Postcards site: private repo disojo-solutions/postcards-perfumes-web (agency account). Two GitHub logins saved: put the username in remote URLs.
 - Headless Chrome via `puppeteer-core` is the reliable way to screenshot and test (the browser pane can return blank images when hidden).

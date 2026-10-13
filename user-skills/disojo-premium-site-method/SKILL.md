@@ -54,3 +54,12 @@ Form delivery + activation, what is illustrative, what is AI (nothing, here), un
 
 ## Adapting to the next client (do not copy the look)
 Reuse: plumbing (`src/lib/*`, Transport pattern idea, `useInView`/`useOnScreen`, pinned-section hooks, smoke/tour scripts, deploy recipe, the asset script pattern). Replace: concept, palette, type, nav form, every section's layout and copy. The editing-suite look belongs to Ascender; a bakery or a law firm needs its own metaphor (see `references/identity-checklist.md`).
+
+## Print Elements lessons (2026-10-13, local print shop, USD 4k)
+- For a local business, generate **static HTML per page** from a data file (one `site.mjs` + `products.json` -> home, category and one page per product, ~40 pages) instead of an SPA: real HTML for local SEO, 100 Lighthouse, tiny JS. Template functions + esbuild + a 20-line static server with clean URLs is enough.
+- The concept came from the trade itself and is TRUE and interactive: a vector sample sheet built from four ink plates (C M Y K, `mix-blend-mode: multiply`) that register on load, with per-plate switches. Own vector artwork means crisp at any size, no client photo needed. Label it as our sample, not client work.
+- Colour means something: one UI accent (their logo magenta); the other process colours only as plate/category colours. A dark "bed" with paper sheets as objects gave a look unlike the light Ascender site.
+- Never dim text with `opacity` for inactive states (Lighthouse contrast fail): change the colour instead.
+- Quote forms: never show success unless the endpoint says so; offer a prefilled mailto on failure; test both paths with the request intercepted; reject oversized files before sending.
+- Preserve the client's logo as supplied; if a round badge is needed, crop/frame it, never redraw. Keep the logo's white disc on dark pages.
+- Do not caption stock mockups as the client's work. Products without a real image get a typographic specimen sheet; leave the "Work" section out until real photos exist.
