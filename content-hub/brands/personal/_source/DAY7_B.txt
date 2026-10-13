@@ -1,0 +1,2 @@
+lang=en p=0.95 dur=17.6s
+My strategy could still fail. I've back-tested the strategy and the results are solid. But that does not guarantee results in the live market. Back-testing is easy, but actually executing is everything. Because now it's not about the system. It's about me, whether I can execute well.

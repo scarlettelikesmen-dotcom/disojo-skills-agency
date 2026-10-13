@@ -1,0 +1,1 @@
+- [Content hub setup](content-hub-setup.md) — Tejjomay's content production desk: tools, status, what's still needed

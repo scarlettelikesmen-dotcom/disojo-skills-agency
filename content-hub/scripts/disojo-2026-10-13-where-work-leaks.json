@@ -1,0 +1,31 @@
+{
+  "brand": "disojo",
+  "label": "DRAFT copy for approval. Leak examples come from Disojo's discovery-first positioning; no stats, no client names.",
+  "handle": "@disojo.solutions",
+  "footerLeft": "Discovery first",
+  "slides": [
+    { "type": "cover", "theme": "dark", "kicker": "Discovery / Where work leaks",
+      "title": "Where your business *leaks* time.",
+      "lead": "Four places we look first, before we build anything." },
+    { "type": "point", "theme": "light", "label": "LEAK 01",
+      "title": "Bookings that live in *WhatsApp*.",
+      "body": "Every confirmation, reschedule and “is 5pm free?” is a message someone has to find, read and copy somewhere else.",
+      "tell": "The tell: <b>someone scrolls chats</b> to know who is coming." },
+    { "type": "point", "theme": "dark", "label": "LEAK 02",
+      "title": "Fees tracked in a *spreadsheet*.",
+      "body": "Who paid, who is late, who showed up. Rebuilt by hand every month, and only one person knows how.",
+      "tell": "The tell: <b>month-end</b> means a lost evening." },
+    { "type": "point", "theme": "light", "label": "LEAK 03",
+      "title": "Documents typed *twice*.",
+      "body": "The same details retyped into an invoice, a contract, a form. Every copy is another chance for a mistake.",
+      "tell": "The tell: <b>copy, paste, fix</b>, repeat." },
+    { "type": "point", "theme": "dark", "label": "LEAK 04",
+      "title": "Knowledge in *one head*.",
+      "body": "If the answer is “ask the one person who knows”, that is a process stored in a person.",
+      "tell": "The tell: <b>nobody else</b> can cover a holiday." },
+    { "type": "cta", "theme": "light", "kicker": "Build second",
+      "title": "Find the *leak* first.",
+      "lead": "That is how every Disojo project starts.",
+      "url": "disojo.in" }
+  ]
+}

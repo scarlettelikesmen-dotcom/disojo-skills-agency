@@ -1,0 +1,6 @@
+{
+  "keep": [[1.9, 8.6]],
+  "hook": "Execution\nchanges, not\n*strategy.*",
+  "kicker": "Trading / Discipline",
+  "emphasis": ["execution", "strategy"]
+}

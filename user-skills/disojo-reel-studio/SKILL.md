@@ -93,5 +93,5 @@ Everything else: decide, state your decision in the delivery note, and let him r
 - Do not push the skills repo without asking him (see `disojo-memory-backup`).
 
 ## Files
-`engine/tools/`: edit_reel.py (pipeline), take_report.py, verify_reel.py, render-timeline.mjs + timeline.html (captions, hook, cards), render-carousel.mjs, transcribe_batch.py (voice profiles from many clips), transcribe_words.py.
-`engine/templates/`: plan.example.json, brand.template.md, voice.example.md, carousel.example.json. `references/`: plan-schema.md, motion-rules.md, lessons.md. Sister skills: `disojo-carousel-studio`, `disojo-content-copy`.
+`engine/tools/`: edit_reel.py (pipeline), take_report.py, verify_reel.py, measure_audio.py, export_safe.py, render-timeline.mjs + timeline.html (captions, hook, cards), render-carousel.mjs, transcribe_batch.py (voice profiles from many clips), transcribe_words.py.
+`engine/templates/`: plan.example.json, brand.template.md, voice.example.md, carousel.example.json. `references/`: plan-schema.md, motion-rules.md, lessons.md. Sister skills: `disojo-carousel-studio`, `disojo-content-copy` (copy), `disojo-motion-craft` (taste + review loop), `disojo-panel-designer` (visual panels), `disojo-sound-design`, `disojo-short-form-playbook` (house numbers), `disojo-reel-export` (upload-safe export of any video), `disojo-brand-motion-intake` (a brand's look and MOTION.md).

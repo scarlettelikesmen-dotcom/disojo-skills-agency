@@ -16,6 +16,8 @@ bash ~/.claude/skills/disojo-memory-backup/scripts/backup_memory.sh
 Snapshots the memory folder into `references/memory/`, scans for secrets (aborts if it finds a token or key), mirrors all skills into the
 Desktop repo, commits and pushes. Prints what changed. The repo must stay PRIVATE: the notes hold business context and an email address.
 
+Also snapshots the content-hub project's memory (`-Users-tejjo-Desktop-DISOJO-SOLUTIONS/memory`) into `references/memory-disojo-solutions/` (added 2026-10-13; separate folder so the primary snapshot is never overwritten).
+
 ## Restore (new Mac, or after a wipe)
 1. `git clone https://github.com/scarlettelikesmen-dotcom/disojo-skills-agency.git ~/disojo-skills-backup` (needs that GitHub account's login).
 2. `rsync -a ~/disojo-skills-backup/user-skills/ ~/.claude/skills/`

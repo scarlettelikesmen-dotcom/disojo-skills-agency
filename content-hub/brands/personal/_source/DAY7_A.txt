@@ -1,0 +1,2 @@
+lang=en p=0.90 dur=16.9s
+I might even lose money doing this. I've back tested the strategy and the results are solid. But that does not guarantee results in the life market. Back testing is easy, but actually executing is everything. Because now it's not about the system. It's about me, whether I can execute well.
