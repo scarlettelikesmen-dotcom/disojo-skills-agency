@@ -71,3 +71,11 @@ Reuse: plumbing (`src/lib/*`, Transport pattern idea, `useInView`/`useOnScreen`,
 - `[hidden]` is overridden by any `display:` rule: add `[hidden]{display:none!important}` (the "Request sent" screen showed on load until the smoke test caught it).
 - Smoke tests that scroll must set `scroll-behavior:auto` first or smooth scrolling never reaches lazy images.
 - A Lighthouse local score on an uncompressed server is pessimistic (LCP 3.7 s local, 1.7 s deployed). Measure deployed.
+
+## Ascender v4 lessons (OH Architecture style, 2026-10-13)
+- When Tejjomay brings a reference like oharchitecture.com.au, copy the SYSTEM not the content: one full-bleed photograph does the work, one tight grotesque, tiny bracketed uppercase labels, big plain index rows with hairlines (3/9 grid: label left, content right), one quote, no cards/shadows/pills, white-on-photo nav that turns into pills after the hero.
+- If the client has no photography, have the client's side generate ONE cinematic scene (monolith at dusk worked) and reuse crops of it: hero, one mid-page photo band, darkened closing section. Always disclose AI. Ask for 3840px.
+- Replace fake product UI with plain rows of the client's real copy. Keep only what is real: prices, specs, screenshots, quotes.
+- IntersectionObserver edge case: an element exactly touching the root counts as intersecting; use `intersectionRatio > 0` and thresholds [0, 0.001].
+- Scaling for ultrawide: convert px to rem and set `html { font-size: max(100%, 0.78vw) }`, `--max: max(82.5rem, 80vw)`.
+- Measure Lighthouse on a COMPRESSING server (`npx serve`), not `http.server`: 91 vs 99 for the same build.

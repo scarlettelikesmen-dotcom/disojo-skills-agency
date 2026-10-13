@@ -1,0 +1,74 @@
+{
+ "keep": [
+  [
+   2.25,
+   6.35
+  ],
+  [
+   9.93,
+   14.46
+  ],
+  [
+   15.85,
+   25.6
+  ],
+  [
+   33.15,
+   35.3
+  ],
+  [
+   36.3,
+   39.15
+  ],
+  [
+   52.1,
+   57.5
+  ]
+ ],
+ "hook": "Agencies\nbuild *bad*\nsoftware.",
+ "kicker": "Disojo / Why we're different",
+ "emphasis": [
+  "trash",
+  "clean",
+  "care",
+  "succeed",
+  "business@57.0"
+ ],
+ "fix": {
+  "cream": "clean"
+ },
+ "cards": [
+  {
+   "type": "clean",
+   "at": 12.7,
+   "dur": 2.5,
+   "label": "Clean software",
+   "text": "Clean *software.*"
+  },
+  {
+   "type": "balance",
+   "at": 18.5,
+   "dur": 3.3,
+   "label": "What we care about",
+   "text": "Your business, *not* the money.",
+   "a": "Your business",
+   "b": "Money"
+  },
+  {
+   "type": "loop",
+   "at": 36.3,
+   "dur": 2.8,
+   "label": "How we win",
+   "text": "You get business. *We* get business.",
+   "a": "You get business",
+   "b": "We get business"
+  },
+  {
+   "type": "rise",
+   "at": 55.6,
+   "dur": 2.2,
+   "label": "The goal",
+   "text": "More business *for you.*"
+  }
+ ]
+}
