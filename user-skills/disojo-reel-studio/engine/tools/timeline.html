@@ -201,8 +201,9 @@ function build(spec){
         m.innerHTML='<span class="ln">'+esc(t).replace(/\*([^*]+)\*/g,'<span class="hl"><i></i><span class="em">$1</span><span class="em dk" aria-hidden="true">$1</span></span>')+'</span>';hk.appendChild(m);return m});
       const maxW=Math.max(...lines.map(m=>m.firstChild.getBoundingClientRect().width));
       if(maxW>928){const f=928/maxW;lines.forEach(m=>m.style.fontSize=(118*f)+"px")}
-      T(pc.querySelector(".pl"),[{opacity:0,transform:"translateY(8px)"},{opacity:.72,transform:"translateY(0)"}],{duration:300,at:60});
-      lines.forEach((m,i)=>T(m.firstChild,[{transform:"translateY(105%)",filter:"blur(6px)"},{transform:"translateY(0)",filter:"blur(0)"}],{duration:560,at:150+i*70,easing:OUT}));
+      const pre=k.t0<0.05?-420:0;   // frame 0 is the autoplay thumbnail: start the hook already mid-animation, never an empty frame
+      T(pc.querySelector(".pl"),[{opacity:0,transform:"translateY(8px)"},{opacity:.72,transform:"translateY(0)"}],{duration:300,at:60+pre});
+      lines.forEach((m,i)=>T(m.firstChild,[{transform:"translateY(105%)",filter:"blur(6px)"},{transform:"translateY(0)",filter:"blur(0)"}],{duration:560,at:150+i*70+pre,easing:OUT}));
       pn.querySelectorAll(".hl").forEach(hl=>{const at=ms((k.claimAt||k.t0+1.2)-k.t0);
         T(hl.querySelector("i"),[{transform:"scaleX(0)"},{transform:"scaleX(1)"}],{duration:380,at,easing:IO});
         T(hl.querySelector(".dk"),[{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)"}],{duration:380,at,easing:IO})});

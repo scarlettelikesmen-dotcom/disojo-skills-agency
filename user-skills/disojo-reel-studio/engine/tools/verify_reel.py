@@ -31,8 +31,8 @@ f0 = reel.parent / "_f0.png"
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(reel), "-frames:v", "1", "-vf", "scale=64:-1,format=gray", str(f0)])
 from PIL import Image
 import numpy as np
-lum = float(np.asarray(Image.open(f0)).mean()); f0.unlink()
-check("frame 0 is a real image (mean luma > 20)", lum > 20, f"{lum:.0f}/255")
+arr = np.asarray(Image.open(f0)); lum, sd = float(arr.mean()), float(arr.std()); f0.unlink()
+check("frame 0 is a real image (not black/empty)", lum > 20 or sd > 12, f"mean {lum:.0f}, std {sd:.0f}")
 times = [dur * (k + 0.5) / 12 for k in range(12)]
 if a.timeline and Path(a.timeline).exists():
     tl = json.loads(Path(a.timeline).read_text())

@@ -41,7 +41,7 @@ Inputs to read first: `$HUB/copy-rules.md`, `$HUB/brands/<brand>/voice.md` (if i
 
 **Emphasis words:** 4-6 per reel, one per idea, spoken words only. Use `word@sourceTime` for words that repeat.
 
-**Cards (the part that makes it worth watching):** 3-4 per 30 s, each tied to a line he says, placed where he says it. Types: `clean` (tangle resolves to a clean line), `balance` (one thing outweighs another), `loop` (A gets it, so B gets it), `rise` (line climbs). Rules: illustration only (no axes, no numbers unless he said them), text paraphrases his words, never in the hook window, never two at once, compact top-left so it never covers the eyes (`side:"right"` or `y` to move it). If no type fits an idea, add a new type (see Extending) instead of forcing a wrong one.
+**Visual panels (the part that makes it worth watching):** 3-4 per 30 s, each tied to a line he says, placed where he says it. In the default `split` layout the hook and every card become a full-width panel on top with the speaker below (this is how the strongest short-form edits are built: 30-42% split, speaker always on screen). Types: `clean` (tangle resolves to a clean line), `balance` (one thing outweighs another), `loop` (A gets it, so B gets it), `rise` (line climbs). Rules: illustration only (no axes, no numbers unless he said them), text paraphrases his words, never in the hook window, never two at once, 2-3.3 s each. In `layout:"full"` they are compact cards top-left that must never cover the eyes (`side`/`y`). If no type fits an idea, add a new type (see Extending) instead of forcing a wrong one.
 
 **Callouts:** a big number or fact pop only when he says the figure on camera.
 
@@ -59,7 +59,7 @@ Options: `--no-sfx`, `--no-zoom`, `--no-clean`, `--caption-style pill`, `--music
 ```
 .venv/bin/python $ENGINE/tools/verify_reel.py edits/<name>/reel.mp4 --timeline edits/<name>/timeline.json
 ```
-Then **Read `edits/<name>/_verify.png`** and check with your own eyes: hook not cut off, captions legible on the brightest frames, no lone one-word chunks, cards not over the eyes and showing the right illustration, emphasis on the right words, caption text matches what he says. Hard checks in the script: 1080x1920, 30 fps, <= 35 s, loudness -17..-14 LUFS, true peak <= -1 dBFS. If anything fails or looks wrong, fix and re-render. Do not ship hoping.
+Then **Read `edits/<name>/_verify.png`** and check with your own eyes (phone-size tiles; also open one panel full size): hook not cut off, captions legible on the brightest frames, no lone one-word chunks, cards not over the eyes and showing the right illustration, emphasis on the right words, caption text matches what he says. Hard checks in the script: 1080x1920, 30 fps, h264 High yuv420p, **BT.709 tv-range SDR tags**, <= 35 s, loudness -17..-14 LUFS, true peak <= -1 dBFS, frame 0 is a real image. Also confirm the log says `source transfer: ... -> tone-mapped to SDR BT.709` for iPhone clips. If anything fails or looks wrong, fix and re-render. Do not ship hoping.
 
 ## 6. Deliver
 Send the mp4 with `SendUserFile` (display attach), then a short note (no more than ~10 lines):
@@ -77,12 +77,18 @@ Everything else: decide, state your decision in the delivery note, and let him r
 
 ## Defaults that came from him (do not re-ask)
 - Host Grotesk is the reel font (final decision; do not suggest fonts). Large captions. Cream `#E6DDD6` on dark, marker highlight.
-- Clean and simple, but **never captions-only**: highlight, hook wipe, cards, pulses and sound must be there. He asked for engaging motion three times.
+- Clean and simple, but **never captions-only**: highlight, hook panel, visual panels, pulses and sound must be there. He asked for engaging motion three times, then said the first designs were still mid: the v4 system (split panels, boxed captions, SDR colour, real SFX, calm springs) came from studying 20 motion repos (see `references/research-2026-10-13.md`).
 - Disojo footer rules apply to sites, not reels. Posting, DMs and comments are never done for him.
 - He logs in to accounts himself. Never type credentials.
 
+## Look and sound rules (v4)
+- Colour: iPhone footage is HDR (HLG). The engine tone-maps to SDR BT.709 (naive re-encode looked flat and gray). Never ship HDR-tagged 8-bit.
+- Captions: one look, dark rounded box with a thin light edge, marker highlight on emphasis words; on the seam during panels.
+- Motion identity: `$HUB/brands/disojo/MOTION.md` (springs with damping ratio >= 0.72, one accent, grain/vignette/drift, ghost of the start state, small thing alive in every hold).
+- Sound: only real recorded CC0 effects from `engine/sfx` (never synthesise beeps), sparse (follow visible actions, not every cut), about 14 dB under the voice; credits are written to `sfx-credits.txt` next to the reel. Check the sources' current licence pages before a client or paid use.
+
 ## Extending
-- New card type: edit `$ENGINE/tools/timeline.html` (the `/* info cards */` block). Test it in isolation with a small timeline spec rendered by `render-timeline.mjs`, composite the frames over a mid-tone backdrop and look. Follow `references/motion-rules.md`.
+- New panel/card type: edit `$ENGINE/tools/timeline.html` (the `/* split-layout panels */` block for panels, `/* info cards */` for small cards). Test it in isolation with a small timeline spec rendered by `render-timeline.mjs`, composite the frames over a mid-tone backdrop and look. Follow `references/motion-rules.md`.
 - The engine folder is the single source of truth; `$HUB/tools`, `design`, `assets`, `fonts` are links to it. Edit in the skill, not the hub.
 - Do not push the skills repo without asking him (see `disojo-memory-backup`).
 

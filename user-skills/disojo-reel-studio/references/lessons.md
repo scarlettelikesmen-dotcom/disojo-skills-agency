@@ -27,3 +27,10 @@
 ## Audio
 - Voice clean: highpass 80 Hz, afftdn, EQ, de-esser, compressor, then loudnorm -16 LUFS. Measured gains are reported by the script. Sound effects are synthesised (pop/swipe/whoosh), peak ~-25 dBFS; he has not yet judged how they sound.
 - Whisper can stretch a short word across the pause before it (IMG_4112: "to" spans 1.9-3.8 s). The engine clamps words >1.0 s and <=4 letters to a 0.4 s onset. If a caption starts one word late, check the word timings in `edits/<name>/transcript.json` and widen the plan's `keep` start.
+
+## v4 lessons (2026-10-13, after studying the motion repos)
+- **iPhone clips are HDR** (HLG, bt2020, Dolby Vision profile 8). Re-encoding to 8-bit H.264 without tone-mapping keeps HDR tags on SDR-looking pixels: flat, gray, washed. The engine's `sdr_chain()` converts to BT.709 (variant: 280 nit diffuse white, 0.85 saturation, chosen by eye). `ffprobe ... csv=p=0` returns `arib-std-b67,` with a trailing comma: split it or the detection silently fails.
+- RGB overlay PNGs must be converted with an explicit BT.709 matrix (`scale=out_color_matrix=bt709`) or ffmpeg guesses BT.601 and shifts the colours.
+- Synthesised beeps (sine/noise in code) are what the sound-effects skill warns against. Use the CC0 kit in engine/sfx. Sparse, quiet, varied takes.
+- Premium look came from structure (split panels, boxed captions, consistent system), not from more effects.
+- The student kit's rule worth copying: every note he gives becomes a permanent rule in the skill so he never gives it twice.
