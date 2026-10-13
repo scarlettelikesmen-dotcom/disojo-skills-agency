@@ -45,3 +45,6 @@ import SplitWords from '../fx/SplitWords';
 Real 3D scenes (see `disojo-3d-product-site`), page transitions beyond the curtain, cursor effects (the Postcards cursor glow was removed:
 a full-page blend layer costs GPU), audio/score (Palmo and Everest use it; needs a user gesture and a mute control), WebGL shaders.
 Not yet checked on a real phone.
+
+## Die-cut sticker pipeline (Print Elements v3, 2026-10-13)
+`scripts/die_cut_stickers.py`: rembg background removal + white die-cut outline + small WebP. Copy it into the project, edit `ITEMS` (key: file, long edge px, options `crop`, `box`, `frac`, `skip`) and run with the repo venv (`~/claudeskillsthrureels/.venv/bin/python`, rembg model downloads ~176 MB once). Findings: white products on white studio backgrounds lose their body (white mugs, envelopes, hats, billboards): crop to one object with `box`, or fall back to a plain photo with a white print border. Remove stray islands (`keep_main`). Whole hero collage of 8 stickers ~170 KB. Style them with CSS `drop-shadow`, `container-type: size` and widths in `cqw` so a collage scales as one picture. Draggable stickers: fine pointers only; on touch give a tap-pop and leave scrolling alone. A sticky chapter taller than the screen needs `top: min(0px, 100svh - height)` (set in JS) or its bottom is never seen.

@@ -63,3 +63,11 @@ Reuse: plumbing (`src/lib/*`, Transport pattern idea, `useInView`/`useOnScreen`,
 - Quote forms: never show success unless the endpoint says so; offer a prefilled mailto on failure; test both paths with the request intercepted; reject oversized files before sending.
 - Preserve the client's logo as supplied; if a round badge is needed, crop/frame it, never redraw. Keep the logo's white disc on dark pages.
 - Do not caption stock mockups as the client's work. Products without a real image get a typographic specimen sheet; leave the "Work" section out until real photos exist.
+
+## Print Elements v3 lessons (light, real-asset build, 2026-10-13)
+- When the client has a live site, scrape ITS catalogue (sitemap -> product pages -> og:image) and use that, not an AI-made demo's list: the Gemini demo listed products the client does not sell. Also scrape hours/contact from the live footer.
+- No shop photography exists on many small-business sites: the honest route is their catalogue mockups, cut out unchanged, and a plain handover note that they are mockups. Do not draw replacements.
+- Never publish scraped prices that look like placeholders ($0.99, $0.00).
+- `[hidden]` is overridden by any `display:` rule: add `[hidden]{display:none!important}` (the "Request sent" screen showed on load until the smoke test caught it).
+- Smoke tests that scroll must set `scroll-behavior:auto` first or smooth scrolling never reaches lazy images.
+- A Lighthouse local score on an uncompressed server is pessimistic (LCP 3.7 s local, 1.7 s deployed). Measure deployed.
