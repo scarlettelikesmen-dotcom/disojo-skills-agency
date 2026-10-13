@@ -242,7 +242,7 @@ def main():
     wins = [(p["t0"], p["t1"]) for p in panels]
     for c in chunks:       # in split windows the captions sit on the seam between panel and speaker
         mid = (c["t0"] + c["t1"]) / 2
-        if any(a0 <= mid <= b0 for a0, b0 in wins): c["cy"] = SEAM + 62
+        if any(a0 <= mid <= b0 for a0, b0 in wins): c["cy"] = SEAM + 84
     callouts = []   # big fact pops; "at"/"dur" in SOURCE seconds (like cards); legacy "t0"/"t1" are edited-timeline seconds
     for k in plan.get("callouts", []):
         if "at" in k:
@@ -260,7 +260,7 @@ def main():
     base = "" if abs(sw / sh - W / H) < 0.01 else f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},"
 
     # colour: HDR (HLG/PQ) iPhone footage is tone-mapped to SDR BT.709 at 1080p; SDR passes through
-    tr = run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=color_transfer", "-of", "csv=p=0", a.input]).stdout.strip()
+    tr = run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=color_transfer", "-of", "csv=p=0", a.input]).stdout.strip().split(",")[0]
     sdr = sdr_chain(tr)
     print(f"source transfer: {tr or 'unspecified'} -> {'tone-mapped to SDR BT.709' if tr in ('arib-std-b67', 'smpte2084') else 'treated as SDR'}")
 
