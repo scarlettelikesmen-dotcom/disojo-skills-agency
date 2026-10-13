@@ -10,3 +10,4 @@
 - [Print Elements rebuild](project-print-elements-rebuild.md) — press-bed concept, preview URL, what is real vs temporary, open items
 - [Read the Disojo chain first](feedback-read-the-disojo-chain.md) — Print Elements anger: run playbook, real assets, read skills when told
 
+- [Logo taste](feedback-logo-taste.md) — craft-vocabulary logos at OH restraint; no growth bars; use disojo-logo-design skill
