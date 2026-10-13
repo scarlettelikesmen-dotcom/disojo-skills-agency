@@ -14,3 +14,5 @@ Client: Print Elements, 7511 120 Street, Delta BC. Order ~USD 4,000 (currency to
 **Rules from Tejjomay:** all claims confirmed by owner (1,200+ projects, 4.9 Google, rush 24-48h, 3M/Avery, 3 reviews). DO NOT change the logo (shown unchanged, only framed/cropped round and resized). Photos will come from client; no Work section until then; stock mockups only as product illustrations, never captioned as their jobs.
 
 **Open:** client photos (swap via data files, see README), FormSubmit one-time activation + check 5 MB attachment limit, domain/DNS (canonical, og:image absolute, sitemap), privacy policy, reviewer-photo permission, currency, production deploy only on Tejjomay's go.
+
+**Status update 2026-10-13 (later):** Tejjomay rejected v2 outright ("disgusting"). It is NOT the deliverable. Cause: playbook skipped, stock mockups, no real assets. Next: follow disojo-client-playbook properly (asset request for real photos/film of their jobs, archetype stated, one real idea, whole build around real assets). Notes: print-elements-v2/SKILLS-READ-NOTES.md. Keep the logo unchanged. Currency of the 4,000 still unconfirmed.
