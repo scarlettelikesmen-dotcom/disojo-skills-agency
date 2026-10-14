@@ -1,0 +1,2 @@
+lang=en p=0.99 dur=17.9s
+Is trading actually impossible or are most people doing it wrong? I spent the last few months backtesting a strategy on the NASDAQ 14 months of data Around 90% win rate And 0 red months Now I'm starting to trade it live Follow me if you want to join my journey in becoming profitable

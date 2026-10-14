@@ -1,0 +1,2 @@
+lang=en p=0.93 dur=33.8s
+You're not inconsistent, you're just not disciplined. Cause let's be real, you know you're set up, you've seen it work before. But when it's actually time to execute, you end up hesitating. Or you just break your rules. You move your stop-loss, and you take a trade you plan to avoid. So what's the point of making those rules? And what happens at the end of the day? You blame the market, what else? And I'm not gonna lie and tell you that I didn't go through this. This is the exact reason I built Ray Drift. Check the caption for more details.
