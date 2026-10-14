@@ -6,7 +6,7 @@ Tejjomay: motion is good, "the design is kind of mid". My own critique after v4,
 3. **Mono labels are about 22 px: decoration at phone size.** Keep them decorative, or scale them up if they carry meaning.
 4. **Titles are plain 72 px statements** under the drawing. Make the key phrase the visual hero (type as character: scale, one italic accent, maybe the phrase on the drawing itself).
 5. **Panels are independent scenes.** The references' strongest idea is one persistent shape that morphs between ideas (motion-broll). Not built.
-6. **Both themes are used but there is no brand-specific accent beyond cream/ink inversion.** Possibly right for Disojo (minimal); personal and trading need their own identity (`disojo-brand-motion-intake`).
+6. **Both themes are used but there is no brand-specific accent beyond cream/ink inversion.** Possibly right for Disojo (minimal). codewithabel and abelkapoor-trading now have identity directions (stills in `$HUB/brands/_visual/`); panel types for them (`code`, `terminal`, `diff`, `screen`, `journal`, `checklist`) are not built.
 7. **Hook panel text sits in the middle of a mostly empty panel.** Try a bigger hook (fills width), a tool/brand mark as the "topic's tool or brand on top" per the playbook.
 8. **No whip/blur transitions or music**, so cuts between layouts are plain hard cuts (their house style, but ours could be smoother).
 9. **Unverified on a real phone.** All judgements are from 300 px tiles on a Mac.

@@ -1,3 +1,5 @@
+> **2026-10-14: three accounts, two worlds.** Brand folders are now `brands/disojo`, `brands/codewithabel`, `brands/abelkapoor-trading`. Start with `brands/README.md` and skill `disojo-content-os`. Older notes below that say `personal`/`trading` mean `codewithabel`/`abelkapoor-trading`.
+
 > **2026-10-13: the workflow now lives in skills.** Start with `disojo-reel-studio` (clip -> reel), `disojo-carousel-studio`, `disojo-content-copy`.
 > The engine is `~/.claude/skills/disojo-reel-studio/engine`; `tools/`, `design/`, `assets/`, `fonts/` here are links to it (edit in the skill, not here).
 > `_archive_pre_skill/` holds the pre-skill copies and can be deleted. The notes below are the original build log.

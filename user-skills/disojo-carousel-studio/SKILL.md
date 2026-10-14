@@ -17,7 +17,7 @@ Uses the engine of `disojo-reel-studio` (`ENGINE=~/.claude/skills/disojo-reel-st
 
 ## Brands
 - `disojo`: design system exists (`$ENGINE/design/disojo/tokens.css`). Source of truth is disojo.in; do not drift from its two themes.
-- `personal`, `trading`: **no design system yet.** Each needs its own visual identity (never reuse the Disojo look). Ask for colours or references once, or propose one direction with a rationale, build `design/<brand>/tokens.css`, and record it. Trading carousels follow the compliance guards in `copy-rules.md`.
+- `codewithabel` (dev log: IDE, mono, lime) and `abelkapoor-trading` (trading journal: paper, serif, red pen): **identity directions are designed as stills only** (`$HUB/brands/_visual/`, `brands/<slug>/visual-identity.md`), pending Tejjomay's approval; no `tokens.css`/carousel templates yet. Never render these brands in the Disojo look. After approval, turn the mockup HTML into carousel templates and tokens. Trading carousels follow the compliance guards in `copy-rules.md`.
 
 ## Known weaknesses (v1, 2026-10-13)
 Point slides are text-only and sparse; headlines could be larger and some slides want a diagram, device mockup or number block. Add slide types in `render-carousel.mjs` (e.g. `stat`, `compare`, `steps`) and tokens, then verify visually. Do not claim a slide type works until you have rendered and looked at it.

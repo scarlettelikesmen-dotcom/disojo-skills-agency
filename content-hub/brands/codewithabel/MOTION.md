@@ -1,0 +1,12 @@
+# codewithabel motion identity (reels and carousels), v0 2026-10-14. Personality: **Energetic-leaning precise** (a developer's tempo, not hype)
+- **Palette (meaning):** ground `#0B0D12`, surface `#12161F`, ink `#D9E0EC`, muted `#7C8799`; lime `#B8F34B` = shipped / the point; amber `#FFB547` = in progress / the note; red `#FF5C5C` = broken.
+- **Type:** Space Grotesk 700 tight for statements; JetBrains Mono for tags, code, captions, status bar.
+- **Signature easing:** `cubic-bezier(.16,1,.3,1)` (snappy ease-out); on-screen moves `cubic-bezier(.77,0,.175,1)`.
+- **Durations:** quick 100-140 ms, standard 200-360 ms, slow 600 ms. Stagger 40-55 ms (line-by-line reveals). Panels 2-3 s (house numbers: shorter than Disojo).
+- **Springs:** damping ratio >= .72 (pop 340/28); overshoot under 3%.
+- **Entrance pattern:** lines type/reveal left to right (clip-path) with a blinking caret; blocks slide 16 px and sharpen; code highlights wipe in.
+- **Layers:** primary = the statement or the code line; secondary = tag, breadcrumb, status bar; ambient = faint grid, lime glow breathing, gutter numbers.
+- **Layout:** split; panel types needed: `code` (real snippet, one highlighted line), `terminal` (real output), `diff` (before/after lines), `screen` (screen recording), `counter` (DAY NN). Built today: none of these (stills only).
+- **Captions:** terminal box (10 px radius, hairline lime edge), mono 800, lime block highlight, caret.
+- **Sound:** CC0 tick/click, very sparse; soft whoosh only on panel cuts.
+- **Never:** matrix rain, neon, fake terminal output presented as real, emoji, more than one accent moving at once.

@@ -1,0 +1,6 @@
+# Week plan: <brand> <date>
+Experiments running: ...  | Pillar mix target: ...
+| Day | Format | Pillar | Hook (spoken) | On-screen | Goal | CTA | Script | Status |
+|---|---|---|---|---|---|---|---|---|
+Filming session: <day>, <duration>, location, props. Edit by: <day>. Post slots (suggested, his call): ...
+Compliance/separation check done: [ ]

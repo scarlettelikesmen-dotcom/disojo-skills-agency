@@ -29,7 +29,7 @@ If a brand word or key word looks mis-heard, get a second opinion: `.venv/bin/py
 ## 3. Decide (this is the actual job)
 Inputs to read first: `$HUB/copy-rules.md`, `$HUB/brands/<brand>/voice.md` (if it exists), `brands/<brand>/brand.md`.
 
-**Infer, do not ask:** brand (trading words = trading, agency/software/clients = disojo, otherwise personal), goal (default: authority/follow), length (target 28-30 s of final reel, hard cap 35), format (9:16, 1080x1920).
+**Infer, do not ask:** brand slug from the content (trading talk = `abelkapoor-trading`; agency/clients/business owners = `disojo`; building/coding/dev log = `codewithabel`; ask only if genuinely ambiguous). **Never cross worlds:** nothing Disojo/codewithabel on the trading account and vice versa; use that brand's own look and voice (see `disojo-content-os`), goal (default: authority/follow), length (target 28-30 s of final reel, hard cap 35), format (9:16, 1080x1920).
 
 **Edit decisions** (write them as source-time `keep` ranges):
 - Keep the best complete attempt of each idea; usually the last take. Cut false starts, stalling, meta-talk ("I'll keep talking to reach a minute"), tangents.
@@ -45,10 +45,10 @@ Inputs to read first: `$HUB/copy-rules.md`, `$HUB/brands/<brand>/voice.md` (if i
 
 **Callouts:** a big number or fact pop only when he says the figure on camera.
 
-**Guards (non-negotiable):** never invent claims, stats, results, names or offers. Trading: no advice, signals, returns, unverified P&L; flag anything borderline for SEBI. Disojo: no client names or figures without client OK, no prices. Mark every claim he makes about others (competitors) or promises (care, results) in the delivery note.
+**Guards (non-negotiable):** never invent claims, stats, results, names or offers. `abelkapoor-trading`: education only; no advice, recommendations, signals, return or win-rate claims, no selling, disclaimer on every post; flag anything borderline for SEBI. `disojo`: no client names or figures without client OK, no prices. `codewithabel`: real builds only, disclose AI assistance, no secrets or client data on screen. Mark every claim he makes about others (competitors) or promises (care, results) in the delivery note.
 
 ## 4. Write the plan, render
-Plan file `$HUB/scripts/plan-<brand>-<name>.json`. Schema: `references/plan-schema.md`. Working example: `$ENGINE/templates/plan.example.json`.
+Plan file `$HUB/scripts/plan-<brand-slug>-<name>.json` (add `"brand": "<slug>"`; per-brand engine theming is NOT built yet: today every reel renders in the Disojo look, so for the other two brands render only draft stills until theming exists). Schema: `references/plan-schema.md`. Working example: `$ENGINE/templates/plan.example.json`.
 ```
 .venv/bin/python $ENGINE/tools/edit_reel.py CLIP --out edits/<name> --plan scripts/plan-....json
 ```

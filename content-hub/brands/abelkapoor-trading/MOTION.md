@@ -1,0 +1,13 @@
+# abelkapoor-trading motion identity, v0 2026-10-14. Personality: **Premium, unhurried, human** (calm over hype)
+- **Palette (meaning):** paper `#EFEAE0`, ink `#16140F`, muted `#6B655A`; red pen `#C0392B` = rule broken / the real tell; green ink `#2E6B4F` = rule followed.
+- **Type:** Instrument Serif (statements, italic for the emphasised word), IBM Plex Mono (labels, disclaimer), Caveat (red margin notes, sparingly).
+- **Signature easing:** `cubic-bezier(.4,0,.2,1)` for gentle settles; pen strokes draw with `cubic-bezier(.65,0,.35,1)`.
+- **Durations:** standard 300-560 ms, slow 800 ms for the red-pen draw-on. Longer reading holds than the other brands (>= 1.2 s per phrase). Panels 2.5-3.5 s. Stagger 70-90 ms.
+- **Springs:** damping ratio >= .85, overshoot <= 2% (paper does not bounce).
+- **Entrance pattern:** text fades up 12 px with a faint ink-bleed blur; pen underlines/circles draw on (SVG dash); stamps land with a small scale-down (1.06 -> 1) and a soft thud.
+- **Layers:** primary = the statement and the red-pen mark; secondary = checklist ticks, margin note, stamp; ambient = faint paper grain, very slow drift of the ruled lines, soft vignette.
+- **Layout:** split, light paper panels. Panel types needed: `journal` (statement + red-pen mark), `checklist` (ticks, struck-through rule, stamp), `planvsdid` (two columns: the plan said / what I did), `rule` (one rule, large). Built today: none (stills only).
+- **Captions:** paper box with ink border and hard offset shadow, serif ~92 px, **red marker underline** on the emphasised word (not a filled block).
+- **Constant mark:** `EDUCATION ONLY . NOT INVESTMENT ADVICE` small mono on every reel frame (compliance).
+- **Sound:** almost none: paper, a soft tick, a quiet thud on the stamp. No whoosh storms, no risers.
+- **Never:** profit screenshots, neon candlesticks, luxury props, countdown urgency, anything linking to Disojo or an app, P&L-green/red styling, bounce.

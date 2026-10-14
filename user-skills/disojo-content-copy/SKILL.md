@@ -1,11 +1,11 @@
 ---
 name: disojo-content-copy
-description: Writes hooks, short-form scripts, on-screen text, captions, post captions and carousel copy for Tejjomay's three brands (Disojo, personal, trading) in his real voice, without AI-slop and within compliance guards. Use for any content writing request - "write hooks", "script this", "caption this", "post caption", "what should I post", or as the copy step inside disojo-reel-studio and disojo-carousel-studio.
+description: Writes hooks, short-form scripts, on-screen text, captions, post captions and carousel copy for Tejjomay's three accounts (@disojo.solutions, @codewithabel, abelkapoor-trading) in his real voice, without AI-slop and within compliance guards. Use for any content writing request - "write hooks", "script this", "caption this", "post caption", "what should I post", or as the copy step inside disojo-reel-studio and disojo-carousel-studio.
 ---
 
 # Disojo content copy
 
-Source of rules: `~/.claude/skills/disojo-reel-studio/engine/copy-rules.md` (also at `$HUB/copy-rules.md`). It merges `going-viral`, `viral-hook-writer`, `reel-scripter`, `no-ai-slop` and `brand-voice`. Read it before writing. Voice profiles live in `$HUB/brands/<brand>/voice.md`; the trading/personal profile is built from his own transcripts (example: `engine/templates/voice.example.md`).
+Operating routine across the three accounts: `disojo-content-os`. Source of rules: `~/.claude/skills/disojo-reel-studio/engine/copy-rules.md` (also at `$HUB/copy-rules.md`). It merges `going-viral`, `viral-hook-writer`, `reel-scripter`, `no-ai-slop` and `brand-voice`. Read it before writing. Voice profiles live in `$HUB/brands/<brand>/voice.md`; the abelkapoor-trading profile is built from his own transcripts (example: `engine/templates/voice.example.md`).
 
 ## Workflow
 1. Identify brand, goal (save/share/follow/lead) and the one idea. If he gave a clip, the idea is what he said: do not substitute your own claim.
@@ -18,9 +18,9 @@ Source of rules: `~/.claude/skills/disojo-reel-studio/engine/copy-rules.md` (als
 First line carries the keyword or the hook (most people never tap "more"). One action only: save, share, follow or comment a keyword. No fake "comment WORD" unless he will deliver it. A few specific hashtags, not a wall. Trading: no signals or return promises. Disojo: no client names or prices. Draft, then flag; he posts it himself.
 
 ## Brand guards
-- trading: process, discipline, mistakes; no advice, entries, targets or returns; only real verifiable numbers he gives; flag SEBI-adjacent wording and ask.
+- abelkapoor-trading: education only; process, discipline, mistakes; no advice, recommendations, entries, targets, returns or win-rate claims; no selling (none for 6+ months); disclaimer on every post; only real verifiable numbers he gives; flag SEBI-adjacent wording and ask; never mention Disojo/codewithabel/Tradriv.
 - disojo: calm and authoritative; no submissive phrasing; no client names/figures without client OK; Postcards +42% is client-reported; no pricing in public content.
-- personal: only facts he confirmed about himself.
+- codewithabel: real builds only, disclose AI assistance, no secrets or client data; only facts he confirmed about himself.
 
 ## Output format for a content package
 1. Goal and one-line angle. 2. Hooks (10, 3 ranked, with on-screen versions). 3. Script with beats. 4. Shot notes. 5. Post caption + hashtags. 6. Claims he must confirm.

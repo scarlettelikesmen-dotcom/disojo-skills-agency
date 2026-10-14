@@ -1,5 +1,5 @@
-# Voice profile: Tejjomay, trading / personal brand
-Source: Whisper transcripts of 18 raw clips in ~/Desktop/PERSONAL BRAND REELS (days 2-7), saved in `brands/personal/_source/`. All English (p 0.76-0.98). Derived 2026-10-13; update as new reels arrive. Not Hinglish in this set.
+# Voice profile: abelkapoor-trading
+Source: Whisper transcripts of 18 raw clips in ~/Desktop/PERSONAL BRAND REELS (days 2-7), saved in `_source/`; plus TRADRIV/hoje reels in `../../research/transcripts/`. All English (p 0.76-0.98). Derived 2026-10-13; update as new reels arrive. Not Hinglish in this set.
 
 ## How the reels are built (the real pattern)
 - One body script per day, filmed with 2-3 different **hook lines** (A/B/C). Same payoff, different first sentence. Keep doing this: it is a free hook test.
@@ -20,3 +20,9 @@ Source: Whisper transcripts of 18 raw clips in ~/Desktop/PERSONAL BRAND REELS (d
 - The "isn't X, it's Y" and "Most traders ... " structure is his signature, but the no-ai-slop skill flags it as a pattern. Resolution: keep it because it is his real voice, but at most once per script and never stacked with a second contrast.
 - Generalisations about "most traders" are unsourced claims. Keep them as opinion ("I think"), not statistics.
 - Never promise outcomes ("you'll be profitable"). Describe behaviour and process.
+
+## 2026-10-14 additions (from the Tradriv and 'hoje' reels)
+- Confessional bridges are part of the voice: "I know I used to think the same", "honestly, it happened to me too", "I'm not gonna lie and tell you I didn't go through this". Keep only if still true; mark TO CONFIRM per script.
+- Older reels ended with a sales line ("this is exactly why I built...", "comment track"). **Drop those**: the account does not sell.
+- Older journey reels made performance claims ("90% win rate", "0 red months"). **Drop those** unless verified and framed per the compliance guards.
+- Counter-brand line available: "I'm not here to sell you anything" (from the journey series), now a deliberate pillar.

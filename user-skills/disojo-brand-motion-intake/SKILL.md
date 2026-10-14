@@ -9,7 +9,7 @@ Adapted from charlie947/motion-graphics-skills `brand-intake` (MIT) and the "ref
 
 ## State today (2026-10-13)
 - `disojo`: `$HUB/brands/disojo/MOTION.md` exists (premium, calm, precise; ink/cream; Host Grotesk; split panels). Design critique from Tejjomay: motion good, design still "mid" (see `disojo-panel-designer/references/known-weaknesses.md`).
-- `personal` and `trading`: **no look yet.** They currently borrow the shared cream-on-footage reel look. Run this intake first; do not guess colours.
+- `codewithabel` and `abelkapoor-trading`: identity directions decided as **stills (2026-10-14)**, awaiting approval: see `brands/<slug>/visual-identity.md` and `MOTION.md`; engine theming not built. Run this intake only to refine or if he rejects the direction.
 
 ## Interview (one round, skip anything already answered; at most ~8 questions)
 1. Who watches, and what should they feel after (trust, calm, urgency, authority)?

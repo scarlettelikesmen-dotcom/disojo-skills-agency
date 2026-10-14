@@ -23,7 +23,7 @@ Read the brand's `voice.md` first (trading has one). If a brand has no voice fil
 - Never invent stats, results, quotes, testimonials, client names. If a number is needed and not given, ask or leave it out.
 
 ## Brand guards
-- trading: no advice, signals, entries, price targets, or return promises. No unverified P&L. Process, discipline, mistakes. Flag anything borderline for SEBI and ask.
+- abelkapoor-trading: education only. No advice, recommendations, signals, entries/targets, return or win-rate claims, no unsourced stats, no selling/referrals/app/course (no selling for 6+ months), disclaimer on every post, nothing linking to the Disojo world. Process, discipline, mistakes. Flag anything borderline for SEBI and ask.
 - disojo: no client names/figures without client OK. Postcards +42% is client-reported. Pricing is never shown.
 - personal: only facts he confirmed.
 

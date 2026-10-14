@@ -1,5 +1,5 @@
 # Voice profile: Tejjomay, trading / personal brand
-Source: Whisper transcripts of 18 raw clips in ~/Desktop/PERSONAL BRAND REELS (days 2-7), saved in `brands/personal/_source/`. All English (p 0.76-0.98). Derived 2026-10-13; update as new reels arrive. Not Hinglish in this set.
+Source: Whisper transcripts of 18 raw clips in ~/Desktop/PERSONAL BRAND REELS (days 2-7), saved in `brands/abelkapoor-trading/_source/`. All English (p 0.76-0.98). Derived 2026-10-13; update as new reels arrive. Not Hinglish in this set.
 
 ## How the reels are built (the real pattern)
 - One body script per day, filmed with 2-3 different **hook lines** (A/B/C). Same payoff, different first sentence. Keep doing this: it is a free hook test.

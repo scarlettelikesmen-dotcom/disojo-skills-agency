@@ -1,1 +1,5 @@
 - [Content hub setup](content-hub-setup.md) — Tejjomay's content production desk: tools, status, what's still needed
+- [Content portfolio: two worlds](content-portfolio-two-worlds.md) — 3 Instagram accounts, separation rules, goals, where files live
+- [Brand: Disojo Solutions](brand-disojo-solutions.md) — agency account facts, goal (client leads), guards, open questions
+- [Brand: codewithabel](brand-codewithabel.md) — build-in-public account, series, story bank, open questions
+- [Brand: abelkapoor-trading](brand-abelkapoor-trading.md) — trading account, no-selling promise, compliance guards, open questions

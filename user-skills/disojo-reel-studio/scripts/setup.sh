@@ -13,12 +13,12 @@ for t in ffmpeg ffprobe node npm python3; do command -v "$t" >/dev/null && ok "$
 [ "$MISSING" = 0 ] || { echo "Fix the missing items above, then re-run."; exit 1; }
 
 echo "Workspace: $HUB"
-mkdir -p "$HUB"/{edits,scripts,inbox,brands/disojo,brands/personal,brands/trading,calendar,hooks,swipe}
+mkdir -p "$HUB"/{edits,scripts,inbox,brands/disojo,brands/codewithabel,brands/abelkapoor-trading,calendar,hooks,swipe}
 for d in tools design assets fonts; do
   if [ -L "$HUB/$d" ] || [ ! -e "$HUB/$d" ]; then ln -sfn "$ENGINE/$d" "$HUB/$d"; ok "link $d -> engine/$d"; else echo "  NOTE $HUB/$d exists and is not a link; leaving it (engine copy is at $ENGINE/$d)"; fi
 done
 [ -e "$HUB/copy-rules.md" ] || { cp "$ENGINE/copy-rules.md" "$HUB/copy-rules.md"; ok "copy-rules.md"; }
-for b in disojo personal trading; do [ -e "$HUB/brands/$b/brand.md" ] || { cp "$ENGINE/templates/brand.template.md" "$HUB/brands/$b/brand.md"; ok "brands/$b/brand.md (blank intake)"; }; done
+for b in disojo codewithabel abelkapoor-trading; do [ -e "$HUB/brands/$b/brand.md" ] || { cp "$ENGINE/templates/brand.template.md" "$HUB/brands/$b/brand.md"; ok "brands/$b/brand.md (blank intake)"; }; done
 
 echo "Python env (transcription, image tools)"
 if [ ! -x "$HUB/.venv/bin/python" ]; then python3 -m venv "$HUB/.venv"; fi
