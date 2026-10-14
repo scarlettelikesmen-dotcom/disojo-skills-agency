@@ -13,3 +13,5 @@ Each account has a distinct visual identity (Disojo calm editorial ink/cream; co
 
 **Why:** he wants one place where Claude does research, strategy, hooks, scripts, direction, planning, editing and review for all three, with each account consistent and separate.
 **How to apply:** work from `content-hub/brands/<slug>/` (`disojo`, `codewithabel`, `abelkapoor-trading`), start with `brands/README.md` and the brand's `brand.md`; use skill `disojo-content-os`; never cross worlds; never invent facts (mark TO CONFIRM); posting/DMs are always his. Related: [[content-hub-setup]].
+
+**Decision 2026-10-14 (later):** target audience for all three accounts is **tier-1 (US/UK/Canada/Europe)**, not India (purchasing power, not a values statement). SEBI is out; UK FCA and US FTC/SEC are the relevant regimes for trading content (FCA has prosecuted finfluencers; FTC pursues earnings claims). **Tradriv and every older reel are discarded**: never reuse or mention. India-specific hooks/examples (WhatsApp, GST, UPI) in the first drafts are outdated and need a tier-1 rewrite. He asked for help with account warm-up and attracting tier-1 viewers.

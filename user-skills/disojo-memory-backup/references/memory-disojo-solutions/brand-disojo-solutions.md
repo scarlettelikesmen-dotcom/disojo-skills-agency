@@ -13,3 +13,5 @@ Open: lead-magnet approval, language (English/Hinglish), baseline numbers, which
 
 **Why:** agency needs inbound leads; honesty ("sometimes you don't need custom software") is the trust differentiator.
 **How to apply:** files in `content-hub/brands/disojo/` (brand, voice, strategy, hooks, scripts, calendar, research, MOTION, visual-identity, published log). See [[content-portfolio-two-worlds]].
+
+**Update 2026-10-14 (later):** audience is now tier-1 (US/UK/CA/EU); Tradriv and old reels discarded; SEBI dropped (FCA/FTC/SEC instead for trading). First-batch hooks/scripts written for an Indian audience need a tier-1 rewrite.

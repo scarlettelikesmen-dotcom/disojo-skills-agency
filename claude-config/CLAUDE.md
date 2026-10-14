@@ -1,37 +1,44 @@
 # Master context: Tejjomay / Disojo
 
-Loaded at the start of every Claude Code session, in every project. Keep it short and true; update it when facts change.
+Loaded at the start of every Claude Code session, in every project. Keep it short and true; update it when facts change. Last full refresh: 2026-10-14.
 (Pronouns not stated: use Tejjomay's name or "they".)
 
 ## Who and what
-- **Tejjomay**, founder of **Disojo** (disojo.in), a software studio in Mumbai. Leads every project personally.
-- Disojo builds "the software behind successful businesses" for **owner-run businesses** (not enterprise/VC startups): websites, web apps and
-  portals, CRMs/invoicing/internal tools, mobile apps, automation.
-- Positioning: **discovery-first** ("find where the work leaks" before building: WhatsApp bookings, spreadsheet fee tracking, retyped documents,
-  tribal knowledge). Build in stages with client visibility, no big reveal at the end. Stay on after launch.
+- **Tejjomay** (Tejjo), founder of **Disojo**, a software studio in Bombay/Mumbai. Leads every project personally. Public name **Disojo Studio**; the legally registered entity is **Disojo Solutions** (MSME Udyam registered). Write "Disojo Solutions" only where the legal entity is meant (company block, contracts, invoices); use "Disojo Studio" or "Disojo" everywhere else.
+- Site: **www.disojostudio.com** (old disojo.in redirects to it; keep the redirects 180+ days). Public email projects@disojostudio.com, phone +91 77380 73307, Instagram on the site: instagram.com/disojo.solutions (the business card says @disojostudio; which one is real is unconfirmed), discovery calls on cal.com/disojo-solutions/discovery-call.
+- Disojo builds for **owner-run businesses** (not enterprise/VC startups). Four services as on the site: **Branding and websites**, **MVPs for startups**, **Internal business tools** (admin panels, CRMs, dashboards, portals), **Digital systems and automation**. Hero line: "Disojo builds digital systems for owner-run businesses: custom software, MVPs and internal tools that keep the business running smoothly, so you can spend your time on the business, not the busywork."
+- Positioning: **discovery-first** ("find where the work leaks" before building: WhatsApp bookings, spreadsheet tracking, retyped documents, tribal knowledge). Build in stages with client visibility, no big reveal at the end. Stay on after launch. The founder leads every project.
+- Offer thinking (not public, nothing priced on the site): two doors, Presence (identity + site + enquiry pipeline) and Bottleneck fix (the KDC model). First outreach list: owner-run classes/academies in Bombay. Tejjo floated about $4,500 for identity + site + pipeline aimed abroad; price and packaging are unresolved. Never quote a price or currency without asking.
 - Team: Tejjomay leads; a client has mentioned Divyansh as part of the team. Client comms run through each client's own portal.
-- Past/sample work (as listed on disojo.in): KDC (student/parent/tutor booking and fees), Postcards Perfumes (D2C perfume site; the site
-  credits a quiz with +42% sample-pack sales, as the client reported), Tradriv (pre-revenue trading-discipline app), Sudha Mahesh Thakkar
-  (turmeric exporter site), Nature's Blend (business-card scanner app).
+- Work shown on the site (six case studies): KDC (Kunal Drum Class: student/parent/tutor apps + admin panel), Postcards Perfumes (D2C perfume store), Mentable (pre-revenue trading-discipline app; formerly called Tradriv), Sudha Mahesh Thakkar (turmeric exporter site), Nature's Blend (business-card scanner app; the client dropped WhatsApp, never write about it), Ascender Media (short-form video agency; the site was rebranded at the client's request and the new version is live on ascendermedia.in).
+- **Verified claims, final, never ask again:** "50+ projects completed since our launch", Ascender +70% local inquiries and its 100 mobile performance / 100 SEO (Tejjo's own test), Postcards Meta ad return 0.6x to 3.7x (+42% bundle sets as the client reported), the Ares Sharma and Parag Mehta (Mentable founder and CTO) review wording and names, Lopamudra's Postcards quote, KDC may be named, "10 hrs back every week" for KDC. Chats on the Ascender page are shown with their permission. New claims Tejjo has not stated still need their word.
 - Email on file: tradingprops09@gmail.com (use only to identify them).
 
 ## Current goals (update as they change)
-1. **Win paying website clients.** Tejjomay wants to prove they can build premium, scroll-driven brand sites like palmo, ciaoenergy, agrumeafarm,
-   alche.studio, oharchitecture, then pitch clients at 10-20k deals (currency not confirmed: ask before quoting).
-2. **Proof piece done:** a free rebuild of Postcards Perfumes. Live demo https://postcards-rebuild-demo.vercel.app, code in
-   `~/Desktop/websites ARCHIVE/lumina-store` (branch `3d-rebuild`, remote disojo-solutions/postcards-perfumes-web). **Live on postcardsperfumes.in since 2026-10-09** (Vercel project lumina-store). Details in memory (`lumina-store-3d-rebuild`).
+1. **Win paying clients with the live site** (www.disojostudio.com). Premium, scroll-driven brand sites are the proof (palmo, ciaoenergy, agrumeafarm, alche.studio, oharchitecture as references); pitch clients at 10-20k deals (currency not confirmed: ask before quoting).
+2. **Proof pieces done:** Postcards Perfumes free 3D rebuild, live on postcardsperfumes.in since 2026-10-09 (code `~/Desktop/websites ARCHIVE/lumina-store`, branch `3d-rebuild`, remote disojo-solutions/postcards-perfumes-web; memory `lumina-store-3d-rebuild`); Ascender Media flagship.
 3. **Make everything reusable** so a new client goes: assets in, working demo the same day.
 4. Original project in `~/claudeskillsthrureels`: turn saved/DM'd Instagram reels into usable skills (memory: `reels-to-skills-goal`).
+5. **Open on the Disojo site:** interaction sounds (Tejjo asked 2026-10-13; raise first next session and ask which interactions get a sound and whether sound is on by default; memory `reminder-site-interaction-sounds`), refresh Instagram "services" slides, nav colour on case-study and contact pages, academy package price, and Tejjo's own to-do list from the 2026-10-13 audit (revoke the Telegram bot token in git history, Resend + DMARC for disojostudio.com, confirm the projects@ mailbox, Instagram handle, unused Vercel variables, KDC portal DB row, analytics decision).
+
+## DISOJO WEBSITE (disojostudio.com): START WITH memory `disojo-site-state-2026-10-13` and `~/Desktop/disojo-hybrid/HANDOFF.md`, then `feedback-how-tejjo-iterates`
+- Repo `~/Desktop/disojo-hybrid` (Astro 7, @astrojs/vercel 11, branch `site-rebuild-astro-v2`, origin scarlettelikesmen-dotcom/leadvix-website, a private repo; Vercel project leadvix-website). Not in git: `_archive/` (backups, tools, originals) except `_archive/originals-prewatermark`. A second remote `portal` exists for the client portal (`disojo-solutions/disojo-client-portal`); the portal pages and API still live in this repo.
+- **Workflow:** change locally (`npx astro dev --port 4399`), push to the noindex phone-preview link https://dsj-preview-k7q.vercel.app with `_archive/phone-preview.sh`, show it, and **deploy to live ONLY when Tejjo says "deploy"** (build, commit with the Co-Authored-By line, push, `vercel --prod --yes`, curl the live page). Update memory + HANDOFF.md after a deploy.
+- **Images under /work cache for a week: any replaced image gets a NEW file name.** Screenshots on the site carry a small "© DISOJO" corner watermark (`_archive/watermark.py`, originals in `_archive/originals-prewatermark`).
+- **Copy rules:** visible copy says **Bombay**; titles, meta descriptions, JSON-LD and legal documents say **Mumbai** (keeps the "Mumbai software" search term). No "vibe-coded" claims (the site was built with AI help), no unverified numbers, no em dashes, no AI-slop words. The footer copyright says Disojo Studio.
+- **Things that bite:** keep the Lenis script a plain blocking tag (a `defer` makes shared.js run first and Lenis never starts); `/contract`, `/invoice`, `/proforma`, `/dovi001` and the portal are private (middleware 404s/redirects them on the public host, noindex, not in sitemap/robots); client financials (KDC contract) sit in the repo, which is private: never make it public.
+- **Test like Tejjo's real window:** 1512x864 (and 1440x790/820, 1860x955, 1920x1080, 1280x720) plus phones 390/360/430, and look at the screenshots. Real phones and Safari are untested. Measure covers, gaps and overflow with numbers, not just a glance.
+- **Working rules from Tejjo:** do only what is asked; revert only what is asked (never re-apply something they told me to revert); never write a file before reading it; finish, verify, then show; they iterate fast with screenshots, so read the screenshot closely.
 
 ## When a new website client comes up: START WITH THE SKILL `disojo-client-playbook`
 It chains the rest (all in `~/.claude/skills/`): `disojo-client-intake` (asset request, inventory script, brand brief) ->
 `disojo-site-archetypes` (nine audited reference sites, decision tree) -> `disojo-site-starter` (runnable project, one `brand.config.js`) ->
 `disojo-motion-recipes` (tested effects) -> `disojo-launch-checklist` (pre-launch gate, Lighthouse, handover). Background and prompts:
-`disojo-scroll-site-rebuild`. Real GLB/3D heroes: `disojo-3d-product-site`. Packaged goods 3D (cans/jars/bottles/boxes, label-swap kit) and how to source product 3D assets: `disojo-packaged-product-3d`. Premium non-3D brand/agency sites (reference: Ascender Media, live, Lighthouse 99/100/100/100): `disojo-premium-site-method`. Code quality gate: `disojo-guardrails`.
+`disojo-scroll-site-rebuild`. Real GLB/3D heroes: `disojo-3d-product-site`. Packaged goods 3D (cans/jars/bottles/boxes, label-swap kit) and how to source product 3D assets: `disojo-packaged-product-3d`. Premium non-3D brand/agency sites (reference: Ascender Media): `disojo-premium-site-method`. Code quality gate: `disojo-guardrails`. Logos: `disojo-logo-design`.
 Do not rebuild from scratch what these already do.
 
 ## Content across his 3 Instagram accounts: START WITH `disojo-content-os` (planning, strategy, research, scripts, calendar, review). For a video clip: `disojo-reel-studio`.
-Accounts: @disojo.solutions (agency, leads), @codewithabel (build in public), abelkapoor-trading (trading, value only, no selling for 6+ months, **fully separate from the Disojo world**). Hub `~/Desktop/DISOJO SOLUTIONS/content-hub/brands/<slug>/`; read `brands/README.md` first. Never cross worlds; never invent facts.
+Accounts: @disojo.solutions (agency, leads), @codewithabel (build in public), abelkapoor-trading (trading, value only, no selling for 6+ months, **fully separate from the Disojo world**). Hub `~/Desktop/DISOJO SOLUTIONS/content-hub/brands/<slug>/`; read `brands/README.md` first. Never cross worlds; never invent facts. Existing Disojo highlight sets are in `~/Desktop/Disojo-IG-Highlights` (Tejjo posts one a day); the Services "Mobile apps" slide is outdated.
 
 ## When he sends a video clip or asks for content (reels, carousels, hooks, captions): START WITH THE SKILL `disojo-reel-studio`
 Clip + one line of prompt in, verified ~30s reel out (retake-free cut, branded captions + highlights, animated hook, illustrated cards, voice clean, loudness). Sister skills: `disojo-carousel-studio`, `disojo-content-copy` (hooks/scripts/post captions, voice profiles), `disojo-motion-craft` + `disojo-panel-designer` (design/motion taste and review), `disojo-sound-design`, `disojo-short-form-playbook`, `disojo-reel-export`, `disojo-brand-motion-intake` (personal/trading brands need a look first). Design is still "mid" per Tejjomay: start from `disojo-panel-designer/references/known-weaknesses.md`. Workspace `~/Desktop/DISOJO SOLUTIONS/content-hub` (edits, plans, brands); the engine lives inside the skill folder. Do not make him explain format, look or motion: decide, verify frames, deliver with flags. Never captions-only. Font is Host Grotesk (final). Posting is always his.
@@ -39,32 +46,30 @@ Clip + one line of prompt in, verified ~30s reel out (retake-free cut, branded c
 ## How Tejjomay wants me to work
 - **Finish the whole section/feature, verify it myself, then show it.** No stream of small check-ins or "want me to...?" for obvious next steps.
 - **Re-read their details before generating or building** (label wording, sizes, camera moves, copy). Wrong output costs them manual rework and patience.
-- **Never invent content**: no made-up reviews, stats, offers, products, contact details. Switch the section off and say so.
-- **Be direct and honest.** Say plainly what is a placeholder, AI-generated, or untested (real phones are untested so far). If a theory is
-  disproved by measurement, say so and revert.
+- **Never invent content**: no made-up reviews, stats, offers, products, contact details, prices. Switch the section off and say so. When a fact is unclear (a phrase they dictated, a number), leave it out and ask in one line instead of guessing.
+- **Be direct and honest.** Say plainly what is a placeholder, AI-generated, or untested (real phones are untested so far). If a theory is disproved by measurement, say so and revert. If I made a mistake (a cached image, a blurred fill-in, a wrong assumption), say it plainly and fix it.
+- **Do not take creative liberties they did not ask for** (they objected to a blurred background fill I added without asking). Offer options in words instead.
 - **Every client site needs its own visual identity and flow.** Never reuse the Postcards/starter look (nav, FAQ, footer, curtain, chapters); the starter is plumbing only. See memory `feedback-unique-design-per-client`.
-- Every client site footer carries "Developed by Disojo Solutions" (right side) linking to https://disojo.in (added on Ascender 2026-10-09).
-- Design taste: editorial, minimal, specific copy; they dislike generic "AI slop" (clutter, badge soup, emoji icons, filler text).
+- Every client site footer carries "Developed by Disojo Solutions" (right side) linking to https://disojostudio.com (older sites still link disojo.in, which redirects).
+- Design taste: editorial, minimal, specific copy; they dislike generic "AI slop" (clutter, badge soup, emoji icons, filler text). Premium and clean beats busy.
 - Measure before and after any optimisation. Use real screenshots, desktop and phone widths.
-- Confirm before outward-facing or hard-to-reverse actions (publishing, pushing, deleting, sending). Public demo deploys have been requested
-  explicitly before; do not widen scope beyond what was asked. Commit only when asked.
-- **Never type credentials**; they log in themselves. Keep API keys in gitignored env files, never in chat or git; remind them to rotate any
-  key pasted in chat (a Gemini key was pasted once).
+- Confirm before outward-facing or hard-to-reverse actions (publishing, pushing, deleting, sending, rewriting git history). For the Disojo site the standing rule is the "deploy" word above; other projects: do not widen scope beyond what was asked, and commit only when asked.
+- **Never type credentials**; they log in themselves. Keep API keys in gitignored env files, never in chat or git; remind them to rotate any key that appears in chat or in git history (a Gemini key was pasted once; a Telegram bot token sits in the old git history of the site repo).
 - Put a git remote on every project early; so far work lives on one Mac.
 
 ## Shipped
-- **Ascender Media**: flagship rebuild live on ascendermedia.in since 2026-10-09 (Vercel project social-growth-agency; rollback social-growth-agency-9pzpqpkcw). Code `~/Desktop/websites ARCHIVE/ascender-media/site` (no remote yet). Memory `project-ascender-media-rebuild`.
-
+- **Disojo website** www.disojostudio.com (Astro 7, Vercel project leadvix-website, deploy rule above). Live commit at the last refresh: 7c701d4.
+- **Ascender Media**: flagship site live on ascendermedia.in since 2026-10-09, rebranded 2026-10-14 (full-screen image hero, three priced plans, client chats as proof). Vercel project social-growth-agency; rollback social-growth-agency-9pzpqpkcw. Code `~/Desktop/websites ARCHIVE/ascender-media/site` (no remote yet). Memory `project-ascender-media-rebuild`. Its footer credits Disojo.
+- **Postcards Perfumes**: live on postcardsperfumes.in (see goals).
 - **Print Elements** (Delta BC print shop, USD 4k order): v3 (light, die-cut sticker collage, built from the client's own Wix assets) in `~/Desktop/websites ARCHIVE/print-elements-v3`, preview https://print-elements-v3-preview.vercel.app (noindex, not on a real domain). v2 was rejected. Memory `project-print-elements-rebuild`.
+- **KDC** (Kunal Drum Class, Chembur): student/parent/tutor app (`projects/kdc/KDCAPP`), admin web panel, Supabase backend; see `projects/kdc/KDCAPP/AGENTS.md` and memory `kdc-*` before touching it. The site's KDC story and case study are public; the contract and financials are private.
 
 ## Environment notes
-- macOS, zsh. Project work for sites: `~/Desktop/websites ARCHIVE/`. Skills live in `~/.claude/skills`, mirrored to the private GitHub repo scarlettelikesmen-dotcom/disojo-skills-agency (working copy ~/Desktop/DISOJO SOLUTIONS/skills); Memory notes are backed up via skill `disojo-memory-backup` (run its backup_memory.sh after memory changes); CLAUDE.md and settings.json are backed up in the same repo under `claude-config/` (approved 2026-10-09); client website code is on the repo branch `archive-client-code`; recovery steps in RECOVERY.md. Postcards site: private repo disojo-solutions/postcards-perfumes-web (agency account). Two GitHub logins saved: put the username in remote URLs.
-- Headless Chrome via `puppeteer-core` is the reliable way to screenshot and test (the browser pane can return blank images when hidden).
-  The Claude scratchpad under `/private/tmp` is wiped on restart: keep scripts in the repo or in a skill, and reinstall `puppeteer-core` after reboot.
-- Python needs a venv (system pip is blocked): `~/claudeskillsthrureels/.venv` has rembg and Pillow.
-- Vercel CLI is logged in; public demos go in their own project (preview deploys under a team project are login-protected).
-- AI footage tools used so far: Gemini web app (Omni 1.1 Flash video, image generation). The Veo API needs billing. Outputs carry an invisible
-  SynthID mark: disclose to clients.
+- macOS, zsh. Project work for sites: `~/Desktop/websites ARCHIVE/` (the Disojo site is `~/Desktop/disojo-hybrid`). Skills live in `~/.claude/skills`, mirrored to the private GitHub repo scarlettelikesmen-dotcom/disojo-skills-agency (working copy ~/Desktop/DISOJO SOLUTIONS/skills); Memory notes are backed up via skill `disojo-memory-backup` (run `~/.claude/skills/disojo-memory-backup/scripts/backup_memory.sh` after memory changes); CLAUDE.md and settings.json are backed up in the same repo under `claude-config/` (approved 2026-10-09); client website code is on the repo branch `archive-client-code`; recovery steps in RECOVERY.md. Postcards site: private repo disojo-solutions/postcards-perfumes-web (agency account). Two GitHub logins saved: put the username in remote URLs.
+- Headless Chrome is the reliable way to screenshot and test: `playwright-core` with `channel:'chrome'` (or `puppeteer-core`); the browser pane can return blank images when hidden. The Claude scratchpad under `/private/tmp` is wiped on restart: keep scripts in the repo or in a skill, and reinstall `playwright-core` after reboot. Lighthouse: `~/.claude/skills/disojo-premium-site-method/scripts/lighthouse_summary.sh <url> [desktop]`.
+- Python needs a venv (system pip is blocked): `~/claudeskillsthrureels/.venv` has rembg and Pillow (the system Python also has Pillow, no numpy). ffmpeg and cwebp are installed (brew).
+- Vercel CLI is logged in (an update is available, not required); public demos go in their own project (preview deploys under a team project are login-protected).
+- AI footage and image tools used so far: Gemini web app (Omni 1.1 Flash video, image generation; Tejjo generates the hand-held phone mockups there from screenshots I supply). The Veo API needs billing. Outputs carry an invisible SynthID mark: disclose to clients.
 
 ## Keep this file healthy
 Short, factual, dated where it can go stale. Move long procedures into skills and long history into memory; this file is only the index and the rules.

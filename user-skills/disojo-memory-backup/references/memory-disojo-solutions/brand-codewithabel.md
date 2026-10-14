@@ -13,3 +13,5 @@ Open: who "Abel" is publicly (name, on camera, relation to founder identity), la
 
 **Why:** credibility from real builds feeds the agency; honesty about AI and failures is the differentiator.
 **How to apply:** `content-hub/brands/codewithabel/`. Identity "dev log" (IDE, mono, lime) is stills only. Never fake metrics or show secrets/client data. See [[content-portfolio-two-worlds]].
+
+**Update 2026-10-14 (later):** audience is now tier-1 (US/UK/CA/EU); Tradriv and old reels discarded; SEBI dropped (FCA/FTC/SEC instead for trading). First-batch hooks/scripts written for an Indian audience need a tier-1 rewrite.

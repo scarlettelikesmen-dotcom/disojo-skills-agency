@@ -7,6 +7,8 @@ Decided with Tejjomay 2026-10-14. This file is the map; each brand folder holds 
 | **@codewithabel** | founder building Disojo in public | **Disojo world** | build an audience by documenting real builds; credibility then leads | `codewithabel/` |
 | **abelkapoor-trading** (exact handle unconfirmed) | trading psychology / process, personal brand | **Trading world** | audience and authority through pure value; **no selling, no paid course for at least 6 months** | `abelkapoor-trading/` |
 
+**Audience decision (2026-10-14, later):** all three accounts target tier-1 audiences (US, UK, Canada, Europe). Tradriv and all pre-October reels are discarded. SEBI is out of scope; UK FCA and US FTC/SEC rules apply to trading content instead.
+
 ## Separation rules (hard)
 1. **Trading is completely disconnected from the Disojo world.** Never mention, tag, link, cross-promote or visually echo Disojo or codewithabel on the trading account, and never the reverse. No shared bio links, no shared footage reused across worlds, no shared look.
 2. **Disojo world:** both accounts carry `disojostudio.com` in the bio (`disojo.in` redirects there). codewithabel's bio says it builds Disojo in public. They may feature each other's work. Client confidentiality still applies (see `disojo/brand.md`).

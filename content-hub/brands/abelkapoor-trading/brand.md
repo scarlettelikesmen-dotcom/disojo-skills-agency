@@ -1,3 +1,5 @@
+> **DECISION 2026-10-14 (later):** target audience is **tier-1 (US, UK, Canada, Europe)**, not India. India-specific references and the SEBI sections below are **superseded** (SEBI is out of scope; tier-1 equivalents apply: UK FCA, US FTC/SEC; see `research/sources.md` additions). **Tradriv and all older reels (Apr-May 2026) are discarded entirely**: do not reuse, quote or build on them. Hooks, strategy, calendar, scripts and examples in this folder are being rewritten for tier-1; treat Indian examples (WhatsApp, GST, UPI, Mumbai) as outdated until the rewrite.
+
 # Brand file: abelkapoor-trading (personal trading brand)
 Status: concept and goal decided 2026-10-14. **Exact handle unconfirmed** (public pages not found for `abelkapoor.trading`, `abelkapoor_trading`, `abelkapoortrading`; Instagram handles cannot contain hyphens). `TO CONFIRM` = ask before using.
 

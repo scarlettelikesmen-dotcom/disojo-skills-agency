@@ -15,3 +15,5 @@ Open: exact handle; "Abel Kapoor" public name and an on-camera age statement in 
 
 **Why:** the restraint and honesty are the differentiator and also the safest lane legally.
 **How to apply:** `content-hub/brands/abelkapoor-trading/`; run the compliance checklist on every script; visual identity "trading journal" (paper, serif, red pen) is stills only. See [[content-portfolio-two-worlds]].
+
+**Update 2026-10-14 (later):** audience is now tier-1 (US/UK/CA/EU); Tradriv and old reels discarded; SEBI dropped (FCA/FTC/SEC instead for trading). First-batch hooks/scripts written for an Indian audience need a tier-1 rewrite.
