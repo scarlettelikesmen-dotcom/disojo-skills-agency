@@ -1,40 +1,25 @@
-> **DECISION 2026-10-14 (later):** target audience is **tier-1 (US, UK, Canada, Europe)**, not India. India-specific references and the SEBI sections below are **superseded** (SEBI is out of scope; tier-1 equivalents apply: UK FCA, US FTC/SEC; see `research/sources.md` additions). **Tradriv and all older reels (Apr-May 2026) are discarded entirely**: do not reuse, quote or build on them. Hooks, strategy, calendar, scripts and examples in this folder are being rewritten for tier-1; treat Indian examples (WhatsApp, GST, UPI, Mumbai) as outdated until the rewrite.
+# Brand file: Disojo Solutions (@disojo.solutions; LinkedIn company page)  v2 2026-10-14
+Status: facts from the live profile (logged-out view 2026-10-14), the site and project rules. `TO CONFIRM` = ask before using.
 
-# Brand file: Disojo Solutions (@disojo.solutions)
-Status: facts confirmed from the live profile, the site and project rules on 2026-10-14. `TO CONFIRM` = ask before using.
-
-## Account (observed 2026-10-14, logged-out view)
-- Handle `@disojo.solutions`. Display name: "DISOJO | Custom Software & Consulting". Category: Software.
-- Bio: "Digital systems for owner-run businesses. High-performance Software & Automations designed to scale legacy trust." Link: `disojostudio.com` (`disojo.in` redirects to it).
-- Posts: 1. Followers/following shown as 0 (logged-out display; verify in the app). Highlights covers and story slides already designed (`~/Desktop/Disojo-IG-Highlights`, `disojo-story-slides`).
-- Note: AGENTS.md still names `hello@disojo.in` as the public front-door mailbox while the live domain is `disojostudio.com`. TO CONFIRM which address is current before it goes in any CTA.
+## Account
+Instagram `@disojo.solutions` ("DISOJO | Custom Software & Consulting"; bio: "Digital systems for owner-run businesses. High-performance Software & Automations designed to scale legacy trust."; link `disojostudio.com`, `disojo.in` redirects there; 1 post). Platforms (6, same handle everywhere, verify limits): TikTok, Instagram, Snapchat, YouTube, X, LinkedIn (**company page created**; Tejjomay's personal LinkedIn amplifies).
+Note: AGENTS.md names `hello@disojo.in` as the public mailbox; the live domain is `disojostudio.com`. TO CONFIRM which address is current.
 
 ## Who
-Mumbai software studio. Site description: branding and websites, MVPs, internal business tools and digital systems for owner-run businesses in Mumbai, India. Positioning: **discovery-first** ("find where the work leaks", then build in stages with client visibility, stay after launch). Motto in project rules: "Peace of mind is our forte."
-Public sample work listed on the site: Postcards Perfumes, Ascender Media, Sudha Mahesh Thakkar, KDC, Mentable, Nature's Blend (+ Tradriv listed in older notes; parked).
+Bombay (Mumbai) software studio, **proudly stated on the site**. Branding and websites, MVPs, internal tools and digital systems for owner-run businesses. **Discovery-first**: find where the work leaks, build in visible stages, stay after launch. Motto: "Peace of mind is our forte."
+Public sample work on the site: Postcards Perfumes, Ascender Media, Sudha Mahesh Thakkar, KDC, Mentable, Nature's Blend.
 
-## Goal (decided 2026-10-14)
-**Client leads** over the next 90 days: inbound conversations with owner-run businesses.
-
-## Audience (working hypothesis, validate with real DMs)
-Owner or operator of an owner-run business in India (Mumbai first): coaching classes, clinics, D2C brands, exporters, small service firms. WhatsApp-first, spreadsheet-run, not technical, wary of agencies that over-promise. Secondary: managers and operations leads who feel the admin pain.
+## Audience and goal (decided 2026-10-14)
+**Tier-1 (US, UK, Canada, Europe) owner-run businesses; goal = client leads.** Disojo is ready for tier-1 clients; **USD pricing is being set (2026-10-14) and stays private** (price floors and ranges in AGENTS.md are internal). English only; US/UK spelling; no India-specific pain examples.
 
 ## Voice
-Authoritative, calm, structured, sovereign (AGENTS.md). Never submissive ("Sorry for the delay", "please let me know if the price is okay"). Specific over abstract. See `voice.md`.
+Authoritative, calm, structured, never submissive (AGENTS.md). Founder on camera can be direct. Bombay is a point of pride, not an apology. See `voice.md`.
 
-## Hard guards (from AGENTS.md and working rules)
-- No invented claims, numbers, locations, branches, hardware, tax codes or testimonials.
-- No client names, contracts, invoices or financial figures on public content unless that client has agreed. Work already listed publicly on the site may be referenced by name; results are only "as reported by the client".
-- Never show pricing or the price floors publicly.
-- Postcards "+42% sample-pack sales" is client-reported: say so.
-- Footer/credit rule applies to client sites, not reels.
+## Hard guards
+No invented claims, numbers, locations, tax codes or testimonials; no client names/contracts/figures without the client's OK (work on the site may be named; results "as reported by the client", e.g. Postcards +42%); never show pricing; no competitor insults; Tradriv and all older reels are discarded; the trading account is a separate world.
 
-## Existing assets
-Logo set (`~/Desktop/DISOJO SOLUTIONS/logo`), wordmark, IG highlight covers, 2 story slides, the reel engine, a 27 s founder reel (`edits/disojo-reel-2198-v4.mp4`, draft; "agencies are trash" line is blunt: Tejjomay's call).
+## Assets
+Logo set, wordmark, IG highlight covers and story slides, the reel engine and Disojo look, a draft founder reel (`edits/disojo-reel-2198-v4.mp4`: blunt "agencies are trash" line is his call and needs a tier-1/brand check).
 
-## TO CONFIRM (answer once)
-1. Offer for leads: is a **free 15-minute "leak check" call** (or a free "leak checklist") something you want to offer publicly? Pricing/terms stay private.
-2. Language: English, Hinglish, or a mix?
-3. Current follower/lead numbers from Instagram Insights (to set baselines).
-4. Which sample-work clients have OK'd being shown with screenshots or results.
-5. Posting capacity per week (and who films).
+## TO CONFIRM
+Offer wording ("free leak check" + 7-question checklist), USD pricing (private), current public email, clients OK'd for case studies, handles registered per platform, capacity, baseline numbers.

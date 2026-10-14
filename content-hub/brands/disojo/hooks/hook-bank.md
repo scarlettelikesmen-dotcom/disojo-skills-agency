@@ -1,27 +1,40 @@
-# Hook bank: @disojo.solutions
-Rules: spoken <= 12 words, opens a gap or names a recognisable pain, no invented stats, no "most agencies" numbers. On-screen version: 2-3 lines, <= 18 characters per line. `Angle` rotates (pain / contrarian / checklist / proof / behind-the-scenes). `Goal` = send / save / follow / lead. Test 2-3 variants of the first line over one body (A/B/C).
+# Hook bank v2: Disojo (tier-1, US/UK English). Replaces the India-flavoured v1.
+Rules: spoken <= 12 words; no invented stats; recognisable owner pain; never about people, always about process. `A` = talking-head hook (trust), `B` = hot take (reach; he approves each), `C` = carousel cover (CTA/authority). On-screen: <= 18 chars/line.
 
-| # | Spoken hook | On-screen | Angle | Goal | Notes |
-|---|---|---|---|---|---|
-| 1 | If your bookings live in WhatsApp, you don't have a booking system. You have a person. | Your bookings are\na person. | pain | send | core pain; "tell" = someone scrolls chats |
-| 2 | Your spreadsheet isn't the problem. The one person who understands it is. | The spreadsheet\nisn't the problem. | pain | send | knowledge in one head |
-| 3 | You're typing the same details into three places. | Same details.\nThree places. | pain | send | retyped documents |
-| 4 | Before you hire an agency, ask this: what would you NOT build for me? | Ask what they\nwon't build. | contrarian | save | honest-advice pillar |
-| 5 | You might not need custom software. Here's how to tell. | Do you need\n*software?* | contrarian | save | cite Vyapar/Tally only as examples, not claims |
-| 6 | Month-end shouldn't cost you an evening. | Month-end costs\nan *evening.* | pain | send | fee tracking |
-| 7 | The question we ask before we write any code. | Before any\n*code.* | process | follow | "where does the work leak?" |
-| 8 | Four places we look first in your business. | Four places\nwork leaks. | checklist | save | = carousel cover |
-| 9 | If one person is on holiday and everything stops, you have a process stored in a person. | A process\nstored in a *person.* | pain | send | strong identity line |
-| 10 | We don't build the first thing you ask for. | We don't build\nwhat you ask. | contrarian | follow | explain: we find the real problem first |
-| 11 | You're not behind on technology. You're behind on one workflow. | One workflow.\nNot *everything.* | reframe | send | reassuring, owner-friendly |
-| 12 | Here's what a first conversation with us actually covers. | The first\n*conversation.* | process | lead | demystify; CTA: DM LEAK |
-| 13 | Nobody tells owners this about agency invoices. (only if he can say it truthfully) | TO CONFIRM | proof | save | needs his real experience |
-| 14 | Build in stages. See every stage. No big reveal at the end. | No big reveal\nat the end. | process | follow | how-we-work pillar |
-| 15 | The website was done. The business still ran on WhatsApp. | Website: done.\nWork: *still manual.* | pain | send | real pattern; no numbers |
-| 16 | How to tell if your agency will still answer after launch. | After launch,\nwho answers? | contrarian | save | "stays after launch" |
-| 17 | Three leaks any owner can find in ten minutes. | Three leaks.\nTen minutes. | checklist | save | "ten minutes" is an estimate: label or soften |
-| 18 | This is what a leak looks like on a real screen. | A leak,\non screen. | proof | follow | needs a real client-safe screen or illustrative mock labelled as such |
-| 19 | Why we send you a plan before a quote. | Plan first.\n*Then* the quote. | process | lead | only if true (confirm) |
-| 20 | Honest answer: sometimes the right fix is a tool you already own. | The fix is a\ntool you own. | contrarian | save | trust builder |
+## A: talking-head hooks (trust)
+1. If your client onboarding lives in an inbox, you don't have a process. You have a person.
+2. Your system is five tools and one person's memory.
+3. Before we write a line of code, we ask one question.
+4. You might not need custom software. Here's how to tell.
+5. The website was finished. The business still ran on spreadsheets.
+6. I'm in Bombay. Your project doesn't care. Here's how we run it.
+7. No big reveal at the end. You see every stage.
+8. How to tell if an agency will still answer after launch.
+9. The most expensive thing in a small business is a task only one person knows how to do.
+10. What a first conversation with us actually covers.
 
-Use hook 1/2/9 for the first reels (strongest recognition), 5/20 for the honest-advice reel, 8 as the first carousel cover.
+## B: hot takes (opinions: he approves each; short, quotable, about practices not people)
+1. Your "system" is five tools and one person's memory.
+2. If your tool needs a training session, it's the wrong tool.
+3. Automating a broken process just breaks it faster.
+4. A website that doesn't capture a lead is a brochure. Brochures don't pay rent.
+5. "We'll fix it in phase two" is how phase two never happens.
+6. Most small businesses don't need an app. They need one workflow fixed.
+7. The best software is the one your team forgets they're using.
+8. An agency that never says "you don't need that" is selling, not advising.
+9. Spreadsheets aren't the problem. Spreadsheets nobody owns are.
+10. Zapier is great until it's your entire business.
+11. If you can't explain the process on a napkin, don't automate it yet.
+12. Built in Bombay. Shipped worldwide. Time zones are a scheduling problem, not a quality problem.
+
+## C: carousel covers (6-7 slides; last slide = CTA)
+1. 7 places a small business leaks time (the Leak Check). CTA: book/comment LEAK.
+2. Tool you own vs build: a decision guide.
+3. How a discovery call works (what we ask, what you leave with).
+4. Signs your business has outgrown spreadsheets.
+5. What to ask an agency before you sign (5 questions).
+6. A one-page process map: how to draw yours in 20 minutes.
+7. How we run projects across time zones.
+8. Case study (needs client OK): one project, stage by stage.
+
+Never: "most agencies...", "10x", "game-changer", hype. Always check hot takes against `voice.md` and flag blunt ones.

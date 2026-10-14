@@ -1,27 +1,34 @@
-# Hook bank: abelkapoor-trading
-Rules: spoken <= 12 words; recognition or an uncomfortable truth; about behaviour, never about what to trade; no performance claims; no stats without a source. Films three variants of the first line over one body (A/B/C). On-screen: <= 18 chars per line, serif look. "Origin" shows where the line comes from.
-
-| # | Spoken hook | On-screen | Angle | Goal | Origin |
-|---|---|---|---|---|---|
-| 1 | You're not over-trading because there are too many setups. You're bored. | You're not\nover-trading.\nYou're *bored.* | recognition | send | his DAY2 reel (rewrite, no app) |
-| 2 | Revenge trading starts feeling rational. | Revenge trading\nfeels *rational.* | recognition | send | his reel |
-| 3 | After a loss, your brain finds perfect setups everywhere. | After a loss,\nyour brain finds\n*perfect setups.* | recognition | send | his IMG_4101 take |
-| 4 | You're not inconsistent. You have no structure. | Not inconsistent.\n*No structure.* | reframe | send | his DAY4 reel |
-| 5 | One day you're up a thousand. The next, you donate it back. | Up a thousand.\nThen *donated.* | recognition | send | his DAY4 reel (uses an example amount: label as illustrative) |
-| 6 | The trade that ruins your whole day isn't the loss. It's the next one. | The *next*\ntrade is the\nproblem. | recognition | send | his UGC reel |
-| 7 | I'm not selling you anything. Here's why. | I'm not\nselling *anything.* | brand | follow | decided positioning |
-| 8 | Day N of not selling you anything. | Day 14 of not\nselling you\n*anything.* | series | follow | the streak (use real day count) |
-| 9 | Backtesting is easy. Executing is everything. | Backtests are\neasy. *Executing*\nisn't. | myth | send | his DAY7 reel |
-| 10 | Your strategy might not be the problem. | Not your\n*strategy.* | reframe | send | his reels |
-| 11 | You knew the trade was bad before you entered. | You *knew.*\nBefore you\nentered. | recognition | send | his fixedreel |
-| 12 | Most journals track the P&L. That's the wrong column. | The wrong\n*column.* | process | save | his fixedreel (opinion; avoid "most" unless sourced) |
-| 13 | The checklist I use before any trade. (as my own process, not advice) | My checklist\nbefore a trade. | process | save | his DAY2 reel |
-| 14 | A post-mortem of my worst habit this week. | Post-mortem.\nThis week's *habit.* | post-mortem | follow | series |
-| 15 | I might be wrong about this. Here's how I check. | I might be\n*wrong.* | honesty | follow | his DAY7 reel |
-| 16 | Why I'd rather you hold off than take that trade. | Boredom\nisn't a *setup.* | process | send | |
-| 17 | Nobody posts their rule-breaking days. I will. | My rule-breaking\ndays. | honesty | follow | needs his real journal |
-| 18 | The 3 rules I wrote after the day I broke all of them. (only if real) | 3 rules.\nOne *bad day.* | story | follow | TO CONFIRM |
-| 19 | Waiting is a skill, not a lack of action. | Waiting is\na *skill.* | mindset | send | his DAY5/6 reels |
-| 20 | Before the next trade, answer one question. | One question.\nBefore *any* trade. | process | save | |
-
-Never use: "90% of traders lose" (unsourced), "profitable", win-rate claims, "guaranteed", "learn to make X".
+# Hook bank v2: abelkapoor-trading (tier-1; behaviour not calls; no performance claims)
+## A: talking head
+1. You're not over-trading because there are too many setups. You're bored.
+2. Revenge trading starts feeling rational.
+3. After a loss, your brain finds perfect setups everywhere.
+4. You're not inconsistent. You have no structure.
+5. The trade that ruins your day isn't the loss. It's the next one.
+6. You knew the trade was bad before you entered it.
+7. I'm not selling you anything. Here's why. (series: Day N of not selling you anything)
+8. Backtesting is easy. Executing is everything.
+9. Waiting is a skill, not a lack of action.
+10. Before the next trade, answer one question.
+## B: hot takes (opinions about behaviour; approve each)
+1. Boredom is not a setup.
+2. Your strategy isn't the problem. Your Tuesday is.
+3. A journal that only tracks P&L is a scoreboard, not a journal.
+4. Discipline is a rule you follow when you don't feel like it.
+5. Nobody revenge-trades on purpose. It feels like analysis.
+6. The market doesn't owe you a trade today.
+7. If your rule only works when you feel calm, it isn't a rule.
+8. You don't need more setups. You need fewer excuses.
+9. Overtrading is boredom wearing a strategy costume.
+10. A checklist is a promise to your future self.
+11. Waiting is a position.
+12. The loss is rarely the damage. The three trades after it are.
+## C: carousel covers (6-7 slides; last slide CTA = follow/save; journal look; disclaimer on every slide)
+1. The checklist before any trade (my process, not advice).
+2. Post-mortem: the trade after the loss.
+3. 5 signs you're trading out of boredom.
+4. How to keep a trading journal that changes behaviour.
+5. Rules vs preferences: how to tell.
+6. The three trades after a loss.
+7. Why I'm not selling you anything.
+Never: "most traders lose" (unsourced), "profitable", win rates, "guaranteed", what to buy/sell, any link to a product.

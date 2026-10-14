@@ -7,6 +7,8 @@ Decided with Tejjomay 2026-10-14. This file is the map; each brand folder holds 
 | **@codewithabel** | founder building Disojo in public | **Disojo world** | build an audience by documenting real builds; credibility then leads | `codewithabel/` |
 | **abelkapoor-trading** (exact handle unconfirmed) | trading psychology / process, personal brand | **Trading world** | audience and authority through pure value; **no selling, no paid course for at least 6 months** | `abelkapoor-trading/` |
 
+**Operating model for all three: 3 posts a day (A talking head, B hot take reel, C carousel): see `OPERATING-MODEL.md`.** Platforms: trading 5, codewithabel and disojo 6 (+ LinkedIn).
+
 **Audience decision (2026-10-14, later):** all three accounts target tier-1 audiences (US, UK, Canada, Europe). Tradriv and all pre-October reels are discarded. SEBI is out of scope; UK FCA and US FTC/SEC rules apply to trading content instead.
 
 ## Separation rules (hard)
@@ -16,7 +18,7 @@ Decided with Tejjomay 2026-10-14. This file is the map; each brand folder holds 
 4. **Three voices** (`voice.md` per brand). Never write one brand's copy in another's voice.
 5. **Compliance per brand** (`brand.md`). Trading has the strictest guards (education only; no advice, recommendations, signals or return claims; disclaimers on every post).
 6. **No invented facts anywhere**: no stats, results, testimonials, client names, numbers or personal anecdotes he has not confirmed. Anything unconfirmed is marked `TO CONFIRM` in the file.
-7. **Tradriv** (the trading-discipline app named in older reels) is parked: it appears on none of the three accounts until Tejjomay decides where it lives. Older Tradriv promo reels sold the app, which conflicts with the trading account's no-selling promise.
+7. **Tradriv and all older reels are discarded** (decided 2026-10-14): never reuse, quote or mention them on any account.
 8. Posting, DMs and comments are always Tejjomay's. Claude drafts, plans, edits and reviews.
 
 ## How the hub is organised (per brand)

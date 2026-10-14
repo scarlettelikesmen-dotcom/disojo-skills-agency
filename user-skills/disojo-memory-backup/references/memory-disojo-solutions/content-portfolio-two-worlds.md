@@ -1,17 +1,15 @@
 ---
 name: content-portfolio-two-worlds
-description: Tejjomay's three Instagram accounts, how they are separated into two worlds, the hard separation rules, and where everything lives; read before any content work
+description: Tejjomay's three accounts, two worlds, goals, tier-1 audience, platforms, the 3-posts-a-day operating model, non-negotiables, and where the master context lives; read at the start of any content work
 metadata:
   type: project
 ---
 
-Three accounts (decided 2026-10-14): **@disojo.solutions** (agency), **@codewithabel** (founder building Disojo in public), **abelkapoor-trading** (personal trading brand; exact handle unconfirmed). Two worlds: **Disojo world** = the first two (both bios carry disojostudio.com; codewithabel's bio says it builds Disojo in public); **Trading world** = completely disconnected from Disojo (no mention, link, shared look or reused footage; Tradriv is parked on all three).
+**Read `content-hub/MASTER-CONTEXT.md` first** (single source of truth; `DECISIONS.md` for history; `brands/OPERATING-MODEL.md` for the model).
 
-Goals: Disojo = client leads in 90 days; codewithabel = build in public (audience first); trading = pure value, **no selling and no paid course for at least 6 months** (the restraint is the brand).
+Accounts (decided 2026-10-14): **@disojo.solutions** (agency; goal client leads; ready for tier-1 clients; USD pricing set privately; Bombay proudly on the site) and **@codewithabel** (build in public) = **Disojo world** (both bios carry disojostudio.com); **abelkapoor-trading** (handle TO CONFIRM; value only, no selling/no paid course for 6+ months) = **fully separate trading world**. Audience for all: **tier-1 US/UK/CA/EU**, English only. Platforms: trading 5 (TikTok, IG, Snapchat, YouTube, X), codewithabel and disojo 6 (+ LinkedIn: personal profile for Tejjomay, company page for Disojo). Same handle everywhere (X/Snapchat 15-char limit may prevent it: verify).
+Operating model: **3 posts a day per account**: A talking-head reel (trust/authority), B hot-take reel with trending audio (followers/reach/profile visits), C carousel 6-7 slides (trust/CTA/authority). He films A, approves everything, adds trending audio in-app, posts. Claude never posts/DMs/comments.
+Non-negotiables: never invent facts; never cross worlds; **Tradriv and all older reels discarded**; trading = education only, no return claims, no selling, disclaimers (FCA/FTC/SEC; SEBI dropped); no pricing public; no watermarked/identical reposts across platforms; hot takes need his approval.
 
-Each account has a distinct visual identity (Disojo calm editorial ink/cream; codewithabel dev log IDE+mono+lime; trading journal paper+serif+red pen) and a distinct voice. Stills only so far, awaiting his approval; engine theming not built.
-
-**Why:** he wants one place where Claude does research, strategy, hooks, scripts, direction, planning, editing and review for all three, with each account consistent and separate.
-**How to apply:** work from `content-hub/brands/<slug>/` (`disojo`, `codewithabel`, `abelkapoor-trading`), start with `brands/README.md` and the brand's `brand.md`; use skill `disojo-content-os`; never cross worlds; never invent facts (mark TO CONFIRM); posting/DMs are always his. Related: [[content-hub-setup]].
-
-**Decision 2026-10-14 (later):** target audience for all three accounts is **tier-1 (US/UK/Canada/Europe)**, not India (purchasing power, not a values statement). SEBI is out; UK FCA and US FTC/SEC are the relevant regimes for trading content (FCA has prosecuted finfluencers; FTC pursues earnings claims). **Tradriv and every older reel are discarded**: never reuse or mention. India-specific hooks/examples (WhatsApp, GST, UPI) in the first drafts are outdated and need a tier-1 rewrite. He asked for help with account warm-up and attracting tier-1 viewers.
+**Why:** he wants one place where Claude runs research, strategy, hooks, scripts, direction, planning, editing and review for all three accounts at volume with consistent quality.
+**How to apply:** use skill `disojo-content-os`; update MASTER-CONTEXT, DECISIONS and this memory in the same session as any decision. Related: [[content-hub-setup]].

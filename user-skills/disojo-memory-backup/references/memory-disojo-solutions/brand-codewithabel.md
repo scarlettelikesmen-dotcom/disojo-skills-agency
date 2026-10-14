@@ -1,17 +1,12 @@
 ---
 name: brand-codewithabel
-description: @codewithabel build-in-public facts, series, story bank, guards and open questions as of 2026-10-14; read before dev/build content
+description: @codewithabel v2 build-in-public facts, tier-1 audience, story bank, guards, open items
 metadata:
   type: project
 ---
 
-Account brand new (2026-10-14: 0 posts, 2 followers, 29 following, no bio). Concept: **build in public** (building Disojo); bio to carry disojostudio.com and a "building @disojo" line. Connected to the Disojo world; trading/Tradriv excluded.
+Brand new account (2026-10-14: 0 posts, 2 followers, no bio). Build in public from Bombay, building Disojo; bio carries disojostudio.com. Audience tier-1 devs/indie hackers/technical founders. 6 platforms (X likely the home; LinkedIn = Tejjomay's personal profile). Real story bank only: reel editor (ffmpeg+Python+Chrome+Whisper), iPhone HDR gray fix, Chrome-rendered captions, WAAPI easing bug, skills workflow, retake detector, Python 3.14 Whisper issue, 20-repo study, client builds with OK. Honest about AI assistance; no secrets/client data on screen; hot takes need approval. Files in `content-hub/brands/codewithabel/`.
+Open: "Abel" public name/on-camera identity, build runway, capacity, handles registered.
 
-Series: Day N (one concrete change), How it works in 60 s, Bug autopsy, Stack of the week, Numbers (real only). Proposed cadence 3 reels/week + a carousel every 2 weeks. Story bank (all true and documented): reel editor from ffmpeg+Python+Chrome+Whisper, iPhone HDR looked gray (fix), captions rendered by Chrome because ffmpeg lacks libass, a WAAPI easing bug, workflow packaged as skills, 20-repo motion study, retake detector, Python 3.14 Whisper issue. AI assistance is disclosed ("built with Claude Code").
-
-Open: who "Abel" is publicly (name, on camera, relation to founder identity), language, build runway, capacity.
-
-**Why:** credibility from real builds feeds the agency; honesty about AI and failures is the differentiator.
-**How to apply:** `content-hub/brands/codewithabel/`. Identity "dev log" (IDE, mono, lime) is stills only. Never fake metrics or show secrets/client data. See [[content-portfolio-two-worlds]].
-
-**Update 2026-10-14 (later):** audience is now tier-1 (US/UK/CA/EU); Tradriv and old reels discarded; SEBI dropped (FCA/FTC/SEC instead for trading). First-batch hooks/scripts written for an Indian audience need a tier-1 rewrite.
+**Why:** credibility from real builds feeds the agency.
+**How to apply:** see [[content-portfolio-two-worlds]]; never trading/Tradriv content here.

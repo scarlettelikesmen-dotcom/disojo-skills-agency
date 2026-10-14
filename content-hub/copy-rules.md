@@ -32,3 +32,6 @@ Read the brand's `voice.md` first (trading has one). If a brand has no voice fil
 
 ## On-screen hook layout (learned 2026-10-13)
 Hook lines must be short: max ~18 characters per line, 2-3 lines, 104px type. Longer lines get auto-shrunk and look weak. Break the copy yourself with `\n`, e.g. "After a loss,\nyour brain finds\n*perfect setups.*"
+
+## Tier-1 language gate (decided 2026-10-14)
+Audience is US/UK/Canada/Europe. English only, US/UK spelling, $/£/€ examples, no Hinglish, no India-specific references (WhatsApp, GST, UPI, rupees, Indian regulators). Bombay may be mentioned honestly for Disojo/codewithabel. Hot takes are opinions about practices, never people, and need his approval. Trading: education only, no return claims, no selling, disclaimer on every piece.

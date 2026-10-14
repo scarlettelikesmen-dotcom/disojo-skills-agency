@@ -18,3 +18,9 @@ See `../../disojo/research/sources.md` (signals: watch time, likes per reach, se
 
 ## Local material
 Transcripts of Tejjomay's own reels (`_source/`, `../../research/transcripts/`): hooks and language for the audience's pains.
+
+## UPDATE 2026-10-14 (later): audience is tier-1; SEBI (above) is out of scope. Relevant regimes (secondary sources; verify with the regulators and a lawyer)
+- **UK FCA:** under FSMA s21, unauthorised persons may not communicate investment promotions; influencers can be liable even when sharing approved promotions; FCA prosecuted finfluencers (May 2024) over an unauthorised forex scheme, interviewed 20 under caution (Oct 2024), issued dozens of warnings; its March 2024 social-media guidance requires promotions to be fair, clear and not misleading. https://www.financialreporter.co.uk/fca-launches-targeted-action-against-finfluencers.html , https://riskandcompliance.freshfields.com/post/102jmhr/fca-takes-further-steps-to-crackdown-on-finfluencers-following-issuing-guidance , https://www.twobirds.com/en/insights/2023/global/fca-issues-guidance-on-financial-promotions-on-social-media-platforms
+- **US FTC:** deceptive earnings claims (e.g. April 2026 action over income claims) and undisclosed material connections; disclose any relationship clearly. https://www.jdsupra.com/legalnews/ftc-brings-second-earnings-claims-case-6496816/ , https://terms.law/Trading-Legal/guides/ftc-endorsement-guidelines.html
+- **US SEC:** touting rules; disclose nature, source and amount of compensation for promotions (ICO cases). Same FTC link above.
+- Takeaway: education only, no return claims, no undisclosed affiliations, no selling.

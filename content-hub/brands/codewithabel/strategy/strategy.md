@@ -1,59 +1,30 @@
-# Strategy: @codewithabel (build in public, 90 days)
-Draft v1, 2026-10-14. Account is brand new (0 posts, 2 followers). Evidence base: general 2026 Instagram guidance plus a June 2026 trends roundup that lists build-in-public among current winners; no developer-specific data found, so everything below is an experiment (`../research/sources.md`).
+# Strategy: codewithabel (build in public), tier-1 audience
+v2, 2026-10-14. Replaces v1. Operating model: `../../OPERATING-MODEL.md` (3 posts a day: A talking head, B hot take reel, C carousel). Platforms (6, same handle everywhere, verify limits): TikTok, Instagram, Snapchat, YouTube, X, LinkedIn (personal profile of Tejjomay). Connected to the Disojo world: bios carry `disojostudio.com` and "building Disojo in public".
 
 ## 1. Positioning
-**Real builds, real bugs, shown working first.** The founder of Disojo builds the studio's tools and products in public: what got built, what broke, what it taught. The Instagram audience of developers, students and founders follows the journey; the connected agency account and `disojostudio.com` capture the clients who see the skill.
-Differentiator: he builds an actual business and its tooling (client sites, a content engine, automation), with AI assistance disclosed, not toy apps.
+**A founder building a real studio and its tools in public, from Bombay, shown working first, mess included.** Real builds, real bugs, honest about AI assistance. Audience: tier-1 developers, indie hackers, technical founders and people curious how AI-assisted building really goes. Differentiators: it is a working business (client sites, automation, a content engine), not toy apps; honesty (what broke, what AI got wrong); the unusual context (Bombay, global clients).
 
-## 2. Audience
-Primary: Indian developers, students and early-career engineers, indie hackers and first-time founders who want to see how real things get built and sold. Secondary: owner-run business founders who stumble on the account and notice the competence. Validate with comments and DMs.
+## 2. The trio
+| Slot | Content | Example series |
+|---|---|---|
+| **A** talking head (trust, authority) | One real build/lesson, shown first: "Day N" | Day N build log; Bug autopsy; "What AI got wrong" |
+| **B** hot take reel (followers, reach, profile visits) | A sharp opinion about building, shipping, AI, freelancing | one-liners over code/screen/graphic, trending audio added in-app |
+| **C** carousel (authority, CTA) | 6-7 slides explaining a real technique, real code only | "How it works" (HDR fix, pipeline, skills structure); stack posts |
 
-## 3. Series (the repeatable formats)
-| Series | Format | What it is | Goal |
-|---|---|---|---|
-| **Day N** | Reel 20-40 s | One concrete change today with a visible result: before/after, the output, the bug. Opens on the result. | follow, watch time |
-| **How it works in 60 s** | Reel / carousel | One technique from a real build explained plainly (e.g. why iPhone video looked gray: HDR tone-mapping). | send, save |
-| **Bug autopsy** | Reel | What broke, how it was found, the fix. Honest, a little funny. | send |
-| **Stack of the week** | Carousel | Tools actually used this week and why (only real). | save |
-| **Numbers** | Post | Monthly: real follower/time/effort numbers, wins and misses. Only real numbers. | trust, follow |
+## 3. Platform roles (hypotheses; measure)
+**X:** home of build in public: B as text-first posts, A as native video, C as image sets/threads. **YouTube Shorts:** A and B, plus evergreen explainers. **LinkedIn (personal profile):** A as native captioned video, C as PDF documents, text posts; no outbound links in the body. **TikTok:** A and B (dev corners). **Instagram:** A, B, C. **Snapchat:** A repurposed only.
 
-## 4. Pillars (mix)
-Build logs 45%, explainers 25%, bug autopsies 15%, opinions/lessons for builders 10%, meta-journey numbers 5%.
+## 4. Story bank (true, documented; each becomes several posts)
+Reel editor from ffmpeg + Python + headless Chrome + local Whisper; iPhone HDR clips looked gray (tone-mapping fix); ffmpeg here has no libass/drawtext so Chrome renders captions; a WAAPI easing bug made captions vanish early; workflow packaged as 20+ skills ("a prompt and a clip become a reel"); studied 20 motion repos; retake detection heuristic and where it fails; Whisper decode broke on Python 3.14; client builds (with OK): Postcards 3D rebuild, Ascender Media (Lighthouse 99/100/100/100, measured).
 
 ## 5. Funnel
-Reel -> follow -> profile (bio: building Disojo in public + `disojostudio.com`) -> website. No hard sell. Occasional "this is what I built for a client" (with OK) shows capability; CTA is always "follow for Day N+1".
+Content -> follow -> profile (bio: "Building Disojo in public", `disojostudio.com`) -> the agency sees a founder who ships. CTAs: A = "Day N+1 tomorrow" (follow); B = follow/send; C = follow + save; occasional "this is what we build for clients" with link in bio. No hard sell.
 
 ## 6. Virality plan
-- **Watch time:** open on the finished result (frame 0 shows it working or the bug), then show how; keep reels 20-40 s; end on a line that makes the next Day N feel necessary (open loop that is paid off).
-- **Sends:** "send this to a dev friend who still..." angle; bug autopsies and "I assumed X, it was Y" are naturally forwardable.
-- **Originality and honesty:** raw screen recordings plus face; real code and real terminals; disclosed AI assistance (originality is favoured by the ranking; fake or inflated claims kill trust).
-- **Series mechanics:** numbered titles, consistent frame-0 style ("DAY 07" tag), recognisable look (`visual-identity.md`).
-- Rotate angles: result-first / bug / contrarian opinion / explainer / numbers. Avoid pure tutorials until the journey audience exists.
+Signals: watch time, sends per reach, likes per reach; originality. Frame 0 = the result or the bug. B hot takes built to be quoted/argued with. Send angle: "send this to the dev who...". Series numbering (`DAY NN`) gives return reasons. Tier-1 language and examples: ordinary English dev vocabulary; avoid India-specific references; Bombay appears as an honest context, not a gimmick.
 
-## 7. Cadence (proposal)
-**3 reels per week** (Day N, explainer or bug), **1 carousel every 2 weeks** (stack or "how it works" with real code), stories for raw progress. Batch: one screen-recording session + one face-cam session per week; the engine edits.
+## 7. Measurement
+A: watch time, 3 s hold, shares, profile visits -> link taps. B: reach, follows per reach. C: saves, shares, swipe-through. 30-day platform review (cut the weak outlets). Numbers posted publicly only if real.
 
-## 8. Measurement and decisions
-Per post: 3-second hold, watch time, sends, follows, profile visits, link taps. Decision rules: after 12 posts keep the series with the best follows-per-reach and sends-per-reach; if "Day N" posts underperform explainers 3:1, flip the mix. Do not read follower count before ~30 posts; the early signal is watch time and who shares.
-
-## 9. Experiments (first 30 days)
-1. Frame-0 result vs frame-0 bug.
-2. Face-cam + screen panel vs voiceover over screen only.
-3. "Day N" numbering vs descriptive titles.
-4. English vs Hinglish (if comfortable).
-5. 20 s vs 40 s.
-
-## 10. Guardrails
-Every number real or labelled; no client data, secrets, keys or private URLs on screen; client names only with OK; disclose AI assistance; no trading/Tradriv content here; never imply the account is bigger or the journey more successful than it is.
-
-## 11. Story bank (true, already documented; each becomes 1-3 posts)
-1. "I built a reel editor out of ffmpeg and Python" (the pipeline end to end).
-2. "My iPhone clips looked gray: HDR, and the fix."
-3. "ffmpeg can't draw text on my machine, so Chrome draws it."
-4. "A one-line easing bug made my captions vanish early."
-5. "I turned my whole workflow into skills: a prompt and a clip become a reel."
-6. "I studied 20 motion repos and rebuilt my edit." (honest: what I took, what I skipped)
-7. "Retake detection that mostly works" (heuristics and where they fail).
-8. "Building a client portal in stages" (needs client OK).
-9. "How a site got Lighthouse 99/100/100/100" (Ascender; measured; OK from client).
-10. "Why my transcription crashed on Python 3.14."
+## 8. Guardrails
+Every number real or labelled illustrative; disclose AI assistance ("built with Claude Code"); no secrets/keys/client data on screen; client names only with OK; no trading content; hot takes are his opinions and need approval; no tutorials-as-padding.

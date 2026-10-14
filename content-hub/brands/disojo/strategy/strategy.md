@@ -1,56 +1,38 @@
-# Strategy: @disojo.solutions (client leads, 90 days)
-Draft v1, 2026-10-14. Built from the brand file, the site, project rules and research (`../research/sources.md`). Evidence for "agency Instagram converts to leads in India" is thin (no verified case study found), so this is a set of **measured experiments with kill rules**, not promises.
+# Strategy: Disojo (@disojo.solutions + LinkedIn company page), tier-1 client leads
+v2, 2026-10-14. Replaces the India-flavoured v1. Operating model: `../../OPERATING-MODEL.md` (3 posts a day: A talking head, B hot take reel, C carousel). Goal: **client leads from tier-1 owner-run businesses** (US, UK, Canada, Europe). Disojo is ready for tier-1 clients; **pricing is being set (USD) and stays private**; Bombay is proudly on the site.
 
-## 1. Positioning (one sentence)
-**Disojo finds where an owner-run business leaks time and money before building anything, then builds in stages you can see, and stays after launch.**
-What makes it believable: the discovery step, the visible stages, and an honest stance that **sometimes you do not need custom software** (packaged tools like Vyapar or Tally already cover invoicing and reminders; research: `sources.md`). Saying that out loud is the trust differentiator against agencies that always say yes.
+## 1. Positioning
+**Disojo finds where an owner-run business leaks time and money before building anything, then builds in stages you can see, and stays after launch. Made in Bombay, for the world.**
+Believable because of: the discovery step, visible stages, staying after launch, and honesty: **sometimes the answer is a tool you already own** (Zapier, Airtable, Notion, QuickBooks exist; saying so is the trust edge over agencies that always say yes). Bombay is a feature: a senior, small studio, working across time zones, proud of where it is from. Never hide it, never fake a tier-1 address.
 
-## 2. Audience and jobs
-Owner/operator of an owner-run business in India (Mumbai first): coaching classes, clinics, D2C product brands, exporters, small service firms. 30-55, WhatsApp-first, spreadsheet-run, wary of agencies. Jobs: stop retyping and chasing, look credible online, capture and follow up leads, stop depending on one person who knows how it works.
-Validate this with real DMs and sales calls; replace the hypothesis with what they say (`social-listening`, `comment-mining`).
+## 2. Audience (hypothesis: validate with calls and DMs)
+Owners/operators of small businesses in the US/UK/CA/EU: clinics and practices, professional services (accounting, legal, consulting), trades and home services, coaching/education businesses, e-commerce/D2C brands, small agencies. 30-55, busy, tool-sprawled (five apps and one person's memory), burned by agencies that over-promised. They buy trust, clarity and speed. Buyer language: "systems", "automation", "ops", "leads", "follow-ups", "onboarding", "invoicing".
 
-## 3. Pillars (mix of ~10 posts)
-| Pillar | What it is | Goal type | Share |
+## 3. Pillars and the trio
+| Pillar | A (talking head, trust) | B (hot take, reach) | C (carousel, authority + CTA) |
 |---|---|---|---|
-| **A. Where it leaks** | Owner-recognisable workflow pains (WhatsApp bookings, spreadsheet fee tracking, retyped documents, knowledge in one head) with the "tell" that you have it. Self-audit format. | send + save | 35% |
-| **B. Honest advice** | When you don't need custom software; what to ask an agency; cost of wrong choices; packaged tool vs build. No hard sell. | trust, save | 20% |
-| **C. How we work** | Discovery first, staged builds with client visibility, no big reveal, stays after launch. Real process artefacts. | trust, lead | 20% |
-| **D. Work, shown** | Before/after of real projects with permission; client-reported results labelled as such. | proof, lead | 20% |
-| **E. The studio** | Founder voice, small behind-the-scenes, what we learned. | follow | 5% |
+| **Where it leaks** (35%) | "the question we ask before any code" | "Your 'system' is five tools and one person's memory." | "7 places a small business leaks time" (the Leak Check) |
+| **Honest advice** (25%) | "when you don't need custom software" | "Most automation projects fail at step zero: nobody mapped the process." (opinion; confirm) | "Tool you own vs build: a decision guide" |
+| **How we work** (20%) | discovery -> stages -> stay after launch | "No big reveal at the end." | "How a discovery call works" |
+| **Work shown** (15%) | one real project, stage by stage (with client OK) | before/after one-liners | case-study carousel (with OK; results "as reported by the client") |
+| **The studio** (5%) | Bombay, the team, the standards | "Built in Bombay. Shipped worldwide." | "How we run projects across time zones" |
 
-## 4. Funnel and CTA (one action per post)
-Reels (reach, new people) -> carousels (trust, saves, sends) -> stories (proof, polls, daily presence) -> **DM keyword or profile link** -> `disojostudio.com` contact -> discovery call.
-- Reach posts: CTA = send/save ("send this to the person who runs your WhatsApp").
-- Trust posts: CTA = follow.
-- Lead posts (about 1 in 4): CTA = DM the keyword `LEAK` (or tap the link). **PROPOSAL, needs your OK:** a free 15-minute "leak check" call plus a free 7-question "Leak Check" self-audit carousel as the lead magnet. Terms and pricing stay private.
-- Link/keyword goes in the DM or bio, never in the public comment.
+## 4. Funnel and CTA
+Content -> profile (bio: what we do, Bombay, `disojostudio.com`, "free leak check" link) -> **book a free leak check** (PROPOSAL pending his confirmation of the offer) -> discovery call. CTAs: A = follow + "DM LEAK"; B = follow/send; C = **the CTA slide**: "Book your leak check" / "Comment LEAK for the checklist". Link in bio/DM, never in public comments. Pricing never shown in content (USD pricing set privately today).
 
-## 5. Virality plan (what to engineer)
-Instagram's confirmed ranking signals are **watch time, likes per reach and sends per reach**, with originality favoured (sources: `sources.md`; saves are disputed, so do not optimise for saves alone).
-- **Sends per reach**: write posts an owner forwards to a partner or manager ("this is us"). Specific, recognisable, slightly uncomfortable pains. Always include a "send this to..." line on reach posts.
-- **Watch time**: open on the pain in the first second (frame 0 = the problem, on screen and spoken); one idea; 25-35 s; a payoff that arrives before the end; loopable last line.
-- **Originality**: real footage, real work, our own words. No reposts, no stock-looking carousels.
-- **Identity**: content a business owner is proud to forward ("I'm the kind of owner who fixes the process, not the person").
-- **Local specificity**: Mumbai, WhatsApp, GST invoices, UPI. Specific beats generic.
-- Rotate angles: pain recognition / contrarian ("you don't need an app") / checklist / before-after / behind-the-scenes. Do not default to listicles.
-Reels reach non-followers; carousels earn trust and sends from followers. Run both.
+## 5. Platform roles (6 outlets: IG, TikTok, YouTube, Snapchat, X, LinkedIn)
+- **LinkedIn (primary for leads):** company page = C as PDF document posts + A as native captioned video + text posts; **personal profile (Tejjomay)** amplifies the same ideas (personal profiles reportedly outperform pages; verify). No outbound links in the post body; link in comments or profile.
+- **Instagram (trust):** A reels, C carousels with audio, B reels; stories for proof and polls.
+- **YouTube Shorts (search/evergreen), TikTok (reach):** A and B. **X:** B as text-first hot takes, A video, C image sets. **Snapchat:** A repurposed only (low priority).
 
-## 6. Cadence (proposal; confirm capacity)
-Minimum viable: **2 reels + 1 carousel per week**, daily stories (leaks polls, process snaps). Film in one batch per week; edit by the engine; Tejjomay posts. See `calendar/first-4-weeks.md`.
+## 6. Virality plan
+Signals: watch time, likes per reach, sends per reach; originality. Sends: "send this to the person who runs your ops". Frame 0 = the problem, spoken and on screen. B hot takes are built to be quoted and argued with (but never at a person). Rotate angles: pain / contrarian / checklist / before-after / behind the scenes. Tier-1 specificity: invoices, intake forms, client onboarding, no-shows, calendar chaos, double data entry, "the one spreadsheet".
 
 ## 7. Measurement and decisions
-Weekly (`published/log.md`): for each post, 3-second hold, watch time, sends, saves, follows, profile visits, link taps, DMs with buying intent. Business metrics: qualified conversations per week, calls booked.
-Rules: after 12 posts, double down on the pillar with the best sends-per-reach and watch time; drop any pillar below the account median for 4 posts in a row; a post that gets DMs counts more than a post that gets likes. Do not judge on follower count in the first 30 days.
+A: watch time, shares, profile visits -> link taps. B: reach, follows per reach, profile visits. C: saves, shares, CTA actions. Business: qualified conversations/week, leak-check bookings, calls. 30-day platform review; drop platforms that don't earn their effort. After 12 posts per tier double down on the best pillar.
 
-## 8. Experiments (first 30 days)
-1. Pain-recognition reel vs honest-advice reel: which gets more sends per reach.
-2. Carousel "Leak Check" (lead magnet) vs a plain carousel: DMs per post.
-3. Spoken Hinglish vs English (if Tejjomay is comfortable): watch time.
-4. Frame-0 problem statement vs frame-0 result: 3-second hold.
-5. Founder on camera with panels vs voiceover on panels only: watch time and DMs.
+## 8. Guardrails
+No invented numbers/claims; no client names or figures without client OK (work listed on the site can be named; results "as reported by the client"); no pricing in content; calm authoritative voice, never submissive; no India-specific pain examples; no competitor insults (opinion about practices, not people); Tradriv and old reels are gone.
 
-## 9. Guardrails
-No invented numbers or claims; no client names/figures without OK; no pricing; no "10x" language; tone calm and sovereign; flag any blunt line (e.g. "agencies are trash") for his decision against the brand voice.
-
-## 10. Next steps
-Answer the `TO CONFIRM` list in `brand.md`; approve the identity direction (stills); approve the lead magnet; film batch 1 (scripts in `scripts/first-batch.md`).
+## 9. TO CONFIRM
+Lead-magnet/offer wording ("free leak check"), USD pricing (private), current public email (AGENTS.md says hello@disojo.in; site is disojostudio.com), clients OK'd for case studies, handles actually registered per platform, capacity.

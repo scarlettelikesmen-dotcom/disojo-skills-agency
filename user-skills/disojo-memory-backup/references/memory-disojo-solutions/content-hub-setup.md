@@ -8,6 +8,9 @@ metadata:
   modified: 2026-10-13T14:53:30.206Z
 ---
 
+> SUPERSEDED NOTE (2026-10-14): for strategy, accounts, audience and rules read `content-portfolio-two-worlds` and `content-hub/MASTER-CONTEXT.md`. This file is only the engine/tools build history; anything below about 'personal'/'trading' brands, Tradriv, India or SEBI is outdated.
+
+
 Content hub built 2026-10-13 at `~/Desktop/DISOJO SOLUTIONS/content-hub` (see its CLAUDE.md for tools and rules). Installed Ootto-AI/claude-content-skills (53 skills, reviewed, safe; marketing footers inside) into ~/.claude/skills.
 
 Tejjomay films raw footage; Claude does hooks, scripts, simple cuts, brand captions, carousels, review. They want SIMPLE edits ("simple cuts, simple caption, a little motion"), well-designed carousels, a design system per brand.

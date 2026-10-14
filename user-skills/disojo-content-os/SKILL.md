@@ -5,7 +5,7 @@ description: START HERE for any content planning or management request across Te
 
 # Disojo content OS
 
-One place that runs three accounts end to end. Claude does research, strategy, hooks, scripts, direction, planning, editing and review; Tejjomay films, approves and posts (posting, DMs and comments are never done for him).
+**Read first, every time: `$HUB/MASTER-CONTEXT.md`, then `$HUB/brands/OPERATING-MODEL.md`** (3 posts a day per account: A talking head, B hot-take reel, C carousel; tier-1 audience; 5-6 platforms). One place that runs three accounts end to end. Claude does research, strategy, hooks, scripts, direction, planning, editing and review; Tejjomay films, approves and posts (posting, DMs and comments are never done for him).
 
 ```
 HUB=~/Desktop/"DISOJO SOLUTIONS"/content-hub      ENGINE=~/.claude/skills/disojo-reel-studio/engine
@@ -55,5 +55,14 @@ Allowed: web search and public web pages, his own analytics and comments he past
 ## 7. Templates (`templates/`)
 `weekly-plan.md`, `research-brief.md`, `film-list.md`, `post-package.md`, `weekly-review.md`. Copy into the brand folder with the date.
 
-## 8. Current state and next decisions (2026-10-14)
-Strategies, hook banks, first scripts, 4-week calendars, voices and identity stills exist for all three. Waiting on him: identity approval (stills), capacity, the TO CONFIRM lists (trading handle, "Abel" persona/age, lead-magnet offer, language, Tradriv), then film batch 1. Not built: engine theming per brand (brand CSS, mono/serif captions, new panel types).
+## 8. Current state
+See `$HUB/MASTER-CONTEXT.md` section 8 (done, not built, next builds in order, TO CONFIRM). Do not duplicate state here.
+
+## 9. Distribution layer (decided 2026-10-14): mass production, consistent quality
+Outlets: `abelkapoor-trading` 5 (TikTok, Instagram, Snapchat, YouTube, X); `codewithabel` and `disojo` 6 (those five + LinkedIn). Handles per platform: TO CONFIRM (keep them identical where possible).
+Rules from research (sources in `brands/disojo/research/distribution.md`):
+- **One idea, many native variants.** Never upload a platform's watermarked export elsewhere; export clean masters. Instagram and TikTok reportedly drop watermarked/reuploaded content from recommendations, and credit does not help. Change at least the first line, caption, cover and title per platform; use his A/B/C hook variants across platforms (which doubles as testing).
+- **Human contribution is the protection against "mass-produced" policies** (YouTube's July 2025 inauthentic-content rule targets templated videos with minimal variation). Real ideas, real voice, real footage; templates give consistency, content gives variety.
+- **Platform fit:** LinkedIn = native captioned talking-head from a personal profile, no outbound links in the post; X = text-first, where indie devs and finance talk; Snapchat Spotlight = reach bonus (monetisation is invitation-only with high thresholds); YouTube Shorts and TikTok = discovery.
+- Claude prepares per-platform packs (caption, title, hashtags, cover, alt text) and a scheduler-ready sheet; Tejjomay uploads/schedules and posts. Never automate engagement.
+- Log every post per platform in `published/log.md`; review per platform; drop a platform that does not earn its effort after 30 days.
