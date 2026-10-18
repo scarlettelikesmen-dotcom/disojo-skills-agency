@@ -1,0 +1,24 @@
+/* Shared structure for the extra slide types (list, compare, stamp, image, code). Brands set --accent, --display, --body, --mono. */
+.rows{display:flex;flex-direction:column;margin-top:20px;border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:90px 1fr 70px;align-items:center;gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}
+.row .n{font:600 28px/1 var(--mono);color:var(--mute)}
+.row b{display:block;font:var(--rowfont, 800 78px/.95 var(--display));letter-spacing:var(--rowtrack,-.03em);text-transform:var(--rowcase,none)}
+.row i{display:block;font:var(--subfont, italic 400 32px/1.2 var(--body));color:var(--mute);margin-top:6px;font-style:italic}
+.row .tick{width:56px;height:56px;border:3px solid var(--ink);display:grid;place-items:center;font:700 34px/1 var(--mono)}
+.row.warn .tick{border-color:var(--accent);color:var(--accent)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:24px;border:2px solid var(--ink)}
+.cmp>div{padding:36px 34px;min-height:560px}
+.cmp>div+div{border-left:2px solid var(--ink);background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.cmp h3{font:600 24px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:28px}
+.cmp>div+div h3{color:var(--accent)}
+.cmp li{list-style:none;font:var(--cmpfont, 600 46px/1.1 var(--display));letter-spacing:-.02em;padding:18px 0;border-bottom:1px solid var(--line)}
+.stamp{align-self:flex-start;margin-top:36px;border:12px solid var(--accent);color:var(--accent);font:var(--stampfont, 900 190px/1 var(--display));padding:0 34px;transform:rotate(-4deg);text-transform:uppercase}
+.shot{margin-top:26px;border:2px solid var(--ink);flex:1;min-height:0;background:var(--chip,#00000010);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.shot img{width:100%;height:100%;object-fit:contain}
+.shot .ph{font:600 26px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);text-align:center;padding:40px}
+.shot .tag{position:absolute;background:var(--ink);color:var(--bg);font:var(--tagfont,800 46px/1 var(--display));padding:4px 16px;text-transform:uppercase}
+.shot .tag.hot{background:var(--accent);color:#fff}
+.caption{font:var(--capfont, italic 400 36px/1.25 var(--body));margin-top:22px;color:var(--ink)}
+pre.code{margin-top:28px;padding:34px 38px;background:#0B0B14;color:#EEF0FF;border:2px solid var(--ink);font:500 34px/1.5 var(--mono);white-space:pre-wrap;word-break:break-word;border-radius:6px}
+pre.code .k{color:#D9FF3F}pre.code .s{color:#8EC5FF}pre.code .c{color:#7A7F99}
+.big{position:absolute;right:-20px;bottom:90px;font:800 440px/.8 var(--display);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:3px var(--accent);opacity:.4;pointer-events:none}

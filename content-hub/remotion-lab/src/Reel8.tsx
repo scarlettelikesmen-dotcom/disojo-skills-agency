@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Audio, Img, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import spec from "./spec8.json";
+import { specProxy as spec, jobFile } from "./specStore";
 import { CREAM, INK, PAPER, SANS, SP, clamp, sp, parseEm } from "./theme";
 
 // v8: hard-cut punch zooms, full-bleed footage, word-by-word captions, real work as cutaways. No 3D, no panels.
@@ -107,7 +107,7 @@ export const Reel8: React.FC = () => {
     <AbsoluteFill style={{ background: INK }}>
       <div style={{ position: "absolute", left: 0, right: 0, top: PANEL_H * pp, height: 1920 - PANEL_H * pp, overflow: "hidden" }}>
         <div style={{ position: "absolute", left: 0, top: -140 * pp, width: 1080, height: 1920, transform: `scale(${zoom})`, transformOrigin: `${FX * 100}% ${FY * 100}%` }}>
-          <OffthreadVideo src={staticFile("base.mp4")} style={{ width: 1080, height: 1920 }} />
+          <OffthreadVideo src={staticFile(jobFile("base.mp4"))} style={{ width: 1080, height: 1920 }} />
         </div>
       </div>
       {(spec.panels as any[]).map((pn, i) => {
@@ -138,7 +138,7 @@ export const Reel8: React.FC = () => {
       })()}
       <Captions t={t} dark={!!ca && t >= ca.t0 + 0.12 && t < ca.t1 - 0.12} cy={ca ? ca.cy : 1380 + 330 * pp} />
       <Img src={staticFile("grain.png")} style={{ position: "absolute", inset: 0, width: 1080, height: 1920, objectFit: "cover", opacity: 0.04, mixBlendMode: "overlay" }} />
-      <Audio src={staticFile("sfx8.wav")} />
+      <Audio src={staticFile(jobFile("sfx.wav"))} />
     </AbsoluteFill>
   );
 };

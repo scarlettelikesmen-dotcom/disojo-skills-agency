@@ -1,0 +1,67 @@
+{
+ "brand": "disojo",
+ "handle": "@disojostudio",
+ "footerLeft": "Disojo Studio \u00b7 case study",
+ "slides": [
+  {
+   "type": "cover",
+   "theme": "dark",
+   "kicker": "Case study \u00b7 KDC",
+   "title": "226 students. One *assistant.*",
+   "lead": "How a drum school stopped running on spreadsheets."
+  },
+  {
+   "type": "point",
+   "theme": "light",
+   "label": "BEFORE",
+   "title": "Everything was *manual.*",
+   "body": "Classes were confirmed by message, student by student, every week.",
+   "tell": "226 students \u00b7 confirmed by <b>hand</b>"
+  },
+  {
+   "type": "point",
+   "theme": "dark",
+   "label": "BEFORE",
+   "title": "Fees lived in *sheets.*",
+   "body": "Payment details were shared one by one. Someone checked who had paid. Student lists sat in spreadsheets."
+  },
+  {
+   "type": "list",
+   "theme": "light",
+   "kicker": "What we built",
+   "title": "One place for the *whole class.*",
+   "items": [
+    {
+     "t": "Student and parent app",
+     "sub": "book, confirm, see fees",
+     "mark": "\u2192"
+    },
+    {
+     "t": "Tutor app",
+     "sub": "attendance in one tap",
+     "mark": "\u2192"
+    },
+    {
+     "t": "Admin panel",
+     "sub": "students, fees, classes",
+     "mark": "\u2192"
+    }
+   ]
+  },
+  {
+   "type": "point",
+   "theme": "dark",
+   "label": "RESULT",
+   "title": "10 hours back *every week.*",
+   "body": "As reported for KDC. The assistant stopped chasing confirmations."
+  },
+  {
+   "type": "cta",
+   "theme": "light",
+   "kicker": "Where does your business leak?",
+   "title": "Book a *discovery call.*",
+   "lead": "We find the leak first. Then we build.",
+   "url": "disojostudio.com"
+  }
+ ]
+}

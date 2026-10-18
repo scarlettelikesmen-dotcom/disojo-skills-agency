@@ -1,0 +1,9 @@
+{"brand":"trading","handle":"@abelkapoor","footerLeft":"Education only. Not financial advice.","slides":[
+ {"type":"cover","theme":"light","kicker":"The Wall Model","title":"Wall behind the *stop.*","lead":"The whole model in 7 slides."},
+ {"type":"list","theme":"dark","kicker":"Four checks before every entry","title":"Level. Wall. Road. *Trigger.*","items":[
+  {"t":"Level","sub":"Where am I trading from?"},{"t":"Wall","sub":"Is my stop protected?"},{"t":"Road","sub":"Is the path to the target open?"},{"t":"Trigger","sub":"1-minute inversion + CISD"}]},
+ {"type":"point","theme":"light","label":"01 · LEVEL","title":"Trade from a *level.*","body":"Previous day high and low. Weekly and daily fair value gaps. Then 4H, 1H and 15M gaps.","tell":"Opening gaps are <b>targets</b>, not entries"},
+ {"type":"point","theme":"dark","label":"02 · WALL","title":"Protect the *stop.*","body":"Stop at the high or low of the structure, inside a 15-minute or higher gap. That gap is the wall.","tell":"No wall. <b>No trade.</b>"},
+ {"type":"point","theme":"light","label":"03 · ROAD","title":"Keep the road *open.*","body":"Stacked liquidity, failure swings, equal highs and lows. Target the nearest one, not the full draw."},
+ {"type":"stamp","theme":"dark","title":"Two walls.","stamp":"No trade.","lead":"High resistance on both sides is a coin flip. Skipping is part of the model."},
+ {"type":"cta","theme":"light","kicker":"Save this","title":"Follow for the *full model.*","lead":"Free lessons. Nothing hidden.","url":"@abelkapoor"}]}

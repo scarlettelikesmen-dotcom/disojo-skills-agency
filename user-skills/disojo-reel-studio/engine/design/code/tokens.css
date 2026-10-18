@@ -1,0 +1,21 @@
+/* Coded by Abel: loud dev-log. Cobalt + acid on ink, Bricolage Grotesque, giant outlined slide number, mono labels. */
+@font-face{font-family:"Bricolage Grotesque";src:url("../../fonts/Bricolage.woff2");font-weight:200 800}
+@font-face{font-family:"JetBrains Mono";src:url("../../fonts/JBMono.woff2");font-weight:100 800}
+:root{--w:1080px;--h:1350px;--m:70px;--dark-bg:#0B0B14;--dark-ink:#F5F6FB;--light-bg:#2338FF;--light-ink:#F5F6FB;--accent:#D9FF3F;
+--display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Bricolage Grotesque",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;--rowfont:800 70px/.98 var(--display);--tagfont:800 40px/1 var(--display);--stampfont:800 150px/1 var(--display);--cmpfont:700 44px/1.1 var(--display)}
+*{box-sizing:border-box;margin:0;padding:0}body{background:#000}
+.slide{position:relative;width:var(--w);height:var(--h);overflow:hidden;font-family:var(--body);background:var(--bg);color:var(--ink);--mute:color-mix(in srgb,var(--ink) 62%,var(--bg));--line:color-mix(in srgb,var(--ink) 24%,transparent);--chip:color-mix(in srgb,var(--ink) 8%,var(--bg));display:flex;flex-direction:column;padding:var(--m)}
+.slide.dark{--bg:var(--dark-bg);--ink:var(--dark-ink)}.slide.light{--bg:var(--light-bg);--ink:var(--light-ink)}
+.top,.bot{display:flex;justify-content:space-between;align-items:center;font:600 21px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);position:relative;z-index:2}
+.top{padding-bottom:22px;border-bottom:1px solid var(--line)}.bot{padding-top:22px;border-top:1px solid var(--line);margin-top:auto}
+.wm{display:inline-block;color:var(--accent);font-weight:800}.wm::before{content:"CODED BY ABEL"}
+.arrow{display:inline-block;margin-left:12px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;position:relative;z-index:2}
+.kicker{font:600 22px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:34px}
+h1,h2{font-family:var(--display);font-weight:800;letter-spacing:-.05em;line-height:.92;text-wrap:balance}
+h1{font-size:170px}h2{font-size:116px}
+.em{font-style:normal;background:var(--accent);color:#0B0B14;padding:0 .08em}
+p.lead{font-size:42px;line-height:1.25;color:var(--mute);margin-top:38px;max-width:880px;letter-spacing:-.015em;text-wrap:pretty}
+.num{font:600 28px/1 var(--mono);letter-spacing:.14em;color:var(--accent);margin-bottom:30px}
+.tell{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font:500 24px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);max-width:860px}.tell b{color:var(--accent)}
+.cta-url{font:700 34px/1 var(--mono);letter-spacing:.1em;margin-top:44px;display:inline-flex;gap:16px;padding:22px 28px;background:var(--accent);color:#0B0B14;align-self:flex-start}

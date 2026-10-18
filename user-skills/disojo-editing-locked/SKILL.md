@@ -59,3 +59,6 @@ Per-reel generator that writes spec8.json from a transcript; carousel/PDF; packa
 
 ## Lesson 2026-10-17: "twitching" = corrupt frames from Remotion OffthreadVideo (trading clip)
 Symptom: render flashes single garbled frames (tiled/striped) in pairs. Cause: Remotion seeking the crf-16 long-GOP base.mp4. Fix: re-encode the base for Remotion as all-intra (`ffmpeg -i base.mp4 -c:v libx264 -crf 14 -g 1 -bf 0 -pix_fmt yuv420p ... public/base.mp4`, ~390 MB, local only) and render with `--concurrency=1`. Detect: per-frame mean abs diff on a 108x192 gray copy; any consecutive pair >12 outside a panel slide = corrupt. Also: handheld close-ups get a virtual-tripod pass (`scripts/stab_t2257.py` pattern: phase-correlation per frame, subtract +-8 frame moving average, translate the video layer, scale 1.10) and `scripts/measure_shake.py` (face region only, never include overlay text). Fewer cuts: only cut pauses >=0.6 s, leave 0.3 s.
+
+
+> 2026-10-18: steps 5-10 of the pipeline above are now automated by skill `disojo-reel-pipeline` (`reel.py prep/spec/render/qa`, jobs per reel, all-intra base, QA gate). The look and motion numbers in this skill remain the source of truth.

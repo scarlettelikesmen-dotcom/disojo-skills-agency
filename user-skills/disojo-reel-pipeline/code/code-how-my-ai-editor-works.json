@@ -1,0 +1,9 @@
+{"brand":"code","handle":"@codedbyabel","footerLeft":"Built with Claude Code","slides":[
+ {"type":"cover","theme":"light","kicker":"Build log","title":"How my AI editor *works.*","lead":"One clip in. A finished reel out. 7 steps."},
+ {"type":"list","theme":"dark","kicker":"The pipeline","title":"From raw clip to *post.*","items":[
+  {"t":"Transcribe","sub":"Whisper finds every word and its time"},{"t":"Cut","sub":"dead air out, retakes out"},{"t":"Fix colour","sub":"HDR phone video to normal video"},{"t":"Design","sub":"panels, captions, zooms"}]},
+ {"type":"point","theme":"dark","label":"STEP 1","title":"Listen *first.*","body":"Whisper turns speech into words with timestamps. Every later step is built on those times."},
+ {"type":"code","theme":"dark","kicker":"STEP 2 · cut","title":"Cut only the *real* pauses.","code":"<c>// 0.6s+ of silence is a pause</c>\n<k>if</k> quiet_run >= <s>0.6</s>:\n    cut(quiet_run, keep=<s>0.3</s>)"},
+ {"type":"compare","theme":"light","title":"The bug that *cost a day.*","left":{"head":"What I thought","items":["The camera shakes","Build a stabiliser"]},"right":{"head":"What it was","items":["2 corrupt frames","The renderer seeked badly"]}},
+ {"type":"point","theme":"dark","label":"STEP 7","title":"Measure, don't *trust.*","body":"Loudness, frame-by-frame glitch scan, safe zone. If it fails, it doesn't ship.","tell":"Built with <b>Claude Code</b>"},
+ {"type":"cta","theme":"light","kicker":"Part 2 tomorrow","title":"Follow the *build.*","lead":"I'm building my own CapCut with AI.","url":"@codedbyabel"}]}

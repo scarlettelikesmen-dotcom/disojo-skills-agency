@@ -71,3 +71,13 @@
 ## 2026-10-18: answers to section D
 - Capacity unlimited; **batch filming on Sunday** (all reels). Gear: iPhone 14 Pro, tripod, tall stand for B-roll/time-lapse, 3 desk lamps, 5 TB drive, ~40 GB free on phone. Annotations on his charts OK. Available at all times for approvals. Trending/in-app music added by him.
 - Claude advice recorded in FILMING-CHECKLIST.md: record 4K30 SDR (HDR Video OFF), 2x/3x lens, tripod, light above-side; separate backgrounds per account; AirDrop every ~45 min; check each account is not a restricted-music business account.
+
+## 2026-10-18: answers to section E, F, G
+- **All accounts registered** on the platforms: trading on 5 (TikTok, Instagram, Snapchat, YouTube, X); Disojo and codewithabel on the same 5 plus LinkedIn (codewithabel = his personal LinkedIn profile; Disojo = company page).
+- **codewithabel is being renamed to "Coded by Abel"** (wants the username changed to coded-by-abel, not code-with-abel). @codedbyabel is NOT taken on Instagram (profile page 404, checked 2026-10-18); other platforms unchecked. Internal folder/skill names stay `codewithabel` until he confirms the final handle; public copy/bios use "Coded by Abel" from now on. Identity stills/wordmarks that say "code with abel" need a text update.
+- Posting schedule: decide later. **GitHub backup: approved ("backup everything")**: ran the backup (skills, memory, content-hub text + now .py/.tsx/.ts/.mjs/.html/.css code; not footage, venv, node_modules or renders) -> private repo scarlettelikesmen-dotcom/disojo-skills-agency, commit a55acba.
+- Editing: **trading = mostly talking head + life content, light editing (trading-lite default)**; "good editing" is for Coded by Abel and Disojo. Cleaning up old renders (3 GB): not answered, still parked.
+- **Approved builds:** one-command reel pipeline, trading chart overlays, carousel engine (all three brands + LinkedIn PDF), per-platform packager.
+
+## 2026-10-18: pipeline built (approved items)
+- Built and tested: `reel.py` (prep/spec/render/qa, jobs per reel, brand modes, all-intra base, QA gate with corrupt-frame scan and safe-zone check), `package.py` (per-platform upload packs + schedule.csv), `carousel.py` (+ new Rulebook and Coded-by-Abel carousel brands, 8 slide types, overflow check, LinkedIn PDF), chart overlay layer (`ChartLayer.tsx`, `chart_probe.py`) in the Rulebook comp and trading-lite cutaways. Verified: Disojo job r2198 reproduces v9 numbers (26.8 s, -15.8 LUFS); trading t2257b renders lite v2 through the CLI, QA PASS, caption inside safe zone; three test carousels; chart demo uses a labelled SAMPLE chart. Skill: `disojo-reel-pipeline`. Retired 3D comps moved to remotion-lab/src/_retired.
