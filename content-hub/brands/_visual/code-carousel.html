@@ -1,0 +1,52 @@
+<!doctype html><meta charset="utf-8">
+<style>
+@font-face{font-family:"SG";src:url("file:///Users/tejjo/.claude/skills/disojo-reel-studio/engine/fonts/code/SpaceGrotesk.ttf");font-weight:300 700}
+@font-face{font-family:"JBM";src:url("file:///Users/tejjo/.claude/skills/disojo-reel-studio/engine/fonts/code/JetBrainsMono.ttf");font-weight:100 800}
+:root{--bg:#0B0D12;--s:#12161F;--ink:#D9E0EC;--mute:#7C8799;--lime:#B8F34B;--amber:#FFB547;--red:#FF5C5C;--line:rgba(217,224,236,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222;display:flex;gap:24px;width:2184px;height:1350px}
+.s{position:relative;width:1080px;height:1350px;background:var(--bg);overflow:hidden;font-family:"SG",sans-serif;color:var(--ink);flex:none}
+.grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:60px 60px;opacity:.5;-webkit-mask:radial-gradient(90% 70% at 30% 35%,#000 25%,transparent 100%)}
+.gut{position:absolute;left:30px;top:170px;font:500 22px/52px "JBM";color:rgba(124,135,153,.4);text-align:right;width:34px}
+.bar{position:absolute;left:0;right:0;bottom:0;height:78px;background:var(--s);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 40px;font:500 22px "JBM";color:var(--mute)}
+.bar b{color:var(--lime);font-weight:500}
+.top{position:absolute;left:100px;right:60px;top:56px;display:flex;justify-content:space-between;font:500 22px "JBM";color:var(--mute)}
+.tag{font:600 24px "JBM";letter-spacing:.12em;color:var(--lime);border:1.5px solid rgba(184,243,75,.55);padding:8px 16px;border-radius:8px}
+h1{position:absolute;left:100px;right:70px;top:250px;font-weight:700;font-size:118px;line-height:.98;letter-spacing:-.045em}
+h1 em{font-style:normal;color:var(--bg);background:var(--lime);padding:0 .12em;border-radius:6px}
+.sub{position:absolute;left:100px;top:790px;font:500 30px/1.5 "JBM";color:var(--mute)}
+.sub b{color:var(--amber);font-weight:500}
+h2{position:absolute;left:100px;right:70px;top:150px;font-weight:700;font-size:74px;line-height:1.02;letter-spacing:-.04em}
+.code{position:absolute;left:100px;right:60px;top:380px;background:var(--s);border:1px solid var(--line);border-radius:16px;padding:34px 0;font:500 25px/1.7 "JBM"}
+.ln{padding:0 34px;white-space:pre}
+.ln.hl{background:rgba(184,243,75,.10);border-left:4px solid var(--lime);padding-left:30px}
+.k{color:#C792EA}.f{color:var(--lime)}.n{color:var(--amber)}.c{color:var(--mute)}.o{color:#89DDFF}
+.note{position:absolute;left:100px;top:1010px;right:70px;font:500 30px/1.5 "JBM";color:var(--amber)}
+.note span{color:var(--mute)}
+.cta{position:absolute;right:60px;bottom:110px;font:600 24px "JBM";color:var(--lime)}
+</style>
+<body>
+<div class="s"><div class="grid"></div><div class="gut">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15</div>
+<div class="top"><span class="tag">DAY 07</span><span>disojo / reel-studio / edit_reel.py</span></div>
+<h1>I built a <em>reel editor</em> out of ffmpeg and Python.</h1>
+<div class="sub">// raw clip in &rarr; cut, captions, panels, sound<br>// <b>27s reel out</b>. here is what broke first.</div>
+<div class="cta">swipe &rarr;</div>
+<div class="bar"><span><b>&#9679;</b> main &nbsp; &#10003; 0 errors</span><span>sample cover &middot; UTF-8</span></div></div>
+
+<div class="s"><div class="grid"></div><div class="gut">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15</div>
+<div class="top"><span class="tag">DAY 07</span><span>edit_reel.py</span></div>
+<h2>Why my iPhone clips looked gray.</h2>
+<div class="code">
+<div class="ln c"># iPhone video is HDR (HLG). Re-encoded flat, it looks gray.</div>
+<div class="ln"><span class="k">def</span> <span class="f">sdr_chain</span>(transfer, white_nits=<span class="n">280</span>, sat=<span class="n">0.85</span>):</div>
+<div class="ln c">    # 1. undo the HLG curve to scene light</div>
+<div class="ln">    E = <span class="f">hlg_inverse</span>(x)</div>
+<div class="ln hl">    L = E ** <span class="n">1.2</span> * <span class="n">1000</span> / white_nits</div>
+<div class="ln c">    # 2. roll highlights off softly, not a hard clip</div>
+<div class="ln">    TM = L <span class="k">if</span> L &lt;= <span class="n">0.75</span> <span class="k">else</span> soft_knee(L)</div>
+<div class="ln c">    # 3. gamut 2020 -> 709, then the 709 curve</div>
+</div>
+<div class="note">&larr; the whole fix. skin tones came back.<br><span>// before: flat gray. after: contrast + colour.</span></div>
+<div class="cta">swipe &rarr;</div>
+<div class="bar"><span><b>&#9679;</b> main &nbsp; &#10003; tests pass</span><span>sample slide &middot; UTF-8</span></div></div>
+</body>

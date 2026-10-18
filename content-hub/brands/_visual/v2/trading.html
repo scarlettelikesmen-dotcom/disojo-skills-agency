@@ -1,0 +1,80 @@
+<!doctype html><meta charset="utf-8">
+<style>
+@font-face{font-family:BS;src:url("fonts/BigShoulders.woff2");font-weight:100 900}
+@font-face{font-family:NR;src:url("fonts/Newsreader-Italic.woff2");font-weight:200 800;font-style:italic}
+@font-face{font-family:JB;src:url("fonts/JBMono.woff2");font-weight:100 800}
+:root{--paper:#F1EEE6;--ink:#0D0D0D;--red:#E8321C;--mute:#6f6b62}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222;width:1080px}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:BS;color:var(--ink);background:var(--paper);margin-bottom:40px;padding:64px 64px}
+.s.reel{height:1920px;padding:0}
+.mono{font:500 21px/1 JB;letter-spacing:.1em;text-transform:uppercase}
+.bar{display:flex;justify-content:space-between;align-items:stretch;border-bottom:7px solid var(--ink);padding-bottom:0;position:relative;z-index:3}
+.tab{background:var(--ink);color:var(--paper);padding:17px 24px}
+.no{padding:17px 0}
+h1{font-weight:900;text-transform:uppercase;letter-spacing:-.012em;line-height:.84}
+.cover h1{font-size:182px;margin-top:110px}
+.red{color:var(--red);position:relative;display:inline-block}
+.red::after{content:"";position:absolute;left:-10px;right:-14px;bottom:-4px;height:30px;background:var(--red);clip-path:polygon(0 40%,100% 0,98% 70%,3% 100%);opacity:1;mix-blend-mode:multiply}
+.aside{position:absolute;left:64px;bottom:150px;font:italic 400 50px/1.15 NR;max-width:720px;letter-spacing:-.01em}
+.foot{position:absolute;left:64px;right:64px;bottom:56px;display:flex;justify-content:space-between;color:var(--mute);border-top:2px solid var(--ink);padding-top:22px}
+.foot b{color:var(--ink);font-weight:500}
+/* list slide */
+.l h1{font-size:150px;margin-top:56px}
+.rows{margin-top:46px}
+.row{display:flex;align-items:center;gap:34px;border-top:6px solid var(--ink);padding:38px 0 38px}
+.row i{font:900 120px/.8 BS;font-style:normal;width:96px}
+.row span{font:italic 400 50px/1.1 NR;letter-spacing:-.01em}
+.row.bad i{color:var(--red)}
+.row.bad span{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:7px;color:#3a3732}
+.stamp{margin-left:auto;font:900 38px/1 BS;letter-spacing:.06em;color:var(--red);border:6px solid var(--red);padding:10px 18px 8px;transform:rotate(-6deg);text-transform:uppercase;white-space:nowrap}
+/* cta */
+.k{background:var(--ink);color:var(--paper)}
+.k .bar{border-color:var(--paper)}.k .tab{background:var(--paper);color:var(--ink)}
+.k h1{font-size:236px;margin-top:80px}
+.k .foot{border-color:var(--paper);color:#9a968c}.k .foot b{color:var(--paper)}
+.k .aside{color:var(--paper)}
+/* reel */
+.panel{position:absolute;left:0;top:0;width:1080px;height:880px;background:var(--paper);overflow:hidden}
+.panel .bar{position:absolute;left:64px;right:64px;top:240px}
+.panel h1{position:absolute;left:64px;right:40px;top:345px;font-size:168px}
+.panel .foot{bottom:28px;border:0;padding:0}
+.spk{position:absolute;left:0;top:880px;width:1080px;height:1040px;overflow:hidden;background:#000}
+.spk img{display:block;width:1080px;height:1920px;margin-top:-140px;filter:grayscale(1) contrast(1.12) brightness(1.05)}
+.cap{position:absolute;left:0;right:0;top:870px;display:flex;justify-content:center;z-index:5}
+.cap div{background:var(--ink);color:var(--paper);padding:6px 34px 10px;font:900 104px/1 BS;text-transform:uppercase;letter-spacing:-.005em;border-bottom:12px solid var(--red)}
+.cap b{color:var(--red);font-weight:900}
+</style>
+<body>
+<div class="s cover">
+ <div class="bar mono"><span class="tab">The Rulebook</span><span class="no">No. 03 &nbsp;/&nbsp; Overtrading</span></div>
+ <h1>You're not overtrading. You're <span class="red">bored.</span></h1>
+ <div class="aside">Boredom feels like a setup. It isn't one.</div>
+ <div class="foot mono"><span>Education only. Not investment advice.</span><b>Swipe →</b></div>
+</div>
+<div class="s l">
+ <div class="bar mono"><span class="tab">The Rulebook</span><span class="no">No. 03 &nbsp;/&nbsp; Before any trade</span></div>
+ <h1>The checklist.</h1>
+ <div class="rows">
+  <div class="row"><i>1</i><span>Is this a setup from my plan?</span></div>
+  <div class="row"><i>2</i><span>Risk decided before I enter.</span></div>
+  <div class="row"><i>3</i><span>Inside my logon / logoff window.</span></div>
+  <div class="row bad"><i>4</i><span>Because I'm bored.</span><em class="stamp">Rule broken</em></div>
+ </div>
+ <div class="foot mono"><span>Education only. Not investment advice.</span><b>Swipe →</b></div>
+</div>
+<div class="s k">
+ <div class="bar mono"><span class="tab">The Rulebook</span><span class="no">Sample CTA</span></div>
+ <h1>Nothing<br>to sell<br>you.</h1>
+ <div class="aside" style="bottom:160px">No course. No signals. Just the rules, one at a time. Follow, and save the checklist.</div>
+ <div class="foot mono"><span>Education only. Not investment advice.</span><b>Follow →</b></div>
+</div>
+<div class="s reel">
+ <div class="panel">
+  <div class="bar mono"><span class="tab">The Rulebook</span><span class="no">No. 03</span></div>
+  <h1>Boredom<br>is not a<br><span class="red">setup.</span></h1>
+  <div class="foot mono"><span>Education only. Not investment advice.</span></div></div>
+ <div class="spk"><img src="../face.png"></div>
+ <div class="cap"><div>you force a <b>trade</b></div></div>
+</div>
+</body>

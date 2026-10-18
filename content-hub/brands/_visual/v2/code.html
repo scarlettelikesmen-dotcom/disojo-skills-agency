@@ -1,0 +1,76 @@
+<!doctype html><meta charset="utf-8">
+<style>
+@font-face{font-family:BR;src:url("fonts/Bricolage.woff2");font-weight:200 800}
+@font-face{font-family:JB;src:url("fonts/JBMono.woff2");font-weight:100 800}
+:root{--blue:#2338FF;--ink:#0B0B14;--acid:#D9FF3F;--white:#FAFAF7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222;width:1080px}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:BR;color:var(--white);background:var(--blue);margin-bottom:40px;padding:72px}
+.s.reel{height:1920px;padding:0}
+.mono{font:600 24px/1 JB;letter-spacing:.08em;text-transform:uppercase}
+.top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:3}
+.chip{display:inline-flex;gap:14px;align-items:center;border:3px solid currentColor;border-radius:99px;padding:14px 24px}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--acid)}
+.ghost{position:absolute;font-weight:800;font-size:980px;line-height:.8;letter-spacing:-.07em;color:transparent;-webkit-text-stroke:4px rgba(255,255,255,.32);right:-70px;bottom:-130px;z-index:1}
+h1{position:relative;z-index:2;font-weight:800;letter-spacing:-.055em;line-height:.88;font-size:176px}
+.hl{display:inline-block;background:var(--acid);color:var(--ink);padding:0 22px 10px;border:6px solid var(--ink);box-shadow:12px 12px 0 var(--ink);transform:rotate(-2.2deg);margin:12px 0 18px -6px}
+.bottom{position:absolute;left:72px;right:72px;bottom:72px;display:flex;justify-content:space-between;align-items:center;z-index:3}
+.pill{background:var(--ink);color:var(--white);padding:20px 30px;border-radius:99px}
+.cm{color:rgba(255,255,255,.78)}
+/* slide 2 */
+.w{background:var(--white);color:var(--ink)}
+.w h2{font-weight:800;font-size:116px;letter-spacing:-.05em;line-height:.9;margin-top:60px}
+.card{margin-top:56px;background:var(--ink);color:#E9EAF2;border:6px solid var(--ink);box-shadow:16px 16px 0 var(--blue);padding:40px 44px;font:500 29px/1.62 JB;position:relative}
+.card .k{color:#8EA0FF}.card .f{color:var(--acid)}.card .c{color:#6C7090}
+.card .row{display:block;white-space:pre}
+.card .hi{background:rgba(217,255,63,.16);box-shadow:-44px 0 0 rgba(217,255,63,.16),44px 0 0 rgba(217,255,63,.16)}
+.stk{position:absolute;right:-26px;top:-48px;background:var(--acid);color:var(--ink);border:5px solid var(--ink);padding:14px 22px;transform:rotate(5deg);font:700 26px/1 JB;letter-spacing:.06em;text-transform:uppercase;box-shadow:6px 6px 0 var(--ink)}
+.ba{margin-top:48px;display:flex;gap:26px}
+.ba div{flex:1;border:5px solid var(--ink);padding:26px 30px;font:700 28px/1.3 JB;text-transform:uppercase;letter-spacing:.04em}
+.ba .a{background:var(--acid)}
+/* slide 3 */
+.y{background:var(--acid);color:var(--ink)}
+.y h2{font-weight:800;font-size:190px;letter-spacing:-.06em;line-height:.84;margin-top:90px}
+.y p{font:500 38px/1.35 BR;margin-top:56px;max-width:800px;letter-spacing:-.01em}
+.y .pill{background:var(--blue)}
+/* reel */
+.panel{position:absolute;left:0;top:0;width:1080px;height:880px;background:var(--blue);overflow:hidden}
+.panel .ghost{font-size:760px;right:-60px;bottom:-120px;-webkit-text-stroke:3px rgba(255,255,255,.28)}
+.panel h1{position:absolute;left:64px;right:40px;top:340px;font-size:124px;line-height:.9}
+.panel .hl{margin:6px 0 6px -6px;border-width:5px;box-shadow:9px 9px 0 var(--ink)}
+.panel .top{position:absolute;left:64px;right:64px;top:250px}
+.spk{position:absolute;left:0;top:880px;width:1080px;height:1040px;overflow:hidden}
+.spk img{display:block;width:1080px;height:1920px;margin-top:-140px}
+.cap{position:absolute;left:0;right:0;top:850px;display:flex;justify-content:center;z-index:5}
+.cap div{background:var(--white);color:var(--ink);border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:6px 32px 16px;font-weight:800;font-size:92px;letter-spacing:-.045em}
+.cap b{background:var(--acid);padding:0 12px;margin:0 -4px;font-weight:800}
+</style>
+<body>
+<div class="s">
+ <div class="top mono"><span class="chip"><i class="dot"></i>Building Disojo in public</span><span>@codewithabel</span></div>
+ <div class="ghost">07</div>
+ <h1 style="margin-top:150px">I built a<br><span class="hl">reel editor</span><br>out of ffmpeg.</h1>
+ <div class="bottom mono"><span class="pill">Day 07 &nbsp;·&nbsp; swipe →</span><span class="cm">// 1 prompt in, 27s reel out</span></div>
+</div>
+<div class="s w">
+ <div class="top mono"><span class="chip">Day 07</span><span>iphone / hdr / ffmpeg</span></div>
+ <h2>Why my iPhone clips looked gray.</h2>
+ <div class="card"><span class="stk">the whole fix</span>
+<span class="row c"># HDR (HLG) video, re-encoded flat = gray</span><span class="row"><span class="k">def</span> <span class="f">sdr_chain</span>(transfer, white_nits=280):</span><span class="row c">    # 1. undo the HLG curve</span><span class="row">    E = hlg_inverse(x)</span><span class="row hi">    L = E ** 1.2 * 1000 / white_nits</span><span class="row c">    # 2. roll highlights off softly</span><span class="row">    TM = L <span class="k">if</span> L &lt;= 0.75 <span class="k">else</span> soft_knee(L)</span></div>
+ <div class="ba mono"><div>Before: flat gray</div><div class="a">After: skin tones back</div></div>
+ <div class="bottom mono"><span class="pill">swipe →</span><span style="color:var(--blue)">@codewithabel</span></div>
+</div>
+<div class="s y">
+ <div class="top mono"><span class="chip">Day 07</span><span>sample cta</span></div>
+ <h2>Follow for Day 08.</h2>
+ <p>I'm building Disojo in public. Real builds, the code that broke, what fixed it. Save this for the next time your video looks gray.</p>
+ <div class="bottom mono"><span class="pill">@codewithabel</span><span>disojostudio.com</span></div>
+</div>
+<div class="s reel">
+ <div class="panel"><div class="ghost">07</div>
+  <div class="top mono"><span class="chip"><i class="dot"></i>Day 07</span><span>@codewithabel</span></div>
+  <h1>ffmpeg can't<br>draw text.<br><span class="hl">Chrome does it.</span></h1></div>
+ <div class="spk"><img src="../face.png"></div>
+ <div class="cap"><div>it can't <b>draw</b> text</div></div>
+</div>
+</body>

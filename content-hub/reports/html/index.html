@@ -1,0 +1,71 @@
+<title>Three Accounts Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Figtree:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a briefing sheet. One column, three account bands each in its own colour, open questions as a checklist. */
+:root{--bg:#F3F2EE;--fg:#16161A;--muted:#5D5C63;--line:#16161A22;--card:#FBFAF7;
+--trade:#E8321C;--code:#2338FF;--dis:#131311;--cream:#E6DDD6;
+--display:"Fraunces",Georgia,serif;--body:"Figtree",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121215;--fg:#ECEBF0;--muted:#A3A2AB;--line:#ECEBF024;--card:#1A1A1F;--trade:#FF5A43;--code:#7C8BFF;--dis:#E6DDD6;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121215;--fg:#ECEBF0;--muted:#A3A2AB;--line:#ECEBF024;--card:#1A1A1F;--trade:#FF5A43;--code:#7C8BFF;--dis:#E6DDD6;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:17px/1.6 var(--body);margin:0}
+.wrap{max-width:920px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:44px 28px;border-bottom:1px solid var(--line)}
+.kick{font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(40px,7vw,72px)/1 var(--display);letter-spacing:-.02em;margin:14px 0 14px;text-wrap:balance}
+header p{max-width:60ch;color:var(--muted);margin:0}
+h2{font:800 30px/1.1 var(--display);margin:0 0 10px;text-wrap:balance}
+section{padding-block:30px;border-bottom:1px solid var(--line)}
+.acct{display:grid;grid-template-columns:8px 1fr;gap:18px}
+.bar{border-radius:4px}
+.acct>div{min-width:0}
+.acct ul{margin:8px 0 14px;padding-left:20px}
+.acct li{max-width:66ch}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links a,.links span{font:600 12.5px var(--mono);letter-spacing:.04em;padding:7px 10px;border:1px solid var(--line);border-radius:6px;color:var(--fg);text-decoration:none;background:var(--card)}
+.links a:hover{border-color:var(--fg)}
+.links a:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.check{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px}
+.check li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;max-width:none}
+.check li::before{content:"";width:16px;height:16px;border:1.5px solid var(--fg);border-radius:4px;margin-top:4px}
+.tag{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+code{font:13px var(--mono);background:var(--card);padding:.1em .35em;border-radius:4px;word-break:break-word}
+footer{padding-block:28px 56px;color:var(--muted);font:13px var(--mono)}
+</style>
+<header class="wrap"><div class="kick">Overnight research · 2026-10-18 · nothing posted</div>
+<h1>Three accounts, three copy systems</h1>
+<p>I studied how the creators you'd want to be like write their reels, then built a separate copywriting system, report and six-month plan for each account. Start with trading.</p></header>
+<main class="wrap">
+<section class="acct"><div class="bar" style="background:var(--trade)"></div><div>
+<h2>@abelkapoor · trading</h2>
+<ul><li>15+ futures and ICT creators studied, Evan's top reels read frame by frame.</li>
+<li>Reach comes from personal story and "relatable trader pain" reels (100K+ even on tiny accounts). Trust comes from a named model taught as a series (3-5K, comments full of questions).</li>
+<li>Evan's two biggest teaching reels were a generous resource list (170K) and next-step advice after a first payout (80K).</li>
+<li>Ready: 40 hooks, 12 scripts, 7 carousels, bio, pinned posts, six-month plan.</li></ul>
+<div class="links"><a href="https://claude.ai/artifact/DMHvs7T75xVzAUriGmuDps" target="_blank" rel="noopener">Open the trading plan</a><span>skill: abelkapoor-copywriting</span></div></div></section>
+<section class="acct"><div class="bar" style="background:var(--code)"></div><div>
+<h2>@codewithabel · build in public</h2>
+<ul><li>10+ developer and build-in-public creators studied.</li>
+<li>Real, physical demos and numbered series win (NFC stickers 215K, series parts up to 1M). Plain "Day N" posts get 27-120 likes.</li>
+<li>Your lead series: "I'm building my own CapCut with AI", from the real v1-v9 editor history and its bugs.</li>
+<li>Ready: 30 hooks, 10 scripts, 7 carousels, five series, six-month plan.</li></ul>
+<div class="links"><a href="https://claude.ai/artifact/V46NBJBrPxctLgcuFHNZfZ" target="_blank" rel="noopener">Open the codewithabel plan</a><span>skill: codewithabel-copywriting</span></div></div></section>
+<section class="acct"><div class="bar" style="background:var(--dis)"></div><div>
+<h2>@disojo.solutions · studio</h2>
+<ul><li>40+ agency, automation and web-studio posts analysed.</li>
+<li>Almost all automation content targets would-be agency owners. The owner-facing lane is nearly empty, and the posts that do speak to owners win with one business, one fix, one result.</li>
+<li>Your "find where the work leaks" positioning is that lane. Series: "Where the work leaks", "If you run a ___", case studies, Friday build notes.</li>
+<li>Ready: 30 hooks, 10 scripts, 7 carousels, a lead flow to discovery calls, six-month plan.</li></ul>
+<div class="links"><a href="https://claude.ai/artifact/BndF73ouYzRtrb7z3xACSe" target="_blank" rel="noopener">Open the Disojo plan</a><span>skill: disojo-copywriting</span></div></div></section>
+<section><h2>What I need from you</h2>
+<ul class="check">
+<li><div><span class="tag">Trading</span><br>Your origin story as a voice note, your real list of learning resources, three real trades (win, break-even, loss) and the payout-email recording.</div></li>
+<li><div><span class="tag">Trading</span><br>P&amp;L in replays: the strategy allows it labelled, the brand file still says no. Which one stands?</div></li>
+<li><div><span class="tag">Disojo</span><br>How KDC bookings worked before the app, the final wording of the free "leak check", and which Instagram handle is real.</div></li>
+<li><div><span class="tag">codewithabel</span><br>Your on-camera name, and which tools you're happy to give away publicly (the private skills repo contains client data).</div></li>
+<li><div><span class="tag">All</span><br>Approval of each hot take before it is filmed.</div></li></ul></section>
+<section><h2>Built into skills</h2>
+<p>The whole method (finding creators safely, reading their hooks, the analysis framework, the report and page generator) is the skill <code>creator-research-to-copy</code>. It indexes the three account skills, which stay separate.</p></section>
+</main>
+<footer class="wrap">Reports: content-hub/reports/ · Research notes: content-hub/research/copy-2026-10-18/</footer>

@@ -1,0 +1,68 @@
+<!doctype html><meta charset="utf-8">
+<style>
+@font-face{font-family:HG;src:url("file:///Users/tejjo/.claude/skills/disojo-reel-studio/engine/fonts/HostGrotesk.ttf");font-weight:300 800}
+@font-face{font-family:HG;font-style:italic;src:url("file:///Users/tejjo/.claude/skills/disojo-reel-studio/engine/fonts/HostGrotesk-Italic.ttf");font-weight:300 800}
+@font-face{font-family:JB;src:url("fonts/JBMono.woff2");font-weight:100 800}
+:root{--bg:#131311;--ink:#E6DDD6;--cream:#E8E8E3;--dark:#131311}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#333;width:1080px}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:HG;background:var(--bg);color:var(--ink);margin-bottom:40px;padding:72px;--mute:rgba(230,221,214,.55);--line:rgba(230,221,214,.2)}
+.s.reel{height:1920px;padding:0}
+.s.light{background:var(--cream);color:var(--dark);--mute:rgba(19,19,17,.55);--line:rgba(19,19,17,.2)}
+.mono{font:500 22px/1 JB;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.top{display:flex;justify-content:space-between;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.wm{display:block;height:28px;aspect-ratio:1211/153;background:currentColor;-webkit-mask:url("file:///Users/tejjo/.claude/skills/disojo-reel-studio/engine/assets/disojo-wordmark-mask.png") center/contain no-repeat}
+h1{font-weight:700;letter-spacing:-.055em;line-height:.9;position:relative;z-index:2}
+em{font-style:italic;font-weight:600}
+.cover h1{font-size:196px;margin-top:100px}
+/* the leak: a line that falls from the word to the footer */
+.drip{position:absolute;z-index:1;width:3px;background:var(--ink);opacity:.9}
+.dropdot{position:absolute;z-index:1;width:22px;height:22px;border-radius:50%;background:var(--ink)}
+.bot{position:absolute;left:72px;right:72px;bottom:64px;display:flex;justify-content:space-between;padding-top:26px;border-top:1px solid var(--line)}
+.sub{font-size:40px;line-height:1.25;color:var(--mute);margin-top:44px;max-width:760px;letter-spacing:-.012em;position:relative;z-index:2}
+/* light slide */
+.big{position:absolute;right:-30px;top:120px;font:800 760px/.8 HG;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:2px var(--line)}
+.light h1{font-size:150px;margin-top:150px}
+.tell{position:absolute;left:72px;right:72px;bottom:150px;background:var(--dark);color:var(--cream);padding:36px 42px;display:flex;gap:30px;align-items:baseline}
+.tell .mono{white-space:nowrap;color:rgba(232,232,227,.55)}.tell p{font-size:38px;line-height:1.2;letter-spacing:-.015em;font-weight:500}
+/* cta */
+.cta h1{font-size:176px;margin-top:100px}
+.url{display:inline-flex;margin-top:60px;border:1.5px solid var(--ink);border-radius:99px;padding:24px 36px;font:500 32px/1 JB;letter-spacing:.1em;position:relative;z-index:2}
+/* reel */
+.panel{position:absolute;left:0;top:0;width:1080px;height:880px;background:var(--bg);overflow:hidden}
+.panel .top{position:absolute;left:64px;right:64px;top:240px}
+.panel h1{position:absolute;left:64px;right:50px;top:350px;font-size:116px;line-height:.93}
+.spk{position:absolute;left:0;top:880px;width:1080px;height:1040px;overflow:hidden}
+.spk img{display:block;width:1080px;height:1920px;margin-top:-140px}
+.cap{position:absolute;left:0;right:0;top:864px;display:flex;justify-content:center;z-index:5}
+.cap div{background:var(--cream);color:var(--dark);padding:10px 36px 18px;font-weight:700;font-size:88px;letter-spacing:-.045em;border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.cap i{font-weight:600}
+</style>
+<body>
+<div class="s cover">
+ <div class="top mono"><span class="wm" style="color:var(--ink)"></span><span>01 / 06</span></div>
+ <h1>Where your business <em>leaks</em> time.</h1>
+ <svg style="position:absolute;left:0;top:0;z-index:1" width="1080" height="1350"><line x1="893" y1="935" x2="893" y2="1228" stroke="#E6DDD6" stroke-width="3"/><circle cx="893" cy="1237" r="12" fill="#E6DDD6"/></svg><div class="sub">Four places we look first, before we build anything.</div>
+ <div class="bot mono"><span>Discovery first</span><span>Swipe →</span></div>
+</div>
+<div class="s light">
+ <div class="top mono"><span class="wm" style="color:var(--dark)"></span><span>02 / 06</span></div>
+ <div class="big">01</div>
+ <h1>Bookings that live in someone's <em>inbox.</em></h1>
+ <div class="tell"><span class="mono">The tell</span><p>Someone scrolls their messages to know who is coming.</p></div>
+ <div class="bot mono"><span>Discovery first</span><span>Swipe →</span></div>
+</div>
+<div class="s cta">
+ <div class="top mono"><span class="wm" style="color:var(--ink)"></span><span>06 / 06</span></div>
+ <h1>Find the leak <em>before</em> you build.</h1>
+ <div class="url">disojostudio.com</div>
+ <div class="bot mono"><span>Discovery first</span><span>Bombay studio</span></div>
+</div>
+<div class="s reel">
+ <div class="panel">
+  <div class="top mono"><span class="wm" style="color:var(--ink)"></span><span>Discovery first</span></div>
+  <h1>Most software is built before anyone finds <em>the problem.</em></h1></div>
+ <div class="spk"><img src="../face.png"></div>
+ <div class="cap"><div>find the <i>problem</i> first</div></div>
+</div>
+</body>
