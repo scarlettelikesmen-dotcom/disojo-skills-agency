@@ -5,6 +5,8 @@ description: START HERE for any new Disojo website client. The ordered playbook 
 
 # Disojo client playbook
 
+> **Premium brand + 3D tier (USD 10-15k offer): use `disojo-brand-site-playbook` instead.** Tejjomay's rule (2026-10-14): Postcards Perfumes and Ascender Media, named below as reference builds, are groundwork only. Never use them as a design guide, quality example or proof of quality for that tier, not even slightly. The quality bar there is the nine sites in `disojo-art-direction/references/reference-sites.md`. This playbook still holds for plumbing and the general client flow.
+
 One rule above all: **the first demo comes from real assets, not placeholders passed off as real.** Everything below exists so that when
 Tejjomay sends assets, work starts immediately and nothing gets invented.
 

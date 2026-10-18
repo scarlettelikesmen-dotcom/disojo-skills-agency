@@ -5,6 +5,8 @@ description: The repeatable method behind the Ascender Media flagship (Lighthous
 
 # Disojo premium site method (reference build: Ascender Media, 2026-10-09)
 
+> **Not the quality bar for the premium brand + 3D tier.** Tejjomay's rule (2026-10-14): Ascender Media and Postcards Perfumes are groundwork only. Never use them as a design guide, example or proof of quality for the USD 10-15k offer, not even slightly. For that tier follow `disojo-brand-site-playbook`; the bar is the nine sites in `disojo-art-direction/references/reference-sites.md`. This skill remains useful for its plumbing, verification gates and deploy recipe, and its lessons (no fake product UI, honest copy, real measurements) still apply.
+
 Live (v1): https://www.ascendermedia.in, rollback `social-growth-agency-9pzpqpkcw`. v2 redesign (light, proof-first) preview: https://ascender-media-preview.vercel.app, not on the real domain until approved. `kit/` now holds v2 (v1 source is not kept; plan in references/ascender-plan-v2.md). Code: `kit/` (Vite + React + Lenis + Phosphor, no GSAP, no three.js). Plan it came from: `references/ascender-plan.md`. Measured: mobile Lighthouse 99 / 100 / 100 / 100, smoke 34/34, JS 93 KB gzip, fonts 94 KB.
 
 ## The method, in order (do not skip step 1)

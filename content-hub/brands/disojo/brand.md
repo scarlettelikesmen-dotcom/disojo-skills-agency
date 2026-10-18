@@ -23,3 +23,7 @@ Logo set, wordmark, IG highlight covers and story slides, the reel engine and Di
 
 ## TO CONFIRM
 Offer wording ("free leak check" + 7-question checklist), USD pricing (private), current public email, clients OK'd for case studies, handles registered per platform, capacity, baseline numbers.
+
+
+## 2026-10-18 (Tejjomay): handle
+The real Instagram handle is **@disojostudio**. The account is currently @disojo.solutions because the username-change cooldown (about 10 days) has not finished; he will switch to @disojostudio when the window opens. Use @disojostudio in all new copy and bios; keep @disojo.solutions only until the switch.

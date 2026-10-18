@@ -7,7 +7,6 @@
 - [Unique design per client](feedback-unique-design-per-client.md) — never reuse the Postcards/starter look; fresh identity, nav, scroll logic and footer per client
 - [Packaged product 3D](reference-packaged-product-3d.md) — template model + label art kit, how reference sites source 3D assets, food routes
 - [Ascender Media rebuild](project-ascender-media-rebuild.md) — preview URL, status, open decisions
-- [Print Elements rebuild](project-print-elements-rebuild.md) — press-bed concept, preview URL, what is real vs temporary, open items
-- [Read the Disojo chain first](feedback-read-the-disojo-chain.md) — Print Elements anger: run playbook, real assets, read skills when told
+- [Read the Disojo chain first](feedback-read-the-disojo-chain.md) — before any build: run the playbook, use real assets, read the skills when told
 
 - [Logo taste](feedback-logo-taste.md) — craft-vocabulary logos at OH restraint; no growth bars; use disojo-logo-design skill

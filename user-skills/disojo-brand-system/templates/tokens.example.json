@@ -1,0 +1,36 @@
+{
+  "_note": "EXAMPLE ONLY. Every value below is a placeholder to show the shape. Replace all of it from the approved art direction; never ship these values.",
+  "brand": "EXAMPLE BRAND",
+  "colors": [
+    { "name": "ground", "hex": "#F4F1EA", "job": "page background" },
+    { "name": "ink", "hex": "#1A1714", "job": "text and logo" },
+    { "name": "accent", "hex": "#D2451E", "job": "the one signature colour: buttons, highlights, 3D accent light" },
+    { "name": "spare", "hex": "#8A8378", "job": "secondary text, hairlines" }
+  ],
+  "contrast": [
+    { "text": "ink", "on": "ground", "ratio": null, "note": "measure and fill in" }
+  ],
+  "type": {
+    "display": { "family": "EXAMPLE DISPLAY", "weight": 600, "source": "open licence or client licence: record here", "letterSpacing": "-0.03em" },
+    "text": { "family": "EXAMPLE TEXT", "weight": 400, "source": "open licence or client licence: record here" }
+  },
+  "motion": {
+    "easePrimary": "cubic-bezier(0.83, 0, 0.17, 1)",
+    "easeSecondary": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "durations": { "fast": 0.3, "base": 0.6, "slow": 0.75 },
+    "personality": "one line: e.g. calm and deliberate, or snappy"
+  },
+  "scene3d": {
+    "background": "ground",
+    "accentLight": "accent",
+    "toneMapping": "ACESFilmic",
+    "hdri": "path and size, 1k, <= 1.5 MB",
+    "modelBudgetKB": 600
+  },
+  "voice": {
+    "adjectives": ["plain", "confident", "dry"],
+    "banned": [],
+    "samples": []
+  },
+  "todo": ["fill every placeholder", "record font licences", "measure contrast"]
+}

@@ -95,3 +95,10 @@ Everything else: decide, state your decision in the delivery note, and let him r
 ## Files
 `engine/tools/`: edit_reel.py (pipeline), take_report.py, verify_reel.py, measure_audio.py, export_safe.py, render-timeline.mjs + timeline.html (captions, hook, cards), render-carousel.mjs, transcribe_batch.py (voice profiles from many clips), transcribe_words.py.
 `engine/templates/`: plan.example.json, brand.template.md, voice.example.md, carousel.example.json. `references/`: plan-schema.md, motion-rules.md, lessons.md. Sister skills: `disojo-carousel-studio`, `disojo-content-copy` (copy), `disojo-motion-craft` (taste + review loop), `disojo-panel-designer` (visual panels), `disojo-sound-design`, `disojo-short-form-playbook` (house numbers), `disojo-reel-export` (upload-safe export of any video), `disojo-brand-motion-intake` (a brand's look and MOTION.md).
+
+
+## Engine v5+ (Remotion), 2026-10-17
+The frame-by-frame Chrome + ffmpeg path (v4) is superseded for new work by `engine-remotion/` (see its README): `make_base.py` prepares the graded, cut, overlay-free base; Remotion composes video, captions, 3D hero object, panels and lower thirds in one scene. v4 still works for quick captions-only cuts.
+
+
+> 2026-10-17: for Disojo reels the style is LOCKED in skill `disojo-editing-locked` (v9). Use it; this skill supplies the base-prep engine.

@@ -1,9 +1,7 @@
-# Visual identity: Disojo (existing system, status: baseline; Tejjomay: "design is kind of mid")
-Direction: **calm editorial.** Ink and cream, Host Grotesk, mono labels, real wordmark. Source of truth: disojostudio.com and the logo set.
-- Palette: ink `#131311`, cream `#E6DDD6`, light `#E8E8E3`. One accent = cream/ink inversion (marker highlight, pill). Two themes alternate for rhythm.
-- Type: Host Grotesk 700 tight (-0.045em), italic 600 for the emphasised word, JetBrains Mono 22 px uppercase labels.
-- Reels: split layout (panel top, speaker below), boxed captions on the seam, marker highlight, springs damping >= .72, grain/vignette/dot-grid drift. Full motion identity: `MOTION.md`.
-- Carousels: `engine/design/disojo/tokens.css` (cover / point / cta, alternating dark/light).
-- Sound: CC0 kit, sparse.
-- Known weaknesses and priorities: `~/.claude/skills/disojo-panel-designer/references/known-weaknesses.md` (empty top third of panels, thin line art, plain titles, no persistent morphing shape, no whip transitions).
-- Stills: `../_visual/disojo-*.png`.
+# Visual identity: Disojo (@disojo.solutions)
+Identity v2, APPROVED by Tejjomay 2026-10-14 ('all look good, lock in'). Reference stills + source HTML: `brands/_visual/v2/` (disojo.html, code.html, trading.html, render.mjs, fonts/). v1 is retired. Do not change without his OK.
+
+**Look:** calm editorial. Ink `#131311` / cream `#E8E8E3` (text on dark `#E6DDD6`), alternating dark and light slides. Host Grotesk 700, tracking -0.055em, line-height .9, one *italic* accent word per headline; JetBrains Mono 22px caps for labels. Wordmark top-left, slide counter top-right, hairline rules.
+**Signature:** the leak: a 3px line drips from the headline's last word down to the footer rule and ends in a dot. "The tell" = inverted ink block with the concrete sign of a leak.
+**Sizes:** cover headline ~196px, content ~150px, CTA ~176px. CTA = `disojostudio.com` pill. No colours beyond ink/cream.
+**Reel:** top panel ink with hook (italic accent), cream rounded caption box with italic key word, speaker below. Never insult competitors; no India-specific references (no WhatsApp).

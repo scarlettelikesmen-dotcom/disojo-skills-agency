@@ -4,3 +4,10 @@
 - [Brand: codewithabel](brand-codewithabel.md) — build-in-public account, series, story bank, open questions
 - [Brand: abelkapoor-trading](brand-abelkapoor-trading.md) — trading account, no-selling promise, compliance guards, open questions
 - [Content style feedback](feedback-content-style.md) — how he wants the content operation run; voice-dictation quirks
+- [High-ticket branding offer](project-high-ticket-branding-offer.md) — USD 10-15k branding + site offer, 7 reference sites studied, skills installed, open decisions
+- [Print Elements flagship](project-print-elements-flagship.md) — FRESH build, signed 2026-10-14 CAD 19,500; guidebook phase 2; open questions
+- [Reminder: location sitemap, service pages, Parallel HQ copy](reminder-site-locations-services-parallelhq.md) — Disojo site, noted 2026-10-17, not started
+- [Editing engine state](editing-engine-state.md) — Remotion pilot v5-v7, verdict history, open editing list, how to run (CURRENT FOCUS)
+- [Match live by measuring](feedback-match-live-by-measuring.md) — Disojo site: copy/restore means exact, and diff numerically vs live before claiming
+- [Copywriting systems](copywriting-systems.md) — 3 per-account copy skills + reports (2026-10-18), awaiting review
+- [Trading origin + answers](trading-origin-and-answers-2026-10-18.md) — confirmed origin, identity theme, P&L rule, handles, KDC before-story

@@ -1,10 +1,14 @@
-# abelkapoor-trading: week 1 content map (3 posts a day; draft; disclaimer on everything)
-| Day | A (talking head) | B (hot take reel) | C (carousel) |
-|---|---|---|---|
-| 1 (Day 1 of not selling) | A7 I'm not selling you anything | B1 boredom is not a setup | C7 why I'm not selling you anything |
-| 2 | A1 not over-trading, bored | B9 overtrading is boredom in a costume | C3 5 signs you're trading out of boredom |
-| 3 | A3 after a loss, perfect setups everywhere | B5 nobody revenge-trades on purpose | C6 the three trades after a loss |
-| 4 | A4 no structure, not inconsistent | B3 journal vs scoreboard | C4 a journal that changes behaviour |
-| 5 | A5 the trade after the loss | B12 the loss isn't the damage | C2 post-mortem: the trade after the loss |
-| 6 | A9 waiting is a skill | B11 waiting is a position | C5 rules vs preferences |
-| 7 | A10 one question before the next trade | B10 a checklist is a promise | C1 the checklist before any trade |
+# Week 1 plan v2: @abelkapoor, The Wall Model (21 slots; rules v1.0)
+Each slot: disclaimer in caption, tiny caption, 1-2 hashtags (#daytrading #trading). A = talking head, B = chart/hot-take reel (trending audio added by Tejjomay in-app), C = carousel. Scripts: `../scripts/week-1-scripts.md`.
+
+| Day | Theme | A talking head | B hot take | C carousel |
+|---|---|---|---|---|
+| Mon | The model | A1 Every trade I take has a wall behind my stop | More information won't fix your execution | C1 The Wall Model in 7 |
+| Tue | Level | A2 Most traders mark the wrong levels | A level is only a level if price respects it | C2 Levels |
+| Wed | Wall | A3 A random five-minute gap is not a setup | Put your stop where the market has to work to reach it | C3 The Wall |
+| Thu | Re-sweep | A4 The first sweep is usually a trap | The first sweep is a trap | C4 The re-sweep |
+| Fri | Road | A5 I don't target the big move. I target the easy one | Target the easy move, not the big one | C5 The Road |
+| Sat | Trigger | A6 CISD in thirty seconds | The one-minute chart isn't random. Your context was | C6 The Trigger |
+| Sun | No trade | A7 Two walls. No trade. | Two walls. No trade. | C7 No-trade checklist |
+Plus: ONE pinned proof post (prop-firm payout email recording) in week 1.
+Filming: 2 sessions for A1-A7 (4 + 3 scripts) + 1 screen-recording session for the 7 CHART shots (and chart crops for carousels). Approvals: Tejjomay approves each hot take. Posting is his; platforms TikTok, Instagram, YouTube Shorts, Snapchat, X (native uploads, vary first line and cover per platform, no watermarked reposts).

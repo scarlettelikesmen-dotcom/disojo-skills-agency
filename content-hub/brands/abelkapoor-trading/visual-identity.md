@@ -1,10 +1,6 @@
-# Visual identity: abelkapoor-trading, Direction A "trading journal / post-mortem" (stills approved? NOT YET)
-Concept: a trader's paper journal after a hard day: ruled lines, a red margin, red-pen annotations, checkboxes, stamps. Signals process and honesty over hype; deliberately the opposite of neon candlestick-and-lambo trading content. Distinct from Disojo (ink/cream editorial) and codewithabel (dev log).
-- **Palette (each colour means something):** paper `#EFEAE0`, ink `#16140F`, muted `#6B655A`, **red pen `#C0392B` = rule broken / the real tell**, **green ink `#2E6B4F` = rule followed**. Max 5 hues. No chart green/red candles.
-- **Type:** Instrument Serif (statements; italic for the emphasised word), IBM Plex Mono (labels, "POST-MORTEM #03", disclaimer), Caveat (red handwritten margin notes, used sparingly).
-- **Motifs:** ruled lines + red margin line, red-pen underline/circle on the key word, struck-through bad rules, hand-ticked checkboxes, "RULE BROKEN" stamp, margin notes ("the real tell"), a constant small `EDUCATION ONLY . NOT INVESTMENT ADVICE` mark on every frame.
-- **Reels:** panel on top = paper with the serif statement and a red-pen underline; captions in a paper box with an ink border and a hard offset shadow, serif at ~92 px, **red marker underline** on the emphasised word instead of a filled block; speaker below. Calmer pacing than the other two (longer holds), minimal sound (paper, soft tick).
-- **Carousels:** post-mortem and checklist templates; cover = a serif statement with a red-pen circle; content = checklist rows or "plan vs what I did".
-- **Motion:** unhurried (Premium-leaning): 300-560 ms, no overshoot beyond ~2%, pen strokes draw on (SVG dash), stamps land with a soft thud (CC0 impact, quiet).
-- **Never:** profit screenshots, candlestick fantasy imagery, luxury props, countdown urgency, green-up/red-down P&L styling, any link to Disojo or the app.
-- Stills: `../_visual/trading-*.png`. Engine theming (brand CSS, serif captions, red-underline marker, journal panel types): not implemented; do after approval.
+# Visual identity: abelkapoor-trading ("The Rulebook")
+Identity v2, APPROVED by Tejjomay 2026-10-14 ('all look good, lock in'). Reference stills + source HTML: `brands/_visual/v2/` (disojo.html, code.html, trading.html, render.mjs, fonts/). v1 is retired. Do not change without his OK.
+
+**Look:** newspaper rulebook. Off-white `#F1EEE6`, black `#0D0D0D`, ONE red `#E8321C` used only for the thing that matters (the bored/broken rule). Big Shoulders Display 900 caps (tight, huge), Newsreader italic for the human aside, JetBrains Mono 21px caps for labels. Black "THE RULEBOOK" tab + "NO. 03" with a 7px rule on every slide.
+**Signature:** a rule broken = red number, red strike line, "RULE BROKEN" stamp; one red word per headline with a rough red underline. Speaker footage black and white (grayscale, contrast 1.12). Black slide for the CTA.
+**Compliance on every slide/frame:** "Education only. Not investment advice." in the footer. Nothing from the Disojo world. No pricing, no results, no P&L.

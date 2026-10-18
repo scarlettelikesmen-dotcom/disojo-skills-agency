@@ -54,3 +54,10 @@ Everything fading in at once; the same duration for everything; linear easing on
 
 ## 7. The loop that makes it better
 Every note Tejjomay gives becomes a permanent rule: fix the piece, then write the rule into the relevant skill (rule, check or script change) so he never gives the same note twice.
+
+## 8. Rules added 2026-10-17 (from Tejjomay's notes on the Remotion pilot; apply always)
+- "Twitching" = stacked zoom changes. Never add a kick/pulse on a frame that already has a hard-cut zoom jump; emphasis swell amplitude <= 1.5% with a soft attack (no instant jump) and slow release; no blur kicks; cap per-frame zoom change inside a segment at about 1% (measure it).
+- Dot grids, radial glows, vignette-on-panels, tracked all-caps eyebrow labels, italic single-word accents, avatar circles, stock icon graphics (code bars, seesaw, growth chart) are AI tells: do not use.
+- But flat type-only panels read as "too raw" too: use ONE persistent hero object that re-forms between ideas (built in code with real light, shadow, material), graded footage, one hairline and one wordmark. The anti-slop and taste skills are web-UI skills: apply the principles, not the code.
+- Titles top, object grounded at the seam; nothing overlaps; check a settled frame per panel and a mid-morph frame.
+- Grade the footage (lift shadows, calm the orange cast, slight clarity); it is part of the design, not an extra.

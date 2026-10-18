@@ -1,0 +1,11 @@
+# Filming checklist (iPhone 14 Pro, batch day) 2026-10-18
+Gear confirmed: iPhone 14 Pro, tripod, tall stand (B-roll from behind, time-lapses), 3 desk lamps, 5 TB drive, ~40 GB free on the phone.
+## Phone settings (do once)
+- Settings > Camera > Record Video: **4K at 30 fps** (not 60). Settings > Camera > Formats > **turn OFF "HDR Video"** (HDR/HLG footage looked gray in our edits and needs a tone-map; SDR needs none and is smaller). Keep "Auto FPS" OFF. Lens: **2x or 3x telephoto**, phone at about a metre (less face distortion than the wide lens close up). Lock exposure and focus (long-press the face, slide the sun icon slightly down) so brightness doesn't pump.
+- Storage: 4K30 SDR is roughly 170-200 MB/min. A 2-hour batch is about 20-25 GB: **AirDrop to the Mac and copy to the 5 TB drive every ~45 minutes** so the phone never fills.
+## Angle and light (your jaw/teeth note)
+Camera slightly ABOVE eye level (about 10-15 degrees down), lens near eyebrow height; chin slightly forward and down; turn 20-30 degrees and look at the lens; key lamp above and slightly to one side (about 45 degrees), a second lamp as a soft fill on the other side, third behind you for separation. No light from below. Tripod, never handheld on talking heads (handheld sway caused the twitching).
+## Sunday batch plan (proposal; adjust)
+Keep the worlds apart on camera: **different background/lamp setup and different top for each account** (Disojo: calm desk, ink/cream tones; codewithabel: your build desk, cobalt accents allowed; trading: its own corner or wall, black/white tone). Film in blocks: (1) trading A scripts, (2) codewithabel A scripts, (3) Disojo A scripts, (4) screen recordings (trading charts, build screens), (5) B-roll from the tall stand. Each script: 1 clean take, then 1 safety take; leave 2 seconds of silence at the start and end; say the hook line twice.
+## Audio
+Trending audio is added in-app by you. Our files keep the voice clean at about -16 LUFS with no baked-in music. Check the account type: **Instagram business accounts have a restricted music library** (as far as I know; confirm in the app that each account is a Creator/personal account if you want the full trending catalogue). In-app audio is licensed for use on that platform only: don't re-export an in-app-music version to other platforms.

@@ -13,3 +13,6 @@ Non-negotiables: never invent facts; never cross worlds; **Tradriv and all older
 
 **Why:** he wants one place where Claude runs research, strategy, hooks, scripts, direction, planning, editing and review for all three accounts at volume with consistent quality.
 **How to apply:** use skill `disojo-content-os`; update MASTER-CONTEXT, DECISIONS and this memory in the same session as any decision. Related: [[content-hub-setup]].
+
+## Visual identities LOCKED 2026-10-14 (v2)
+Tejjomay rejected v1 (codewithabel dark IDE, trading paper journal: "disgusting") and approved v2 ("all look good, lock in"): Disojo = ink/cream + Host Grotesk + leak-drip line; codewithabel = cobalt #2338FF + acid #D9FF3F, Bricolage Grotesque, neo-brutal hard shadows, giant outlined DAY number; abelkapoor-trading = "The Rulebook" off-white/black/one red #E8321C, Big Shoulders Display + Newsreader italic, B&W speaker. Specs: content-hub/brands/<slug>/visual-identity.md; stills/source: content-hub/brands/_visual/v2/. Do not redesign without his OK. Next: build engine theming from these, then the B generator.
