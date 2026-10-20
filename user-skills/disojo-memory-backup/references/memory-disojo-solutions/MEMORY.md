@@ -11,3 +11,9 @@
 - [Match live by measuring](feedback-match-live-by-measuring.md) — Disojo site: copy/restore means exact, and diff numerically vs live before claiming
 - [Copywriting systems](copywriting-systems.md) — 3 per-account copy skills + reports (2026-10-18), awaiting review
 - [Trading origin + answers](trading-origin-and-answers-2026-10-18.md) — confirmed origin, identity theme, P&L rule, handles, KDC before-story
+- [Our work rebuild options](project-our-work-rebuild-options.md) — DONE (Stage wired in); mock-ups in _archive/work-options
+- [To-do: Ascender style + white brief + up/down feature](reminder-site-ascender-style-todo.md) — mostly done 2026-10-20 (hover motion, white brief, font); items 2-4 now folded into the design-language pass
+- [Background test (5 ideas)](project-site-background-test.md) — DONE (lamp edge locked in)
+- [What we do: 10 layout options](project-what-we-do-options.md) — DONE (Directory + Symptoms wired)
+
+- [Disojo site state 2026-10-20](project-site-state-2026-10-20.md) — READ FIRST: home rebuild done, preview + git pushed, not deployed; to-do list (phone optimisation next)
