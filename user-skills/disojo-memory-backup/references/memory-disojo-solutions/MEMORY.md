@@ -19,3 +19,4 @@
 - [Disojo site state 2026-10-20](project-site-state-2026-10-20.md) — READ FIRST: home rebuild done, preview + git pushed, not deployed; to-do list (phone optimisation next)
 - [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
 - [Disojo logo redo](project-disojo-logo-redo.md) — started 2026-10-21: brief (hybrid wordmark, name stays), 6 reference reels studied, direction pending
+- [Logo: no font tweaks](feedback-logo-no-font-tweaks.md) — 2026-10-21 sketches rejected; construct letters, explore wide, compare against his refs before showing
