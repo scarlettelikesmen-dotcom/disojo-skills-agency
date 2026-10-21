@@ -17,3 +17,5 @@
 - [What we do: 10 layout options](project-what-we-do-options.md) — DONE (Directory + Symptoms wired)
 
 - [Disojo site state 2026-10-20](project-site-state-2026-10-20.md) — READ FIRST: home rebuild done, preview + git pushed, not deployed; to-do list (phone optimisation next)
+- [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
+- [Disojo logo redo](project-disojo-logo-redo.md) — started 2026-10-21: brief (hybrid wordmark, name stays), 6 reference reels studied, direction pending
