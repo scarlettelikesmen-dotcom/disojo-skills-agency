@@ -23,3 +23,4 @@
 - [Print Elements in Ascender style](project-print-elements-ascender-style.md) — new build 2026-10-22, live preview pe-857fd6.vercel.app, hero dojacatbro, open items
 - [Print Elements multi-page (OH style)](project-print-elements-multipage.md) — 64-route site live pe-d4edb3.vercel.app, supersedes one-page build
 - [Trading journal](project-trading-journal.md) — private journal in DISOJO SOLUTIONS/trading-journal, separate from content; backfill Oct 16/19/20 pending
+- [Disojo site state 2026-10-22](project-site-state-2026-10-22.md) — READ FIRST: new logo, social exports, CTA mock-up (4455/cta.html), services-copy plan awaiting 4 answers, v3 backup location
