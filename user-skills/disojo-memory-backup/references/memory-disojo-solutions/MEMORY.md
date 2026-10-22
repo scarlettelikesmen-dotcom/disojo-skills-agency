@@ -20,3 +20,5 @@
 - [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
 - [Disojo logo redo](project-disojo-logo-redo.md) — started 2026-10-21: brief (hybrid wordmark, name stays), 6 reference reels studied, direction pending
 - [Logo: no font tweaks](feedback-logo-no-font-tweaks.md) — 2026-10-21 sketches rejected; construct letters, explore wide, compare against his refs before showing
+- [Print Elements in Ascender style](project-print-elements-ascender-style.md) — new build 2026-10-22, live preview pe-857fd6.vercel.app, hero dojacatbro, open items
+- [Print Elements multi-page (OH style)](project-print-elements-multipage.md) — 64-route site live pe-d4edb3.vercel.app, supersedes one-page build
