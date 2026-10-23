@@ -26,3 +26,4 @@
 - [Disojo site state 2026-10-22](project-site-state-2026-10-22.md) — READ FIRST: new logo, social exports, CTA mock-up (4455/cta.html), services-copy plan awaiting 4 answers, v3 backup location
 - [Print Elements rebrand concept](project-print-elements-rebrand-concept.md) — 2026-10-23 from-scratch rebrand exploration, A1/A4 liked, B pending, year unconfirmed
 - [Disojo site state 2026-10-23](project-site-state-2026-10-23.md) — READ FIRST: DEPLOYED 444f168; what shipped, merge note (work in main repo now), open items
+- [To-do: service details + detail page redo](reminder-site-service-details-and-detail-page.md) — REMIND at next site session: lists inside What we fix answers, hook briefs, /services page redo
