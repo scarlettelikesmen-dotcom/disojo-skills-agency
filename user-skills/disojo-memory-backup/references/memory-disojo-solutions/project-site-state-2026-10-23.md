@@ -14,3 +14,5 @@ Deployed to www.disojostudio.com on 2026-10-23 (branch site-rebuild-astro-v2, co
 **Still open:** copy of the new section is placeholder wording (Tejjo has not approved the exact lines); phone and Safari untested by a real device; CTA labels ("Build with us") not renamed; case-study redo (10 layouts at localhost:4403/cs, no pick yet); other pages in old style; logo only a 700px trace (need vector); Instagram bio options given, no pick; pill/CTA mock-ups in `_archive/work-options/ws/` (served on 4455).
 
 See [[project-site-state-2026-10-22]] and [[feedback-how-tejjo-iterates]].
+
+**2026-10-26 update:** deployed again (commit 5a861d6). Hero rebuilt, Work tags/numbers, Sudha removed, "Tejjo" only, no "as the client reported", Meta ROAS wording, new founder photo. Open: Ascender and Nature's Blend case-study pages still show old numbers; mock-ups for the Work page (10 options) at localhost:4455/wk/index.html not chosen; process/services pages live from 10-24. Spin-off folders ~/Desktop/disojo-hybrid-spin(-before) can be deleted.

@@ -28,3 +28,6 @@
 - [Disojo site state 2026-10-23](project-site-state-2026-10-23.md) — READ FIRST: DEPLOYED 444f168; what shipped, merge note (work in main repo now), open items
 - [To-do: service details + detail page redo](reminder-site-service-details-and-detail-page.md) — REMIND at next site session: lists inside What we fix answers, hook briefs, /services page redo
 - [LinkedIn profile optimisation](project-linkedin-profile.md) — About + banner FINAL; headline, experience, Featured, Services, photo, connections pending
+- [Shortscut teardown](reference-shortscut-teardown.md) — 2026-10-26 full teardown of shortscut.com + what to borrow for ascendermedia.in; report in ascender-portal/
+- [Ascender logo + identity](project-ascender-logo-identity.md) — 2026-10-26 started: brief, banned ideas, round-1 prompts out, awaiting picks
+- [Ascender site iteration plan](project-ascender-site-iteration-plan.md) — 2026-10-26 localhost plan from Shortscut teardown, nothing built yet
