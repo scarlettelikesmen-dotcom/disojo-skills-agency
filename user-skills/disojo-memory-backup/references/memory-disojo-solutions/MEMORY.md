@@ -35,3 +35,4 @@
 - [Premium build process](feedback-premium-build-process.md) — Mentable v1 failed 2026-10-27: study refs hands-on first, concepts in words, then build
 - [Iterate on localhost only](feedback-iterate-on-localhost-only.md) — 2026-10-27: no Vercel preview pushes unless asked
 - [Disojo v4 concept](project-disojo-v4-concept.md) — 2026-10-28 fresh 'Two O's' site at websites ARCHIVE/disojo-v4, localhost 4471, not deployed, awaiting feedback
+- [Port elements only](feedback-port-elements-only.md) — bringing concept pieces into the live site: add only the named element, never touch positioning, spacing or fonts
