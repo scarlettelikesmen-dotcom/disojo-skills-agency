@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
-  modified: 2026-10-27T17:07:25.764Z
+  modified: 2026-10-27T17:46:45.007Z
 ---
 
 Client: Mentable (trading-discipline app; founder Parag Mehta, Founder and CTO; pre-seed funded, figure NOT shown). Client paid USD 17,000 (private, never on a page). Formerly called Tradriv: never use that name.
@@ -23,7 +23,13 @@ Client: Mentable (trading-discipline app; founder Parag Mehta, Founder and CTO; 
 - Collector: FormSubmit to projects@disojostudio.com; inbox change LATER (Tejjo said). Activation pending.
 - App screens: preview build, sample data, labelled; cropped so no money figures show.
 
-## NEXT PASS (approved 2026-10-27, in progress): "build this, show me something insane"
+## v3 pass DEPLOYED 2026-10-27 (dpl_ENoVDS7nUV1iGXECrmu7DgSNCYJF)
+- App (~/TradeMind, uncommitted, Tejjo did not ask to commit): logo-05 wordmark + M mark via react-native-svg (components/logoPaths.ts, MentableWordmark.tsx), new app icon, dark splash bg, tab bar ICONS ONLY (Tejjo asked). Earlier uncommitted Oct 11 edits in that repo are not mine; left alone. Temp recording clock code was removed.
+- Site: motion tokens (--seal/--settle/--release), src/interact.js (roll links, triangle button fill via clip-path, field edge draw, chips fill, triangle cursor w/ labels, row dim + screen preview, tab title "Desk is closed."), line-mask reveals, rise, grain on dark, triangle hand-off into dark sections, 03 trio slide-apart, 04 wall line + High/0/50 sample numbers, sim recordings (public/clips/gate.mp4 in hero gap, lock.mp4 in 06), v3 screens (public/screens/v3-*), 404.html "desk closed", og-v3.jpg. Captures + raw recordings: mentable-space/app-capture/.
+- Live Lighthouse mobile 93-97 (variance), desktop 100s. QA scripts copied to scratchpad (tour/ix/misc) need puppeteer symlink from print-elements-multipage.
+- Not done: real-iPhone Safari test; founder photo + inbox still pending from Tejjo.
+
+## NEXT PASS (approved 2026-10-27, DONE above): "build this, show me something insane"
 Plan: `mentable-space/brief/AUDIT-AND-NEXT-PASS-2026-10-27.md` (scores: interaction layer 3/10 = biggest gap). Code study data: `mentable-space/brief/code-study/*.json`, `hover-timelines.json`.
 Tejjo authorised: (1) find the Mentable APP project on this laptop, run it in the iOS Simulator, (2) change the app code to the NEW logo (logo-05) everywhere in the app, (3) record short screen recordings from the sim (intent logging, gate clearing, desk lock) and re-export screens with the new logo, (4) build the full pass on the site: Mentable's own motion tokens (--seal / --settle / --release, no bounce), interaction library (link roll + mint triangle, button fill-from-top + seal press, field focus draw, chips fill, index rows with sibling dim + screen preview, phone hover, triangle cursor on fine pointers, focus-visible mirrors), scroll grammar (line-mask reveals, phones settle, in-frame drift, section hand-offs, grain on dark), middle-section redesigns (03 Outcome three columns sliding apart, 04 evidence wall-scale line + big sample numbers, 06 interactive index), 404 "desk closed", tab-title state, regenerate OG, (5) keep auditing (side by side with references, frame checks, Lighthouse >= 95, reduced motion), (6) deploy to production and show the deployed version (Tejjo asked to see the deployed version = go).
 Rules: no-copy law (no reference curves/timings/markup/signature moves); no layered slower-previous-section scroll (rejected on Ascender); no marquee, no bounce, no long preloader; commit app code only if asked (edit is authorised).

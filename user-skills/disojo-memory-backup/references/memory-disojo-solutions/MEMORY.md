@@ -33,3 +33,4 @@
 - [Ascender site iteration plan](project-ascender-site-iteration-plan.md) — 2026-10-26 localhost plan from Shortscut teardown, nothing built yet
 - [Mentable landing page](project-mentable-space-landing.md) — READ FIRST for Mentable: LIVE www.mentable.space, deploy recipe, decisions, NEXT PASS in progress (app logo + sim recordings + interaction library)
 - [Premium build process](feedback-premium-build-process.md) — Mentable v1 failed 2026-10-27: study refs hands-on first, concepts in words, then build
+- [Iterate on localhost only](feedback-iterate-on-localhost-only.md) — 2026-10-27: no Vercel preview pushes unless asked
