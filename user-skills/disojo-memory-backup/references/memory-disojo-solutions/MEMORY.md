@@ -31,4 +31,4 @@
 - [Shortscut teardown](reference-shortscut-teardown.md) — 2026-10-26 full teardown of shortscut.com + what to borrow for ascendermedia.in; report in ascender-portal/
 - [Ascender logo + identity](project-ascender-logo-identity.md) — 2026-10-26 started: brief, banned ideas, round-1 prompts out, awaiting picks
 - [Ascender site iteration plan](project-ascender-site-iteration-plan.md) — 2026-10-26 localhost plan from Shortscut teardown, nothing built yet
-- [Reminder: Mentable landing page](reminder-mentable-landing-page.md) — mentable.space pre-registration page, brief + open questions, not started
+- [Mentable landing page](project-mentable-space-landing.md) — mentable.space pre-registration site built 2026-10-27, preview link, fonts, collector, open items
