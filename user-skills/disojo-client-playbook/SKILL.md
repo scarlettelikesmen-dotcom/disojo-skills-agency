@@ -18,7 +18,7 @@ Tejjomay sends assets, work starts immediately and nothing gets invented.
 | 3 | Scaffold: copy the starter, fill `brand.config.js` + `products.js` (+ `quiz.js`) from the brief | `disojo-site-starter` |
 | 4 | Make the assets: hero frames or still, card crops, cut-outs, optimised images | `disojo-scroll-site-rebuild/scripts`, `disojo-launch-checklist/scripts/optimize_images.py` |
 | 5 | Add archetype-specific patterns if needed (stickers, dividers, scrubbed film, pinned gallery, counters) | `disojo-motion-recipes` |
-| 6 | Build the whole page, then verify: build + `scripts/smoke.cjs` + screenshots at desktop and phone. Show the running demo, not a plan | `disojo-site-starter`, `browser-qa` |
+| 6 | Build the whole page, then verify: build + `scripts/smoke.cjs` + screenshots at desktop and phone. Show the running demo, not a plan. **Exception: any premium or flagship site** gets a concept agreed in words first (`disojo-art-direction`), because a fast build without one comes out generic (Mentable v1, 2026-10-27) | `disojo-site-starter`, `browser-qa` |
 | 7 | Performance + a11y pass with numbers (Lighthouse), fix what it finds | `disojo-launch-checklist` |
 | 8 | Launch gate, checkout and form wiring, real-device test, handover | `disojo-launch-checklist` |
 | 9 | Push to a remote, deploy a public demo or the client's domain | `disojo-scroll-site-rebuild/scripts/deploy_public.sh` |
@@ -42,5 +42,5 @@ Tested only in headless Chrome and a desktop browser so far: plan a real-phone c
 ## Design must be new for every client (hard rule, learned on Mochi & Midori)
 The starter is Postcards generalised: use it for plumbing (Lenis, loader store, build + meta scripts, smoke test) and **never ship its look**. Before writing UI, decide and state in one line: palette, type pairing, nav pattern, hero choreography, section set, page transition, footer. Reference build with a deliberately different identity: `~/Desktop/websites ARCHIVE/mochi-midori/site` (circle opens onto the film, full-screen colour chapters with plated cut-outs via rembg, corner nav + full-screen menu, allergen chart instead of FAQ, ticket footer, circle-wipe transition). Do not copy that one either. Measured lessons: a 200 KB Google Fonts CSS (Japanese font) dropped mobile Lighthouse to 57; subset with `&text=` and preload the LCP poster to reach 96. Procedural 3D food looked cheap; prefer real photography.
 
-## Premium non-3D brand/agency site? Use the method that produced Ascender Media
-`disojo-premium-site-method` (read design skills in order, concept-specific identity, illustrative craft demos, pinned sections with fallbacks, verification gates, preview then production). Reference implementation in its `kit/`; live https://www.ascendermedia.in.
+## Premium non-3D brand/agency site? Use `disojo-premium-site-method`
+For its process, gates and plumbing (hands-on reference study, concept agreed in words, hero first, taste gate, then mechanical gates, preview then production). Its `kit/` (Ascender) is plumbing, never the look or the quality bar.

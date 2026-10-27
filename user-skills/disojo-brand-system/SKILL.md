@@ -35,7 +35,7 @@ Skip for this tier unless the client asks: brand-architecture, brand-launch, bra
 
 ## tokens.json rules
 - Colours: 3 to 4, each with `name`, `hex`, `job`. Contrast ratio for text pairs recorded (>= 4.5:1 body, 3:1 large).
-- Type: max 2 families, each with `source` (open licence or client licence, with a note). Never a commercial font lifted from another site, never a trial font.
+- Type: max 2 families (a mono for data may be a third, ideally the same family's mono), each with `source` (open licence or client licence, with a note). Never a commercial font lifted from another site, never a trial font.
 - Motion: default presets (observed in the reference sites, not a standard): primary ease `cubic-bezier(0.83, 0, 0.17, 1)`, secondary `cubic-bezier(0.16, 1, 0.3, 1)`, durations 0.3 / 0.6 / 0.75 s. Override per brand if the art direction asks.
 - 3D: scene background, accent and light tint come from the same colours (no extra hex in the scene code).
 - Voice: three adjectives, banned words, two sample lines.

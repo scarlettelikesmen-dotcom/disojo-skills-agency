@@ -78,7 +78,7 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 **Steps:**
 1. Scaffold. Use `disojo-site-starter` for plumbing only, **never its look**; state palette, type, nav, hero choreography, section set, transition and footer in one line before UI work.
 2. Load tokens into CSS variables and the scene; no stray hex.
-3. Build section by section, a different layout family per section; each section finished and checked before the next (`disojo-guardrails`, `design-taste-frontend`, `high-end-visual-design`, `anti-slop-design`, `make-interfaces-feel-better`, `emil-design-eng`, `ui-ux-pro-max`).
+3. Build the hero and the signature moment first and show them; then the rest section by section inside ONE system (one type scale, one label style, one grid) telling ONE story, not a different layout family per section; each section finished and checked before the next (`disojo-guardrails`, `design-taste-frontend`, `high-end-visual-design`, `anti-slop-design`, `make-interfaces-feel-better`, `emil-design-eng`, `ui-ux-pro-max`).
 4. Integrate the 3D module and per-variant theming; loader tied to real progress with a cap and skip.
 5. Motion: `disojo-motion-recipes`, `motion-foundations`, `motion-patterns`, `motion-advanced`, `disojo-motion-craft`. Brand ease and durations from tokens. Reduced-motion path from the start.
 6. Enquiry form with real backend and honest states.

@@ -14,6 +14,9 @@ license: "MIT"
 license_source: "https://github.com/wwewtech/anti-slop-design/blob/main/LICENSE"
 ---
 
+> **DISOJO OVERRIDE (added 2026-10-27; wins over this file for Disojo client work).** After Mentable v1 was rejected as generic: (1) ignore any "one layout family per section / at least 4 families" rule: build ONE system (type scale, label style, grid) repeated, telling ONE story; (2) do not default to double-bezel cards or squircle containers: hairlines, space and full-bleed imagery first; (3) display type may be huge (the reference sites run 130-530 px) against tiny labels, and fonts may be plain (one display face + one plain text face); (4) marquees are filler unless they ARE the concept (default zero); (5) study the references hands-on before planning and agree the concept with Tejjomay in words before any code; (6) Lighthouse and lint prove a page works, not that it is good. Source of truth: `disojo-art-direction`, `disojo-premium-site-method`, `high-ticket-flagship-3d`.
+
+
 # Anti-Slop Design
 
 ## Overview

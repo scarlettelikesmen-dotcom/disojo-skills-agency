@@ -18,13 +18,13 @@ Desktop 1512x864, 1440x790, 1860x955, 1920x1080, 1280x720. Phone widths 343 (the
 5. **Performance.** `~/.claude/skills/disojo-premium-site-method/scripts/lighthouse_summary.sh <deployed-url> [desktop]`. Judge the deployed URL, not a local uncompressed server. Targets from `AGENTS.md` (Lighthouse 90+ on performance, accessibility, best practices, SEO); note where a 3D page cannot reach it and why.
 6. **Content honesty.** No invented reviews, stats, prices or contact details. No "Coming soon" or lorem in a shipped hero. AI-generated media disclosed. Forms say success only when the endpoint confirms.
 7. **Accessibility basics.** All copy in the DOM (not in the canvas), visible focus, keyboard path through the nav and form, text contrast >= 4.5:1, cookie or prompt UI never covers the hero.
-8. **Reference comparison.** Put the first screen and one mid-scroll frame next to the closest reference at the same size. List three honest differences and fix the biggest. Never use Postcards or Ascender as the comparison.
+8. **Reference comparison (taste, not only defects).** Put the first screen and one mid-scroll frame next to the closest reference at the same size. List three honest differences and fix the biggest. Ask: is there ONE idea a visitor would describe? Could this page belong to another company in the niche with the logo swapped (must be no)? Passing gates 1-7 does not mean it is good: Mentable v1 scored Lighthouse 97/100/100/100 and was rejected. Run this comparison on the hero BEFORE the full build too. Never use Postcards or Ascender as the comparison.
 
 ## Regression list: defects seen in the references (must not appear)
 | Defect | Where seen | Probe |
 |---|---|---|
 | Empty or near-empty first screen for several seconds | Supersolid, Mammoth, HISS on phone | firstScreenContent |
-| Scroll locked by an intro for 35 s+ | Squiggle | scrollLock + fullScreenOverlays |
+| Scroll locked or blank intro for 20-35 s | Squiggle (35 s locked on 2026-10-14; blank ~20 s on 2026-10-27) | scrollLock + fullScreenOverlays |
 | Preloader about 10 s on phone | OH Architecture | screenshots at 3 s and 8 s |
 | Fixed logo over text, client logos overlapping | SLIK, Palmo | fixedUiOverlap (WARN needs a look) |
 | Trial font in production | Backhouse | fonts |

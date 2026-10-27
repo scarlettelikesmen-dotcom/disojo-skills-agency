@@ -13,7 +13,7 @@ List every page with its one job. Default for a premium brand site: Home, Work o
 ## 2. Scroll storyboard (home)
 One row per section. All columns filled before building:
 | # | Section | Visitor's question | Visual (real, built or sourced) | Copy (real) | Motion beat | Phone behaviour |
-Pattern seen across the reference sites (not a rule): a clear first screen, a proof strip, the work or story, how it works, who is behind it, a qualified enquiry. Each section uses a different layout family; no run of equal cards. The concept's story beats (from the brief) map to sections in order.
+Pattern seen across the reference sites (not a rule): a clear first screen, a proof strip, the work or story, how it works, who is behind it, a qualified enquiry. Sections share ONE system (type scale, label style, grid) and tell ONE story; vary scale and pace, not the layout family for its own sake; no run of equal cards. The concept's story beats (from the brief) map to sections in order.
 
 ## 3. First-screen rule (non-negotiable, from the reference defects)
 - The first screen shows **real content within about one second**: headline, one line, one action, one picture. No blank hero while an animation waits.

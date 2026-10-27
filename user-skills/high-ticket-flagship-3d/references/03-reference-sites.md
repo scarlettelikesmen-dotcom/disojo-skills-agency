@@ -33,7 +33,7 @@ The first seven are the sites Tejjomay named as the target. The last two are the
 - **How we exceed:** no logo over text on phone, no overlapping client logos, contrast checked at every scroll position.
 
 ## 5. hiss.sydney (a queer normal school, digital archive)
-- **What it is:** Webflow. Warm cream, a high-contrast serif at huge size, tilted photo fan, an orange block with doodles, a nine-item charter.
+- **What it is:** Webflow. Warm cream, a high-contrast serif at huge size, a self-shuffling deck of yearbook photos that turns into doodles, an orange block with doodles, a nine-item charter, yearbook collections as tabbed folders that stack on scroll.
 - **Study:** a serif can carry a brand; saturated colour blocks as chapters; personality through real people, not stock.
 - **Do not take:** the serif-on-cream pairing as a recipe, the word-by-word hero, the photo fan, the orange doodle block, the charter accordion, the voice.
 - **How we exceed:** a phone hero that has content throughout (theirs was one word then empty space); real photography only with consent.
@@ -48,7 +48,7 @@ The first seven are the sites Tejjomay named as the target. The last two are the
 - **What it is:** Webflow plus Swiper and Draggable. Off-white, a hand-drawn line that draws itself as the intro, warm illustration-led colour, team bios with personality.
 - **Study:** a brand's name made into a motion idea; warmth through illustration and real people; low-pressure calls to action.
 - **Do not take:** the self-drawing line, the cat-and-team intro, the orange, the colour set, the layout, the copy.
-- **How we exceed:** never lock the page. On both desktop and phone, the page stayed scroll-locked (`overflow: hidden`) for 35 s and 18 s respectively and we never reached the content. Our intros are capped, skippable and never block scroll.
+- **How we exceed:** never leave the page blank. On 2026-10-14 the page stayed scroll-locked (`overflow: hidden`) for 35 s (desktop) and 18 s (phone); on 2026-10-27 it was blank about 20 s before scrolling started the line. Our intros are capped, skippable and never block scroll.
 
 ## 8. ciaoenergy.com (3D benchmark: energy drink)
 - **What it is:** a Webflow shell with a 39.7 KB inline Three.js module: HDRI lighting, ACES tone mapping, subtle bloom, SMAA and FXAA, a tiny can model (0.16 MB), a video loader.
@@ -65,7 +65,8 @@ The first seven are the sites Tejjomay named as the target. The last two are the
 ---
 
 ## What the nine teach together (principles, not recipes)
-1. One memorable idea per brand, built into a small strict system.
+How to study them: hands-on, several minutes each, BEFORE planning (see `disojo-art-direction`, 2026-10-27 lesson).
+1. One memorable idea per brand, taken literally from the name or the product truth, built into a small strict system (one system repeated, not a different layout per section).
 2. Type does the heavy lifting; sizes are big and tight.
 3. Real imagery or a well-lit real object; not decoration.
 4. Motion carries the story and has a point.

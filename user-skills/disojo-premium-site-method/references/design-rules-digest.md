@@ -1,4 +1,6 @@
 # Design rules digest (self-contained; verbatim sources are in source-skills/)
+
+> **Disojo overrides (2026-10-27, after Mentable v1 was rejected).** Where a rule below conflicts, these win: (1) no "one layout family per section" rule: one system repeated, one story; (2) no double-bezel cards by default: hairlines, space and imagery first; (3) display type may be very large (130-530 px on the references) against tiny labels; (4) a marquee is filler unless it IS the concept; zero is the default; (5) a giant wordmark footer is allowed when it is the identity; (6) concept approved by Tejjomay in words before code, and reference study done hands-on first.
 Merged from design-taste-frontend, high-end-visual-design, anti-slop-design, ui-ux-pro-max, make-interfaces-feel-better, emil-design-eng, motion-foundations/patterns, review-animations, no-ai-slop. Where they disagree the stricter rule wins.
 
 ## 0. Before any code

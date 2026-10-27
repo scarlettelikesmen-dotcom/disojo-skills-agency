@@ -5,12 +5,14 @@ description: How Disojo designs client logos (wordmark, monogram, mark) that loo
 
 # Disojo logo design
 
-## Process (do it in this order, fast)
+## Process (do it in this order; take the time each step needs)
 1. **One idea from the client's real craft, not a symbol of "growth".** Write it in one line before drawing ("the A is cut and lifted: an edit cut and an ascent"). The best marks come from the name or the product, not from stock metaphors. Look at what competitors in the niche use and avoid it.
 2. **Type first.** Most premium studios (OH Architecture, Pentagram work) lead with a confident wordmark in one well-chosen grotesque, tight tracking, one weight. A custom detail in ONE letter beats an added icon.
 3. **Black and white first**, colour last. One accent colour at most, used on the single detail.
-4. **Test at 24 px, 48 px and billboard size** before showing. If the idea dies at favicon size, simplify.
-5. **Show 3 genuinely different directions**, each with: light, dark, on brand colour, small sizes, nav pill + favicon mockup. Say in one line what each one means. Be honest about which is weakest.
+4. **Check the shape's meaning in the client's own domain.** A shape can carry a meaning in that industry that fights the brand (Mentable logo-05, 2026-10-27: a downward triangle is the 'price falling' marker in trading UIs, and in green it reads as a mixed signal). Arrows, triangles, ticks, crosses and colours all mean something to traders, doctors, drivers.
+5. **If a direction started from an AI image, rebuild it as clean geometry** (straight stems, consistent corner radii, optical spacing) before it is final; an auto-trace leaves soft corners and uneven spacing. Disclose the AI origin.
+6. **Test at 24 px, 48 px and billboard size** before showing. If the idea dies at favicon size, simplify.
+7. **Show 3 genuinely different directions**, each with: light, dark, on brand colour, small sizes, nav pill + favicon mockup. Say in one line what each one means. Be honest about which is weakest.
 
 ## Principles (from research, 2026-10-13)
 Simplicity (every element earns its place; simple takes more thought, not less), one clear entry point, originality, versatility, scalability, balance, timelessness. Must work in one colour and tiny. Vector only.
