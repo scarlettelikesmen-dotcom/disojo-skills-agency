@@ -66,3 +66,5 @@ Lesson: never use "open" as a state class, because `.open` is the open-now indic
 - QA: all 3 crawl-clean; Lighthouse 100 everywhere except poster /print/ at 98 (CLS 0.094).
 - 2026-10-29 verdict: the counter (:4543) is "pretty good". The press run (:4541) is kept, with every out-of-register effect removed (Tejjo called it a glitch; never bring it back). The poster wall is rejected outright ("most disgusting"), its server stopped, its code left in v7/poster. Next step: talk with Tejjo.
 - Mammoth deep study: `research/mammoth/MAMMOTH-STUDY.md`. Ascender talk comes after Print Elements.
+
+**v8 (2026-10-29), the final clean pass:** in `print-elements-v4/v8`, served on :4551, built from the counter. Tejjo loves OH Architecture most, then Shortscut and Mammoth, and wants it that clean without copying. The pass adds bracket labels, a centred nav, a sentence with inline product pictures, a staggered six-product grid with caption rows, the price list, Price it, a numbered how-it-works, one quote at a time, an offset Visit title, and a footer with a giant wordmark and a live 'in Delta, we are open' line. Crawl clean; Lighthouse 100/100/100. Awaiting a verdict.
