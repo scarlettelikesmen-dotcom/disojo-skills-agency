@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
-  modified: 2026-10-28T21:27:49.093Z
+  modified: 2026-10-28T23:01:24.196Z
 ---
 
 2026-10-28 Tejjo: green light from the owner (Vijay) to rebuild printelements.ca A to Z, full creative freedom. **Keep the existing round CMYK badge logo, no rebrand** (reasons undisclosed). Tejjo called the value about $25,000 (earlier memory said CAD 19,500 signed; I don't quote either). Tejjo dislikes bland 3D: it has to be photoreal or "insane". Supersedes the multipage/ascender-style builds ([[project-print-elements-multipage]], [[project-print-elements-flagship]]).
@@ -53,4 +53,16 @@ Lesson: never use "open" as a state class, because `.open` is the open-now indic
 - Footer redone as a press sheet: crop marks, closing line, live Delta clock, and a CMYK wordmark that comes into register on scroll (6cda86f).
 - Full audit `AUDIT-v6.md` (190e2d1): crawl clean, Lighthouse 100/100/100 on every page type.
 - The plan in that audit: A) inner pages to v6, B) five new renders, C) owner answers, D) launch with Wix 301s.
-- Inner pages are not restyled to v6 yet; waiting for Tejjo's verdict. Ascender talk comes after Print Elements.
+- Inner pages are not restyled to v6 yet; waiting for Tejjo's verdict.
+
+**v7 (2026-10-29):**
+- Tejjo found Geist "kiddish" and said v6 still "doesn't hit right". They picked Archivo Condensed and asked to see all 3 directions, each built A to Z.
+- The three builds are in `print-elements-v4/v7/`. Notes are in `V7-THREE-DIRECTIONS.md`.
+  - **press** on :4541: plate-by-plate headings, halftone reveals, press-sheet slugs and crop marks, n-up tiles with a single-ink hover, a work order with tick boxes.
+  - **counter** on :4543: white, the price list with dot leaders and a hover preview.
+  - **poster** on :4545: full-ink posters, wall-sized fitted lines, posters pasted over one another, a flyer board.
+- Fonts: Archivo is cut into Display (width 78), Text and Narrow woff2 files.
+- Renders: `3d/renders/v7-neutral` (`PE_SWEEP` backdrop) and `v7-ink`. prep.py takes `PE_RENDERS`. The artwork is in Archivo too.
+- QA: all 3 crawl-clean; Lighthouse 100 everywhere except poster /print/ at 98 (CLS 0.094).
+- Awaiting Tejjo's pick.
+- Mammoth deep study: `research/mammoth/MAMMOTH-STUDY.md`. Ascender talk comes after Print Elements.
