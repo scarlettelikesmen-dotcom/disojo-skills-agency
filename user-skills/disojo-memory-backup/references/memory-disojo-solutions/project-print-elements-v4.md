@@ -64,5 +64,5 @@ Lesson: never use "open" as a state class, because `.open` is the open-now indic
 - Fonts: Archivo is cut into Display (width 78), Text and Narrow woff2 files.
 - Renders: `3d/renders/v7-neutral` (`PE_SWEEP` backdrop) and `v7-ink`. prep.py takes `PE_RENDERS`. The artwork is in Archivo too.
 - QA: all 3 crawl-clean; Lighthouse 100 everywhere except poster /print/ at 98 (CLS 0.094).
-- Awaiting Tejjo's pick.
+- 2026-10-29 verdict: the counter (:4543) is "pretty good". The press run (:4541) is kept, with every out-of-register effect removed (Tejjo called it a glitch; never bring it back). The poster wall is rejected outright ("most disgusting"), its server stopped, its code left in v7/poster. Next step: talk with Tejjo.
 - Mammoth deep study: `research/mammoth/MAMMOTH-STUDY.md`. Ascender talk comes after Print Elements.
