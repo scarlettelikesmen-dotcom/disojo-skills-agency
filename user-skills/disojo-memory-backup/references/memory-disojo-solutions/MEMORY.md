@@ -30,7 +30,7 @@
 - [LinkedIn profile optimisation](project-linkedin-profile.md) — About + banner FINAL; headline, experience, Featured, Services, photo, connections pending
 - [Shortscut teardown](reference-shortscut-teardown.md) — 2026-10-26 full teardown of shortscut.com + what to borrow for ascendermedia.in; report in ascender-portal/
 - [Ascender logo + identity](project-ascender-logo-identity.md) — 2026-10-26 started: brief, banned ideas, round-1 prompts out, awaiting picks
-- [Ascender site iteration plan](project-ascender-site-iteration-plan.md) — 2026-10-26 localhost plan from Shortscut teardown, nothing built yet
+- [Ascender site iteration plan](project-ascender-site-iteration-plan.md) — 2026-10-28 FULL REBUILD PLAN written (drop monolith, real reels, concept A/B/C), awaiting pick + footage
 - [Mentable landing page](project-mentable-space-landing.md) — READ FIRST for Mentable: LIVE www.mentable.space, deploy recipe, decisions, NEXT PASS in progress (app logo + sim recordings + interaction library)
 - [Premium build process](feedback-premium-build-process.md) — Mentable v1 failed 2026-10-27: study refs hands-on first, concepts in words, then build
 - [Iterate on localhost only](feedback-iterate-on-localhost-only.md) — 2026-10-27: no Vercel preview pushes unless asked
