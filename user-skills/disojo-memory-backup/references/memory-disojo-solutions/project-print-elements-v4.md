@@ -30,3 +30,17 @@ metadata:
 - Not deployed. No git yet.
 
 **Open:** prices current?, primary phone (604 vs 778 on logo), wraps and window/storefront graphics offered?, testimonial permission, real order backend, real job photos.
+
+**v5 (2026-10-28):** polishing pass in a separate copy, `print-elements-v4/site-v5`, served on :4521. v4 is unchanged on :4511 for comparison. Commit 2b66538.
+
+Added:
+- All 31 products rendered (15 new Blender scenes).
+- Four-ink buttons, rolling links, a price cursor, and the ink-wipe page transition.
+- A full-screen phone menu and a job list (several products in one email).
+- An odometer price with per-piece price and a savings tag.
+- A zoom lens and a sticky phone price bar.
+- Hero drips.
+
+Self-audit report: `AUDIT-v5.md`. 17 issues fixed. Lighthouse 100/100/100 on home, catalogue and a product page.
+
+Lesson: never use "open" as a state class, because `.open` is the open-now indicator.
