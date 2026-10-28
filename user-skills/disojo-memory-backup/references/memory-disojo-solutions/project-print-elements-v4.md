@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
-  modified: 2026-10-28T16:30:17.025Z
+  modified: 2026-10-28T20:49:50.845Z
 ---
 
 2026-10-28 Tejjo: green light from the owner (Vijay) to rebuild printelements.ca A to Z, full creative freedom. **Keep the existing round CMYK badge logo, no rebrand** (reasons undisclosed). Tejjo called the value about $25,000 (earlier memory said CAD 19,500 signed; I don't quote either). Tejjo dislikes bland 3D: it has to be photoreal or "insane". Supersedes the multipage/ascender-style builds ([[project-print-elements-multipage]], [[project-print-elements-flagship]]).
@@ -44,3 +44,10 @@ Added:
 Self-audit report: `AUDIT-v5.md`. 17 issues fixed. Lighthouse 100/100/100 on home, catalogue and a product page.
 
 Lesson: never use "open" as a state class, because `.open` is the open-now indicator.
+
+**2026-10-29:**
+- Nav: hides after 24px of scroll down, shows after 12px up (v4 + v5). Font is now Geist (Jost was "ugly"), with sentence case everywhere; all renders redone. Commit 4bb94f3.
+- Tejjo loves the hero. Below it, they called the v5 home copy ("31 products you can price right here, 4 inks, 6 days a week") disgusting, the steps sloppy, and the rest not clean like the 8 Monolog sites.
+- v6 is in `site-v6`, served on :4531 (v5 stays on :4521). Home below the hero is rebuilt: one paper colour, thin rules instead of boxes, big section titles, a staggered 6-product gallery, a 4-row index whose hover brings the name into CMYK register, flat price builder, 3-line steps, one quote at a time, a full-bleed banner, the visit block, and a giant footer wordmark. Commit 3cc03eb.
+- Study data: `research/clean/` (sheets plus measurements; we used 15 text sizes and 56 mono blocks, the refs 8-12 sizes).
+- Inner pages are not restyled to v6 yet; waiting for Tejjo's verdict. Ascender talk comes after Print Elements.
