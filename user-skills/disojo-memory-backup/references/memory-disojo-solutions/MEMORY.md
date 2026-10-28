@@ -36,3 +36,4 @@
 - [Iterate on localhost only](feedback-iterate-on-localhost-only.md) — 2026-10-27: no Vercel preview pushes unless asked
 - [Disojo v4 concept](project-disojo-v4-concept.md) — 2026-10-28 fresh 'Two O's' site at websites ARCHIVE/disojo-v4, localhost 4471, not deployed, awaiting feedback
 - [Port elements only](feedback-port-elements-only.md) — bringing concept pieces into the live site: add only the named element, never touch positioning, spacing or fonts
+- [Disojo site state 2026-10-28](project-site-state-2026-10-28.md) — DEPLOYED dbd518f: v4 pieces live (hero, What we fix, services, case studies, contact chips), team rows, open items
