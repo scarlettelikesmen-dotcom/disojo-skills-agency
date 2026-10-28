@@ -15,3 +15,5 @@ Plan saved 2026-10-26 at `~/Desktop/DISOJO SOLUTIONS/projects/ascender-portal/AS
 
 
 **2026-10-28 superseded by full rebuild plan:** `projects/ascender-portal/ASCENDER-REBUILD-PLAN-2026-10-28.md`. Verdict: drop the AI monolith hero, no new AI photo, real reels as hero; concepts A 'Raw in, posted out' (recommended), B 'Burned in', C '9:16 frame'; blocked on footage + permissions + results from Ascender. Awaiting Tejjo's concept pick.
+
+2026-10-28 (later): Tejjo asked for a no-footage route. Built HERO ONLY prototype "The edit, built in code" at `~/Desktop/websites ARCHIVE/ascender-media/rebuild-hero/index.html` (static HTML + Lenis, serve on 4480, QA script `_qa/shots.cjs`). Pinned scroll: raw 16:9 clip -> blades cut dead air -> crop to 9:16 -> grade -> captions burn in (cobalt box walks the headline words) -> export "Ready to post". Labelled "Illustration made in code. Not client footage." Display face Rubik 800 is a stand-in (not tested against the logo). Awaiting Tejjo's verdict; rest of page not built; live site untouched.
