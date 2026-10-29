@@ -38,3 +38,4 @@
 - [Port elements only](feedback-port-elements-only.md) — bringing concept pieces into the live site: add only the named element, never touch positioning, spacing or fonts
 - [Disojo site state 2026-10-28](project-site-state-2026-10-28.md) — DEPLOYED dbd518f: v4 pieces live (hero, What we fix, services, case studies, contact chips), team rows, open items
 - [Print Elements v4](project-print-elements-v4.md) — READ FIRST for Print Elements: 2026-10-28 A-to-Z rebuild, keep logo, live-ink hero, Blender renders, price builder; localhost 4511
+- [CSK law firm redo concept](project-csk-lawny-concept.md) — 2026-10-29 local one-page concept for csklawny.com (Cohen Stine Kapoor LLP), :4561, not deployed
