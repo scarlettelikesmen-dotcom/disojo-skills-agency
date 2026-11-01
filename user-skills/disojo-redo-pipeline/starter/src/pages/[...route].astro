@@ -1,0 +1,15 @@
+---
+// Every crawled page, rendered from its content. Pages that get a designed template are excluded in DESIGNED.
+import Base from '../layouts/Base.astro';
+import Blocks from '../components/Blocks.astro';
+const DESIGNED = ['/'];
+export function getStaticPaths() {
+  const all = Object.values(import.meta.glob('../data/pages/*.json', { eager: true })).map((m: any) => m.default);
+  return all.filter(p => !['/'].includes(p.route)).map(p => ({ params: { route: p.route.replace(/^\/|\/$/g, '') }, props: { p } }));
+}
+const { p } = Astro.props;
+---
+<Base title={p.title} desc={p.desc} route={p.route}>
+  <header class="phead wrap"><h1 class="t-display" data-reveal>{p.h1 || p.title}</h1></header>
+  <section class="sec wrap"><div class="read"><Blocks body={p.body} /></div></section>
+</Base>

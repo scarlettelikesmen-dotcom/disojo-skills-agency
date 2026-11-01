@@ -1,0 +1,148 @@
+---
+// One designed renderer per section shape (see lib/sections.js). All text is the page's own.
+import { img } from '../data/img.js';
+import { sc, strip } from '../lib/sections.js';
+import { BRAND } from '../data/brand.js';
+import Btns from './Btns.astro';
+interface Props { s: any; n: number; pool: any[] }
+const { s, n, pool } = Astro.props;
+const slug = (x = '') => x.toLowerCase().replace(/['’]/g, '').replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const ALIAS: Record<string, string> = { 'what-makes-us-different': 'differentiators', 'a-different-approach': 'why-choose-us', 'our-services': 'services', 'meet-your-provider': 'meet-the-team' };
+const id = s.kind === 'reviews' ? 'reviews' : (ALIAS[slug(s.kicker)] || slug(s.kicker) || slug(s.title));
+const pick = (i: number) => pool.length ? pool[(n * 3 + i) % pool.length] : null;
+const title = sc(s.title);
+const num = (i: number) => String(i + 1).padStart(2, '0');
+const yt = (src = '') => decodeURIComponent((src.match(/src=([^&]+)/) || [])[1] || src).match(/(?:embed\/|youtu\.be\/|v=)([\w-]{11})/)?.[1];
+const LINKS: Record<string, string> = Object.fromEntries([...BRAND.services, ...BRAND.areas].map(([h, t]) => [t.toLowerCase(), h]));
+const ctaLinks = s.links.length ? s.links : [{ x: 'Book a Free Consult', href: BRAND.book }];
+const rowsPhotos = s.items.filter((it: any) => it.photo).length;
+const panesAsGrid = s.kind === 'panes' && s.items.filter((it: any) => it.photo || it.list.length).length < Math.ceil(s.items.length / 2);
+---
+{s.kind === 'cta' ? (
+  <section class="sec-cta" id={id}>
+    <div class="cta-in">
+      {s.kicker && <p class="t-label op">({sc(s.kicker)})</p>}
+      <h2 class="t-display" data-lines>{title}</h2>
+      <div class="cta-row">
+        <div>{s.intro.map((h: string) => <p class="t-lead" set:html={h} />)}</div>
+        <div class="btns"><Btns links={ctaLinks} light /><a class="tlink lt" href={BRAND.tel}>{BRAND.phone}<i aria-hidden="true">→</i></a></div>
+      </div>
+    </div>
+    {s.photos[0] && <figure class="cta-ph"><img src={img(s.photos[0].src, 1400)} alt={s.photos[0].alt || ''} loading="lazy" /></figure>}
+  </section>
+) : s.kind === 'steps' ? (
+  <section class="sec dark" id={id}>
+    <div class="hd wrap"><div>{s.kicker && <p class="t-label op">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2></div>{s.intro.map((h: string) => <p class="t-body op" set:html={h} />)}</div>
+    <ol class="steps wrap">{s.items.map((it: any, i: number) => <li data-reveal style={`--d:${i * 90}ms`}><span class="st-n">{num(i)}</span><h3 class="t-h3">{sc(it.title)}</h3>{it.body.map((h: string) => <p class="t-small op" set:html={h} />)}</li>)}</ol>
+    {s.links.length > 0 && <div class="wrap" style="margin-top:var(--s-7)"><Btns links={s.links} light /></div>}
+  </section>
+) : s.kind === 'reviews' ? (
+  <section class="sec" id={id}>
+    <div class="hd wrap"><div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2></div><div>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}<div class="rv-ctl"><button class="rv-b" data-dir="-1" aria-label="Previous reviews">←</button><button class="rv-b" data-dir="1" aria-label="Next reviews">→</button></div></div></div>
+    <div class="rv-track" tabindex="0" aria-label="Google reviews">{s.reviews.map((r: any) => (
+      <figure class="rv">
+        <p class="rv-stars" aria-label="5 stars">★★★★★</p>
+        <blockquote class="t-lead">“{r.text}”</blockquote>
+        <figcaption class="t-small">{r.avatar ? <img src={img(r.avatar, 120)} alt="" width="36" height="36" loading="lazy" /> : <span class="av">{(r.name || '?').slice(0, 1).toUpperCase()}</span>}<span>{r.name}<br /><span class="muted t-label">Google review</span></span></figcaption>
+      </figure>))}
+    </div>
+  </section>
+) : s.kind === 'faq' ? (
+  <section class="sec" id={id}>
+    <div class="faq wrap">
+      <div class="faq-l">{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title === 'Faqs' ? 'FAQs' : title}</h2>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}
+        {s.links.length > 0 && <div class="faq-more"><p class="t-lead">Still have questions?</p>{s.after.map((h: string) => <p class="t-small muted" set:html={h} />)}<Btns links={s.links} /></div>}</div>
+      <div class="faq-r">{s.faq.map((f: any, i: number) => <details open={i === 0}><summary class="t-lead"><span>{f.q}</span><i aria-hidden="true"></i></summary><div class="faq-a">{f.a.map((h: string) => <p set:html={h} />)}</div></details>)}</div>
+    </div>
+  </section>
+) : s.kind === 'contact' ? (
+  <section class="sec" id={id}>
+    <div class="hd wrap"><div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2></div><div>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}</div></div>
+    <div class="contact wrap">
+      <div class="ct-list">{s.items.filter((it: any) => /^(email|phone|office)$/i.test(it.title)).map((it: any) => <div class="ct"><p class="t-label muted">{sc(it.title)}</p>{it.body.map((h: string) => <p class="t-small muted" set:html={h} />)}{[...it.links, ...s.links.filter((l: any) => (it.title === 'EMAIL' && l.href?.startsWith('mailto')) || (it.title === 'PHONE' && l.href?.startsWith('tel')) || (it.title === 'OFFICE' && /maps|deer park ave/i.test(l.href + l.x)))].map((l: any) => <a class="t-lead ul" href={l.href} target={/^http/.test(l.href) ? '_blank' : undefined} rel="noopener">{l.x}</a>)}</div>)}</div>
+      {s.embeds.filter((e: any) => /google\.com\/maps/.test(e.src)).slice(0, 1).map((e: any) => <div class="map"><iframe src={e.src} title="Map: 1827A Deer Park Ave, Deer Park, NY" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>)}
+    </div>
+    {s.embeds.filter((e: any) => !/google\.com\/maps/.test(e.src)).map((e: any) => <div class="wrap widget"><iframe src={e.src} title="Contact form" loading="lazy"></iframe></div>)}
+  </section>
+) : s.kind === 'areas' ? (
+  <section class="sec" id={id}>
+    <div class="areas wrap">
+      <div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}</div>
+      <ul class="area-list">{s.links.map((l: any) => <li><a class="t-h3" href={l.href}><span>{l.x}</span><i aria-hidden="true">→</i></a></li>)}</ul>
+    </div>
+  </section>
+) : s.kind === 'profile' ? (
+  <section class="sec" id={id}>
+    <div class="profile wrap">
+      {(s.photos[0] || pick(0)) && <figure class="pf-ph" data-reveal><img src={img((s.photos[0] || pick(0)).src, 1400)} alt={(s.photos[0] || pick(0)).alt || ''} loading="lazy" /></figure>}
+      <div class="pf-tx">{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2>
+        {s.tags.length > 0 && <p class="pf-tags t-label">{s.tags.map((t: string) => <span>{t}</span>)}</p>}
+        <div class="pf-body">{s.intro.map((h: string, i: number) => <p class:list={[i === 0 ? 't-lead' : 't-body']} set:html={h} />)}{s.after.map((h: string) => <p class="t-body" set:html={h} />)}</div><Btns links={s.links} /></div>
+    </div>
+  </section>
+) : s.kind === 'videos' ? (
+  <section class="sec" id={id}>
+    <div class="hd wrap"><div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2></div></div>
+    <div class="vids wrap">{s.embeds.map((e: any) => yt(e.src)).filter(Boolean).map((v: string) => <button class="vid" data-yt={v} aria-label="Play client video"><img src={`https://i.ytimg.com/vi/${v}/hqdefault.jpg`} alt="" loading="lazy" /><i aria-hidden="true">▶</i></button>)}</div>
+  </section>
+) : s.kind === 'widget' ? (
+  <section class="sec" id={id || 'book'}>
+    <div class="hd wrap"><div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}{title && <h2 class="t-h2" data-lines>{title}</h2>}</div>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}</div>
+    {s.embeds.map((e: any) => <div class="wrap widget"><iframe src={e.src} title={/booking/.test(e.src) ? 'Book a free phone consult' : 'Sign-up form'} loading="lazy"></iframe></div>)}
+  </section>
+) : s.kind === 'points' ? (
+  <section class="sec" id={id}>
+    <div class="points wrap">
+      <div class="pt-tx">{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}
+        <ol class="pt-list">{s.items.map((it: any, i: number) => <li data-reveal><span class="t-label muted">({num(i)})</span><span class="t-lead">{sc(it.title)}</span></li>)}</ol><Btns links={s.links} /></div>
+      <div class="pt-ph">{(s.photos.length ? s.photos : [pick(0), pick(1)].filter(Boolean)).slice(0, 2).map((p: any) => <figure data-reveal><img src={img(p.src, 1200)} alt={p.alt || ''} loading="lazy" /></figure>)}</div>
+    </div>
+  </section>
+) : s.kind === 'rows' || (s.kind === 'panes' && panesAsGrid) ? (
+  <section class="sec" id={id}>
+    <div class="hd wrap"><div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2></div><div>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}</div></div>
+    <div class="rows wrap">{s.items.map((it: any, i: number) => {
+      const ph = it.photo || pick(i);
+      const href = it.href || LINKS[it.title.toLowerCase()];
+      const Tag = href ? 'a' : 'div';
+      return <Tag class:list={['row', { link: href, 'no-ph': !ph }]} href={href} data-reveal>
+        <span class="r-n t-label muted">({num(i)})</span>
+        <h3 class="t-h3">{sc(it.title)}</h3>
+        <div class="r-b">{it.body.map((h: string) => <p class="t-small muted" set:html={h} />)}{it.list.length > 0 && <ul class="ticks t-small">{it.list.map((h: string) => <li set:html={h} />)}</ul>}</div>
+        {ph && <span class="r-ph"><img src={img(ph.src, 720)} alt="" loading="lazy" /></span>}
+        {href && <i class="r-go" aria-hidden="true">→</i>}
+      </Tag>;
+    })}</div>
+    {(s.links.length > 0 || s.after.length > 0) && <div class="wrap after">{s.after.map((h: string) => <p class="t-body muted" set:html={h} />)}<Btns links={s.links} /></div>}
+  </section>
+) : s.kind === 'panes' ? (
+  <section class="sec" id={id}>
+    <div class="hd wrap"><div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2></div><div>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}</div></div>
+    <div class="panes wrap">{s.items.map((it: any, i: number) => { const ph = it.photo || pick(i); return (
+      <article class:list={['pane', { flip: i % 2 }]}>
+        {ph && <figure class="pn-ph" data-reveal><img src={img(ph.src, 1400)} alt={ph.alt || ''} loading="lazy" /></figure>}
+        <div class="pn-tx">{(it.kicker) && <p class="t-label muted">({sc(it.kicker)})</p>}<h3 class="t-h2 sm">{sc(it.title)}</h3>
+          {it.body.map((h: string) => <p class="t-body" set:html={h} />)}
+          {it.list.length > 0 && <ul class="ticks t-small">{it.list.map((h: string) => <li set:html={h} />)}</ul>}</div>
+      </article>); })}</div>
+    {(s.links.length > 0 || s.after.length > 0) && <div class="wrap after">{s.after.map((h: string) => <p class="t-body muted" set:html={h} />)}<Btns links={s.links} /></div>}
+  </section>
+) : s.kind === 'checklist' ? (
+  <section class="sec" id={id}>
+    <div class="check wrap">
+      <div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}<h2 class="t-h2" data-lines>{title}</h2>{s.intro.map((h: string) => <p class="t-body muted" set:html={h} />)}<Btns links={s.links} /></div>
+      <div><ol class="ck-list">{s.list.map((h: string, i: number) => <li data-reveal><span class="t-label muted">{num(i)}</span><span class="t-body" set:html={h} /></li>)}</ol>
+        {s.photos[0] && <figure class="ck-ph" data-reveal><img src={img(s.photos[0].src, 1400)} alt={s.photos[0].alt || ''} loading="lazy" /></figure>}</div>
+    </div>
+  </section>
+) : (
+  <section class="sec" id={id}>
+    <div class="prose-sec wrap">
+      <div>{s.kicker && <p class="t-label muted">({sc(s.kicker)})</p>}{title && <h2 class="t-h2" data-lines>{title}</h2>}</div>
+      <div class="pr-body">{s.intro.map((h: string, i: number) => <p class:list={[i === 0 && s.intro.length < 3 ? 't-lead' : 't-body']} set:html={h} />)}
+        {s.list.length > 0 && <ul class="ticks t-body">{s.list.map((h: string) => <li set:html={h} />)}</ul>}
+        {s.after.map((h: string) => <p class="t-body" set:html={h} />)}<Btns links={s.links} />
+        {s.photos.map((p: any) => <figure class="pr-ph" data-reveal><img src={img(p.src, 1400)} alt={p.alt || ''} loading="lazy" /></figure>)}</div>
+    </div>
+  </section>
+)}

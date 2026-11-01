@@ -1,0 +1,81 @@
+---
+// Every other page from its own content: designed sections for service, area and info pages,
+// a reading layout for blog posts and the privacy policy, and a card index for the blog.
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Blocks from '../components/Blocks.astro';
+import { parse, sc, strip, firstPhoto } from '../lib/sections.js';
+import { POOL } from '../lib/pool.js';
+import { img } from '../data/img.js';
+import { BRAND } from '../data/brand.js';
+export function getStaticPaths() {
+  const all = Object.values(import.meta.glob('../data/pages/*.json', { eager: true })).map((m: any) => m.default);
+  return all.filter(p => p.route !== '/').map(p => ({ params: { route: p.route.replace(/^\/|\/$/g, '') }, props: { p } }));
+}
+const { p } = Astro.props;
+const isPost = /^\/blog\/.+/.test(p.route); const isLegal = p.route === '/privacy-policy/'; const isIndex = p.route === '/blog/';
+const { hero, sections } = parse(p.body);
+if (!hero.photo && !isLegal && !isIndex) hero.photo = firstPhoto(p.body);
+// blog index: cards from the published list (title link, summary, author, date, image)
+const posts: any[] = [];
+if (isIndex) {
+  let cur: any = null; let lastImg: any = null;
+  for (const b of p.body) {
+    if (b.t === 'img' && !/=s\d|%3Ds\d/.test(b.src)) lastImg = b;
+    if (b.t === 'h3' && b.href) { cur = { title: b.x, href: b.href, img: lastImg, sum: '', date: '' }; posts.push(cur); lastImg = null; continue; }
+    if (cur && b.t === 'tx') { if (/^[A-Z][a-z]+ \d{1,2}, \d{4}$/.test(b.x)) cur.date = b.x; else if (b.x.length > 60 && !cur.sum) cur.sum = b.x; }
+  }
+}
+// articles: body after the hero meta, minus the closing author box and CTA (rendered as designed blocks)
+let artBody: any[] = []; let cta: any = null; let authorPhoto: any = null;
+if (isPost || isLegal) {
+  const firstP = p.body.findIndex((b: any) => b.t === 'p');
+  let start = firstP; while (start >= 0 && p.body[start]?.t === 'p' && hero.intro.includes(p.body[start].h)) start++;
+  const end = p.body.findLastIndex ? p.body.findLastIndex((b: any) => b.t === 'tx' && /founder/i.test(b.x)) : -1;
+  const blank = (x = '') => !x.replace(/[\u200b-\u200d\ufeff\s]/g, '');
+  artBody = p.body.slice(start, end > 0 ? end - 1 : undefined).filter((b: any) => !(b.t === 'p' && blank(strip(b.h))) && !(/^h\d$/.test(b.t) && blank(b.x)));
+  if (end > 0) authorPhoto = p.body[end - 1]?.t === 'img' ? p.body[end - 1] : null;
+  cta = sections.filter((s: any) => s.kind === 'cta').pop();
+  if (end > 0) { const lead = artBody[0]?.t === 'img' ? 1 : 0; artBody = artBody.slice(lead); }
+}
+const toc = artBody.filter((b: any) => b.t === 'h2' || (isLegal && b.t === 'h3'));
+const slug = (x = '') => x.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+---
+<Base title={p.title} desc={p.desc} route={p.route} og={hero.photo ? BRAND.origin.replace(/\/$/, '') + img(hero.photo.src, 1200) : ''}>
+  {isIndex ? (
+    <>
+      <Hero hero={{ ...hero, photo: null }} />
+      <section class="sec pt0"><div class="posts wrap">{posts.map((x, i) => (
+        <a class:list={['post', { big: i === 0 }]} href={x.href} data-reveal>
+          {x.img && <span class="po-ph"><img src={img(x.img.src, i === 0 ? 1400 : 720)} alt="" loading={i ? 'lazy' : undefined} /></span>}
+          <span class="t-label muted">{x.date} · Dr. Saransh Kapoor</span>
+          <span class="t-h3">{sc(x.title)}</span>
+          <span class="t-small muted">{x.sum}</span>
+        </a>))}</div></section>
+      {sections.filter((s: any) => s.kind === 'widget').map((s: any, n: number) => <Section s={s} n={n} pool={POOL} />)}
+    </>
+  ) : (isPost || isLegal) ? (
+    <>
+      <Hero hero={hero} />
+      <section class="sec pt0">
+        <div class="article wrap">
+          <aside class="art-side">
+            {toc.length > 1 && <nav class="toc" aria-label="On this page"><p class="t-label muted">On this page</p><ol>{toc.map((h: any) => <li><a class="t-small" href={`#${slug(h.x)}`}>{sc(h.x)}</a></li>)}</ol></nav>}
+            {isPost && <div class="art-book"><p class="t-small">Book a free phone consult with Dr. Kapoor.</p><a class="btn sm" href={BRAND.book}><span>Book a Free Consult</span><i aria-hidden="true">↗</i></a></div>}
+          </aside>
+          <div class="art-body">
+            <Blocks body={artBody.map((b: any) => (b.t === 'h2' || b.t === 'h3') ? { ...b, x: sc(b.x), id: slug(b.x) } : b)} />
+            {authorPhoto && <div class="author"><img src={img(authorPhoto.src, 240)} alt="Dr. Saransh Kapoor" width="64" height="64" loading="lazy" /><p class="t-small">Dr. Saransh Kapoor<br /><span class="muted">Founder &amp; Physical Therapist</span></p></div>}
+          </div>
+        </div>
+      </section>
+      {cta && <Section s={cta} n={9} pool={POOL} />}
+    </>
+  ) : (
+    <>
+      <Hero hero={hero} />
+      {sections.map((s: any, n: number) => <Section s={s} n={n} pool={POOL} />)}
+    </>
+  )}
+</Base>

@@ -12,6 +12,7 @@
   },
   "skipWorkflowUsageWarning": true,
   "theme": "light",
+  "switchModelsOnFlag": false,
   "agentPushNotifEnabled": true,
-  "switchModelsOnFlag": false
+  "tui": "fullscreen"
 }

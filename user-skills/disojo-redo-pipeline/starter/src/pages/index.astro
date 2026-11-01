@@ -1,0 +1,10 @@
+---
+// Replace with the chosen direction's home. Until then it shows the home content as published.
+import Base from '../layouts/Base.astro';
+import Blocks from '../components/Blocks.astro';
+import home from '../data/pages/home.json';
+---
+<Base title={home.title} desc={home.desc} route="/">
+  <header class="phead wrap"><h1 class="t-display" data-reveal>{home.h1 || home.title}</h1></header>
+  <section class="sec wrap"><div class="read"><Blocks body={home.body} /></div></section>
+</Base>

@@ -1,0 +1,34 @@
+---
+import { img } from '../data/img.js';
+import { sc } from '../lib/sections.js';
+import Btns from './Btns.astro';
+interface Props { hero: any; variant?: 'photo' | 'page'; meta?: string[] }
+const { hero, variant = 'page', meta = [] } = Astro.props;
+const title = sc(hero.title);
+const eyebrow = hero.eyebrow && hero.eyebrow !== hero.title ? hero.eyebrow : '';
+---
+{variant === 'photo' ? (
+  <section class="hero-photo">
+    {hero.photo && <img src={img(hero.photo.src, 2000)} srcset={`${img(hero.photo.src, 720)} 720w, ${img(hero.photo.src, 2000)} 2000w`} sizes="100vw" alt={hero.photo.alt || ''} fetchpriority="high" />}
+    <div class="hp-meta t-label">{meta.map(m => <span>{m}</span>)}</div>
+    <div class="hp-in">
+      <h1 class="t-display rise">{title}</h1>
+      <div class="hp-side">{hero.intro.map(h => <p class="t-body" set:html={h} />)}<Btns links={hero.actions} light /></div>
+    </div>
+  </section>
+) : (
+  <section class:list={['phead', { 'no-photo': !hero.photo }]}>
+    <div class="ph-top">
+      {hero.crumb && <a class="t-label crumb" href={hero.crumb.href}>← {hero.crumb.x}</a>}
+      {eyebrow && <p class="t-label eyebrow">({sc(eyebrow)})</p>}
+      <h1 class="t-display rise">{title}</h1>
+    </div>
+    {(hero.intro.length > 0 || hero.actions.length > 0 || hero.meta.length > 0) && (
+      <div class="ph-row">
+        <div class="ph-meta t-label">{hero.meta.map(([k, v]) => <p><span class="muted">{k}</span><br />{v}</p>)}</div>
+        <div class="ph-intro">{hero.intro.map(h => <p class="t-lead" set:html={h} />)}<Btns links={hero.actions} /></div>
+      </div>
+    )}
+    {hero.photo && <figure class="ph-photo" data-reveal><img src={img(hero.photo.src, 2000)} srcset={`${img(hero.photo.src, 720)} 720w, ${img(hero.photo.src, 2000)} 2000w`} sizes="(max-width: 860px) 100vw, 96vw" alt={hero.photo.alt || ''} fetchpriority="high" /></figure>}
+  </section>
+)}
