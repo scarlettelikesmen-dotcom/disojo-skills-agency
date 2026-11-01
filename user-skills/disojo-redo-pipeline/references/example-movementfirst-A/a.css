@@ -37,12 +37,12 @@ body.over .nav:not(.solid) .btn i{background:var(--c-ink);color:var(--c-paper)}
 /* buttons: pill with a round icon that slides */
 .btn{border-radius:999px;font-weight:600;gap:12px;padding:4px 4px 4px 20px}
 .btn i{border-radius:999px;overflow:hidden;transition:transform var(--d-base) var(--e-io),background var(--d-fast)}
-.btn:hover i{transform:translateX(3px) rotate(0deg)}
+
 .btn.lt{background:var(--c-paper);color:var(--c-ink)}.btn.lt i{background:var(--c-ink);color:var(--c-paper)}
 .btns{display:flex;flex-wrap:wrap;gap:var(--s-3) var(--s-5);align-items:center;margin-top:var(--s-5)}
 .tlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;font-size:var(--t-small)}
 .tlink i{font-style:normal;transition:transform var(--d-base) var(--e-out)}
-.tlink:hover i{transform:translateX(4px)}
+
 
 /* hero: home */
 .hero-photo{position:relative;height:100svh;min-height:640px;color:var(--c-paper);overflow:hidden;background:var(--c-ink)}
@@ -248,13 +248,44 @@ details[open] summary i::after{transform:rotate(0)}
 .foot-base{border-top-color:var(--line-lt)}
 .foot-base a{min-height:32px;display:inline-flex;align-items:center}
 
-/* hero titles rise on load without hiding (keeps LCP fast) */
-.rise{animation:rise 1s var(--e-out) both}
-@keyframes rise{from{transform:translateY(.25em)}to{transform:none}}
-/* line reveal for big headings */
-[data-lines]{opacity:0;transform:translateY(.35em);transition:opacity var(--d-slow) var(--e-out),transform 1s var(--e-out)}
-[data-lines].in{opacity:1;transform:none}
-[data-reveal]{transition-delay:var(--d,0ms)}
+/* motion is driven by main.js (GSAP); these only make sure nothing stays hidden without it */
+[data-lines],[data-reveal]{opacity:1;transform:none;transition:none}
+.ln{padding-bottom:.06em;margin-bottom:-.06em}
+
+/* two-part arrow hover: one arrow leaves, its twin arrives */
+.btn i,.tlink i{position:relative;overflow:hidden;display:inline-grid;place-items:center}
+.tlink i{width:1.1em;height:1.2em}
+.btn i b,.tlink i b{grid-area:1/1;font-weight:inherit;transition:transform .65s var(--e-io)}
+.btn i[data-k=d] b:last-child,.tlink i[data-k=d] b:last-child{transform:translate(-160%,160%)}
+.btn i[data-k=h] b:last-child,.tlink i[data-k=h] b:last-child{transform:translateX(-160%)}
+.btn:hover i[data-k=d] b:first-child,.tlink:hover i[data-k=d] b:first-child{transform:translate(160%,-160%)}
+.btn:hover i[data-k=h] b:first-child,.tlink:hover i[data-k=h] b:first-child{transform:translateX(160%)}
+.btn:hover i b:last-child,.tlink:hover i b:last-child{transform:none}
+.btn{transition:background var(--d-base) var(--e-out),transform var(--d-base) var(--e-out)}
+.btn:active{transform:scale(.97)}
+
+/* rows: a soft tint rises behind a linked row */
+.row.link::before{content:"";position:absolute;inset:0 calc(var(--gutter) * -1);background:color-mix(in srgb,var(--c-accent) 6%,transparent);transform:scaleY(0);transform-origin:bottom;transition:transform .7s var(--e-io);z-index:-1}
+.row.link:hover::before{transform:scaleY(1)}
+.row.link h3{transition:color var(--d-base) var(--e-out),transform .7s var(--e-io)}
+.row.link:hover h3{transform:translateX(10px)}
+.rows{isolation:isolate}
+
+/* reviews strip: draggable on desktop */
+@media (hover:hover){.rv-track{cursor:grab}.rv-track.drag{cursor:grabbing;scroll-snap-type:none;user-select:none}.rv-track.drag *{pointer-events:none}}
+.rv{transition:transform .7s var(--e-io)}
+@media (hover:hover){.rv:hover{transform:translateY(-6px)}}
+
+/* nav glides away and back */
+.nav{transition:transform .7s var(--e-io),background .5s var(--e-out),color .5s var(--e-out)}
+
+/* page to page: the old page fades, the new one lifts in */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:.35s ease-in both vt-out}
+::view-transition-new(root){animation:.7s var(--e-out) .05s both vt-in}
+@keyframes vt-out{to{opacity:0}}
+@keyframes vt-in{from{opacity:0;transform:translateY(24px)}}
+@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
 
 @media (max-width:1100px){
   .links{display:none}.menu-b{display:inline-flex;align-items:center}

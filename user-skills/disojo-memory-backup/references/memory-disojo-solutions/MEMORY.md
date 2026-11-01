@@ -40,3 +40,4 @@
 - [Print Elements v4](project-print-elements-v4.md) — READ FIRST for Print Elements: 2026-10-28 A-to-Z rebuild, keep logo, live-ink hero, Blender renders, price builder; localhost 4511
 - [CSK law firm redo concept](project-csk-lawny-concept.md) — 2026-10-29 local one-page concept for csklawny.com (Cohen Stine Kapoor LLP), :4561, not deployed
 - [Redo pipeline + Movement First](project-redo-pipeline.md) — plug-and-play redo skill (2026-11-01), Monolog-based rules, Movement First A built locally, not deployed
+- [Disojo redo, 3 directions](project-disojo-redo-2026-11-01.md) — A lens / B typed once / C circled, live demo links, cal.com link broken on live site

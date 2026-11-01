@@ -6,12 +6,13 @@
 set -euo pipefail
 PROJ="$(cd "$1" && pwd)"; SLUG="$2"; NAME="${SLUG}-demo"; SCOPE="${VERCEL_SCOPE:-scarlettelikesmen-dotcoms-projects}"
 OUT="$PROJ/deploy/$NAME"
-( cd "$PROJ/site" && npx astro build >/dev/null )
-mkdir -p "$OUT"; rsync -a --delete --exclude .vercel "$PROJ/site/dist/" "$OUT/"
+SITE="${SITE_DIR:-site}"   # a project can hold several directions: site, site-B, site-C
+( cd "$PROJ/$SITE" && npx astro build >/dev/null )
+mkdir -p "$OUT"; rsync -a --delete --exclude .vercel "$PROJ/$SITE/dist/" "$OUT/"
 python3 - "$PROJ" "$OUT" <<'PY'
 import json, sys, os
 proj, out = sys.argv[1:3]
-red = json.load(open(os.path.join(proj, 'site/src/data/redirects.json'))) if os.path.exists(os.path.join(proj, 'site/src/data/redirects.json')) else {}
+red = {}
 cfg = {"framework": None, "buildCommand": "", "outputDirectory": ".", "trailingSlash": True,
        "headers": [{"source": "/(.*)", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow"}]}],
        "redirects": [{"source": a.rstrip('/') or '/', "destination": b, "permanent": True} for a, b in red.items() if a != b]}

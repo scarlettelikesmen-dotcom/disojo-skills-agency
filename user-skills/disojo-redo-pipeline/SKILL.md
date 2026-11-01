@@ -43,6 +43,7 @@ If they pick several directions, build each as its own site folder (site-A, site
 - Text the content step drops as "repeated chrome" can be real ("Still have questions?"): the parity audit catches it; restore it in the renderer.
 - Hero headlines must be visible without JS (CSS rise, no opacity reveal): an opacity reveal cost 1.7 s of LCP (93 -> 100 mobile).
 - Keep the client's words exact, including punctuation; only re-case ALL CAPS. The audit flags any rewording.
+- **Motion is part of the build, not a polish pass** (Tejjo, 2026-11-01: 'not fluid and smooth at all, very rigid'). Every direction ships a motion layer: Lenis on the GSAP ticker, SplitText line masks on headings, clip/scale reveals and in-frame parallax on photos, staggered flow-in for copy and lists, animated FAQ height and menu, two-part arrow hovers, draggable carousels, cross-document view transitions. Reference: `references/example-movementfirst-A/main.js`. First-screen headings, copy and photos must never be hidden (glide only), or LCP jumps from 1.5 s to 3-4 s; verify with Lighthouse after motion.
 - Third-party widgets (booking, forms) run Cloudflare checks that fail headless; verify them in the real browser pane.
 
 ## Known limits (be upfront)

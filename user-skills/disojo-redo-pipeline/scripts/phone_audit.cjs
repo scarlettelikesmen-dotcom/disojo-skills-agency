@@ -23,7 +23,8 @@ const routes = [];
       const label = e => (e.tagName + '.' + String(e.className).split(' ')[0] + ' "' + (e.innerText || e.getAttribute('aria-label') || '').trim().replace(/\s+/g, ' ').slice(0, 28) + '"');
       for (const e of document.querySelectorAll('body *')) {
         if (!vis(e)) continue; const rc = e.getBoundingClientRect(); const s = getComputedStyle(e);
-        if (rc.right > cw + 1 && s.position !== 'fixed' && !e.closest('[data-marquee],.marquee,.track,[class*=track],.subnav > div,.chips,.tools')) out.wide.push(label(e) + ' R' + Math.round(rc.right));
+        const clipped = (() => { for (let a = e.parentElement; a && a !== document.body; a = a.parentElement) { const o = getComputedStyle(a).overflowX; if ((o === 'hidden' || o === 'clip' || o === 'auto' || o === 'scroll') && a.getBoundingClientRect().right <= cw + 1) return true; } return false; })();
+        if (!clipped && rc.right > cw + 1 && s.position !== 'fixed' && !e.closest('[data-marquee],.marquee,.track,[class*=track],.subnav > div,.chips,.tools')) out.wide.push(label(e) + ' R' + Math.round(rc.right));
         const own = [...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim().length > 1);
         if (own && parseFloat(s.fontSize) < 12 && !e.closest('svg')) out.small.push(label(e) + ' ' + s.fontSize);
         if ((e.tagName === 'A' || e.tagName === 'BUTTON' || e.getAttribute('role') === 'button') && !e.closest('p, li.prose, .prose, .lede')) { if ((rc.height < 40 || rc.width < 40) && !(rc.height >= 24 && rc.width >= 80)) out.taps.push(label(e) + ` ${Math.round(rc.width)}x${Math.round(rc.height)}`); }
