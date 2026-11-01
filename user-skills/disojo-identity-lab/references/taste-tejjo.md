@@ -19,6 +19,8 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 | 2026-11-02 | Disojo round 1 prompts, mostly brush and calligraphy | "pure japanese ass shit" | Never send ten prompts in one style. Marker or felt-tip is fine; brush or calligraphy is not. |
 | 2026-11-02 | **All 40 Disojo prompts in rounds 1–4** (wide caps, stencil, masthead, Bauhaus, bitmap; then marks: window, keystone, knot, seam, table, grid of circles, nested frames…) | "nothing from all 4 rounds did i like even slightly… really bad" | See the post-mortem below. |
 
+| 2026-11-02 | (clarified after round 5) the live DISOJO wordmark is fine; only the marker-loop first O is the problem | "my current o is too generic… it looks good but its generic" | Keep the caps and the square O. Round 6 replaces only the first O (in the word and standalone). |
+
 ## Post-mortem, rounds 1–4 (2026-11-02)
 1. **One render world for 40 prompts.** Every prompt ended in "flat vector on warm off-white, near-black plus one hex accent, no gradient, no shadow". So the ideas changed but every output looked like the same polite icon set. They judge the *image*, not the idea.
 2. **Meanings, not forms.** "It means we look first" can't be drawn. The model fell back on stock icons (a window, an arch, a table) that read as an icon library.

@@ -39,3 +39,4 @@ description: The Disojo method for logo and identity exploration with image mode
 - `test_sheet.py`: one-colour marks inlined with currentColor; three backgrounds × six sizes, browser tab, two avatars, nav pill, dark card; `--refs` adds reference images in the same rows; headless Chrome screenshot.
 - `export_pngs.sh`: transparent PNGs at given widths (bash).
 - `contact_sheet.py`: numbered montage of a folder (picks or research).
+- `prompts_board.py`: turns a prompts-roundN.md into an HTML board with copy buttons and an image strip (send it with SendUserFile, display render).

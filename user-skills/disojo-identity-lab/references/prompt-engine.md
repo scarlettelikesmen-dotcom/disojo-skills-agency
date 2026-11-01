@@ -7,6 +7,7 @@ Never ask the image model for "perfect circles in a 4x4 grid". Ask it for what a
 
 ## Grammar: every prompt fills these slots, in this order
 1. **Format.** `WORLD`: one hero image with the flat logo AND its life (object, garment, sign). `SHEET`: a sketchbook page of 9 numbered, clearly different variations in one territory. `FINISH`: after a pick, the same mark flat black on white, centred, for tracing.
+   `IN-WORD` (when part of a logo stays): upload the logo with the changing part erased (blank it by connected components, not a rectangle, or it clips neighbours: see Disojo round 6, `round6/upload-logo-with-gap.png`), and start the prompt with a lock line: "Keep the letters … exactly as they are: same shapes, weight, size, spacing, colour and background. Only fill the empty space … with …". Follow it with `SOLO` in the same chat: the new part alone, 9 variations as an app icon.
 2. **Name, spelled out.** `DISOJO (spelled D-I-S-O-J-O)`. Say upper or lower case. Then check the spelling in every output.
 3. **Construction in visible terms only.** Weights, widths, what each letter does (swollen, sheared, melting, interlocked, cropped, mirrored), which letter carries the idea. **Never write the meaning** ("it means we look first"): the model can't draw meaning and falls back on stock icons. The meaning goes in our notes for the client.
 4. **Hand or tool.** Marker, technical pen, cut vinyl, CGI liquid chrome, embroidery, riso, inflatable vinyl, bent tube. **Never brush or calligraphy for Tejjo.**
