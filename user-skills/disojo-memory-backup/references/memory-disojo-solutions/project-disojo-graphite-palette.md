@@ -26,9 +26,9 @@ On 2026-11-02 Tejjo chose **Graphite** for the Disojo site. It replaces the old 
   - full wordmark
   - script O alone, cut from the current logo vector in global.css `.end .bigwm`
   - with-grain versions and platform preview sheets
-- **Not done yet**:
+- **DEPLOYED 2026-11-02** commit 2886479 (leadvix-website-80zt8mmrt). Not done yet:
   - favicon.svg and og image still use the old #EBE9E4
-  - nothing committed or deployed; the deploy word rule applies
+  - (deploy word rule still applies to anything new)
 - `public/brand/wordmark-large.svg` is an OLD logo (block O), not the current one. Never export from it.
 
 Related: [[project-disojo-redo-2026-11-01]], [[project-site-state-2026-10-28]]

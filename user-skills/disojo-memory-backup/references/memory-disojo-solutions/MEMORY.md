@@ -41,4 +41,4 @@
 - [CSK law firm redo concept](project-csk-lawny-concept.md) — 2026-10-29 local one-page concept for csklawny.com (Cohen Stine Kapoor LLP), :4561, not deployed
 - [Redo pipeline + Movement First](project-redo-pipeline.md) — plug-and-play redo skill (2026-11-01), Monolog-based rules, Movement First A built locally, not deployed
 - [Disojo redo, 3 directions](project-disojo-redo-2026-11-01.md) — A lens / B typed once / C circled, live demo links, cal.com link broken on live site
-- [Graphite palette locked](project-disojo-graphite-palette.md) — 2026-11-02 Graphite + moving grain in disojo-mix :4700, logo exports, favicon/og pending, not deployed
+- [Graphite palette locked](project-disojo-graphite-palette.md) — 2026-11-02 DEPLOYED 2886479: Graphite + grain + Bricolage + new CTAs live; favicon/og still old
