@@ -47,4 +47,4 @@ Related: [[project-disojo-redo-2026-11-01]], [[project-site-state-2026-10-28]]
     - apple-touch-icon sits on the Graphite paper (iOS needs an opaque icon)
   - old favicons backed up in disojo-mix/_archive-favicon-before-2026-11-02
   - the LinkedIn nav link is also waiting
-- NOT deployed. If the logo is approved, make the new logo the real default (drop the switch) before deploying.
+- DEPLOYED 2026-11-02 commit ee29f78: new logo is the default everywhere, switch removed, favicon + LinkedIn live. Still old: og-v2.png share image.
