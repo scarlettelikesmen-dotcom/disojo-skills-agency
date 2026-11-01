@@ -10,6 +10,8 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 | 2026-10-23 | Print Elements A1 (heavy PE inside hairline crop marks), A4 (overprint P/E), B3 (heavy serif + tile), B4 (slab PE in a block) | Craft vocabulary of the client's own trade, heavy weight, contrast between heavy and hairline. |
 | 2026-10-26 | Ascender caption wordmark (pill + highlighted D) | The client's own interface language (captions) turned into the logo. |
 
+| 2026-11-02 | Round 6 M4 "Settle": the first O of DISOJO as a ring of liquid caught mid-wobble, between rigid caps and the square O (only one that landed) | "so far i only like this" / "only this landed, rest all disgusting" | Again **tension**: the only soft, fluid thing in a hard word. Literal-idea O's (eye, drop, knot, spiral, thumbprint, stitches, puff, coin) were "disgusting". Built in `branding/disojo-identity-2026-11/round6/m4/` (Fourier-fitted O, A/B weights, settle.html motion). |
+
 ## Hated
 | Date | What | Their words | Lesson |
 |---|---|---|---|
