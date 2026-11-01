@@ -18,7 +18,7 @@
 
 - [Disojo site state 2026-10-20](project-site-state-2026-10-20.md) — READ FIRST: home rebuild done, preview + git pushed, not deployed; to-do list (phone optimisation next)
 - [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
-- [Disojo logo redo](project-disojo-logo-redo.md) — started 2026-10-21: brief (hybrid wordmark, name stays), 6 reference reels studied, direction pending
+- [Disojo logo redo](project-disojo-logo-redo.md) — clean slate 2026-11-02; rounds 1-4 all rejected; round 5 via skill disojo-identity-lab (8 territories), awaiting picks
 - [Logo: no font tweaks](feedback-logo-no-font-tweaks.md) — 2026-10-21 sketches rejected; construct letters, explore wide, compare against his refs before showing
 - [Print Elements in Ascender style](project-print-elements-ascender-style.md) — new build 2026-10-22, live preview pe-857fd6.vercel.app, hero dojacatbro, open items
 - [Print Elements multi-page (OH style)](project-print-elements-multipage.md) — 64-route site live pe-d4edb3.vercel.app, supersedes one-page build

@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: af288f10-aa9e-4ad6-ae50-afeef2951d0a
-  modified: 2026-10-21T17:19:18.873Z
+  modified: 2026-11-01T22:37:53.092Z
 ---
 
 Started 2026-10-21. Tejjo wants to "build Claude's taste" and work as a team: Claude does development, Tejjo does sales and marketing. First project is the Disojo site and brand. Content stays; current visuals must not influence the redo.
@@ -22,4 +22,6 @@ Related: [[project-site-state-2026-10-20]], [[feedback-logo-taste]], [[feedback-
 
 **WINNER 2026-10-22:** Tejjo "love love love" a ChatGPT result from round 3 prompt 01: "DISOJO" in heavy wide rounded grotesk caps, first O = hand-drawn marker loop, last O = hollow rounded square. Source + potrace vector in `branding/disojo-logo/winner/` (source-chatgpt.png, disojo-wordmark-traced.svg, compare.html). Next: redraw caps cleanly (straight stems, even radii, spacing), smooth the loop, then the system (loop O as standalone mark, favicon, light/dark/blue, nav test, draw-on motion). AI-origin: redrawn vectors, disclose that it started from an AI image.
 
-**2026-11-02 CLEAN SLATE:** Tejjo no longer likes the loop-O/square-O logo and asked for a clean-slate Disojo identity (in the logo/identity chat; "take a shot at disojostudio.com" meant the identity, NOT the website, so never start a site redo from that phrasing here). Round 1 (10 wordmark worlds) + round 2 (10 mark/monogram worlds) prompts in `branding/disojo-identity-2026-11/prompts-round1-2.md`; rounds 3+4 (marks only: from the letters / from what Disojo does) in `prompts-round3-4.md`; awaiting picks.
+**2026-11-02 CLEAN SLATE:** Tejjo no longer likes the loop-O/square-O logo and asked for a clean-slate Disojo identity (in the logo/identity chat; "take a shot at disojostudio.com" meant the identity, NOT the website, so never start a site redo from that phrasing here). Round 1 (10 wordmark worlds) + round 2 (10 mark/monogram worlds) prompts in `branding/disojo-identity-2026-11/prompts-round1-2.md`; rounds 3+4 (marks only: from the letters / from what Disojo does) in `prompts-round3-4.md`.
+
+**2026-11-02 later:** Tejjo: "nothing from all 4 rounds did i like even slightly... really bad, go research, build skills, build something insane". Did 2026 identity research (It's Nice That trends, BBH, Goodspeed, Behance logofolios) and built skill `disojo-identity-lab` (verdict log + post-mortem, landscape, 14 territories, prompt grammar WORLD/SHEET/FINISH, tested scripts trace_mark/test_sheet/export_pngs/contact_sheet). Round 5 = 8 territories from the letters (T1 Leak: O drips, J catches; T2 OJO eyes; T3 Patchwork; T4 One-line chrome tube; T5 O-J-O palindrome sigil; T6 Speed italic DI/SO/JO; T7 Swollen inflatable; T8 wildcard thumb character) in `prompts-round5.md` + `round5.html` (copy buttons, research sheets). Awaiting picks. Related: [[feedback-logo-no-font-tweaks]]

@@ -5,6 +5,8 @@ description: How Disojo designs client logos (wordmark, monogram, mark) that loo
 
 # Disojo logo design
 
+> **For any exploration round with image models (ChatGPT image), start with the skill `disojo-identity-lab`**: Tejjo's verdict log, 2026 research, territories, prompt grammar, trace/test/export scripts. Its findings overrule step 2 below: "one grotesque + one custom detail" produced work called "disgusting", and flat polite icons got "nothing landed" (2026-11-02).
+
 ## Process (do it in this order; take the time each step needs)
 1. **One idea from the client's real craft, not a symbol of "growth".** Write it in one line before drawing ("the A is cut and lifted: an edit cut and an ascent"). The best marks come from the name or the product, not from stock metaphors. Look at what competitors in the niche use and avoid it.
 2. **Type first.** Most premium studios (OH Architecture, Pentagram work) lead with a confident wordmark in one well-chosen grotesque, tight tracking, one weight. A custom detail in ONE letter beats an added icon.
