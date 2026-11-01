@@ -48,3 +48,11 @@ Related: [[project-disojo-redo-2026-11-01]], [[project-site-state-2026-10-28]]
   - old favicons backed up in disojo-mix/_archive-favicon-before-2026-11-02
   - the LinkedIn nav link is also waiting
 - DEPLOYED 2026-11-02 commit ee29f78: new logo is the default everywhere, switch removed, favicon + LinkedIn live. Still old: og-v2.png share image.
+- 2026-11-02 later deploys (2b5c78b):
+  - Corner marks redone with the new logo. Rule: one on-screen size, 7 css px tall, bottom-right.
+    - script: disojo-hybrid/_archive/watermark-v2-reference.py
+    - Tejjo wants marks uniform, never some big and some small
+  - Footer about 20% shorter, whitespace only
+  - CTA "Book a strategy consultation"
+  - Buttons 0.2s
+- NEXT: copy pieces Tejjo likes from the redo directions A/B/C into the live site. Links are in [[project-disojo-redo-2026-11-01]].
