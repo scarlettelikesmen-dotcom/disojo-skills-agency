@@ -32,3 +32,19 @@ On 2026-11-02 Tejjo chose **Graphite** for the Disojo site. It replaces the old 
 - `public/brand/wordmark-large.svg` is an OLD logo (block O), not the current one. Never export from it.
 
 Related: [[project-disojo-redo-2026-11-01]], [[project-site-state-2026-10-28]]
+
+## 2026-11-02 later: new logo candidate "hoflik" (blob O)
+- Source: ~/Desktop/hoflikbro.png (an AI image, 1254px). Redrawn as vector. Fixes made:
+  - all upright strokes 490 (at 8k scale)
+  - D, I, J and the square O on one cap line and baseline; the J's overshoot now matches the S
+  - the blob O smoothed but kept (moved at most 1.4px of 1285)
+  - spacing checked and left alone
+- Files in logo-exports/hoflik-2026-11-02/ (disojo-logo-redrawn-*, disojo-mark-O-redrawn-*, favicon set, before-after.png).
+- On localhost only (disojo-mix):
+  - dev-only New/Current logo switch, new by default; mask /brand/disojo-wordmark-v2.png
+  - favicon is the blob O with no background (Tejjo: "like Gmail, just the mark")
+    - the SVG switches to the paper colour in dark tabs
+    - apple-touch-icon sits on the Graphite paper (iOS needs an opaque icon)
+  - old favicons backed up in disojo-mix/_archive-favicon-before-2026-11-02
+  - the LinkedIn nav link is also waiting
+- NOT deployed. If the logo is approved, make the new logo the real default (drop the switch) before deploying.
