@@ -72,7 +72,7 @@ Clip + one line of prompt in, verified ~30s reel out (retake-free cut, branded c
 - AI footage and image tools used so far: Gemini web app (Omni 1.1 Flash video, image generation; Tejjo generates the hand-held phone mockups there from screenshots I supply). The Veo API needs billing. Outputs carry an invisible SynthID mark: disclose to clients.
 
 ## Compact instructions
-Before compacting (auto or manual), write a memory note first: save anything worth keeping (decisions, state, open items) to the memory folder and update MEMORY.md. When compacting: drop anything unnecessary. Keep only the current task, decisions Tejjo made, open items, file paths and exact values still in use. Drop tool output, dead ends, finished-and-verified work details and repeated context.
+Before compacting (auto or manual), write two things to the memory folder first and add both to MEMORY.md: (1) a memory note with anything worth keeping (decisions, state, open items); (2) a work summary `work-summary-YYYY-MM-DD.md` (what was done this session, files changed, what is verified, what is pending, what is not deployed). Append to that day's file if it exists. When compacting: drop anything unnecessary. Keep only the current task, decisions Tejjo made, open items, file paths and exact values still in use. Drop tool output, dead ends, finished-and-verified work details and repeated context.
 
 ## Keep this file healthy
 Short, factual, dated where it can go stale. Move long procedures into skills and long history into memory; this file is only the index and the rules.
