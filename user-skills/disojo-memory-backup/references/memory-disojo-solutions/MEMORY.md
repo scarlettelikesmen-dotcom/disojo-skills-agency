@@ -52,3 +52,5 @@
 - [Compaction log](compaction-log.md) — one line per compaction from the PreCompact hook (proof it fired, newest note at that time)
 - [Ascender multipage 2026-11-02](project-ascender-multipage-2026-11-02.md) — calendar hero, Monolog buttons, 7-page split, DEPLOYED kraq88wyv
 - [Disojo site state 2026-11-02 work notes](project-site-state-2026-11-02-work-notes.md) — DEPLOYED 6e0ddac: work-page notes, new screenshots, $750,000, 78,000+, $50k in 4 months
+- [Premium 3D research 2026-11-03](project-premium-3d-research-2026-11-03.md) — kits 1-32 + 30 sites teardown, techniques A-F, Webflow call, 3 decisions awaiting
+- [Work summary 2026-11-03](work-summary-2026-11-03.md) — research report published, nothing built or deployed
