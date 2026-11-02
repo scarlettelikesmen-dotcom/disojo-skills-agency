@@ -14,7 +14,7 @@ What shipped:
 - /work: KDC = web mode, kd2-admin-v2.jpg (HD Today dashboard from the LOCAL demo admin, fake test data) + kd-app-2-v2 phone.
 - /work: note under each scene (name, 3-sentence story in NOTE map in src/pages/work/index.astro, service tags), Monolog-style; "View success story" uses the site .btn; scenes 46svh.
 
-NOT deployed (local only): Ascender note adds "allowed them to close $50,000 worth of deals in 3 months" (Tejjo said 3 months; Skye's quote on the site says 4 months).
+Later deployed 6e0ddac: Ascender note line "allowed them to close $50,000 worth of deals in 4 months" (matches Skye, Tejjo: keep everything to 4 months); hover zone on the /work list ends at the widest number.
 
 Open: Mentable home stage caption "Desk is closed" sits on the "Run the gate" screen; Nature's Blend screenshot shows 78,904 inside the image; Mentable record shot shows a partial sample "+$16,400" (gate not run).
 Local test infra left running: KDC test Supabase (Docker), kdc-admin demo :3100, Expo Metro :8081 (~/TradeMind).
