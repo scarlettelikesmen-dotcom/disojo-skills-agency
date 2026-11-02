@@ -38,3 +38,5 @@ Positioning draft: content-hub/brands/disojo/positioning.md.
 **Waiting on Tejjo:** a starting price, money numbers, photos, the two doors, whether the two proof lines stay.
 
 Related: [[project-disojo-graphite-palette]], [[feedback-button-motion]]
+
+- **Fact corrected by Tejjo 2026-11-02:** Mentable had **8,750** pre-registrations, not 2,500. Mentable raised $750,000 in pre-seed; homepage copy says "We helped Mentable raise". Both numbers are on the homepage feature and the case study results (localhost; not deployed at time of writing).
