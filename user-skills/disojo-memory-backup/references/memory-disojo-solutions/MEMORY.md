@@ -49,3 +49,4 @@
 - [KDC site redo](project-kdc-site-redo.md) — kunalsdrumclass.com, first disojo-site-system run: Count-in approved, home built localhost:4600, NOT deployed, gap list
 - [Disojo site working copy](feedback-disojo-site-working-copy.md) — edit ~/Desktop/disojo-mix on :4700 only, never disojo-hybrid; watermark with watermark_new.py (new logo)
 - [Disojo site state 2026-11-02 testimonials](project-site-state-2026-11-02-testimonials.md) — DEPLOYED 798f554 from disojo-mix: testimonials redo, Skye, figures; AI-detector photo issue open
+- [Compaction log](compaction-log.md) — one line per compaction from the PreCompact hook (proof it fired, newest note at that time)
