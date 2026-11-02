@@ -41,6 +41,18 @@
           }
         ]
       }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/precompact_log.sh",
+            "timeout": 30
+          }
+        ]
+      }
     ]
   }
 }
