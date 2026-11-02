@@ -1,0 +1,336 @@
+{
+ "summary": {
+  "url": "https://www.hiss.sydney",
+  "screens": 8,
+  "mediaCoverAvg": 0.64,
+  "screensWithBigMedia": 8,
+  "photoShareOfBigMedia": 0.53,
+  "largestMedia": 1,
+  "wordsAvg": 75,
+  "wordsMax": 150,
+  "boxesAvg": 1.25,
+  "buttonsAvg": 0.5,
+  "textSizesAvg": 3.75,
+  "maxFontFirstScreen": 136
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0.749,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.76,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 652,
+     "y": 438,
+     "w": 207,
+     "h": 265,
+     "share": 0.042,
+     "tag": "img",
+     "flat": 0.693,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 502,
+     "y": 473,
+     "w": 193,
+     "h": 227,
+     "share": 0.034,
+     "tag": "img",
+     "flat": 0.792,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 817,
+     "y": 473,
+     "w": 193,
+     "h": 227,
+     "share": 0.034,
+     "tag": "img",
+     "flat": 0.781,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 28,
+   "textSizes": 3,
+   "maxFont": 136,
+   "boxes": 1,
+   "buttons": 1
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.861,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.563,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 32,
+     "y": 336,
+     "w": 838,
+     "h": 528,
+     "share": 0.339,
+     "tag": "img",
+     "flat": 0.022,
+     "kind": "photo"
+    }
+   ],
+   "words": 13,
+   "textSizes": 3,
+   "maxFont": 80,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0.908,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.366,
+     "kind": "mixed"
+    },
+    {
+     "x": 0,
+     "y": 558,
+     "w": 1512,
+     "h": 306,
+     "share": 0.354,
+     "tag": "img",
+     "flat": 0.351,
+     "kind": "mixed"
+    },
+    {
+     "x": 32,
+     "y": 0,
+     "w": 838,
+     "h": 310,
+     "share": 0.199,
+     "tag": "img",
+     "flat": 0.03,
+     "kind": "photo"
+    }
+   ],
+   "words": 124,
+   "textSizes": 3,
+   "maxFont": 64,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0.968,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.098,
+     "kind": "photo"
+    },
+    {
+     "x": 1103,
+     "y": 513,
+     "w": 409,
+     "h": 351,
+     "share": 0.11,
+     "tag": "img",
+     "flat": 0.138,
+     "kind": "photo"
+    },
+    {
+     "x": 672,
+     "y": 528,
+     "w": 426,
+     "h": 336,
+     "share": 0.11,
+     "tag": "img",
+     "flat": 0.158,
+     "kind": "photo"
+    },
+    {
+     "x": 907,
+     "y": 527,
+     "w": 399,
+     "h": 337,
+     "share": 0.103,
+     "tag": "img",
+     "flat": 0.138,
+     "kind": "photo"
+    }
+   ],
+   "words": 0,
+   "textSizes": 0,
+   "maxFont": 0,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0.483,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.739,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 32,
+     "y": 450,
+     "w": 256,
+     "h": 320,
+     "share": 0.063,
+     "tag": "img",
+     "flat": 0.117,
+     "kind": "photo"
+    },
+    {
+     "x": 672,
+     "y": 0,
+     "w": 426,
+     "h": 172,
+     "share": 0.056,
+     "tag": "img",
+     "flat": 0.798,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 1103,
+     "y": 0,
+     "w": 409,
+     "h": 160,
+     "share": 0.05,
+     "tag": "img",
+     "flat": 0.715,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 133,
+   "textSizes": 3,
+   "maxFont": 32,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.777,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.839,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 54,
+   "textSizes": 4,
+   "maxFont": 136,
+   "boxes": 1,
+   "buttons": 0
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0.219,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.683,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 67,
+     "y": 445,
+     "w": 585,
+     "h": 390,
+     "share": 0.175,
+     "tag": "img",
+     "flat": 0.015,
+     "kind": "photo"
+    }
+   ],
+   "words": 98,
+   "textSizes": 7,
+   "maxFont": 136,
+   "boxes": 3,
+   "buttons": 1
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.184,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.68,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 67,
+     "y": 445,
+     "w": 585,
+     "h": 390,
+     "share": 0.175,
+     "tag": "img",
+     "flat": 0.001,
+     "kind": "photo"
+    },
+    {
+     "x": 69,
+     "y": 421,
+     "w": 584,
+     "h": 389,
+     "share": 0.174,
+     "tag": "img",
+     "flat": 0.063,
+     "kind": "photo"
+    }
+   ],
+   "words": 150,
+   "textSizes": 7,
+   "maxFont": 136,
+   "boxes": 5,
+   "buttons": 2
+  }
+ ]
+}

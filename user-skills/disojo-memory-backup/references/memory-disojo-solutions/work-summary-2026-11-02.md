@@ -18,3 +18,9 @@ metadata:
 - Image direction (Monolog-style big aesthetic photos): recommended photos of client worlds (KDC room, Postcards bottles, turmeric) graded to one look, licensed stock only as mood, no AI image next to a client result. Offered a grade script + 3-photo localhost test; asked which clients would allow a shoot. Awaiting answer.
 
 **Claude config changed:** ~/.claude/settings.json env CLAUDE_AUTOCOMPACT_PCT_OVERRIDE=30 (300k on a 1M window, variable name unverified against docs); CLAUDE.md "Compact instructions" section (write memory note + work summary before compacting, drop anything unnecessary). Pre-compact hook offered, not added.
+
+## Later 2026-11-02
+- DEPLOYED e1ba18b (featured Mentable, 8,750, analyst photo, Kunal photo + 10 hrs card in #flow) and 87ac2df (Way of working step 01 = Kunal at kit, step 04 = KDC dark kit). Live site is built from **~/Desktop/disojo-mix** (branch mix-2026-11-01; .vercel/project.json copied from disojo-hybrid). I edited disojo-hybrid by mistake once, reverted it.
+- KDC images harvested to DISOJO SOLUTIONS/mockup-sources/kdc-2026-11-02 (banner.png = Kunal; background-1..7, likely stock bought by KDC).
+- Gate found (not fixed, Tejjo said hold): Parag review photo soft (640px source), phone labels 11.5px in What we fix. Kunal photo appears twice on home.
+- Built skills disojo-premium-look (composition probe, premium gate, first-look review, BANDS.md study) and disojo-image-pipeline (tiers, shot list, grade.py, prompts). Site guard hooks in settings.json (PostToolUse track + Stop block). Study: imagery is the gap (refs 3-8/8 screens with a big image, ours 0-2/8).

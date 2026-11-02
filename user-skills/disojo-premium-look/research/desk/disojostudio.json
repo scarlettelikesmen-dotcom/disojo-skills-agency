@@ -1,0 +1,185 @@
+{
+ "summary": {
+  "url": "https://www.disojostudio.com",
+  "screens": 8,
+  "mediaCoverAvg": 0,
+  "screensWithBigMedia": 1,
+  "photoShareOfBigMedia": 0.8,
+  "largestMedia": 0.281,
+  "wordsAvg": 150.88,
+  "wordsMax": 186,
+  "boxesAvg": 1.88,
+  "buttonsAvg": 1.13,
+  "textSizesAvg": 8.63,
+  "maxFontFirstScreen": 108
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0,
+   "media": [],
+   "words": 156,
+   "textSizes": 8,
+   "maxFont": 108,
+   "boxes": 1,
+   "buttons": 2
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 39,
+     "y": 242,
+     "w": 801,
+     "h": 458,
+     "share": 0.281,
+     "tag": "img",
+     "flat": 0.48,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 114,
+   "textSizes": 8,
+   "maxFont": 51,
+   "boxes": 2,
+   "buttons": 2
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 39,
+     "y": 60,
+     "w": 376,
+     "h": 400,
+     "share": 0.115,
+     "tag": "img",
+     "flat": 0.177,
+     "kind": "photo"
+    }
+   ],
+   "words": 186,
+   "textSizes": 10,
+   "maxFont": 53,
+   "boxes": 0,
+   "buttons": 2
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 816,
+     "y": 531,
+     "w": 400,
+     "h": 250,
+     "share": 0.077,
+     "tag": "img",
+     "flat": 0.002,
+     "kind": "photo"
+    }
+   ],
+   "words": 123,
+   "textSizes": 8,
+   "maxFont": 67,
+   "boxes": 4,
+   "buttons": 1
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 296,
+     "y": 539,
+     "w": 400,
+     "h": 250,
+     "share": 0.077,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 340,
+     "y": 0,
+     "w": 150,
+     "h": 267,
+     "share": 0.031,
+     "tag": "img",
+     "flat": 0.995,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 139,
+   "textSizes": 7,
+   "maxFont": 51,
+   "boxes": 4,
+   "buttons": 0
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 245,
+     "y": 226,
+     "w": 294,
+     "h": 638,
+     "share": 0.144,
+     "tag": "img",
+     "flat": 0.011,
+     "kind": "photo"
+    }
+   ],
+   "words": 163,
+   "textSizes": 10,
+   "maxFont": 227,
+   "boxes": 1,
+   "buttons": 0
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 90,
+     "y": 249,
+     "w": 605,
+     "h": 383,
+     "share": 0.177,
+     "tag": "img",
+     "flat": 0.037,
+     "kind": "photo"
+    }
+   ],
+   "words": 152,
+   "textSizes": 9,
+   "maxFont": 227,
+   "boxes": 2,
+   "buttons": 1
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 245,
+     "y": 109,
+     "w": 294,
+     "h": 639,
+     "share": 0.144,
+     "tag": "img",
+     "flat": 0.011,
+     "kind": "photo"
+    }
+   ],
+   "words": 174,
+   "textSizes": 9,
+   "maxFont": 227,
+   "boxes": 1,
+   "buttons": 1
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "summary": {
+  "url": "https://disojo-redo-c-demo.vercel.app",
+  "screens": 8,
+  "mediaCoverAvg": 0.13,
+  "screensWithBigMedia": 2,
+  "photoShareOfBigMedia": 0.4,
+  "largestMedia": 0.216,
+  "wordsAvg": 59.13,
+  "wordsMax": 112,
+  "boxesAvg": 0.25,
+  "buttonsAvg": 0.38,
+  "textSizesAvg": 3.5,
+  "maxFontFirstScreen": 143
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0,
+   "media": [],
+   "words": 25,
+   "textSizes": 3,
+   "maxFont": 143,
+   "boxes": 0,
+   "buttons": 1
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.497,
+   "media": [
+    {
+     "x": 619,
+     "y": 226,
+     "w": 599,
+     "h": 449,
+     "share": 0.206,
+     "tag": "img",
+     "flat": 0.146,
+     "kind": "photo"
+    },
+    {
+     "x": 160,
+     "y": 200,
+     "w": 436,
+     "h": 501,
+     "share": 0.167,
+     "tag": "img",
+     "flat": 0.141,
+     "kind": "photo"
+    },
+    {
+     "x": 1242,
+     "y": 269,
+     "w": 270,
+     "h": 363,
+     "share": 0.075,
+     "tag": "img",
+     "flat": 0.105,
+     "kind": "photo"
+    },
+    {
+     "x": 0,
+     "y": 269,
+     "w": 136,
+     "h": 363,
+     "share": 0.038,
+     "tag": "img",
+     "flat": 0.819,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 25,
+   "textSizes": 1,
+   "maxFont": 15,
+   "boxes": 1,
+   "buttons": 1
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0,
+   "media": [],
+   "words": 112,
+   "textSizes": 3,
+   "maxFont": 104,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0,
+   "media": [],
+   "words": 15,
+   "textSizes": 3,
+   "maxFont": 168,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0,
+   "media": [],
+   "words": 98,
+   "textSizes": 6,
+   "maxFont": 104,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0,
+   "media": [],
+   "words": 100,
+   "textSizes": 4,
+   "maxFont": 104,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0.119,
+   "media": [
+    {
+     "x": 24,
+     "y": 662,
+     "w": 720,
+     "h": 202,
+     "share": 0.112,
+     "tag": "img",
+     "flat": 0.339,
+     "kind": "mixed"
+    }
+   ],
+   "words": 18,
+   "textSizes": 3,
+   "maxFont": 104,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.409,
+   "media": [
+    {
+     "x": 24,
+     "y": 0,
+     "w": 720,
+     "h": 392,
+     "share": 0.216,
+     "tag": "img",
+     "flat": 0.308,
+     "kind": "mixed"
+    },
+    {
+     "x": 768,
+     "y": 531,
+     "w": 720,
+     "h": 333,
+     "share": 0.184,
+     "tag": "img",
+     "flat": 0.815,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 80,
+   "textSizes": 5,
+   "maxFont": 104,
+   "boxes": 1,
+   "buttons": 1
+  }
+ ]
+}

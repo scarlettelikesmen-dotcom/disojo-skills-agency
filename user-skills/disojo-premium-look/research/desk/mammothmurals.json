@@ -1,0 +1,316 @@
+{
+ "summary": {
+  "url": "https://mammothmurals.com",
+  "screens": 8,
+  "mediaCoverAvg": 0.43,
+  "screensWithBigMedia": 4,
+  "photoShareOfBigMedia": 0.86,
+  "largestMedia": 0.841,
+  "wordsAvg": 50.75,
+  "wordsMax": 70,
+  "boxesAvg": 6.63,
+  "buttonsAvg": 1,
+  "textSizesAvg": 4.63,
+  "maxFontFirstScreen": 171
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0.001,
+   "media": [
+    {
+     "x": 1114,
+     "y": 598,
+     "w": 366,
+     "h": 206,
+     "share": 0.058,
+     "tag": "video",
+     "flat": 0.828,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 59,
+   "textSizes": 5,
+   "maxFont": 171,
+   "boxes": 6,
+   "buttons": 1
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.822,
+   "media": [
+    {
+     "x": 32,
+     "y": 106,
+     "w": 1448,
+     "h": 758,
+     "share": 0.841,
+     "tag": "img",
+     "flat": 0.114,
+     "kind": "photo"
+    }
+   ],
+   "words": 36,
+   "textSizes": 2,
+   "maxFont": 32,
+   "boxes": 8,
+   "buttons": 1
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0.14,
+   "media": [
+    {
+     "x": 305,
+     "y": 433,
+     "w": 902,
+     "h": 431,
+     "share": 0.297,
+     "tag": "div",
+     "flat": 0.669,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 32,
+     "y": 0,
+     "w": 1448,
+     "h": 185,
+     "share": 0.205,
+     "tag": "img",
+     "flat": 0.592,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 49,
+   "textSizes": 4,
+   "maxFont": 557,
+   "boxes": 4,
+   "buttons": 1
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0.89,
+   "media": [
+    {
+     "x": 32,
+     "y": 8,
+     "w": 716,
+     "h": 477,
+     "share": 0.262,
+     "tag": "img",
+     "flat": 0.115,
+     "kind": "photo"
+    },
+    {
+     "x": 764,
+     "y": 8,
+     "w": 716,
+     "h": 477,
+     "share": 0.262,
+     "tag": "img",
+     "flat": 0.053,
+     "kind": "photo"
+    },
+    {
+     "x": 32,
+     "y": 569,
+     "w": 716,
+     "h": 295,
+     "share": 0.162,
+     "tag": "img",
+     "flat": 0.013,
+     "kind": "photo"
+    },
+    {
+     "x": 764,
+     "y": 569,
+     "w": 716,
+     "h": 295,
+     "share": 0.162,
+     "tag": "img",
+     "flat": 0.207,
+     "kind": "photo"
+    }
+   ],
+   "words": 38,
+   "textSizes": 4,
+   "maxFont": 32,
+   "boxes": 8,
+   "buttons": 1
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0.719,
+   "media": [
+    {
+     "x": 32,
+     "y": 266,
+     "w": 716,
+     "h": 477,
+     "share": 0.262,
+     "tag": "img",
+     "flat": 0.014,
+     "kind": "photo"
+    },
+    {
+     "x": 764,
+     "y": 266,
+     "w": 716,
+     "h": 477,
+     "share": 0.262,
+     "tag": "img",
+     "flat": 0.224,
+     "kind": "photo"
+    },
+    {
+     "x": 32,
+     "y": 0,
+     "w": 716,
+     "h": 182,
+     "share": 0.1,
+     "tag": "img",
+     "flat": 0.012,
+     "kind": "photo"
+    },
+    {
+     "x": 764,
+     "y": 0,
+     "w": 716,
+     "h": 182,
+     "share": 0.1,
+     "tag": "img",
+     "flat": 0.014,
+     "kind": "photo"
+    }
+   ],
+   "words": 42,
+   "textSizes": 4,
+   "maxFont": 32,
+   "boxes": 8,
+   "buttons": 1
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.223,
+   "media": [
+    {
+     "x": 32,
+     "y": 0,
+     "w": 716,
+     "h": 128,
+     "share": 0.07,
+     "tag": "img",
+     "flat": 0.009,
+     "kind": "photo"
+    },
+    {
+     "x": 764,
+     "y": 0,
+     "w": 716,
+     "h": 128,
+     "share": 0.07,
+     "tag": "img",
+     "flat": 0.003,
+     "kind": "photo"
+    },
+    {
+     "x": 764,
+     "y": 402,
+     "w": 350,
+     "h": 233,
+     "share": 0.063,
+     "tag": "img",
+     "flat": 0.528,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 64,
+   "textSizes": 7,
+   "maxFont": 93,
+   "boxes": 6,
+   "buttons": 1
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0.173,
+   "media": [
+    {
+     "x": 764,
+     "y": 329,
+     "w": 350,
+     "h": 233,
+     "share": 0.063,
+     "tag": "img",
+     "flat": 0.699,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 32,
+     "y": 0,
+     "w": 716,
+     "h": 55,
+     "share": 0.03,
+     "tag": "img",
+     "flat": 0.055,
+     "kind": "photo"
+    },
+    {
+     "x": 764,
+     "y": 0,
+     "w": 716,
+     "h": 55,
+     "share": 0.03,
+     "tag": "img",
+     "flat": 0.072,
+     "kind": "photo"
+    }
+   ],
+   "words": 70,
+   "textSizes": 8,
+   "maxFont": 171,
+   "boxes": 6,
+   "buttons": 1
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.461,
+   "media": [
+    {
+     "x": 50,
+     "y": 394,
+     "w": 416,
+     "h": 470,
+     "share": 0.15,
+     "tag": "img",
+     "flat": 0.222,
+     "kind": "photo"
+    },
+    {
+     "x": 548,
+     "y": 394,
+     "w": 416,
+     "h": 470,
+     "share": 0.15,
+     "tag": "img",
+     "flat": 0.183,
+     "kind": "photo"
+    },
+    {
+     "x": 1047,
+     "y": 394,
+     "w": 416,
+     "h": 470,
+     "share": 0.15,
+     "tag": "img",
+     "flat": 0.097,
+     "kind": "photo"
+    }
+   ],
+   "words": 48,
+   "textSizes": 3,
+   "maxFont": 32,
+   "boxes": 7,
+   "buttons": 1
+  }
+ ]
+}

@@ -17,5 +17,30 @@
   "tui": "fullscreen",
   "env": {
     "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "30"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/skills/disojo-premium-look/hooks/site_guard.cjs\" track",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/skills/disojo-premium-look/hooks/site_guard.cjs\" stop",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   }
 }

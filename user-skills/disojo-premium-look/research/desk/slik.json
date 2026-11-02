@@ -1,0 +1,173 @@
+{
+ "summary": {
+  "url": "https://www.slik.com.au",
+  "screens": 8,
+  "mediaCoverAvg": 0.14,
+  "screensWithBigMedia": 4,
+  "photoShareOfBigMedia": 0,
+  "largestMedia": 1,
+  "wordsAvg": 11.13,
+  "wordsMax": 18,
+  "boxesAvg": 4,
+  "buttonsAvg": 1,
+  "textSizesAvg": 3,
+  "maxFontFirstScreen": 197
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.688,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 18,
+   "textSizes": 3,
+   "maxFont": 197,
+   "boxes": 1,
+   "buttons": 1
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 147,
+     "y": 131,
+     "w": 1235,
+     "h": 695,
+     "share": 0.656,
+     "tag": "video",
+     "flat": 0.979,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 7,
+   "textSizes": 3,
+   "maxFont": 18,
+   "boxes": 2,
+   "buttons": 1
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0,
+   "media": [],
+   "words": 13,
+   "textSizes": 4,
+   "maxFont": 423,
+   "boxes": 2,
+   "buttons": 1
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0,
+   "media": [],
+   "words": 18,
+   "textSizes": 3,
+   "maxFont": 62,
+   "boxes": 2,
+   "buttons": 1
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0,
+   "media": [],
+   "words": 18,
+   "textSizes": 4,
+   "maxFont": 438,
+   "boxes": 1,
+   "buttons": 1
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.327,
+   "media": [
+    {
+     "x": 0,
+     "y": 57,
+     "w": 1512,
+     "h": 807,
+     "share": 0.934,
+     "tag": "canvas",
+     "flat": 0.712,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 7,
+   "textSizes": 3,
+   "maxFont": 78,
+   "boxes": 20,
+   "buttons": 1
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 57,
+     "share": 0.066,
+     "tag": "canvas",
+     "flat": 0.805,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 4,
+   "textSizes": 2,
+   "maxFont": 18,
+   "boxes": 2,
+   "buttons": 1
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.798,
+   "media": [
+    {
+     "x": 116,
+     "y": 0,
+     "w": 1283,
+     "h": 864,
+     "share": 0.849,
+     "tag": "img",
+     "flat": 0.505,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 6,
+     "y": 29,
+     "w": 1296,
+     "h": 835,
+     "share": 0.828,
+     "tag": "img",
+     "flat": 0.524,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 708,
+     "y": 371,
+     "w": 804,
+     "h": 493,
+     "share": 0.303,
+     "tag": "img",
+     "flat": 0.606,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 4,
+   "textSizes": 2,
+   "maxFont": 18,
+   "boxes": 2,
+   "buttons": 1
+  }
+ ]
+}

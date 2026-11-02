@@ -1,0 +1,276 @@
+{
+ "summary": {
+  "url": "https://www.oharchitecture.com.au",
+  "screens": 8,
+  "mediaCoverAvg": 0.56,
+  "screensWithBigMedia": 5,
+  "photoShareOfBigMedia": 0.87,
+  "largestMedia": 1,
+  "wordsAvg": 114,
+  "wordsMax": 169,
+  "boxesAvg": 5.75,
+  "buttonsAvg": 2.5,
+  "textSizesAvg": 4.75,
+  "maxFontFirstScreen": 64
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0.992,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.157,
+     "kind": "photo"
+    }
+   ],
+   "words": 116,
+   "textSizes": 5,
+   "maxFont": 64,
+   "boxes": 6,
+   "buttons": 3
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.866,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.748,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 518,
+     "y": 315,
+     "w": 425,
+     "h": 284,
+     "share": 0.092,
+     "tag": "img",
+     "flat": 0.118,
+     "kind": "photo"
+    }
+   ],
+   "words": 169,
+   "textSizes": 7,
+   "maxFont": 123,
+   "boxes": 5,
+   "buttons": 2
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0.308,
+   "media": [
+    {
+     "x": 26,
+     "y": 576,
+     "w": 722,
+     "h": 288,
+     "share": 0.159,
+     "tag": "img",
+     "flat": 0.369,
+     "kind": "mixed"
+    },
+    {
+     "x": 764,
+     "y": 576,
+     "w": 722,
+     "h": 288,
+     "share": 0.159,
+     "tag": "img",
+     "flat": 0.185,
+     "kind": "photo"
+    },
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 65,
+     "share": 0.075,
+     "tag": "img",
+     "flat": 0.704,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 97,
+   "textSizes": 6,
+   "maxFont": 123,
+   "boxes": 6,
+   "buttons": 3
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0.528,
+   "media": [
+    {
+     "x": 764,
+     "y": 0,
+     "w": 722,
+     "h": 694,
+     "share": 0.384,
+     "tag": "img",
+     "flat": 0.161,
+     "kind": "photo"
+    },
+    {
+     "x": 26,
+     "y": 0,
+     "w": 722,
+     "h": 209,
+     "share": 0.115,
+     "tag": "img",
+     "flat": 0.076,
+     "kind": "photo"
+    }
+   ],
+   "words": 97,
+   "textSizes": 4,
+   "maxFont": 64,
+   "boxes": 7,
+   "buttons": 2
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0.649,
+   "media": [
+    {
+     "x": 764,
+     "y": 0,
+     "w": 722,
+     "h": 864,
+     "share": 0.478,
+     "tag": "img",
+     "flat": 0.082,
+     "kind": "photo"
+    },
+    {
+     "x": 26,
+     "y": 0,
+     "w": 599,
+     "h": 385,
+     "share": 0.177,
+     "tag": "img",
+     "flat": 0.14,
+     "kind": "photo"
+    }
+   ],
+   "words": 85,
+   "textSizes": 4,
+   "maxFont": 64,
+   "boxes": 5,
+   "buttons": 2
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.608,
+   "media": [
+    {
+     "x": 887,
+     "y": 234,
+     "w": 599,
+     "h": 630,
+     "share": 0.289,
+     "tag": "img",
+     "flat": 0.248,
+     "kind": "photo"
+    },
+    {
+     "x": 26,
+     "y": 234,
+     "w": 722,
+     "h": 497,
+     "share": 0.275,
+     "tag": "img",
+     "flat": 0.135,
+     "kind": "photo"
+    },
+    {
+     "x": 764,
+     "y": 0,
+     "w": 722,
+     "h": 91,
+     "share": 0.05,
+     "tag": "img",
+     "flat": 0.089,
+     "kind": "photo"
+    }
+   ],
+   "words": 94,
+   "textSizes": 4,
+   "maxFont": 64,
+   "boxes": 5,
+   "buttons": 2
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0.175,
+   "media": [
+    {
+     "x": 26,
+     "y": 524,
+     "w": 353,
+     "h": 340,
+     "share": 0.092,
+     "tag": "img",
+     "flat": 0.064,
+     "kind": "photo"
+    },
+    {
+     "x": 887,
+     "y": 0,
+     "w": 599,
+     "h": 184,
+     "share": 0.085,
+     "tag": "img",
+     "flat": 0.062,
+     "kind": "photo"
+    }
+   ],
+   "words": 119,
+   "textSizes": 4,
+   "maxFont": 64,
+   "boxes": 6,
+   "buttons": 3
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.339,
+   "media": [
+    {
+     "x": 26,
+     "y": 508,
+     "w": 599,
+     "h": 356,
+     "share": 0.163,
+     "tag": "img",
+     "flat": 0.185,
+     "kind": "photo"
+    },
+    {
+     "x": 887,
+     "y": 508,
+     "w": 599,
+     "h": 356,
+     "share": 0.163,
+     "tag": "img",
+     "flat": 0.252,
+     "kind": "photo"
+    }
+   ],
+   "words": 135,
+   "textSizes": 4,
+   "maxFont": 64,
+   "boxes": 6,
+   "buttons": 3
+  }
+ ]
+}
