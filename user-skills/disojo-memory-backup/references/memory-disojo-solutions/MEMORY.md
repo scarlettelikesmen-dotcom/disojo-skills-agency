@@ -46,3 +46,4 @@
 - [Disojo positioning 2026-11-02](project-disojo-positioning-2026-11-02.md) — decisions so far, Monolog audit numbers, challenges awaiting Tejjo
 - [Work summary 2026-11-02](work-summary-2026-11-02.md) — Mentable featured section, 8,750, analyst photo, image direction, compaction settings; NOT deployed
 - [Website system (merged)](project-site-system.md) — READ FIRST for site work: 14 skills merged into disojo-site-system 2026-11-02, section library, gate fix, next = first real client run
+- [KDC site redo](project-kdc-site-redo.md) — kunalsdrumclass.com, first disojo-site-system run: Count-in approved, home built localhost:4600, NOT deployed, gap list

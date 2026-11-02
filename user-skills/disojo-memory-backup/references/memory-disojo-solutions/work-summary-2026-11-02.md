@@ -31,3 +31,11 @@ metadata:
 - Fixed a premium_gate bug with srcset widths.
 - Archived 14 skills (not deleted); repointed 17 files across 10 skills; updated CLAUDE.md (site section + Lighthouse path); added the archive to the backup script.
 - Nothing deployed. The disojostudio.com code was not touched.
+
+## KDC site redo (first run of disojo-site-system)
+- Intake: crawled kunalsdrumclass.com (4 pages), tiered photos (one large real photo, the rest 305-470px).
+- Message + one direction ("Count-in") rendered and sent; Tejjo approved: "HONESLTY not bad, i like this, build".
+- Built the home (hero, four-beat bar with scroll playhead, features, curriculum, founder, nine videos, Kavita Rathod quote, contact + map, footer) and legal pages at `~/Desktop/websites ARCHIVE/kdc-site/site`, localhost:4600.
+- Register form untouched: links go to the live form. Contact form and partner logos left out.
+- Fixed in the starter: footer credit now "Developed by Disojo Solutions". Lessons added to disojo-site-system/references/lessons.md.
+- Verified: build passes, gate 1 FAIL (too few big photos, a true limit), screens at 8 sizes. NOT deployed, no git remote.

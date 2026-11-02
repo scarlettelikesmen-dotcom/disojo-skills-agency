@@ -37,7 +37,7 @@ What the gate fails: overflow, broken images, images shown soft (real file pixel
 - Free fonts only (Google Fonts, Fontshare), licence recorded in tokens.json. Never lift a reference's commercial font, copy, images or code.
 - The one button (`components/Btn.astro`): label roll and twin arrows on `cubic-bezier(.16,1,.35,1)` about 0.7s, springy press. "Feels dead" means change the curve, not the speed.
 - Demos are noindex and in their own Vercel project. Deploying is publishing: wait for the word.
-- Footer credit stays (Base.astro): "Design & Systems · © Disojo Studio" linking to https://disojostudio.com.
+- Footer credit stays (Base.astro): "Developed by Disojo Solutions" on the right, linking to https://disojostudio.com (CLAUDE.md rule).
 - Test 1512x864 (plus 1440x790, 1920x1080, 1280x720) and phones 390/360/430 by measurement. Real phones and Safari are untested unless someone checks them: say so.
 - Do only what was asked; finish a whole section, verify, then show with screens; say what is placeholder, stock, AI or untested.
 

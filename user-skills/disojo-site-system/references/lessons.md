@@ -34,3 +34,12 @@
 
 ## Defects seen on the reference sites (never ship these)
 Blank first screen for seconds (Supersolid, Mammoth, HISS on phone); scroll-locked or blank intro for 20-35 s (Squiggle); a 10 s phone preloader (OH); fixed logo over text and client logos overlapping (SLIK, Palmo); a trial font in production (Backhouse); "Coming soon" in a hero (Mammoth); cookie and sensor prompts over the hero (Palmo); no reduced-motion path in 3D (Ciao). `scripts/qa_probe.js` checks the first five in the browser JS tool at 1 s, 3 s and 8 s.
+
+## First real run: KDC (2026-11-02)
+- A crawled sign-up form that creates accounts (password field, app backend) is never rebuilt: link every "Get Started" to the live form (`REGISTER` in brand.js) and exclude its route. Moving it is a launch task with the client's developer.
+- Crawled legal pages carry the site chrome (logo, Register link, a page-title photo): filter it in `[...route].astro` and use the first heading as the h1.
+- Take the client's own favicon (`/favicon.ico` on their site) before making one.
+- A full accent-coloured section breaks a brief that says "accent as a marker only": the CTA went red in the first build and was taken back to ink. Re-read the brief's colour jobs before styling the last sections.
+- 470 px video thumbnails with blurred side panels baked in: crop them to 3:5 portrait cards at about 184 px wide; at 2x anything wider is soft.
+- The premium gate's composition checks do not apply to legal text pages; read those FAILs as not applicable, never pad legal pages with photos.
+- With one large real photo, the "3 in 8 screens with a big image" check fails honestly. Do not fill it with stock next to claims; put the shoot on the gap list.
