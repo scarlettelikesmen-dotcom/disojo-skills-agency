@@ -1,0 +1,10 @@
+---
+// Job: the person behind it, in their own words. Portrait (real, tier A only) plus a short note and the name.
+import Pic from '../Pic.astro';
+interface Props { name: string; role: string; paras: string[]; title?: string; img?: any }
+const { name, role, paras, title, img } = Astro.props;
+---
+<section class:list={['s-fd sec wrap', { 'no-img': !img }]}>
+  {img && <div class="s-fd-p" data-reveal><Pic {...img} sizes="(max-width:860px) 100vw, 34vw" /></div>}
+  <div class="s-fd-t">{title && <h2 class="t-h2">{title}</h2>}{paras.map((p) => <p class="t-lead">{p}</p>)}<p class="t-small"><b>{name}</b> <span class="muted">{role}</span></p></div>
+</section>

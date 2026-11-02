@@ -1,0 +1,60 @@
+---
+// The section library on one page, as a page would use it. Internal: new_site.sh removes this page and public/library from a client project.
+// Copy is Disojo's own verified site copy; photos are the KDC site set graded with disojo-image-pipeline (--look mono). Stock: never put under a client's name.
+import Base from '../layouts/Base.astro';
+import HeroType from '../components/sections/HeroType.astro';
+import HeroPhoto from '../components/sections/HeroPhoto.astro';
+import Rows from '../components/sections/Rows.astro';
+import ResultPhoto from '../components/sections/ResultPhoto.astro';
+import Featured from '../components/sections/Featured.astro';
+import Steps from '../components/sections/Steps.astro';
+import PhotoBand from '../components/sections/PhotoBand.astro';
+import Stats from '../components/sections/Stats.astro';
+import Quote from '../components/sections/Quote.astro';
+import PhotoStory from '../components/sections/PhotoStory.astro';
+import CaseStrip from '../components/sections/CaseStrip.astro';
+import Gallery from '../components/sections/Gallery.astro';
+import Founder from '../components/sections/Founder.astro';
+import Faq from '../components/sections/Faq.astro';
+import Cta from '../components/sections/Cta.astro';
+import FooterMark from '../components/sections/FooterMark.astro';
+const im = (n: string, alt: string, pos?: string) => ({ src: `/library/${n}-1920.webp`, set: [[`/library/${n}-960.webp`, 960], [`/library/${n}-1920.webp`, 1920]] as [string, number][], w: 1920, h: 1100, alt, pos });
+const call: [string, string] = ['https://cal.com/disojo-studio/discovery-call', 'Book a discovery call'];
+---
+<Base title="Section library" desc="Disojo site system: every section in one page.">
+  <HeroType label="Disojo Studio, Bombay" lines={['Digital systems for', 'owner-run businesses.']} sub="Custom software, MVPs and internal tools that keep the business running smoothly, so you can spend your time on the business, not the busywork." cta={call} />
+  <HeroPhoto img={im('stage', 'A drum kit on a lit stage')} lines={['Find where', 'the work leaks.']} sub="Before any design or code, we work out what you are actually trying to achieve." cta={call} card={{ big: '10 hrs', text: 'back every week at KDC, no longer spent confirming and chasing.', meta: 'Client result · Chembur, Bombay' }} />
+  <Rows label="What we do" title="Four kinds of work, one way of doing it." rows={[
+    { t: 'Branding and websites', d: 'Your identity and your site, rebuilt together.', href: '#' },
+    { t: 'MVPs for startups', d: 'Case study: Mentable, a trading-discipline app.', href: '#' },
+    { t: 'Internal business tools', d: 'The admin panels and systems your team runs the day on.', href: '#' },
+    { t: 'Digital systems and automation', d: 'Your tools connected, and the repeat work done by the system.', href: '#' },
+  ]} />
+  <ResultPhoto label="Kunal Drum Class" title="Students confirm or cancel classes themselves." text="Staff set the rules once. The admin panel, the student, parent and tutor apps run on one system." img={im('kunal', 'Kunal Athreya at his drum kit', '58% 40%')} card={{ big: '10 hrs', text: 'back every week, no longer spent confirming and chasing.', meta: 'Client result · Chembur, Bombay' }} />
+  <Featured name="KDC" line="Student, parent and tutor apps plus an admin panel for a drum school in Chembur." img={im('kit', 'A drum kit under stage lights')} href="#" facts={[['Built', 'Apps + admin panel'], ['Result', '10 hrs back every week'], ['Where', 'Chembur, Bombay']]} />
+  <Steps title="Different projects. The same way of working." steps={[
+    { t: 'We learn the business first', d: 'Before any design or code, we work out what you are actually trying to achieve.', img: im('overhead', 'A drum kit seen from above') },
+    { t: 'You see it as it is built', d: 'Working screens in stages, so there is no big reveal at the end.', img: im('sticks', 'Hands with drumsticks over a snare') },
+    { t: 'One person leads it', d: 'Tejjo is on every project, start to finish.', quote: { q: 'Tejjo kept in contact with me all the time, and I never had to worry about my requirements getting messed up.', by: 'Parag Mehta, Founder and CTO, Mentable' } },
+    { t: 'We stay after launch', d: 'Fixes, tuning and the next version, so it does not go stale.', img: im('dark', 'A drum kit in a dark room') },
+  ]} />
+  <PhotoBand img={im('cymbal', 'Cymbals catching stage light', '50% 30%')} line="Built in stages. No big reveal at the end." />
+  <Stats label="Verified" items={[{ v: '50+', l: 'projects completed since our launch' }, { v: '10 hrs', l: 'back every week at KDC' }, { v: '+70%', l: 'local inquiries for Ascender Media' }, { v: '3.7x', l: 'Meta ad return for Postcards Perfumes, up from 0.6x' }]} />
+  <Quote q="Tejjo kept in contact with me all the time, and I never had to worry about my requirements getting messed up." by="Parag Mehta" role="Founder and CTO, Mentable" />
+  <PhotoStory label="Discovery" title="The leak is usually in plain sight." img={im('sticks', 'Hands with drumsticks over a snare')} paras={['WhatsApp bookings, spreadsheet tracking, retyped documents, things only one person knows.', 'We find where the work leaks before we build anything.']} />
+  <CaseStrip label="Specimen" title="A strip of projects." cases={[
+    { img: im('kit', 'A drum kit under stage lights'), name: 'The kit', line: 'Photo from the KDC site set', href: '#' },
+    { img: im('overhead', 'A drum kit seen from above'), name: 'From above', line: 'Photo from the KDC site set', href: '#' },
+    { img: im('splash', 'Drumsticks hitting a wet snare'), name: 'The hit', line: 'Photo from the KDC site set', href: '#' },
+    { img: im('cymbal', 'Cymbals catching stage light'), name: 'Cymbals', line: 'Photo from the KDC site set', href: '#' },
+  ]} />
+  <Gallery title="One grade, every photo." imgs={[im('splash', 'Drumsticks hitting a wet snare'), im('kit', 'A drum kit under stage lights'), im('overhead', 'A drum kit seen from above'), im('stage', 'A drum kit on a lit stage'), im('cymbal', 'Cymbals catching stage light')]} />
+  <Founder name="Tejjomay" role="Founder, Disojo Studio" paras={['Tejjo is on every project, start to finish.', 'Before any design or code, we work out what you are actually trying to achieve.']} />
+  <Faq title="Where it usually hurts." items={[
+    { q: 'People can’t see how good we are.', a: 'Your identity and your site, rebuilt together.' },
+    { q: 'My team runs on chats and spreadsheets.', a: 'The admin panels and systems your team runs the day on.' },
+    { q: 'Someone repeats the same task by hand every day.', a: 'Your tools connected, and the repeat work done by the system.' },
+  ]} />
+  <Cta lines={['Spend your time', 'on the business.']} sub="Not the busywork." cta={call} alt={['mailto:projects@disojostudio.com', 'projects@disojostudio.com']} img={im('dark', 'A drum kit in a dark room')} />
+  <FooterMark slot="footer" word="Disojo" cols={[{ label: 'Contact', links: [['mailto:projects@disojostudio.com', 'projects@disojostudio.com']] }, { label: 'Elsewhere', links: [['https://instagram.com/disojostudio', 'Instagram']] }]} />
+</Base>

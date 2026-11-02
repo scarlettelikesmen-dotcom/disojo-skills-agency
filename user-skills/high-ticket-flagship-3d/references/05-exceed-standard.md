@@ -5,7 +5,7 @@
 ## A. Craft (judged by eye, with a named reviewer: Tejjomay)
 | # | Criterion | How to check |
 |---|---|---|
-| A1 | **One concept, stated without naming a colour or effect** | The brief's first line passes the bland test (`disojo-art-direction`) |
+| A1 | **One concept, stated without naming a colour or effect** | The brief's first line passes the bland test (`disojo-site-system`) |
 | A2 | **One signature move**, original to this client | The distinctness test (`04-no-copy-law.md` section 5) passes |
 | A3 | **Type system:** at most 2 families, deliberate tracking and scale, licences recorded | `brand/tokens.json`, `00-admin/licences.md` |
 | A4 | **Palette:** 3 to 4 colours with jobs, from the client's brand | `check_tokens.py` prints PASS; contrast recorded |
@@ -36,13 +36,13 @@
 ## D. Engineering and performance
 | # | Criterion | Target | Check |
 |---|---|---|---|
-| D1 | Lighthouse (deployed URL, not local) | 90+ across Performance, Accessibility, Best Practices, SEO (AGENTS.md); explain any 3D shortfall in numbers | `disojo-premium-site-method/scripts/lighthouse_summary.sh` |
-| D2 | Home page first load | <= 6-8 MB (from `disojo-site-archetypes`) | Network panel |
+| D1 | Lighthouse (deployed URL, not local) | 90+ across Performance, Accessibility, Best Practices, SEO (AGENTS.md); explain any 3D shortfall in numbers | `disojo-site-system/scripts/lighthouse_summary.sh` |
+| D2 | Home page first load | <= 6-8 MB (from `disojo-site-system`) | Network panel |
 | D3 | No horizontal overflow at any test width | 0 px | `qa_probe.js` |
 | D4 | No fixed UI overlapping text | none, or a deliberate blend that reads | `qa_probe.js` fixedUiOverlap and a screenshot |
 | D5 | Fonts | licensed only; no trial or demo fonts | `qa_probe.js` fonts, licence log |
 | D6 | Console clean | 0 errors | `read_console_messages` |
-| D7 | Images | WebP or AVIF, <= 250 KB each (hero <= 400 KB) | `disojo-launch-checklist/scripts/optimize_images.py` |
+| D7 | Images | WebP or AVIF, <= 250 KB each (hero <= 400 KB) | `disojo-image-pipeline/scripts/grade.py` |
 
 ## E. Access and honesty
 | # | Criterion | Check |

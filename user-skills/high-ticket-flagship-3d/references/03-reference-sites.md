@@ -2,7 +2,7 @@
 
 **These are quality benchmarks only. Nothing is copied from any of them** (full law: `04-no-copy-law.md`). We study the level of craft and the principle behind each decision, write the principle down, close the site, and design from the client's brief. The goal is work that is **better** than these and recognisably **not** them.
 
-Measured data (stack, fonts, colours, easings, durations, defects) for all nine: `~/.claude/skills/disojo-art-direction/references/reference-sites.md`. Collected 2026-10-14 in the Claude browser pane at 1382x811 and 343x811 (a narrow desktop window, not a real phone). Their hex values and eases are for analysis, never for reuse. To study another site: `disojo-art-direction/scripts/inspect_site.js`.
+Measured data (stack, fonts, colours, easings, durations, defects) for all nine: `~/.claude/skills/disojo-site-system/references/reference-sites.md`. Collected 2026-10-14 in the Claude browser pane at 1382x811 and 343x811 (a narrow desktop window, not a real phone). Their hex values and eases are for analysis, never for reuse. To study another site: `disojo-site-system/scripts/inspect_site.js`.
 
 The first seven are the sites Tejjomay named as the target. The last two are the 3D benchmarks he added.
 
@@ -65,7 +65,7 @@ The first seven are the sites Tejjomay named as the target. The last two are the
 ---
 
 ## What the nine teach together (principles, not recipes)
-How to study them: hands-on, several minutes each, BEFORE planning (see `disojo-art-direction`, 2026-10-27 lesson).
+How to study them: hands-on, several minutes each, BEFORE planning (see `disojo-site-system`, 2026-10-27 lesson).
 1. One memorable idea per brand, taken literally from the name or the product truth, built into a small strict system (one system repeated, not a different layout per section).
 2. Type does the heavy lifting; sizes are big and tight.
 3. Real imagery or a well-lit real object; not decoration.
@@ -74,7 +74,7 @@ How to study them: hands-on, several minutes each, BEFORE planning (see `disojo-
 6. The enquiry experience matches the quality of the rest.
 7. Their shared toolkit (GSAP, ScrollTrigger, Lenis, Three.js, smooth easing) is public technique. Taste and assets are the difference.
 
-## The defects they share (our regression list, built into `disojo-premium-qa`)
+## The defects they share (our regression list, built into `disojo-site-system`)
 Empty first screens, locked intros, long preloaders, overlapping fixed UI, trial fonts, placeholders in heroes, prompts over the hero, no reduced-motion handling in a 3D script.
 
 ## What is NOT a reference

@@ -1,0 +1,10 @@
+---
+// One photo. Pass src (largest file) and optional set ([[url, width], ...]) for srcset. Always real width/height (no layout shift).
+// par: in-frame parallax (the image drifts inside its frame on scroll; main.js). eager: first-screen images only.
+interface Props { src: string; w: number; h: number; alt: string; set?: [string, number][]; sizes?: string; eager?: boolean; par?: boolean; pos?: string; class?: string }
+const { src, w, h, alt, set, sizes = '100vw', eager = false, par = false, pos, class: cls = '' } = Astro.props;
+---
+<div class:list={['pic', { par }, cls]}>
+  <img src={src} srcset={set ? set.map(([u, x]) => `${u} ${x}w`).join(', ') : undefined} sizes={set ? sizes : undefined} width={w} height={h} alt={alt}
+    loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" style={pos ? `object-position:${pos}` : undefined} />
+</div>

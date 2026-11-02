@@ -1,0 +1,109 @@
+{
+ "summary": {
+  "url": "https://www.ascendermedia.in",
+  "screens": 8,
+  "mediaCoverAvg": 0.04,
+  "screensWithBigMedia": 1,
+  "photoShareOfBigMedia": 0,
+  "largestMedia": 0.253,
+  "wordsAvg": 62.88,
+  "wordsMax": 93,
+  "boxesAvg": 3.25,
+  "buttonsAvg": 1.38,
+  "textSizesAvg": 6.13,
+  "maxFontFirstScreen": 21
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0,
+   "media": [],
+   "words": 48,
+   "textSizes": 3,
+   "maxFont": 21,
+   "boxes": 2,
+   "buttons": 2
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.004,
+   "media": [],
+   "words": 52,
+   "textSizes": 4,
+   "maxFont": 77,
+   "boxes": 2,
+   "buttons": 1
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0.004,
+   "media": [],
+   "words": 93,
+   "textSizes": 7,
+   "maxFont": 157,
+   "boxes": 1,
+   "buttons": 1
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0.004,
+   "media": [],
+   "words": 86,
+   "textSizes": 8,
+   "maxFont": 70,
+   "boxes": 5,
+   "buttons": 1
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0.004,
+   "media": [],
+   "words": 68,
+   "textSizes": 8,
+   "maxFont": 70,
+   "boxes": 5,
+   "buttons": 1
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.004,
+   "media": [],
+   "words": 62,
+   "textSizes": 8,
+   "maxFont": 70,
+   "boxes": 5,
+   "buttons": 1
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0.019,
+   "media": [],
+   "words": 63,
+   "textSizes": 7,
+   "maxFont": 70,
+   "boxes": 5,
+   "buttons": 1
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.272,
+   "media": [
+    {
+     "x": 864,
+     "y": 0,
+     "w": 620,
+     "h": 532,
+     "share": 0.253,
+     "tag": "img",
+     "flat": 0.544,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 31,
+   "textSizes": 4,
+   "maxFont": 50,
+   "boxes": 1,
+   "buttons": 3
+  }
+ ]
+}

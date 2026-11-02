@@ -1,0 +1,21 @@
+---
+// Job: show how working together goes. Steps zigzag down a centre line; each step can carry a photo or a short quote.
+// Approved on disojostudio.com ("Different projects. The same way of working."). Phone: one column, the line on the left.
+import Pic from '../Pic.astro';
+interface Props { title: string; steps: { t: string; d: string; img?: any; quote?: { q: string; by: string } }[] }
+const { title, steps } = Astro.props;
+---
+<section class="s-st sec wrap">
+  <h2 class="t-h2 s-st-h">{title}</h2>
+  <ol class="s-st-z">
+    {steps.map((s, i) => (
+      <li class="s-st-s" data-reveal>
+        <div class="s-st-tx"><span class="t-label muted">{String(i + 1).padStart(2, '0')}</span><h3 class="t-h3">{s.t}</h3><p class="t-body muted">{s.d}</p></div>
+        <div class="s-st-v">
+          {s.img && <Pic {...s.img} sizes="(max-width:860px) 100vw, 34vw" />}
+          {s.quote && <blockquote class="s-st-q on-ink"><p class="t-lead">&ldquo;{s.quote.q}&rdquo;</p><cite class="t-small">{s.quote.by}</cite></blockquote>}
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>

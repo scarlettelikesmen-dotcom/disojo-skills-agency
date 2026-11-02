@@ -25,7 +25,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$HOME/.claude/skills/disojo-premium-look/hooks/site_guard.cjs\" track",
+            "command": "node \"$HOME/.claude/skills/disojo-site-system/hooks/site_guard.cjs\" track",
             "timeout": 10
           }
         ]
@@ -36,7 +36,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$HOME/.claude/skills/disojo-premium-look/hooks/site_guard.cjs\" stop",
+            "command": "node \"$HOME/.claude/skills/disojo-site-system/hooks/site_guard.cjs\" stop",
             "timeout": 10
           }
         ]

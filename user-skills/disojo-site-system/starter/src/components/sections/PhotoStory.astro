@@ -1,0 +1,10 @@
+---
+// Job: tell one part of the story where the picture says more than the words. Photo leads (7/12), short text follows (5/12).
+import Pic from '../Pic.astro';
+interface Props { img: any; title: string; paras: string[]; label?: string; flip?: boolean }
+const { img, title, paras, label, flip = false } = Astro.props;
+---
+<section class:list={['s-ps sec wrap', { flip }]}>
+  <div class="s-ps-f" data-reveal><Pic {...img} par sizes="(max-width:860px) 100vw, 58vw" /></div>
+  <div class="s-ps-t">{label && <p class="t-label">{label}</p>}<h2 class="t-h2">{title}</h2>{paras.map((p) => <p class="t-body">{p}</p>)}</div>
+</section>

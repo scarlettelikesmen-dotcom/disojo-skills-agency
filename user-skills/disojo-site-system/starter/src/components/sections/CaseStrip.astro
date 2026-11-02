@@ -1,0 +1,12 @@
+---
+// Job: show range. A horizontal strip of 3-6 projects, each a photo, a name and one line. Drag or swipe; snaps per card.
+import Pic from '../Pic.astro';
+interface Props { title: string; label?: string; cases: { img: any; name: string; line: string; href?: string }[] }
+const { title, label, cases } = Astro.props;
+---
+<section class="s-cs sec">
+  <div class="wrap s-cs-h">{label && <p class="t-label">{label}</p>}<h2 class="t-h2">{title}</h2></div>
+  <ul class="s-cs-r" tabindex="0" aria-label={title}>
+    {cases.map((c) => <li><a href={c.href}><Pic {...c.img} sizes="(max-width:860px) 80vw, 34vw" /><h3 class="t-h3">{c.name}</h3><p class="t-small muted">{c.line}</p></a></li>)}
+  </ul>
+</section>

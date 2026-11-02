@@ -49,4 +49,4 @@ AI image-to-3D and Spline AI give rough meshes (Spline's docs say single simple 
 Hero objects: N. Variants: N (flavours, colours). Scenes or chapters: N. Camera moves: N. Who supplies the model or print files. Mobile treatment (simplified scene or static fallback). Revisions: two rounds per stage. Extras are change orders.
 
 ## Budgets and must-haves
-Model <= 600 KB, HDR <= 1.5 MB, whole home page first load <= 6-8 MB (from `disojo-site-archetypes`). Lazy-load the model, pause rendering off-screen, a visible poster while loading, a no-WebGL fallback image with the same copy, `prefers-reduced-motion` path (Ciao's script has none, so add it), a loader tied to real progress with a cap, and a skip.
+Model <= 600 KB, HDR <= 1.5 MB, whole home page first load <= 6-8 MB (from `disojo-site-system`). Lazy-load the model, pause rendering off-screen, a visible poster while loading, a no-WebGL fallback image with the same copy, `prefers-reduced-motion` path (Ciao's script has none, so add it), a loader tied to real progress with a cap, and a skip.

@@ -17,7 +17,7 @@ Ciao's six flavours are six flat AVIF label images (190-250 KB each) swapped at 
 | Food that is not in a pack (bakery, produce, ready meals) | Photoreal stills + cut-outs, AI video turntable, or hired 3D artist | `references/food-and-other-routes.md` |
 | A product with a real GLB supplied | Real 3D hero | `disojo-3d-product-site` |
 | Jewellery, electronics, furniture | Hired 3D artist or CAD export; do not promise AI | `references/food-and-other-routes.md` |
-If the client has no print files and no budget: do not fake 3D. Use photoreal stills (`disojo-scroll-site-rebuild`).
+If the client has no print files and no budget: do not fake 3D. Use photoreal stills (`disojo-site-system`).
 
 ## Packaged goods: the 1-day path (estimate, not yet measured on a client)
 1. **Ask for print files, not photos**: send `templates/dieline-request.md` (dieline PDF, dimensions, finishes, colours, closure, variants).

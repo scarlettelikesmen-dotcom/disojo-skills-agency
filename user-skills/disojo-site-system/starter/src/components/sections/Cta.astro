@@ -1,0 +1,14 @@
+---
+// Job: the one action, said once more at the end. Dark band, headline, one sentence, the same button label as the hero.
+import Btn from '../Btn.astro'; import Pic from '../Pic.astro';
+interface Props { lines: string[]; sub?: string; cta: [string, string]; alt?: [string, string]; img?: any }
+const { lines, sub, cta, alt, img } = Astro.props;
+---
+<section class:list={['s-ct on-ink', { 'has-img': !!img }]}>
+  {img && <Pic {...img} sizes="(orientation: portrait) 180vh, 100vw" class="s-ct-bg" />}
+  <div class="wrap s-ct-in">
+    <h2 class="t-display">{lines.map((l) => <span class="ln"><span>{l}</span></span>)}</h2>
+    {sub && <p class="t-lead">{sub}</p>}
+    <div class="s-ct-a"><Btn href={cta[0]} label={cta[1]} />{alt && <a class="ul t-small" href={alt[0]}>{alt[1]}</a>}</div>
+  </div>
+</section>

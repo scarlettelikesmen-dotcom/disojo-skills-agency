@@ -1,0 +1,285 @@
+{
+ "summary": {
+  "url": "https://bymonolog.com",
+  "screens": 8,
+  "mediaCoverAvg": 0.23,
+  "screensWithBigMedia": 5,
+  "photoShareOfBigMedia": 1,
+  "largestMedia": 0.5,
+  "wordsAvg": 119.38,
+  "wordsMax": 366,
+  "boxesAvg": 1.88,
+  "buttonsAvg": 1.75,
+  "textSizesAvg": 7.63,
+  "maxFontFirstScreen": 143
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0.144,
+   "media": [
+    {
+     "x": 518,
+     "y": 508,
+     "w": 967,
+     "h": 356,
+     "share": 0.263,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    }
+   ],
+   "words": 96,
+   "textSizes": 8,
+   "maxFont": 143,
+   "boxes": 4,
+   "buttons": 3
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.557,
+   "media": [
+    {
+     "x": 443,
+     "y": 0,
+     "w": 1069,
+     "h": 612,
+     "share": 0.5,
+     "tag": "img",
+     "flat": 0.001,
+     "kind": "photo"
+    },
+    {
+     "x": 518,
+     "y": 518,
+     "w": 242,
+     "h": 242,
+     "share": 0.045,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 760,
+     "y": 518,
+     "w": 242,
+     "h": 242,
+     "share": 0.045,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 1002,
+     "y": 518,
+     "w": 242,
+     "h": 242,
+     "share": 0.045,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    }
+   ],
+   "words": 43,
+   "textSizes": 7,
+   "maxFont": 74,
+   "boxes": 3,
+   "buttons": 2
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0.106,
+   "media": [],
+   "words": 366,
+   "textSizes": 8,
+   "maxFont": 74,
+   "boxes": 1,
+   "buttons": 2
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0.006,
+   "media": [
+    {
+     "x": 628,
+     "y": 579,
+     "w": 256,
+     "h": 285,
+     "share": 0.056,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    }
+   ],
+   "words": 158,
+   "textSizes": 8,
+   "maxFont": 143,
+   "boxes": 2,
+   "buttons": 1
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0.06,
+   "media": [
+    {
+     "x": 628,
+     "y": 272,
+     "w": 256,
+     "h": 320,
+     "share": 0.063,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    }
+   ],
+   "words": 70,
+   "textSizes": 6,
+   "maxFont": 143,
+   "boxes": 2,
+   "buttons": 1
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.229,
+   "media": [
+    {
+     "x": 220,
+     "y": 356,
+     "w": 806,
+     "h": 508,
+     "share": 0.313,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 297,
+     "y": 772,
+     "w": 652,
+     "h": 92,
+     "share": 0.046,
+     "tag": "video",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 220,
+     "y": 807,
+     "w": 806,
+     "h": 57,
+     "share": 0.035,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    }
+   ],
+   "words": 88,
+   "textSizes": 8,
+   "maxFont": 74,
+   "boxes": 1,
+   "buttons": 1
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0.376,
+   "media": [
+    {
+     "x": 220,
+     "y": 86,
+     "w": 806,
+     "h": 537,
+     "share": 0.331,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 220,
+     "y": 518,
+     "w": 806,
+     "h": 346,
+     "share": 0.214,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 297,
+     "y": 439,
+     "w": 652,
+     "h": 393,
+     "share": 0.196,
+     "tag": "video",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 297,
+     "y": 0,
+     "w": 652,
+     "h": 301,
+     "share": 0.15,
+     "tag": "video",
+     "flat": 0,
+     "kind": "photo"
+    }
+   ],
+   "words": 69,
+   "textSizes": 8,
+   "maxFont": 74,
+   "boxes": 1,
+   "buttons": 2
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.386,
+   "media": [
+    {
+     "x": 220,
+     "y": 247,
+     "w": 806,
+     "h": 537,
+     "share": 0.331,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 220,
+     "y": 0,
+     "w": 806,
+     "h": 353,
+     "share": 0.218,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 297,
+     "y": 107,
+     "w": 652,
+     "h": 393,
+     "share": 0.196,
+     "tag": "video",
+     "flat": 0,
+     "kind": "photo"
+    },
+    {
+     "x": 220,
+     "y": 679,
+     "w": 806,
+     "h": 185,
+     "share": 0.114,
+     "tag": "img",
+     "flat": 0,
+     "kind": "photo"
+    }
+   ],
+   "words": 65,
+   "textSizes": 8,
+   "maxFont": 74,
+   "boxes": 1,
+   "buttons": 2
+  }
+ ]
+}

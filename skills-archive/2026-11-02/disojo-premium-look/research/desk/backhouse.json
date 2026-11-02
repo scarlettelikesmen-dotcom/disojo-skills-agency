@@ -1,0 +1,186 @@
+{
+ "summary": {
+  "url": "https://www.backhouse.com",
+  "screens": 8,
+  "mediaCoverAvg": 0.16,
+  "screensWithBigMedia": 7,
+  "photoShareOfBigMedia": 1,
+  "largestMedia": 1,
+  "wordsAvg": 33.13,
+  "wordsMax": 41,
+  "boxesAvg": 10,
+  "buttonsAvg": 0,
+  "textSizesAvg": 2.88,
+  "maxFontFirstScreen": 78
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0.08,
+   "media": [
+    {
+     "x": 514,
+     "y": 319,
+     "w": 484,
+     "h": 227,
+     "share": 0.084,
+     "tag": "canvas",
+     "flat": 0.001,
+     "kind": "photo"
+    }
+   ],
+   "words": 27,
+   "textSizes": 5,
+   "maxFont": 78,
+   "boxes": 9,
+   "buttons": 0
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.767,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.024,
+     "kind": "photo"
+    }
+   ],
+   "words": 41,
+   "textSizes": 4,
+   "maxFont": 109,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0.464,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.044,
+     "kind": "photo"
+    }
+   ],
+   "words": 35,
+   "textSizes": 4,
+   "maxFont": 109,
+   "boxes": 6,
+   "buttons": 0
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.024,
+     "kind": "photo"
+    }
+   ],
+   "words": 37,
+   "textSizes": 2,
+   "maxFont": 47,
+   "boxes": 13,
+   "buttons": 0
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.027,
+     "kind": "photo"
+    }
+   ],
+   "words": 37,
+   "textSizes": 2,
+   "maxFont": 47,
+   "boxes": 13,
+   "buttons": 0
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.037,
+     "kind": "photo"
+    }
+   ],
+   "words": 32,
+   "textSizes": 2,
+   "maxFont": 47,
+   "boxes": 13,
+   "buttons": 0
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.055,
+     "kind": "photo"
+    }
+   ],
+   "words": 30,
+   "textSizes": 2,
+   "maxFont": 47,
+   "boxes": 13,
+   "buttons": 0
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.037,
+     "kind": "photo"
+    }
+   ],
+   "words": 26,
+   "textSizes": 2,
+   "maxFont": 47,
+   "boxes": 13,
+   "buttons": 0
+  }
+ ]
+}

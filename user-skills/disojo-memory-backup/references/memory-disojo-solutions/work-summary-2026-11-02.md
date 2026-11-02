@@ -24,3 +24,10 @@ metadata:
 - KDC images harvested to DISOJO SOLUTIONS/mockup-sources/kdc-2026-11-02 (banner.png = Kunal; background-1..7, likely stock bought by KDC).
 - Gate found (not fixed, Tejjo said hold): Parag review photo soft (640px source), phone labels 11.5px in What we fix. Kunal photo appears twice on home.
 - Built skills disojo-premium-look (composition probe, premium gate, first-look review, BANDS.md study) and disojo-image-pipeline (tiers, shot list, grade.py, prompts). Site guard hooks in settings.json (PostToolUse track + Stop block). Study: imagery is the gap (refs 3-8/8 screens with a big image, ours 0-2/8).
+
+## Later still 2026-11-02: website system merge (approved by Tejjo)
+- Built `~/.claude/skills/disojo-site-system`: SKILL.md (six stages), references (message, direction, sections, launch, lessons, first-look, composition-bands and others), templates (MESSAGE, BRIEF), scripts (new_site.sh, log.py, gate and audits), starter with the section library at /library/.
+- Verified: the starter builds; the gate on /library/ passes everything except full-bleed photos at 1920px (a true finding); a scaffolded test project builds; the hook fires from its new path.
+- Fixed a premium_gate bug with srcset widths.
+- Archived 14 skills (not deleted); repointed 17 files across 10 skills; updated CLAUDE.md (site section + Lighthouse path); added the archive to the backup script.
+- Nothing deployed. The disojostudio.com code was not touched.

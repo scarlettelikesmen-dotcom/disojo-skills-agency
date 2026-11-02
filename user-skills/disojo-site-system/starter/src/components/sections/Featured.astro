@@ -1,0 +1,16 @@
+---
+// Job: one project, given room. Large image, the name, one line of what changed, up to four plain facts, one link.
+import Pic from '../Pic.astro';
+interface Props { label?: string; name: string; line: string; img: any; href?: string; link?: string; facts?: [string, string][] }
+const { label = 'Featured', name, line, img, href, link = 'Read the case', facts = [] } = Astro.props;
+---
+<section class="s-ft sec wrap">
+  <a class="s-ft-img" href={href} data-reveal><Pic {...img} par sizes="(max-width:860px) 100vw, 66vw" /></a>
+  <div class="s-ft-t">
+    <p class="t-label">{label}</p>
+    <h2 class="t-h2">{name}</h2>
+    <p class="t-lead">{line}</p>
+    {facts.length > 0 && <dl>{facts.map(([k, v]) => <div><dt class="t-label muted">{k}</dt><dd class="t-small">{v}</dd></div>)}</dl>}
+    {href && <a class="ul t-small" href={href}>{link}</a>}
+  </div>
+</section>

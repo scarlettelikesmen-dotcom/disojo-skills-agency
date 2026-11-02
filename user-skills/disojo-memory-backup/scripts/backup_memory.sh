@@ -23,6 +23,11 @@ fi
 
 [ -d "$REPO/.git" ] || { echo "Desktop repo missing ($REPO): snapshot saved in the skill only"; exit 0; }
 rsync -a --exclude node_modules --exclude dist --exclude .DS_Store "$HOME/.claude/skills/" "$REPO/user-skills/"
+# Archived skills (merged into disojo-site-system 2026-11-02): kept, not deleted. Moved out of user-skills/ so the repo shows only live skills.
+if [ -d "$HOME/.claude/skills-archive" ]; then
+  rsync -a --exclude node_modules --exclude dist --exclude .DS_Store "$HOME/.claude/skills-archive/" "$REPO/skills-archive/"
+  for d in "$HOME/.claude/skills-archive"/*/*/; do n=$(basename "$d"); [ -d "$REPO/user-skills/$n" ] && [ ! -d "$HOME/.claude/skills/$n" ] && rm -rf "$REPO/user-skills/$n"; done
+fi
 # Content-hub text files (plans, brand files, voice profiles, copy rules, notes). NOT videos/footage (edits/, inbox/), not the venv, not links to the skill engine.
 HUBD="$HOME/Desktop/DISOJO SOLUTIONS/content-hub"
 if [ -d "$HUBD" ]; then

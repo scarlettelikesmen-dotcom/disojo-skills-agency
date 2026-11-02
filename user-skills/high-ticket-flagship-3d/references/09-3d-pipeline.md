@@ -51,7 +51,7 @@ Test heavy WebGL in a **real-GPU browser**; headless software GL stalls and misl
 ## 8. Scope control for 3D (the scope sheet's 3D table)
 Count and write: hero objects, variants, scenes, camera moves, who supplies the model or print files, route, phone treatment, source transfer. Each extra object, variant, scene or move is a change order. Two revision rounds per stage apply to what is in the table.
 
-## 9. QA for 3D (`disojo-premium-qa` rows C1-C7)
+## 9. QA for 3D (`disojo-site-system` rows C1-C7)
 Weights, fallbacks, reduced motion, off-screen pause, side-by-side comparison, real-GPU test, console clean. State plainly what was not tested (real phones, Safari).
 
 ## 10. Handover for 3D

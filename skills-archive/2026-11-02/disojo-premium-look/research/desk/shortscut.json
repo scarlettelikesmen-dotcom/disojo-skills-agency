@@ -1,0 +1,286 @@
+{
+ "summary": {
+  "url": "https://shortscut.com",
+  "screens": 8,
+  "mediaCoverAvg": 0.24,
+  "screensWithBigMedia": 8,
+  "photoShareOfBigMedia": 0.18,
+  "largestMedia": 1,
+  "wordsAvg": 103.75,
+  "wordsMax": 203,
+  "boxesAvg": 6,
+  "buttonsAvg": 0,
+  "textSizesAvg": 5,
+  "maxFontFirstScreen": 132
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0.041,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.822,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 163,
+   "textSizes": 5,
+   "maxFont": 132,
+   "boxes": 1,
+   "buttons": 0
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.181,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.772,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 639,
+     "y": 592,
+     "w": 857,
+     "h": 272,
+     "share": 0.178,
+     "tag": "video",
+     "flat": 0.203,
+     "kind": "photo"
+    }
+   ],
+   "words": 61,
+   "textSizes": 7,
+   "maxFont": 132,
+   "boxes": 2,
+   "buttons": 0
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0.548,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.63,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 639,
+     "y": 222,
+     "w": 857,
+     "h": 482,
+     "share": 0.316,
+     "tag": "video",
+     "flat": 0.448,
+     "kind": "mixed"
+    },
+    {
+     "x": 665,
+     "y": 0,
+     "w": 831,
+     "h": 203,
+     "share": 0.129,
+     "tag": "video",
+     "flat": 0.427,
+     "kind": "mixed"
+    },
+    {
+     "x": 665,
+     "y": 723,
+     "w": 831,
+     "h": 141,
+     "share": 0.09,
+     "tag": "video",
+     "flat": 0.736,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 74,
+   "textSizes": 5,
+   "maxFont": 88,
+   "boxes": 4,
+   "buttons": 0
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0.548,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.726,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 639,
+     "y": 346,
+     "w": 857,
+     "h": 482,
+     "share": 0.316,
+     "tag": "video",
+     "flat": 0.874,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 665,
+     "y": 0,
+     "w": 831,
+     "h": 327,
+     "share": 0.208,
+     "tag": "video",
+     "flat": 0.036,
+     "kind": "photo"
+    }
+   ],
+   "words": 68,
+   "textSizes": 5,
+   "maxFont": 88,
+   "boxes": 4,
+   "buttons": 0
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0.547,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.773,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 639,
+     "y": 0,
+     "w": 857,
+     "h": 458,
+     "share": 0.3,
+     "tag": "video",
+     "flat": 0.719,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 665,
+     "y": 477,
+     "w": 831,
+     "h": 387,
+     "share": 0.246,
+     "tag": "video",
+     "flat": 0.773,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 74,
+   "textSizes": 5,
+   "maxFont": 88,
+   "boxes": 3,
+   "buttons": 0
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.054,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.383,
+     "kind": "mixed"
+    },
+    {
+     "x": 16,
+     "y": 127,
+     "w": 1481,
+     "h": 451,
+     "share": 0.512,
+     "tag": "img",
+     "flat": 0.008,
+     "kind": "photo"
+    },
+    {
+     "x": 639,
+     "y": 0,
+     "w": 857,
+     "h": 88,
+     "share": 0.057,
+     "tag": "video",
+     "flat": 0.474,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 72,
+   "textSizes": 3,
+   "maxFont": 18,
+   "boxes": 6,
+   "buttons": 0
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0.008,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.812,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 115,
+   "textSizes": 4,
+   "maxFont": 132,
+   "boxes": 15,
+   "buttons": 0
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.028,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "canvas",
+     "flat": 0.735,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 203,
+   "textSizes": 6,
+   "maxFont": 132,
+   "boxes": 13,
+   "buttons": 0
+  }
+ ]
+}

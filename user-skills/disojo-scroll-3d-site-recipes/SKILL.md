@@ -7,7 +7,7 @@ description: The end-to-end recipe for building "insane" scroll-driven 3D websit
 
 Source: 13 phone recordings of laptop screens, reviewed at 2 frames per second with timestamps (2026-10-17). Per-site notes: `references/recordings.md`. **NO-COPY LAW applies** (`high-ticket-flagship-3d/references/04-no-copy-law.md`): copy the system and the craft level, never a layout, copy, asset or signature move.
 
-Honesty: everything below is **observed on screen** unless marked (inferred). Stack, code and file sizes were not visible in recordings; verify with `disojo-art-direction/scripts/inspect_site.js` on the live site before claiming anything.
+Honesty: everything below is **observed on screen** unless marked (inferred). Stack, code and file sizes were not visible in recordings; verify with `disojo-site-system/scripts/inspect_site.js` on the live site before claiming anything.
 
 ## The 10 patterns every one of them uses
 1. **One real hero object**, never decoration (bottle, shoe, watch, car, shirt, terrain).
@@ -24,15 +24,15 @@ Honesty: everything below is **observed on screen** unless marked (inferred). St
 ## The pipeline
 | Step | What | Skill to use |
 |---|---|---|
-| 0 | Qualify and scope the 3D (one hero object only; cap the rest) | `disojo-brand-site-playbook`, `high-ticket-flagship-3d` |
-| 1 | Concept and 5-beat story, one signature move | `disojo-art-direction` |
+| 0 | Qualify and scope the 3D (one hero object only; cap the rest) | `disojo-site-system`, `high-ticket-flagship-3d` |
+| 1 | Concept and 5-beat story, one signature move | `disojo-site-system` |
 | 2 | Identity: logo, palette (hero colour per section), 2 fonts | `disojo-brand-system`, `disojo-logo-design`, `brand-identity` |
-| 3 | Scroll storyboard: per section purpose, object state, page colour, type, transition, mobile | `disojo-site-flow` |
+| 3 | Scroll storyboard: per section purpose, object state, page colour, type, transition, mobile | `disojo-site-system` |
 | 4 | Hero asset: real GLB (modelled, scanned or licensed) or packaged-goods kit | `disojo-packaged-product-3d`, `disojo-3d-product-site` |
 | 5 | Look-dev: HDRI 1k, ACES, one key light, contact shadow, subtle bloom | `disojo-3d-lookdev` |
-| 6 | Build: Three.js or R3F + GSAP ScrollTrigger + Lenis; loader; transitions; hover and sound | `3d-web-experience`, `disojo-motion-recipes`, `disojo-motion-craft` |
-| 7 | Fallbacks: phone scene (DPR 1, fewer objects), no-WebGL stills, reduced motion | `disojo-premium-qa` |
-| 8 | QA: first screen under 1 s, no scroll lock, Lighthouse, real phone, console clean | `disojo-premium-qa`, `disojo-launch-checklist` |
+| 6 | Build: Three.js or R3F + GSAP ScrollTrigger + Lenis; loader; transitions; hover and sound | `3d-web-experience`, `disojo-site-system`, `disojo-motion-craft` |
+| 7 | Fallbacks: phone scene (DPR 1, fewer objects), no-WebGL stills, reduced motion | `disojo-site-system` |
+| 8 | QA: first screen under 1 s, no scroll lock, Lighthouse, real phone, console clean | `disojo-site-system` |
 | 9 | Handover | `high-ticket-flagship-3d` |
 
 ## Rules of thumb (from what worked and what failed on screen)

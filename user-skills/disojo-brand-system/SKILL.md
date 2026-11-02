@@ -23,11 +23,11 @@ One folder per project, one source of truth. Everything downstream (site CSS, Th
 ```
 
 ## Order and which skill wins
-1. `disojo-client-intake` (assets, inventory) then `brand-context` (point its file to `brand/00-context.md`; its "always run first" rule is only for brand work, do not let it gate the 3D or build steps).
+1. `disojo-site-system` (assets, inventory) then `brand-context` (point its file to `brand/00-context.md`; its "always run first" rule is only for brand work, do not let it gate the 3D or build steps).
 2. `brand-discovery` for the interview, `brand-strategy` for the report.
 3. `brand-positioning` + `competitor-branding` + `target-audience`. `positioning-audit` is the older equivalent; use whichever fits, not both.
 4. `brand-naming` only if needed.
-5. Art direction brief first (`disojo-art-direction`, Gate 1), then `brand-identity` (visual brief).
+5. Art direction brief first (`disojo-site-system`, Gate 1), then `brand-identity` (visual brief).
 6. Voice: the installed `brand-voice` is the original, `brand-voice-arnab` is the third-party copy. Use `brand-voice`; read the other only for ideas.
 7. **Logo: `disojo-logo-design` is the pipeline for final marks.** `brandkit` produces a fast concept board (positioning line, palette with contrast check, fonts with licence notes, logo concepts, mockups); its logos are text-built sketches, so present them as direction and finish with the logo pipeline. Always test at 24 px, one colour and inverted.
 8. `brand-guidelines` last, from the approved tokens.
@@ -45,7 +45,7 @@ Skip for this tier unless the client asks: brand-architecture, brand-launch, bra
 ```
 python3 ~/.claude/skills/disojo-brand-system/scripts/check_tokens.py <project-folder>
 ```
-Scans CSS, JS, TS, JSX, TSX, HTML, Astro, Vue and SVG files (skips node_modules, dist, build, .git, `brand/`) for hex colours that are not in `brand/tokens.json`, plus shorthand (`#fff`) forms. Exit 1 if any are found. Neutral black and white are allowed only if the tokens list them. Run it in the QA phase (`disojo-premium-qa`).
+Scans CSS, JS, TS, JSX, TSX, HTML, Astro, Vue and SVG files (skips node_modules, dist, build, .git, `brand/`) for hex colours that are not in `brand/tokens.json`, plus shorthand (`#fff`) forms. Exit 1 if any are found. Neutral black and white are allowed only if the tokens list them. Run it in the QA phase (`disojo-site-system`).
 
 ## Done means
 tokens.json complete with no `todo`, logo passes the small-size test, voice file has real sample lines, board approved at Gate 2, checker prints 0 off-palette colours.

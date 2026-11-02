@@ -1,0 +1,10 @@
+---
+// Job: a breath between sections. One photo edge to edge, optional single line of type on it. Needs 2400px+ source.
+import Pic from '../Pic.astro';
+interface Props { img: any; line?: string; tall?: boolean }
+const { img, line, tall = false } = Astro.props;
+---
+<section class:list={['s-pb on-ink', { tall }]}>
+  <Pic {...img} par sizes={tall ? "(orientation: portrait) 180vh, 100vw" : "(orientation: portrait) 240vw, 100vw"} />
+  {line && <p class="t-display s-pb-l wrap">{line}</p>}
+</section>

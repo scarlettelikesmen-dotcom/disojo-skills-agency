@@ -1,0 +1,11 @@
+---
+// Job: prove a result with a person or place. Big photo on the 8/12 side, a proof card on it, optional heading on the 4/12 side.
+// Pattern approved on disojostudio.com (Kunal at his kit + "10 hrs" card).
+import Pic from '../Pic.astro'; import Card from './Card.astro';
+interface Props { img: any; card: { big: string; text: string; meta?: string }; label?: string; title?: string; text?: string; flip?: boolean }
+const { img, card, label, title, text, flip = false } = Astro.props;
+---
+<section class:list={['s-rp sec wrap', { flip }]}>
+  <div class="s-rp-t">{label && <p class="t-label">{label}</p>}{title && <h2 class="t-h2">{title}</h2>}{text && <p class="t-body muted">{text}</p>}</div>
+  <figure class="s-rp-f" data-reveal><Pic {...img} par sizes="(max-width:860px) 100vw, 66vw" /><Card {...card} /></figure>
+</section>

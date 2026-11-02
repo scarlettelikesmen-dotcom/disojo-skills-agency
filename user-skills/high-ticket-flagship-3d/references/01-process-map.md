@@ -25,12 +25,12 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 **Purpose:** get real material in and set up the project so nothing is invented later.
 **Steps:**
 1. Create the project folder, init git, **add a remote on day one**.
-2. Send the asset request (`disojo-client-intake/templates/asset-request.md`): logos, photography, product files, print files or dielines (`disojo-packaged-product-3d/templates/dieline-request.md` for packaged goods), copy they love, current site and social access, competitors they admire and dislike.
-3. Inventory assets (`disojo-client-intake/scripts/inventory_assets.py`), look at the key ones, flag problems (low resolution, no print files, licensing).
+2. Send the asset request (`disojo-site-system/templates/asset-request.md`): logos, photography, product files, print files or dielines (`disojo-packaged-product-3d/templates/dieline-request.md` for packaged goods), copy they love, current site and social access, competitors they admire and dislike.
+3. Inventory assets (`disojo-site-system/scripts/inventory_assets.py`), look at the key ones, flag problems (low resolution, no print files, licensing).
 4. Run `brand-context`; keep its file in `brand/00-context.md`.
 5. Start `00-admin/decisions.md` and `00-admin/licences.md`.
 **Output:** assets inventoried, gaps listed (`TODO(client)`), context file. **Gate:** client confirms the missing-items list and a date for it.
-**Skills:** `disojo-client-intake`, `brand-context`.
+**Skills:** `disojo-site-system`, `brand-context`.
 
 ## Phase 3. Discovery
 **Purpose:** learn the business first and find where the work leaks (WhatsApp bookings, spreadsheets, retyped documents, tribal knowledge). This is Disojo's discovery-first edge and the source of the concept.
@@ -46,7 +46,7 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 
 ## Phase 5. Art direction (GATE 1)
 **Purpose:** prevent flat and bland. One concept, one hero object, a story in beats, a tiny system, one signature move, a voice.
-**Steps:** run `disojo-art-direction`. Study references by their system, log principles in `brief/references.md`, **copy nothing** (`04-no-copy-law.md`). Pass the bland test. Build the brief page. Write what is real, AI or placeholder.
+**Steps:** run `disojo-site-system`. Study references by their system, log principles in `brief/references.md`, **copy nothing** (`04-no-copy-law.md`). Pass the bland test. Build the brief page. Write what is real, AI or placeholder.
 **Output:** `brief/art-direction.md`, `brief/references.md`. **Gate 1:** Tejjomay and client approve the brief. Nothing visual starts before this.
 **Goes wrong:** a concept that decorates the client's craft as a metaphor. Build for the visitor, around the client's real proof.
 
@@ -70,30 +70,30 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 
 ## Phase 8. Site flow and copy (GATE 4)
 **Purpose:** a sequence with a point, plus the words.
-**Steps:** `disojo-site-flow`: site map, scroll storyboard (each section: visitor's question, real visual, real copy, motion beat, phone behaviour), enquiry flow (draft steps and ask Tejjomay for real response time and budget bands), navigation, mobile plan, load plan. First-screen rule: real content within about a second; intros capped near 3 s with skip; scroll never locked past the cap. Write copy with `brand-voice`, `brand-messaging`, `no-ai-slop`; every claim traced to the client.
+**Steps:** `disojo-site-system`: site map, scroll storyboard (each section: visitor's question, real visual, real copy, motion beat, phone behaviour), enquiry flow (draft steps and ask Tejjomay for real response time and budget bands), navigation, mobile plan, load plan. First-screen rule: real content within about a second; intros capped near 3 s with skip; scroll never locked past the cap. Write copy with `brand-voice`, `brand-messaging`, `no-ai-slop`; every claim traced to the client.
 **Output:** `plan/site-flow.md` and final copy. **Gate 4:** storyboard and copy approved.
 
 ## Phase 9. Build
 **Purpose:** build the whole site section by section, visible in stages, no big reveal at the end.
 **Steps:**
-1. Scaffold. Use `disojo-site-starter` for plumbing only, **never its look**; state palette, type, nav, hero choreography, section set, transition and footer in one line before UI work.
+1. Scaffold. Use `disojo-site-system` for plumbing only, **never its look**; state palette, type, nav, hero choreography, section set, transition and footer in one line before UI work.
 2. Load tokens into CSS variables and the scene; no stray hex.
 3. Build the hero and the signature moment first and show them; then the rest section by section inside ONE system (one type scale, one label style, one grid) telling ONE story, not a different layout family per section; each section finished and checked before the next (`disojo-guardrails`, `design-taste-frontend`, `high-end-visual-design`, `anti-slop-design`, `make-interfaces-feel-better`, `emil-design-eng`, `ui-ux-pro-max`).
 4. Integrate the 3D module and per-variant theming; loader tied to real progress with a cap and skip.
-5. Motion: `disojo-motion-recipes`, `motion-foundations`, `motion-patterns`, `motion-advanced`, `disojo-motion-craft`. Brand ease and durations from tokens. Reduced-motion path from the start.
+5. Motion: `disojo-site-system`, `motion-foundations`, `motion-patterns`, `motion-advanced`, `disojo-motion-craft`. Brand ease and durations from tokens. Reduced-motion path from the start.
 6. Enquiry form with real backend and honest states.
 7. **Preview deploy to its own noindex project, show Tejjomay and client in stages.** Live only when Tejjomay says "deploy".
 **Output:** running preview, committed and pushed. **Gate:** each stage shown; fixes done within the two rounds.
-**Skills:** see `02-skills-map.md`. Archetype fit: `disojo-site-archetypes` (A1 real-3D hero for product brands; A4 cinematic for property; A8 flagship microsite for "feel it" pieces).
+**Skills:** see `02-skills-map.md`. Archetype fit: `disojo-site-system` (A1 real-3D hero for product brands; A4 cinematic for property; A8 flagship microsite for "feel it" pieces).
 
 ## Phase 10. QA and polish
 **Purpose:** prove it, with numbers.
-**Steps:** run all eight gates of `disojo-premium-qa`: the browser probe at 1 s, 3 s and 8 s after load and again at the 3D section; first screen; token check; 3D weights and fallbacks; Lighthouse on the **deployed** URL; honesty and accessibility; side-by-side with the closest reference (never Postcards or Ascender). Also `review-animations`, `browser-qa`, `verification-loop`, `click-path-audit` on forms and nav. Sizes: 1512x864, 1440x790, 1860x955, 1920x1080, 1280x720; phones 343, 360, 390, 430. Look at every screenshot.
+**Steps:** run all eight gates of `disojo-site-system`: the browser probe at 1 s, 3 s and 8 s after load and again at the 3D section; first screen; token check; 3D weights and fallbacks; Lighthouse on the **deployed** URL; honesty and accessibility; side-by-side with the closest reference (never Postcards or Ascender). Also `review-animations`, `browser-qa`, `verification-loop`, `click-path-audit` on forms and nav. Sizes: 1512x864, 1440x790, 1860x955, 1920x1080, 1280x720; phones 343, 360, 390, 430. Look at every screenshot.
 **Output:** `qa/report.md` with PASS/WARN/FAIL, numbers, screenshot paths, and an explicit "not tested" list (real phones, Safari, Firefox, slow networks, screen readers unless done).
 **Gate:** every FAIL fixed, every WARN explained.
 
 ## Phase 11. Launch and handover
-**Steps:** `disojo-launch-checklist` (pre-launch scan, Lighthouse, handover), domain and redirects, forms wired and tested with the real endpoint, analytics decision (open), sitemap, OG image, favicon set, a 404 page, credit line in the footer. Produce `brand-guidelines`, the asset pack, the licence log, the AI-disclosure note, the rollback URL, credentials list (never in chat or git). Deploy only on "deploy".
+**Steps:** `disojo-site-system` (pre-launch scan, Lighthouse, handover), domain and redirects, forms wired and tested with the real endpoint, analytics decision (open), sitemap, OG image, favicon set, a 404 page, credit line in the footer. Produce `brand-guidelines`, the asset pack, the licence log, the AI-disclosure note, the rollback URL, credentials list (never in chat or git). Deploy only on "deploy".
 **Money and IP (AGENTS.md; confirm for this tier):** final payment settles before IP release; repositories, cloud credentials, DNS and the IP deed are released only after the final invoice is paid and reconciled.
 **Output:** `handover/` complete. **Gate:** client sign-off, final payment.
 

@@ -14,11 +14,11 @@ All templates live in `../templates/`. Copy each into the project folder at the 
 | `handover-readme.md` | `handover/README.md` | 11 | Run, deploy, roll back, what is real, 3D notes, open items, aftercare |
 
 Other templates used from other skills:
-- Asset request: `~/.claude/skills/disojo-client-intake/templates/asset-request.md`
-- Brand brief: `~/.claude/skills/disojo-client-intake/templates/brand-brief.md`
+- Asset request: `~/.claude/skills/disojo-site-system/templates/asset-request.md`
+- Brand brief: `~/.claude/skills/disojo-site-system/templates/BRIEF.md`
 - Dieline request (packaged goods): `~/.claude/skills/disojo-packaged-product-3d/templates/dieline-request.md`
 - Token file: `~/.claude/skills/disojo-brand-system/templates/tokens.example.json` (example values only; never ship them)
-- Site flow structure: described in `~/.claude/skills/disojo-site-flow/SKILL.md` (copy the tables into `plan/site-flow.md`)
+- Site flow structure: described in `~/.claude/skills/disojo-site-system/references/message.md` (copy the tables into `plan/site-flow.md`)
 
 ## Rules for templates
 - Client-facing files carry no internal notes, rates or other clients' names.

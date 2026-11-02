@@ -60,4 +60,4 @@ Decline the copy and keep the intent. Ask what they like about the reference (co
 Stop. Remove or redesign the element, note it in `00-admin/decisions.md`, tell Tejjomay. Never ship a known look-alike.
 
 ## 8. The exceed clause
-The aim is not parity. Where a reference has a measured defect (blank first screen, scroll lock, long preloader, overlap, trial font, placeholder, no reduced-motion), ours must have none, and `disojo-premium-qa` must prove it with numbers. See `05-exceed-standard.md`.
+The aim is not parity. Where a reference has a measured defect (blank first screen, scroll lock, long preloader, overlap, trial font, placeholder, no reduced-motion), ours must have none, and `disojo-site-system` must prove it with numbers. See `05-exceed-standard.md`.

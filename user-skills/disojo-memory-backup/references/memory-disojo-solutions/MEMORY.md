@@ -39,9 +39,10 @@
 - [Disojo site state 2026-10-28](project-site-state-2026-10-28.md) — DEPLOYED dbd518f: v4 pieces live (hero, What we fix, services, case studies, contact chips), team rows, open items
 - [Print Elements v4](project-print-elements-v4.md) — READ FIRST for Print Elements: 2026-10-28 A-to-Z rebuild, keep logo, live-ink hero, Blender renders, price builder; localhost 4511
 - [CSK law firm redo concept](project-csk-lawny-concept.md) — 2026-10-29 local one-page concept for csklawny.com (Cohen Stine Kapoor LLP), :4561, not deployed
-- [Redo pipeline + Movement First](project-redo-pipeline.md) — plug-and-play redo skill (2026-11-01), Monolog-based rules, Movement First A built locally, not deployed
+- [Redo pipeline + Movement First](project-redo-pipeline.md) — SUPERSEDED by disojo-site-system (2026-11-02); plug-and-play redo skill (2026-11-01), Monolog-based rules, Movement First A built locally, not deployed
 - [Disojo redo, 3 directions](project-disojo-redo-2026-11-01.md) — A lens / B typed once / C circled, live demo links, cal.com link broken on live site
 - [Graphite palette locked](project-disojo-graphite-palette.md) — 2026-11-02 DEPLOYED 2886479: Graphite + grain + Bricolage + new CTAs live; favicon/og still old
 - [Button motion feel](feedback-button-motion.md) — strong ease-out (.16,1,.35,1) 0.6s like Monolog; "dead" means fix the curve, not the speed
 - [Disojo positioning 2026-11-02](project-disojo-positioning-2026-11-02.md) — decisions so far, Monolog audit numbers, challenges awaiting Tejjo
 - [Work summary 2026-11-02](work-summary-2026-11-02.md) — Mentable featured section, 8,750, analyst photo, image direction, compaction settings; NOT deployed
+- [Website system (merged)](project-site-system.md) — READ FIRST for site work: 14 skills merged into disojo-site-system 2026-11-02, section library, gate fix, next = first real client run

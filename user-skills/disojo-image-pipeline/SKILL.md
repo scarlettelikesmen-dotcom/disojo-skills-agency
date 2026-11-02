@@ -5,7 +5,7 @@ description: How Disojo gets, grades and places the photography that makes a sit
 
 # Disojo image pipeline
 
-Measured 2026-11-02 (`disojo-premium-look/research/BANDS.md`): the reference sites carry a big image on most screens and nearly all of it is **photography**; our builds carried **flat UI screenshots**. Type and colour were already close. Imagery was the gap. This skill closes it.
+Measured 2026-11-02 (`disojo-site-system/references/composition-bands.md`): the reference sites carry a big image on most screens and nearly all of it is **photography**; our builds carried **flat UI screenshots**. Type and colour were already close. Imagery was the gap. This skill closes it.
 
 ## 1. Honesty tiers (decide per image, write it in the brief's image list)
 | Tier | What | Where it may sit | Needs |
@@ -52,4 +52,10 @@ Writes `<out_base>-2400.webp` and `-1200.webp`. Never upscales (warns instead).
 `references/prompts.md`: a structure and tested prompts by job (process, after launch, craft, place, texture). Generate 4, pick by checking hands, edges, text and logos at 100%, then grade with the site's look.
 
 ## 7. Check
-`disojo-premium-look/scripts/premium_gate.cjs` fails a page where most big images are flat screenshots, any image is shown soft, or the first screen has no image. Look at the screens yourself as well.
+`disojo-site-system/scripts/premium_gate.cjs` fails a page where most big images are flat screenshots, any image is shown soft, or the first screen has no image. Look at the screens yourself as well.
+
+## 8. Product and media helpers (moved in from the archived site skills, 2026-11-02)
+- `scripts/cutout.py photo.jpg out.webp`: rembg cut-out to a trimmed transparent WebP. Look at it on the colour it will sit on (speckles inside printed letters, clipped bottom lines).
+- `scripts/die_cut_stickers.py`: cut-outs with a white die-cut outline for sticker collages; edit `ITEMS`, run with `~/claudeskillsthrureels/.venv/bin/python` (rembg).
+- `scripts/card_crop.py photo.jpg out.jpg`: 16:9 studio product photo to a 4:5 card centred on the product.
+- `scripts/extract_frames.sh`: turntable video to frames for a scroll-scrubbed hero.
