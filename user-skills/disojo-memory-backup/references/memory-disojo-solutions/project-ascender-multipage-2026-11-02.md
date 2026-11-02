@@ -15,3 +15,5 @@ Local work in `~/Desktop/websites ARCHIVE/ascender-media/rebuild-v6` (served on 
 **How to apply:** iterate on localhost:4490; deploy only on "deploy". Related: [[project-ascender-site-iteration-plan]]
 
 Later 2026-11-02: page changes made smooth. Added cross-document view transitions (the nav stays fixed, the active pill slides, the page fades up), prerendering on hover via speculation rules (animations wait for `whenShown`), and the page-head heading is fitted before first paint (the Services heading used to jump from 384px to 100px). Proof copy now says the work is white label, under NDA, so the videos stay private (Tejjo's request). Backups are `*.before-smoothnav.*`. Tejjo said: smoothness like this is expected without asking.
+
+Later still: Tejjo asked for the disojostudio.com shutter instead of the fade. It was ported with the same timings and an Ascender ink panel; the view transition and prerender were removed. The Beckett and Anna chats are back in the proof tabs (6 chats; quotes word for word from the screenshots). Still unconfirmed: the "Beckett" label (the screenshot only names Jash, Ascender's side).
