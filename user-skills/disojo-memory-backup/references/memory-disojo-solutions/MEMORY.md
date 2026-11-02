@@ -44,3 +44,4 @@
 - [Graphite palette locked](project-disojo-graphite-palette.md) — 2026-11-02 DEPLOYED 2886479: Graphite + grain + Bricolage + new CTAs live; favicon/og still old
 - [Button motion feel](feedback-button-motion.md) — strong ease-out (.16,1,.35,1) 0.6s like Monolog; "dead" means fix the curve, not the speed
 - [Disojo positioning 2026-11-02](project-disojo-positioning-2026-11-02.md) — decisions so far, Monolog audit numbers, challenges awaiting Tejjo
+- [Work summary 2026-11-02](work-summary-2026-11-02.md) — Mentable featured section, 8,750, analyst photo, image direction, compaction settings; NOT deployed
