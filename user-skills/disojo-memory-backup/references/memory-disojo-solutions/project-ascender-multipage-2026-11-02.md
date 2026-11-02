@@ -1,6 +1,6 @@
 ---
 name: project-ascender-multipage-2026-11-02
-description: Ascender rebuild-v6 on 2026-11-02 got a hero posting calendar, Monolog button motion and a 7-page multipage split (copied from the Oct 14 site's structure); local only, NOT deployed
+description: Ascender rebuild-v6 on 2026-11-02 got a hero posting calendar, Monolog button motion and a 7-page multipage split (copied from the Oct 14 site's structure); DEPLOYED 2026-11-02 (social-growth-agency-kraq88wyv)
 metadata:
   type: project
 ---
@@ -17,3 +17,5 @@ Local work in `~/Desktop/websites ARCHIVE/ascender-media/rebuild-v6` (served on 
 Later 2026-11-02: page changes made smooth. Added cross-document view transitions (the nav stays fixed, the active pill slides, the page fades up), prerendering on hover via speculation rules (animations wait for `whenShown`), and the page-head heading is fitted before first paint (the Services heading used to jump from 384px to 100px). Proof copy now says the work is white label, under NDA, so the videos stay private (Tejjo's request). Backups are `*.before-smoothnav.*`. Tejjo said: smoothness like this is expected without asking.
 
 Later still: Tejjo asked for the disojostudio.com shutter instead of the fade. It was ported with the same timings and an Ascender ink panel; the view transition and prerender were removed. The Beckett and Anna chats are back in the proof tabs (6 chats; quotes word for word from the screenshots). Still unconfirmed: the "Beckett" label (the screenshot only names Jash, Ascender's side).
+
+DEPLOYED 2026-11-02 on Tejjo's "deploy": social-growth-agency-kraq88wyv is live on www.ascendermedia.in. Rollback: social-growth-agency-3lp5vq93w (the single page). The deploy folder is /tmp/asc-mp-deploy (/tmp is wiped on restart). It is built by copying rebuild-v6's index.html, 404.html, the page folders and assets, plus favicon/img/og/robots and .vercel from /tmp/asc-v6-deploy. vercel.json: cleanUrls plus trailingSlash, and the old 308 redirects to /#sections were removed. Canonicals end in a slash. The sitemap lists all 6 pages.
