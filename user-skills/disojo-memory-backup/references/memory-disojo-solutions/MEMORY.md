@@ -55,3 +55,4 @@
 - [Premium 3D research 2026-11-03](project-premium-3d-research-2026-11-03.md) — kits 1-32 + 30 sites teardown, techniques A-F, Webflow call, 3 decisions awaiting
 - [Work summary 2026-11-03](work-summary-2026-11-03.md) — research report published, nothing built or deployed
 - [Blender autonomous setup](project-blender-autonomous-setup.md) — 2026-11-03 MCP bridge installed (telemetry off), 3-object proof test next; skill changes approved, not done
+- [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
