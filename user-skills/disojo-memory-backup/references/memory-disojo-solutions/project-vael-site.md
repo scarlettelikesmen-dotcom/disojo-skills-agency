@@ -27,3 +27,14 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - Copy flagged to Tejjo: "Water, considered." and "Begin with better water." are from the ChatGPT board (unconfirmed); "Inside the bottle" placement of The Core is as modelled (unconfirmed); engraved Æ cap is my design.
 - Demo deploy authorised by Tejjo ("send me the Vercel link"): own noindex project.
 - 2026-11-03 Tejjo feedback: Geist + spec-sheet copy rejected ("what the fuck is this font", "what is that copywriting"). Chosen: editorial serif (Sentient + Switzer, Fontshare) and the "spare and certain" voice. Then: "this is very okay, not good. I want insane, like a $1 billion startup": keep researching premium e-com, Monolog micro-interactions, kits 1-32 3D (how products split/move), pick a 3D creative direction and keep building without prompting; back in ~2 h.
+
+## State 2026-11-03 (late, "Still water" pass)
+- Fixed: slotted `<script slot="scripts" src>` were never bundled (404): explode.js and ripple.js now plain `<script src>` in index.astro.
+- Hero live water: src/scripts/ripple.js (WebGL, pointer/tap rings in perspective, bottle masked, refraction never samples the bottle). Tuned soft; verified desktop + 390 phone headless.
+- fx.js: cursor ("View" on shop cards), magnetic buttons, bag count roll, fly-to-bag, card->PDP View Transition (named 'bottle'; Safari untested). PDP sticky buy bar.
+- Tejjo 2026-11-03 on return: square orange CTA, boxed qty, run-on description, bordered spec lists = "template". Redone: pill bone buttons everywhere (no orange block, no boxed arrow), hairline pill qty, serif title + italic lede, accordions Details/Specifications/The Core, home spec wall = 6 cells with serif values. Sent screenshots qa/v2-*.jpg.
+- Renders V='b' (old -a files moved to vael-site/_old-img). macro frames now 3:2 (were cropped 4:5 -> soft). Cart got a lineup band.
+- In progress: explode 61 frames (blender/explode.sh, chunks of 8), then after2.sh: explode_track.py -> public/seq/track.json (per-frame part edge positions for desktop callouts in explode.js) and shots core-phone (portrait for /the-core/ phone hero, needs wiring with a <source>). Then tools/seq.sh converts frames.
+- Skipped on purpose: 360 turntable (a round bottle barely changes when spun), preloader.
+- DEMO LIVE 2026-11-03: https://vael-demo-topaz.vercel.app (own Vercel project vael-demo, noindex). NOTE: vael-demo.vercel.app is SOMEONE ELSE's site; deploy_demo.sh's 200 check passed on it falsely. Always use the -topaz alias and check <title>.
+- Done in this pass: explode 61 frames + Blender-tracked callouts (desktop), phone frame fit; core-phone portrait; ink token now #000000 (page black, renders black-pointed to match, V='c'); easings unified; gates: system_check PASS, phone_audit clean, premium_gate 2 known false FAILs (gate reads <img> srcset not <source>).
