@@ -38,3 +38,11 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - Skipped on purpose: 360 turntable (a round bottle barely changes when spun), preloader.
 - DEMO LIVE 2026-11-03: https://vael-demo-topaz.vercel.app (own Vercel project vael-demo, noindex). NOTE: vael-demo.vercel.app is SOMEONE ELSE's site; deploy_demo.sh's 200 check passed on it falsely. Always use the -topaz alias and check <title>.
 - Done in this pass: explode 61 frames + Blender-tracked callouts (desktop), phone frame fit; core-phone portrait; ink token now #000000 (page black, renders black-pointed to match, V='c'); easings unified; gates: system_check PASS, phone_audit clean, premium_gate 2 known false FAILs (gate reads <img> srcset not <source>).
+
+## State 2026-11-03 (night, live 3D proof v2) READ THIS FIRST
+- Tejjo rejected the render-based site look and the v1 live 3D ("disgusting": a flat tube with no surface design). Chose route 1: build real-time 3D ourselves (Blender + baked maps + Three.js), no hiring.
+- Client reference sheet saved: vael-site/assets/client/vael-one-reference-sheet.webp (front/back, sandy powder coat, spaced "V Æ L" low on front, brushed cap with spun top + engraved Æ, dark seal ring, threaded steel mouth, perforated Core with 2 rims + O-ring, engraved bottom "750 ML | 316L STAINLESS STEEL / VACUUM INSULATED", 275 x 74 mm).
+- v2 pipeline: blender/v2/{masks.cjs, model_v2.py, materials_v2.py, preview_v2.py, bake_v2.py} (collection V2 in vael.blend), maps -> proof3d/public/tex/v2/*.webp, GLB proof3d/public/model/vael-one-v2.glb (233 KB, Draco).
+- Live proof: vael-site/proof3d (vite, http://127.0.0.1:4630, 5 scroll beats hero/cap/core/base/colourways, all 3 colourways). Do not apply AO to the neck steel or Core (baked while enclosed = black).
+- Side by side vs ciaoenergy.com: qa/sbs/sbs-ciaoenergy-1512.jpg + scores.md. Object quality gap closed; Ciao wins every scene row (stage, light drama, colour, scale moves). Next = art direction in words for Tejjo to pick.
+- Open: proportions (built 275x74; sheet drawing looks fatter), anti-slip base treatment (sheet shows powder bottom, no rubber foot added), 1.7 MB normal map, real phones + Safari untested, no favicon.
