@@ -89,3 +89,4 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
   - Base.astro has a new `behind` slot: poster type sits under the canvas.
   - Sheets are in `qa/stills/stills-desktop-1512.jpg` and `stills-phone-390.jpg`.
   - Phone hero and close still overlap the copy. Awaiting Tejjo's verdict. Backup in `_backup/src-2026-11-03-pre-stills`.
+- 2026-11-03: Tejjo said the cap was too shiny. It is now satin (stage.js capM: roughness lifted in the shader, envMapIntensity 0.75) and the coating normalScale went from 0.26 to 0.12. Both apply site-wide. The full-site 'make it better' pass is still to do: the image/set pass, then the home rebuilt in the draft direction.
