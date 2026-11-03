@@ -26,6 +26,9 @@ Benchmarks (quality only, see `references/03-reference-sites.md`): oharchitectur
 - Never use **Postcards Perfumes** or **Ascender Media** as a design guide, example or proof of quality for this tier, not even slightly.
 Scorecard for "better": `references/05-exceed-standard.md`.
 
+## Live 3D: use `disojo-realtime-3d-product` (added 2026-11-03)
+The method that finally worked on VÆL (reference sheet, lathed model, baked maps, Three.js light rig, drag-to-spin) and the post-mortem of the three failed attempts. Gate 3 is built with it.
+
 ## Guardrails against shipping under the bar (added 2026-11-03, hard rules)
 VÆL (2026-11-03) was built from the starter without studying the references, passed every gate, and was far under them. Never again:
 1. **Teardown first, before Phase 5.** Run `disojo-site-system/scripts/teardown.cjs` on the references that matter for this client (always ciaoenergy.com and palmo.co.in for a 3D product), plus `study_site.cjs` screens. Write the principle per site in `brief/references.md`: how the hero is made, where realism comes from, what we need to match it. The teardown logs file names and sizes only and saves nothing from their servers (no-copy law holds). Tejjomay sees it before any concept.

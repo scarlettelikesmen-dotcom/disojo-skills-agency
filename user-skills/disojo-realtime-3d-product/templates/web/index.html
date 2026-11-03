@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>VÆL ONE live 3D proof</title>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<script>document.documentElement.dataset.type = new URLSearchParams(location.search).get('type') || 'b'</script>
+<style>
+  :root { --ink: #bfbbb5; --paper: #171716; --grey: #5f5c58; }
+  /* type test: a Bodoni Moda (didone), b Instrument Serif, c Cormorant Garamond Light */
+  :root[data-type="a"] { --disp: 'Bodoni Moda', Georgia, serif; --dw: 400; --dt: -.015em; --dlh: 1.02; --ds: clamp(44px, 5vw, 82px); --dopsz: 96; }
+  :root[data-type="b"] { --disp: 'Instrument Serif', Georgia, serif; --dw: 400; --dt: -.01em; --dlh: .98; --ds: clamp(52px, 6vw, 98px); --dopsz: auto; }
+  :root[data-type="c"] { --disp: 'Cormorant Garamond', Georgia, serif; --dw: 300; --dt: -.005em; --dlh: 1; --ds: clamp(52px, 6vw, 98px); --dopsz: auto; }
+  html, body { margin: 0; background: var(--ink); color: var(--paper); font-family: 'Switzer', system-ui, sans-serif; }
+  #gl { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
+  #track { height: 700vh; }
+  .ui { position: fixed; inset: 0; pointer-events: none; }
+  .mark { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); font-family: var(--disp); font-weight: 400; letter-spacing: .42em; margin-right: -.42em; font-size: 17px; }
+  .count { position: absolute; top: 33px; right: 36px; font-size: 10.5px; font-weight: 400; letter-spacing: .28em; color: var(--grey); font-variant-numeric: tabular-nums; }
+  .beat { position: absolute; left: 8vw; top: 50%; transform: translateY(-50%); max-width: 380px; opacity: 0; }
+  .beat h2 { margin: 0 0 22px; font-family: var(--disp); font-size: var(--ds); line-height: var(--dlh); font-weight: var(--dw); letter-spacing: var(--dt); font-variation-settings: 'opsz' 96; font-optical-sizing: auto; }
+  .beat p { margin: 0; font-size: 14.5px; font-weight: 300; line-height: 1.6; letter-spacing: .01em; color: #33312e; }
+  .beat .k { display: block; margin-bottom: 26px; font-size: 10.5px; font-weight: 400; letter-spacing: .3em; color: var(--grey); text-transform: uppercase; }
+  .hint { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); font-size: 10.5px; letter-spacing: .3em; margin-right: -.3em; color: var(--grey); text-transform: uppercase; }
+  .swatch { position: absolute; right: 8vw; top: 50%; transform: translateY(-50%); display: grid; gap: 14px; opacity: 0; }
+  .swatch span { font-size: 10.5px; letter-spacing: .3em; text-transform: uppercase; color: var(--grey); transition: color .4s; }
+  .swatch span.on { color: var(--paper); }
+  @media (max-width: 700px) {
+    .beat { left: 20px; right: 20px; top: auto; bottom: 64px; transform: none; max-width: none; }
+    .beat h2 { font-size: 44px; }
+    .beat p { font-size: 14px; }
+    .swatch { right: 20px; top: 84px; transform: none; }
+    .count { right: 20px; }
+  }
+</style>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div class="ui">
+  <div class="mark">VÆL</div>
+  <div class="count" id="count">01 / 05</div>
+  <div class="beat" data-beat="0"><span class="k">VÆL ONE</span><h2>750 ml.</h2><p>316L stainless steel, double-wall vacuum.</p></div>
+  <div class="beat" data-beat="1"><span class="k">The cap</span><h2>Machined aluminium.</h2><p>Magnetic close.</p></div>
+  <div class="beat" data-beat="2"><span class="k">The Core</span><h2>Mineral cartridge.</h2></div>
+  <div class="beat" data-beat="3"><span class="k">The base</span><h2>Anti-slip base.</h2></div>
+  <div class="beat" data-beat="4"><span class="k">Colourways</span><h2 id="cname">Mineral</h2><p>Mineral, Carbon, Slate.</p></div>
+  <div class="swatch" id="sw"><span data-c="0">Mineral</span><span data-c="1">Carbon</span><span data-c="2">Slate</span></div>
+  <div class="hint" id="hint">Scroll</div>
+</div>
+<div id="track"></div>
+<script type="module" src="/main.js"></script>
+</body>
+</html>

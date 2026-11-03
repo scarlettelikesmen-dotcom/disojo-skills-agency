@@ -39,6 +39,8 @@ Shared pattern: one hero object per product, scroll drives camera or object, the
 3. Default to option 1 unless the client has or pays for a model. Say which one you chose in the proposal.
 
 ## Build recipe (real 3D)
+**Start with `disojo-realtime-3d-product`** (2026-11-03): the proven pipeline and templates for a live product (bake every Blender detail into maps; procedural nodes do not export). The notes below are older context.
+
 
 1. **Stack:** Next.js + React Three Fiber + drei + GSAP ScrollTrigger + Lenis. Webflow + GSAP is viable for lighter work.
 2. **Assets:** model in Blender, one baked material set, export GLB, compress with gltf-transform (Draco, webp textures), one HDR for lighting. Follow `3d-web-experience` for the pipeline and its size targets. Reference sizes are in the table above; record your own measured sizes in the project README.
