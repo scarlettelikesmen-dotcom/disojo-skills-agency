@@ -56,3 +56,4 @@
 - [Work summary 2026-11-03](work-summary-2026-11-03.md) — research report published, nothing built or deployed
 - [Blender autonomous setup](project-blender-autonomous-setup.md) — 2026-11-03 MCP bridge installed (telemetry off), 3-object proof test next; skill changes approved, not done
 - [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
+- [Gates are not quality](feedback-gates-are-not-quality.md) — VÆL 2026-11-03 trust break: beat the nine references screen by screen before showing; gate passes are not 'audited'
