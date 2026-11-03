@@ -67,3 +67,19 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - The rest of the AUDIT next pass (set/water, poster type, compositions, signatures, per-page interactions) has NOT started.
 - RULE (Tejjo 2026-11-03): ONE background colour on every page, beat and colourway, never changes. Locked to the Carbon grey: centre #a3a19d, edge #6c6a66, ink #0f0f0f (stage.js BG, global.css :root, loader). Night beats change only the light on the bottle. The lighter shop/Core card fills are removed.
 - Tejjo: "skip the aluminium part": the cap now lifts out of frame in the section beat (cap: 0.32). Their verdict on the site overall: "still the same, raw, nothing premium".
+
+## Launch study (2026-11-03)
+- Study of about 26 launch/e-com sites, CRAV and kits 1-28: `vael-site/brief/LAUNCH-STUDY-2026-11-03.md` (sent to Tejjo). Frames in `research/launch/`, kit sheets in `research/kits/`.
+- Diagnosis: no anticipation. The whole product is shown at once, standing still, at the same size on every screen.
+- Plan:
+  - 0 the loader assembles the bottle
+  - 1 poster type with a huge tilted bottle
+  - 2 the cap closes with a magnetic click
+  - 3 24 h / 12 h at poster scale with the section cut
+  - 4 the Core in water
+  - 5 parts fly through the type
+  - 6 three colours
+  - 7 buy, with a sticky bar
+  - 8 a wordmark footer on a water line
+- Open question to Tejjo: does the background rule also forbid full-bleed photo and video panels?
+- Next: the three checkpoint stills, shown before any build.

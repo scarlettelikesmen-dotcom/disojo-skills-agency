@@ -22,3 +22,4 @@ Not deployed, no site or skill edits. Pending: Tejjo's 3 decisions; scroll-jacke
 
 ## Later: section fix
 True cut-away geometry for the home section beat (section.js new; stage.js and index.astro edited). Verified at 1512x864 and 390x844, The Core page checked, gate 0 FAIL / 2 WARN (3D, expected). Not deployed. The next-pass items from AUDIT-2026-11-03 have not started.
+- VÆL launch study written and sent (brief/LAUNCH-STUDY-2026-11-03.md). No site files changed after the background lock. Nothing deployed.
