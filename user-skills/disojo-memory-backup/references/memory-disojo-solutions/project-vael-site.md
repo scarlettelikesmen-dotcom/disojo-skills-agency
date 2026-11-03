@@ -48,3 +48,13 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - Open: proportions (built 275x74; sheet drawing looks fatter), anti-slip base treatment (sheet shows powder bottom, no rubber foot added), 1.7 MB normal map, real phones + Safari untested, no favicon.
 - Later 2026-11-03: drag-to-spin 360 with inertia added (touch pan-y keeps vertical scroll); type = Instrument Serif display + Switzer (Tejjo chose option B over Bodoni Moda); Tejjo: "soooooo much better". Method written up as skill disojo-realtime-3d-product (post-mortem inside).
 - 2026-11-03: client sent the full brand/product doc (prices INR, Core facts, shipping, returns, warranty, story, voice, hex colours, cap 52 mm, 385 g, ceramic coating, black silicone anti-slip ring). Saved word for word as vael-site/brief/CLIENT-FACTS.md = single source of truth for copy. Plan in brief/SITE-PLAN.md awaiting 3 decisions. Open: magnetic close not in the doc; founder name Ares Sharma also appears as Mentable's founder in our case studies (asked Tejjo).
+
+## State 2026-11-03 (late night): full site built, READ THIS FIRST NOW
+- New Astro site vael-site/web (dev http://127.0.0.1:4640, nohup log $TMPDIR/vael4640.log). The older vael-site/site (:4620) and proof3d (:4630) are superseded.
+- Plan brief/SITE-PLAN.md ("Stone, then night"; Tejjo: "do whatever you want"). Copy only from brief/CLIENT-FACTS.md (magnetic close yes; silicone base = anti-slip ring; founder Ares Sharma confirmed).
+- One persistent WebGL stage (src/scripts/stage.js) across pages via view transitions; sections set data-beat presets; presets take `m: {}` phone overrides.
+- Pages: / (film), /vael-one/ (buy panel, details, specs, sticky bar), /the-core/ (night, #buy), /shop/, /story/, /support/ (#shipping #returns #warranty #care #contact), 404 (line "This page is not here." is a DRAFT for Tejjo).
+- Stills: node qa/render-stills.cjs (3x) then venv python qa/stills.py -> web/public/img (1500x1875).
+- QA: qa/web-beats.cjs <path> <w> <h> <prefix>, qa/web-nav.cjs (transitions + bag). Bug fixed: Astro swap dropped html.seen so the loader blocked all clicks after the first navigation.
+- Gate: only FAILs left are big-image share on /shop/ (transparent cutouts read small) and /support/ (reading page, no image by design).
+- Not done: perf (6 MB HDRI, 1.3 MB normal map, poster for LCP, render pause), no-WebGL and reduced-motion fallbacks, og.jpg, Shopify wiring, legal pages; real phones + Safari untested. Not deployed.
