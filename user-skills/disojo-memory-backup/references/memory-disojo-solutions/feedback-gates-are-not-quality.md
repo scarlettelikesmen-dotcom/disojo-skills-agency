@@ -17,3 +17,5 @@ On 2026-11-03 I sent Tejjo the VÆL demo as "finished and audited". They found i
 - Never describe gate passes as "audited" quality.
 - Study the references hands-on before building, offer concepts in words, and get Tejjo's pick.
 - Verify every link I send by its page title.
+
+**Enforced in the skills since 2026-11-03** (Tejjo asked for these guardrails): `disojo-site-system` has a "reference bar" section and `high-ticket-flagship-3d` has a "guardrails" section. The tools are `scripts/teardown.cjs` (logs every file a reference loads; saves nothing) and `scripts/side_by_side.cjs` (ours beside the reference at the same scroll stops, writes scores.md, and stops on a dead or error page). palmo.co.in showed "Deployment Paused" on 2026-11-03.

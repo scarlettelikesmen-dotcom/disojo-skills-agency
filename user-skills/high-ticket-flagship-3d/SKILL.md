@@ -26,6 +26,14 @@ Benchmarks (quality only, see `references/03-reference-sites.md`): oharchitectur
 - Never use **Postcards Perfumes** or **Ascender Media** as a design guide, example or proof of quality for this tier, not even slightly.
 Scorecard for "better": `references/05-exceed-standard.md`.
 
+## Guardrails against shipping under the bar (added 2026-11-03, hard rules)
+VÆL (2026-11-03) was built from the starter without studying the references, passed every gate, and was far under them. Never again:
+1. **Teardown first, before Phase 5.** Run `disojo-site-system/scripts/teardown.cjs` on the references that matter for this client (always ciaoenergy.com and palmo.co.in for a 3D product), plus `study_site.cjs` screens. Write the principle per site in `brief/references.md`: how the hero is made, where realism comes from, what we need to match it. The teardown logs file names and sizes only and saves nothing from their servers (no-copy law holds). Tejjomay sees it before any concept.
+2. **3D proof before pages.** Gate 3 is one live screen of the client's object, shown in a `side_by_side.cjs` sheet beside the 3D references at 1512x864. No page is designed until Tejjomay says it holds up.
+3. **Side by side before every show.** Every preview goes out with a `side_by_side.cjs` sheet and its `scores.md` filled in, scored with `references/05-exceed-standard.md`. If we lose a row, the first line says so; nothing is called done while it loses.
+4. **Gates are defect checks only.** Never describe gate passes as audited, premium or ready.
+Measured 2026-11-03: Ciao is Three.js r161 in Webflow, one 163 KB can GLB with a swapped label texture per flavour (about 200-250 KB AVIF each), one 1.4 MB HDRI for light and reflections, bloom + SMAA + tone mapping, GSAP ScrollTrigger; the coloured backdrops are flat 13 KB images. palmo.co.in showed "Deployment Paused" that day: check it is live before citing it.
+
 ## THE NO-COPY LAW (hard rule, applies to every phase)
 **Nothing is to be copied from any reference site. They set the quality level. They are not a source.**
 - No copy or wording. No images, illustrations, icons, video or 3D files. No fonts or font files (PP Neue Montreal, Obviously, Rand, Queens, Roobert and others are commercial or trial; never lift them). No code, markup, class names or minified bundles pasted or lightly reworded. No models (GLB), HDRIs, textures or loader videos downloaded from their servers. No layout composition that mirrors a specific page. No signature move reproduced (Squiggle's self-drawing line, Palmo's coconut-to-can story, Ciao's can carousel and "ZERO BULLSHIT" burst, SLIK's cycling words and bolt, Mammoth's overlaid "OUR WORK", HISS's word-by-word serif hero, Backhouse's floating labelled boxes, Supersolid's extended wordmark, OH's rolling "OH" preloader).
@@ -45,7 +53,7 @@ Full law, per-category rules and the distinctness test: `references/04-no-copy-l
 | 4 | Positioning and name | position approved | `brand-positioning`, `competitor-branding`, `target-audience`, `brand-naming` |
 | 5 | Art direction | **Gate 1** brief | `disojo-site-system` |
 | 6 | Identity | **Gate 2** identity | `disojo-brand-system`, `brand-identity`, `brand-voice`, `disojo-logo-design`, `brandkit` |
-| 7 | 3D look-dev | **Gate 3** test scene | `disojo-3d-lookdev`, `disojo-packaged-product-3d`, `3d-web-experience` |
+| 7 | 3D look-dev | **Gate 3** live test screen beside the 3D references (side_by_side.cjs) | `disojo-3d-lookdev`, `disojo-packaged-product-3d`, `3d-web-experience` |
 | 8 | Site flow and copy | **Gate 4** storyboard | `disojo-site-system`, `brand-messaging`, `brand-story` |
 | 9 | Build | working preview shown in stages | `disojo-site-system` (plumbing only), `disojo-site-system`, `disojo-3d-product-site` |
 | 10 | QA and polish | QA report all PASS | `disojo-site-system`, `review-animations`, `browser-qa`, `verification-loop` |

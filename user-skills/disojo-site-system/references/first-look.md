@@ -15,9 +15,10 @@ The gate proves a page is not broken and sits in the reference band. It cannot t
 ## Per page
 9. **Rhythm.** Scroll the strip of screens: does it alternate (photo screen, type screen, proof screen) or is it the same block repeated?
 10. **The gimmick count.** At most one signature move per page (the "concept"). Three directions each with a trick failed on 2026-11-01.
-11. **Side by side.** Put our hero, a mid-page screen and the footer next to the same role on bymonolog.com (`research/desk/bymonolog-s*.jpg`). Name one thing they do that we do not. Fix it or say why not.
+11. **Side by side.** Run `scripts/side_by_side.cjs` against the project's references (for our own studio site, bymonolog.com; for a flagship, the nine in `high-ticket-flagship-3d`). Fill in every row of `scores.md`: who wins, and one thing they do that we do not. Fix it, or say plainly in the first line to Tejjomay which rows we lose.
 12. **Phone.** Same system scaled, not cramped: display 28-44px, labels 12px+, one column, images keep their crop on the subject.
 
 ## Before showing
-- All gate FAILs fixed, WARNs explained in one line each.
+- All gate FAILs fixed, WARNs explained in one line each. Gate passes are never described as "audited" or "premium".
+- The side-by-side sheet goes with the screens.
 - Send Tejjomay the screens, not a description. Say what is placeholder, AI-generated, stock or untested (real phones and Safari).
