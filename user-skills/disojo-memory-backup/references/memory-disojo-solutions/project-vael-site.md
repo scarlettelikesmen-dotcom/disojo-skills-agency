@@ -65,3 +65,5 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - Section beat is a close-up on the shoulder with 4 layer labels (data-sec-anchor, hidden on phones). Wall and gap thicknesses are ILLUSTRATIVE (the client gave no gauges).
 - Phone framing was fixed for the section and core beats. qa/sweep.cjs captures the sweep frames; qa/section-svg.mjs draws the profiles.
 - The rest of the AUDIT next pass (set/water, poster type, compositions, signatures, per-page interactions) has NOT started.
+- RULE (Tejjo 2026-11-03): ONE background colour on every page, beat and colourway, never changes. Locked to the Carbon grey: centre #a3a19d, edge #6c6a66, ink #0f0f0f (stage.js BG, global.css :root, loader). Night beats change only the light on the bottle. The lighter shop/Core card fills are removed.
+- Tejjo: "skip the aluminium part": the cap now lifts out of frame in the section beat (cap: 0.32). Their verdict on the site overall: "still the same, raw, nothing premium".
