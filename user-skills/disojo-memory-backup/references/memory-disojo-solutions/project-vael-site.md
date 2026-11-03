@@ -90,3 +90,7 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
   - Sheets are in `qa/stills/stills-desktop-1512.jpg` and `stills-phone-390.jpg`.
   - Phone hero and close still overlap the copy. Awaiting Tejjo's verdict. Backup in `_backup/src-2026-11-03-pre-stills`.
 - 2026-11-03: Tejjo said the cap was too shiny. It is now satin (stage.js capM: roughness lifted in the shader, envMapIntensity 0.75) and the coating normalScale went from 0.26 to 0.12. Both apply site-wide. The full-site 'make it better' pass is still to do: the image/set pass, then the home rebuilt in the draft direction.
+
+## 2026-11-04 concept B (/concept/)
+- After "tf is this" / "it's not just the 3D": built web/src/pages/concept/index.astro, a standalone design-led home (no live 3D canvas). Inter Tight + Instrument Serif italic + JetBrains Mono, client hexes as section colours, technical drawing motif, Æ loader, client lines only. Renders as cut-out stills in public/img/c/ (core-hi.webp from qa/render-core-hi.cjs).
+- Gate 0 FAIL, 2 WARN (no image covers half a screen; no photographs). Sheets qa/concept/sheet-d.jpg, sheet-m.jpg sent. Awaiting Tejjo verdict and which transition they disliked. Not deployed.
