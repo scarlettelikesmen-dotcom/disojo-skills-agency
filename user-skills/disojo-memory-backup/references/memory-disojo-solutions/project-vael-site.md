@@ -83,3 +83,9 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
   - 8 a wordmark footer on a water line
 - Open question to Tejjo: does the background rule also forbid full-bleed photo and video panels?
 - Next: the three checkpoint stills, shown before any build.
+- 2026-11-03 Tejjo: "you can do anything you want, dont be limited to me". Full creative freedom on the VÆL web design. Full-bleed photo and video panels are allowed. The grey page colour stays the default.
+- 2026-11-03: checkpoint stills built on the live engine at http://127.0.0.1:4640/draft/.
+  - Files: `web/src/pages/draft/index.astro`, plus presets d-hero, d-close and d-numbers in stage.js.
+  - Base.astro has a new `behind` slot: poster type sits under the canvas.
+  - Sheets are in `qa/stills/stills-desktop-1512.jpg` and `stills-phone-390.jpg`.
+  - Phone hero and close still overlap the copy. Awaiting Tejjo's verdict. Backup in `_backup/src-2026-11-03-pre-stills`.
