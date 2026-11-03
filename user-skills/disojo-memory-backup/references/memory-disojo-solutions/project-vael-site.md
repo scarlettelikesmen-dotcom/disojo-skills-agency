@@ -58,3 +58,10 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - QA: qa/web-beats.cjs <path> <w> <h> <prefix>, qa/web-nav.cjs (transitions + bag). Bug fixed: Astro swap dropped html.seen so the loader blocked all clicks after the first navigation.
 - Gate: only FAILs left are big-image share on /shop/ (transparent cutouts read small) and /support/ (reading page, no image by design).
 - Not done: perf (6 MB HDRI, 1.3 MB normal map, poster for LCP, render pause), no-WebGL and reduced-motion fallbacks, og.jpg, Shopify wiring, legal pages; real phones + Safari untested. Not deployed.
+
+## 2026-11-03 section fix (shown, not deployed)
+- The home "Double-wall vacuum" beat now uses true cut faces: web/src/scripts/section.js builds flat faces from the lathe profiles (outer wall, 1 mm vacuum up the shoulder, inner wall, ceramic coat line in the colourway hex, hollow cap with a threaded bore, seal, Core, O-ring, foot). The backface fills are gone.
+- The cut uses two planes with clipIntersection: the front half comes away from the top down as you scroll, with a hairline at the sweep.
+- Section beat is a close-up on the shoulder with 4 layer labels (data-sec-anchor, hidden on phones). Wall and gap thicknesses are ILLUSTRATIVE (the client gave no gauges).
+- Phone framing was fixed for the section and core beats. qa/sweep.cjs captures the sweep frames; qa/section-svg.mjs draws the profiles.
+- The rest of the AUDIT next pass (set/water, poster type, compositions, signatures, per-page interactions) has NOT started.

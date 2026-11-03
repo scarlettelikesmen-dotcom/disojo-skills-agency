@@ -19,3 +19,6 @@ Not deployed, no site or skill edits. Pending: Tejjo's 3 decisions; scroll-jacke
 ## VÆL full site (late night, after compaction)
 - Wrote vael-one, the-core, shop, story, support, 404 pages in vael-site/web; callout styles moved to global.css; phone pose overrides (m:) in stage.js; phone labels 12px; loader-after-navigation bug fixed; stills re-rendered at 3x via qa/stills.py.
 - Verified headless at 1512x864 and 390x844 (screens in qa/web/p), navigation + add to bag tested, premium gate run. Not deployed. Pending listed in [[project-vael-site]].
+
+## Later: section fix
+True cut-away geometry for the home section beat (section.js new; stage.js and index.astro edited). Verified at 1512x864 and 390x844, The Core page checked, gate 0 FAIL / 2 WARN (3D, expected). Not deployed. The next-pass items from AUDIT-2026-11-03 have not started.
