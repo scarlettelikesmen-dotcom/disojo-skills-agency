@@ -18,3 +18,5 @@ Personal profile: Tejjomay Bareja, linkedin.com/in/tejjomay-bareja, 55 connectio
 See [[project-site-state-2026-10-23]].
 
 **2026-11-04:** Graphite banner + zoomed logo made with the live blob-O vector (hoflik-2026-11-02/disojo-logo-redrawn-graphite-ink.svg), site grain, Host Grotesk: `logo-exports/linkedin-graphite-2026-11-04/` (banner-personal.png 3168x792, banner-company.png, logo-zoomed.png + -dark, HTML sources + shoot.cjs). Replaces the old cream loop-O banner. Awaiting Tejjo verdict.
+
+**2026-11-04 company page (Disojo Studio):** my first tagline + About draft (site hero line, "find where the work leaks", "no big reveal", bullet list of services, "founder leads every project") was called "so fucking cringe". Website-pitch phrasing does not belong on LinkedIn. Write like a person stating plain facts in two or three short sentences, no slogans, no lists, no rhetorical rhythm.
