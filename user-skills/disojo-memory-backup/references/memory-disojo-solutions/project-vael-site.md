@@ -108,3 +108,4 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - Powder: clearcoat 0.3 / 0.3. Floor mirror (Reflector, half res, radial fade, preset key refl: 1 on b-whole/open/base/end). Bloom desktop only, threshold 2.4 strength 0.14 (0.95 made the white bottle glow like a lamp).
 - Bevels already exist in model_v2.py profiles (cap 0.8 mm, lip 1 mm); not changed.
 - QA: qa/lab-shots.cjs <tag>, qa/lab-zoom.py A B, qa/fps.cjs. Headless fps 58 (worst 33 ms) vs 60 (17 ms) before. Not deployed.
+- Demo redeployed 2026-11-04 with luxury pass + 3D look-dev + Core twist/base peel: https://vael-demo-topaz.vercel.app/concept/ (HDR moved to _old-img).
