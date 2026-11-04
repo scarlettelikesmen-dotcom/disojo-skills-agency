@@ -39,7 +39,7 @@ const BANNED = /\b(seamless(ly)?|cutting[- ]edge|game[- ]?changer|revolutionary|
 const PLACEHOLDER = /(lorem ipsum|\bTODO\b|TODO\(client\)|coming soon|placeholder|\[insert|xxx+|tbd\b)/i;
 
 const PAGE_CHECKS = () => {
-  const out = { overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
+  const out = { credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
   const dpr = devicePixelRatio || 1;
   for (const i of document.querySelectorAll('img')) {
     const r = i.getBoundingClientRect(); if (r.width < 40) continue;
@@ -103,6 +103,8 @@ const PAGE_CHECKS = () => {
       c.overflow ? F(`${tag}: horizontal overflow`) : P(`${tag}: no horizontal overflow`);
       if (c.broken.length) F(`${tag}: broken images ${c.broken.slice(0, 4).join(', ')}`);
       if (c.soft.length) F(`${tag}: images shown soft (need a bigger source): ${c.soft.slice(0, 4).join('; ')}`);
+      if (!c.credit) F(`${tag}: footer credit missing; it must read exactly "Design & Systems · © Disojo Studio 2026" linking to https://disojostudio.com (hard rule)`);
+      if (c.oldCredit) F(`${tag}: old credit "Developed by Disojo..." still visible`);
       if (c.dash.length) F(`${tag}: em dash in visible copy: "${c.dash[0]}"`);
       if (c.banned.length) F(`${tag}: banned words: ${[...new Set(c.banned)].join(', ')}`);
       if (c.placeholder.length) F(`${tag}: placeholder visible: "${c.placeholder[0]}"`);

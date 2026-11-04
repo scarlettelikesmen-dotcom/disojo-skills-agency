@@ -40,7 +40,7 @@ Scope is fixed in the signed scope sheet (`templates/scope-sheet.md`). Items mar
 - Licence log (fonts, models, HDRI, stock, music) and AI disclosure.
 - Credentials list handed over securely (never in chat or git).
 - Rollback URL and the previous deployment kept.
-- Footer credit "Developed by Disojo Solutions" linking to https://disojostudio.com.
+- Footer credit exactly "Design & Systems · © Disojo Studio 2026" linking to https://disojostudio.com (hard rule).
 
 ## 6. Aftercare
 - Disojo stays on after launch (the site's promise): fixes and upgrades.

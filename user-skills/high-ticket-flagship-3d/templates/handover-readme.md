@@ -24,4 +24,4 @@ Delivered securely, not in this file.
 ## Aftercare
 30-day check date: ______ . Support route: ______ . Retainer: TBD.
 
-Developed by Disojo Solutions: https://disojostudio.com
+Design & Systems · © Disojo Studio 2026: https://disojostudio.com
