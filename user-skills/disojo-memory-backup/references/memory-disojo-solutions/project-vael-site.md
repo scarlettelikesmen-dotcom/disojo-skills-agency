@@ -101,3 +101,10 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - Phone hero bottle was squashed (width + height both set); fixed with width 66vw, height auto.
 - Footer credit now "Design & Systems · © Disojo Studio 2026" (memory feedback-footer-credit); gate enforces it.
 - Still missing: real photos (renders only), Core render reads CGI, real phones/Safari/slow laptops untested. Nothing deployed.
+
+## 3D look-dev pass (2026-11-04, stage.js; backup _backup/stage-2026-11-04-pre-lookdev.js)
+- Stock HDR (6.3 MB, no longer loaded) replaced by a built-in studio (PMREM fromScene: key strip, rim strip, overhead, warm bounce). ENV 0.85, rotation (S.env-1)*0.35.
+- Cap: anisotropy 0.6 with the tangent computed per pixel around the lathe axis (first try per-vertex gave a seam on the cap top), faded near the axis.
+- Powder: clearcoat 0.3 / 0.3. Floor mirror (Reflector, half res, radial fade, preset key refl: 1 on b-whole/open/base/end). Bloom desktop only, threshold 2.4 strength 0.14 (0.95 made the white bottle glow like a lamp).
+- Bevels already exist in model_v2.py profiles (cap 0.8 mm, lip 1 mm); not changed.
+- QA: qa/lab-shots.cjs <tag>, qa/lab-zoom.py A B, qa/fps.cjs. Headless fps 58 (worst 33 ms) vs 60 (17 ms) before. Not deployed.
