@@ -23,3 +23,5 @@ Tejjo's own startup in the trading space, started 2026-11-04 after seeing liquid
 
 **Why:** Tejjo's long-held dream is their own trading product; the main risk is quitting early.
 **How to apply:** build only on Tejjo's go; keep scope to v1; remind them of the pre-decided 6-week test. Related: [[project-mentable-space-landing]], [[brand-abelkapoor-trading]].
+
+**Identity (2026-11-04):** Tejjo asked for the full identity (logo, colours, type, pattern or motion, brand guide). Brief: calm, disciplined, Linear/TradingView not crypto; audience 20-35 tier-1 futures traders in dark charting apps. Avoid ICT, bulls/bears, rockets, money, profit hints. Round 1 prompts (8 territories L1 Sweep, L2 Brackets, L3 Ruled word, L4 Still surface, L5 Bubble, L6 Cut, L7 Posts, L8 Crest wildcard) in `branding/level-identity-2026-11/prompts-round1.md` + `round1.html`. Awaiting picks; system built after the pick. Palette rule proposed: no red/green (P&L colours).
