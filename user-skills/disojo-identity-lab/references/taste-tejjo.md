@@ -25,6 +25,8 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 
 | 2026-11-04 | Level round 1 (8 dark, heavy wordmark-led territories: sweep line, brackets, ruled caps, black liquid, cut caps, crest) | "i dont like this, im going more of light mode feel, calm relaxed, apple like liquid glass feel, smooth and clean... more of a mark not the world level" | For Level: light mode, soft translucent glass, calm. A symbol first, not the word. Heavy, dark, engraved and chrome were wrong for this brand. Also: paste prompts in chat as code blocks; board copy buttons failed in the file viewer. |
 
+| 2026-11-04 | Level round 2: 7 marks rendered as literal glass objects (capsule vial, glass sphere, glass slabs, glass drop...) | "i meant i want liquid glass feel not actual literal glass... stop thinking like an npc... dont be so bound to my instructions... think like a critical high level thinker, be intentional" | A FEEL word (liquid glass, premium, calm) is a treatment, never the object. Find the strong simple idea first, then apply the feel. Don't transcribe the brief literally; think about what the brand needs and say why. Literal tool metaphors (spirit-level vial) = clip-art again. |
+
 ## Post-mortem, rounds 1–4 (2026-11-02)
 1. **One render world for 40 prompts.** Every prompt ended in "flat vector on warm off-white, near-black plus one hex accent, no gradient, no shadow". So the ideas changed but every output looked like the same polite icon set. They judge the *image*, not the idea.
 2. **Meanings, not forms.** "It means we look first" can't be drawn. The model fell back on stock icons (a window, an arch, a table) that read as an icon library.
