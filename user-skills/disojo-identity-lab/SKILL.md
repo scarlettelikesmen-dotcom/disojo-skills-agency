@@ -28,6 +28,7 @@ description: The Disojo method for logo and identity exploration with image mode
 8. **Then the system** (what makes it "insane", not just a logo): small-size glyph, motion sketch, a pattern or grid from the mark, one 3D or material treatment, applications. Log the verdict in `taste-tejjo.md`.
 
 ## Hard rules
+- **Lookalike check before any prompt goes out and before building a pick:** name the 3 nearest well-known marks (the client's category plus big apps: AI, audio, fintech, social) and kill or change anything close. Rounded vertical bars of different heights = Wispr Flow / audio waveform (Level, 2026-11-04). Say the nearest lookalike to Tejjo with each idea.
 - Never ten prompts in one style or one render world. Never brush or calligraphy for Tejjo.
 - No meanings in prompts; no literal business metaphors (windows, keystones, tables, knots).
 - Never living designers' names in prompts; never copy a reference's shapes. References calibrate the level and energy, nothing else.

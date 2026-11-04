@@ -10,6 +10,7 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 | 2026-10-23 | Print Elements A1 (heavy PE inside hairline crop marks), A4 (overprint P/E), B3 (heavy serif + tile), B4 (slab PE in a block) | Craft vocabulary of the client's own trade, heavy weight, contrast between heavy and hairline. |
 | 2026-10-26 | Ascender caption wordmark (pill + highlighted D) | The client's own interface language (captions) turned into the logo. |
 
+| 2026-11-04 | Level C lvl (see Hated table for the rounds before) | "i really like this" | Idea first, feel as finish: the audience's own shorthand (lvl) + palindrome, soft heavy rounded strokes, cream frosted icon. |
 | 2026-11-02 | Round 6 M4 "Settle": the first O of DISOJO as a ring of liquid caught mid-wobble, between rigid caps and the square O (only one that landed) | "so far i only like this" / "only this landed, rest all disgusting" | Again **tension**: the only soft, fluid thing in a hard word. Literal-idea O's (eye, drop, knot, spiral, thumbprint, stitches, puff, coin) were "disgusting". Built in `branding/disojo-identity-2026-11/round6/m4/` (Fourier-fitted O, A/B weights, settle.html motion). |
 
 ## Hated
@@ -26,6 +27,8 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 | 2026-11-04 | Level round 1 (8 dark, heavy wordmark-led territories: sweep line, brackets, ruled caps, black liquid, cut caps, crest) | "i dont like this, im going more of light mode feel, calm relaxed, apple like liquid glass feel, smooth and clean... more of a mark not the world level" | For Level: light mode, soft translucent glass, calm. A symbol first, not the word. Heavy, dark, engraved and chrome were wrong for this brand. Also: paste prompts in chat as code blocks; board copy buttons failed in the file viewer. |
 
 | 2026-11-04 | Level round 2: 7 marks rendered as literal glass objects (capsule vial, glass sphere, glass slabs, glass drop...) | "i meant i want liquid glass feel not actual literal glass... stop thinking like an npc... dont be so bound to my instructions... think like a critical high level thinker, be intentional" | A FEEL word (liquid glass, premium, calm) is a treatment, never the object. Find the strong simple idea first, then apply the feel. Don't transcribe the brief literally; think about what the brand needs and say why. Literal tool metaphors (spirit-level vial) = clip-art again. |
+
+| 2026-11-04 | Level C lvl (after liking it) | "its too close to wispr flow, so no go" | Rounded vertical bars of different heights = Wispr Flow's waveform mark. I never checked the pick against existing marks before building. Now a hard rule in SKILL.md. What to keep from lvl: cream frosted icon, warm graphite, soft heavy rounded strokes, letter-based idea. |
 
 ## Post-mortem, rounds 1–4 (2026-11-02)
 1. **One render world for 40 prompts.** Every prompt ended in "flat vector on warm off-white, near-black plus one hex accent, no gradient, no shadow". So the ideas changed but every output looked like the same polite icon set. They judge the *image*, not the idea.
