@@ -95,3 +95,9 @@ Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-202
 - After "tf is this" / "it's not just the 3D": built web/src/pages/concept/index.astro, a standalone design-led home (no live 3D canvas). Inter Tight + Instrument Serif italic + JetBrains Mono, client hexes as section colours, technical drawing motif, Æ loader, client lines only. Renders as cut-out stills in public/img/c/ (core-hi.webp from qa/render-core-hi.cjs).
 - Gate 0 FAIL, 2 WARN (no image covers half a screen; no photographs). Sheets qa/concept/sheet-d.jpg, sheet-m.jpg sent. Awaiting Tejjo verdict and which transition they disliked. Not deployed.
 - 2026-11-04 later: Tejjo liked the buy block ("Finally"); it now holds the live 3D bottle (stage.js b-* presets, 500vh pinned: whole, open, parts with part labels left of the bottle, silicone base, whole). Then A-to-Z pass: hero entrance, headline line-mask reveals, nav hide/frost, colour sections open from inset cards, Core relayout, CSS 3D box turning on scroll, inline image pills removed, label sizes up. Gate 0 FAIL, 1 WARN (no photos). Backups in _backup/concept-index-2026-11-04-*. Not deployed.
+
+## Luxury pass + credit (2026-11-04)
+- /concept/ luxury pass: grain overlay (.26), water-light caustic shader in the hero, Instrument Serif for display/numbers, tracked caps labels, warm tonal gradients per section, buy section is a dark spotlight stage. Backup _backup/concept-index-2026-11-04-pre-luxury.astro.
+- Phone hero bottle was squashed (width + height both set); fixed with width 66vw, height auto.
+- Footer credit now "Design & Systems · © Disojo Studio 2026" (memory feedback-footer-credit); gate enforces it.
+- Still missing: real photos (renders only), Core render reads CGI, real phones/Safari/slow laptops untested. Nothing deployed.
