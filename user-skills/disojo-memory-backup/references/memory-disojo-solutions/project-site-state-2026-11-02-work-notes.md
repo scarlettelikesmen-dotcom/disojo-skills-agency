@@ -19,3 +19,5 @@ Later deployed 6e0ddac: Ascender note line "allowed them to close $50,000 worth 
 Open: Mentable home stage caption "Desk is closed" sits on the "Run the gate" screen; Nature's Blend screenshot shows 78,904 inside the image; Mentable record shot shows a partial sample "+$16,400" (gate not run).
 Local test infra left running: KDC test Supabase (Docker), kdc-admin demo :3100, Expo Metro :8081 (~/TradeMind).
 Related: [[project-site-state-2026-11-02-testimonials]], [[feedback-disojo-site-working-copy]]
+
+**2026-11-04 DEPLOYED 095bc66** (from disojo-mix, branch mix-2026-11-01, Tejjo said "Deploy everything"): FAQ cost answer now opens with Tejjo's price line ($5,000 start, most $8,000 to $20,000, USD, Tejjo's own words, so pricing is now public on the FAQ); timeline answer adds "Most projects run 8 to 12 weeks end to end."; "So far that has meant a music school..." removed from "Who do you usually work with?"; home work-stage tags (.sg-k .sg-t) restyled to match /work tags. Verified on live by curl.
