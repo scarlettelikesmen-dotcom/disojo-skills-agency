@@ -13,6 +13,8 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 | 2026-11-04 | Level C lvl (see Hated table for the rounds before) | "i really like this" | Idea first, feel as finish: the audience's own shorthand (lvl) + palindrome, soft heavy rounded strokes, cream frosted icon. |
 | 2026-11-02 | Round 6 M4 "Settle": the first O of DISOJO as a ring of liquid caught mid-wobble, between rigid caps and the square O (only one that landed) | "so far i only like this" / "only this landed, rest all disgusting" | Again **tension**: the only soft, fluid thing in a hard word. Literal-idea O's (eye, drop, knot, spiral, thumbprint, stitches, puff, coin) were "disgusting". Built in `branding/disojo-identity-2026-11/round6/m4/` (Fourier-fitted O, A/B weights, settle.html motion). |
 
+| 2026-11-05 | Level M3 "Settled" (fresh round after "ignore everything before"): soft liquid body, one dead-straight top edge, rendered as clear glass on pale grey | "locking the left one in" | Symbol, not wordmark (he rejected the wordmark round in one line: "i want a mark, a logo not a wordmark"). Name-feel as one organic shape with one exact edge (tension: organic vs ruler-straight). The glass render sold it; the flat black version alone is plainer. Rebuilt in branding/level-identity-2026-11/settled/. |
+
 ## Hated
 | Date | What | Their words | Lesson |
 |---|---|---|---|
@@ -29,6 +31,8 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 | 2026-11-04 | Level round 2: 7 marks rendered as literal glass objects (capsule vial, glass sphere, glass slabs, glass drop...) | "i meant i want liquid glass feel not actual literal glass... stop thinking like an npc... dont be so bound to my instructions... think like a critical high level thinker, be intentional" | A FEEL word (liquid glass, premium, calm) is a treatment, never the object. Find the strong simple idea first, then apply the feel. Don't transcribe the brief literally; think about what the brand needs and say why. Literal tool metaphors (spirit-level vial) = clip-art again. |
 
 | 2026-11-04 | Level C lvl (after liking it) | "its too close to wispr flow, so no go" | Rounded vertical bars of different heights = Wispr Flow's waveform mark. I never checked the pick against existing marks before building. Now a hard rule in SKILL.md. What to keep from lvl: cream frosted icon, warm graphite, soft heavy rounded strokes, letter-based idea. |
+
+| 2026-11-04 | Level K1 key / K2 open-L / K3 equilibrium | "no you are taking it too literally, look at liquid journals" (LiquidJournal mark: one soft organic blob with an off-centre hole; it carries the FEEL of the name, not a meaning) | Name-feel, not name-meaning. Organic, alive, one shape (same family as the Disojo Settle O he loved). For Level: a soft organic form with ONE perfectly flat edge (liquid that has found its level). Never a blob-with-hole: that is LiquidJournal, a direct competitor. |
 
 ## Post-mortem, rounds 1–4 (2026-11-02)
 1. **One render world for 40 prompts.** Every prompt ended in "flat vector on warm off-white, near-black plus one hex accent, no gradient, no shadow". So the ideas changed but every output looked like the same polite icon set. They judge the *image*, not the idea.
