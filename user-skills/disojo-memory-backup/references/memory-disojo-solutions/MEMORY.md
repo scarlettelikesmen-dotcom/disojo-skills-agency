@@ -58,3 +58,4 @@
 - [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
 - [Gates are not quality](feedback-gates-are-not-quality.md) — VÆL 2026-11-03 trust break: beat the nine references screen by screen before showing; gate passes are not 'audited'
 - [Real-time 3D method](feedback-realtime-3d-method.md) — live 3D products: skill disojo-realtime-3d-product, bake every detail, no renders/no hiring
+- [Level, your trading playbook](project-level-trading-playbook.md) — READ FIRST for Tejjo's own trading startup: name+category decided 2026-11-04, v1 scope, domains free, vision doc link
