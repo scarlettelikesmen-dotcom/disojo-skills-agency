@@ -23,6 +23,8 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 
 | 2026-11-02 | (clarified after round 5) the live DISOJO wordmark is fine; only the marker-loop first O is the problem | "my current o is too generic… it looks good but its generic" | Keep the caps and the square O. Round 6 replaces only the first O (in the word and standalone). |
 
+| 2026-11-04 | Level round 1 (8 dark, heavy wordmark-led territories: sweep line, brackets, ruled caps, black liquid, cut caps, crest) | "i dont like this, im going more of light mode feel, calm relaxed, apple like liquid glass feel, smooth and clean... more of a mark not the world level" | For Level: light mode, soft translucent glass, calm. A symbol first, not the word. Heavy, dark, engraved and chrome were wrong for this brand. Also: paste prompts in chat as code blocks; board copy buttons failed in the file viewer. |
+
 ## Post-mortem, rounds 1–4 (2026-11-02)
 1. **One render world for 40 prompts.** Every prompt ended in "flat vector on warm off-white, near-black plus one hex accent, no gradient, no shadow". So the ideas changed but every output looked like the same polite icon set. They judge the *image*, not the idea.
 2. **Meanings, not forms.** "It means we look first" can't be drawn. The model fell back on stock icons (a window, an arch, a table) that read as an icon library.
