@@ -14,7 +14,7 @@ The gate proves a page is not broken and sits in the reference band. It cannot t
 
 ## Per page
 9. **Rhythm.** Scroll the strip of screens: does it alternate (photo screen, type screen, proof screen) or is it the same block repeated?
-10. **The gimmick count.** At most one signature move per page (the "concept"). Three directions each with a trick failed on 2026-11-01.
+10. **The gimmick count.** At most one signature move per page (the "concept"). Three directions each with a trick failed on 2026-11-01, so each of the three required directions carries at most one.
 11. **Side by side.** Run `scripts/side_by_side.cjs` against the project's references (for our own studio site, bymonolog.com; for a flagship, the nine in `high-ticket-flagship-3d`). Fill in every row of `scores.md`: who wins, and one thing they do that we do not. Fix it, or say plainly in the first line to Tejjomay which rows we lose.
 12. **Phone.** Same system scaled, not cramped: display 28-44px, labels 12px+, one column, images keep their crop on the subject.
 

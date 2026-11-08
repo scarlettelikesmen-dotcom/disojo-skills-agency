@@ -47,7 +47,8 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 ## Phase 5. Art direction (GATE 1)
 **Purpose:** prevent flat and bland. One concept, one hero object, a story in beats, a tiny system, one signature move, a voice.
 **Steps:** run `disojo-site-system`. Study references by their system, log principles in `brief/references.md`, **copy nothing** (`04-no-copy-law.md`). Pass the bland test. Build the brief page. Write what is real, AI or placeholder.
-**Output:** `brief/art-direction.md`, `brief/references.md`. **Gate 1:** Tejjomay and client approve the brief. Nothing visual starts before this.
+**Three directions are required (Tejjomay, 2026-11-08):** Gate 1 shows exactly three distinct directions (safe, bold, wildcard; `disojo-site-system/references/direction-families.md`), each passing the bland test with at most one signature move. Tejjomay picks one or a mix.
+**Output:** `brief/art-direction.md` (one per direction), `brief/references.md`. **Gate 1:** Tejjomay and client approve one direction. Nothing visual starts before this.
 **Goes wrong:** a concept that decorates the client's craft as a metaphor. Build for the visitor, around the client's real proof.
 
 ## Phase 6. Identity (GATE 2)

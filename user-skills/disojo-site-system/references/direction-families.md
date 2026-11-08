@@ -1,6 +1,6 @@
 # Direction families (how to make three briefs that are really different)
 
-The checkpoint gives Tejjomay **three directions** to pick from (one or several). Three variations of one idea is a failure. Each direction must differ on at least four of these six axes: **concept, type pairing, palette logic, layout skeleton, signature move, motion character.**
+**REQUIRED (Tejjomay, 2026-11-08): the checkpoint always shows exactly three directions, never one.** Tejjomay picks one or several, or asks to mix. Three variations of one idea is a failure. Each direction must differ on at least four of these six axes: **concept, type pairing, palette logic, layout skeleton, signature move, motion character.** Each direction carries at most one signature move and must pass the bland test on its own (the 2026-11-01 failure was three directions that each carried a trick and none landed; the fix is three clean, distinct directions, not fewer).
 
 Pick the three from the families below. Each family names its lineage in the references (the principle only, never the look) and its fit. Before writing, ask of the client: what is their truth (the one thing that is real and specific about them), and what do their buyers need to feel in five seconds?
 

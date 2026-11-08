@@ -11,7 +11,7 @@ metadata:
 On 2026-11-02 Tejjo approved merging the overlapping website skills into one system: "build specific intentional skills, not skills for the sake of having multiple skills, they should serve real things".
 
 State:
-- `~/.claude/skills/disojo-site-system` is the entry for all website work. Stages: intake, message (about 80 words a screen), ONE direction (Tejjo's only checkpoint), build from the section library, gates, ship.
+- `~/.claude/skills/disojo-site-system` is the entry for all website work. Stages: intake, message (about 80 words a screen), THREE directions, always three, never one (Tejjo's order 2026-11-08; his only checkpoint), build from the section library, gates, ship.
 - Starter: Astro 5 with 16 sections plus Card, Btn (the approved button curve) and Pic (srcset, parallax). Every section is shown at /library/ with Disojo's verified copy and the KDC photo set graded mono. The gate passes except for 1920px photos used full-bleed, which really are too small.
 - Gate bug fixed: premium_gate read a density-scaled naturalWidth on srcset images (a 1920px file showed as 389px), so earlier "soft image" FAILs on sites with responsive images were wrong.
 - The site-guard hook was moved to `disojo-site-system/hooks/site_guard.cjs` and tested. Settings backup: `~/.claude/settings.before-site-system.json`.

@@ -1,6 +1,8 @@
-# Stage 2: one direction (Tejjomay's only checkpoint)
+# Stage 2: THREE directions (Tejjomay's only checkpoint)
 
-Earlier sites failed as **flat and bland** (Mentable v1, the 2026-11-01 redo directions), never as broken code. The references are not good because of effects: each has a concept, a small strict system, one memorable move and real photographs. Fill `templates/BRIEF.md`, write `brief/A/tokens.json`, `concept.txt` and `preview.html`, render, look, send.
+**Rule, 2026-11-08: always present three directions (A, B, C), never fewer.** They follow `direction-families.md`: one safe, one bold, one wildcard, differing on at least four of the six axes. Each one is a full direction as described below and passes the bland test on its own with at most one signature move. Tejjomay picks one, several, or a mix; the picked direction becomes the build (`brief/<letter>/`).
+
+Earlier sites failed as **flat and bland** (Mentable v1, the 2026-11-01 redo directions), never as broken code. The references are not good because of effects: each has a concept, a small strict system, one memorable move and real photographs. Fill `templates/BRIEF.md` once per direction, write `brief/A/`, `brief/B/` and `brief/C/` each with `tokens.json`, `concept.txt` and `preview.html`, render, look, send.
 
 ## Before writing it
 1. Read `design-system-rules.md` (the measured system of the reference sites and our drift) and `direction-families.md` (nine families). Look at `shots/grid-<family>.jpg` and `research/desk/` for the families that fit.
@@ -25,4 +27,4 @@ Earlier sites failed as **flat and bland** (Mentable v1, the 2026-11-01 redo dir
 - Swap test: with another company's logo on it, does it still work? (must be no)
 
 ## Render and send
-`node $SK/scripts/render_directions.cjs <project>/brief` writes desk.png, phone.png and desk-full.jpg. Look at every image yourself first. Put the first screen next to the closest reference at the same size and name one thing they do that we do not; fix it or say why not. Then send the PNGs with SendUserFile, say plainly what is stock, AI or missing, and log `show` and Tejjomay's `verdict`.
+`node $SK/scripts/render_directions.cjs <project>/brief` writes desk.png, phone.png and desk-full.jpg for every direction folder, plus `brief/compare.html` with the three side by side. Do not send fewer than three. Look at every image yourself first. Put the first screen next to the closest reference at the same size and name one thing they do that we do not; fix it or say why not. Then send the PNGs with SendUserFile, say plainly what is stock, AI or missing, and log `show` and Tejjomay's `verdict`.
