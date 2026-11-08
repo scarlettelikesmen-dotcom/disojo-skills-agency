@@ -61,5 +61,5 @@
 - [Level, your trading playbook](project-level-trading-playbook.md) — READ FIRST for Tejjo's own trading startup: name+category decided 2026-11-04, v1 scope, domains free, vision doc link
 - [Footer credit HARD RULE](feedback-footer-credit.md) — always "Design & Systems · © Disojo Studio 2026" linking disojostudio.com; gate enforces it
 - [Multi-page + no basic CTAs guardrail](feedback-multipage-no-basic-ctas.md) — 2026-11-08 hard rule: never one-pager, never dead CTAs, bar = beat the 9 reference sites (not Print Elements)
-- [Kiran Roy third pass](project-kiran-roy-third-pass.md) — READ FIRST for Kiran: paid order, nothing built, reference walk done, awaiting one-sentence pick
-- [Work summary 2026-11-08](work-summary-2026-11-08.md) — LinkedIn, FAQ deploy 095bc66, Kiran diagnosis and reference walk
+- [Kiran Roy third pass](project-kiran-roy-third-pass.md) — READ FIRST for Kiran: paid order, three full homes live on noindex kr-fronts-7qx.vercel.app, awaiting Tejjo's pick
+- [Work summary 2026-11-08](work-summary-2026-11-08.md) — LinkedIn, FAQ deploy 095bc66, Kiran reference walk, three demo homes live
