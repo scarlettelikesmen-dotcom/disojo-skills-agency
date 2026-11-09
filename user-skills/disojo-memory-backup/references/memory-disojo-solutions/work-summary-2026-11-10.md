@@ -25,3 +25,6 @@ metadata:
 Nothing deployed, committed or published beyond the private benchmark page.
 
 **Finish pass 2026-11-10 (Tejjo: "finish everything"):** CLAUDE.md swapped to 23 lines (Desktop copy is a one-line pointer); detail moved verbatim to [[reference-projects]], [[reference-environment]], [[reference-verified-claims]]. Five type skills written (product, catalogue, studio, person, software; Software rule changed: first screen carries the idea, the product is proof below). `disojo-visual-identity` (+ templates/SIGNING.md) and `disojo-digital-systems` (+ templates/LEAK-MAP.md) written. Contradictions fixed in SKILL.md, direction.md, idea.md, bottlenecks.md, brand-system, skills map. Starter heroes no longer carry sentence + button; starter builds in scratch. Old 3D skills kept, routed from `disojo-type-product`. Backup: `~/.claude/skills-archive/2026-11-10-pre-finish/`. None of the new skills has run on a real project. Not pushed, deployed or committed; memory backup not run (it pushes the mirror).
+
+## lilt client checklist (2026-11-10, after compaction)
+Seven-section list for the client is complete in Claude Docs: https://claude.ai/artifact/8KiorhxPw6HG99WFWFYLU5 (private until Tejjo shares it). Due dates are my proposal. Not sent to anyone. Open: is the shoot in the signed scope; do the board's script and palette stay; TYPE Product unconfirmed.
