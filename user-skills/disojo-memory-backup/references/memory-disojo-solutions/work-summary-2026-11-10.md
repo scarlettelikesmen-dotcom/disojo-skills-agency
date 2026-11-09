@@ -18,7 +18,7 @@ metadata:
 **Mistake to remember:** `backup_memory.sh` also mirrors and pushes the skills repo (commit f3cf801, 198 files), against "don't push the skills mirror without asking". Told Tejjo; revert or keep is unanswered. Do not run it without asking, so this session's memory is not backed up.
 
 **Pending**
-- Walk the eight approved, then the 77 (hovers, menus, inner pages, phones, footers, how a page moves section to section), one shared design file by design move, benchmarks out of type skills. Not started; Tejjo has not said go in so many words.
+- Walk: Tejjo said "walk thru all, not just 8". All 84 sites captured by `disojo-site-system/scripts/walk_site.cjs`; durable sheets and data in `research/walk-2026-11-10/`, notes in its `notes.md`. In progress: reading sheets, then retry seven weak sites by hand (aliabdaal, brenebrown, delice blocked; baolondon, realevate, santioni, sobha stuck), then one shared design file by design move in `references/`, benchmarks out of type skills, then Kiran test run.
 - Five more type skills after an OK on the Local pilot (Software rule needs rethinking), `disojo-visual-identity`, `disojo-digital-systems`.
 - Open answers from Tejjo: reference-teardown hook yes/no, Local pattern right?, identity benchmark set, CLAUDE.md draft (`DISOJO SOLUTIONS/CLAUDE-draft-2026-11-09.md`), mirror push, 10-20k vs 10-15k vs offer.md range.
 
