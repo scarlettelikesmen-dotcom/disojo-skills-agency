@@ -1,0 +1,7 @@
+const puppeteer=require('puppeteer-core');const fs=require('fs'),path=require('path');
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const L=[['ap_fauna','https://faunarobotics.com/'],['ap_lacoste','https://members-play.lacoste.com/ace-breaker-rg'],['ap_oakley','https://project2075.oakley.com/'],['ap_thewatch','https://thewatch.60fps.fr/'],['ap_drone','https://drone.riotters.com/'],['ap_noma','https://noma.dk/'],['ap_432','https://www.432parkavenue.com/']];
+(async()=>{const b=await puppeteer.launch({channel:'chrome',headless:'new',protocolTimeout:60000,args:['--use-angle=metal','--enable-webgl','--ignore-gpu-blocklist','--mute-audio']});const res=[];
+for(const [s,u] of L){const p=await b.newPage();const r={s,u};try{await p.setViewport({width:1512,height:864});await p.bringToFront();await p.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36');const g=await p.goto(u,{waitUntil:'domcontentloaded',timeout:30000});r.status=g&&g.status();await sleep(14000);r.title=await p.title();await p.screenshot({path:'shots/'+s+'-1.jpg',type:'jpeg',quality:75});
+await p.evaluate(()=>window.scrollTo(0,innerHeight*2));await p.mouse.wheel({deltaY:1400}).catch(()=>{});await sleep(5000);await p.screenshot({path:'shots/'+s+'-2.jpg',type:'jpeg',quality:75});r.ok=true}catch(e){r.err=e.message.slice(0,100)}await p.close().catch(()=>{});console.log(JSON.stringify(r));res.push(r)}
+fs.writeFileSync('r3.json',JSON.stringify(res));await b.close()})();

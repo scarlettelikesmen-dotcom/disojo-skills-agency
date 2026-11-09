@@ -1,0 +1,687 @@
+[
+ {
+  "type": "person",
+  "site": "justinwelsh.me",
+  "slug": "person__justinwelsh-me",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://justinwelsh.me/",
+  "title": "Justin Welsh — Writer & Entrepreneur",
+  "height": 3794
+ },
+ {
+  "type": "person",
+  "site": "thedankoe.com",
+  "slug": "person__thedankoe-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://thedankoe.com/",
+  "title": "Home - Dan Koe",
+  "height": 5298
+ },
+ {
+  "type": "person",
+  "site": "simonsinek.com",
+  "slug": "person__simonsinek-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://simonsinek.com/",
+  "title": "Simon Sinek | The Optimism Company",
+  "height": 4332
+ },
+ {
+  "type": "person",
+  "site": "brenebrown.com",
+  "slug": "person__brenebrown-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://brenebrown.com/",
+  "title": "Brené Brown",
+  "height": 5650
+ },
+ {
+  "type": "person",
+  "site": "tim.blog",
+  "slug": "person__tim-blog",
+  "ok": true,
+  "status": 403,
+  "finalUrl": "https://tim.blog/",
+  "title": "Checking your browser...",
+  "height": 864
+ },
+ {
+  "type": "person",
+  "site": "sahilbloom.com",
+  "slug": "person__sahilbloom-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.sahilbloom.com/",
+  "title": "Sahil Bloom — NYT Bestselling Author | Entrepreneur | Investor",
+  "height": 4362
+ },
+ {
+  "type": "person",
+  "site": "marieforleo.com",
+  "slug": "person__marieforleo-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.marieforleo.com/",
+  "title": "Marie Forleo | #1 NYT Bestselling Author & Founder of B-School",
+  "height": 10140
+ },
+ {
+  "type": "person",
+  "site": "adamgrant.net",
+  "slug": "person__adamgrant-net",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://adamgrant.net/",
+  "title": "Adam Grant – Books, Podcast, TED Talks, Newsletter, Articles",
+  "height": 2066
+ },
+ {
+  "type": "person",
+  "site": "ryanholiday.net",
+  "slug": "person__ryanholiday-net",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://ryanholiday.net/",
+  "title": "Home - RyanHoliday.net",
+  "height": 2660
+ },
+ {
+  "type": "person",
+  "site": "thefutur.com",
+  "slug": "person__thefutur-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://thefutur.com/",
+  "title": "The Futur | Make a Living Doing What You Love",
+  "height": 4300
+ },
+ {
+  "type": "catalogue",
+  "site": "hay.com",
+  "slug": "catalogue__hay-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.hay.com/",
+  "title": "HAY.com – latest products, designer news and retailer info",
+  "height": 2751
+ },
+ {
+  "type": "catalogue",
+  "site": "vitra.com",
+  "slug": "catalogue__vitra-com",
+  "ok": true,
+  "status": 403,
+  "finalUrl": "https://www.vitra.com/?__cf_chl_rt_tk=a5b_rr7x5gruqPSsqN_Y7U._1xOaAbXcpvr7ODylHq0-1794237001-1.0.1.1-CTIIgsG_qCkG9XmtfyWlqGAxGne_._MQDZ0Pa5pmfs4",
+  "title": "Just a moment...",
+  "height": 864
+ },
+ {
+  "type": "catalogue",
+  "site": "mcmaster.com",
+  "slug": "catalogue__mcmaster-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.mcmaster.com/",
+  "title": "McMaster-Carr",
+  "height": 864
+ },
+ {
+  "type": "person",
+  "site": "jamesclear.com",
+  "slug": "person__jamesclear-com",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://jamesclear.com/",
+  "title": "James Clear",
+  "height": 4109,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "person",
+  "site": "melrobbins.com",
+  "slug": "person__melrobbins-com",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://www.melrobbins.com/",
+  "title": "Mel Robbins",
+  "height": 7253,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "person",
+  "site": "stevenkotler.com",
+  "slug": "person__stevenkotler-com",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://stevenkotler.com/",
+  "title": "Steven Kotler: Author and Speaker",
+  "height": 8561,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "catalogue",
+  "site": "moo.com",
+  "slug": "catalogue__moo-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.moo.com/us/",
+  "title": "Online Printing Services: Professional Custom Printing",
+  "height": 4991
+ },
+ {
+  "type": "catalogue",
+  "site": "ekomia.de/en",
+  "slug": "catalogue__ekomia-de-en",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://ekomia.de/en",
+  "title": "Sustainable designer furniture made from certified solid wood | ekomia",
+  "height": 17014
+ },
+ {
+  "type": "catalogue",
+  "site": "woodendot.com",
+  "slug": "catalogue__woodendot-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://woodendot.com/",
+  "title": "Access Denied",
+  "height": 864
+ },
+ {
+  "type": "catalogue",
+  "site": "hem.com",
+  "slug": "catalogue__hem-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://hem.com/",
+  "title": "Imaginative designs of obsessive quality — Hem",
+  "height": 864
+ },
+ {
+  "type": "catalogue",
+  "site": "usm.com",
+  "slug": "catalogue__usm-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.usm.com/en",
+  "title": "Timeless modular design furniture | USM | USM",
+  "height": 6990
+ },
+ {
+  "type": "catalogue",
+  "site": "farrow-ball.com",
+  "slug": "catalogue__farrow-ball-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.farrow-ball.com/",
+  "title": "Farrow & Ball | Handcrafted Paint and Wallpaper | Farrow & Ball",
+  "height": 5252
+ },
+ {
+  "type": "catalogue",
+  "site": "fermliving.com",
+  "slug": "catalogue__fermliving-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://fermliving.com/",
+  "title": "Ferm Living | Danish design | Furniture, accessories and lamps",
+  "height": 7562
+ },
+ {
+  "type": "catalogue",
+  "site": "astrolighting.com",
+  "slug": "catalogue__astrolighting-com",
+  "ok": true,
+  "status": 403,
+  "finalUrl": "https://astrolighting.com/?__cf_chl_rt_tk=6IzIEoDqNSoL1TKr1B5fmNdLU7EnVb12WfVoeLs3Qpg-1794237138-1.0.1.1-nI_TE.Vh.7ilq5V4ax_KdKGZdyeaLEjXNmNN992_ZgA",
+  "title": "Just a moment...",
+  "height": 864
+ },
+ {
+  "type": "catalogue",
+  "site": "kvadrat.dk",
+  "slug": "catalogue__kvadrat-dk",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.kvadrat.dk/en",
+  "title": "Kvadrat - The global design textile company",
+  "height": 864
+ },
+ {
+  "type": "catalogue",
+  "site": "papier.com",
+  "slug": "catalogue__papier-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.papier.com/",
+  "title": "Diaries, Notebooks, Cards & More | Papier",
+  "height": 6425
+ },
+ {
+  "type": "software",
+  "site": "linear.app",
+  "slug": "software__linear-app",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://linear.app/",
+  "title": "Linear – The system for product development",
+  "height": 10024
+ },
+ {
+  "type": "software",
+  "site": "stripe.com",
+  "slug": "software__stripe-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://stripe.com/in",
+  "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+  "height": 14785
+ },
+ {
+  "type": "person",
+  "site": "aliabdaal.com",
+  "slug": "person__aliabdaal-com",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://aliabdaal.com/",
+  "title": "Ali Abdaal - Entrepreneur, YouTuber, Productivity Expert & Bestselling Author",
+  "height": 9382,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "catalogue",
+  "site": "teenage.engineering",
+  "slug": "catalogue__teenage-engineering",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://teenage.engineering/",
+  "title": "teenage engineering",
+  "height": 6148,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "catalogue",
+  "site": "flos.com",
+  "slug": "catalogue__flos-com",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://flos.com/en/wo/",
+  "title": "Flos Official Online Store | Contemporary Lighting and Decorative Lights",
+  "height": 7318,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "software",
+  "site": "attio.com",
+  "slug": "software__attio-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://attio.com/",
+  "title": "Attio: The CRM for agentic revenue",
+  "height": 17526
+ },
+ {
+  "type": "software",
+  "site": "cursor.com",
+  "slug": "software__cursor-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://cursor.com/",
+  "title": "AI Coding Agent for Building Ambitious Software | Cursor",
+  "height": 8199
+ },
+ {
+  "type": "software",
+  "site": "superhuman.com",
+  "slug": "software__superhuman-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://superhuman.com/",
+  "title": "Superhuman: Docs, Mail, and AI That Work Everywhere",
+  "height": 6443
+ },
+ {
+  "type": "software",
+  "site": "pitch.com",
+  "slug": "software__pitch-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://pitch.com/",
+  "title": "The AI presentation workspace",
+  "height": 13323
+ },
+ {
+  "type": "software",
+  "site": "family.co",
+  "slug": "software__family-co",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://family.co/",
+  "title": "Family",
+  "height": 11315
+ },
+ {
+  "type": "software",
+  "site": "notion.com",
+  "slug": "software__notion-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.notion.com/",
+  "title": "The AI workspace that works for you. | Notion",
+  "height": 4736
+ },
+ {
+  "type": "software",
+  "site": "amie.so",
+  "slug": "software__amie-so",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://amie.so/",
+  "title": "Amie - AI Note Taker",
+  "height": 14147
+ },
+ {
+  "type": "local",
+  "site": "hellotend.com",
+  "slug": "local__hellotend-com",
+  "ok": true,
+  "status": 403,
+  "finalUrl": "https://hellotend.com/",
+  "title": "Attention Required! | Cloudflare",
+  "height": 1021
+ },
+ {
+  "type": "local",
+  "site": "everbody.com",
+  "slug": "local__everbody-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://everbody.com/",
+  "title": "Expert-led Cosmetic Dermatology | Botox, Lasers, and Facials",
+  "height": 7380
+ },
+ {
+  "type": "local",
+  "site": "parsleyhealth.com",
+  "slug": "local__parsleyhealth-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.parsleyhealth.com/",
+  "title": "Functional Medicine Clinicians: Root-Cause & Holistic Healthcare | Parsley Health",
+  "height": 10758
+ },
+ {
+  "type": "local",
+  "site": "dishoom.com",
+  "slug": "local__dishoom-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.dishoom.com/",
+  "title": "Dishoom | Indian Restaurants | From Bombay with Love",
+  "height": 13297
+ },
+ {
+  "type": "local",
+  "site": "noma.restaurant",
+  "slug": "local__noma-restaurant",
+  "ok": false,
+  "error": "net::ERR_NAME_NOT_RESOLVED at https://noma.restaurant"
+ },
+ {
+  "type": "local",
+  "site": "mishcon.com",
+  "slug": "local__mishcon-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.mishcon.com/",
+  "title": "Mishcon de Reya. It's business. But it's personal.",
+  "height": 3841
+ },
+ {
+  "type": "catalogue",
+  "site": "muuto.com",
+  "slug": "catalogue__muuto-com",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://www.muuto.com/",
+  "title": "MUUTO.COM",
+  "height": 7274,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "software",
+  "site": "granola.ai",
+  "slug": "software__granola-ai",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://www.granola.ai/",
+  "title": "Granola — The AI Notepad for back-to-back meetings",
+  "height": 14386,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "software",
+  "site": "raycast.com",
+  "slug": "software__raycast-com",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://www.raycast.com/",
+  "title": "Raycast - Your shortcut to everything",
+  "height": 15983,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "local",
+  "site": "onemedical.com",
+  "slug": "local__onemedical-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.onemedical.com/",
+  "title": "Exceptional Primary Care - Find a Doctor Near You | One Medical",
+  "height": 6730
+ },
+ {
+  "type": "local",
+  "site": "baolondon.com",
+  "slug": "local__baolondon-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://baolondon.com/",
+  "title": "BAO - Award Winning Taiwanese Restaurants & Karaoke Rooms",
+  "height": 864
+ },
+ {
+  "type": "local",
+  "site": "barrys.com",
+  "slug": "local__barrys-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.barrys.com/",
+  "title": "Barry’s: The Best HIIT Workouts & Full Body Fitness Classes",
+  "height": 5890
+ },
+ {
+  "type": "local",
+  "site": "thirdspace.london",
+  "slug": "local__thirdspace-london",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.thirdspace.london/",
+  "title": "Third Space - London Health Clubs and Luxury Gyms",
+  "height": 6448
+ },
+ {
+  "type": "local",
+  "site": "equinox.com",
+  "slug": "local__equinox-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.equinox.com/",
+  "title": "Equinox Fitness Club - It's Not Fitness. It's Life.",
+  "height": 7649
+ },
+ {
+  "type": "local",
+  "site": "alvinailey.org",
+  "slug": "local__alvinailey-org",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://ailey.org/",
+  "title": "AILEY | Dance Is for Everybody | Performances, Training & Classes",
+  "height": 9154
+ },
+ {
+  "type": "local",
+  "site": "schoolofrock.com",
+  "slug": "local__schoolofrock-com",
+  "ok": true,
+  "status": 202,
+  "finalUrl": "https://schoolofrock.com/",
+  "title": "",
+  "height": 864
+ },
+ {
+  "type": "local",
+  "site": "juilliard.edu",
+  "slug": "local__juilliard-edu",
+  "ok": true,
+  "status": 403,
+  "finalUrl": "https://juilliard.edu/?__cf_chl_rt_tk=FHPCdQQBwEWaTvhZGTjIrsiLqMS8wDclTG.9Fk40Tn4-1794237500-1.0.1.1-z5P4eaJhnZQshup10ps6MWZeore_LUG5OkrpJIu1vLw",
+  "title": "Just a moment...",
+  "height": 864
+ },
+ {
+  "type": "realestate",
+  "site": "era.estate",
+  "slug": "realestate__era-estate",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://era.estate/",
+  "title": "ERA Residential Complex - ERA",
+  "height": 864
+ },
+ {
+  "type": "realestate",
+  "site": "silver-pinewood.com",
+  "slug": "realestate__silver-pinewood-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://silver-pinewood.com/",
+  "title": "Silver Pinewood Residences — a residential complex near a park",
+  "height": 864
+ },
+ {
+  "type": "software",
+  "site": "mercury.com",
+  "slug": "software__mercury-com",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://mercury.com/",
+  "title": "Online Business Banking For Startups, Small Businesses & Scaling Companies",
+  "height": 13021,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "realestate",
+  "site": "springs.estate",
+  "slug": "realestate__springs-estate",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://springs.estate/",
+  "title": "Springs | Homepage",
+  "height": 864
+ },
+ {
+  "type": "realestate",
+  "site": "poklonnaya9.site",
+  "slug": "realestate__poklonnaya9-site",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://poklonnaya9.site/",
+  "title": "LCD POKLONNAYA 9 - official website, prices and promotions from the developer ANT Development",
+  "height": 864
+ },
+ {
+  "type": "local",
+  "site": "music.yale.edu",
+  "slug": "local__music-yale-edu",
+  "ok": false,
+  "status": 200,
+  "finalUrl": "https://music.yale.edu/",
+  "title": "Homepage | Yale School of Music",
+  "height": 5405,
+  "error": "Input.dispatchMouseEvent timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout "
+ },
+ {
+  "type": "realestate",
+  "site": "432parkavenue.com",
+  "slug": "realestate__432parkavenue-com",
+  "ok": false,
+  "error": "Navigation timeout of 30000 ms exceeded"
+ },
+ {
+  "type": "realestate",
+  "site": "111w57.com",
+  "slug": "realestate__111w57-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://111w57.com/",
+  "title": "111 West 57th Street",
+  "height": 12459
+ },
+ {
+  "type": "realestate",
+  "site": "aman.com/residences",
+  "slug": "realestate__aman-com-residences",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://www.aman.com/residences",
+  "title": "The Ultimate Luxury Residences Around the World - Aman",
+  "height": 19211
+ },
+ {
+  "type": "realestate",
+  "site": "ever-live-here.com/en/",
+  "slug": "realestate__ever-live-here-com-en",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://ever-live-here.com/en/",
+  "title": "The Ever business-class residential complex. The official site of the developer Tekta Group.",
+  "height": 864
+ },
+ {
+  "type": "realestate",
+  "site": "likova.space",
+  "slug": "realestate__likova-space",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://likova.space/",
+  "title": "Class A Business Center",
+  "height": 864
+ },
+ {
+  "type": "local",
+  "site": "1milliondance.com",
+  "slug": "local__1milliondance-com",
+  "ok": true,
+  "status": 200,
+  "finalUrl": "https://1milliondance.com/",
+  "title": "1MILLION DANCE STUDIO",
+  "height": 4559
+ },
+ {
+  "type": "local",
+  "site": "ram.ac.uk",
+  "slug": "local__ram-ac-uk",
+  "ok": true,
+  "status": 403,
+  "finalUrl": "https://ram.ac.uk/?__cf_chl_rt_tk=ppq.9I4WFHnS_YraCtmtoDW3RrVyRoS3v_32DRnFojw-1794237381-1.0.1.1-UAReVslmGQTusxNm.6RcKhpUZpZuJ4gA9hThPRpRxDc",
+  "title": "Just a moment...",
+  "height": 864
+ }
+]

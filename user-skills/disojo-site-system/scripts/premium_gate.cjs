@@ -54,7 +54,9 @@ const PAGE_CHECKS = () => {
   for (const h of document.querySelectorAll('h1,h2')) if (isEyebrow(h.previousElementSibling) || (!h.previousElementSibling && isEyebrow(h.parentElement.previousElementSibling))) eyebrows++;
   const sections = Math.max(1, document.querySelectorAll('section,header').length);
   const firstButtons = [...document.querySelectorAll('a,button')].filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.top + scrollY < innerHeight && !e.closest('nav,footer,p,[aria-hidden="true"]') && e.textContent.trim().length <= 40; }).length;
-  const out = { fonts, accent, eyebrows, sections, firstButtons, place: !!document.querySelector('footer [data-clock], footer time, footer .foot-place'), credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
+  const webgl = [...document.querySelectorAll('canvas')].some(c => { try { return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) { return false; } });
+  const model = performance.getEntriesByType('resource').map(r => r.name).find(n => /\.(glb|gltf|ktx2|drc|usdz)(\?|$)/i.test(n));
+  const out = { three_d: webgl || !!model || !!window.THREE ? (model ? model.split('/').pop() : 'a WebGL canvas') : '', fonts, accent, eyebrows, sections, firstButtons, place: !!document.querySelector('footer [data-clock], footer time, footer .foot-place'), credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
   const dpr = devicePixelRatio || 1;
   for (const i of document.querySelectorAll('img')) {
     const r = i.getBoundingClientRect(); if (r.width < 40) continue;
@@ -87,6 +89,12 @@ const PAGE_CHECKS = () => {
   const lines = []; let fails = 0, warns = 0;
   const F = m => { fails++; lines.push('FAIL  ' + m); }, Wn = m => { warns++; lines.push('WARN  ' + m); }, P = m => lines.push('pass  ' + m);
   if (!['astro.config.mjs', 'astro.config.ts', 'astro.config.js'].some(f => fs.existsSync(path.join(path.resolve(root), f)))) F(`${root}: not an Astro project (no astro.config). Every website is built in Astro (hard rule)`);
+  // Website type from brief/IDEA.md (root is the project or its site/ folder)
+  const ideaFile = [path.resolve(root, 'brief/IDEA.md'), path.resolve(root, '../brief/IDEA.md')].find(f => fs.existsSync(f));
+  const ideaText = ideaFile ? fs.readFileSync(ideaFile, 'utf8') : '';
+  const line = k => ((ideaText.match(new RegExp('^' + k + ':[ \\t]*(.*)$', 'm')) || [])[1] || '').trim();
+  const idea = { type: line('TYPE'), product: /^product\b/i.test(line('TYPE')), allowed: line('3D ALLOWED BY TEJJO') };
+  if (ideaFile && !idea.type) Wn(`brief/IDEA.md has no TYPE line (Product, Catalogue, Studio, Person, Local practice, Software)`);
   for (const pth of (paths.length ? paths : ['/'])) {
     for (const [w, h, dev, dpr] of [[1512, 864, 'desktop', 2], [390, 844, 'phone', 3]]) {
       const tag = `${pth} ${dev}`; const p = await b.newPage();
@@ -116,6 +124,7 @@ const PAGE_CHECKS = () => {
       const c = await p.evaluate(PAGE_CHECKS);
       await p.close();
       // hard checks
+      if (c.three_d && !idea.product && !idea.allowed) F(`${tag}: 3D on a ${idea.type || 'site with no TYPE in brief/IDEA.md'} (${c.three_d}). 3D is for the Product type; anywhere else "3D ALLOWED BY TEJJO:" must hold their own words`);
       if (c.fonts.length) F(`${tag}: default face loaded: ${c.fonts.join(', ')} (defaults-to-avoid.md; keep only if brief/IDEA.md needs it, and say why to Tejjo)`);
       if (c.accent.length) F(`${tag}: one-word accent in the h1: "${c.accent[0]}" (defaults-to-avoid.md)`);
       if (c.eyebrows > Math.ceil(c.sections / 3)) Wn(`${tag}: ${c.eyebrows} eyebrows in ${c.sections} sections (at most 1 per 3)`);

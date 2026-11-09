@@ -10,6 +10,9 @@ SITE="${SITE_DIR:-site}"   # a project can hold several directions: site, site-B
 ls "$PROJ/$SITE"/astro.config.* >/dev/null 2>&1 || { echo "REFUSED: $PROJ/$SITE is not an Astro project. Every website is built in Astro."; exit 1; }
 [ ! -e "$PROJ/$SITE/src/pages/first" ] || { echo "REFUSED: delete $SITE/src/pages/first and $SITE/src/styles/first (first-screen comparisons) before publishing."; exit 1; }
 ( cd "$PROJ/$SITE" && npx astro build >/dev/null )
+PAGES=$(find "$PROJ/$SITE/dist" -name '*.html' ! -name '404.html' ! -path '*/404/*' | wc -l | tr -d ' ')
+# Never a one-pager (hard rule, Tejjo 2026-11-08). ONE_PAGE_OK="<Tejjo's own words>" only when they asked for it.
+if [ "$PAGES" -lt 3 ] && [ -z "${ONE_PAGE_OK:-}" ]; then echo "REFUSED: $PAGES page(s) built. Every site is multi-page: home plus real inner pages."; exit 1; fi
 mkdir -p "$OUT"; rsync -a --delete --exclude .vercel "$PROJ/$SITE/dist/" "$OUT/"
 python3 - "$PROJ" "$OUT" <<'PY'
 import json, sys, os

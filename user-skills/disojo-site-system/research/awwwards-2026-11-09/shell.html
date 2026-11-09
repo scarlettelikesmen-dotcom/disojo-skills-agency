@@ -1,0 +1,103 @@
+<title>Benchmark Cut List</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one long contact sheet; each site is a row of two real screens plus a cut switch. The screenshots carry the colour, the page stays graphite. */
+:root { --bg:#e9eaeb; --panel:#f6f6f7; --ink:#1c1e20; --soft:#5c6166; --line:#c9ccd0; --sans:"Schibsted Grotesk",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#17191b; --panel:#212427; --ink:#eceef0; --soft:#a0a6ac; --line:#363a3e; color-scheme:dark } }
+:root[data-theme="dark"] { --bg:#17191b; --panel:#212427; --ink:#eceef0; --soft:#a0a6ac; --line:#363a3e; color-scheme:dark }
+body { background:var(--bg); color:var(--ink); font:16px/1.45 var(--sans); padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0 96px }
+body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg) }
+main { max-width:1500px; margin:0 auto }
+.top { padding-block:40px 24px; max-width:68ch }
+h1 { font-size:clamp(30px,4vw,48px); line-height:1.05; letter-spacing:-.02em; margin:0 0 14px; font-weight:700; text-wrap:balance }
+.top p { margin:0 0 10px; color:var(--soft) }
+.bar { position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--bg); border-block:1px solid var(--line); padding-block:10px; display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px }
+.count { font:500 14px var(--mono); font-variant-numeric:tabular-nums }
+.bar button { font:500 14px var(--sans); padding:8px 14px; border-radius:2px; border:1px solid var(--ink); background:var(--ink); color:var(--bg); cursor:pointer }
+.bar .done { font-size:14px; color:var(--soft) }
+#out { width:100%; min-height:90px; font:13px/1.5 var(--mono); background:var(--panel); color:var(--ink); border:1px solid var(--line); padding:10px }
+section { padding-top:48px }
+.type { display:grid; gap:4px; max-width:68ch; padding-bottom:20px }
+h2 { font-size:clamp(24px,3vw,34px); line-height:1.1; letter-spacing:-.015em; margin:0; font-weight:700 }
+.q { margin:0; font-weight:500 }
+.note { margin:0; color:var(--soft) }
+.site { display:grid; grid-template-columns:minmax(0,1fr) 270px; gap:20px; padding-block:18px; border-top:1px solid var(--line); transition:opacity .2s }
+.shots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; min-width:0 }
+.shots img { display:block; width:100%; height:auto; background:var(--panel) }
+.shots.one img { max-width:calc(50% - 4px) }
+.shots.one { grid-template-columns:minmax(0,1fr) }
+.info { display:flex; flex-direction:column; gap:8px; align-items:flex-start; min-width:0 }
+h3 { font-size:19px; line-height:1.2; margin:0; font-weight:700 }
+.line { margin:0 }
+.meta { margin:0; display:grid; gap:2px; font:13px/1.4 var(--mono); color:var(--soft); min-width:0 }
+.meta a { color:var(--ink); overflow-wrap:anywhere }
+.cut { margin-top:auto; font:500 14px var(--sans); padding:8px 22px; border:1px solid var(--ink); background:transparent; color:var(--ink); border-radius:2px; cursor:pointer }
+.cut:focus-visible, .bar button:focus-visible, .meta a:focus-visible { outline:2px solid var(--ink); outline-offset:2px }
+.site.gone { opacity:.32 }
+.site.gone h3 { text-decoration:line-through }
+.site.gone .cut { background:var(--ink); color:var(--bg) }
+.foot { padding-top:56px; max-width:68ch; color:var(--soft) }
+.foot h2 { color:var(--ink); padding-bottom:10px; font-size:22px }
+.foot ul { padding-left:18px; margin:8px 0 }
+@media (max-width:820px) { .site { grid-template-columns:minmax(0,1fr) } .cut { margin-top:6px } }
+@media (prefers-reduced-motion:reduce) { .site { transition:none } }
+</style>
+<main>
+<div class="top">
+<h1>Cut what we should never measure against</h1>
+<p>%%N%% sites kept, from 140 checked. I already removed the dead ones, the blocked ones, and the ones that looked like the average landing page.</p>
+<p>Everything starts as kept. Press Cut on anything you would not want our work judged against, then Copy my cuts and paste it into the chat.</p>
+<p>The shots are from a browser at 1512 by 864 running out of sight, so heavy 3D and motion may look weaker than on your machine, and a few still show the site's own pop-up. Open the link before cutting anything you are unsure about. One line on each is what I could see. I have not walked through these sites yet; that happens only for the ones you keep.</p>
+</div>
+<div class="bar"><span class="count" id="count"></span><button type="button" id="copy">Copy my cuts</button><span class="done" id="done" role="status"></span></div>
+<textarea id="out" hidden aria-label="Your cut list" readonly></textarea>
+%%SECTIONS%%
+<div class="foot">
+<h2>Sites I could not get into</h2>
+<p>All of these were tried in the in-app browser as well. They open for you in your own browser. Say so in the chat if you want one added, with a line on why.</p>
+<ul>
+<li>Stops at a "verify you are human" check, which I do not click through: vitra.com, ram.ac.uk, juilliard.edu, astrolighting.com.</li>
+<li>Refuses this connection outright: ayocin.com (the ATMOS lamp, Site of the Day), hellotend.com, woodendot.com.</li>
+<li>Broken on their end right now: ljubicicacademy.com (Site of the Day, certificate error at its server), mmsny.org (invalid certificate), project2075.oakley.com (404).</li>
+<li>Opened, but its hero film would not play for me, so no fair shot: noma.dk.</li>
+</ul>
+<h2>Opened, and I left out</h2>
+<ul>
+<li>tim.blog and schoolofrock.com: the average landing page, review stars and a form on the first screen.</li>
+<li>mcmaster.com asks for a login, Lacoste Ace Breaker is a game behind a cookie box, and telepathicinstruments.com and spylt.com are currently launch teasers.</li>
+</ul>
+</div>
+</main>
+<script>
+(function () {
+  var KEY = 'benchmark-cuts';
+  var sites = [].slice.call(document.querySelectorAll('.site'));
+  var saved = [];
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) {}
+  var count = document.getElementById('count'), out = document.getElementById('out'), done = document.getElementById('done');
+  function cuts() { return sites.filter(function (s) { return s.classList.contains('gone'); }); }
+  function refresh() {
+    var c = cuts().length;
+    count.textContent = (sites.length - c) + ' kept, ' + c + ' cut';
+    try { localStorage.setItem(KEY, JSON.stringify(cuts().map(function (s) { return s.dataset.id; }))); } catch (e) {}
+  }
+  sites.forEach(function (s) {
+    var b = s.querySelector('.cut');
+    function set(on) { s.classList.toggle('gone', on); b.setAttribute('aria-pressed', on); b.textContent = on ? 'Cut, undo' : 'Cut'; }
+    if (saved.indexOf(s.dataset.id) > -1) set(true);
+    b.addEventListener('click', function () { set(!s.classList.contains('gone')); done.textContent = ''; refresh(); });
+  });
+  document.getElementById('copy').addEventListener('click', function () {
+    var by = {};
+    cuts().forEach(function (s) { (by[s.dataset.type] = by[s.dataset.type] || []).push(s.dataset.id); });
+    var text = Object.keys(by).map(function (t) { return t + ': ' + by[t].join(', '); }).join('\n') || 'No cuts';
+    text = 'Benchmark cuts\n' + text;
+    function show() { out.hidden = false; out.value = text; out.focus(); out.select(); done.textContent = 'Select this text and copy it.'; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done.textContent = 'Copied. Paste it into the chat.'; }, show);
+    } else { show(); }
+  });
+  refresh();
+})();
+</script>
