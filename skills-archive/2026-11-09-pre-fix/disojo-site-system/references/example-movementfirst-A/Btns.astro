@@ -1,0 +1,10 @@
+---
+// Their action links, styled. Booking links keep their published destination.
+import { BRAND } from '../data/brand.js';
+interface Props { links: any[]; light?: boolean }
+const { links = [], light = false } = Astro.props;
+const fix = (l: any) => ({ ...l, href: /book a free consult|apply now/i.test(l.x) && !l.href ? BRAND.book : l.href });
+---
+{links.length > 0 && <div class="btns">{links.map(fix).map((l, i) => i === 0
+  ? <a class:list={['btn', { lt: light }]} href={l.href}><span>{l.x}</span><i aria-hidden="true">{l.href?.startsWith('/') ? '→' : '↗'}</i></a>
+  : <a class="tlink" href={l.href}>{l.x}<i aria-hidden="true">→</i></a>)}</div>}

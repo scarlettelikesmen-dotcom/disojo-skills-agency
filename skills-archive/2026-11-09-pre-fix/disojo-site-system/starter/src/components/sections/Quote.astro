@@ -1,0 +1,10 @@
+---
+// Job: one client's words, large. Verified quotes only, with name and role exactly as approved.
+import Pic from '../Pic.astro';
+interface Props { q: string; by: string; role?: string; img?: any }
+const { q, by, role, img } = Astro.props;
+---
+<section class:list={['s-qt sec wrap', { 'has-img': !!img }]}>
+  {img && <Pic {...img} sizes="(max-width:860px) 40vw, 20vw" class="s-qt-p" />}
+  <blockquote data-reveal><p class="t-h2">&ldquo;{q}&rdquo;</p><footer class="t-small"><b>{by}</b>{role && <span class="muted">{role}</span>}</footer></blockquote>
+</section>

@@ -1,0 +1,6 @@
+---
+// The small proof card that sits ON a photo: one verified number, one line, one source line. Never an unverified figure.
+interface Props { big: string; text: string; meta?: string; class?: string }
+const { big, text, meta, class: cls = '' } = Astro.props;
+---
+<p class:list={['s-card', cls]}><b>{big}</b><span>{text}</span>{meta && <i>{meta}</i>}</p>

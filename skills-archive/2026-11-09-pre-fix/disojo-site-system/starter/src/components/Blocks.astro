@@ -1,0 +1,24 @@
+---
+// Renders a crawled page body exactly as published. Designed pages replace this per template; it guarantees parity on day one.
+import { img, dims } from '../data/img.js';
+interface Props { body: any[]; skipH1?: boolean }
+const { body, skipH1 = true } = Astro.props;
+const yt = (s = '') => (s.match(/(?:youtube\.com\/embed\/|youtu\.be\/)([\w-]+)/) || [])[1];
+---
+<div class="prose">
+  {body.map(b => {
+    if (b.t === 'h1') return skipH1 ? null : <h1 class="t-h2">{b.x}</h1>;
+    if (b.t === 'h2') return <h2 class="t-h3" id={b.id}>{b.href ? <a href={b.href}>{b.x}</a> : b.x}</h2>;
+    if (b.t === 'h3' || b.t === 'h4') return <h3 class="t-lead" id={b.id}>{b.href ? <a href={b.href}>{b.x}</a> : b.x}</h3>;
+    if (b.t === 'p') return <p set:html={b.h} />;
+    if (b.t === 'tx') return <p>{b.x}</p>;
+    if (b.t === 'quote') return <blockquote class="t-lead" set:html={b.h} />;
+    if (b.t === 'ul') return <ul>{b.items.map(h => <li set:html={h} />)}</ul>;
+    if (b.t === 'link') return <p><a class="ul" href={b.href}>{b.x}</a></p>;
+    if (b.t === 'img' && !b.bg) { const d = dims(b.src); return <figure><img src={img(b.src, 1400)} alt={b.alt} loading="lazy" width={d?.w} height={d?.h} /></figure>; }
+    if (b.t === 'embed' && yt(b.src)) return <div class="embed"><iframe src={`https://www.youtube-nocookie.com/embed/${yt(b.src)}`} title={b.title || 'Video'} loading="lazy" allowfullscreen></iframe></div>;
+    if (b.t === 'table') return <div class="tbl"><table>{b.rows.map(r => <tr>{r.map(c => <td>{c}</td>)}</tr>)}</table></div>;
+    if (b.t === 'form') return <p class="t-label todo">TODO(form): {b.fields.map(f => f.label || f.name).join(', ')}</p>;
+    return null;
+  })}
+</div>

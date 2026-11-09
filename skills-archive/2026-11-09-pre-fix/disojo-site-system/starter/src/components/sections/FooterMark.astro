@@ -1,0 +1,9 @@
+---
+// Job: close the page with the name at full width and the few links people look for. Goes in Base's footer slot.
+interface Props { word: string; cols: { label: string; links: [string, string][] }[] }
+const { word, cols } = Astro.props;
+---
+<div class="s-fm">
+  <div class="s-fm-c">{cols.map((c) => <div><p class="t-label muted">{c.label}</p><ul>{c.links.map(([h, t]) => <li><a class="ul t-small" href={h}>{t}</a></li>)}</ul></div>)}</div>
+  <p class="s-fm-w" aria-hidden="true">{word}</p>
+</div>

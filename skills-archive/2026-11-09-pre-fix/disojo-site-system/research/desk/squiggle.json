@@ -1,0 +1,195 @@
+{
+ "summary": {
+  "url": "https://www.squiggle.sydney",
+  "screens": 8,
+  "mediaCoverAvg": 0.23,
+  "screensWithBigMedia": 3,
+  "photoShareOfBigMedia": 0,
+  "largestMedia": 0.382,
+  "wordsAvg": 42.63,
+  "wordsMax": 130,
+  "boxesAvg": 1.5,
+  "buttonsAvg": 0.25,
+  "textSizesAvg": 2.38,
+  "maxFontFirstScreen": 28
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0.107,
+   "media": [
+    {
+     "x": 32,
+     "y": 456,
+     "w": 393,
+     "h": 376,
+     "share": 0.113,
+     "tag": "img",
+     "flat": 0.613,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 48,
+   "textSizes": 2,
+   "maxFont": 28,
+   "boxes": 2,
+   "buttons": 0
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0.216,
+   "media": [
+    {
+     "x": 818,
+     "y": 121,
+     "w": 694,
+     "h": 528,
+     "share": 0.281,
+     "tag": "img",
+     "flat": 0.369,
+     "kind": "mixed"
+    }
+   ],
+   "words": 17,
+   "textSizes": 3,
+   "maxFont": 152,
+   "boxes": 2,
+   "buttons": 0
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0.209,
+   "media": [
+    {
+     "x": 746,
+     "y": 0,
+     "w": 625,
+     "h": 355,
+     "share": 0.17,
+     "tag": "img",
+     "flat": 0.46,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 10,
+   "textSizes": 2,
+   "maxFont": 35,
+   "boxes": 2,
+   "buttons": 0
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0.784,
+   "media": [
+    {
+     "x": 32,
+     "y": 167,
+     "w": 716,
+     "h": 697,
+     "share": 0.382,
+     "tag": "img",
+     "flat": 0.469,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 764,
+     "y": 167,
+     "w": 716,
+     "h": 697,
+     "share": 0.382,
+     "tag": "img",
+     "flat": 0.85,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 0,
+   "textSizes": 0,
+   "maxFont": 0,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0.321,
+   "media": [
+    {
+     "x": 32,
+     "y": 348,
+     "w": 716,
+     "h": 516,
+     "share": 0.283,
+     "tag": "img",
+     "flat": 0.467,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 75,
+   "textSizes": 4,
+   "maxFont": 89,
+   "boxes": 2,
+   "buttons": 0
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.103,
+   "media": [
+    {
+     "x": 32,
+     "y": 0,
+     "w": 716,
+     "h": 200,
+     "share": 0.11,
+     "tag": "img",
+     "flat": 0.503,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 47,
+   "textSizes": 4,
+   "maxFont": 89,
+   "boxes": 1,
+   "buttons": 0
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0.005,
+   "media": [],
+   "words": 130,
+   "textSizes": 2,
+   "maxFont": 24,
+   "boxes": 3,
+   "buttons": 2
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0.095,
+   "media": [
+    {
+     "x": 0,
+     "y": 514,
+     "w": 444,
+     "h": 350,
+     "share": 0.119,
+     "tag": "img",
+     "flat": 0.397,
+     "kind": "mixed"
+    },
+    {
+     "x": 1138,
+     "y": 758,
+     "w": 374,
+     "h": 106,
+     "share": 0.03,
+     "tag": "img",
+     "flat": 0.772,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 14,
+   "textSizes": 2,
+   "maxFont": 152,
+   "boxes": 0,
+   "buttons": 0
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+---
+// Job: list services or offers so they can be scanned in five seconds. Numbered rows on hairlines; the arrow moves on hover.
+interface Props { title: string; label?: string; rows: { t: string; d: string; href?: string }[] }
+const { title, label, rows } = Astro.props;
+---
+<section class="s-rw sec wrap">
+  <div class="s-rw-h">{label && <p class="t-label">{label}</p>}<h2 class="t-h2">{title}</h2></div>
+  <ol class="s-rw-l">
+    {rows.map((r, i) => {
+      const Tag = r.href ? 'a' : 'div';
+      return <li><Tag class="s-rw-r" href={r.href}><span class="t-label muted">{String(i + 1).padStart(2, '0')}</span><h3 class="t-h3">{r.t}</h3><p class="t-small muted">{r.d}</p>{r.href && <i aria-hidden="true">&#8599;</i>}</Tag></li>;
+    })}
+  </ol>
+</section>

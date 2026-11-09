@@ -1,0 +1,58 @@
+{
+  "enabledPlugins": {
+    "vercel-plugin@vercel-vercel-plugin": true
+  },
+  "extraKnownMarketplaces": {
+    "vercel-vercel-plugin": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/tejjo/.cache/plugins/github.com-vercel-vercel-plugin"
+      }
+    }
+  },
+  "skipWorkflowUsageWarning": true,
+  "theme": "light",
+  "switchModelsOnFlag": false,
+  "agentPushNotifEnabled": true,
+  "tui": "fullscreen",
+  "env": {
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "30"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/skills/disojo-site-system/hooks/site_guard.cjs\" track",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/skills/disojo-site-system/hooks/site_guard.cjs\" stop",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/precompact_log.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

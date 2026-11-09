@@ -63,3 +63,4 @@
 - [Multi-page + no basic CTAs guardrail](feedback-multipage-no-basic-ctas.md) — 2026-11-08 hard rule: never one-pager, never dead CTAs, bar = beat the 9 reference sites (not Print Elements)
 - [Kiran Roy third pass](project-kiran-roy-third-pass.md) — READ FIRST for Kiran: paid order, three full homes live on noindex kr-fronts-7qx.vercel.app, awaiting Tejjo's pick
 - [Work summary 2026-11-08](work-summary-2026-11-08.md) — LinkedIn, FAQ deploy 095bc66, Kiran reference walk, three demo homes live
+- [Software only decision 2026-11-09](project-decision-software-only-2026-11-09.md) — no content agency, no rename; offer draft in content-hub/brands/disojo/offer.md, blanks await Tejjo

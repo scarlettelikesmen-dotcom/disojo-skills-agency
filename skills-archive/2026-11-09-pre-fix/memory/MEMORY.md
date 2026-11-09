@@ -1,0 +1,66 @@
+- [Content hub setup](content-hub-setup.md) — Tejjomay's content production desk: tools, status, what's still needed
+- [Content portfolio: two worlds](content-portfolio-two-worlds.md) — three accounts/two worlds, tier-1, 3-posts-a-day model, non-negotiables; points to MASTER-CONTEXT
+- [Brand: Disojo Solutions](brand-disojo-solutions.md) — agency account facts, goal (client leads), guards, open questions
+- [Brand: codewithabel](brand-codewithabel.md) — build-in-public account, series, story bank, open questions
+- [Brand: abelkapoor-trading](brand-abelkapoor-trading.md) — trading account, no-selling promise, compliance guards, open questions
+- [Content style feedback](feedback-content-style.md) — how he wants the content operation run; voice-dictation quirks
+- [High-ticket branding offer](project-high-ticket-branding-offer.md) — USD 10-15k branding + site offer, 7 reference sites studied, skills installed, open decisions
+- [Print Elements flagship](project-print-elements-flagship.md) — FRESH build, signed 2026-10-14 CAD 19,500; guidebook phase 2; open questions
+- [Reminder: location sitemap, service pages, Parallel HQ copy](reminder-site-locations-services-parallelhq.md) — Disojo site, noted 2026-10-17, not started
+- [Editing engine state](editing-engine-state.md) — Remotion pilot v5-v7, verdict history, open editing list, how to run (CURRENT FOCUS)
+- [Match live by measuring](feedback-match-live-by-measuring.md) — Disojo site: copy/restore means exact, and diff numerically vs live before claiming
+- [Copywriting systems](copywriting-systems.md) — 3 per-account copy skills + reports (2026-10-18), awaiting review
+- [Trading origin + answers](trading-origin-and-answers-2026-10-18.md) — confirmed origin, identity theme, P&L rule, handles, KDC before-story
+- [Our work rebuild options](project-our-work-rebuild-options.md) — DONE (Stage wired in); mock-ups in _archive/work-options
+- [To-do: Ascender style + white brief + up/down feature](reminder-site-ascender-style-todo.md) — mostly done 2026-10-20 (hover motion, white brief, font); items 2-4 now folded into the design-language pass
+- [Background test (5 ideas)](project-site-background-test.md) — DONE (lamp edge locked in)
+- [What we do: 10 layout options](project-what-we-do-options.md) — DONE (Directory + Symptoms wired)
+
+- [Disojo site state 2026-10-20](project-site-state-2026-10-20.md) — READ FIRST: home rebuild done, preview + git pushed, not deployed; to-do list (phone optimisation next)
+- [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
+- [Disojo logo redo](project-disojo-logo-redo.md) — clean slate 2026-11-02; rounds 1-4 all rejected; round 5 via skill disojo-identity-lab (8 territories), awaiting picks
+- [Logo: no font tweaks](feedback-logo-no-font-tweaks.md) — 2026-10-21 sketches rejected; construct letters, explore wide, compare against his refs before showing
+- [Print Elements in Ascender style](project-print-elements-ascender-style.md) — new build 2026-10-22, live preview pe-857fd6.vercel.app, hero dojacatbro, open items
+- [Print Elements multi-page (OH style)](project-print-elements-multipage.md) — 64-route site live pe-d4edb3.vercel.app, supersedes one-page build
+- [Trading journal](project-trading-journal.md) — private journal in DISOJO SOLUTIONS/trading-journal, separate from content; backfill Oct 16/19/20 pending
+- [Disojo site state 2026-10-22](project-site-state-2026-10-22.md) — READ FIRST: new logo, social exports, CTA mock-up (4455/cta.html), services-copy plan awaiting 4 answers, v3 backup location
+- [Print Elements rebrand concept](project-print-elements-rebrand-concept.md) — 2026-10-23 from-scratch rebrand exploration, A1/A4 liked, B pending, year unconfirmed
+- [Disojo site state 2026-10-23](project-site-state-2026-10-23.md) — READ FIRST: DEPLOYED 444f168; what shipped, merge note (work in main repo now), open items
+- [To-do: service details + detail page redo](reminder-site-service-details-and-detail-page.md) — REMIND at next site session: lists inside What we fix answers, hook briefs, /services page redo
+- [LinkedIn profile optimisation](project-linkedin-profile.md) — About + banner FINAL; headline, experience, Featured, Services, photo, connections pending
+- [Shortscut teardown](reference-shortscut-teardown.md) — 2026-10-26 full teardown of shortscut.com + what to borrow for ascendermedia.in; report in ascender-portal/
+- [Ascender logo + identity](project-ascender-logo-identity.md) — 2026-10-26 started: brief, banned ideas, round-1 prompts out, awaiting picks
+- [Ascender site iteration plan](project-ascender-site-iteration-plan.md) — 2026-10-28 FULL REBUILD PLAN + no-footage hero prototype (rebuild-hero, localhost 4480), awaiting verdict
+- [Mentable landing page](project-mentable-space-landing.md) — READ FIRST for Mentable: LIVE www.mentable.space, deploy recipe, decisions, NEXT PASS in progress (app logo + sim recordings + interaction library)
+- [Premium build process](feedback-premium-build-process.md) — Mentable v1 failed 2026-10-27: study refs hands-on first, concepts in words, then build
+- [Iterate on localhost only](feedback-iterate-on-localhost-only.md) — 2026-10-27: no Vercel preview pushes unless asked
+- [Disojo v4 concept](project-disojo-v4-concept.md) — 2026-10-28 fresh 'Two O's' site at websites ARCHIVE/disojo-v4, localhost 4471, not deployed, awaiting feedback
+- [Port elements only](feedback-port-elements-only.md) — bringing concept pieces into the live site: add only the named element, never touch positioning, spacing or fonts
+- [Disojo site state 2026-10-28](project-site-state-2026-10-28.md) — DEPLOYED dbd518f: v4 pieces live (hero, What we fix, services, case studies, contact chips), team rows, open items
+- [Print Elements v4](project-print-elements-v4.md) — READ FIRST for Print Elements: 2026-10-28 A-to-Z rebuild, keep logo, live-ink hero, Blender renders, price builder; localhost 4511
+- [CSK law firm redo concept](project-csk-lawny-concept.md) — 2026-10-29 local one-page concept for csklawny.com (Cohen Stine Kapoor LLP), :4561, not deployed
+- [Redo pipeline + Movement First](project-redo-pipeline.md) — SUPERSEDED by disojo-site-system (2026-11-02); plug-and-play redo skill (2026-11-01), Monolog-based rules, Movement First A built locally, not deployed
+- [Disojo redo, 3 directions](project-disojo-redo-2026-11-01.md) — A lens / B typed once / C circled, live demo links, cal.com link broken on live site
+- [Graphite palette locked](project-disojo-graphite-palette.md) — 2026-11-02 DEPLOYED 2886479: Graphite + grain + Bricolage + new CTAs live; favicon/og still old
+- [Button motion feel](feedback-button-motion.md) — strong ease-out (.16,1,.35,1) 0.6s like Monolog; "dead" means fix the curve, not the speed
+- [Disojo positioning 2026-11-02](project-disojo-positioning-2026-11-02.md) — decisions so far, Monolog audit numbers, challenges awaiting Tejjo
+- [Work summary 2026-11-02](work-summary-2026-11-02.md) — Mentable featured section, 8,750, analyst photo, image direction, compaction settings; NOT deployed
+- [Website system (merged)](project-site-system.md) — READ FIRST for site work: 14 skills merged into disojo-site-system 2026-11-02, section library, gate fix, next = first real client run
+- [KDC site redo](project-kdc-site-redo.md) — kunalsdrumclass.com, first disojo-site-system run: Count-in approved, home built localhost:4600, NOT deployed, gap list
+- [Disojo site working copy](feedback-disojo-site-working-copy.md) — edit ~/Desktop/disojo-mix on :4700 only, never disojo-hybrid; watermark with watermark_new.py (new logo)
+- [Disojo site state 2026-11-02 testimonials](project-site-state-2026-11-02-testimonials.md) — DEPLOYED 798f554 from disojo-mix: testimonials redo, Skye, figures; AI-detector photo issue open
+- [Compaction log](compaction-log.md) — one line per compaction from the PreCompact hook (proof it fired, newest note at that time)
+- [Ascender multipage 2026-11-02](project-ascender-multipage-2026-11-02.md) — calendar hero, Monolog buttons, 7-page split, DEPLOYED kraq88wyv
+- [Disojo site state 2026-11-02 work notes](project-site-state-2026-11-02-work-notes.md) — DEPLOYED 6e0ddac: work-page notes, new screenshots, $750,000, 78,000+, $50k in 4 months
+- [Premium 3D research 2026-11-03](project-premium-3d-research-2026-11-03.md) — kits 1-32 + 30 sites teardown, techniques A-F, Webflow call, 3 decisions awaiting
+- [Work summary 2026-11-03](work-summary-2026-11-03.md) — research report published, nothing built or deployed
+- [Blender autonomous setup](project-blender-autonomous-setup.md) — 2026-11-03 MCP bridge installed (telemetry off), 3-object proof test next; skill changes approved, not done
+- [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
+- [Gates are not quality](feedback-gates-are-not-quality.md) — VÆL 2026-11-03 trust break: beat the nine references screen by screen before showing; gate passes are not 'audited'
+- [Real-time 3D method](feedback-realtime-3d-method.md) — live 3D products: skill disojo-realtime-3d-product, bake every detail, no renders/no hiring
+- [Level, your trading playbook](project-level-trading-playbook.md) — READ FIRST for Tejjo's own trading startup: name+category decided 2026-11-04, v1 scope, domains free, vision doc link
+- [Footer credit HARD RULE](feedback-footer-credit.md) — always "Design & Systems · © Disojo Studio 2026" linking disojostudio.com; gate enforces it
+- [Multi-page + no basic CTAs guardrail](feedback-multipage-no-basic-ctas.md) — 2026-11-08 hard rule: never one-pager, never dead CTAs, bar = beat the 9 reference sites (not Print Elements)
+- [Kiran Roy third pass](project-kiran-roy-third-pass.md) — READ FIRST for Kiran: paid order, three full homes live on noindex kr-fronts-7qx.vercel.app, awaiting Tejjo's pick
+- [Work summary 2026-11-08](work-summary-2026-11-08.md) — LinkedIn, FAQ deploy 095bc66, Kiran reference walk, three demo homes live
+- [Software only decision 2026-11-09](project-decision-software-only-2026-11-09.md) — no content agency, no rename; offer draft in content-hub/brands/disojo/offer.md, blanks await Tejjo

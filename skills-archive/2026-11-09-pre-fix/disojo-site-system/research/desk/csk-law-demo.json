@@ -1,0 +1,203 @@
+{
+ "summary": {
+  "url": "https://csk-law-demo.vercel.app",
+  "screens": 8,
+  "mediaCoverAvg": 0.24,
+  "screensWithBigMedia": 3,
+  "photoShareOfBigMedia": 0.17,
+  "largestMedia": 1,
+  "wordsAvg": 72.25,
+  "wordsMax": 149,
+  "boxesAvg": 1.38,
+  "buttonsAvg": 0.25,
+  "textSizesAvg": 3.88,
+  "maxFontFirstScreen": 88
+ },
+ "rows": [
+  {
+   "screen": 0,
+   "mediaCover": 0.941,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 864,
+     "share": 1,
+     "tag": "img",
+     "flat": 0.261,
+     "kind": "photo"
+    }
+   ],
+   "words": 51,
+   "textSizes": 5,
+   "maxFont": 88,
+   "boxes": 1,
+   "buttons": 1
+  },
+  {
+   "screen": 1,
+   "mediaCover": 0,
+   "media": [
+    {
+     "x": 0,
+     "y": 0,
+     "w": 1512,
+     "h": 104,
+     "share": 0.12,
+     "tag": "img",
+     "flat": 1,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 117,
+   "textSizes": 5,
+   "maxFont": 106,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 2,
+   "mediaCover": 0,
+   "media": [],
+   "words": 149,
+   "textSizes": 4,
+   "maxFont": 76,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 3,
+   "mediaCover": 0.311,
+   "media": [
+    {
+     "x": 39,
+     "y": 535,
+     "w": 352,
+     "h": 329,
+     "share": 0.089,
+     "tag": "img",
+     "flat": 0.665,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 761,
+     "y": 535,
+     "w": 352,
+     "h": 329,
+     "share": 0.089,
+     "tag": "img",
+     "flat": 0.719,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 400,
+     "y": 625,
+     "w": 352,
+     "h": 239,
+     "share": 0.064,
+     "tag": "img",
+     "flat": 0.707,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 1121,
+     "y": 625,
+     "w": 352,
+     "h": 239,
+     "share": 0.064,
+     "tag": "img",
+     "flat": 0.731,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 43,
+   "textSizes": 4,
+   "maxFont": 76,
+   "boxes": 5,
+   "buttons": 0
+  },
+  {
+   "screen": 4,
+   "mediaCover": 0.433,
+   "media": [
+    {
+     "x": 756,
+     "y": 274,
+     "w": 756,
+     "h": 590,
+     "share": 0.342,
+     "tag": "img",
+     "flat": 0.624,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 400,
+     "y": 0,
+     "w": 352,
+     "h": 201,
+     "share": 0.054,
+     "tag": "img",
+     "flat": 0.514,
+     "kind": "flat/ui"
+    },
+    {
+     "x": 1121,
+     "y": 0,
+     "w": 352,
+     "h": 201,
+     "share": 0.054,
+     "tag": "img",
+     "flat": 0.621,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 21,
+   "textSizes": 4,
+   "maxFont": 76,
+   "boxes": 4,
+   "buttons": 0
+  },
+  {
+   "screen": 5,
+   "mediaCover": 0.232,
+   "media": [
+    {
+     "x": 756,
+     "y": 0,
+     "w": 756,
+     "h": 507,
+     "share": 0.293,
+     "tag": "img",
+     "flat": 0.559,
+     "kind": "flat/ui"
+    }
+   ],
+   "words": 66,
+   "textSizes": 2,
+   "maxFont": 17,
+   "boxes": 1,
+   "buttons": 1
+  },
+  {
+   "screen": 6,
+   "mediaCover": 0,
+   "media": [],
+   "words": 58,
+   "textSizes": 4,
+   "maxFont": 76,
+   "boxes": 0,
+   "buttons": 0
+  },
+  {
+   "screen": 7,
+   "mediaCover": 0,
+   "media": [],
+   "words": 73,
+   "textSizes": 3,
+   "maxFont": 76,
+   "boxes": 0,
+   "buttons": 0
+  }
+ ]
+}

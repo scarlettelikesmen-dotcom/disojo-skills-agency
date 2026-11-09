@@ -1,0 +1,10 @@
+---
+// Job: show the place or the work as a set. 3 to 7 photos in an uneven grid (first one large). Same grade on every photo.
+import Pic from '../Pic.astro';
+interface Props { title?: string; imgs: any[] }
+const { title, imgs } = Astro.props;
+---
+<section class="s-gl sec wrap">
+  {title && <h2 class="t-h2">{title}</h2>}
+  <div class:list={['s-gl-g', `n${Math.min(imgs.length, 7)}`]}>{imgs.map((im, i) => <div class="s-gl-i" data-reveal><Pic {...im} sizes={i === 0 ? '(max-width:860px) 100vw, 58vw' : '(max-width:860px) 50vw, 30vw'} /></div>)}</div>
+</section>

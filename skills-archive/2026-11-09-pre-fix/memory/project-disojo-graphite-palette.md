@@ -1,0 +1,58 @@
+---
+name: project-disojo-graphite-palette
+description: "2026-11-02 Tejjo locked the Graphite palette + moving film grain for disojostudio.com in the mix localhost (~/Desktop/disojo-mix :4700); not committed, not deployed"
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
+  modified: 2026-11-01T22:35:36.219Z
+---
+
+On 2026-11-02 Tejjo chose **Graphite** for the Disojo site. It replaces the old warm grey, which read as a Monolog copy. Teak was the runner-up.
+
+- **Ladder**:
+  - paper #D8E2EC, raised #E6EDF4, sunk #CCD6E0, line #C1CAD4
+  - label #89929A, secondary #5D646B
+  - ink #091016, dark sections #0D1318
+- **No accent.** Client world colours (KDC, Postcards, Mentable, etc.) are unchanged.
+- **Applied in source** in the worktree `~/Desktop/disojo-mix` (branch mix-2026-11-01), 190 swaps across global.css, case-v4.css, services css, work8.css, Base.astro, about, work/index, home.js, shared.js, projects.json.
+  - Private pages (portal, contract, invoice) were deliberately left alone.
+  - Backup of the pre-swap src: scratchpad `src-before-graphite.tgz` (wiped on reboot).
+- **Grain**: `.grain` fixed overlay in Base.astro.
+  - Own tile `public/fx/grain.png`: 400px, alpha 18, 4 tones.
+  - Jitters with steps(6) every 0.5s, the same technique Monolog and Supersolid use (both use one shared Webflow grain PNG; we did not copy it).
+  - Turned off under reduced motion.
+- **Logo exports** in `logo-exports/palette-2026-11-02/`, Graphite and Teak:
+  - full wordmark
+  - script O alone, cut from the current logo vector in global.css `.end .bigwm`
+  - with-grain versions and platform preview sheets
+- **DEPLOYED 2026-11-02** commit 2886479 (leadvix-website-80zt8mmrt). Not done yet:
+  - favicon.svg and og image still use the old #EBE9E4
+  - (deploy word rule still applies to anything new)
+- `public/brand/wordmark-large.svg` is an OLD logo (block O), not the current one. Never export from it.
+
+Related: [[project-disojo-redo-2026-11-01]], [[project-site-state-2026-10-28]]
+
+## 2026-11-02 later: new logo candidate "hoflik" (blob O)
+- Source: ~/Desktop/hoflikbro.png (an AI image, 1254px). Redrawn as vector. Fixes made:
+  - all upright strokes 490 (at 8k scale)
+  - D, I, J and the square O on one cap line and baseline; the J's overshoot now matches the S
+  - the blob O smoothed but kept (moved at most 1.4px of 1285)
+  - spacing checked and left alone
+- Files in logo-exports/hoflik-2026-11-02/ (disojo-logo-redrawn-*, disojo-mark-O-redrawn-*, favicon set, before-after.png).
+- On localhost only (disojo-mix):
+  - dev-only New/Current logo switch, new by default; mask /brand/disojo-wordmark-v2.png
+  - favicon is the blob O with no background (Tejjo: "like Gmail, just the mark")
+    - the SVG switches to the paper colour in dark tabs
+    - apple-touch-icon sits on the Graphite paper (iOS needs an opaque icon)
+  - old favicons backed up in disojo-mix/_archive-favicon-before-2026-11-02
+  - the LinkedIn nav link is also waiting
+- DEPLOYED 2026-11-02 commit ee29f78: new logo is the default everywhere, switch removed, favicon + LinkedIn live. Still old: og-v2.png share image.
+- 2026-11-02 later deploys (2b5c78b):
+  - Corner marks redone with the new logo. Rule: one on-screen size, 7 css px tall, bottom-right.
+    - script: disojo-hybrid/_archive/watermark-v2-reference.py
+    - Tejjo wants marks uniform, never some big and some small
+  - Footer about 20% shorter, whitespace only
+  - CTA "Book a strategy consultation"
+  - Buttons 0.2s
+- NEXT: copy pieces Tejjo likes from the redo directions A/B/C into the live site. Links are in [[project-disojo-redo-2026-11-01]].
