@@ -7,6 +7,8 @@ set -euo pipefail
 PROJ="$(cd "$1" && pwd)"; SLUG="$2"; NAME="${SLUG}-demo"; SCOPE="${VERCEL_SCOPE:-scarlettelikesmen-dotcoms-projects}"
 OUT="$PROJ/deploy/$NAME"
 SITE="${SITE_DIR:-site}"   # a project can hold several directions: site, site-B, site-C
+ls "$PROJ/$SITE"/astro.config.* >/dev/null 2>&1 || { echo "REFUSED: $PROJ/$SITE is not an Astro project. Every website is built in Astro."; exit 1; }
+[ ! -e "$PROJ/$SITE/src/pages/first" ] || { echo "REFUSED: delete $SITE/src/pages/first and $SITE/src/styles/first (first-screen comparisons) before publishing."; exit 1; }
 ( cd "$PROJ/$SITE" && npx astro build >/dev/null )
 mkdir -p "$OUT"; rsync -a --delete --exclude .vercel "$PROJ/$SITE/dist/" "$OUT/"
 python3 - "$PROJ" "$OUT" <<'PY'

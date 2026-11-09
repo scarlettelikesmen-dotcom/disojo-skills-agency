@@ -1,0 +1,24 @@
+---
+// One first screen of the picked idea. Copy to site/src/pages/first/a.astro (b.astro, c.astro), one per letter in brief/.
+// render_directions.cjs writes the two imports below from brief/<LETTER>/tokens.json, then builds and screenshots.
+// Throwaway: delete site/src/pages/first/ and site/src/styles/first/ once Tejjo picks. deploy_demo.sh refuses while they exist.
+import '../../styles/first/a.css';
+import '../../styles/base.css';
+import fonts from '../../styles/first/a.fonts.txt?raw';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>First screen A</title>
+  <link rel="stylesheet" href={fonts.trim()} />
+</head>
+<body>
+  <!-- The first screen only. Real copy from brief/MESSAGE.md, real material from site/public. -->
+</body>
+</html>
+<style is:global>
+  /* This letter's own look. */
+</style>

@@ -54,7 +54,7 @@ const PAGE_CHECKS = () => {
   for (const h of document.querySelectorAll('h1,h2')) if (isEyebrow(h.previousElementSibling) || (!h.previousElementSibling && isEyebrow(h.parentElement.previousElementSibling))) eyebrows++;
   const sections = Math.max(1, document.querySelectorAll('section,header').length);
   const firstButtons = [...document.querySelectorAll('a,button')].filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.top + scrollY < innerHeight && !e.closest('nav,footer,p,[aria-hidden="true"]') && e.textContent.trim().length <= 40; }).length;
-  const out = { fonts, accent, eyebrows, sections, firstButtons, credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
+  const out = { fonts, accent, eyebrows, sections, firstButtons, place: !!document.querySelector('footer [data-clock], footer time, footer .foot-place'), credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
   const dpr = devicePixelRatio || 1;
   for (const i of document.querySelectorAll('img')) {
     const r = i.getBoundingClientRect(); if (r.width < 40) continue;
@@ -86,6 +86,7 @@ const PAGE_CHECKS = () => {
   const b = await puppeteer.launch({ channel: 'chrome', headless: 'new', args: ['--hide-scrollbars'] });
   const lines = []; let fails = 0, warns = 0;
   const F = m => { fails++; lines.push('FAIL  ' + m); }, Wn = m => { warns++; lines.push('WARN  ' + m); }, P = m => lines.push('pass  ' + m);
+  if (!['astro.config.mjs', 'astro.config.ts', 'astro.config.js'].some(f => fs.existsSync(path.join(path.resolve(root), f)))) F(`${root}: not an Astro project (no astro.config). Every website is built in Astro (hard rule)`);
   for (const pth of (paths.length ? paths : ['/'])) {
     for (const [w, h, dev, dpr] of [[1512, 864, 'desktop', 2], [390, 844, 'phone', 3]]) {
       const tag = `${pth} ${dev}`; const p = await b.newPage();
@@ -123,6 +124,7 @@ const PAGE_CHECKS = () => {
       if (c.broken.length) F(`${tag}: broken images ${c.broken.slice(0, 4).join(', ')}`);
       if (c.soft.length) F(`${tag}: images shown soft (need a bigger source): ${c.soft.slice(0, 4).join('; ')}`);
       if (!c.credit) F(`${tag}: footer credit missing; it must read exactly "Design & Systems · © Disojo Studio 2026" linking to https://disojostudio.com (hard rule)`);
+      if (!c.place) Wn(`${tag}: no location and small clock in the footer (hard rule; if it is built another way, say so)`);
       if (c.oldCredit) F(`${tag}: old credit "Developed by Disojo..." still visible`);
       if (c.dash.length) F(`${tag}: em dash in visible copy: "${c.dash[0]}"`);
       if (c.banned.length) F(`${tag}: banned words: ${[...new Set(c.banned)].join(', ')}`);

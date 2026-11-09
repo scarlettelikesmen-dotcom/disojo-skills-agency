@@ -10,5 +10,6 @@ export const BRAND = {
   cta: null,                      // ['/contact/', 'Book a call'] only if the client has that action
   tel: site.tel[0] || '', mail: site.mail[0] || '', address: site.address,
   social: site.social,
+  place: '', tz: '',              // footer location and clock: the client's real city and IANA zone, e.g. 'Bombay', 'Asia/Kolkata'
 };
 export const yr = 2026;

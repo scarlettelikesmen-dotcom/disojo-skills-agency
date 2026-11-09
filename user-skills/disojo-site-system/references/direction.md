@@ -8,9 +8,9 @@
 3. `direction-families.md` and `design-system-rules.md` are vocabulary and measurements. They are not a menu. A screen that resembles a family's lineage has failed.
 
 ## Each of the three
-In `brief/A/`, `brief/B/`, `brief/C/`: `concept.txt` (how the real thing does the work here, one line), `tokens.json` (`templates/tokens.example.json`, no value carried over from the example), `preview.html`. One screen, phone and desktop, real copy and real material only.
+In `brief/A/`, `brief/B/`, `brief/C/`: `concept.txt` (how the real thing does the work here, one line), `tokens.json` (`templates/tokens.example.json`, no value carried over from the example), `site/src/pages/first/a.astro` (b, c; from `templates/first-screen.astro`). Astro, never a loose HTML file. One screen, phone and desktop, real copy and real material only.
 Every screen answers: what is the real thing, what does it do, what would be left if I removed it? If the answer to the last is "a normal landing page", redraw.
 Interaction belongs here too: how the one action behaves comes from the idea.
 
 ## Render and send
-`node $SK/scripts/render_directions.cjs <project>/brief` writes desk.png, phone.png and `brief/compare.html`. Look at every image yourself. Run `side_by_side.cjs` on each against the closest references and write what they do that we do not. Then send the three PNGs and the sheets, say what is stock, AI or missing, say which I would pick and what is weak about it. `log.py <slug> show`, then `log.py <slug> verdict yes/no "<their words>"`. I never say it holds up or beats a reference: Tejjomay decides that.
+`node $SK/scripts/render_directions.cjs <project>/brief` builds the Astro site and writes desk.png, phone.png and `brief/compare.html`. For the side-by-side URL, start the site with `preview_start` and use `http://localhost:<port>/first/a/`. Look at every image yourself. Run `side_by_side.cjs` on each against the closest references and write what they do that we do not. Then send the three PNGs and the sheets, say what is stock, AI or missing, say which I would pick and what is weak about it. `log.py <slug> show`, then `log.py <slug> verdict yes/no "<their words>"`. I never say it holds up or beats a reference: Tejjomay decides that.

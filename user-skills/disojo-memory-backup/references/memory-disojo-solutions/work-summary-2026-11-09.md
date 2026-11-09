@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
-  modified: 2026-11-09T02:07:50.121Z
+  modified: 2026-11-09T14:44:13.247Z
 ---
 
 **2026-11-09.** Kiran Roy: design-v1 rejected as default slop; design stopped, nothing further built until Tejjo says so. TODO(Kiran) inputs still open (student proof, "1000+", 25,000 Founders Pass, bundle links, category pairing, "Siya Goyal" title).
@@ -13,6 +13,8 @@ metadata:
 Tejjo asked to read every skill for the website flagship offer plus CLAUDE.md and "fix everything". Audit findings: no idea stage; rulebook prescribed the hated hero; anti-slop rule lost in the 2 Nov merge; system built as a template; enforcement backwards (hook forces the defect gate, side-by-side self-scored); imported skills teach slop; lessons stuck in project memory, skills map damaged, three reference lists.
 
 **Done and verified:** disojo-site-system now runs intake, idea, message, three first screens, build, defect checks, ship. New `references/idea.md`, `defaults-to-avoid.md`, `templates/IDEA.md`. Hero recipe removed. `site_guard.cjs` has a `pre` mode wired as PreToolUse (14 pipe tests passed). Gate now fails Fraunces/Inter/Instrument Serif and the one-word h1 accent (run on Kiran design-v1: 4 FAIL, 4 WARN, it passed before). side_by_side no longer self-scores. Flagship map, process and one reference list repaired. Kiran `brief/IDEA.md` stub added.
-**Not done:** CLAUDE.md untouched (draft awaiting Tejjo), six imported skills not archived, mirror not pushed. See [[project-offer-skills-plan]].
+**Later:** six imported skills archived with useful parts moved; Astro-only and footer location/clock rules added. **Not done:** CLAUDE.md swap (draft awaiting Tejjo), mirror not pushed. See [[project-offer-skills-plan]].
+
+**Latest direction from Tejjo:** keep the 20 marketing skills; bring brand-launch, brand-measurement, brand-voice into Visual identity; review the six imported skills together first; then website types by brand type. Details in [[project-offer-skills-plan]].
 
 Backup before edits: `~/.claude/skills-archive/2026-11-09-pre-fix/`. Rest of the state: see [[feedback-idea-before-pixels]]. Nothing deployed, nothing pushed.

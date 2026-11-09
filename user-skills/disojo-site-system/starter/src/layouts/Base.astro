@@ -3,6 +3,7 @@ import '../styles/tokens.css';
 import '../styles/base.css';
 import '../styles/sections.css';
 import Btn from '../components/Btn.astro';
+import FootPlace from '../components/FootPlace.astro';
 import { BRAND, yr } from '../data/brand.js';
 interface Props { title: string; desc?: string; route?: string; og?: string; dark?: boolean }
 const { title, desc = '', route = '/', og = '', dark = false } = Astro.props;
@@ -40,6 +41,7 @@ const { title, desc = '', route = '/', og = '', dark = false } = Astro.props;
     <slot name="footer" />
     <div class="foot-base t-label">
       <span>© {yr} {BRAND.name}</span>
+      <FootPlace />
       <a class="credit" href="https://disojostudio.com" target="_blank" rel="noopener">Design &amp; Systems · © Disojo Studio 2026</a>
     </div>
   </footer>

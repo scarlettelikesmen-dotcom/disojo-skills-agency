@@ -1,0 +1,15 @@
+---
+// Footer location and live local clock (Tejjomay, 2026-11-09). Set BRAND.place and BRAND.tz from the client's real address.
+// Renders nothing until both are set, so a city is never guessed. The look is a working default: redraw it from the idea.
+import { BRAND } from '../data/brand.js';
+const { place, tz } = BRAND;
+---
+{place && tz && <span class="foot-place">{place}{' '}<time data-clock data-tz={tz} style="font-variant-numeric:tabular-nums"></time></span>}
+<script>
+  const clocks = document.querySelectorAll('[data-clock]');
+  const tick = () => {
+    clocks.forEach((c) => { c.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: c.dataset.tz }).format(new Date()); });
+    setTimeout(tick, 60000 - (Date.now() % 60000));
+  };
+  if (clocks.length) tick();
+</script>

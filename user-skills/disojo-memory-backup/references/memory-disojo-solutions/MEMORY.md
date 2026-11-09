@@ -67,3 +67,5 @@
 - [Offer skills plan](project-offer-skills-plan.md) — READ FIRST for skills work: CLAUDE.md under 25, prune skills, one complete skill per offer, benchmarks inside skills; nothing removed yet
 - [Work summary 2026-11-09](work-summary-2026-11-09.md) — Kiran stopped, skills audit, root fix, backup location
 - [Software only decision 2026-11-09](project-decision-software-only-2026-11-09.md) — no content agency, no rename; offer draft in content-hub/brands/disojo/offer.md, blanks await Tejjo
+- [Astro only](feedback-astro-only.md) — hard rule 2026-11-09: every website in Astro from first screen to launch, no HTML sites; enforced by guard, gate, deploy
+- [Footer location and clock](feedback-footer-location-clock.md) — 2026-11-09: every site footer has real location and a small live clock

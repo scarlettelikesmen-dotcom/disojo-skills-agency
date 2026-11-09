@@ -79,6 +79,7 @@ if (mode === 'pre') {
   }
   const file = path.resolve(input.cwd || process.cwd(), ti.file_path || ti.path || '');
   const proj = projectOf(file);
+  if (proj && /\.html?$/i.test(file) && !IGNORE.test(file) && gated(proj)) deny(`Websites are built in Astro only (Tejjo, 2026-11-09). No .html files in ${path.basename(proj)}: use site/src/pages/*.astro. First screens go in site/src/pages/first/ (templates/first-screen.astro).`);
   if (proj && DESIGN.test(file) && !IGNORE.test(file) && gated(proj) && !picked(proj)) deny(noPick(proj));
   process.exit(0);
 }

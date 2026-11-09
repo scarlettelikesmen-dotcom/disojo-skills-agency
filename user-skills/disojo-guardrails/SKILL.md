@@ -39,3 +39,6 @@ Async or dynamic UI must explicitly support all 5 states:
 ## 5. Machine Verification Over Mental Simulation
 - Before presenting any code to Tejjo, the agent must run npx tsc --noEmit and verify 0 errors.
 - Verify visual clearance without collision or text truncation.
+
+## Product UI
+Dashboards, admin panels, portals: `references/product-ui-rules.md`.

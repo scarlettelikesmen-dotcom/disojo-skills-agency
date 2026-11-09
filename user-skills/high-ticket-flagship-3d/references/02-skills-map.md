@@ -51,7 +51,7 @@ Skills live in `~/.claude/skills`. Invoke by name. This map says **when** each i
 
 ## E. Design craft
 What not to do: `disojo-site-system/references/defaults-to-avoid.md`, the one list. Interaction craft only: `make-interfaces-feel-better`, `emil-design-eng`. Copy: `no-ai-slop`. Panels, carousels and decks: `disojo-panel-designer`, `frontend-slides`.
-**Do not use on a site (under review with Tejjomay since 2026-11-09):** `design-taste-frontend`, `high-end-visual-design`, `anti-slop-design`, `gpt-taste`, `ui-ux-pro-max`, `redesign-existing-projects`.
+Build correctness: `disojo-site-system/references/build-craft.md`. The six imported design skills were archived 2026-11-09 (`skills-archive/2026-11-09/`) after review with Tejjomay.
 
 ## F. Motion
 `motion-foundations`, `motion-patterns`, `motion-advanced`, `disojo-motion-craft`, `review-animations` (audit motion code). Brand ease and durations come from `brand/tokens.json`.
@@ -73,13 +73,14 @@ What not to do: `disojo-site-system/references/defaults-to-avoid.md`, the one li
 `disojo-memory-backup` (back up notes; it pushes to GitHub, ask first). `context-budget` if the context fills. `ai-brain` is not part of this workflow.
 
 ## I. Do NOT use for the flagship (out of scope unless the client buys it separately)
-`brand-architecture`, `brand-launch`, `brand-measurement`, `brand-partnerships`, `personal-brand`, `b2b-brand-marketing`, `d2c-marketing`, `email-marketing`, `whatsapp-marketing`, `aso`, `ugc-strategy`, `influencer-marketing`, `meta-ads`, `google-ads`, and the content-operation skills (`disojo-reel-studio`, `disojo-carousel-studio`, `disojo-content-*`). They are separate services. Bringing them in is a scope change.
+`brand-architecture`, `brand-partnerships`, `personal-brand`, `b2b-brand-marketing`, `d2c-marketing`, `email-marketing`, `whatsapp-marketing`, `aso`, `ugc-strategy`, `influencer-marketing`, `meta-ads`, `google-ads`, and the content-operation skills (`disojo-reel-studio`, `disojo-carousel-studio`, `disojo-content-*`). They are separate services. Bringing them in is a scope change.
 
 ## I2. The rest of the installed skills (deliberately not part of this offer)
 The remaining roughly 50 installed skills are social-content and marketing tools (reels, carousels, hooks, captions, hashtags, comment and DM tools, analytics readouts, trend and competitor teardown for social accounts, X and LinkedIn, creator outreach, UTM and paid social briefs) plus a few workflow utilities (`santa-method`, `strategic-compact`). They belong to the content operation or to other services. Use them only if the client buys that work separately; the guidebook does not depend on them.
 
 ## J. Overlaps and which wins
-- Voice: `brand-voice` over `brand-voice-arnab`.
+- Voice, both used in the Visual identity offer: `brand-voice` when the client has real writing to learn from (ignore its Affaan/ECC defaults); `brand-voice-arnab` when they have none.
+- Launch and proof, both in the offer since 2026-11-09: `brand-launch` for rollout order, sized down for an owner-run business (no press-wire timetable); `brand-measurement` only for what such a business can actually read (branded search, direct traffic, enquiries and their source, close rate), with the baseline taken BEFORE launch. Skip its awareness surveys and its CAC correlation line unless real data exists.
 - Logo: `disojo-logo-design` for finals; `brandkit` for the board.
 - Positioning: `brand-positioning` (full) or `positioning-audit` (quick); not both.
 - Postcards and Ascender are never reference builds for this tier, wherever a skill mentions them.

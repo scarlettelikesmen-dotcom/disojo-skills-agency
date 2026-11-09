@@ -23,7 +23,7 @@
     "grey":   { "hex": "#808080", "job": "secondary text" },
     "spare":  null
   },
-  "radius": "SET FROM THE IDEA",
+  "radius": "sharp, soft, round or pill: pick one from the idea",
   "grain": false,
   "motion": { "easeInOut": "cubic-bezier(0.83,0,0.17,1)", "easeOut": "cubic-bezier(0.16,1,0.3,1)", "fast": 0.3, "base": 0.5, "slow": 0.75 },
   "label_grammar": "",
