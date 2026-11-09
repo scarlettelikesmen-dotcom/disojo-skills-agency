@@ -1,0 +1,10 @@
+---
+// The one button on every page. tone: '' (ink), 'line' (outline), 'acc' (accent surface). size 'sm' for the nav.
+interface Props { href: string; label: string; tone?: '' | 'line' | 'acc'; size?: '' | 'sm'; ext?: boolean; class?: string }
+const { href, label, tone = '', size = '', ext = false, class: cls = '' } = Astro.props;
+const ar = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 10 10 2M4 2h6v6"/></svg>';
+---
+<a class:list={['btn', tone, size, cls]} href={href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>
+  <span class="roll"><span>{label}</span><span aria-hidden="true">{label}</span></span>
+  <i class="ar" aria-hidden="true" set:html={ar + ar} />
+</a>

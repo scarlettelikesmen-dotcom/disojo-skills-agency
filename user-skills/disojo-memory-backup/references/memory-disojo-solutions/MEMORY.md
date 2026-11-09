@@ -70,4 +70,8 @@
 - [Astro only](feedback-astro-only.md) — hard rule 2026-11-09: every website in Astro from first screen to launch, no HTML sites; enforced by guard, gate, deploy
 - [Footer location and clock](feedback-footer-location-clock.md) — 2026-11-09: every site footer has real location and a small live clock
 - [Approved benchmarks](project-approved-benchmarks.md) — eight quality-bar sites Tejjo approved 2026-11-10; 133 more judged on the yes or no page, 77 survive round 2
-- [Work summary 2026-11-10](work-summary-2026-11-10.md) — benchmark judging, ERA study, two first-screen gate fails; nothing deployed; the walk not started
+- [Work summary 2026-11-10](work-summary-2026-11-10.md) — benchmark judging, ERA study, gate fails, 84-site walk done and written to design-moves.md; nothing deployed
+- [Verified claims](reference-verified-claims.md) — what Disojo may publish without asking
+- [Projects and working rules](reference-projects.md) — Disojo facts, goals, site workflow, content, shipped work, moved from CLAUDE.md
+- [Environment](reference-environment.md) — tools, backups, screenshots, venv, Vercel notes
+- [lilt](project-lilt.md) — READ FIRST for lilt: Mumbai clothing, bakery identity picked 2026-11-10, Batch 001 launch, first real run of the new system

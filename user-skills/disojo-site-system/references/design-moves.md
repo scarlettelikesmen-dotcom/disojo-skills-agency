@@ -11,7 +11,7 @@ Everything here can be misused the same way the old hero formula was. Picking "w
 - **Order is fixed.** What only this client has, then the idea in words, then Tejjomay picks (`idea.md`). Only after that open this file, to push the picked idea further or to see how someone solved the same mechanical problem.
 - **Never open this file to get an idea.** Never offer a move from it as one of the three ideas.
 - **Swap test.** Take the client's name off. If the move still works for the next client unchanged, it is decoration. Cut it.
-- **One or two moves per site.** The sites that work commit to one thing for the entire page. The sites that felt weakest stacked effects.
+- **One or two moves per site.** The sites that work commit to one thing for the entire page.
 - **Never lift** a reference's font, copy, images or code.
 - This file cannot make anything good. It can only stop us re-researching and give vocabulary. Tejjomay remains the check.
 
@@ -25,17 +25,17 @@ The best pages have one idea that came out of the thing itself, and the whole pa
 | Twofold Therapy | "Twofold" | Double-exposure photographs of one person |
 | Minémal | The name | Splits into MIN and ÉMAL, each half explains itself |
 | Teenage Engineering | Dry humour | Ten screens of following the product's absurd shadow |
-| Daylight | A screen you can read in sun | The page goes from day to night |
+| Daylight | The name, sunlight | Real device outdoors, then the page goes from day to night |
 | Grail | Timed quests | The real countdown clock is the section background |
 | Gagunashvili Chess | The board | Tile system of crowns and knights frames everything; copy speaks in chess |
-| Son Daven | Carpathian sheep and forest | Sheep and flowers in line-scan are the only illustration, and they dissolve as section changes |
-| Palmo | Coconut shell | Scalloped edge is the only section change |
+| Son Daven | Sheep and flowers | Rendered in vertical lines as the only illustration, and they dissolve as section changes |
+| Palmo | Coconut and palm | Scalloped edge is the section change, every time |
 | ERA Residence | The coast | Bougainvillea from corners, arches, colours of the view, day and night |
-| Ray Corral | Mosaic artist | Turning mosaic emblem, his signature closes the page |
-| Work by W | "We work by hand" | One plaster hand stays on screen and gestures at everything |
-| HISS | A school's years | Yearbook chapters 01, 02, 03 |
+| Ray Corral | Mosaic craft | Turning mosaic emblem, handwritten signature closes the page |
+| Work by W | Making things (my reading) | One plaster hand stays on screen, changes gesture and points at the work |
+| HISS | Real group photographs | Yearbook chapters 01, 02, 03 |
 | Mammoth Murals | Painted walls | Type behaves like a wall, marker scrawl over it |
-| Heron | Architects' software | A floor plan draws itself; product shown as drawings |
+| Heron | Architecture | A floor plan draws itself; product shown as drawings, not screenshots |
 
 Compare the ordinary ones in the same list: Case, Kvadrat, Ekomia, Barry's, Muuto, Brené Brown, Terminal below the first screen. Clean, sensible, and nothing about them belongs to that client. Tejjomay said yes to their first screens. Do not take their page structure.
 
@@ -66,7 +66,7 @@ Yale is worth study: three photographs labelled Study, Explore, Engage, and the 
 
 **6. A drawn or built world.** Illustration or objects replace photography.
 Maxima, Santioni, HISS, Heron, Gagunashvili, Grail, Palmo, Son Daven.
-Needs: real drawing or a real system. Most expensive to do well and the fastest to look like clip art (see Ascender v1 in `bottlenecks.md`).
+Needs: real drawing or a real system. Most expensive to do well and the fastest to look like clip art.
 
 Measured across the walk: median largest type 103.5 px, median 63.5 words per scroll step, median 54% of scroll steps have an image over 40% of the screen.
 
@@ -95,9 +95,9 @@ The biggest gap between these sites and our work. We stack sections; they hand o
 | Hard flip of ground colour | Monolog, Halo, Kasia, HISS | The cheapest good option; needs no effect |
 | An edge shaped from the brand | Palmo scallop, Composites feather, Délice liquid, Grail blob, Terminal notch, Vaulk notch | Same shape every time. Shape must come from the client |
 | Big arch or dome rises | ERA Residence, era.estate, Shortscut dome, Poklonnaya on phone | Only with a reason (ERA has actual arches) |
-| Block rises over a held photo | Poklonnaya orange block, Silver Pinewood | Photo stays pinned for many steps, then something comes up over it |
+| Block rises over a held photo | Poklonnaya orange block, ERA | Photo stays pinned for many steps, then something comes up over it |
 | Window grows to full screen | era.estate, Likova notch shrinking, Lava dark window | A small frame becomes the next section |
-| Photos travel past a held sentence | Lava, Silver Pinewood, Monolog ("WE CLOSE [image] THAT GAP") | Sentence pinned, images pass in front |
+| Photos travel past a held sentence | Lava, Silver Pinewood | Sentence pinned, images pass in front |
 | The product's own behaviour | Daylight day to night, Teenage Engineering's shadow | Best when available. Rare |
 | Slanted band | Spylt, Barry's | Reads cheap when alone |
 | Cut-out moves across the seam | ERA bougainvillea, Maxima creatures, Poklonnaya feathers | An object sitting across two sections sews them together |
@@ -110,9 +110,9 @@ Pacing that recurs: a big image held for several wheel steps, one line of type, 
 - **Splits apart across the frame** as you scroll, the gap holding something: ERA Residence, era.estate, Aventura, Backhouse, Palmo.
 - **Swaps in place:** Kasia.
 - **Fills grey to black on scroll:** Kasia, Aevion.
-- **Current item solid, neighbours ghosted** in a list: The First The Last, Aevion, Monolog's services.
-- **Cropped by the frame edge:** Ever, Minémal's gold line, Monolog.
-- **Image inside the sentence:** Shortscut, Monolog, Your Creative, Flim, Kozowood, Realevate.
+- **Current item solid, neighbours ghosted** in a list: The First The Last, Aevion.
+- **Cropped by the frame edge:** Ever, Minémal's gold line.
+- **Image inside the sentence:** Shortscut, Monolog (the image grows between the words on scroll), Light Factory, Flim, Kozowood, Realevate.
 - **Ghost giant behind photos:** Lingers, Backhouse, Grail's clock.
 - **Wraps around a 3D object:** FS 60P.
 
@@ -121,7 +121,7 @@ Voices: two or three at most. Very often one display face plus one tiny label fa
 ## How work and proof are shown
 
 Image first, name second, one or two numbers at most. Never a card with a paragraph.
-- One case at a time, pinned: Shortscut. Name only over huge image: The First The Last. Uneven two-column drift with tiny captions: OH Architecture, Monolog, Kononenko. Tight bright mosaic: Supersolid, Light Factory.
+- One case at a time, pinned: Shortscut. Name only over huge image: The First The Last. Uneven two-column drift with tiny captions: OH Architecture, Monolog. Tight bright mosaic: Supersolid.
 - Numbers one at a time in the centre of a turning wheel of photographs: Kononenko. As a location story: Son Daven's "31 min".
 - Press as a big list with hover images: Ray Corral. Press logos set large: Halo.
 - Real people matter on every practice site: Lava's wall of actual smiles, Aventura's actual doctor, HISS's messy group shots.
@@ -139,7 +139,7 @@ Light Factory is the example of restraint with loud colour: neon appears only on
 ## Menus
 
 - Desktop toggle found on 14 of 84, otherwise a visible nav. Your Creative has a floating pill at the bottom on every size.
-- Phone menu is a full screen almost everywhere. It is a designed screen: ERA's aubergine with script title, The Line's red with oversized links, Palmo's brown with drawn palm, Springs' with a yellow flower, Maxima's list of chapter names.
+- Phone menu is a full screen almost everywhere. It is a designed screen: ERA's aubergine with script title, OH Architecture's black with a big left list, Agrumea's orange with staggered lines, Monolith's pale full screen.
 - About opens as a side drawer over the page on Monolog rather than a new page.
 
 ## Footers
@@ -150,11 +150,11 @@ Light Factory is the example of restraint with loud colour: neon appears only on
 
 ## Phones
 
-No phone overflow on any of the 84. The better ones are rebuilt, not stacked: ERA and era.estate and Poklonnaya use arches and tall crops, FS 60P wraps type down the watch. LPAS shows the honest cheap version: same coloured tiles as a stack, and it works. Lingers shows what to avoid: a consent box taking half the phone.
+No phone overflow on any of the 84. The better ones are rebuilt, not stacked: ERA, era.estate and Poklonnaya use arches and tall crops. LPAS shows the honest cheap version: same coloured tiles as a stack, and it works. Lingers shows what to avoid: a consent banner over the phone screen.
 
 ## What it was built with
 
-Globals we could detect, so bundled sites are undercounted: Smooth scroll 53. Video 42. Canvas 34. GSAP 18, ScrollTrigger 18, Webflow 17, Lenis 16, Nuxt 9, Barba 9, Swiper 8, Shopify 6, Lottie 5, Flip 5, Three 3, Next 2. Everything above can be done in Astro. Real 3D is rare and only on product (Tejjomay's rule: 3D is Product type only).
+Globals we could detect, so bundled sites are undercounted: Smooth scroll 53. Video 42. Canvas 34. GSAP 18, ScrollTrigger 18, Webflow 17, Lenis 16, Nuxt 9, Barba 9, Swiper 8, Shopify 6, Lottie 5, Flip 5, Three 3, Next 2. Everything above can be done in Astro. Real 3D is rare. Tejjomay's rule: 3D is Product type only.
 
 ## Limits of this walk
 
@@ -250,3 +250,27 @@ Tags are first-screen move (1 to 6) and page structure (A to F), only where a si
 | Why Zero | https://why.zero.university/ | F |
 | Work by W | https://workbyw.com/ | 5 A |
 | ZETR | https://www.zetr.co/ | 4 |
+
+## Practice-site notes moved from disojo-type-local
+
+What each site does for the buyer, written 2026-11-09 from first screens. Not walked: Ethos Music, Surfing Academy, Therapy in London, Setia Law, Joseph Law. Third Space was a No in the detail round (2026-11-10). None of this is an approval.
+
+| Site | Field | What to look at |
+|---|---|---|
+| 1Million Dance Studio, 1milliondance.com | Dance | A class in session is the first screen; dancers and class types are the menu |
+| Gagunashvili Chess Academy | Chess | Speaks to the parent, not the child |
+| Ethos Music Academy, ethosmusicacademy.it | Music | Courses split by who they are for |
+| Surfing Academy, surfing.academy | Sport | One founder's voice, schedule in the menu |
+| Yale School of Music, music.yale.edu | Music | Three plain words as three tall photographs |
+| Alvin Ailey, alvinailey.org | Dance | One photograph of two hands |
+| Aventura Dental Arts | Dental | A real older patient, not a stock smile |
+| Minemal, minemal.dental | Dental | Two named people, not a clinic |
+| LAVA Dental | Dental | Leads with its landscape |
+| Twofold Therapy | Therapy | Names who leads it in the first paragraph |
+| Therapy in London, therapyin.london | Therapy | Opens as an envelope asking what you need help with |
+| Maxima Therapy | Therapy | Made for the people who bring their kids |
+| Dishoom, dishoom.com | Food | Opens on a line from the founders |
+| Délice, delice.ca | Food | Booking, ordering and gift card on the first screen |
+| Third Space | Gym | The actual room, a person training |
+| Setia Law | Law | A plain sentence on what they do |
+| Joseph Law, forthetimes.law | Law | Opens on real footage of the work |

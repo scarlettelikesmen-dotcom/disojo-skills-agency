@@ -27,11 +27,11 @@ One folder per project, one source of truth. Everything downstream (site CSS, Th
 2. `brand-discovery` for the interview, `brand-strategy` for the report.
 3. `brand-positioning` + `competitor-branding` + `target-audience`. `positioning-audit` is the older equivalent; use whichever fits, not both.
 4. `brand-naming` only if needed.
-5. Art direction brief first (`disojo-site-system`, Gate 1), then `brand-identity` (visual brief).
+5. The idea in words first (`disojo-site-system` stage 1 method, Tejjomay picks), then `brand-identity` (visual brief).
 6. Voice: the installed `brand-voice` is the original, `brand-voice-arnab` is the third-party copy. Use `brand-voice`; read the other only for ideas.
 7. **Logo: `disojo-logo-design` is the pipeline for final marks.** `brandkit` produces a fast concept board (positioning line, palette with contrast check, fonts with licence notes, logo concepts, mockups); its logos are text-built sketches, so present them as direction and finish with the logo pipeline. Always test at 24 px, one colour and inverted.
 8. `brand-guidelines` last, from the approved tokens.
-Skip for this tier unless the client asks: brand-architecture, brand-launch, brand-measurement, brand-partnerships, and the channel skills (ads, email, WhatsApp, ASO, UGC, influencer).
+Skip unless the client asks: brand-architecture, brand-partnerships, and the channel skills (ads, email, WhatsApp, ASO, UGC, influencer).
 
 ## tokens.json rules
 - Colours: 3 to 4, each with `name`, `hex`, `job`. Contrast ratio for text pairs recorded (>= 4.5:1 body, 3:1 large).

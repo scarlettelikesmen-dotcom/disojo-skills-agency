@@ -4,7 +4,7 @@
 
 ## Before drawing
 1. Read `brief/IDEA.md` and `defaults-to-avoid.md`.
-2. **Study references hands-on.** Several minutes per site in the browser: wait out the loader, scroll slow and fast, hover every kind of element, open the menu and one inner page, check the footer. Say honestly how long you studied. Ask of each one question: how does the real thing do the work? Take the principle, never the move, copy, font or images (`high-ticket-flagship-3d/references/04-no-copy-law.md`).
+2. **Use the walk, do not redo it.** The idea is picked, so `design-moves.md` is open now. For the 84 walked sites open `research/walk-2026-11-10/sheets/<id>.jpg` and the notes. Only a reference outside those 84 gets studied by hand: wait out the loader, scroll slow and fast, hover every kind of element, open the menu and one inner page, check the footer, and add it to the file. Ask of each one question: how does the real thing do the work? Take the principle, never the move, copy, font or images (`high-ticket-flagship-3d/references/04-no-copy-law.md`).
 3. `direction-families.md` and `design-system-rules.md` are vocabulary and measurements. They are not a menu. A screen that resembles a family's lineage has failed.
 
 ## Each of the three

@@ -19,3 +19,5 @@ Round 2 (detail) 2026-11-10: 77 yes, 3 no (SLIK, Third Space, USM), in `research
 **Why:** Tejjo wants to judge by the screenshot alone, then study every yes with its URL to see if it is at par. Awards do not qualify a site.
 
 **How to apply:** a yes means "Tejjo will study it", not approved. Only Tejjo's word moves a site to approved. Type-skill benchmark tables wait for this. See [[project-offer-skills-plan]].
+
+**Walk done 2026-11-10:** all 84 sites walked; one shared file by design move at `disojo-site-system/references/design-moves.md`. Use only after Tejjo picks an idea; never a menu. Do not re-research these sites, open `research/walk-2026-11-10/sheets/`. See [[feedback-idea-before-pixels]].

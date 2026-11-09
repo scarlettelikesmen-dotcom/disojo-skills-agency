@@ -1,0 +1,17 @@
+---
+// Job: open on the client's real world. A photo across the whole first screen, headline over it, one button, optional result card.
+// Needs a tier-A photo 2400px+ wide with a calm area for the type (see disojo-image-pipeline). Never stock under a client name.
+import Btn from '../Btn.astro'; import Pic from '../Pic.astro'; import Card from './Card.astro';
+interface Props { img: any; lines: string[]; sub?: string; cta: [string, string]; card?: { big: string; text: string; meta?: string } }
+const { img, lines, sub, cta, card } = Astro.props;
+---
+<section class="s-hp on-ink">
+  <Pic {...img} eager sizes="(orientation: portrait) 180vh, 100vw" class="s-hp-bg" />
+  <div class="s-hp-in wrap">
+    <h1 class="t-display s-hp-h">{lines.map((l) => <span class="ln"><span>{l}</span></span>)}</h1>
+    <div class="s-hp-b">
+      <div class="s-hp-c">{sub && <p class="t-lead">{sub}</p>}<Btn href={cta[0]} label={cta[1]} /></div>
+      {card && <Card {...card} />}
+    </div>
+  </div>
+</section>

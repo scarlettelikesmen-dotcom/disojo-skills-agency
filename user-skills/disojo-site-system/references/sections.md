@@ -5,8 +5,8 @@ Each section does one job, reads its look from tokens.css, and was checked at 15
 | Section | Job | Needs | Phone |
 |---|---|---|---|
 | `HeroType` | Type at viewport scale, only when the words are the real thing | `lines`, whatever else the idea calls for; `mega` only for 1-3 short words a line | display size, one column |
-| `HeroPhoto` | Open on the client's real world | tier-A photo 2400px+ with a calm area for type; headline, button, optional `card` | photo crops portrait (`pos` keeps the subject) |
-| `Card` | Proof on a photo: one verified number, one line, a source line | used inside HeroPhoto and ResultPhoto | spans the photo width |
+| `HeroPhoto` | Open on the client's real world | tier-A photo 2400px+; `lines` only. A sentence, button or card only if the picked idea demands it, never stacked on the photo (the gate fails that) | photo crops portrait (`pos` keeps the subject) |
+| `Card` | Proof on a photo: one verified number, one line, a source line | used inside ResultPhoto | spans the photo width |
 | `ResultPhoto` | Prove a result with a person or place | photo + card, optional heading on the 4/12 side, `flip` | photo first, card on it |
 | `Featured` | One project given room | photo, name, one line, up to 4 facts, link | stacked |
 | `PhotoStory` | A part of the story the photo tells better | 4:5 photo leads, title, 1-2 short paras, `flip` | 4:3 photo then text |

@@ -45,27 +45,7 @@ Medical, legal and work with children carry rules that vary by place. Ask the cl
 Astro, multi-page, static HTML per page (real HTML helps local search). No 3D without Tejjomay's words in `brief/IDEA.md`. Real footage only. Footer carries the real location and a small live clock, plus the Disojo credit.
 
 ## Benchmarks
-**Status 2026-11-09: candidates only, waiting for Tejjomay's cut. Seen from first screens only. The hands-on pass (hovers, menus, inner pages, phone, footer) goes here after the cut.** Screens: `~/.claude/skills/disojo-site-system/research/awwwards-2026-11-09/shots/`.
-
-| Site | Field | What to look at |
-|---|---|---|
-| 1Million Dance Studio, 1milliondance.com | Dance | A class in session is the first screen; dancers and class types are the menu |
-| Gagunashvili Chess Academy | Chess | Speaks to the parent, not the child |
-| Ethos Music Academy, ethosmusicacademy.it | Music | Courses split by who they are for |
-| Surfing Academy, surfing.academy | Sport | One founder's voice, schedule in the menu |
-| Yale School of Music, music.yale.edu | Music | Three plain words as three tall photographs |
-| Alvin Ailey, alvinailey.org | Dance | One photograph of two hands |
-| Aventura Dental Arts | Dental | A real older patient, not a stock smile |
-| Minemal, minemal.dental | Dental | Two named people, not a clinic |
-| LAVA Dental | Dental | Leads with its landscape |
-| Twofold Therapy | Therapy | Names who leads it in the first paragraph |
-| Therapy in London, therapyin.london | Therapy | Opens as an envelope asking what you need help with |
-| Maxima Therapy | Therapy | Made for the people who bring their kids |
-| Dishoom, dishoom.com | Food | Opens on a line from the founders |
-| Délice, delice.ca | Food | Booking, ordering and gift card on the first screen |
-| Third Space | Gym | The actual room, a person training |
-| Setia Law | Law | A plain sentence on what they do |
-| Joseph Law, forthetimes.law | Law | Opens on real footage of the work |
+All walked references live in one place, by design and not by industry: `disojo-site-system/references/design-moves.md`. Open it only after Tejjomay has picked the idea. Its last section keeps this type's older what-to-look-at notes.
 
 The sites Tejjomay has approved as the quality bar are in `disojo-site-system/references/approved-benchmarks.md`. Client work of ours is never a benchmark unless it is on that list.
 

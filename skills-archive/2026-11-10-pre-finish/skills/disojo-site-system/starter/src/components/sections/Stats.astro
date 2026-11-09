@@ -1,0 +1,10 @@
+---
+// Job: three or four verified numbers, each with what it measures. Never animate or round up a figure; never a filler stat.
+interface Props { label?: string; items: { v: string; l: string }[]; note?: string }
+const { label, items, note } = Astro.props;
+---
+<section class="s-sx sec wrap">
+  {label && <p class="t-label">{label}</p>}
+  <dl class="s-sx-g">{items.map((s) => <div data-reveal><dt class="t-display">{s.v}</dt><dd class="t-small muted">{s.l}</dd></div>)}</dl>
+  {note && <p class="t-label muted s-sx-n">{note}</p>}
+</section>

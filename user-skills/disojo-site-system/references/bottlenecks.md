@@ -29,12 +29,12 @@ Read before starting any site or identity. Each row is a real rejection or a rea
 ## Material
 | When, who | What happened | Real cause | Stopped by |
 |---|---|---|---|
-| 2026-11-02 KDC | One large real photo existed, so the page could not carry images. Gap list: shoot, vector logo, nine video links, badge text. | Found out at build, not at signing. | Type skill "what to collect" (`disojo-type-*`). Enforcing it at signing is **not built yet**: goes into `disojo-visual-identity`. |
+| 2026-11-02 KDC | One large real photo existed, so the page could not carry images. Gap list: shoot, vector logo, nine video links, badge text. | Found out at build, not at signing. | Type skill "what to collect" plus the signing check in `disojo-visual-identity`. **Text only:** no tool stops a job starting with material missing. |
 | 2026-11-02 KDC | A sign-up form that creates app accounts nearly got rebuilt. | Crawled like any other page. | `lessons.md`: link to the live form. **Text only.** |
 | 2026-11-08 Kiran Roy | Only 3 book renders and 5 casual photos for a paid order. | Scope agreed before material was checked. | Honest stop in `idea.md`, **text only**. Same fix as KDC. |
 
 ## Research
 | When, who | What happened | Real cause | Stopped by |
 |---|---|---|---|
-| Every project | Tejjo had to ask for references to be researched again. | Lessons lived in project folders and the scratchpad. | Benchmarks per type, inside the skills. **In progress.** Screens saved in `research/awwwards-2026-11-09/`. |
+| Every project | Tejjo had to ask for references to be researched again. | Lessons lived in project folders and the scratchpad. | 84 sites walked, findings in `design-moves.md`, sheets in `research/walk-2026-11-10/`. Each type skill points there. Re-researching them anyway: **text only**. |
 | 2026-11-09 | Reported sites as "did not load". 11 of them opened fine. | Automated browser, short waits. A hidden browser pane also slows heavy loaders to about a minute. | Method: wait, use a normal click by element, reject cookies, retry in the in-app browser. A real security check or block gets reported by name; I do not click through those. |

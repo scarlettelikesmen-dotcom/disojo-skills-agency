@@ -1,0 +1,31 @@
+{
+  "name": "A",
+  "family": "",
+  "fonts": {
+    "sans": { "family": "PICK FROM THE IDEA", "source": "google or fontshare", "weights": [500, 700], "licence": "record it" },
+    "display": { "family": "PICK FROM THE IDEA", "source": "google or fontshare", "weights": [700], "licence": "record it" },
+    "mono": null
+  },
+  "scale": {
+    "label":   { "min": 12, "max": 13, "font": "sans", "weight": 500, "tracking": -0.01, "leading": 1.25, "upper": false },
+    "small":   { "min": 14, "max": 15, "font": "sans", "weight": 500, "tracking": -0.01, "leading": 1.3 },
+    "body":    { "min": 16, "max": 18, "font": "sans", "weight": 500, "tracking": -0.01, "leading": 1.3 },
+    "lead":    { "min": 19, "max": 24, "font": "sans", "weight": 500, "tracking": -0.015, "leading": 1.2 },
+    "h3":      { "min": 22, "max": 32, "font": "display", "weight": 700, "tracking": -0.02, "leading": 1.1 },
+    "h2":      { "min": 34, "max": 64, "font": "display", "weight": 700, "tracking": -0.03, "leading": 1.0 },
+    "display": { "min": 44, "max": 128, "font": "display", "weight": 700, "tracking": -0.04, "leading": 0.92 },
+    "mega":    { "min": 64, "max": 260, "font": "display", "weight": 700, "tracking": -0.05, "leading": 0.85 }
+  },
+  "colors": {
+    "ink":    { "hex": "#000000", "job": "SET FROM THE IDEA" },
+    "paper":  { "hex": "#FFFFFF", "job": "SET FROM THE IDEA" },
+    "accent": { "hex": "#808080", "job": "SET FROM THE IDEA" },
+    "grey":   { "hex": "#808080", "job": "secondary text" },
+    "spare":  null
+  },
+  "radius": "sharp, soft, round or pill: pick one from the idea",
+  "grain": false,
+  "motion": { "easeInOut": "cubic-bezier(0.83,0,0.17,1)", "easeOut": "cubic-bezier(0.16,1,0.3,1)", "fast": 0.3, "base": 0.5, "slow": 0.75 },
+  "label_grammar": "",
+  "viewport": { "min": 390, "max": 1512 }
+}

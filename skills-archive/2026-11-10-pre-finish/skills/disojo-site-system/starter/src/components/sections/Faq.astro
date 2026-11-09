@@ -1,0 +1,9 @@
+---
+// Job: answer the questions that stop a booking. Native details/summary (works without JS); height animates where supported.
+interface Props { title: string; items: { q: string; a: string }[] }
+const { title, items } = Astro.props;
+---
+<section class="s-fq sec wrap">
+  <h2 class="t-h2">{title}</h2>
+  <div class="s-fq-l">{items.map((f) => <details><summary class="t-h3">{f.q}<i aria-hidden="true"></i></summary><p class="t-body muted">{f.a}</p></details>)}</div>
+</section>

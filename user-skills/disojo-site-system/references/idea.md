@@ -8,7 +8,7 @@ Left alone, I produce the statistical average of a landing page. Every reference
 3. **Name test.** Remove the client's name. If any competitor could use the sentence, it dies. Write another.
 4. **Skeleton check.** Picture the first screen. If it can be fully described as tag, headline, grey sub, two buttons, photo on the right, stats row, logo strip, start again. A headline and a sentence are not a crime (Mammoth and Palmo have them); a headline and a sentence with nothing behind them is.
 5. **Honest stop.** If the list has nothing that can carry a screen, say so in one line and name what would fix it: a shoot, an illustrator, a human art director. Do not design around the hole.
-6. **Name the website type.** One question: what must the buyer see before they trust this business? The object = Product (real estate included), the range = Catalogue, the work = Studio, the face and voice = Person, the people and the place = Local practice, it working = Software. Then load that type's skill (`disojo-type-*`): it sets the pages, the kind of proof, what to collect and the benchmarks. It never sets colours, fonts or layout.
+6. **Name the website type.** One question: what must the buyer see before they trust this business? The object = Product (real estate included), the range = Catalogue, the work = Studio, the face and voice = Person, the people and the place = Local practice, it working = Software (the working thing is the proof further down; Tejjomay rejected nearly every site that opened on a product screen). Then load that type's skill (`disojo-type-*`): it sets the pages, the kind of proof, what to collect and the benchmarks. It never sets colours, fonts or layout.
 7. **Send the three sentences and the type in chat.** No pixels, no mood boards, no fonts. Say which idea I would pick and why, and one thing wrong with it. Ask for one decision.
 
 ## Record
@@ -21,4 +21,4 @@ Rejected: new ideas, in words, again. Never answer a rejected idea with pixels.
 Work that truly is not a site design (a tool, a script, a data fix inside a gated folder): fill the line as `n/a - <reason>` and say so to Tejjomay.
 
 ## After the pick
-The idea decides what is otherwise left to my defaults: what fills the first screen, how many buttons exist and how they behave, what the links and rows wear (Palmo circles its buttons by hand, Squiggle underlines with its own line, Ciao strikes through). Message (stage 2) is written from it. `defaults-to-avoid.md` applies from here on.
+The idea decides what is otherwise left to my defaults: what fills the first screen, how many buttons exist and how they behave, what the links and rows wear (Palmo circles its buttons by hand, Squiggle underlines with its own line, Ciao strikes through). Message (stage 2) is written from it. `defaults-to-avoid.md` applies from here on. `design-moves.md` opens only now, to push the picked idea or solve a mechanical problem. Never open it to find an idea.

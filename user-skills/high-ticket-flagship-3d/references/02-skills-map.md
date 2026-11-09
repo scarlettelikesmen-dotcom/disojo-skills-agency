@@ -7,6 +7,9 @@ Skills live in `~/.claude/skills`. Invoke by name. This map says **when** each i
 |---|---|---|
 | `high-ticket-flagship-3d` | This guidebook. Open first, always. | the plan |
 | `disojo-site-system` | The working pipeline. Phase 2 (stage 0 intake), Phase 5 (stage 1 idea, stage 3 first screens), Phase 8 (stage 2 message), Phase 9 (stage 4 build), Phase 10 (stage 5 checks), Phase 11 (stage 6 ship). | `brief/IDEA.md`, `brief/MESSAGE.md`, `brief/BRIEF.md`, gate reports |
+| `disojo-visual-identity` | The whole identity job, signing to handover. Calls everything below in order. | signing check, `brand/`, the site |
+| `disojo-digital-systems` | The whole software job: Leak Map to roll-out. | `LEAK-MAP.md`, the system |
+| `disojo-type-*` | Website type: pages, proof, what to collect (product, catalogue, studio, person, local, software). | loaded at the idea stage |
 | `disojo-brand-system` | Phase 6. Order of brand skills, `tokens.json`, token checker. | `brand/tokens.json` |
 | `disojo-3d-lookdev` | Phase 7. Light, material, bloom recipe, test scene, 3D scope sheet. | test scene |
 
