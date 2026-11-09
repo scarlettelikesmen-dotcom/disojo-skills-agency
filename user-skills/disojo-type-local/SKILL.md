@@ -67,7 +67,7 @@ Astro, multi-page, static HTML per page (real HTML helps local search). No 3D wi
 | Setia Law | Law | A plain sentence on what they do |
 | Joseph Law, forthetimes.law | Law | Opens on real footage of the work |
 
-Our own past work is never a benchmark.
+The sites Tejjomay has approved as the quality bar are in `disojo-site-system/references/approved-benchmarks.md`. Client work of ours is never a benchmark unless it is on that list.
 
 ## Past failures on this type
 - **KDC, 2026-11-02:** approved direction, but only one large real photo existed. The shoot, logo and video links came up at build. Hence the list above.

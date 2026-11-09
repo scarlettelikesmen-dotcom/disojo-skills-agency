@@ -1,0 +1,133 @@
+<title>Benchmark Cut List</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a wall of real first screens, two across, names hidden until a site earns a yes. The screenshots carry all the colour. */
+:root { --bg:#e9eaeb; --panel:#f6f6f7; --ink:#1c1e20; --soft:#5c6166; --line:#c9ccd0; --sans:"Schibsted Grotesk",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#17191b; --panel:#212427; --ink:#eceef0; --soft:#a0a6ac; --line:#363a3e; color-scheme:dark } }
+:root[data-theme="dark"] { --bg:#17191b; --panel:#212427; --ink:#eceef0; --soft:#a0a6ac; --line:#363a3e; color-scheme:dark }
+body { background:var(--bg); color:var(--ink); font:16px/1.45 var(--sans); padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0 96px }
+body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg) }
+main { max-width:1720px; margin:0 auto }
+.top { padding-block:32px 18px; max-width:68ch }
+h1 { font-size:clamp(30px,4vw,46px); line-height:1.05; letter-spacing:-.02em; margin:0 0 10px; font-weight:700 }
+.top p { margin:0; color:var(--soft) }
+.bar { position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--bg); border-block:1px solid var(--line); padding-block:10px; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px }
+.count { font:500 14px var(--mono); font-variant-numeric:tabular-nums }
+.views { display:flex; flex-wrap:wrap; gap:6px }
+button { font:500 14px var(--sans); padding:8px 16px; border-radius:2px; border:1px solid var(--line); background:transparent; color:var(--ink); cursor:pointer }
+button:focus-visible, a:focus-visible { outline:2px solid var(--ink); outline-offset:2px }
+button[aria-pressed="true"] { background:var(--ink); border-color:var(--ink); color:var(--bg) }
+#status { font-size:14px; color:var(--soft) }
+#copy { margin-left:auto }
+.wall { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 18px; padding-top:20px }
+.card { min-width:0; display:grid; gap:8px }
+.card img { display:block; width:100%; height:auto; background:var(--panel) }
+.card.no img { opacity:.28 }
+.row { display:flex; align-items:center; gap:12px; min-height:38px }
+.num, .tag { font:500 13px var(--mono); color:var(--soft); font-variant-numeric:tabular-nums }
+.row a { font:500 14px var(--mono); color:var(--ink); overflow-wrap:anywhere; min-width:0 }
+.tag { margin-left:auto }
+.btns { margin-left:auto; display:flex; gap:6px }
+.foot { padding-top:48px; max-width:68ch; color:var(--soft) }
+.foot h2 { font-size:20px; margin:0 0 6px; color:var(--ink) }
+.foot p { margin:0 0 8px; overflow-wrap:anywhere }
+.foot a { color:var(--ink) }
+#out { width:100%; min-height:120px; margin-top:10px; font:13px/1.5 var(--mono); background:var(--panel); color:var(--ink); border:1px solid var(--line); padding:10px }
+@media (max-width:760px) { .wall { grid-template-columns:minmax(0,1fr) } #copy { margin-left:0 } }
+</style>
+<main>
+<div class="top">
+<h1>Yes or no</h1>
+<p>%%N%% landing pages, names hidden. Open Yes when you are finished and the addresses appear. Your six approved sites come first.</p>
+</div>
+<div class="bar">
+<span class="count" id="count" aria-live="polite"></span>
+<span class="views" role="group" aria-label="Show">
+<button type="button" data-view="all" aria-pressed="true">All</button>
+<button type="button" data-view="left" aria-pressed="false">Not judged</button>
+<button type="button" data-view="yes" aria-pressed="false">Yes</button>
+<button type="button" data-view="no" aria-pressed="false">No</button>
+</span>
+<span id="status" role="status">Loading your answers</span>
+<button type="button" id="copy">Copy yes list</button>
+</div>
+<textarea id="out" hidden aria-label="Your yes list" readonly></textarea>
+<div class="wall" id="wall">
+%%CARDS%%
+</div>
+<div class="foot">
+<h2>No screenshot possible</h2>
+<p>These stop at a security check, refuse the connection, need a login or are broken. Open any you care about yourself: vitra.com, ram.ac.uk, juilliard.edu, astrolighting.com, noma.dk, ayocin.com, hellotend.com, woodendot.com, schoolofrock.com, mcmaster.com, ljubicicacademy.com, mmsny.org, project2075.oakley.com.</p>
+<p>Shots are the first screen at 1512 by 864 with no scrolling, so film and 3D can look weaker than on your screen. Cookie and sign-up pop-ups are removed where I could remove them; a few remain.</p>
+</div>
+</main>
+<script>
+(function () {
+  var cards = [].slice.call(document.querySelectorAll('.card[data-url]'));
+  var byId = {}; cards.forEach(function (c) { byId[c.dataset.id] = c; });
+  var approved = [].slice.call(document.querySelectorAll('.card.ok'));
+  var state = {}, view = 'all', db = null, KEY = 'landing-verdicts';
+  var status = document.getElementById('status'), out = document.getElementById('out');
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) {}
+  function keep() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+  function show() {
+    var y = 0, n = 0;
+    cards.forEach(function (c) {
+      var v = state[c.dataset.id] || '';
+      if (v === 'yes') y++; if (v === 'no') n++;
+      c.classList.toggle('no', v === 'no');
+      c.querySelector('[data-v="yes"]').setAttribute('aria-pressed', String(v === 'yes'));
+      c.querySelector('[data-v="no"]').setAttribute('aria-pressed', String(v === 'no'));
+      c.querySelector('.link').hidden = view !== 'yes' || v !== 'yes';
+      c.hidden = !(view === 'all' || (view === 'left' && !v) || view === v);
+    });
+    approved.forEach(function (c) { c.hidden = !(view === 'all' || view === 'yes'); });
+    document.getElementById('count').textContent = y + ' yes, ' + n + ' no, ' + (cards.length - y - n) + ' left';
+  }
+  var chain = Promise.resolve();
+  function save(id, v) {
+    keep();
+    if (!db) { status.textContent = 'Saved in this browser only'; return; }
+    status.textContent = 'Saving';
+    chain = chain.then(function () {
+      var d = db.doc('verdicts/' + id);
+      return v ? d.set({ v: v }) : d.delete();
+    }).then(function () { status.textContent = 'Saved'; })
+      .catch(function () { status.textContent = 'Not saved online. Kept in this browser, use Copy yes list.'; });
+  }
+  document.getElementById('wall').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-v]'); if (!b) return;
+    var id = b.closest('.card').dataset.id, v = b.dataset.v === state[id] ? '' : b.dataset.v;
+    if (v) state[id] = v; else delete state[id];
+    show(); save(id, v);
+  });
+  document.querySelector('.views').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-view]'); if (!b) return;
+    view = b.dataset.view;
+    [].forEach.call(this.querySelectorAll('button'), function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    show(); window.scrollTo(0, 0);
+  });
+  document.getElementById('copy').addEventListener('click', function () {
+    var list = cards.filter(function (c) { return state[c.dataset.id] === 'yes'; }).map(function (c) { return c.dataset.url; });
+    var text = 'Yes list\n' + list.join('\n');
+    function fallback() { out.hidden = false; out.value = text; out.select(); status.textContent = 'Select and copy the list below'; }
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { status.textContent = 'Copied ' + list.length + ' sites'; }, fallback); else fallback();
+  });
+  show();
+  function go() {
+    window.claude.use('db').then(function (d) {
+      if (!d) { status.textContent = 'Saved in this browser only'; return; }
+      db = d;
+      return db.collection('verdicts').get().then(function (snap) {
+        var next = {};
+        snap.docs.forEach(function (x) { var v = x.data().v; if (byId[x.id] && (v === 'yes' || v === 'no')) next[x.id] = v; });
+        if (snap.empty && Object.keys(state).length) { Object.keys(state).forEach(function (id) { save(id, state[id]); }); }
+        else { state = next; keep(); status.textContent = 'Saved answers loaded'; }
+        show();
+      });
+    }).catch(function () { status.textContent = 'Saved in this browser only'; });
+  }
+  if (window.claude && window.claude.use) go(); else status.textContent = 'Saved in this browser only';
+})();
+</script>
