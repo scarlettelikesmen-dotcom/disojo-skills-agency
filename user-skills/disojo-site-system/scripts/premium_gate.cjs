@@ -4,7 +4,8 @@
 // Per path, at 1512x864 and 390x844, every screen of the page is screenshotted and measured:
 //   FAIL  horizontal overflow, broken images, visible placeholders (lorem, TODO, "coming soon"), em dashes,
 //         banned words, text under 12px on phone, a first screen with neither an image nor type at scale,
-//         images shown soft (fewer source pixels than the screen needs), fewer than 3 in 8 screens carrying a big image
+//         images shown soft (fewer source pixels than the screen needs), fewer than 3 in 8 screens carrying a big image,
+//         more than one button in the first screen, a headline + sentence + button stack on a photo (lib/first_screen.cjs)
 //   WARN  composition outside the reference band (words, boxes, buttons and text sizes per screen; share of screens
 //         with a big image; largest image; share of photographs), from research/BANDS.md
 // Writes ~/Desktop/DISOJO SOLUTIONS/qa-gate/<project>/<stamp>/ (screens + report.md; never inside the repo) and stamps the project for the site guard hook.
@@ -22,6 +23,7 @@ if (process.argv[2] === '--skip') {
 
 const puppeteer = require('puppeteer-core');
 const { SCREEN } = require('./lib/screen.cjs');
+const FIRST_SCREEN = require('./lib/first_screen.cjs');
 const [root, base, ...paths] = process.argv.slice(2);
 if (!root || !base) { console.error('usage: premium_gate.cjs <root> <baseUrl> [/path ...]'); process.exit(2); }
 
@@ -53,10 +55,9 @@ const PAGE_CHECKS = () => {
   let eyebrows = 0;
   for (const h of document.querySelectorAll('h1,h2')) if (isEyebrow(h.previousElementSibling) || (!h.previousElementSibling && isEyebrow(h.parentElement.previousElementSibling))) eyebrows++;
   const sections = Math.max(1, document.querySelectorAll('section,header').length);
-  const firstButtons = [...document.querySelectorAll('a,button')].filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.top + scrollY < innerHeight && !e.closest('nav,footer,p,[aria-hidden="true"]') && e.textContent.trim().length <= 40; }).length;
   const webgl = [...document.querySelectorAll('canvas')].some(c => { try { return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) { return false; } });
   const model = performance.getEntriesByType('resource').map(r => r.name).find(n => /\.(glb|gltf|ktx2|drc|usdz)(\?|$)/i.test(n));
-  const out = { three_d: webgl || !!model || !!window.THREE ? (model ? model.split('/').pop() : 'a WebGL canvas') : '', fonts, accent, eyebrows, sections, firstButtons, place: !!document.querySelector('footer [data-clock], footer time, footer .foot-place'), credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
+  const out = { three_d: webgl || !!model || !!window.THREE ? (model ? model.split('/').pop() : 'a WebGL canvas') : '', fonts, accent, eyebrows, sections, place: !!document.querySelector('footer [data-clock], footer time, footer .foot-place'), credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
   const dpr = devicePixelRatio || 1;
   for (const i of document.querySelectorAll('img')) {
     const r = i.getBoundingClientRect(); if (r.width < 40) continue;
@@ -120,7 +121,9 @@ const PAGE_CHECKS = () => {
         await p.evaluate(() => { for (const e of document.querySelectorAll('[data-gate-hid]')) { e.style.visibility = e.dataset.gateHid === '-' ? '' : e.dataset.gateHid; delete e.dataset.gateHid; } });
         rows.push(m);
       }
-      await p.evaluate(() => { window.scrollTo(0, 0); });
+      await p.evaluate(() => { window.lenis?.scrollTo?.(0, { immediate: true }); window.scrollTo(0, 0); });
+      await new Promise(r => setTimeout(r, 1300));
+      const first = await p.evaluate(FIRST_SCREEN);
       const c = await p.evaluate(PAGE_CHECKS);
       await p.close();
       // hard checks
@@ -128,7 +131,8 @@ const PAGE_CHECKS = () => {
       if (c.fonts.length) F(`${tag}: default face loaded: ${c.fonts.join(', ')} (defaults-to-avoid.md; keep only if brief/IDEA.md needs it, and say why to Tejjo)`);
       if (c.accent.length) F(`${tag}: one-word accent in the h1: "${c.accent[0]}" (defaults-to-avoid.md)`);
       if (c.eyebrows > Math.ceil(c.sections / 3)) Wn(`${tag}: ${c.eyebrows} eyebrows in ${c.sections} sections (at most 1 per 3)`);
-      if (c.firstButtons > 1) Wn(`${tag}: ${c.firstButtons} buttons or links in the first screen outside the nav (does the idea need them?)`);
+      if (first.buttons.length > 1) F(`${tag}: ${first.buttons.length} buttons in the first screen: ${first.buttons.slice(0, 4).join(' / ')} (one at most; the idea carries the screen)`);
+      if (first.salesBlock) F(`${tag}: headline, sentence and button stacked on a photo: "${first.salesBlock.h}" / "${first.salesBlock.sub}" / "${first.salesBlock.btn}" (type over a photo is fine, the sales block is not)`);
       c.overflow ? F(`${tag}: horizontal overflow`) : P(`${tag}: no horizontal overflow`);
       if (c.broken.length) F(`${tag}: broken images ${c.broken.slice(0, 4).join(', ')}`);
       if (c.soft.length) F(`${tag}: images shown soft (need a bigger source): ${c.soft.slice(0, 4).join('; ')}`);

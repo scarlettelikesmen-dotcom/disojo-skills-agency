@@ -69,4 +69,5 @@
 - [Software only decision 2026-11-09](project-decision-software-only-2026-11-09.md) — no content agency, no rename; offer draft in content-hub/brands/disojo/offer.md, blanks await Tejjo
 - [Astro only](feedback-astro-only.md) — hard rule 2026-11-09: every website in Astro from first screen to launch, no HTML sites; enforced by guard, gate, deploy
 - [Footer location and clock](feedback-footer-location-clock.md) — 2026-11-09: every site footer has real location and a small live clock
-- [Approved benchmarks](project-approved-benchmarks.md) — six quality-bar sites Tejjo approved 2026-11-10; 133 more on the yes or no page, answers in its database
+- [Approved benchmarks](project-approved-benchmarks.md) — eight quality-bar sites Tejjo approved 2026-11-10; 133 more judged on the yes or no page, 77 survive round 2
+- [Work summary 2026-11-10](work-summary-2026-11-10.md) — benchmark judging, ERA study, two first-screen gate fails; nothing deployed; the walk not started

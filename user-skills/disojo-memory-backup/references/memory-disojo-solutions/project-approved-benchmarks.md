@@ -5,10 +5,10 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
-  modified: 2026-11-09T18:51:38.904Z
+  modified: 2026-11-09T20:41:48.591Z
 ---
 
-Tejjo approved six sites as the quality bar on 2026-11-10: shortscut.com, bymonolog.com, disojostudio.com, oharchitecture.com.au, supersolid.agency, yourcreative.com.au. Stored in the skill at `disojo-site-system/references/approved-benchmarks.md`.
+Tejjo approved eight sites as the quality bar on 2026-11-10: shortscut.com, bymonolog.com, disojostudio.com, oharchitecture.com.au, supersolid.agency, yourcreative.com.au, era-residence.com, thefirstthelast.agency. Stored in the skill at `disojo-site-system/references/approved-benchmarks.md`.
 
 Everything else studied (133 first screens) is on the yes or no page https://claude.ai/artifact/L4Zia3Rph66sXruDPT4xzB. Answers save to that artifact's database, collection `verdicts`, doc id = hostname with dots as hyphens, field `v` yes or no.
 

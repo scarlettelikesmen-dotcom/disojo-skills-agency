@@ -35,6 +35,8 @@ These are what I reach for when nothing real is driving the page. Each is out un
 - Vanity stats with no source. Never invent numbers, dates, names or brands to look real, however messy they look.
 
 ## How this list is enforced
-`premium_gate.cjs` fails Inter, Fraunces, Instrument Serif and a one-word accent in the h1, and warns on eyebrow count and on more than one button in the first screen. The rest is on me. Nothing here can be measured into taste.
+`premium_gate.cjs` fails Inter, Fraunces, Instrument Serif, a one-word accent in the h1, more than one button in the first screen, and a headline + sentence + button stack sitting on a photo. It warns on eyebrow count. Type over a photo on its own is fine: ERA Residence is exactly that. The rest is on me. Nothing here can be measured into taste.
+
+The two first-screen rules were run on every first screen Tejjomay judged on 2026-11-10: 0 of the approved sites failed, 2 of 80 yes (Halcyon, and Spylt's teaser page), 15 of 52 no. So they catch a real pattern and let the good ones through, but passing them says nothing: 37 of the 52 no sites pass too.
 
 Source: the rule lost in the 2026-11-02 merge (`skills-archive/2026-11-02/disojo-premium-site-method/SKILL.md` line 13), plus Tejjomay's verdict on Kiran Roy, 2026-11-09.
