@@ -5,8 +5,8 @@
 ## A. Craft (judged by eye, with a named reviewer: Tejjomay)
 | # | Criterion | How to check |
 |---|---|---|
-| A1 | **One concept, stated without naming a colour or effect** | The brief's first line passes the bland test (`disojo-site-system`) |
-| A2 | **One signature move**, original to this client | The distinctness test (`04-no-copy-law.md` section 5) passes |
+| A1 | **One idea built on a real thing only this client has** | `brief/IDEA.md` carries Tejjomay's pick (`disojo-site-system/references/idea.md`) |
+| A2 | **The idea shows in the small parts**, original to this client | The distinctness test (`04-no-copy-law.md` section 5) passes |
 | A3 | **Type system:** at most 2 families, deliberate tracking and scale, licences recorded | `brand/tokens.json`, `00-admin/licences.md` |
 | A4 | **Palette:** 3 to 4 colours with jobs, from the client's brand | `check_tokens.py` prints PASS; contrast recorded |
 | A5 | **Real imagery or a well-lit real object**, never decoration or fake product UI | Screenshot review; the real/AI/placeholder list in the brief |

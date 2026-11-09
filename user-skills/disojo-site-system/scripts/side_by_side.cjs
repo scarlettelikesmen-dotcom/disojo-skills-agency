@@ -1,7 +1,7 @@
 // Ours next to a reference, same size, same scroll points: node side_by_side.cjs <outDir> <ourUrl> <refUrl> [refUrl...]
 // Options (env): VP=1512x864 (viewport), STOPS=0,1,2,3,5 (scroll stops in screens), PHONE=1 adds a 390x844 pass.
 // Writes one sheet per reference and viewport: <outDir>/sbs-<ref>-<w>.jpg (rows = scroll stops, ours left, reference right),
-// and a scores.md to fill in. Nothing is shown to Tejjomay until every row is scored and ours wins or the loss is stated.
+// and a scores.md to fill in: what they do that we do not. Tejjomay decides who wins; never self-score it.
 const puppeteer = require('puppeteer-core'); const fs = require('fs'); const path = require('path');
 const [OUT, ours, ...refs] = process.argv.slice(2);
 if (!OUT || !ours || !refs.length) { console.log('usage: node side_by_side.cjs <outDir> <ourUrl> <refUrl> [refUrl...]'); process.exit(1); }
@@ -28,7 +28,7 @@ async function shots(b, url, w, h) {
   process.on('unhandledRejection', e => { console.error('STOPPED:', e.message); process.exit(2); });
   fs.mkdirSync(OUT, { recursive: true });
   const b = await puppeteer.launch({ channel: 'chrome', headless: 'new', args: ['--enable-webgl', '--ignore-gpu-blocklist'] });
-  let scores = `# Side by side: ${ours}\n\nFor every row: who wins, and the one thing the reference does that we do not. Any row we lose is fixed, or stated plainly in the first line to Tejjomay.\n\n`;
+  let scores = `# Side by side: ${ours}\n\nFor every row: the one thing the reference does that we do not. Fix it, or list it in the first line to Tejjomay. Tejjomay decides who wins.\n\n`;
   for (const [w, h] of VPS) {
     const a = await shots(b, ours, w, h);
     for (const ref of refs) {
@@ -38,7 +38,7 @@ async function shots(b, url, w, h) {
       const html = `<html><body style="margin:0;background:#111;color:#ddd;font:14px system-ui"><style>.row{display:flex;gap:12px;padding:8px 12px;align-items:flex-start}.row img{width:${cw}px;height:${ch}px;object-fit:cover}.lab{width:70px}.hd{display:flex;gap:12px;padding:12px 12px 0 94px}.hd div{width:${cw}px}</style><div class=hd><div>OURS: ${a.title}</div><div>REFERENCE: ${r.title} (${ref})</div></div>${rows}</body></html>`;
       const p = await b.newPage(); await p.setViewport({ width: 94 + cw * 2 + 24, height: 400 }); await p.setContent(html, { waitUntil: 'load' });
       const file = path.join(OUT, `sbs-${name}-${w}.jpg`); await p.screenshot({ path: file, type: 'jpeg', quality: 82, fullPage: true }); await p.close();
-      scores += `## vs ${name} at ${w}x${h} (${path.basename(file)})\n` + STOPS.map(s => `- screen ${s}: winner ___ | they do, we don't: ___`).join('\n') + '\n\n';
+      scores += `## vs ${name} at ${w}x${h} (${path.basename(file)})\n` + STOPS.map(s => `- screen ${s}: they do, we don't: ___`).join('\n') + '\n\n';
       console.log('wrote', file);
     }
   }

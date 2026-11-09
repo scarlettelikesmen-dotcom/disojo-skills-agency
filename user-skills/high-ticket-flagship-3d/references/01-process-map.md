@@ -8,7 +8,7 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 
 ## Phase 0. Fit and qualify
 **Purpose:** decide whether this client suits a flagship before anyone spends time.
-**Inputs:** a discovery call (cal.com/disojo-solutions/discovery-call), the client's current presence.
+**Inputs:** a discovery call (cal.com/disojo-studio/discovery-call), the client's current presence.
 **Good fit:** owner-run, has or can get real material (photography, product, craft, a story), wants a distinctive brand, decision-maker is on the call, budget fits the range, understands staged visibility.
 **Red flags:** no assets and no budget for 3D (then no real 3D: see `09-3d-pipeline.md`), wants a template, many decision-makers, asks for discounts instead of scope changes, a deadline that skips gates, wants to copy a competitor's site.
 **Output:** fit note in `00-admin/decisions.md`: go, no-go, or go-with-conditions. Say plainly when software or a plain site would serve them better (the Disojo site's own promise).
@@ -45,10 +45,10 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 **Output:** `brand/02-positioning.md` (+ `03-naming.md`). **Gate:** position approved. Names get a basic availability check by the client or Tejjomay; never claim a name is clear without a check.
 
 ## Phase 5. Art direction (GATE 1)
-**Purpose:** prevent flat and bland. One concept, one hero object, a story in beats, a tiny system, one signature move, a voice.
-**Steps:** run `disojo-site-system`. Study references by their system, log principles in `brief/references.md`, **copy nothing** (`04-no-copy-law.md`). Pass the bland test. Build the brief page. Write what is real, AI or placeholder.
-**Three directions are required (Tejjomay, 2026-11-08):** Gate 1 shows exactly three distinct directions (safe, bold, wildcard; `disojo-site-system/references/direction-families.md`), each passing the bland test with at most one signature move. Tejjomay picks one or a mix.
-**Output:** `brief/art-direction.md` (one per direction), `brief/references.md`. **Gate 1:** Tejjomay and client approve one direction. Nothing visual starts before this.
+**Purpose:** prevent flat and bland. One real thing only this client has, doing the work.
+**Steps:** `disojo-site-system` stage 1 (`references/idea.md`) comes first: three one-sentence ideas from real things, in words, no pixels. Tejjomay picks. Then stage 3: study references by how the real thing does the work, log principles in `brief/references.md`, **copy nothing** (`04-no-copy-law.md`), and draw three first screens of the picked idea. Write what is real, AI or placeholder.
+**Three, always (Tejjomay, 2026-11-08):** three ideas in words, then three first screens of the picked one.
+**Output:** `brief/IDEA.md`, `brief/BRIEF.md`, `brief/references.md`. **Gate 1:** Tejjomay picks the idea before anything is drawn; Tejjomay and client approve one first screen before the build. Nothing visual starts before the idea is picked.
 **Goes wrong:** a concept that decorates the client's craft as a metaphor. Build for the visitor, around the client's real proof.
 
 ## Phase 6. Identity (GATE 2)
@@ -77,19 +77,19 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 ## Phase 9. Build
 **Purpose:** build the whole site section by section, visible in stages, no big reveal at the end.
 **Steps:**
-1. Scaffold. Use `disojo-site-system` for plumbing only, **never its look**; state palette, type, nav, hero choreography, section set, transition and footer in one line before UI work.
+1. Scaffold. Use `disojo-site-system` for plumbing only, **never its look**; state how each of palette, type, nav, first screen, transition and footer follows from the picked idea, one line, before UI work.
 2. Load tokens into CSS variables and the scene; no stray hex.
-3. Build the hero and the signature moment first and show them; then the rest section by section inside ONE system (one type scale, one label style, one grid) telling ONE story, not a different layout family per section; each section finished and checked before the next (`disojo-guardrails`, `design-taste-frontend`, `high-end-visual-design`, `anti-slop-design`, `make-interfaces-feel-better`, `emil-design-eng`, `ui-ux-pro-max`).
+3. Build the hero and the signature moment first and show them; then the rest section by section inside ONE system (one type scale, one label style, one grid) telling ONE story, not a different layout family per section; each section finished and checked before the next (`disojo-guardrails`, `disojo-site-system/references/defaults-to-avoid.md`, `make-interfaces-feel-better`, `emil-design-eng`).
 4. Integrate the 3D module and per-variant theming; loader tied to real progress with a cap and skip.
-5. Motion: `disojo-site-system`, `motion-foundations`, `motion-patterns`, `motion-advanced`, `disojo-motion-craft`. Brand ease and durations from tokens. Reduced-motion path from the start.
+5. Motion: `motion-foundations`, `motion-patterns`, `motion-advanced`, `disojo-motion-craft`. Brand ease and durations from tokens. Reduced-motion path from the start.
 6. Enquiry form with real backend and honest states.
 7. **Preview deploy to its own noindex project, show Tejjomay and client in stages.** Live only when Tejjomay says "deploy".
 **Output:** running preview, committed and pushed. **Gate:** each stage shown; fixes done within the two rounds.
-**Skills:** see `02-skills-map.md`. Archetype fit: `disojo-site-system` (A1 real-3D hero for product brands; A4 cinematic for property; A8 flagship microsite for "feel it" pieces).
+**Skills:** see `02-skills-map.md`.
 
 ## Phase 10. QA and polish
-**Purpose:** prove it, with numbers.
-**Steps:** run all eight gates of `disojo-site-system`: the browser probe at 1 s, 3 s and 8 s after load and again at the 3D section; first screen; token check; 3D weights and fallbacks; Lighthouse on the **deployed** URL; honesty and accessibility; side-by-side with the closest reference (never Postcards or Ascender). Also `review-animations`, `browser-qa`, `verification-loop`, `click-path-audit` on forms and nav. Sizes: 1512x864, 1440x790, 1860x955, 1920x1080, 1280x720; phones 343, 360, 390, 430. Look at every screenshot.
+**Purpose:** prove it works, with numbers. Numbers do not prove it is good.
+**Steps:** run the defect checks of `disojo-site-system` stage 5: the browser probe at 1 s, 3 s and 8 s after load and again at the 3D section; first screen; token check; 3D weights and fallbacks; Lighthouse on the **deployed** URL; honesty and accessibility. These prove "not broken" only. Then the side-by-side with the closest reference (never Postcards or Ascender), noting what they do that we do not; Tejjomay decides who wins. Also `review-animations`, `browser-qa`, `verification-loop`, `click-path-audit` on forms and nav. Sizes: 1512x864, 1440x790, 1860x955, 1920x1080, 1280x720; phones 343, 360, 390, 430. Look at every screenshot.
 **Output:** `qa/report.md` with PASS/WARN/FAIL, numbers, screenshot paths, and an explicit "not tested" list (real phones, Safari, Firefox, slow networks, screen readers unless done).
 **Gate:** every FAIL fixed, every WARN explained.
 

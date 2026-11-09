@@ -1,5 +1,7 @@
 # Design system rules (from bymonolog.com and its 8 work sites)
 
+**Read this as measurements, not a recipe.** It says how nine sites are built. It says nothing about what a page should be: that is the picked idea (`idea.md`), and `defaults-to-avoid.md` overrides anything here.
+
 Measured 2026-11-01 with `scripts/study_site.cjs` at 1512x864 and 390x844, plus frame-by-frame review. Sites: bymonolog.com, oharchitecture.com.au, mammothmurals.com, shortscut.com, supersolid.agency, slik.com.au, hiss.sydney, backhouse.com, squiggle.sydney. Raw numbers: `references/reference-measurements.md`.
 The same sweep of our own 8 builds (CSK, Print Elements, Ascender v6, Mentable, Postcards, Mochi & Midori, disojostudio.com, KDC admin) is the "where we drift" column. **Take the system, never their fonts, curves, copy or layouts** (`high-ticket-flagship-3d/references/04-no-copy-law.md`).
 

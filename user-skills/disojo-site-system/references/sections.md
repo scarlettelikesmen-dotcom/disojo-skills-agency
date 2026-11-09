@@ -1,10 +1,10 @@
 # Section library (starter/src/components/sections/)
 
-Each section does one job, reads its look from tokens.css, and was checked at 1512x864 and 390x844 on /library/ (2026-11-02: gate 0 WARN; the only FAIL is the KDC specimen photos at 1920 px, too small for full-bleed; see below). Compose pages from these; the client's ONE bespoke signature section is the only new layout per project. Proven on disojostudio.com: the result card on a photo, zigzag steps, the button, grain.
+Each section does one job, reads its look from tokens.css, and was checked at 1512x864 and 390x844 on /library/ (2026-11-02: gate 0 WARN; the only FAIL is the KDC specimen photos at 1920 px, too small for full-bleed; see below). **This library is plumbing, not a page kit.** Use a section only when it is right for the idea; build anything the idea needs from scratch. The first screen is never picked from here by default. Composing a page out of these rows is how the template look comes back.
 
 | Section | Job | Needs | Phone |
 |---|---|---|---|
-| `HeroType` | Say what the business is at viewport scale | 3-9 word headline (`lines`), one sentence, one button; optional small proof photo; `mega` only for 1-3 short words a line | display size, one column |
+| `HeroType` | Type at viewport scale, only when the words are the real thing | `lines`, whatever else the idea calls for; `mega` only for 1-3 short words a line | display size, one column |
 | `HeroPhoto` | Open on the client's real world | tier-A photo 2400px+ with a calm area for type; headline, button, optional `card` | photo crops portrait (`pos` keeps the subject) |
 | `Card` | Proof on a photo: one verified number, one line, a source line | used inside HeroPhoto and ResultPhoto | spans the photo width |
 | `ResultPhoto` | Prove a result with a person or place | photo + card, optional heading on the 4/12 side, `flip` | photo first, card on it |
@@ -23,7 +23,7 @@ Each section does one job, reads its look from tokens.css, and was checked at 15
 | `FooterMark` | Close with the name at full width and the few links people need | goes in Base's `footer` slot | same |
 
 ## Primitives
-- `Btn` (`href`, `label`, `tone` '' / line / acc, `size` sm): the one button. Never style a second button.
+- `Btn` (`href`, `label`, `tone` '' / line / acc, `size` sm): a working default with the right motion feel, not the look. Restyle or replace it from the idea.
 - `Pic` (`src`, `w`, `h`, `alt`, `set` [[url, w]], `sizes`, `eager`, `par`, `pos`): every photo. Real width and height always. `eager` only on the first screen. `par` = drifts 6% inside its frame on scroll (off under reduced motion). Full-screen and portrait-cropped photos need `sizes="(orientation: portrait) 180vh, 100vw"` (HeroPhoto, Cta and PhotoBand set it).
 - `.ln` headline lines rise from masks in CSS on load (visible without JS). `data-reveal` fades a block in when it enters.
 - `.on-ink` flips a section to the dark tone; `.muted` is the one grey.

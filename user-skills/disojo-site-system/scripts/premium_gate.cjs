@@ -39,7 +39,22 @@ const BANNED = /\b(seamless(ly)?|cutting[- ]edge|game[- ]?changer|revolutionary|
 const PLACEHOLDER = /(lorem ipsum|\bTODO\b|TODO\(client\)|coming soon|placeholder|\[insert|xxx+|tbd\b)/i;
 
 const PAGE_CHECKS = () => {
-  const out = { credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
+  // defaults-to-avoid.md: loaded faces, one-word accent in the h1, eyebrow count, buttons in the first screen
+  const fonts = [...new Set([...document.fonts].filter(f => f.status === 'loaded').map(f => f.family.replace(/["']/g, '').trim()))].filter(f => /^(inter( tight)?|fraunces|instrument serif)$/i.test(f));
+  const accent = [];
+  for (const h of document.querySelectorAll('h1')) {
+    const hs = getComputedStyle(h), hw = h.textContent.trim().split(/\s+/).length;
+    for (const c of h.querySelectorAll('*')) {
+      const w = c.textContent.trim().split(/\s+/).filter(Boolean).length, s = getComputedStyle(c);
+      if (w >= 1 && w <= 2 && w < hw && (s.fontStyle !== hs.fontStyle || s.color !== hs.color || s.fontFamily !== hs.fontFamily)) accent.push(c.textContent.trim());
+    }
+  }
+  const isEyebrow = e => { if (!e || e.textContent.trim().length > 60 || !e.textContent.trim()) return false; const s = getComputedStyle(e), fs = parseFloat(s.fontSize); return fs <= 16 && (s.textTransform === 'uppercase' || (parseFloat(s.letterSpacing) || 0) / fs >= 0.04); };
+  let eyebrows = 0;
+  for (const h of document.querySelectorAll('h1,h2')) if (isEyebrow(h.previousElementSibling) || (!h.previousElementSibling && isEyebrow(h.parentElement.previousElementSibling))) eyebrows++;
+  const sections = Math.max(1, document.querySelectorAll('section,header').length);
+  const firstButtons = [...document.querySelectorAll('a,button')].filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.top + scrollY < innerHeight && !e.closest('nav,footer,p,[aria-hidden="true"]') && e.textContent.trim().length <= 40; }).length;
+  const out = { fonts, accent, eyebrows, sections, firstButtons, credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
   const dpr = devicePixelRatio || 1;
   for (const i of document.querySelectorAll('img')) {
     const r = i.getBoundingClientRect(); if (r.width < 40) continue;
@@ -100,6 +115,10 @@ const PAGE_CHECKS = () => {
       const c = await p.evaluate(PAGE_CHECKS);
       await p.close();
       // hard checks
+      if (c.fonts.length) F(`${tag}: default face loaded: ${c.fonts.join(', ')} (defaults-to-avoid.md; keep only if brief/IDEA.md needs it, and say why to Tejjo)`);
+      if (c.accent.length) F(`${tag}: one-word accent in the h1: "${c.accent[0]}" (defaults-to-avoid.md)`);
+      if (c.eyebrows > Math.ceil(c.sections / 3)) Wn(`${tag}: ${c.eyebrows} eyebrows in ${c.sections} sections (at most 1 per 3)`);
+      if (c.firstButtons > 1) Wn(`${tag}: ${c.firstButtons} buttons or links in the first screen outside the nav (does the idea need them?)`);
       c.overflow ? F(`${tag}: horizontal overflow`) : P(`${tag}: no horizontal overflow`);
       if (c.broken.length) F(`${tag}: broken images ${c.broken.slice(0, 4).join(', ')}`);
       if (c.soft.length) F(`${tag}: images shown soft (need a bigger source): ${c.soft.slice(0, 4).join('; ')}`);
@@ -134,9 +153,9 @@ const PAGE_CHECKS = () => {
     }
   }
   await b.close();
-  const head = `# Premium gate ${when}\n${base} ${paths.join(' ') || '/'}\n**${fails} FAIL, ${warns} WARN**\n\nScreens: ${OUT}\n\n`;
+  const head = `# Defect check (premium_gate) ${when}\nProves "not broken" only. Says nothing about whether it is good.\n${base} ${paths.join(' ') || '/'}\n**${fails} FAIL, ${warns} WARN**\n\nScreens: ${OUT}\n\n`;
   fs.writeFileSync(path.join(OUT, 'report.md'), head + lines.map(l => '- ' + l).join('\n') + '\n\n' +
-    'Now LOOK at every screen file (desktop and phone) against references/first-look.md. Numbers pass broken taste too.\n');
+    'Now LOOK at every screen file (desktop and phone) against references/first-look.md. 0 FAIL is not progress: the rejected Kiran design-v1 and VAEL both passed.\n');
   console.log(head + lines.join('\n'));
   stamp(root, `ran: ${fails} fail, ${warns} warn`);
   process.exitCode = fails ? 1 : 0;

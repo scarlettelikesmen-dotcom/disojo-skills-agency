@@ -1,8 +1,8 @@
-# Direction families (how to make three briefs that are really different)
+# Direction families (vocabulary, not a menu)
 
-**REQUIRED (Tejjomay, 2026-11-08): the checkpoint always shows exactly three directions, never one.** Tejjomay picks one or several, or asks to mix. Three variations of one idea is a failure. Each direction must differ on at least four of these six axes: **concept, type pairing, palette logic, layout skeleton, signature move, motion character.** Each direction carries at most one signature move and must pass the bland test on its own (the 2026-11-01 failure was three directions that each carried a trick and none landed; the fix is three clean, distinct directions, not fewer).
+**The idea comes first (`idea.md`).** These families are words for talking about how a page is built. Never start from one, and a screen that resembles a family's lineage has failed.
 
-Pick the three from the families below. Each family names its lineage in the references (the principle only, never the look) and its fit. Before writing, ask of the client: what is their truth (the one thing that is real and specific about them), and what do their buyers need to feel in five seconds?
+**Three, always (Tejjomay, 2026-11-08).** The three first screens carry the one picked idea in really different ways. Each must differ on at least three of: **type pairing, palette logic, layout skeleton, how the real thing moves.**
 
 | # | Family | The principle | Lineage | Fits |
 |---|---|---|---|---|
@@ -16,19 +16,9 @@ Pick the three from the families below. Each family names its lineage in the ref
 | F8 | **Illustrated and playful** | A drawn character or a hand-made line as the thread; rounded shapes; a friendly condensed display | Squiggle | Kids, education, food, community, consumer apps |
 | F9 | **Studio split** | A small intro paragraph against a giant multi-line headline; light and dark sections alternate; proof cards in the hero | Monolog | Consultancies and service firms selling trust |
 
-## Rules for choosing the three
-- **One safe, one bold, one wildcard.** Safe = the family that best fits the client's industry and assets. Bold = a family that fits their truth but not their industry's habits. Wildcard = a concept built from their name or a specific fact (the way Supersolid melts or Squiggle draws).
+## Rules
 - **Assets decide feasibility.** No good photos: F1 is out unless the brief lists a shoot. No proof numbers: F3 stats are out (say so). A weak name: F4 is out.
 - **Never reuse a previous Disojo build's look** (memory `feedback-unique-design-per-client`). Name the nearest past build in the brief and say how this one differs.
 - **Fonts must be free to use** (Google Fonts, Fontshare, or a licence the client holds). Record the licence. Never lift a reference's commercial font.
 
-## Each brief contains (see templates/BRIEF.md)
-1. Name of the direction and its family, plus the concept in one line, without naming a colour or an effect.
-2. Why it fits this client (their truth, their buyers), in two sentences.
-3. Tokens: the filled `tokens.json` (families, scale, palette with jobs, radius, motion).
-4. Home skeleton: sections in order with one line each, using only real content from intake.
-5. Inner page template (one), and how lists and long reads look.
-6. The one signature move and the interaction set (link, button, card, row, menu).
-7. Voice: three adjectives and two sample lines written from their real copy (no invented claims).
-8. Assets: what we have, what this direction needs, and what is missing.
-9. Risks and what would make it generic.
+What each screen must state is in `templates/BRIEF.md`.

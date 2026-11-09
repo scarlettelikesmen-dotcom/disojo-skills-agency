@@ -19,7 +19,7 @@ One accountable lead (Tejjomay) turns a business into a brand that looks like it
 Full deliverables list: `references/06-deliverables.md`.
 
 ## The quality bar: better than the references, never like them
-Benchmarks (quality only, see `references/03-reference-sites.md`): oharchitecture.com.au, mammothmurals.com, supersolid.agency, slik.com.au, hiss.sydney, backhouse.com, squiggle.sydney, plus the two 3D references ciaoenergy.com and palmo.co.in.
+Benchmarks (quality only): the one list is `references/03-reference-sites.md`.
 - They show the **level** of craft: confident type, one memorable idea per brand, real imagery, tight systems, purposeful motion.
 - **We must beat them on the things they miss**: a visible first screen within about a second on desktop and phone, intros capped and skippable, no overlaps, licensed fonts only, reduced-motion and no-WebGL fallbacks, accessibility, measured performance. Their measured defects are the regression list in `disojo-site-system`.
 - **We must not resemble them.** A client's site should never make a visitor think of one of these sites.
@@ -33,7 +33,7 @@ The method that finally worked on VÆL (reference sheet, lathed model, baked map
 VÆL (2026-11-03) was built from the starter without studying the references, passed every gate, and was far under them. Never again:
 1. **Teardown first, before Phase 5.** Run `disojo-site-system/scripts/teardown.cjs` on the references that matter for this client (always ciaoenergy.com and palmo.co.in for a 3D product), plus `study_site.cjs` screens. Write the principle per site in `brief/references.md`: how the hero is made, where realism comes from, what we need to match it. The teardown logs file names and sizes only and saves nothing from their servers (no-copy law holds). Tejjomay sees it before any concept.
 2. **3D proof before pages.** Gate 3 is one live screen of the client's object, shown in a `side_by_side.cjs` sheet beside the 3D references at 1512x864. No page is designed until Tejjomay says it holds up.
-3. **Side by side before every show.** Every preview goes out with a `side_by_side.cjs` sheet and its `scores.md` filled in, scored with `references/05-exceed-standard.md`. If we lose a row, the first line says so; nothing is called done while it loses.
+3. **Side by side before every show.** Every preview goes out with a `side_by_side.cjs` sheet and its `scores.md` filled in with what they do that we do not. Tejjomay decides who wins (`references/05-exceed-standard.md`, section A); I never score it.
 4. **Gates are defect checks only.** Never describe gate passes as audited, premium or ready.
 Measured 2026-11-03: Ciao is Three.js r161 in Webflow, one 163 KB can GLB with a swapped label texture per flavour (about 200-250 KB AVIF each), one 1.4 MB HDRI for light and reflections, bloom + SMAA + tone mapping, GSAP ScrollTrigger; the coloured backdrops are flat 13 KB images. palmo.co.in showed "Deployment Paused" that day: check it is live before citing it.
 
@@ -54,11 +54,11 @@ Full law, per-category rules and the distinctness test: `references/04-no-copy-l
 | 2 | Kickoff and intake | assets and access in | `disojo-site-system`, `brand-context` |
 | 3 | Discovery | findings approved | `brand-discovery`, `brand-strategy`, `positioning-audit`, `social-proof-mining` |
 | 4 | Positioning and name | position approved | `brand-positioning`, `competitor-branding`, `target-audience`, `brand-naming` |
-| 5 | Art direction | **Gate 1** brief | `disojo-site-system` |
+| 5 | Idea, then art direction | **Gate 1** Tejjomay picks the idea in words; three first screens follow | `disojo-site-system` (stages 1 and 3) |
 | 6 | Identity | **Gate 2** identity | `disojo-brand-system`, `brand-identity`, `brand-voice`, `disojo-logo-design`, `brandkit` |
 | 7 | 3D look-dev | **Gate 3** live test screen beside the 3D references (side_by_side.cjs) | `disojo-3d-lookdev`, `disojo-packaged-product-3d`, `3d-web-experience` |
 | 8 | Site flow and copy | **Gate 4** storyboard | `disojo-site-system`, `brand-messaging`, `brand-story` |
-| 9 | Build | working preview shown in stages | `disojo-site-system` (plumbing only), `disojo-site-system`, `disojo-3d-product-site` |
+| 9 | Build | working preview shown in stages | `disojo-site-system` (plumbing only), `disojo-3d-product-site` |
 | 10 | QA and polish | QA report all PASS | `disojo-site-system`, `review-animations`, `browser-qa`, `verification-loop` |
 | 11 | Launch and handover | final payment, then IP release | `disojo-site-system`, `brand-guidelines` |
 | 12 | Aftercare | 30-day check | retainer decision |

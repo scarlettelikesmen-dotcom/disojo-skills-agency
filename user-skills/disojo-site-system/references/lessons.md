@@ -4,7 +4,7 @@
 - Lighthouse, lint and smoke tests prove it works, never that it is good: Mentable v1 scored 97/100/100/100 and was rejected. Run the first-look review and the side-by-side with a reference first.
 - Never build a metaphor ABOUT the client's craft and decorate the page with it (Ascender v1 timecodes and fake editor). Build the page out of one true idea at full commitment with real material.
 - No fake product UI in a hero, even labelled illustrative. No real work to show = use real artefacts they have (Ascender v2: six real chat screenshots) and say what is not shown.
-- Hero = headline + one sentence + ONE button + one picture. Two buttons, stats, pills read as AI.
+- There is no hero formula. This file used to give one (headline, sentence, one button, one picture) and it produced the same page every time. The first screen is the picked idea (`idea.md`); the patterns that read as AI are in `defaults-to-avoid.md`.
 - Break equal-card grids: one panel with a selector beats three equal price cards. A bento has exactly the cells you have.
 - Dark screenshots sit best on a light page; check the theme against the proof material.
 - Do not caption stock mockups as client work. Products without a real image get a typographic specimen, not a fake photo.
@@ -18,7 +18,7 @@
 ## Build
 - Namespace classes per section (`s-xx-`). Generic names (`.c`, `.end`, `.bar`) collided and overlapped cards on Ascender. If a layout overlaps, measure with getBoundingClientRect before guessing.
 - First-screen text and photos are never hidden behind a reveal: an opacity reveal cost 1.7 s of LCP (93 to 100 mobile after the fix). Do not preload a hero image unless measured.
-- Motion is part of the build, not a polish pass ("very rigid", 2026-11-01): smooth scroll, line masks on headings, in-frame parallax on photos, staggered flow-in, animated FAQ height and menu, the button roll. Reference: `example-movementfirst-A/main.js`.
+- Motion is part of the build, not a polish pass ("very rigid", 2026-11-01): smooth scroll, line masks on headings, in-frame parallax on photos, staggered flow-in, animated FAQ height and menu, interaction drawn from the idea. Reference: `example-movementfirst-A/main.js`.
 - Pinned sections: sticky inner, height computed in JS, progress written to CSS vars in rAF (never framework state per frame); phones get a static layout; reduced motion gets no pin.
 - Contrast: never dim text with opacity; use a real colour (took accessibility 97 to 100 twice).
 - Fonts: self-host latin-only variable woff2 with unicode-range and preload the two above the fold, or subset Google Fonts with `&text=` (a 200 KB Japanese font CSS dropped mobile Lighthouse to 57).

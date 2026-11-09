@@ -8,6 +8,7 @@ SK="$(cd "$(dirname "$0")/.." && pwd)"; SLUG="$1"; URL="${2:-}"
 P="$HOME/Desktop/websites ARCHIVE/$SLUG-site"
 [ -e "$P" ] && { echo "exists: $P (not touching it)"; exit 1; }
 mkdir -p "$P"/{research,brief,qa,assets}
+cp "$SK/templates/IDEA.md" "$P/brief/IDEA.md"   # the site guard blocks design files until Tejjo's pick is written here
 rsync -a --exclude node_modules --exclude dist --exclude .astro --exclude 'src/data/pages/*.json' --exclude 'src/data/site.json' --exclude 'src/data/images.json' \
   --exclude 'src/pages/library.astro' --exclude 'public/library' "$SK/starter/" "$P/site/"
 mkdir -p "$P/site/src/data/pages"; echo '{}' > "$P/site/src/data/images.json"
@@ -18,7 +19,7 @@ if [ -n "$URL" ]; then
   NODE_PATH="$HOME/.disojo-tools/node_modules" node "$SK/scripts/intake.cjs" "$URL" "$P"
   python3 "$SK/scripts/make_content.py" "$P"
 else
-  # new site: an empty home until the message step (stage 1) writes the copy
+  # new site: an empty home until the message step (stage 2) writes the copy
   echo '{"route":"/","title":"","desc":"","h1":"","body":[]}' > "$P/site/src/data/pages/home.json"
 fi
 echo "$P"

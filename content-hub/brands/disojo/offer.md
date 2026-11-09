@@ -9,7 +9,21 @@ A founder-led business that is already doing good numbers, where one or both of 
 1. **The business runs on people, chats and spreadsheets.** The founder is the bottleneck. Bookings, payments, follow-ups and reports are chased by hand. (Offer A)
 2. **The business looks smaller than it is.** The identity, site and presence match the business from three years ago, not its ambition. (Offer B)
 
-Qualifier, Tejjo to set: `___` (candidates: yearly revenue band, team size, years operating, already paying for ads). Outreach needs one filter before the first list is built.
+**Qualifier (Tejjo, 2026-11-09): the business makes at least $20,000 a month in revenue (USD).** Started as "$10k, ideally $15k"; Tejjo settled on $20k. The reason: they can afford this, and buying it makes sense for them, not pointless. About ₹17 lakh a month at today's rate, check before quoting.
+
+My rule of thumb for what a business can carry (a heuristic, not a fact): the project fee at most about 10% of yearly revenue, and the retainer at most about 5% of monthly revenue.
+| | Monthly revenue needed |
+|---|---|
+| Offer A project, $5,000 to $8,000 | about $4,200 to $6,700 |
+| Offer B project, $12,000 to $20,000 | about $10,000 to $16,700 |
+| Retainer passive: A $499 / B $349 | about $10,000 / $7,000 |
+| Retainer growth: A $1,699 / B $1,099 | about $34,000 / $22,000 |
+
+So $20k a month fits all of Offer A, all of Offer B, both passive retainers and the Offer B growth retainer. Only the Offer A growth retainer ($1,699) needs a bigger business, about $34k a month: offer it at $20k only if the Leak Map shows a clear payback. Revenue is not profit, so treat the thresholds as a floor. Side effect: $20k a month is a small slice of the market, so lists will be shorter and outreach more targeted.
+
+**How to check it:** nobody knows a prospect's revenue from outside. Ask in the qualifying form for a monthly revenue band (under $20k, $20k to $40k, $40k to $100k, $100k and up). For lists, use proxies: staff count, premises, paid ads running, bookings or orders visible, years operating.
+
+**Payback rule:** the Leak Map must show a plausible payback in the client's own numbers. If it can't, we don't sell it. That is the "not pointless" test.
 
 Not for: pre-revenue ideas (MVPs only by exception, when funded), people who want to hand over a spec and get code, template buyers.
 
@@ -26,13 +40,18 @@ Not for: pre-revenue ideas (MVPs only by exception, when funded), people who wan
 
 Both can run in sequence for one client. No bundle discount: scope changes, rates do not (AGENTS.md section 2.1).
 
-## Pricing (Tejjo, 2026-11-09, currency recorded as USD: confirm)
+## Pricing (Tejjo, 2026-11-09, all prices in USD, confirmed)
 | | Project | Retainer, passive | Retainer, growth |
 |---|---|---|---|
 | Offer A: Digital systems | $5,000 to $8,000, by scope | $499 / month | $1,699 / month |
 | Offer B: Visual identity | $12,000 to $20,000, by scope | $349 / month | $1,099 / month |
 
-- **India and abroad:** rates do not change much; India is a little lower. Adjustment: `___` (percentage or flat gap).
+- **India and abroad:** India is 10% off the USD prices (confirmed 2026-11-09). Applies to projects and retainers alike unless Tejjo says otherwise.
+
+| India (10% off, USD) | Project | Retainer, passive | Retainer, growth |
+|---|---|---|---|
+| Offer A: Digital systems | $4,500 to $7,200 | $449 / month | $1,529 / month |
+| Offer B: Visual identity | $10,800 to $18,000 | $314 / month | $989 / month |
 - **Both offers for one client:** project fees add up. Retainer rule: `___` (both retainers added, or one combined retainer).
 - This replaces the rupee floors and retainer tiers in AGENTS.md sections 2.1 and 4.1 for this offer. AGENTS.md has not been edited.
 
@@ -82,11 +101,9 @@ Sender setup: use separate sending domains, never disojostudio.com. The DMARC an
 - **"Internal business tools" and "Digital systems and automation"** are the same offer (A). The site lists four services; the offer has two. The site is not changed until you say so.
 
 ## Decisions needed from Tejjo
-1. Confirm the currency is USD.
-2. Does Offer B include the website, or is the site sold with Offer A?
-3. India adjustment: percentage or flat gap.
-4. Retainer rule when a client takes both offers.
-5. The qualifier (revenue band, team size, or other).
-6. Publish a starting price: yes or no.
-7. Risk reversal line: yes or no, and the IP wording.
-8. Diagnosis limits: call length and Leak Map turnaround. Growth retainer hours.
+Settled 2026-11-09: currency is USD; India is 10% off; qualifier is at least $20k a month in revenue.
+1. Does Offer B include the website, or is the site sold with Offer A?
+2. Retainer rule when a client takes both offers.
+3. Publish a starting price: yes or no.
+4. Risk reversal line: yes or no, and the IP wording.
+5. Diagnosis limits: call length and Leak Map turnaround. Growth retainer hours.

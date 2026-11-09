@@ -4,7 +4,23 @@
 
 Measured data (stack, fonts, colours, easings, durations, defects) for all nine: `~/.claude/skills/disojo-site-system/references/reference-sites.md`. Collected 2026-10-14 in the Claude browser pane at 1382x811 and 343x811 (a narrow desktop window, not a real phone). Their hex values and eases are for analysis, never for reuse. To study another site: `disojo-site-system/scripts/inspect_site.js`.
 
-The first seven are the sites Tejjomay named as the target. The last two are the 3D benchmarks he added.
+**This is the one reference list (since 2026-11-09); other files point here.** Sites 1-7 are the ones Tejjomay named as the target, 8-9 the 3D benchmarks, 10-11 from the Monolog study. Also named by Tejjomay but not studied here: agrumeafarm.it, alche.studio.
+
+## The one idea behind each (walked 2026-11-08, home pages only; `kiran-roy-site/brief/REFERENCE-WALK-2026-11-08.md`)
+Read this before the detail below. It is the reason these sites work: one real thing from that client does the work.
+| Site | The one idea | What carries it |
+|---|---|---|
+| OH Architecture | Solid forms, a lot of calm | A house fills the screen; the photography |
+| Mammoth Murals | A wall nobody can ignore | Type as tall as sign painting, a real mural one scroll in |
+| Supersolid | The work talks, we shut up | Campaign images straight away, almost no sentences |
+| SLIK | Pushing further | Words swap, a giant word cut off by the screen |
+| HISS | A school that is not an institution | Real people, photos that look like real life |
+| Backhouse | Production should not be this hard | Almost nothing on screen: it performs the ease it sells |
+| Squiggle | The name is a drawn line | The line runs across the page and underlines the headings |
+| Ciao Energy | An honest ingredient list | The can; each claim strikes through the bad ingredient |
+| Palmo | From coconut to can | The coconut turns, splits, becomes the can; hand-circled buttons |
+| Monolog | The gap between what you built and how you look | The headline about the gap sits in two halves over one photo |
+| Shortscut | Not in the walk | Teardown in memory `reference-shortscut-teardown` |
 
 ---
 
@@ -64,7 +80,12 @@ The first seven are the sites Tejjomay named as the target. The last two are the
 
 ---
 
-## What the nine teach together (principles, not recipes)
+## 10. bymonolog.com and 11. shortscut.com
+Measured in `disojo-site-system/references/design-system-rules.md` and `reference-measurements.md`. Same no-copy law applies.
+
+---
+
+## What they teach together (principles, not recipes)
 How to study them: hands-on, several minutes each, BEFORE planning (see `disojo-site-system`, 2026-10-27 lesson).
 1. One memorable idea per brand, taken literally from the name or the product truth, built into a small strict system (one system repeated, not a different layout per section).
 2. Type does the heavy lifting; sizes are big and tight.

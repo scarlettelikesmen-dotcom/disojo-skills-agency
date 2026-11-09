@@ -19,6 +19,18 @@
     "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "30"
   },
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|SendUserFile",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.claude/skills/disojo-site-system/hooks/site_guard.cjs\" pre",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Edit|Write|MultiEdit",
