@@ -70,3 +70,71 @@ On phones the display shrinks to 52 to 90px but the small text stays 8 to 12px. 
 | About 8 text sizes, including 18 to 32px middles | Two size worlds |
 | A filled button in every section | One giant number |
 | A sticky blurred nav bar | Corner furniture |
+
+## Their actual design system (read from the live stylesheet, 2026-11-11)
+Tejjo walked the site live and named the moments: the door opening, the day/night selector, the up down hover, the oval rising, the scroll, the fonts. Here is how each is built and the token system under all of it.
+
+**The door (preloader).**
+- The page is masked with an arch-shaped image (`mask-image` plus `--arch-w`, `--arch-h`, `--arch-y`).
+- The arch grows from 24vw to 36vw, then dives off screen (`.6,0,0,1`) while the hero photo scales from .75 to 1 underneath.
+- The full version plays on the first visit only; repeat visits get a short one.
+- One shape from the building does the whole job.
+
+**By day / by night.**
+- One generic tab system: `[data-tab-trigger]` / `[data-tab-content]`, with child kinds `data-tab="img|p|slide"` that each have their own reveal.
+- The hero has two renders from the same camera, day and dusk, crossfaded.
+- The same tab primitive runs the amenities section (gated community, pool, spa, landscaping).
+- The magic is the material: two renders of one view. The code is a plain tab.
+
+**The up down hover.** Every link holds two stacked copies of its label (`nav-item_label_text` and `.is-2`). The characters of the first roll out and the twin rolls in, staggered left to right.
+
+**"View available apartments".** A circle button: a round background, the label with a magnetic inner layer, an SVG arc that draws round on hover.
+
+**The oval rising.**
+- Not an animation at all. The next `section` has `border-top-left-radius` and `border-top-right-radius` of 50rem and a higher z-index.
+- It scrolls up over a sticky hero, so the top edge is an arch rising from below.
+- It is used twice on the home page. Pure CSS plus sticky.
+
+**Type tokens.**
+- All sizes are written as `Npx / 16` in rem, and rem scales with the viewport from a 1600px artboard.
+
+| Token | Size | Leading | Tracking |
+|---|---|---|---|
+| h1 | 192 | 87.5% | -.024em |
+| h2 | 136 | 88.2% | -.024em |
+| h3 | 96 | 91.7% | -.024em |
+| h4 | 63 | 88.9% | -.016em |
+| h5 | 40 | 100% | -.008em |
+| h6 | 28 | 100% | 0 |
+| p1 | 13 | 138% | -.024em |
+| p2 | 11 | 145% | -.024em |
+| l1 | 11 | 145% | +.048em |
+| l2 | 9 | 133% | +.32em |
+| c1 | 25 | 112% | +.8em (the spaced "C O S T A") |
+| a1, a2 | 192, 120 | | (the script) |
+
+- Display steps are about √2 apart (192, 136, 96, 63, 40, 28).
+- **Rule they follow:** tracking loosens as size falls (-.024, -.016, -.008, 0), and leading opens as size falls (87.5% up to 100%). Labels go positive.
+
+**Colour tokens.**
+- Five named colours, each with alpha steps:
+  - paper `#f3f3ec` (base-0)
+  - ink `#17233b` (base-1000)
+  - velvet plum `#340c24`
+  - powder sky `#b5cedb`
+  - blush bloom `#f8bbcb`
+- Each has 100 (primary), 60 (grey text), 30 (disabled), 10 (line) and 5 (bg) alpha steps.
+- So the greys are never new colours: they are the ink at lower opacity, which keeps everything in one family.
+- The brand colours are named after the place (plum, sky, bougainvillea blush).
+
+**Space tokens.**
+- Units 0, 4, 8, 12, 16, 24, 32, 48, 64, 96, 160, 272.
+- Side offsets 48, grid gap 16.
+- A cell of 96 tall by 136 wide: they lay out in cells, not in free spacing.
+
+**What this changes for us.** The look is theirs. The *structure* is the lesson, and it goes into our tokens:
+- one artboard width with everything fluid from it
+- a √2 display ramp, plus a separate small ramp
+- tracking and leading that loosen as size falls
+- colours named from the subject, with alpha steps instead of new greys
+- a fixed unit list and a cell size

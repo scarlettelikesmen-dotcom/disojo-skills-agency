@@ -1,4 +1,4 @@
-# Taste summary: monolog at 390 (4 pages)
+# Taste summary: taste/raw/monolog at 390 (4 pages)
 
 Pages: about, contact, home, work
 
@@ -20,7 +20,7 @@ Pages: about, contact, home, work
 | 22 | 122 | 2392 | 1.1 | -0.015 | none | 700 | 29 | Hey I'm Huy. I started MONOLOG / because I watched exceptional |
 | 18 | 28 | 1042 | 1.25 | -0.01 | none | 500 | 36 | Who do you usually work with? / Who will actually be working on our proj |
 | 16 | 142 | 9172 | 1.25 | -0.01 | none | 500 | 45 | About the studio / Outcomes first, taste second |
-| 14 | 169 | 9292 | 1.25 | -0.01 | none | 500 | 51 | Close / Every creative decision we make is inter |
+| 14 | 169 | 9300 | 1.25 | -0.01 | none | 500 | 51 | Close / Every creative decision we make is inter |
 | 10 | 133 | 1534 | 1.25 | -0.015 | uppercase | 500 | 69 | EST 2022 / BASED IN MELBOURNE and HANOI |
 | 7 | 8 | 24 | 1.25 | 0.0 | uppercase | 500 | - |  |
 
@@ -36,20 +36,20 @@ Distinct sizes carrying 20+ chars: 10. Ratio largest/body: 5.8. Body size (most 
 
 ## Painted colour across 35 screens (share of pixels, rounded)
 - #080808: 34.2%
-- #d8d8d8: 9.0%
-- #d8d8d0: 7.0%
-- #181818: 3.8%
-- #101010: 3.7%
-- #202020: 3.2%
+- #d8d8d8: 9.6%
+- #d8d8d0: 6.2%
+- #181818: 4.4%
+- #101010: 3.5%
+- #202020: 2.8%
 - #000000: 2.6%
-- #282820: 2.4%
-- #181810: 2.0%
+- #282820: 2.5%
+- #181810: 2.3%
+- #a8a8a0: 1.8%
 - #f0f0f0: 1.7%
-- #d8e0d8: 1.6%
-- #080800: 1.3%
+- #d8e0d8: 1.5%
 
 ## Where text starts (left edge, px; column lines)
-12px x206, -8px x110, 404px x72, 16px x43, 204px x18, 32px x16, 424px x15, 88px x11, 24px x10, 136px x9
+12px x206, -8px x110, 404px x72, 16px x43, 204px x18, 32px x16, 424px x15, 88px x11, 24px x10, 40px x8
 Right margins of wide text: 12px x106, -376px x72, 32px x45, 88px x27, 68px x22, 48px x9
 
 ## Vertical gaps between stacked blocks in one column (px, most common)

@@ -1,0 +1,12 @@
+ok https://yourcreative.com.au/ text 99 media 42 ctl 51 hov 46 docH 11785
+ok https://yourcreative.com.au/projects text 72 media 23 ctl 47 hov 46 docH 8305
+ok https://yourcreative.com.au/services text 97 media 26 ctl 38 hov 37 docH 6236
+ok https://yourcreative.com.au/studio text 85 media 59 ctl 25 hov 23 docH 10259
+ok https://yourcreative.com.au/sectors text 34 media 6 ctl 18 hov 14 docH 3333
+ok https://yourcreative.com.au/insights text 76 media 36 ctl 38 hov 37 docH 7985
+ok https://yourcreative.com.au/projects/hireup-aged-care text 50 media 14 ctl 17 hov 16 docH 9700
+ok https://yourcreative.com.au/projects/thorne-harbour-health text 46 media 12 ctl 17 hov 16 docH 10908
+ok https://yourcreative.com.au/ text 94 media 33 ctl 41 hov 0 docH 12845
+fail https://yourcreative.com.au/studio Error: net::ERR_TIMED_OUT at https://yourcreative.com.au/studio
+ok https://yourcreative.com.au/projects text 77 media 22 ctl 39 hov 0 docH 8191
+ok https://yourcreative.com.au/projects/hireup-aged-care text 42 media 13 ctl 9 hov 0 docH 7395

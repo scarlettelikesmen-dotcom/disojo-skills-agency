@@ -1,4 +1,4 @@
-# Taste summary: monolog at 1512 (4 pages)
+# Taste summary: taste/raw/monolog at 1512 (4 pages)
 
 Pages: about, contact, home, work
 
@@ -20,7 +20,7 @@ Pages: about, contact, home, work
 | 24 | 152 | 3114 | 1.1 | -0.015 | none | 700 | 29 | Hey I'm Huy. I started MONOLOG because I / watched exceptional founders stay invisi |
 | 20 | 48 | 1209 | 1.25 | 0.0 | none | 500 | 61 | About the studio / Who do you usually work with? |
 | 18 | 171 | 13803 | 1.25 | -0.01 | none | 500 | 69 | Outcomes first, taste second / All in or nothing |
-| 16 | 103 | 3830 | 1.1 | -0.01 | none | 500 | 42 | Close / Every creative decision we make is inter |
+| 16 | 103 | 3838 | 1.1 | -0.01 | none | 500 | 42 | Close / Every creative decision we make is inter |
 | 12 | 75 | 1084 | 1.25 | -0.015 | uppercase | 500 | 59 | EST 2022 / BASED IN MELBOURNE and HANOI |
 | 10 | 52 | 312 | 1.0 | -0.017 | uppercase | 500 | - | Vinamilk / Moc Chau Creamery |
 | 8 | 8 | 24 | 1.25 | 0.0 | uppercase | 500 | - |  |
@@ -29,32 +29,32 @@ Distinct sizes carrying 20+ chars: 12. Ratio largest/body: 7.9. Body size (most 
 
 ## Text colours (share of characters)
 - #938f8a: 36.7%
-- #e8e8e3: 23.9%
+- #e8e8e3: 24.0%
 - #080807: 19.1%
-- #6b645c: 19.1%
+- #6b645c: 19.0%
 - #524d47: 1.2%
 - #efeeec: 0.0%
 
 ## Painted colour across 34 screens (share of pixels, rounded)
-- #080808: 32.4%
-- #d8d8d8: 14.4%
+- #080808: 32.1%
+- #d8d8d8: 14.9%
 - #181818: 6.3%
-- #d8d8d0: 4.3%
-- #505050: 3.0%
+- #d8d8d0: 4.6%
+- #505050: 3.1%
 - #101010: 2.8%
+- #080800: 2.5%
 - #888888: 2.2%
-- #000000: 2.0%
-- #989890: 1.6%
-- #909088: 1.5%
-- #808080: 1.4%
-- #d0d0d0: 1.3%
+- #909088: 1.8%
+- #d0d0d0: 1.6%
+- #202018: 1.3%
+- #808080: 1.3%
 
 ## Where text starts (left edge, px; column lines)
 520px x73, 1872px x72, 28px x71, -48px x54, 444px x43, 1152px x26, 912px x23, 988px x20, 888px x15, 820px x14
 Right margins of wide text: -696px x72, 376px x32, 1224px x31, 24px x28, 1148px x22, 28px x17
 
 ## Vertical gaps between stacked blocks in one column (px, most common)
-12 x57, 24 x37, 80 x21, 32 x17, 8 x7, 16 x4, 40 x4, 256 x3, 36 x1, 120 x1, 180 x1, 48 x1
+12 x57, 24 x37, 80 x21, 32 x17, 8 x7, 16 x4, 40 x4, 256 x3, 36 x2, 120 x1, 180 x1, 48 x1
 
 ## Media (90 boxes)
 Aspect ratios: 1 x22, 0.8 x15, 1.8 x15, 1.5 x12, 1.6 x6, 1.7 x6, 0.7 x4, 4.4 x4, 0.2 x2, 1.2 x2
@@ -79,7 +79,7 @@ Full-bleed media: 9; kinds: [('img', 51), ('video', 22), ('svg', 13), ('canvas',
 | 18 | 500 | none | 0px | bare | 2.4px 10px 4px 0px | 4 |
 
 Transitions on controls: `all` x129; `transform 0.35s cubic-bezier(0.48, 1.68, 0.64, 1), opacity 0.35s cubic-bezier(0.16, 1, 0.3` x47; `color 0.375s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.375s cubic-bezier(0.22, 1,` x6; `opacity 0.3s cubic-bezier(0.31, 0.75, 0.22, 1)` x4
-Hover changes (crops in each page folder, h<i>-0/1.jpg): cursor Hello world x62, inner parts move+cursor Hello world x61, opacity+cursor Hello world x19, inner parts move x16, fill+inner parts move+cursor Hello world x7, opacity x6, opacity+inner parts move+cursor Hello world x5, nothing measurable x4, fill+inner parts move x4, opacity+inner parts move x2
+Hover changes (crops in each page folder, h<i>-0/1.jpg): inner parts move+cursor Hello world x41, cursor Hello world x22, opacity+cursor Hello world x19, inner parts move x16, fill+inner parts move+cursor Hello world x7, opacity x6, opacity+inner parts move+cursor Hello world x5, fill+inner parts move x4, nothing measurable x3, opacity+inner parts move x2
 
 about: 16.9 screens, about 102 words a screen, 2.2 media a screen, ground rgb(232, 232, 227)
 

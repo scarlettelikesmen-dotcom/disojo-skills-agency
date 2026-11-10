@@ -97,13 +97,16 @@ async function wheelThrough(page, dir) {
     try {
       await page.goto(url, { waitUntil: 'load', timeout: 60000 }); await sleep(4500);
       // accept cookie banners so they do not sit on every screen
-      await page.evaluate(() => { const b = [...document.querySelectorAll('button,a,[role=button]')].find(e => /^(accept( all)?|agree|ok|got it|allow( all)?)$/i.test(e.textContent.trim())); if (b) b.click(); }); await sleep(800);
+      await page.evaluate(() => { const re = /^(accept( all)?( cookies)?|agree|i agree|ok|okay|got it|allow( all)?|decline|reject( all)?)$/i;
+        const b = [...document.querySelectorAll('button,a,[role=button],span,div')].filter(e => e.children.length <= 1 && re.test(e.textContent.trim()) && e.getBoundingClientRect().width > 0)
+          .sort((x, y) => /accept|agree|allow|ok|got/i.test(y.textContent) - /accept|agree|allow|ok|got/i.test(x.textContent))[0];
+        if (b) { b.click(); b.dispatchEvent(new MouseEvent('click', { bubbles: true })); } }); await sleep(1200);
       await page.mouse.move(W / 2, H / 2);
       await wheelThrough(page, dir);
       const m = await page.evaluate(MEASURE);
       // hover pass: each visible control near the current scroll is brought into view, hovered, diffed
       const hov = [];
-      if (W >= 700) for (const c of m.ctl.slice(0, 60)) {
+      if (W >= 700) for (const c of m.ctl.slice(0, +(process.env.HOVERMAX || 60))) {
         try {
           const h = await page.$(`[data-tp="${c.i}"]`); if (!h) continue;
           // smooth-scroll sites ignore scrollIntoView: drive Lenis if present, then native, then check
