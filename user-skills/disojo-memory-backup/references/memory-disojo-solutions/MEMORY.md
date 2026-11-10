@@ -75,4 +75,5 @@
 - [Projects and working rules](reference-projects.md) — Disojo facts, goals, site workflow, content, shipped work, moved from CLAUDE.md
 - [Environment](reference-environment.md) — tools, backups, screenshots, venv, Vercel notes
 - [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
+- [No NPC nav](feedback-no-npc-nav.md) — hard rule 2026-11-10: no blurred top bar with same-size links; nav from the idea, 3 options in words; gate enforces it
 - [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it

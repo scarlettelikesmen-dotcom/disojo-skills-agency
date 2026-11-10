@@ -83,6 +83,24 @@ const PAGE_CHECKS = () => {
   return out;
 };
 
+// NPC nav (Tejjo 2026-11-10, hard rule): a full-width bar pinned to the top with a blurred backdrop, or links all in one size, weight and face.
+const NAV_CHECK = () => {
+  const hits = [];
+  for (const e of document.querySelectorAll('body *')) {
+    const s = getComputedStyle(e); if (s.position !== 'fixed' && s.position !== 'sticky') continue;
+    const r = e.getBoundingClientRect(); if (r.top > 4 || r.width < innerWidth * 0.8 || r.height > 160 || r.height < 24 || s.visibility === 'hidden' || s.display === 'none') continue;
+    const links = [...e.querySelectorAll('a,button')].filter(a => a.offsetParent && a.textContent.trim());
+    if (links.length < 3) continue;
+    const blur = /blur/.test(s.backdropFilter || '') || /blur/.test(s.webkitBackdropFilter || '');
+    const key = a => { const c = getComputedStyle(a.querySelector('.wave .ch, span') || a); return [c.fontSize, c.fontWeight, c.fontFamily].join('|'); };
+    const sizes = new Set(links.map(key));
+    const name = (e.className && String(e.className).split(' ')[0]) || e.tagName.toLowerCase();
+    if (blur) hits.push(`${name}: blurred backdrop bar`);
+    if (links.length >= 4 && sizes.size === 1) hits.push(`${name}: ${links.length} links all in one size, weight and face`);
+  }
+  return hits;
+};
+
 (async () => {
   const when = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
   const OUT = path.join(process.env.GATE_OUT || path.join(os.homedir(), 'Desktop', 'DISOJO SOLUTIONS', 'qa-gate'), slug(path.basename(path.resolve(root))), when); fs.mkdirSync(OUT, { recursive: true });
@@ -105,13 +123,14 @@ const PAGE_CHECKS = () => {
       catch (e) { F(`${tag}: page did not load (${String(e).slice(0, 80)})`); await p.close(); continue; }
       await new Promise(r => setTimeout(r, 2500));
       const docH = await p.evaluate(() => document.documentElement.scrollHeight);
-      const rows = [];
+      const rows = [], navHits = new Set();
       for (let s = 0; s < Math.min(14, Math.ceil(docH / h)); s++) {
         await p.evaluate(y => { window.lenis?.scrollTo?.(y, { immediate: true }); window.scrollTo(0, y); }, s * h);
         await new Promise(r => setTimeout(r, 1300));
         const shot = path.join(OUT, `${pth.replace(/\W+/g, '_').replace(/^_|_$/g, '') || 'home'}-${dev}-s${String(s).padStart(2, '0')}.jpg`);
         await p.screenshot({ path: shot, type: 'jpeg', quality: 72 });
         const m = await p.evaluate(SCREEN);
+        if (s < 3) for (const x of await p.evaluate(NAV_CHECK)) navHits.add(x);
         await p.evaluate(() => { for (const e of document.querySelectorAll('body *')) { const s = getComputedStyle(e), r = e.getBoundingClientRect(); if (s.position === 'fixed' && s.pointerEvents === 'none' && r.width * r.height >= innerWidth * innerHeight * 0.85) { e.dataset.gateHid = e.style.visibility || '-'; e.style.visibility = 'hidden'; } } });
         for (const [k, md] of m.media.entries()) {
           const crop = path.join(OUT, `.c${s}${k}.png`);
@@ -139,6 +158,7 @@ const PAGE_CHECKS = () => {
       if (!c.credit) F(`${tag}: footer credit missing; it must read exactly "Design & Systems · © Disojo Studio 2026" linking to https://disojostudio.com (hard rule)`);
       if (!c.place) Wn(`${tag}: no location and small clock in the footer (hard rule; if it is built another way, say so)`);
       if (c.flatBtn.length) F(`${tag}: text button without the up down or side up down label motion (hard rule, references/text-button-motion.md): ${c.flatBtn.slice(0, 5).join(' | ')}`);
+      if (navHits.size) F(`${tag}: NPC nav (hard rule, references/defaults-to-avoid.md): ${[...navHits].join('; ')}. The nav comes from the idea: no blurred bar, a real hierarchy`);
       if (c.oldCredit) F(`${tag}: old credit "Developed by Disojo..." still visible`);
       if (c.dash.length) F(`${tag}: em dash in visible copy: "${c.dash[0]}"`);
       if (c.banned.length) F(`${tag}: banned words: ${[...new Set(c.banned)].join(', ')}`);

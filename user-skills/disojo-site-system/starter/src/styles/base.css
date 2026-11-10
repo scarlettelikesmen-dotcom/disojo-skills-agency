@@ -22,7 +22,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* nav */
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:var(--s-4);padding:var(--s-3) var(--gutter);transition:transform var(--d-base) var(--e-out),background var(--d-base)}
 .nav.hide{transform:translateY(-110%)}
-.nav.solid{background:color-mix(in srgb,var(--c-paper) 92%,transparent);backdrop-filter:blur(10px)}
+/* PLUMBING ONLY. Never ship this nav: design the nav from the picked idea (hard rule 2026-11-10, no blurred bar, no same-size links). The gate fails it. */
+.nav.solid{background:var(--c-paper)}
 body.dark .nav.solid{background:color-mix(in srgb,var(--c-ink) 92%,transparent)}
 .mark{font-weight:700;display:flex;align-items:center;gap:10px;min-height:40px}
 .links{display:flex;gap:var(--s-4)}

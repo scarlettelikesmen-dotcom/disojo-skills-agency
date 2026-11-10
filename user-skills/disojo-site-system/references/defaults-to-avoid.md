@@ -11,6 +11,7 @@ These are what I reach for when nothing real is driving the page. Each is out un
 - Fake product UI built from divs (fake dashboard, fake terminal). The real thing, a real screenshot, or nothing.
 - A text strip along the hero bottom ("Brand. Motion. Spatial."). A small paragraph floating in the corner of a heading.
 - Scroll cues. Version labels ("Beta", "v2.0") unless it really is a launch.
+- **The NPC nav (hard rule, Tejjomay 2026-11-10).** A full-width bar pinned to the top with a blurred see-through backdrop, logo left and a row of same-size links right. Every 2008 site has it. The nav is designed from the picked idea before any section, in words first with three options (Kiran Roy: the headstock is the menu, links flank it at the top, it folds into a small headstock tab, the menu is six tuning pegs). It needs a real hierarchy: the one action that matters is louder than the rest, secondary items (log in) quieter. No `backdrop-filter: blur` on a nav. `premium_gate.cjs` fails a blurred top bar, or 4+ nav links in one size, weight and face.
 - A city, time or weather strip as hero or nav decoration. The place belongs in the footer: location and a small live clock, on every site (hard rule in SKILL.md).
 - Pills or tags laid over photos. Captions posing as photo credits. Decorative coloured dots: a dot reports real state or it goes.
 - Neon glows and gradient headlines.
