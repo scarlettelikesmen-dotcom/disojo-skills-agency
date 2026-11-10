@@ -1,12 +1,14 @@
 ---
 name: project-kiran-roy-third-pass
-description: "Kiran Roy paid order, third pass 2026-11-08 - three full homes live on noindex demo kr-fronts-7qx.vercel.app (A torn, B poster, C face), awaiting Tejjo's pick"
+description: "READ FIRST for Kiran: fretboard build (direction B) finished and stashed 2026-11-10 at _archive/direction-B-guitar-2026-11-10; round 2 ideas in brief/IDEA.md awaiting pick"
 metadata:
   node_type: memory
   type: project
   originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
   modified: 2026-11-08T13:56:12.399Z
 ---
+
+**State 2026-11-10 (newest):** the fretboard site (idea 1, picked 2026-11-10) was built in full on localhost:4740 (home, story, book, courses with all 91 courses and 45 bundles from his backend, contact, legal with his T&C word for word) and stashed at `kiran-roy-site/_archive/direction-B-guitar-2026-11-10/`. Tejjo: good but not awwwards level (micro interactions, fluidity, design). Content in `site/src/data/` is reused as is. Round 2 ideas in `brief/IDEA.md` (The 91, The index, Stage lights), PICKED line blank. Open with Kiran: buying needs his developer (CORS or checkout port); login/dashboard stay his; his backend exposes /admin/settings/* without login and purchaseCount.
 
 **State 2026-11-08 (supersedes the "nothing built" notes below):** Tejjo confirmed the order is a new front linking to Kiran's existing checkout and login, using only the existing 8 images. Three full homes built and live on one noindex Vercel project (team scarlettelikesmen-dotcoms-projects, project kr-fronts-7qx): https://kr-fronts-7qx.vercel.app/a-torn/ , /b-poster/ , /c-face/ . Code `websites ARCHIVE/kiran-roy-site/third-pass/` (`deploy/` is the upload copy, `tools/` has bakes and `fullpage.cjs`; `tools/vercel.deploy.json` is the config). A = copybook torn open, "It is time to tear it up", my recommendation. B = fluoro gig posters 1998 to 2019. C = "I am not here to tell you", red halftone face, four doors.
 
