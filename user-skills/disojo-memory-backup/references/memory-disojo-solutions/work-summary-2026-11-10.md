@@ -32,3 +32,10 @@ Seven-section list for the client is complete in Claude Docs: https://claude.ai/
 2026-11-10, lilt stage 3: three first screens (box, board, bite) built in Astro at localhost:4650/first/a,b,c and sent to Tejjo with side-by-sides. Awaiting pick. Bite in C still reads partly as a cloud. Nothing deployed.
 
 2026-11-10, lilt: Tejjo picked C. Full multi-page Astro build finished on localhost:4650 and sent. Nothing deployed or pushed.
+
+## lilt, rest of the day (after compaction)
+- **Nav, logo and footer:** logo on home, links where Tejjo marked them, footer rebuilt (days-to-drop card, batch list, Back to top, fits one screen). DEPLOYED.
+- **Audit:** written to `lilt-site/qa/AUDIT-2026-11-10.md`. Batch 001 and Help fixed, main made solid. DEPLOYED.
+- **Motion and nav colour:** Astro ClientRouter, GSAP synced to Lenis, word fade on statements, nav colour fix. DEPLOYED.
+- **Pivot:** Tejjo turned lilt into a healthy vegan cookie/dessert brand. The board's look stays (my reading, not yet confirmed). I sent a 17-item needs list.
+- **Paused:** on Tejjo's word, until they say to resume. Exact state in [[project-lilt]].

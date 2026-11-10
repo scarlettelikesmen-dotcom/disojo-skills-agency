@@ -1,9 +1,73 @@
 ---
 name: project-lilt
-description: "lilt, Mumbai small-batch clothing, identity + launch of Batch 001: bakery idea picked by Tejjo 2026-11-10; first real run of the new system"
+description: "lilt: PAUSED 2026-11-10 mid-pivot from tee brand to healthy vegan cookie/dessert brand; awaiting Tejjo's answers; clothing site still live on lilt-demo"
 metadata:
+  node_type: memory
   type: project
+  originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
+  modified: 2026-11-10T04:02:50.424Z
 ---
+
+## EXACT STATE (paused 2026-11-10, Tejjo: "take it up once i tell you to")
+Do not touch lilt until Tejjo says so.
+
+**Pivot.** Tejjo: "we are turning this into a healthy desert brand". On being asked what stays, Tejjo said "stays the same, everything changes now". My reading: the brand board's look stays and everything else changes. Tejjo has not confirmed this reading.
+- What stays: the lilt script wordmark, the bitten-cookie mark, red #C8321F, blue #2450CB, pink #F0A9C0 and cream #F2E9DB, the condensed serif caps plus a sans, and the gable box.
+- What changes: the product goes from tees to vegan dessert.
+
+**Positioning card from Tejjo:**
+- What lilt is: "A proper dessert that happens to be vegan".
+- Competition: bakery cookies and dessert delivery.
+- Pain it answers: "Healthy tastes bad, has an aftertaste".
+- Voice: sure of itself, few words, sensual.
+- Look: patisserie, with deep cocoa, cream, caramel and an elegant serif. This conflicts with the board's red, blue and pink.
+- Risk: health buyers may not notice it is for them.
+
+**Brand board:** the boxes are printed "VEGAN COOKIES", "PLANT BASED" and "BENGALURU". It looks AI-generated, so it is a stand-in only. The city is Bengaluru, not the Mumbai the site shows now.
+
+**Sent to Tejjo, unanswered.** A list of 17 needs:
+- The menu, allergens, weights and box sizes.
+- Prices in rupees and whether tax is included.
+- The sweetener (the key fact for "no aftertaste").
+- Shelf life.
+- How people order: Shopify, Swiggy or Zomato, or WhatsApp.
+- Delivery area.
+- Whether batches and drops stay (is it still 1 January 2027?).
+- Confirmation of Bengaluru.
+- Address and hours.
+- Contact details.
+- FSSAI licence number.
+- Food refund policy.
+- Real cookie photos (shot list given).
+- A vector of the new cookie badge.
+- Existing lines and the vegan story.
+
+Also unanswered: whether to keep the bite idea, or start with three fresh ideas in words first.
+
+**Proposed pages:** Home, The cookies, one page per cookie, Build a box, Why no aftertaste, Delivery, Help, Legal.
+
+**Next on resume:**
+1. Get the answers above.
+2. Run a new idea round (or Tejjo keeps the bite).
+3. Rewrite `brief/IDEA.md` (`PICKED BY TEJJO:`) and `brief/MESSAGE.md`. The site guard blocks design files until then.
+4. Rebuild the content.
+
+No files have been changed for the pivot.
+
+**What exists now** (the clothing version, all deployed on lilt-demo.vercel.app, noindex):
+- Folder: `~/Desktop/websites ARCHIVE/lilt-site`. Astro 5.18.2 with Lenis and GSAP 3.15.
+- Dev server: preview config "lilt" on localhost:4650.
+- Pages: home (bite slab, then the tee sections, gable box, window photo, drop date), /batch-001/ (board plus four-tee shelf), four tee pages with a demo bag, /how/, /help/, /legal/, 404.
+- Footer: days-to-drop card, batch list, links, Back to top, the wordmark sized to one screen, place and clock, Disojo credit.
+- Astro ClientRouter: every script runs through `src/lib/page.js` onPage(signal) with cleanup.
+- Word fade on `[data-scrub]`.
+- Audit: `qa/AUDIT-2026-11-10.md`.
+- The clothing-specific parts all need replacing: tee data in `src/data/batch.js`, the bag, sizes, Plain colours, tee photos.
+- Gate: only soft-image FAILs remain.
+- Untested: Safari, real phones.
+
+---
+## History (clothing version)
 
 Client came with an idea; only material is one AI-looking board (`websites ARCHIVE/lilt-site/assets/`). Tejjo picked the bakery 2026-11-10: clothing sold like baked goods, small numbered batches, sold out when gone, gable box, cookie kept as a bite-mark stamp. "This is the identity", for the launch of Batch 001, dropping soon, not live.
 
