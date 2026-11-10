@@ -51,3 +51,21 @@ Tejjo, 2026-11-10: "not awwwards level"; "do everything A to Z (skills, systems,
 - Definitive report as an Artifact: stack, step process, key.
 - Then update the skill (stack, kernel into starter, gates).
 - Then more practice demos before any client.
+
+**Update later 2026-11-10 (Tejjo: stop scans, put everything in skills, focus on design taste)**
+- Scans stopped. Data kept in `research/code-study-2026-11-10/awwwards/`: 1,709 jury pages.
+- Medians: overall 7.40, design 7.49, usability 7.20, creativity 7.55, content 7.48. Usability is the lowest mark for 75% of winners.
+- Skill files written: `references/award-bar.md`, `references/interaction-architecture.md`, SKILL.md pointers.
+- Taste study started, `taste/` in the skill:
+  - `scripts/taste_probe.cjs`: every page, wheel scroll, every button hovered.
+  - `taste_summary.py` and `taste_compare.py`.
+  - Walked ERA (`taste/era-residence.md`) and Monolog (`taste/monolog.md`). Shared habits are in `taste/README.md`.
+- disojostudio.com compared against them:
+  - 36 text sizes against their 10 to 12
+  - 35% of characters at 20 to 47px against 16 to 18%
+  - 19 saturated filled buttons against 0
+  - 0.9 media a screen against 2 to 2.9
+- Known probe gaps:
+  - ERA's cookie accept click did not dismiss its banner.
+  - Monolog's first hover crops were wrong (fixed with Lenis and elementFromPoint checks).
+- Next: Shortscut, OH, TFTL, Supersolid, Your Creative. Then run `taste_compare` on every first screen before the side by side.

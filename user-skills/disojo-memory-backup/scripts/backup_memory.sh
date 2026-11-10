@@ -51,5 +51,5 @@ git add -A
 if git diff --cached --quiet; then echo "nothing new to commit"; exit 0; fi
 git -c user.name="Tejjomay" -c user.email="tradingprops09@gmail.com" commit -q -m "Back up skills and memory notes ($(date +%F))
 
-Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
 GIT_TERMINAL_PROMPT=0 git push -q && echo "pushed: $(git rev-parse --short HEAD)"
