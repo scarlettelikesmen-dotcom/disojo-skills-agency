@@ -77,3 +77,4 @@
 - [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
 - [No NPC nav](feedback-no-npc-nav.md) — hard rule 2026-11-10: no blurred top bar with same-size links; nav from the idea, 3 options in words; gate enforces it
 - [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it
+- [Awwwards code study 2026-11-10](project-awwwards-code-study-2026-11-10.md) — READ FIRST for site quality: 137-site code study, shared architecture found, motion kernel practice build (skill kernel/, :4790)

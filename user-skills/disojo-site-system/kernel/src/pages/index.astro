@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+const rows = [
+  ['Reveal vocabulary', 'lines, words, chars, block, rule, media', '/ph1.svg'],
+  ['Page lifecycle', 'cleanup, suspend, fonts first', '/ph2.svg'],
+  ['Pointer layer', 'roll, magnetic, cursor, follower', '/ph3.svg'],
+  ['Accent last', 'WebGL loads after the intro', '/ph4.svg'],
+];
+---
+<Base title="Kernel lab · Index" ns="index">
+  <section class="hero">
+    <canvas data-k-field aria-hidden="true"></canvas>
+    <h1 class="disp" data-reveal="chars" data-reveal-now>Motion kernel</h1>
+    <p class="lede" data-reveal="lines" data-reveal-delay="0.3">A practice page for the interaction layer every Disojo site starts from. The look is a placeholder; the motion is the test.</p>
+  </section>
+
+  <section class="sec">
+    <p class="cap" data-reveal="block">01 · What it does</p>
+    <div class="rule" data-reveal="rule"></div>
+    <h2 class="h2" data-reveal="words">Markup says what, the kernel says how</h2>
+    <p class="body" data-reveal="lines">Every element marked for reveal gets a hidden state before paint, an entrance when it scrolls in, and an exit when the page leaves. Timing and curves come from six tokens in CSS, so each site retunes the feel without touching the code.</p>
+  </section>
+
+  <section class="sec" data-follow-list>
+    <p class="cap" data-reveal="block">02 · Four parts</p>
+    <ul class="list" data-reveal-group>
+      {rows.map(([t, s, img]) => (
+        <li data-reveal="block"><a href="/second/" data-follow-src={img} data-roll-host><span data-roll><span data-roll-label>{t}</span></span><span>{s}</span></a></li>
+      ))}
+    </ul>
+    <div class="follow" data-follow-card><img src="/ph1.svg" alt="" /></div>
+  </section>
+
+  <section class="sec">
+    <div class="media" data-reveal="media"><img src="/ph2.svg" alt="Placeholder image" /></div>
+    <a class="cta" href="/second/" data-magnetic="0.35" data-roll><span data-magnetic-inner data-roll-label>Go to the second page</span></a>
+  </section>
+</Base>
