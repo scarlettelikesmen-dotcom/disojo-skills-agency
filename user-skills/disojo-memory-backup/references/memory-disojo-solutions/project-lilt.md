@@ -36,3 +36,9 @@ Batch 001 confirmed by Tejjo 2026-11-10: 4 tees at 1299 rupees tax included, 75 
 2026-11-10 later (localhost only, not deployed): Tejjo rejected the scroll-driven rack. Now Wrap stays as the bite end screen (slab 230dvh), then Cream, Plain, Panel are normal 100dvh .tee-s sections (components/TeeInfo.astro: number + details, hover back, click morph). Box sheet no longer overlaps. Nav: underlines removed, links sit left beside the logo, Bag stays top right; slab sentence moved to top 76px.
 
 2026-11-10: flowing tee sections + nav change DEPLOYED to lilt-demo.vercel.app on Tejjo's "deploy".
+
+- 2026-11-10 later: home nav now shows the logo from the start; links moved to Tejjo's marked spot (centred on 71.5% width, static below 1100px); slab sentence top 92px desktop / 76px phone. DEPLOYED to lilt-demo.
+
+- 2026-11-10 audit round (NOT deployed): main is solid cream (footer never bleeds), Batch 001 = Board + four-tee shelf + window photo + Tell; Help close-ups -> window photo; footer: days-to-drop card (Asia/Kolkata calendar), the batch list, links, Back to top, wordmark sized by JS to fit one screen (.end.flow fallback). Audit in lilt-site/qa/AUDIT-2026-11-10.md: top gaps = real photos, bite through every handover, stock/sold-out states, client facts, phone rebuild.
+- 2026-11-10: audit round DEPLOYED to lilt-demo.vercel.app (all pages 200, noindex).
+- 2026-11-10 later: Astro ClientRouter (fallback animate) + GSAP ScrollTrigger synced to Lenis (gsap.ticker drives lenis.raf); all scripts on lib/page.js onPage(signal) with cleanup; word fade [data-scrub] (opacity .2 to 1, as disojo-mix premium.js) on gable box h2, drop date h2, How h2s; nav ignores pinned footer. DEPLOYED.
