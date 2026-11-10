@@ -75,3 +75,4 @@
 - [Projects and working rules](reference-projects.md) — Disojo facts, goals, site workflow, content, shipped work, moved from CLAUDE.md
 - [Environment](reference-environment.md) — tools, backups, screenshots, venv, Vercel notes
 - [lilt](project-lilt.md) — READ FIRST for lilt: Mumbai clothing, bakery identity picked 2026-11-10, Batch 001 launch, first real run of the new system; full build, noindex demo at lilt-demo.vercel.app
+- [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it

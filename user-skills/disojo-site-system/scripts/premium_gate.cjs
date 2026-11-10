@@ -57,7 +57,7 @@ const PAGE_CHECKS = () => {
   const sections = Math.max(1, document.querySelectorAll('section,header').length);
   const webgl = [...document.querySelectorAll('canvas')].some(c => { try { return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) { return false; } });
   const model = performance.getEntriesByType('resource').map(r => r.name).find(n => /\.(glb|gltf|ktx2|drc|usdz)(\?|$)/i.test(n));
-  const out = { three_d: webgl || !!model || !!window.THREE ? (model ? model.split('/').pop() : 'a WebGL canvas') : '', fonts, accent, eyebrows, sections, place: !!document.querySelector('footer [data-clock], footer time, footer .foot-place'), credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
+  const out = { three_d: webgl || !!model || !!window.THREE ? (model ? model.split('/').pop() : 'a WebGL canvas') : '', fonts, accent, eyebrows, sections, place: !!document.querySelector('footer [data-clock], footer time, footer .foot-place'), credit: [...document.querySelectorAll('a[href*="disojostudio.com"]')].some(a => a.textContent.trim() === 'Design & Systems · © Disojo Studio 2026'), oldCredit: /Developed by Disojo/i.test(document.body.innerText), flatBtn: [...document.querySelectorAll('button,a')].filter(e => { if (!e.offsetParent || !e.textContent.trim() || e.matches('.skip,[href*="disojostudio.com"]') || e.querySelector('.roll,.wave,img')) return false; if (e.tagName === 'BUTTON') return true; const c = getComputedStyle(e).backgroundColor; return c !== 'transparent' && !/, 0\)$/.test(c); }).map(e => e.textContent.trim().slice(0, 30)), overflow: document.documentElement.scrollWidth > innerWidth + 1, broken: [], soft: [], small: 0, smallEx: [], dash: [], banned: [], placeholder: [] };
   const dpr = devicePixelRatio || 1;
   for (const i of document.querySelectorAll('img')) {
     const r = i.getBoundingClientRect(); if (r.width < 40) continue;
@@ -138,6 +138,7 @@ const PAGE_CHECKS = () => {
       if (c.soft.length) F(`${tag}: images shown soft (need a bigger source): ${c.soft.slice(0, 4).join('; ')}`);
       if (!c.credit) F(`${tag}: footer credit missing; it must read exactly "Design & Systems · © Disojo Studio 2026" linking to https://disojostudio.com (hard rule)`);
       if (!c.place) Wn(`${tag}: no location and small clock in the footer (hard rule; if it is built another way, say so)`);
+      if (c.flatBtn.length) F(`${tag}: text button without the up down or side up down label motion (hard rule, references/text-button-motion.md): ${c.flatBtn.slice(0, 5).join(' | ')}`);
       if (c.oldCredit) F(`${tag}: old credit "Developed by Disojo..." still visible`);
       if (c.dash.length) F(`${tag}: em dash in visible copy: "${c.dash[0]}"`);
       if (c.banned.length) F(`${tag}: banned words: ${[...new Set(c.banned)].join(', ')}`);
