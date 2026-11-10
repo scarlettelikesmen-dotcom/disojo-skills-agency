@@ -18,3 +18,9 @@ Client checklist doc (private until Tejjo shares it): https://claude.ai/artifact
 Batch 001 confirmed by Tejjo 2026-11-10: 4 tees at 1299 rupees tax included, 75 units per size: blue wrap (4bor), cream (7bor), plain tee in 3 colours (2bor; colours unnamed, my reading of 13bor is red, blue, pink), panelled blue/cream/red (14bor). Details in brief/SIGNING.md.
 
 2026-11-10 stage 3: images copied to assets/set-2026-11-10, wordmark traced (brand/logo, site/src/data), cutouts in site/public/img. brief/MESSAGE.md written. Three first screens at localhost:4650/first/a,b,c (preview config 'lilt'): A box on counter, B batch board, C bite. Sent to Tejjo, awaiting pick. I recommended A, with B as the Batch 001 page.
+
+2026-11-10 round 2: Tejjo leans C, A can be refined, B rejected as a homepage (use it as the pricing section). Asked for D (2bor full-size hero, /first/d/). Sent A with an explaining line, C with teeth and slab depth, D. Awaiting final pick. C has no line telling a new visitor what lilt is; asked Tejjo. 2bor is 1672px: gate fails D as soft until a larger source exists.
+
+2026-11-10 FULL BUILD done on localhost:4650, not deployed: Tejjo picked C (top), D photo below, A box lower, B as price board. Pages: home, /batch-001/, four tee pages, /how/, /help/, /legal/, 404. Data in site/src/data/batch.js (STATE, LIST_ENDPOINT null, SHOP_URL null). Old first screens in _archive/first-screens-2026-11-10. Open: waitlist not connected (form says demo), Help and Legal say 'Published before the drop' as placeholders, bite stamp artwork missing, plain tee colours, sizes, fabric, 2bor and 13bor too small (gate FAIL soft), real shoot, trademark, Pepsi resemblance. Awaiting Tejjo's reaction.
+
+2026-11-10: demo live at https://lilt-demo.vercel.app/ on Tejjo's go (noindex, own Vercel project lilt-demo). Production domain not set up. Republish with deploy_demo.sh after changes only when asked.

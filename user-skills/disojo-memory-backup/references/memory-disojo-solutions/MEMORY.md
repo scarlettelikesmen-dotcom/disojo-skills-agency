@@ -74,4 +74,4 @@
 - [Verified claims](reference-verified-claims.md) — what Disojo may publish without asking
 - [Projects and working rules](reference-projects.md) — Disojo facts, goals, site workflow, content, shipped work, moved from CLAUDE.md
 - [Environment](reference-environment.md) — tools, backups, screenshots, venv, Vercel notes
-- [lilt](project-lilt.md) — READ FIRST for lilt: Mumbai clothing, bakery identity picked 2026-11-10, Batch 001 launch, first real run of the new system
+- [lilt](project-lilt.md) — READ FIRST for lilt: Mumbai clothing, bakery identity picked 2026-11-10, Batch 001 launch, first real run of the new system; full build, noindex demo at lilt-demo.vercel.app

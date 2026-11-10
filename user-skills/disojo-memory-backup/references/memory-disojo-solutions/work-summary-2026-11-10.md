@@ -28,3 +28,7 @@ Nothing deployed, committed or published beyond the private benchmark page.
 
 ## lilt client checklist (2026-11-10, after compaction)
 Seven-section list for the client is complete in Claude Docs: https://claude.ai/artifact/8KiorhxPw6HG99WFWFYLU5 (private until Tejjo shares it). Due dates are my proposal. Not sent to anyone. Open: is the shoot in the signed scope; do the board's script and palette stay; TYPE Product unconfirmed.
+
+2026-11-10, lilt stage 3: three first screens (box, board, bite) built in Astro at localhost:4650/first/a,b,c and sent to Tejjo with side-by-sides. Awaiting pick. Bite in C still reads partly as a cloud. Nothing deployed.
+
+2026-11-10, lilt: Tejjo picked C. Full multi-page Astro build finished on localhost:4650 and sent. Nothing deployed or pushed.
