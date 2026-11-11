@@ -13,3 +13,5 @@ On 2026-11-11 (CSK fresh pass) I sent a first screen. Tejjo asked "Do you yourse
 - If the answer is no, do not send it as a candidate. Say what is missing in one line (an idea, material such as a shoot, or craft), and either fix it or ask for what it needs.
 - Only send when I can honestly say why it is good.
 - Related: [[feedback-idea-before-pixels]], [[project-approved-benchmarks]].
+
+**Broken again the same day (2026-11-11, CSK):** asked for 10 home first screens in a selector, I built ten quick layouts in about an hour (headline + photo + button, no motion, no story, none near the 8 benchmarks) and sent them with soft verdicts. Tejjo: "wow i cannot be more mad", "how much money do u wan". Lesson: a count asked for (10 options) is never a reason to drop the bar; fewer, good, and an honest note beats ten fast ones. Options live at csk-fresh-site/options (localhost:4567), unchosen.
