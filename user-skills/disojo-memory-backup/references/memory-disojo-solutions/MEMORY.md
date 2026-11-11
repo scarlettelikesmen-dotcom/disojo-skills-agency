@@ -84,6 +84,6 @@
 - [Work summary 2026-11-12](work-summary-2026-11-12.md) — CSK E/F/10 options rejected, dissection numbers, v2 started
 - [Marathon Group](project-marathon.md) — NOT A REAL CLIENT: a test by Tejjo 2026-11-11; local build only, never deploy, stop building
 - [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
-- [CTESCOA test redo](project-ctescoa.md) — TEST not a client 2026-11-11: ctescoa.ac.in redo, local only; 3 first screens of the drawing sheet shown 2026-11-11, awaiting pick
+- [CTESCOA test redo](project-ctescoa.md) — TEST not a client 2026-11-11: ctescoa.ac.in redo, local only; round 2 D/E/F after the arch study; D picked 2026-11-11 (name full width), not built further
 - [No big rectangle CTAs](feedback-no-big-rectangle-ctas.md) — 2026-11-11: Tejjo hates large filled block buttons with a centred label; make the action typographic, from the idea
 - [Fonts: research first](feedback-fonts-research-first.md) — 2026-11-11: our Google font defaults rejected; specimen of 15-20 free fonts in client words before first screens; method in skill references/free-type.md
