@@ -3,6 +3,7 @@
 Left alone, I produce the statistical average of a landing page. Every reference works because one real thing from that client does the work: the wall, the can, the coconut, the drawn line. Take it away and the site is nothing. This stage finds that thing and puts Tejjomay's judgment before the pixels, when a change costs one sentence.
 
 ## Do
+0. **Write what a stranger must get from the first screen in five seconds** (Tejjomay, 2026-11-11, CSK): what this business is, in plain words; who they will deal with; the one action. Every idea must carry all three. The unique thing sits on top of them, never instead of them. Reskinning a rejected screen with new content is not a fix: new content means a new design.
 1. **List what only this client has.** Real objects, places, people, documents, numbers, habits, the name taken literally. From intake only, with the source next to each. No adjectives ("trusted", "premium"): if you cannot point at it, it is not on the list.
 2. **Write three ideas, one sentence each:** "The first screen is ___ (a real thing from the list) and it does ___." Under each, one line: the real material it needs, and whether we have it. Add two short lines per idea:
    - **The device:** the one thing the whole site repeats (ERA's arch, Jesko's plane window, Son Daven's folk engravings, Shortscut's video inside sentences).

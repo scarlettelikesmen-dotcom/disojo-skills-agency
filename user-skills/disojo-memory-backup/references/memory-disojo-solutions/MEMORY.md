@@ -79,3 +79,4 @@
 - [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it
 - [Awwwards code study 2026-11-10](project-awwwards-code-study-2026-11-10.md) — READ FIRST for site quality: code study, award-bar numbers, kernel (:4790), taste study in skill taste/ (7 benchmarks walked, method + ranges; TFTL 96-project report in research/tftl-portfolio)
 - [Work summary 2026-11-11](work-summary-2026-11-11.md) — 7 benchmarks + all 96 TFTL projects studied; skills now a method not a look; next: demo project, mirror push pending
+- [Own verdict before showing](feedback-own-verdict-before-showing.md) — 2026-11-11 CSK: never send design I would not call good myself; say what's missing instead
