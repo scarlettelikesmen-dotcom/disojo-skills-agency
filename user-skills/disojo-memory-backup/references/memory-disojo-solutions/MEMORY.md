@@ -86,4 +86,5 @@
 - [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
 - [CTESCOA test redo](project-ctescoa.md) — TEST not a client 2026-11-11: ctescoa.ac.in redo, local only; round 2 D/E/F after the arch study; D picked 2026-11-11 (name full width), not built further
 - [No big rectangle CTAs](feedback-no-big-rectangle-ctas.md) — 2026-11-11: Tejjo hates large filled block buttons with a centred label; make the action typographic, from the idea
+- [Window scroll effect](feedback-window-scroll-effect.md) — "like a window / zoom in zoom out" = Monolog window parallax (0.19px/px), not a zoom; approved on CTESCOA hero 2026-11-11
 - [Fonts: research first](feedback-fonts-research-first.md) — 2026-11-11: our Google font defaults rejected; specimen of 15-20 free fonts in client words before first screens; method in skill references/free-type.md

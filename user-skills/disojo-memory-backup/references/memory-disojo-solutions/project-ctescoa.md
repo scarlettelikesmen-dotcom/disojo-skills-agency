@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2b056b99-c661-4dfb-9342-4067ab1e7d93
-  modified: 2026-11-11T05:57:32.144Z
+  modified: 2026-11-11T06:25:22.863Z
 ---
 
 **TEST, not a real client** (Tejjo, 2026-11-11: "test"). A redo of https://ctescoa.ac.in, run the lean Marathon way: crawl, one direction, home page, show, stop. It uses a real institution's content, so it stays local and is never deployed or published. Do not overbuild: [[feedback-dont-overbuild]].
@@ -14,4 +14,6 @@ metadata:
 - **Ideas:** written in `brief/IDEA.md`. My pick is "the drawing sheet": a title block on every page, the menu as the drawing index. PICKED BY TEJJO is still empty.
 - **2026-11-11:** Tejjo picked idea 1 (the drawing sheet), directions only. Three first screens are at site/src/pages/first/a|b|c.astro on :4600: A is the sheet with a title block, B is dimension lines, C is the drawing index. They were shown and await a pick. Tejjo hates large filled rectangle CTA buttons, so the actions are now text plus a leader-line arrow.
 - **2026-11-11 round 2:** Tejjo called A/B/C "mid, sloppy" and the red CTA "completely bad", and asked for three more after looking at our past sites and at TFTL and other agencies' architecture and real estate work. Study notes: `research/arch-study/NOTES.md`. New first screens: D (CTESCOA set full width, Mona Sans, models photo), E (the logo orange as the whole ground like the AA School, Bespoke Stencil), F (machine-traced drawing of the models split against the photo, Zodiak). A/B/C are still on disk; their briefs are in brief/_round1. Shown. **Tejjo picked D on 2026-11-11 ("It's gonna be D.")**: the name at full width, Mona Sans, a ruled nav row, the models photo. Nothing is built past the first screen.
+- **2026-11-11 build:** Tejjo: "Let's go ahead and build the website", then asked for the Vercel preview link. This overrides the earlier "never deploy" note, which was my own call. Home built from D: masthead (Masthead.astro), Fig.astro figure captions, site.css; sections motto, courses, student work (Fig. 02-06), studio and library, notice board, admissions, and an ink footer with CTESCOA bleeding off. Copy is in brief/MESSAGE.md. The noindex demo is live at https://ctescoa-demo.vercel.app. Inner pages still use the starter renderer with the new masthead and footer, not designed. First screens moved to _archive/first-screens-2026-11-11. Side by side: qa/sbs/home. Open items: soft photos (a real shoot), 404, inner page templates, and whether the name should bleed off the top edge.
+- **2026-11-11 later:** the hero photo became a scroll window ([[feedback-window-scroll-effect]]); Tejjo: "this is exactly what I wanted". Redeployed to ctescoa-demo. Next: inner pages, 404.
 - **Material:** thin. Only 5 images are 1600px or wider, mostly posters and phone photos, plus one Shutterstock image. No phone, email or address found in the header or footer.
