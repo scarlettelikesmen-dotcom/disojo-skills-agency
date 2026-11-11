@@ -82,4 +82,6 @@
 - [Own verdict before showing](feedback-own-verdict-before-showing.md) — 2026-11-11 CSK: never send design I would not call good myself; say what's missing instead
 - [CSK v2](project-csk-v2.md) — STOPPED 2026-11-12: Tejjo happy with the earlier csk-law-demo build; v2 draft on disk, never shown
 - [Work summary 2026-11-12](work-summary-2026-11-12.md) — CSK E/F/10 options rejected, dissection numbers, v2 started
-- [Marathon Group](project-marathon.md) — READ FIRST for Marathon: signed ₹60 lakh 2026-11-11, take everything from marathon.in, film-first lean direction
+- [Marathon Group](project-marathon.md) — NOT A REAL CLIENT: a test by Tejjo 2026-11-11; local build only, never deploy, stop building
+- [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
+- [CTESCOA test redo](project-ctescoa.md) — TEST not a client 2026-11-11: ctescoa.ac.in redo, local only, idea pick pending
