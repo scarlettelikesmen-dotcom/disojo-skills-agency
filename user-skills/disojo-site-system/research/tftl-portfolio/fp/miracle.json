@@ -1,1 +1,1 @@
-{"s":"miracle","url":"https://miracle.tftl.agency/","err":"TimeoutError: Navigation timeout of 60000 ms exceeded"}
+{"s":"miracle","url":"https://miracle.tftl.agency/","err":"Error: net::ERR_CONNECTION_TIMED_OUT at https://miracle.tftl.agency/"}

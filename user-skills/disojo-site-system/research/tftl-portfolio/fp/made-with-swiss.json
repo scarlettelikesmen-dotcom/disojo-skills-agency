@@ -1,1 +1,1 @@
-{"s":"made-with-swiss","url":"https://madewithswitzerland.ch/","err":"TimeoutError: Navigation timeout of 60000 ms exceeded"}
+{"s":"made-with-swiss","url":"https://madewithswitzerland.ch/","err":"Error: net::ERR_CONNECTION_TIMED_OUT at https://madewithswitzerland.ch/"}

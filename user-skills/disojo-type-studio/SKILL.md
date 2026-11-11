@@ -43,6 +43,7 @@ Astro, multi-page, every project from content files. No 3D without Tejjomay's wo
 Open only after Tejjomay has picked the idea: `disojo-site-system/references/design-moves.md`, sheets in `research/walk-2026-11-10/sheets/`.
 Tejjomay's approved studios: Shortscut, Monolog, OH Architecture, Supersolid, Your Creative, The First The Last. Disojo's own site is on the approved list too; the walk found it carries more words and small boxes per screen than the others.
 Also in the walk: The Line, Light Factory, Work by W, Realevate, Kononenko, LPAS, Mammoth Murals, Squiggle.
+All 96 TFTL projects: `disojo-site-system/research/tftl-portfolio/` (REPORT.md, NOTES.md, sheets/). Architects and interiors, none alike: Santal (rotating field of sense words), TAF (scattered renders), Nabil (vertical city names), Yodezeen (world map of cities), SAF (wood-panel ground), Snob, Vurrle (letter grid), Trender, Kaspary, Konzept, Coeval, Cassaia, Another Latte. Agencies: Grape, Davincii, Sami, Agency Telegram. Benchmark write-ups: `disojo-site-system/taste/` (OH is built by Monolog and looks nothing like it).
 
 ## Past failures on this type
 - **Disojo redo, 2026-11-01:** three directions passed every check and none landed: 135-151 words a screen against about 50, and 0-2 big images in 8 screens against 3-8.

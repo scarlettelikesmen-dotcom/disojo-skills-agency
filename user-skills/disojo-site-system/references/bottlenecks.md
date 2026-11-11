@@ -17,6 +17,7 @@ Read before starting any site or identity. Each row is a real rejection or a rea
 | Earlier, a client photo | Added a blurred background fill nobody asked for. | Creative liberty. | **Text only:** offer options in words. |
 | 2026-11-08 rule | Concepts delivered as one long page. | One-pager habit. | **Deploy script refuses under 3 pages** unless `ONE_PAGE_OK` holds Tejjo's words (added 2026-11-09). Interaction layer (dead CTAs): **text only**. |
 | 2026-11-09 rule | Loose index.html concepts. | Fast to make, never production. | **Hook denies .html, gate fails non-Astro, deploy refuses.** |
+| 2026-11-11 Tejjo | Risk caught before it shipped: the taste study was turning ERA's habits (the oval, two size worlds, no accent) into house rules. "I don't want it to be a stuck system." | Learned from one favourite site. | All 96 TFTL projects studied: no template, the look comes from the subject every time. `taste/README.md` rewritten as method plus ranges. Token template keeps structure only. `taste_compare` reads all seven benchmarks and flags questions, not fails. **Text only** for "never reuse a past look". |
 | 2026-11-09 rule | 3D offered to brands that do not need it. | Treated 3D as the premium signal. | **Gate fails 3D outside the Product type** unless Tejjo's words are recorded (added 2026-11-09). |
 
 ## Identity

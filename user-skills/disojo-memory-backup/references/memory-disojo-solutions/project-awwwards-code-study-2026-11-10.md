@@ -69,3 +69,10 @@ Tejjo, 2026-11-10: "not awwwards level"; "do everything A to Z (skills, systems,
   - ERA's cookie accept click did not dismiss its banner.
   - Monolog's first hover crops were wrong (fixed with Lenis and elementFromPoint checks).
 - Next: Shortscut, OH, TFTL, Supersolid, Your Creative. Then run `taste_compare` on every first screen before the side by side.
+
+## 2026-11-11 TFTL full portfolio study (Tejjo: "don't make it a stuck system")
+- All 96 TFTL projects (59 live, 37 case-only): fingerprints, walks, case galleries. Report: `~/.claude/skills/disojo-site-system/research/tftl-portfolio/REPORT.md`, notes in NOTES.md, sheets/.
+- Verdict: **no template**. The median code overlap between sites is 0, the only shared files are third-party, and they run 5 platforms. Each site's look comes from the client's own subject.
+- What they reuse: the kernel (Lenis, preloader, split text, cursor), the token naming (h1..p1/l1/a1), named eases, a thin top bar, a giant closing screen, a designed 404, and brand objects shown before the site.
+- Five benchmarks written up in `taste/five-benchmarks.md` (OH is by Monolog; the habits vary, so treat them as a method, not rules).
+- Next: Tejjo wants to talk, then a demo project. taste/README.md still needs rewriting from "rules" to "method".

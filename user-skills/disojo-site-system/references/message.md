@@ -15,6 +15,14 @@ The order comes from the idea. There is no default order.
 - **One label per intent**, the same everywhere ("Book a call" stays "Book a call"). How many actions a screen has and what they look like comes from the idea.
 - Numbers only when verified, with what they measure. Quotes only with permission, name and role exactly as approved.
 
+## Copy habits seen on the benchmarks (craft, not words to reuse)
+- **Titles are the client's own nouns.** Supersolid's "ROIdeas®", Inch's "every inch", ERA's "A place to return to". Avoid category words like "Our services".
+- **Numbers are set as type** when they are the point: "23 villas, 31 residences", "77.5m+ views". They are verified first, always.
+- **One line per row.** Lists of services, sectors or projects carry a name, a count and at most one line (Your Creative: "Community & Health (33)").
+- **The last screen is the action written big:** a phone number, an email, "Let's talk ROIdeas®". It replaces a "Get in touch" button stack.
+- **Small labels carry the facts** (number, name, year, place) in caps or mono, so the headline does not have to.
+- Our voice rules still win: no em dashes, no hype words, nothing invented.
+
 ## 3. First screen (non-negotiable, from defects on the reference sites)
 - What goes on it is the picked idea, nothing else decides that. It shows real content within about one second. No blank hero waiting for an animation.
 - Any intro is capped near 3 s, tied to real progress, has a skip, never locks scrolling. Text is never gated behind an opacity reveal or font delay (it cost 1.7 s of LCP on Movement First).

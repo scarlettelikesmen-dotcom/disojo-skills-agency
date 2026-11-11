@@ -274,3 +274,6 @@ What each site does for the buyer, written 2026-11-09 from first screens. Not wa
 | Third Space | Gym | The actual room, a person training |
 | Setia Law | Law | A plain sentence on what they do |
 | Joseph Law, forthetimes.law | Law | Opens on real footage of the work |
+
+## Also: all 96 TFTL projects (2026-11-11)
+`research/tftl-portfolio/`: first screens, scroll strips and case galleries for every project, one line each in NOTES.md. Same rule as above: open after the pick, to see how far one studio pushes each subject, never to lift a look.

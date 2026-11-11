@@ -1,31 +1,50 @@
 {
+  "_read_first": "STRUCTURE is reused on every site (TFTL does this across 96 projects). VALUES come from the picked idea every time: never copy ERA's, Monolog's or a past client's. Rules of thumb that held on the benchmarks, break them only for a reason the idea gives: tracking tightens and leading closes as size grows (display about 0.85-1.0 leading, -0.02 to -0.03em), labels go positive; greys are the ink at a lower alpha, not new colours; one radius family; few sizes (about 10-12 roles).",
   "name": "A",
   "family": "",
+  "artboard": 1600,
+  "viewport": { "min": 390, "max": 1600 },
   "fonts": {
-    "sans": { "family": "PICK FROM THE IDEA", "source": "google or fontshare", "weights": [500, 700], "licence": "record it" },
-    "display": { "family": "PICK FROM THE IDEA", "source": "google or fontshare", "weights": [700], "licence": "record it" },
+    "sans": { "family": "PICK FROM THE IDEA", "source": "google or fontshare", "weights": [400, 500], "licence": "record it" },
+    "display": { "family": "PICK FROM THE IDEA", "source": "google or fontshare", "weights": [500], "licence": "record it" },
     "mono": null
   },
   "scale": {
-    "label":   { "min": 12, "max": 13, "font": "sans", "weight": 500, "tracking": -0.01, "leading": 1.25, "upper": false },
-    "small":   { "min": 14, "max": 15, "font": "sans", "weight": 500, "tracking": -0.01, "leading": 1.3 },
-    "body":    { "min": 16, "max": 18, "font": "sans", "weight": 500, "tracking": -0.01, "leading": 1.3 },
-    "lead":    { "min": 19, "max": 24, "font": "sans", "weight": 500, "tracking": -0.015, "leading": 1.2 },
-    "h3":      { "min": 22, "max": 32, "font": "display", "weight": 700, "tracking": -0.02, "leading": 1.1 },
-    "h2":      { "min": 34, "max": 64, "font": "display", "weight": 700, "tracking": -0.03, "leading": 1.0 },
-    "display": { "min": 44, "max": 128, "font": "display", "weight": 700, "tracking": -0.04, "leading": 0.92 },
-    "mega":    { "min": 64, "max": 260, "font": "display", "weight": 700, "tracking": -0.05, "leading": 0.85 }
+    "label":   { "min": 11, "max": 11, "font": "sans", "weight": 500, "tracking": 0.06, "leading": 1.3, "upper": true },
+    "small":   { "min": 12, "max": 13, "font": "sans", "weight": 400, "tracking": 0, "leading": 1.4 },
+    "body":    { "min": 15, "max": 16, "font": "sans", "weight": 400, "tracking": -0.005, "leading": 1.45 },
+    "lead":    { "min": 20, "max": 28, "font": "sans", "weight": 400, "tracking": -0.01, "leading": 1.2 },
+    "h3":      { "min": 26, "max": 40, "font": "display", "weight": 500, "tracking": -0.01, "leading": 1.0 },
+    "h2":      { "min": 36, "max": 96, "font": "display", "weight": 500, "tracking": -0.02, "leading": 0.92 },
+    "display": { "min": 48, "max": 136, "font": "display", "weight": 500, "tracking": -0.024, "leading": 0.9 },
+    "mega":    { "min": 64, "max": 192, "font": "display", "weight": 500, "tracking": -0.03, "leading": 0.875 }
   },
+  "palette": {
+    "_how": "Name each colour after something in the client's world (ERA: paper, ink, plum, sky, blush). Each gets alpha steps: --c-<name>-60 for secondary text, -30 disabled, -10 lines, -5 tinted grounds.",
+    "paper": { "hex": "#F2F1EC", "from": "SAY WHERE IT COMES FROM" },
+    "ink":   { "hex": "#1A1A1A", "from": "SAY WHERE IT COMES FROM" },
+    "brand": { "hex": "#7A2E2E", "from": "SAY WHERE IT COMES FROM" }
+  },
+  "alpha_steps": [60, 30, 10, 5],
   "colors": {
-    "ink":    { "hex": "#000000", "job": "SET FROM THE IDEA" },
-    "paper":  { "hex": "#FFFFFF", "job": "SET FROM THE IDEA" },
-    "accent": { "hex": "#808080", "job": "SET FROM THE IDEA" },
-    "grey":   { "hex": "#808080", "job": "secondary text" },
-    "spare":  null
+    "_how": "Roles the starter uses, pointing at palette names. Hex values here are only a fallback.",
+    "ink":    { "use": "ink", "job": "text" },
+    "paper":  { "use": "paper", "job": "ground" },
+    "accent": { "use": "brand", "job": "SET FROM THE IDEA: often the subject carries the colour and this is used almost nowhere" },
+    "grey":   { "use": "ink", "alpha": 60, "job": "secondary text" }
   },
+  "units": [0, 4, 8, 12, 16, 24, 32, 48, 64, 96, 160, 272],
   "radius": "sharp, soft, round or pill: pick one from the idea",
   "grain": false,
-  "motion": { "easeInOut": "cubic-bezier(0.83,0,0.17,1)", "easeOut": "cubic-bezier(0.16,1,0.3,1)", "fast": 0.3, "base": 0.5, "slow": 0.75 },
-  "label_grammar": "",
-  "viewport": { "min": 390, "max": 1512 }
+  "motion": {
+    "eases": { "out": "0.16,1,0.35,1", "inOut": "0.76,0,0.24,1", "in": "0.5,0,0.75,0", "dive": "0.6,0,0,1" },
+    "easeInOut": "cubic-bezier(0.76,0,0.24,1)",
+    "easeOut": "cubic-bezier(0.16,1,0.35,1)",
+    "fast": 0.4, "base": 0.8, "slow": 1.2, "stagger": 0.06
+  },
+  "owned_pages": {
+    "_how": "Designed in the client's world, never left as defaults (every TFTL site does this).",
+    "loader": "", "menu": "", "closing_screen": "", "page_404": "", "cookie_card": "", "form_success": ""
+  },
+  "label_grammar": ""
 }

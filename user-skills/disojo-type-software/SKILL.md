@@ -48,6 +48,7 @@ The marketing site is Astro, multi-page. The app is outside the Astro rule. No 3
 ## Benchmarks
 Open only after Tejjomay has picked the idea: `disojo-site-system/references/design-moves.md`, sheets in `research/walk-2026-11-10/sheets/`.
 Sites of this type in the walk: Grail, Heron, Terminal Industries. Three is a thin list: say so if a job needs more.
+TFTL projects of this type (`disojo-site-system/research/tftl-portfolio/`): Playhunt/Pitch (HR video app), Smart Payments (orbit lines, cards), Envy Maison (one phone fixed while screens fly around it), 4xstrategy (candlesticks as the graphics), Cognic, Atto, Vylo, Junkeenering (a game). Still thin for B2B software: say so.
 
 ## Past failures on this type
 - **Mentable v1, 2026-10-27:** called "disgusting". A generic dark-mint fintech template. Lighthouse 97 proved nothing.

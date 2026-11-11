@@ -44,6 +44,7 @@ Astro, multi-page, a static page per item built from the data so they are found 
 Open only after Tejjomay has picked the idea: `disojo-site-system/references/design-moves.md`, sheets in `research/walk-2026-11-10/sheets/`.
 Sites of this type in the walk: Case, Flos, HAY, Kvadrat, Muuto, Ekomia, Halcyon, ZETR, Gufram, Monolith.
 **Warning from the walk:** most of these are good at the first screen and ordinary below it. Take how they organise a range, never their page structure as a design. Gufram (a field of objects to pan) and Monolith (the wordmark cut like the furniture) are the ones with an idea of their own.
+TFTL projects of this type (`disojo-site-system/research/tftl-portfolio/`): Moralia (furniture collections as a numbered list), Wood Systems, Ateliery (designed 404 on fabric), Cafe Society, Peresvit, The Label, Addendum Shop, Max Noah.
 
 ## Past failures on this type
 None recorded yet. Add a row to `disojo-site-system/references/bottlenecks.md` the same day one happens, and note it here.

@@ -42,6 +42,7 @@ Astro, multi-page. Checkout, login and course platforms stay where they are. No 
 Open only after Tejjomay has picked the idea: `disojo-site-system/references/design-moves.md`, sheets in `research/walk-2026-11-10/sheets/`.
 Sites of this type in the walk: Ray Corral, Kasia Siwosz, Steven Kotler, Ali Abdaal, Brené Brown. The last two are clean and conventional below the first screen.
 **Tejjomay's verdict (2026-11-10):** the creator and newsletter pages were rejected: James Clear, Justin Welsh, Sahil Bloom, Dan Koe, Mel Robbins. Do not move towards that format.
+TFTL projects of this type (`disojo-site-system/research/tftl-portfolio/`): Tanya Timal (photographer: name huge behind her photo, torn photo strips), Hladkyi Consulting (the consultant's portrait, quiz cards), Nabil (architect), Tommy47 (artist).
 
 ## Past failures on this type
 - **Kiran Roy, 2026-11-08/09:** three rejections. One layout reskinned, nothing from Kiran's truth. "Same exact bullshit font, same exact double CTA."

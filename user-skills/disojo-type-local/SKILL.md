@@ -48,6 +48,7 @@ Astro, multi-page, static HTML per page (real HTML helps local search). No 3D wi
 All walked references live in one place, by design and not by industry: `disojo-site-system/references/design-moves.md`. Open it only after Tejjomay has picked the idea. Its last section keeps this type's older what-to-look-at notes.
 
 The sites Tejjomay has approved as the quality bar are in `disojo-site-system/references/approved-benchmarks.md`. Client work of ours is never a benchmark unless it is on that list.
+TFTL projects of this type (`disojo-site-system/research/tftl-portfolio/`): ADA dental (serif phrases with an italic word, portraits), Duck English (curved text, lime stickers, teacher cards), Zitya and Inch and Spicy no Spicy (restaurants), Birdies and Besos (bars, brand on objects first), Grand Hotel Lviv, Verholy, Shelter (studio), Addendum Salon, Krasota, Don't Board Me (a ball game to enter a dog-walking site). Same type, no shared look.
 
 ## Past failures on this type
 - **KDC, 2026-11-02:** approved direction, but only one large real photo existed. The shoot, logo and video links came up at build. Hence the list above.

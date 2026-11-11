@@ -108,6 +108,12 @@ const NAV_CHECK = () => {
   const lines = []; let fails = 0, warns = 0;
   const F = m => { fails++; lines.push('FAIL  ' + m); }, Wn = m => { warns++; lines.push('WARN  ' + m); }, P = m => lines.push('pass  ' + m);
   if (!['astro.config.mjs', 'astro.config.ts', 'astro.config.js'].some(f => fs.existsSync(path.join(path.resolve(root), f)))) F(`${root}: not an Astro project (no astro.config). Every website is built in Astro (hard rule)`);
+  // owned pages: the 404 must be designed in the client's world, not the starter default (2026-11-11, TFTL study)
+  try {
+    const own = path.join(path.resolve(root), 'src/pages/404.astro'), stock = path.join(__dirname, '../starter/src/pages/404.astro');
+    if (!fs.existsSync(own)) Wn(`${root}: no src/pages/404.astro; design one in the client's world (build-craft.md, owned pages)`);
+    else if (fs.existsSync(stock) && fs.readFileSync(own, 'utf8') === fs.readFileSync(stock, 'utf8') && !/disojo-site-system\/starter/.test(path.resolve(root))) Wn(`${root}: 404 is still the starter default; design it in the client's world (build-craft.md, owned pages)`);
+  } catch (e) {}
   // Website type from brief/IDEA.md (root is the project or its site/ folder)
   const ideaFile = [path.resolve(root, 'brief/IDEA.md'), path.resolve(root, '../brief/IDEA.md')].find(f => fs.existsSync(f));
   const ideaText = ideaFile ? fs.readFileSync(ideaFile, 'utf8') : '';

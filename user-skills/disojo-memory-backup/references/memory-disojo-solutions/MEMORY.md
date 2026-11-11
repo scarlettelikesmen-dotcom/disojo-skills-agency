@@ -77,4 +77,5 @@
 - [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
 - [No NPC nav](feedback-no-npc-nav.md) — hard rule 2026-11-10: no blurred top bar with same-size links; nav from the idea, 3 options in words; gate enforces it
 - [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it
-- [Awwwards code study 2026-11-10](project-awwwards-code-study-2026-11-10.md) — READ FIRST for site quality: code study, award-bar numbers, kernel (:4790), taste study in skill taste/ (ERA, Monolog walked; taste_compare.py)
+- [Awwwards code study 2026-11-10](project-awwwards-code-study-2026-11-10.md) — READ FIRST for site quality: code study, award-bar numbers, kernel (:4790), taste study in skill taste/ (7 benchmarks walked, method + ranges; TFTL 96-project report in research/tftl-portfolio)
+- [Work summary 2026-11-11](work-summary-2026-11-11.md) — 7 benchmarks + all 96 TFTL projects studied; skills now a method not a look; next: demo project, mirror push pending

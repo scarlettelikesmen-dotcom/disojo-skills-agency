@@ -6,7 +6,7 @@ const [LIST, OUT, CONC = '3'] = process.argv.slice(2); fs.mkdirSync(OUT, { recur
 const sites = JSON.parse(fs.readFileSync(LIST)); const sleep = ms => new Promise(r => setTimeout(r, ms));
 const LIBS = /gsap|ScrollTrigger|SplitText|CustomEase|lenis|barba|jquery|three|lottie|swiper|splide|webflow\.|gtm|gtag|analytics|fbevents|hotjar|clarity|recaptcha|cookie|consent|polyfill|vimeo|youtube|hls|swup|locomotive|howler|pixi|ogl|matter|rapier|draggable|flip|observer|intercom|hubspot|klaviyo|shopify|stripe|sentry|onetrust|cookiebot|termly|tiktok|linkedin|pinterest|twitter|doubleclick|googletag/i;
 (async () => {
-  const browser = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: 'new', args: ['--mute-audio'] });
+  const browser = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: 'new', args: ['--mute-audio'], protocolTimeout: 240000 });
   let i = 0;
   async function worker() {
     while (i < sites.length) {
@@ -16,7 +16,7 @@ const LIBS = /gsap|ScrollTrigger|SplitText|CustomEase|lenis|barba|jquery|three|l
       page.on('response', async r => { try { const u = r.url(); if (r.request().resourceType() === 'script' && !LIBS.test(u)) { const t = await r.text(); bodies[u] = { kb: Math.round(t.length / 1024), sha: crypto.createHash('sha1').update(t).digest('hex').slice(0, 12), eases: [...new Set((t.match(/CustomEase\.create\(\s*["'][^"']+["']\s*,\s*["'][^"']{4,80}["']/g) || []).map(x => x.replace(/\s+/g, '')))].slice(0, 20), beziers: [...new Set(t.match(/cubic-bezier\([^)]{6,40}\)/g) || [])].slice(0, 20), dattrs: [...new Set(t.match(/\[data-[a-z0-9-]+/g) || [])].slice(0, 200) }; } } catch (e) {} });
       const o = { s: site.s, url: site.url };
       try {
-        await page.goto(site.url, { waitUntil: 'load', timeout: 60000 }); await sleep(5000);
+        await page.goto(site.url, { waitUntil: 'load', timeout: 120000 }); await sleep(5000);
         for (let k = 0; k < 8; k++) { await page.mouse.wheel({ deltaY: 700 }); await sleep(300); }
         Object.assign(o, await page.evaluate(() => {
           const all = [...document.querySelectorAll('*')];

@@ -42,6 +42,7 @@ Astro, multi-page. Checkout stays on the shop platform; link or connect to it, n
 Open only after Tejjomay has picked the idea: `disojo-site-system/references/design-moves.md`, sheets in `research/walk-2026-11-10/sheets/`.
 Sites of this type in the walk. Objects: Ciao Energy, FS 60P, Daylight, Teenage Engineering, Monolith, Gufram, Aevion, Girard-Perregaux. Real estate: ERA Residence (Tejjomay's favourite), era.estate, Ever, 111 West 57, 432 Park, Poklonnaya 9, Likova, Springs, Silver Pinewood, Belgrade Arbor, Sobha Privy.
 Look there for how plans, location and specs are shown, not for a look to reuse.
+Also in `disojo-site-system/research/tftl-portfolio/` (all 96 TFTL projects, sheets plus one line each in NOTES.md and REPORT.md section 3). Objects: Aura (taps on water), Max Noah (lipstick capsule), Comb-on, Addendum Hair, Jesko Jets (plane window frame), Aerotim, Janey, Wood Systems. Real estate and hotels (about 25, none alike): ERA, Son Daven (folk engravings around an investment), Gifford Hill (masterplan over farmland), Elara, Eywa, Horizonte (counts set as type), Fame Estate, Miracle, Lenval, Mkaan, Phoenix, Verholy, Grand Hotel Lviv.
 
 ## Past failures on this type
 - **VÆL, 2026-11-03:** sent as finished, far under the references. A dark-luxury template with no concept, built from the starter.

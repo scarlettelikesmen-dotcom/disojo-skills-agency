@@ -30,7 +30,16 @@ None of this makes a site good: only the idea does (`idea.md`). These stop it be
 - Every input and action has its hover, focus, active, disabled, loading, error and success state.
 
 ## What gets forgotten
-Custom 404, favicon, OG image, skip link, privacy and terms links, current page marked in the nav, a way back from every page, no link to `#`, reserved space for images and fonts so nothing jumps.
+Favicon, OG image, skip link, privacy and terms links, current page marked in the nav, a way back from every page, no link to `#`, reserved space for images and fonts so nothing jumps.
+
+## Owned pages (designed in the client's world, never left as defaults)
+Every TFTL site and every benchmark designs these. List them in `tokens.json` → `owned_pages` with one line each on what they are for this client:
+- **Loader:** short, tied to real progress, made of the device (ERA's arch opens).
+- **Menu:** comes from the idea, never a blurred bar of same-size links (`feedback-no-npc-nav`).
+- **Closing screen:** one huge thing (the wordmark, the phone number, the email, the place), plus the place, the clock and the credit.
+- **404:** in the client's world (Ateliery's fabric, Zitya's photos, Trender's scattered renders).
+- **Cookie card:** small, bottom corner, in the site's type and colours, with decline as easy as accept.
+- **Form success and error:** written in the client's voice.
 
 ## Redos
 Decide first: keep the brand, or new look on the same content.

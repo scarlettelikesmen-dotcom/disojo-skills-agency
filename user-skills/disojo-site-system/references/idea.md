@@ -4,7 +4,11 @@ Left alone, I produce the statistical average of a landing page. Every reference
 
 ## Do
 1. **List what only this client has.** Real objects, places, people, documents, numbers, habits, the name taken literally. From intake only, with the source next to each. No adjectives ("trusted", "premium"): if you cannot point at it, it is not on the list.
-2. **Write three ideas, one sentence each:** "The first screen is ___ (a real thing from the list) and it does ___." Under each, one line: the real material it needs, and whether we have it.
+2. **Write three ideas, one sentence each:** "The first screen is ___ (a real thing from the list) and it does ___." Under each, one line: the real material it needs, and whether we have it. Add two short lines per idea:
+   - **The device:** the one thing the whole site repeats (ERA's arch, Jesko's plane window, Son Daven's folk engravings, Shortscut's video inside sentences).
+   - **The colour source:** where the palette comes from (the photos, the material, the place, the logo).
+
+   TFTL built about 96 sites and no two share a layout, palette or type pairing, so the look must come from here, never from a past site (`research/tftl-portfolio/REPORT.md`).
 3. **Name test.** Remove the client's name. If any competitor could use the sentence, it dies. Write another.
 4. **Skeleton check.** Picture the first screen. If it can be fully described as tag, headline, grey sub, two buttons, photo on the right, stats row, logo strip, start again. A headline and a sentence are not a crime (Mammoth and Palmo have them); a headline and a sentence with nothing behind them is.
 5. **Honest stop.** If the list has nothing that can carry a screen, say so in one line and name what would fix it: a shoot, an illustrator, a human art director. Do not design around the hole.

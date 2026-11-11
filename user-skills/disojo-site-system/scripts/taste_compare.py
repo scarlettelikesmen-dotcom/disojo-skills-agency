@@ -1,10 +1,10 @@
 """Put one site's taste numbers beside the walked references.
-python3 taste_compare.py <ourProbeDir> [ref ...]   refs are folder names in $SK/taste/raw (default: era monolog)
+python3 taste_compare.py <ourProbeDir> [ref ...]   refs are folder names in $SK/taste/raw (default: all seven walked benchmarks)
 Prints one table per factor. A row where ours sits outside every reference is marked '?' :
 a question to answer from the idea, never an automatic fail, never a quality verdict."""
 import json, glob, os, sys, collections, statistics as st
 SK = os.path.expanduser('~/.claude/skills/disojo-site-system')
-ours = sys.argv[1]; refs = sys.argv[2:] or ['era', 'monolog']
+ours = sys.argv[1]; refs = sys.argv[2:] or ['era', 'monolog', 'shortscut', 'supersolid', 'oh', 'yourcreative', 'tftl']
 W = os.environ.get('W', '1512')
 def rgb(c):
     try: return tuple(int(float(x)) for x in c[c.index('(') + 1:c.index(')')].split(',')[:3])
