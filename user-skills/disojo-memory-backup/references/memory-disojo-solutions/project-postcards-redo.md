@@ -1,6 +1,6 @@
 ---
 name: project-postcards-redo
-description: "READ FIRST for Postcards Perfumes redo (client wants it, 2026-11-11): idea \"stack of postcards\" picked, message written, font specimen out, material gaps"
+description: "READ FIRST for Postcards: Astro redo PARKED (slop); now improving the live Vite site lumina-store on :4613, 15-point plan in progress, scent pages done"
 metadata:
   node_type: memory
   type: project
@@ -17,4 +17,12 @@ metadata:
 - **First screens built 2026-11-11** (/first/a/ stack on the table, /b/ back of the card, /c/ four cards in hand), side-by-side sheets in qa/sbs/, sent to Tejjo with my pick B. Gate 13 FAIL (soft 640px images, single-screen footer/big-image checks). WAITING for their pick; build nothing more.
 - **Facts:** Bengaluru (footer, Asia/Kolkata). AI place pictures are fine (Tejjo). Still open: bottle shots photo or render, Rakhi out of season, Instagram handle, hand font.
 
+- **PIVOT 2026-11-11 (later):** A/B/C rejected as "that usual ai slop" ([[feedback-postcards-slop]]). Tejjo: "lets work with what we have". The Astro redo is PARKED. Work now happens in `lumina-store` itself, launch.json "postcards-live" on :4613. Nothing committed or deployed.
+  - Done on lumina-store: the hero is one still with the window effect, the scrollbar is hidden, the sticky transparent nav hides on scroll down, a Menu sheet below 1080px, side up down (Wave.jsx) on every text button, the bag is "Your bag (n)" shifted right, and the closed cart drawer no longer shades the right edge.
+  - Scent pages `/scents/:slug` (src/pages/Scent.jsx): the cards and the wheel link to them. Tejjo is happy with the home first section.
+  - FULL PASS DONE 2026-11-11 (Tejjo: "finish the entire site"): scent page v2 (bottle in front of huge name on scent colour, postcard-back details), all pills now text actions, ticker removed, footer Bengaluru + live IST clock, Instagram -> @postcardsperfumes (handle read off the kraft-box image), reviews one at a time, scent wheel 420vh -> 220vh, story line over hero-postcards.jpg, B2B form 4 fields, Combos rebuilt as open kraft box filling with bottles (prices unchanged 899/1099), Rakhi = same builder with Rakhi header, Story rebuilt with client words verbatim, collection cards swap to place photo on hover. Shots in lumina-store-review/v2, v3.
+  - OPEN for Tejjo/client: checkout discount bug (codes PACK3/PACK4 only fire on 198/297 savings, boxes save 298/497, so box buyers may pay full price on Shopify); newsletter still opens mailto; Rakhi out of season; are bottle-on-postcard shots real photos and larger files exist; Instagram handle confirm.
+  - Was the old plan order: pill buttons to text, one heading style, cut ticker, collection hover + quick add, scent wheel shrink, "We don't bottle places" over photo, reviews one at a time, shorter B2B, footer Bengaluru + clock, Combos rebuild, Rakhi (ask), Story (needs client words).
+  - The /postcards/*.jpg place pictures are soft (640px upscaled). Scent pages use /images/<slug>.png (682px styled bottle-on-postcard shots, origin unknown) instead.
+  - Shots in `~/Desktop/websites ARCHIVE/lumina-store-review/`.
 Related: [[feedback-fonts-research-first]], [[feedback-dont-overbuild]], [[feedback-idea-before-pixels]].
