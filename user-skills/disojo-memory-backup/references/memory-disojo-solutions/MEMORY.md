@@ -80,3 +80,6 @@
 - [Awwwards code study 2026-11-10](project-awwwards-code-study-2026-11-10.md) — READ FIRST for site quality: code study, award-bar numbers, kernel (:4790), taste study in skill taste/ (7 benchmarks walked, method + ranges; TFTL 96-project report in research/tftl-portfolio)
 - [Work summary 2026-11-11](work-summary-2026-11-11.md) — 7 benchmarks + all 96 TFTL projects studied; skills now a method not a look; next: demo project, mirror push pending
 - [Own verdict before showing](feedback-own-verdict-before-showing.md) — 2026-11-11 CSK: never send design I would not call good myself; say what's missing instead
+- [CSK v2](project-csk-v2.md) — STOPPED 2026-11-12: Tejjo happy with the earlier csk-law-demo build; v2 draft on disk, never shown
+- [Work summary 2026-11-12](work-summary-2026-11-12.md) — CSK E/F/10 options rejected, dissection numbers, v2 started
+- [Marathon Group](project-marathon.md) — READ FIRST for Marathon: signed ₹60 lakh 2026-11-11, take everything from marathon.in, film-first lean direction
