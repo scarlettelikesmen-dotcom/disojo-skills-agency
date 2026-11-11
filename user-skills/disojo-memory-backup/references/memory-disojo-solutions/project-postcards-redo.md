@@ -26,3 +26,8 @@ metadata:
   - The /postcards/*.jpg place pictures are soft (640px upscaled). Scent pages use /images/<slug>.png (682px styled bottle-on-postcard shots, origin unknown) instead.
   - Shots in `~/Desktop/websites ARCHIVE/lumina-store-review/`.
 Related: [[feedback-fonts-research-first]], [[feedback-dont-overbuild]], [[feedback-idea-before-pixels]].
+
+## 2026-11-11 later: full Astro build of idea 1 (the rack)
+- Tejjo rejected the lumina-store pass as "not a full redo"; saw idea 1 as a real page (/first/rack/), said "Don't touch the hero, rest all go build".
+- Built in postcards-site/site (:4612, launch "postcards"): / (hero exactly as /first/rack/), /<scent>/ x4, /combos/, /rakhi/, /find-your-scent/, /story/, /business/, /help/, 404. Layout src/layouts/Rack.astro (stack = cart in localStorage, Shopify permalink checkout with PACK3/PACK4), styles src/styles/rack.css, data src/data/scents.js. Old starter routes in postcards-site/_archive/pages-before-build.
+- Not deployed, not committed. Open: soft 640px AI place pictures, Instagram handle, PACK3/PACK4 amounts on Shopify, business form is mailto, Rakhi out of season, 404 copy is mine.
