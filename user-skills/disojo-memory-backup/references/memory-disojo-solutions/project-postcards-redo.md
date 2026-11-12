@@ -31,3 +31,12 @@ Related: [[feedback-fonts-research-first]], [[feedback-dont-overbuild]], [[feedb
 - Tejjo rejected the lumina-store pass as "not a full redo"; saw idea 1 as a real page (/first/rack/), said "Don't touch the hero, rest all go build".
 - Built in postcards-site/site (:4612, launch "postcards"): / (hero exactly as /first/rack/), /<scent>/ x4, /combos/, /rakhi/, /find-your-scent/, /story/, /business/, /help/, 404. Layout src/layouts/Rack.astro (stack = cart in localStorage, Shopify permalink checkout with PACK3/PACK4), styles src/styles/rack.css, data src/data/scents.js. Old starter routes in postcards-site/_archive/pages-before-build.
 - Not deployed, not committed. Open: soft 640px AI place pictures, Instagram handle, PACK3/PACK4 amounts on Shopify, business form is mailto, Rakhi out of season, 404 copy is mine.
+
+
+## 2026-11-11 later: Astro build rejected, lumina-store deployed
+- Tejjo was angry at the Astro rack build (postcards-site, :4612). Left on disk, do not touch unless asked.
+- Tejjo ordered: deploy lumina-store (:4613, Vite React, branch 3d-rebuild, uncommitted changes) as is to postcardsperfumes.in. Done.
+- Added nav colour shift: src/lib/navTone.js (isDarkAt reads bg colour or img/video pixel under each nav part); Navbar.jsx marks wordmark, links, bag with data-tone and toggles .is-light (cream). Checks on scroll, resize, every 400ms. Verified on home dark bands, Story photo hero, footer, phone.
+- Added vercel.json SPA rewrite: inner pages (/story etc) 404'd on direct open before, even on the old deploy.
+- DEPLOY RECIPE: `vercel deploy` from the repo is BLOCKED by Vercel because the git commit author (tradingprops09@gmail.com) is not on the Vercel team (scarlettelikesmen). CLI 53 shows this as status UNKNOWN + ETIMEDOUT. Fix: `npx vercel@latest build --prod`, copy .vercel/output + .vercel/project.json into a folder with no git, `npx vercel@latest deploy --prebuilt --prod --yes` there. Three blocked deployments left in the project (harmless).
+- Still open for the client: PACK3/PACK4 discount mismatch in CartDrawer, Instagram handle, forms mailto only, Rakhi out of season. Not committed to git.
