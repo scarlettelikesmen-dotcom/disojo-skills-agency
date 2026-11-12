@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-11T07:54:55.173Z
 ---
 
-**TEST, not a real client** (Tejjo, 2026-11-11: "test"). A redo of https://ctescoa.ac.in, run the lean Marathon way: crawl, one direction, home page, show, stop. It uses a real institution's content, so it stays local and is never deployed or published. Do not overbuild: [[feedback-dont-overbuild]].
+**A client** (Tejjo 2026-11-12: "Yes, both are clients"; earlier on 2026-11-11 they had called this redo a test). A redo of https://ctescoa.ac.in, run the lean Marathon way: crawl, one direction, home page, show, stop. It uses a real institution's content, so it stays local and is never deployed or published. Do not overbuild: [[feedback-dont-overbuild]].
 
 - **Folder:** `~/Desktop/websites ARCHIVE/ctescoa-site/`. Crawled 149 of 170 pages; the home page is JS-rendered, and its text was taken from the browser.
 - **Ideas:** written in `brief/IDEA.md`. My pick is "the drawing sheet": a title block on every page, the menu as the drawing index. PICKED BY TEJJO is still empty.
