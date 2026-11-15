@@ -15,3 +15,8 @@ Deployed 149daa8 from ~/Desktop/disojo-mix (branch mix-2026-11-01, pushed), `npx
 - Screens: 2000x1255 desktop, 690x1500 phone, captured from the live demo URLs with scratchpad cases.cjs.
 - Later DEPLOYED 89a519f: favicon is the mark (74% size since 46123c3, was 62%) on a round #D8E2EC disc (home background), transparent corners; apple-touch icon is the same on a full square. Old icons in disojo-mix/_archive/favicon-before-2026-11-12.
 - 2026-11-15 DEPLOYED 65d8d17: home Featured project is now Print Elements ($850,000, +18%, pe-hero-v2.jpg), replacing Mentable. Mentable still appears elsewhere on home (work list, Parag quote, analyst photo, $750,000 line).
+
+## Case-study redo (started 2026-11-15, NOT committed, NOT deployed)
+- Tejjo wants every case to read as authoritative. Plan approved: Print Elements first, then the other seven if the voice is right, deploy on their word.
+- Done locally in disojo-mix: Print Elements story rewritten (projects.json), with hero figures beside the headline (`heroFigs`) and per-case section labels (`labels`) in v4case.mjs. Large result numbers with small labels and no hand-drawn box, in case-v4.css `.v4c .res` resets (global.css `.res` was leaking in). The results change applies to all 8 case pages.
+- Waiting on: Tejjo's verdict on the voice; build weeks per project, before figures and client quotes (never invent these); /work order CSK, PE, Mentable, CTESCOA, then the rest (not done yet).
