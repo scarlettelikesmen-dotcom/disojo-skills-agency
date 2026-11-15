@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-15T12:05:43.253Z
 ---
 
-**DAY ONE: 2026-11-15.** Tejjo declared 15 Nov 2026 the day Level started. All Level work (code, planning, socials) runs in ONE chat: session 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0. Open on day one: the Settled logo status is unclear (2026-11-08 Tejjo rejected the 3D liquid-glass render with "i dont like this direction at all, or anything"; whether that drops the mark itself was never answered). Strategy doc's waitlist date (Nov 18) and every price/target are still proposals.
+**DAY ONE: 2026-11-15.** Tejjo declared 15 Nov 2026 the day Level started. All Level work (code, planning, socials) runs in ONE chat: session 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0. **LOGO 2026-11-15: Tejjo made their own mark in Gemini (stacked flowing bands + a bar, white on #242122). It REPLACES Settled.** Vectorised in `branding/level-identity-2026-11/mark-2026-11-15/` (178 curves, max error 0.75 px; README there). Known limit: mush at 16 px, a simplified favicon cut awaits Tejjo. Strategy doc's waitlist date (Nov 18) and every price/target are still proposals.
 
 Tejjo's own startup in the trading space, idea born 2026-11-04 after seeing liquidjournal.app (LiquidJournal, ~4,581 traders, journal + AI + prop desk + community). Tejjo felt FOMO; said Tradriv failed because they never gave it their all.
 
