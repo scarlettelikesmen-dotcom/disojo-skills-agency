@@ -1,0 +1,16 @@
+---
+name: project-site-state-2026-11-12-cases
+description: Disojo site DEPLOYED 149daa8 (2026-11-12): case studies Print Elements, CSK Law, CTESCOA; Postcards updated; home Our work = KDC, Postcards, Mentable, Ascender, Print Elements, CTESCOA
+metadata:
+  type: project
+---
+Deployed 149daa8 from ~/Desktop/disojo-mix (branch mix-2026-11-01, pushed), `npx vercel --prod --yes`, verified live by curl on 2026-11-12.
+
+- New case studies: /work/print-elements, /work/csk-law, /work/ctescoa (projects.json entries + v4case.mjs TAGS/COVER/ORDER/NAME). Case count is now dynamic ("06 of 08").
+- Figures are Tejjo's, verified ([[reference-verified-claims]]): PE $850,000 new work, +18% enquiries; CSK 60% growth in organic conversions and new enquiries, $3M billables; CTESCOA +27% conversions, +30% enquiry rate from organic, 2,600 applications.
+- No outbound links, no quotes, no team row on the three new cases (TEAM map only covers the old five; ask Tejjo for team names if wanted).
+- Postcards: new shots pc3-* from the live postcardsperfumes.in (cover, phones, stage, /work), two scope items and fields for scent pages, story, combos/Rakhi. The stage still uses the old pc2-quiz-c2 shot for the quiz.
+- Home Our work: Nature's Blend removed (case page and /work entry kept), Print Elements (id print) and CTESCOA added; counter reads / 06.
+- /work lists 8 projects; tags fall back to a TAGS map in work/index.astro for slugs not on the home stage.
+- Screens: 2000x1255 desktop, 690x1500 phone, captured from the live demo URLs with scratchpad cases.cjs.
+- Later DEPLOYED 89a519f: favicon is the mark (74% size since 46123c3, was 62%) on a round #D8E2EC disc (home background), transparent corners; apple-touch icon is the same on a full square. Old icons in disojo-mix/_archive/favicon-before-2026-11-12.

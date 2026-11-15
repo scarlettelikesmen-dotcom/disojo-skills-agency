@@ -58,7 +58,7 @@
 - [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
 - [Gates are not quality](feedback-gates-are-not-quality.md) — VÆL 2026-11-03 trust break: beat the nine references screen by screen before showing; gate passes are not 'audited'
 - [Real-time 3D method](feedback-realtime-3d-method.md) — live 3D products: skill disojo-realtime-3d-product, bake every detail, no renders/no hiring
-- [Level, your trading playbook](project-level-trading-playbook.md) — READ FIRST for Tejjo's own trading startup: name+category decided 2026-11-04, v1 scope, domains free, vision doc link
+- [Level, your trading playbook](project-level-trading-playbook.md) — READ FIRST for Level: DAY ONE 2026-11-15, one chat for everything; name, scope, strategy doc, logo status open
 - [Footer credit HARD RULE](feedback-footer-credit.md) — always "Design & Systems · © Disojo Studio 2026" linking disojostudio.com; gate enforces it
 - [Multi-page + no basic CTAs guardrail](feedback-multipage-no-basic-ctas.md) — 2026-11-08 hard rule: never one-pager, never dead CTAs, bar = beat the 9 reference sites (not Print Elements)
 - [Kiran Roy](project-kiran-roy-third-pass.md) — READ FIRST for Kiran: fretboard build stashed 2026-11-10 (_archive/direction-B-guitar-2026-11-10), round 2 ideas in brief/IDEA.md awaiting pick
@@ -91,3 +91,4 @@
 - [Fonts: research first](feedback-fonts-research-first.md) — 2026-11-11: our Google font defaults rejected; specimen of 15-20 free fonts in client words before first screens; method in skill references/free-type.md
 - [Postcards slop rejection](feedback-postcards-slop.md) — 2026-11-11: pastel + serif + script hand + stamp props = "usual ai slop"; theme must be structure, subject shown big
 - [Work summary 2026-11-12 (b)](work-summary-2026-11-12-b.md) — Postcards live with nav colour shift, CSK Brygada 1918 deployed, skills pushed
+- [Disojo site state 2026-11-12 cases](project-site-state-2026-11-12-cases.md) — DEPLOYED 149daa8: PE, CSK, CTESCOA case studies, Postcards updated, home stage swaps Nature's Blend for PE + CTESCOA

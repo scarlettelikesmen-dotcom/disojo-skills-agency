@@ -5,10 +5,12 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0
-  modified: 2026-11-04T21:22:58.717Z
+  modified: 2026-11-15T12:05:43.253Z
 ---
 
-Tejjo's own startup in the trading space, started 2026-11-04 after seeing liquidjournal.app (LiquidJournal, ~4,581 traders, journal + AI + prop desk + community). Tejjo felt FOMO; said Tradriv failed because they never gave it their all.
+**DAY ONE: 2026-11-15.** Tejjo declared 15 Nov 2026 the day Level started. All Level work (code, planning, socials) runs in ONE chat: session 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0. Open on day one: the Settled logo status is unclear (2026-11-08 Tejjo rejected the 3D liquid-glass render with "i dont like this direction at all, or anything"; whether that drops the mark itself was never answered). Strategy doc's waitlist date (Nov 18) and every price/target are still proposals.
+
+Tejjo's own startup in the trading space, idea born 2026-11-04 after seeing liquidjournal.app (LiquidJournal, ~4,581 traders, journal + AI + prop desk + community). Tejjo felt FOMO; said Tradriv failed because they never gave it their all.
 
 - **Name: Level. Category: playbook.** Line: "Level, your trading playbook." Decided 2026-11-04. Level = key levels + level-headed + levelling up the learning map. Own brand, NOT Psyche Society, NOT @abelkapoor.
 - Rejected along the way (don't re-suggest): Psyche (as platform name), Nine Thirty, Sweep, Tape Reps, The Draw, Keel, Equili/Equilla/Equora/Aequa/Equilo (fail the "I journaled on ___ today" test: must be an everyday English word like Liquid), category "journal", "gym", "copilot". Tejjo's naming test: "I journaled on ___ today" must sound natural.
