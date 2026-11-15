@@ -5,10 +5,33 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0
-  modified: 2026-11-15T12:05:43.253Z
+  modified: 2026-11-15T13:46:26.438Z
 ---
 
-**DAY ONE: 2026-11-15.** Tejjo declared 15 Nov 2026 the day Level started. All Level work (code, planning, socials) runs in ONE chat: session 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0. **LOGO 2026-11-15: Tejjo made their own mark in Gemini (stacked flowing bands + a bar, white on #242122). It REPLACES Settled.** Vectorised in `branding/level-identity-2026-11/mark-2026-11-15/` (178 curves, max error 0.75 px; README there). Known limit: mush at 16 px, a simplified favicon cut awaits Tejjo. Strategy doc's waitlist date (Nov 18) and every price/target are still proposals.
+**DAY ONE: 2026-11-15.** Tejjo declared 15 Nov 2026 the day Level started. All Level work (code, planning, socials) runs in ONE chat: session 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0. **LOGO 2026-11-15: Tejjo made their own mark in Gemini (stacked flowing bands + a bar, white on #242122). It REPLACES Settled.** Vectorised in `branding/level-identity-2026-11/mark-2026-11-15/` (178 curves, max error 0.75 px; README there). Known limit: mush at 16 px, a simplified favicon cut awaits Tejjo. Strategy doc's waitlist date (Nov 18) and every price/target are still proposals. **RESEARCH 2026-11-15:** Tejjo asked for a plan, direction and identity before the landing page. LiquidJournal is the main benchmark ("10x better"). Part 1 (public site) is done: `level/research/liquidjournal/TEARDOWN-site.md`, plus shots/ and text/ and the crawl scripts in `level/research/`. Part 2 (inside the app) is done: `TEARDOWN-app.md` and `shots/app/`, walked on Tejjo's free account (@tejjo). Key findings: their free Study Room already does video with timestamped notes (Level v1's note part). Bar-by-bar backtesting replay is their announced next build. They have no ordered curriculum and no graded drills, which is Level's gap. They ship about two updates a day. Open question for Tejjo: stay learn-and-drill, or journal as well (recommended: no journal in v1). **PRICING DECIDED 2026-11-15 by Tejjo:**
+- Free tier, plus two paid tiers.
+- Mid tier: $20.29/mo list, $12.99 with a 36% code.
+- Top tier: $45.29/mo list, $28.99 with a 36% code.
+- Exact maths: 0.64 × list rounds to .99.
+- The list price is real and charged to anyone without a code. The 36% comes through affiliate, creator and launch codes. No permanent fake "was" price.
+- This reverses the earlier "no affiliates in v1" guard for creator affiliates. Prop firm deals stay out.
+- Supersedes the strategy doc's $19/mo proposal.
+- Still open: tier names, annual price, what each tier includes.
+- **Decided 2026-11-15:**
+  - Payments run on Dodo Payments (merchant of record) only.
+  - Affiliate commission is 25% of what the customer pays, for the customer's first 12 months (confirmed).
+  - **OVERRIDDEN later on 2026-11-15:** Tejjo wants the phone app (iOS and Android), the desktop app and the web app all launched together. Do not talk in V1/V2 terms.
+  - Apple and Google billing on phones, Dodo on web and desktop.
+  - Feature plan draft: `level/plan/FEATURES.md`. Loop: Learn → Drill → Plan → Trade → Review. Core is the Map plus graded Drills. Journal matches Liquid. No prop affiliate placements.
+  - **Decided 2026-11-15: LIGHT MODE IS THE PRODUCT.**
+    - Every screen, ad, store shot and share card is designed and shown in light.
+    - Dark mode is secondary: a setting, off by default.
+    - Charts must work on light.
+    - UI plan: `level/plan/UI.md`. Tejjo wants to talk the look through rather than pick from A/B/C straight away.
+  - Decided 2026-11-15: Tejjo alone writes the lessons and marks every drill answer. Nobody else checks. (@abelkapoor is Tejjo's own account, not another person.)
+  - Proposed and NOT locked: yearly prices $99.99 and $229.99 with the code (list $156.23 and $359.36); tier names Level 1 / Level 2 / Level 3.
+  - The affiliate code is the 36% code; codes don't stack.
+- Margin per subscriber, after the fee, servers, AI caps and a 25% affiliate cut: about $7.89 of $12.99, and about $16.59 of $28.99. The chart data licence fee is still unknown.
 
 Tejjo's own startup in the trading space, idea born 2026-11-04 after seeing liquidjournal.app (LiquidJournal, ~4,581 traders, journal + AI + prop desk + community). Tejjo felt FOMO; said Tradriv failed because they never gave it their all.
 

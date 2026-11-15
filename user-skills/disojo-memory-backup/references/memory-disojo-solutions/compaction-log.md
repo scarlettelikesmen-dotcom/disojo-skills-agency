@@ -67,3 +67,4 @@ One line each time a session compacts (written by ~/.claude/hooks/precompact_log
 - 2026-11-12 15:04 | auto | session 2b056b99 | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-ctescoa.md
 - 2026-11-15 17:54 | auto | session 2b056b99 | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-site-state-2026-11-12-cases.md
 - 2026-11-15 18:01 | auto | session 4e567c41 | /Users/tejjo/Desktop/DISOJO SOLUTIONS/level/research | newest note: project-site-state-2026-11-12-cases.md
+- 2026-11-15 19:26 | auto | session 4e567c41 | /Users/tejjo/Desktop/DISOJO SOLUTIONS/level/research/light-refs/appstore | newest note: project-level-trading-playbook.md

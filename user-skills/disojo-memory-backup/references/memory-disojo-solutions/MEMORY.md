@@ -92,3 +92,4 @@
 - [Postcards slop rejection](feedback-postcards-slop.md) — 2026-11-11: pastel + serif + script hand + stamp props = "usual ai slop"; theme must be structure, subject shown big
 - [Work summary 2026-11-12 (b)](work-summary-2026-11-12-b.md) — Postcards live with nav colour shift, CSK Brygada 1918 deployed, skills pushed
 - [Disojo site state 2026-11-12 cases](project-site-state-2026-11-12-cases.md) — DEPLOYED 149daa8: PE, CSK, CTESCOA case studies, Postcards updated, home stage swaps Nature's Blend for PE + CTESCOA
+- [No choice buttons](feedback-no-choice-buttons.md) — 2026-11-15: never pass ask/actions to wrap_up or use pickers; ask in plain text
