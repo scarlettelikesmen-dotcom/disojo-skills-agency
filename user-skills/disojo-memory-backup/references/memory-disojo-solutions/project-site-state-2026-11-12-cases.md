@@ -20,6 +20,8 @@ Deployed 149daa8 from ~/Desktop/disojo-mix (branch mix-2026-11-01, pushed), `npx
 - Tejjo wants every case to read as authoritative. Plan approved: Print Elements first, then the other seven if the voice is right, deploy on their word.
 - Done locally in disojo-mix: Print Elements story rewritten (projects.json), with hero figures beside the headline (`heroFigs`) and per-case section labels (`labels`) in v4case.mjs. Large result numbers with small labels and no hand-drawn box, in case-v4.css `.v4c .res` resets (global.css `.res` was leaking in). The results change applies to all 8 case pages.
 - Waiting on: Tejjo's verdict on the voice; build weeks per project, before figures and client quotes (never invent these); /work order CSK, PE, Mentable, CTESCOA, then the rest (not done yet).
+- DEPLOYED bd371e8 on 2026-11-15: home stage Mentable slide now $750,000 + 8,750 with count-up.
+- DEPLOYED 6557763 on 2026-11-15 (PE rewrite, hero figs, results fix, CSK + CTESCOA before, PE team). Other 6 cases still old wording; /work reorder not done.
 - 2026-11-15: Print Elements team row = Postcards team (Tejjo). Before sections added to CSK and CTESCOA from our crawls of their old sites (CSK: 0 forms, 43 of 54 pages without an image, WordPress + Divi; CTESCOA: 123 of 149 pages under 100 words, 170 in sitemap, no contact in header/footer). Tejjo asked to invent before data; refused, sent a client-questions message instead.
 - FLAG raised 2026-11-15: csklawny.com and ctescoa.ac.in still serve the old WordPress sites, yet both case pages say "Status: Live". Awaiting Tejjo.
 - I started :4700 myself on Tejjo's instruction ("just start the server yourself").

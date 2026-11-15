@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0
-  modified: 2026-11-15T13:46:26.438Z
+  modified: 2026-11-15T15:45:41.796Z
 ---
 
 **DAY ONE: 2026-11-15.** Tejjo declared 15 Nov 2026 the day Level started. All Level work (code, planning, socials) runs in ONE chat: session 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0. **LOGO 2026-11-15: Tejjo made their own mark in Gemini (stacked flowing bands + a bar, white on #242122). It REPLACES Settled.** Vectorised in `branding/level-identity-2026-11/mark-2026-11-15/` (178 curves, max error 0.75 px; README there). Known limit: mush at 16 px, a simplified favicon cut awaits Tejjo. Strategy doc's waitlist date (Nov 18) and every price/target are still proposals. **RESEARCH 2026-11-15:** Tejjo asked for a plan, direction and identity before the landing page. LiquidJournal is the main benchmark ("10x better"). Part 1 (public site) is done: `level/research/liquidjournal/TEARDOWN-site.md`, plus shots/ and text/ and the crawl scripts in `level/research/`. Part 2 (inside the app) is done: `TEARDOWN-app.md` and `shots/app/`, walked on Tejjo's free account (@tejjo). Key findings: their free Study Room already does video with timestamped notes (Level v1's note part). Bar-by-bar backtesting replay is their announced next build. They have no ordered curriculum and no graded drills, which is Level's gap. They ship about two updates a day. Open question for Tejjo: stay learn-and-drill, or journal as well (recommended: no journal in v1). **PRICING DECIDED 2026-11-15 by Tejjo:**
@@ -29,6 +29,18 @@ metadata:
     - Charts must work on light.
     - UI plan: `level/plan/UI.md`. Tejjo wants to talk the look through rather than pick from A/B/C straight away.
   - Decided 2026-11-15: Tejjo alone writes the lessons and marks every drill answer. Nobody else checks. (@abelkapoor is Tejjo's own account, not another person.)
+  - **Decided 2026-11-15: domains kept apart.** levelplaybook.app is the pre-register and landing site (Astro). The app lives on its own subdomain (e.g. app.levelplaybook.app, exact prefix not picked). Backend stays separate from the landing site.
+  - **AI 2026-11-15:** comparison in `level/plan/MODELS.md`. Haiku 5.5 is the working choice for cheap jobs; a blind test is proposed for the Coach. Monthly AI budget ceilings per user (Tejjo): free $0.50, mid $2, top $5. **No Coach on the free tier** (Tejjo). Liquid gives no coach on free or on its mid Prestige plan, only on Apex, plus 2 free Study AI runs a week on free. Open: does free get a small taste of the Coach, and what separates mid from top.
+  - **SCOPE CHANGE 2026-11-15 (Tejjo):** Level is for every trader: forex, CFD, futures and the rest, not only NQ/ES futures. Tejjo wants as many broker connections as possible. This supersedes "NQ/ES only" wherever earlier notes say it.
+  - **Broker sync research 2026-11-15:**
+    - Liquid has no Tradovate partnership (their own page says "Not made or endorsed by Tradovate"). It is OAuth app access, approved through the NinjaTrader Ecosystem. Developers report unanswered applications from Mar to Oct 2026, and CrossTrade claims the program is closed. CrossTrade's Partner API is a paid fallback.
+    - TopstepX: the user pays for ProjectX API access ($14.50 with code topstep) and pastes their key.
+    - TradeLocker: open Developer Program.
+    - Rithmic: dev kit plus conformance, using the user's own login. Liquid is still "coming soon".
+    - Replica Copier: a small Romanian copier that pushes fills to Liquid with a code. This is the only real partner.
+    - MT5: no partnership exists. Journals use the investor password, through their own MT5 servers or MetaApi.
+    - Liquid's AI runs on OpenRouter (DeepSeek).
+    - Tejjo floated prop firm "money off the top", which conflicts with the locked "no prop firm deals". Asked to confirm.
   - Proposed and NOT locked: yearly prices $99.99 and $229.99 with the code (list $156.23 and $359.36); tier names Level 1 / Level 2 / Level 3.
   - The affiliate code is the 36% code; codes don't stack.
 - Margin per subscriber, after the fee, servers, AI caps and a 25% affiliate cut: about $7.89 of $12.99, and about $16.59 of $28.99. The chart data licence fee is still unknown.
