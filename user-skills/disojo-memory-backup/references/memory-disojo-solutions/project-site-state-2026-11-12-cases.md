@@ -14,3 +14,4 @@ Deployed 149daa8 from ~/Desktop/disojo-mix (branch mix-2026-11-01, pushed), `npx
 - /work lists 8 projects; tags fall back to a TAGS map in work/index.astro for slugs not on the home stage.
 - Screens: 2000x1255 desktop, 690x1500 phone, captured from the live demo URLs with scratchpad cases.cjs.
 - Later DEPLOYED 89a519f: favicon is the mark (74% size since 46123c3, was 62%) on a round #D8E2EC disc (home background), transparent corners; apple-touch icon is the same on a full square. Old icons in disojo-mix/_archive/favicon-before-2026-11-12.
+- 2026-11-15 DEPLOYED 65d8d17: home Featured project is now Print Elements ($850,000, +18%, pe-hero-v2.jpg), replacing Mentable. Mentable still appears elsewhere on home (work list, Parag quote, analyst photo, $750,000 line).
