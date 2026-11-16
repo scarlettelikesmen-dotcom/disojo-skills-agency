@@ -3,17 +3,17 @@ Status: facts from the live profile (logged-out view 2026-10-14), the site and p
 
 ## Account
 Instagram `@disojo.solutions` ("DISOJO | Custom Software & Consulting"; bio: "Digital systems for owner-run businesses. High-performance Software & Automations designed to scale legacy trust."; link `disojostudio.com`, `disojo.in` redirects there; 1 post). Platforms (6, same handle everywhere, verify limits): TikTok, Instagram, Snapchat, YouTube, X, LinkedIn (**company page created**; Tejjomay's personal LinkedIn amplifies).
-Note: AGENTS.md names `hello@disojo.in` as the public mailbox; the live domain is `disojostudio.com`. TO CONFIRM which address is current.
+Public email: projects@disojostudio.com (CLAUDE.md). The disojo.in mailboxes came from AGENTS.md, archived as outdated 2026-11-16.
 
 ## Who
-Bombay (Mumbai) software studio, **proudly stated on the site**. Branding and websites, MVPs, internal tools and digital systems for owner-run businesses. **Discovery-first**: find where the work leaks, build in visible stages, stay after launch. Motto: "Peace of mind is our forte."
+Bombay (Mumbai) software studio, **proudly stated on the site**. Branding and websites, MVPs, internal tools and digital systems for owner-run businesses. **Discovery-first**: find where the work leaks, build in visible stages, stay after launch. Motto "Peace of mind is our forte.": TO CONFIRM (came from AGENTS.md, archived as outdated 2026-11-16).
 Public sample work on the site: Postcards Perfumes, Ascender Media, Sudha Mahesh Thakkar, KDC, Mentable, Nature's Blend.
 
 ## Audience and goal (decided 2026-10-14)
-**Tier-1 (US, UK, Canada, Europe) owner-run businesses; goal = client leads.** Disojo is ready for tier-1 clients; **USD pricing is being set (2026-10-14) and stays private** (price floors and ranges in AGENTS.md are internal). English only; US/UK spelling; no India-specific pain examples.
+**Tier-1 (US, UK, Canada, Europe) owner-run businesses; goal = client leads.** Disojo is ready for tier-1 clients; **USD pricing is being set (2026-10-14) and stays private** (prices in `offer.md` are internal). English only; US/UK spelling; no India-specific pain examples.
 
 ## Voice
-Authoritative, calm, structured, never submissive (AGENTS.md). Founder on camera can be direct. Bombay is a point of pride, not an apology. See `voice.md`.
+Authoritative, calm, structured, never submissive (TO CONFIRM: came from AGENTS.md, archived as outdated 2026-11-16). Founder on camera can be direct. Bombay is a point of pride, not an apology. See `voice.md`.
 
 ## Hard guards
 No invented claims, numbers, locations, tax codes or testimonials; no client names/contracts/figures without the client's OK (work on the site may be named; results "as reported by the client", e.g. Postcards +42%); never show pricing; no competitor insults; Tradriv and all older reels are discarded; the trading account is a separate world.

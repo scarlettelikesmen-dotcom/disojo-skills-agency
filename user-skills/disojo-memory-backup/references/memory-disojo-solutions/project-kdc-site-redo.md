@@ -5,7 +5,7 @@ metadata:
   type: project
 ---
 
-2026-11-02: Tejjo picked KDC as the first real client for [[project-site-system]]. Direction A "Count-in" (the four KDC Experience promises as one bar of four beats, a red scroll playhead; ink page, KDC red as a marker only, Archivo + JetBrains Mono) was approved in their words: "HONESLTY not bad, i like this, build".
+2026-11-02: Tejjo picked KDC as the first real client for [[reference-site-research]]. Direction A "Count-in" (the four KDC Experience promises as one bar of four beats, a red scroll playhead; ink page, KDC red as a marker only, Archivo + JetBrains Mono) was approved in their words: "HONESLTY not bad, i like this, build".
 
 State:
 - Code `~/Desktop/websites ARCHIVE/kdc-site/site` (Astro starter). Home `src/pages/index.astro`, look `src/styles/kdc.css`, motion `src/scripts/kdc.js`. Brief, message and preview in `kdc-site/brief/`. Dev server: `npx astro dev --port 4600`.

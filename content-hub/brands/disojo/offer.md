@@ -38,7 +38,7 @@ Not for: pre-revenue ideas (MVPs only by exception, when funded), people who wan
 | Proof | KDC, Mentable | Ascender Media, Postcards Perfumes |
 | What the buyer says | "I'm the one who knows how everything works" | "Our site embarrasses us in front of bigger clients" |
 
-Both can run in sequence for one client. No bundle discount: scope changes, rates do not (AGENTS.md section 2.1).
+Both can run in sequence for one client. Bundle discount: `___` (the old no-discount rule was in AGENTS.md, archived as outdated 2026-11-16).
 
 ## Pricing (Tejjo, 2026-11-09, all prices in USD, confirmed)
 | | Project | Retainer, passive | Retainer, growth |
@@ -53,7 +53,7 @@ Both can run in sequence for one client. No bundle discount: scope changes, rate
 | Offer A: Digital systems | $4,500 to $7,200 | $449 / month | $1,529 / month |
 | Offer B: Visual identity | $10,800 to $18,000 | $314 / month | $989 / month |
 - **Both offers for one client:** project fees add up. Retainer rule: `___` (both retainers added, or one combined retainer).
-- This replaces the rupee floors and retainer tiers in AGENTS.md sections 2.1 and 4.1 for this offer. AGENTS.md has not been edited.
+- The rupee floors and retainer tiers of the old AGENTS.md are void (archived as outdated 2026-11-16).
 
 ### What moves the price inside a range (proposed, adjust)
 - **Offer A:** number of user roles (KDC had student, parent, tutor and admin), number of workflows, integrations, moving existing data in, number of screens.
@@ -74,7 +74,7 @@ Both can run in sequence for one client. No bundle discount: scope changes, rate
 - **Offer A:** 1) The work mapped as it really runs. 2) First clickable screen on real data. 3) Core flows live on staging, used by the client's own team. 4) Roll-out and training. Launch, then a watch period of `___` days.
 - **Offer B:** 1) Direction: three identity directions, client picks one or a mix. 2) Identity locked, first screen of the site on a demo link. 3) Full site on the demo link. 4) Enquiry pipeline live: form to tracked lead to notification. Launch.
 
-**Payment schedule:** the standard 20 / 20 / 40 / 20 from AGENTS.md section 2.2.
+**Payment schedule:** `___` (the old 20 / 20 / 40 / 20 was in AGENTS.md, archived as outdated 2026-11-16).
 
 ## Pricing rules I recommend (your call)
 1. **Price Offer A against the leak.** The Leak Map puts a cost on the problem using the client's own numbers: hours a week, who does them, bookings missed. The fee is a fraction of that. KDC's "10 hours back every week" is the model. Never put a cost in a Leak Map that the client did not give you.
@@ -83,7 +83,7 @@ Both can run in sequence for one client. No bundle discount: scope changes, rate
 
 ## Risk reversal (proposal, needs your approval)
 Suggested line: **"Every stage has a defined end. You can stop at a stage boundary and owe only what that stage cost."**
-Conflict to resolve first: AGENTS.md section 1.3 says no IP transfer without 100% settlement. The line must say IP and production access release on final settlement, so it does not promise the client keeps unfinished work.
+Open first: when IP and production access are released, `___`. (The old rule, nothing before full settlement, was in AGENTS.md, archived as outdated 2026-11-16.) The line must match whatever you decide.
 
 ## Proof you may use (verified list in CLAUDE.md, nothing new)
 - Offer A: KDC (10 hrs back every week; named with permission); Mentable (founder and CTO reviews, Ares Sharma and Parag Mehta).

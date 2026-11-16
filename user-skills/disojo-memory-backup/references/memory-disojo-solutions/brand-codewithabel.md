@@ -9,4 +9,4 @@ Brand new account (2026-10-14: 0 posts, 2 followers, no bio). Build in public fr
 Open: "Abel" public name/on-camera identity, build runway, capacity, handles registered.
 
 **Why:** credibility from real builds feeds the agency.
-**How to apply:** see [[content-portfolio-two-worlds]]; never trading/Tradriv content here.
+**How to apply:** see [[project-content]]; never trading/Tradriv content here.

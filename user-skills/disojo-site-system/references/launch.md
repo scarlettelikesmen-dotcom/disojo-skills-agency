@@ -5,7 +5,7 @@
 
 ## Before the client's domain
 1. `bash $SK/scripts/prelaunch_scan.sh site`: placeholders and `TODO(client)`, the library specimen, empty origin, noindex still on, og image, favicon, images over 300 KB, video over 3 MB, secrets in src/public, `.env` not ignored, no git remote. Files only: still read the site.
-2. Lighthouse on the DEPLOYED url (gzip; local preview scores lower): `bash $SK/scripts/lighthouse_summary.sh <url>` and `... <url> desktop`. Target 90+ on all four (AGENTS.md); say where a page cannot reach it and why.
+2. Lighthouse on the DEPLOYED url (gzip; local preview scores lower): `bash $SK/scripts/lighthouse_summary.sh <url>` and `... <url> desktop`. Target 90+ on all four; say where a page cannot reach it and why.
 3. Gates from stage 4 green on the final build; `references/first-look.md` answered on every screen.
 
 ## Forms and booking
@@ -21,4 +21,4 @@ Load analytics after interaction or idle, never at t=0. No popup before engageme
 iPhone Safari and one Android: no blank areas, no address-bar jump, menu and forms work with touch, rotate, reduced motion on, slow 4G. Until someone has done this, the report says "real phones and Safari untested".
 
 ## Handover
-Repo with a remote (day one, not at the end), README: how to edit content and tokens, where assets live, how to deploy, rollback URL, form delivery and any activation step, what is stock or AI (disclose the SynthID mark), unverified labels, keys to rotate. Production repo, credentials and IP transfer only after the final invoice (AGENTS.md). Footer credit stays.
+Repo with a remote (day one, not at the end), README: how to edit content and tokens, where assets live, how to deploy, rollback URL, form delivery and any activation step, what is stock or AI (disclose the SynthID mark), unverified labels, keys to rotate. When the production repo, credentials and IP transfer are released: ask Tejjomay (not set). Footer credit stays.

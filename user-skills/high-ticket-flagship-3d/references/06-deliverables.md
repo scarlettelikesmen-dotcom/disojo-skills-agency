@@ -48,7 +48,7 @@ Scope is fixed in the signed scope sheet (`templates/scope-sheet.md`). Items mar
 - Optional retainer **(confirm USD terms)**.
 
 ## 7. Release rule
-Production repositories, cloud credentials, DNS and the IP transfer deed are released only after the final invoice is paid and reconciled (AGENTS.md; confirm for this tier). The client owns their brand identity and business content; Disojo keeps its own reusable frameworks and tooling.
+When production repositories, cloud credentials, DNS and the IP transfer deed are released: not set, ask Tejjomay. The client owns their brand identity and business content; Disojo keeps its own reusable frameworks and tooling.
 
 ## 8. Not included unless separately bought
 Ads, email, WhatsApp, ASO, UGC and influencer work; ongoing content production; a store or checkout for non-Shopify shops; a client portal or internal tools; native apps. These are Disojo's other services and are separate scopes.

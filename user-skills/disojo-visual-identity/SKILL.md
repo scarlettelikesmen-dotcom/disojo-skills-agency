@@ -7,7 +7,7 @@ description: START HERE for a whole Visual identity job (Disojo Offer B), from q
 
 The promise: the business stops looking smaller than it is. One job, one folder, stages the client can see.
 
-Commercial terms live in `~/Desktop/DISOJO SOLUTIONS/content-hub/brands/disojo/offer.md`. **Never quote a price or currency from memory or from this file: ask Tejjomay.** Legal and payment law: `~/Desktop/DISOJO SOLUTIONS/AGENTS.md` (read-only).
+Commercial terms live in `~/Desktop/DISOJO SOLUTIONS/content-hub/brands/disojo/offer.md`. **Never quote a price or currency from memory or from this file: ask Tejjomay.**
 
 Before anything: `disojo-site-system/references/bottlenecks.md`, the Identity and Material tables.
 
@@ -27,7 +27,7 @@ Before anything: `disojo-site-system/references/bottlenecks.md`, the Identity an
 | 10 | **Hand over, stay on** | `brand-guidelines` last, from approved tokens. `brand-measurement`: pick a few things that can really be measured. Retainer terms from `offer.md`. `launch-retrospective`, then add any rejection to `bottlenecks.md`. | guidelines, handover | Tejjomay |
 
 ## Client stages and payment
-Client-facing stages (draft in `offer.md`): direction, identity locked with first screen on a demo link, full site on the demo link, pipeline live. Payment 20/20/40/20 (`AGENTS.md` 2.2). Two consolidated revision rounds per milestone, no new features in a revision (3.1). Production repos, DNS, credentials and IP release only after final settlement (1.3). Client comms run through the client's own portal.
+Client-facing stages (draft in `offer.md`): direction, identity locked with first screen on a demo link, full site on the demo link, pipeline live. Payment schedule, revision rounds, change orders and IP release are not set: the old rules lived in AGENTS.md, archived as outdated on 2026-11-16. Ask Tejjomay; never fill them from memory. Client comms run through the client's own portal.
 
 ## Which skill wins
 - This file sets the order. `disojo-brand-system` sets the files and tokens.

@@ -47,7 +47,7 @@ Can do: cut/trim, silence removal, join, 9:16 reframe, speed, audio normalise, b
 Cannot: judge raw footage by eye without extracting frames first. Always extract frames and look before claiming an edit is good. Render a preview and check it before handing over.
 
 ## Brand rules
-- disojo: no client names/figures public without client OK (see project AGENTS.md). Postcards +42% is client-reported: say so.
+- disojo: no client names/figures public without client OK (see memory reference-verified-claims). Postcards +42% is client-reported: say so.
 - trading: no advice, no signals, no return promises, no unverified results. Process/discipline/psychology angle. Show only real, verifiable numbers Tejjomay supplies. SEBI rules apply to Indian audiences: flag anything that could read as advice and ask.
 - personal: only facts Tejjomay confirms about themselves.
 

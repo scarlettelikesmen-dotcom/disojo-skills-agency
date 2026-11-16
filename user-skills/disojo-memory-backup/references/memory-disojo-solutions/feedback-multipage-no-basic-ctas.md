@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-08T12:04:20.817Z
 ---
 
-Tejjomay, 2026-11-08, for all site work (added to skill [[project-site-system]] Hard rules):
+Tejjomay, 2026-11-08, for all site work (added to skill [[reference-site-research]] Hard rules):
 
 1. **Never a one-pager.** Every site Disojo builds is multi-page: home + real inner pages (about, work/catalog, product/service detail, contact, legal). A single landing page or one long scroll is not a deliverable, even for a "simple" brief.
 2. **Never basic/dead CTAs or plain boring components.** No plain no-motion buttons, no undesigned links/cards/rows. Design the interaction layer (button, link, card, row, menu, cursor, reveals) from the brand's idea BEFORE composing sections. Don't make Tejjomay sit and ask for the basics — "you know what we do."

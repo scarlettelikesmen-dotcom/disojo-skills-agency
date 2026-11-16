@@ -45,10 +45,10 @@ Gates: 1 art direction brief, 2 identity, 3 3D test scene, 4 storyboard and copy
 TBD (Tejjomay sets per project). Start date, gate dates, launch date.
 
 ## 8. Fee and payment
-Fee: TBD (Tejjomay decides inside the range; never quote without his say). Currency: USD (stated 2026-10-14). Payment schedule: TBD for this tier. Existing Disojo rule: first payment before work starts; 80% collected before going live; final payment on handover (AGENTS.md 20/20/40/20; confirm).
+Fee: TBD (Tejjomay decides inside the range; never quote without his say). Currency: USD (stated 2026-10-14). Payment schedule: TBD for this tier.
 
 ## 9. Ownership
-Client owns their brand identity and business content. Disojo keeps its reusable frameworks and tooling. Production code, credentials, DNS and the IP deed are released after the final invoice is paid (AGENTS.md; confirm).
+Client owns their brand identity and business content. Disojo keeps its reusable frameworks and tooling. When production code, credentials, DNS and the IP deed are released: TBD (Tejjomay).
 
 ## 10. Assumptions and risks
 List them (e.g. print files arrive by ___; client has photography; audience is ___).

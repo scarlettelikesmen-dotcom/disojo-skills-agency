@@ -1,97 +1,61 @@
-- [Content hub setup](content-hub-setup.md) — Tejjomay's content production desk: tools, status, what's still needed
-- [Content portfolio: two worlds](content-portfolio-two-worlds.md) — three accounts/two worlds, tier-1, 3-posts-a-day model, non-negotiables; points to MASTER-CONTEXT
-- [Brand: Disojo Solutions](brand-disojo-solutions.md) — agency account facts, goal (client leads), guards, open questions
-- [Brand: codewithabel](brand-codewithabel.md) — build-in-public account, series, story bank, open questions
-- [Brand: abelkapoor-trading](brand-abelkapoor-trading.md) — trading account, no-selling promise, compliance guards, open questions
-- [Content style feedback](feedback-content-style.md) — how he wants the content operation run; voice-dictation quirks
-- [High-ticket branding offer](project-high-ticket-branding-offer.md) — USD 10-15k branding + site offer, 7 reference sites studied, skills installed, open decisions
-- [Print Elements flagship](project-print-elements-flagship.md) — FRESH build, signed 2026-10-14 CAD 19,500; guidebook phase 2; open questions
-- [Reminder: location sitemap, service pages, Parallel HQ copy](reminder-site-locations-services-parallelhq.md) — Disojo site, noted 2026-10-17, not started
-- [Editing engine state](editing-engine-state.md) — Remotion pilot v5-v7, verdict history, open editing list, how to run (CURRENT FOCUS)
-- [Match live by measuring](feedback-match-live-by-measuring.md) — Disojo site: copy/restore means exact, and diff numerically vs live before claiming
-- [Copywriting systems](copywriting-systems.md) — 3 per-account copy skills + reports (2026-10-18), awaiting review
-- [Trading origin + answers](trading-origin-and-answers-2026-10-18.md) — confirmed origin, identity theme, P&L rule, handles, KDC before-story
-- [Our work rebuild options](project-our-work-rebuild-options.md) — DONE (Stage wired in); mock-ups in _archive/work-options
-- [To-do: Ascender style + white brief + up/down feature](reminder-site-ascender-style-todo.md) — mostly done 2026-10-20 (hover motion, white brief, font); items 2-4 now folded into the design-language pass
-- [Background test (5 ideas)](project-site-background-test.md) — DONE (lamp edge locked in)
-- [What we do: 10 layout options](project-what-we-do-options.md) — DONE (Directory + Symptoms wired)
-
-- [Disojo site state 2026-10-20](project-site-state-2026-10-20.md) — READ FIRST: home rebuild done, preview + git pushed, not deployed; to-do list (phone optimisation next)
-- [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
-- [Disojo logo redo](project-disojo-logo-redo.md) — clean slate 2026-11-02; rounds 1-4 all rejected; round 5 via skill disojo-identity-lab (8 territories), awaiting picks
-- [Logo: no font tweaks](feedback-logo-no-font-tweaks.md) — 2026-10-21 sketches rejected; construct letters, explore wide, compare against his refs before showing
-- [Print Elements in Ascender style](project-print-elements-ascender-style.md) — new build 2026-10-22, live preview pe-857fd6.vercel.app, hero dojacatbro, open items
-- [Print Elements multi-page (OH style)](project-print-elements-multipage.md) — 64-route site live pe-d4edb3.vercel.app, supersedes one-page build
-- [Trading journal](project-trading-journal.md) — private journal in DISOJO SOLUTIONS/trading-journal, separate from content; backfill Oct 16/19/20 pending
-- [Disojo site state 2026-10-22](project-site-state-2026-10-22.md) — READ FIRST: new logo, social exports, CTA mock-up (4455/cta.html), services-copy plan awaiting 4 answers, v3 backup location
-- [Print Elements rebrand concept](project-print-elements-rebrand-concept.md) — 2026-10-23 from-scratch rebrand exploration, A1/A4 liked, B pending, year unconfirmed
-- [Disojo site state 2026-10-23](project-site-state-2026-10-23.md) — READ FIRST: DEPLOYED 444f168; what shipped, merge note (work in main repo now), open items
-- [To-do: service details + detail page redo](reminder-site-service-details-and-detail-page.md) — REMIND at next site session: lists inside What we fix answers, hook briefs, /services page redo
-- [LinkedIn profile optimisation](project-linkedin-profile.md) — About + banner FINAL; headline, experience, Featured, Services, photo, connections pending
-- [Shortscut teardown](reference-shortscut-teardown.md) — 2026-10-26 full teardown of shortscut.com + what to borrow for ascendermedia.in; report in ascender-portal/
-- [Ascender logo + identity](project-ascender-logo-identity.md) — 2026-10-26 started: brief, banned ideas, round-1 prompts out, awaiting picks
-- [Ascender site iteration plan](project-ascender-site-iteration-plan.md) — 2026-10-28 FULL REBUILD PLAN + no-footage hero prototype (rebuild-hero, localhost 4480), awaiting verdict
-- [Mentable landing page](project-mentable-space-landing.md) — READ FIRST for Mentable: LIVE www.mentable.space, deploy recipe, decisions, NEXT PASS in progress (app logo + sim recordings + interaction library)
-- [Premium build process](feedback-premium-build-process.md) — Mentable v1 failed 2026-10-27: study refs hands-on first, concepts in words, then build
-- [Iterate on localhost only](feedback-iterate-on-localhost-only.md) — 2026-10-27: no Vercel preview pushes unless asked
-- [Disojo v4 concept](project-disojo-v4-concept.md) — 2026-10-28 fresh 'Two O's' site at websites ARCHIVE/disojo-v4, localhost 4471, not deployed, awaiting feedback
-- [Port elements only](feedback-port-elements-only.md) — bringing concept pieces into the live site: add only the named element, never touch positioning, spacing or fonts
-- [Disojo site state 2026-10-28](project-site-state-2026-10-28.md) — DEPLOYED dbd518f: v4 pieces live (hero, What we fix, services, case studies, contact chips), team rows, open items
-- [Print Elements v4](project-print-elements-v4.md) — READ FIRST for Print Elements: 2026-10-28 A-to-Z rebuild, keep logo, live-ink hero, Blender renders, price builder; localhost 4511
-- [CSK law firm redo concept](project-csk-lawny-concept.md) — 2026-10-29 local one-page concept for csklawny.com (Cohen Stine Kapoor LLP), :4561, not deployed
-- [Redo pipeline + Movement First](project-redo-pipeline.md) — SUPERSEDED by disojo-site-system (2026-11-02); plug-and-play redo skill (2026-11-01), Monolog-based rules, Movement First A built locally, not deployed
-- [Disojo redo, 3 directions](project-disojo-redo-2026-11-01.md) — A lens / B typed once / C circled, live demo links, cal.com link broken on live site
-- [Graphite palette locked](project-disojo-graphite-palette.md) — 2026-11-02 DEPLOYED 2886479: Graphite + grain + Bricolage + new CTAs live; favicon/og still old
-- [Button motion feel](feedback-button-motion.md) — strong ease-out (.16,1,.35,1) 0.6s like Monolog; "dead" means fix the curve, not the speed
-- [Disojo positioning 2026-11-02](project-disojo-positioning-2026-11-02.md) — decisions so far, Monolog audit numbers, challenges awaiting Tejjo
-- [Work summary 2026-11-02](work-summary-2026-11-02.md) — Mentable featured section, 8,750, analyst photo, image direction, compaction settings; NOT deployed
-- [Website system (merged)](project-site-system.md) — READ FIRST for site work: 14 skills merged into disojo-site-system 2026-11-02, section library, gate fix, next = first real client run
-- [KDC site redo](project-kdc-site-redo.md) — kunalsdrumclass.com, first disojo-site-system run: Count-in approved, home built localhost:4600, NOT deployed, gap list
-- [Disojo site working copy](feedback-disojo-site-working-copy.md) — edit ~/Desktop/disojo-mix on :4700 only, never disojo-hybrid; watermark with watermark_new.py (new logo)
-- [Disojo site state 2026-11-02 testimonials](project-site-state-2026-11-02-testimonials.md) — DEPLOYED 798f554 from disojo-mix: testimonials redo, Skye, figures; AI-detector photo issue open
-- [Compaction log](compaction-log.md) — one line per compaction from the PreCompact hook (proof it fired, newest note at that time)
-- [Ascender multipage 2026-11-02](project-ascender-multipage-2026-11-02.md) — calendar hero, Monolog buttons, 7-page split, DEPLOYED kraq88wyv
-- [Disojo site state 2026-11-02 work notes](project-site-state-2026-11-02-work-notes.md) — DEPLOYED 6e0ddac: work-page notes, new screenshots, $750,000, 78,000+, $50k in 4 months
-- [Premium 3D research 2026-11-03](project-premium-3d-research-2026-11-03.md) — kits 1-32 + 30 sites teardown, techniques A-F, Webflow call, 3 decisions awaiting
-- [Work summary 2026-11-03](work-summary-2026-11-03.md) — research report published, nothing built or deployed
-- [Blender autonomous setup](project-blender-autonomous-setup.md) — 2026-11-03 MCP bridge installed (telemetry off), 3-object proof test next; skill changes approved, not done
-- [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
-- [Gates are not quality](feedback-gates-are-not-quality.md) — VÆL 2026-11-03 trust break: beat the nine references screen by screen before showing; gate passes are not 'audited'
-- [Real-time 3D method](feedback-realtime-3d-method.md) — live 3D products: skill disojo-realtime-3d-product, bake every detail, no renders/no hiring
-- [Level, your trading playbook](project-level-trading-playbook.md) — READ FIRST for Level: DAY ONE 2026-11-15, one chat for everything; name, scope, strategy doc, logo status open
-- [Footer credit HARD RULE](feedback-footer-credit.md) — always "Design & Systems · © Disojo Studio 2026" linking disojostudio.com; gate enforces it
-- [Multi-page + no basic CTAs guardrail](feedback-multipage-no-basic-ctas.md) — 2026-11-08 hard rule: never one-pager, never dead CTAs, bar = beat the 9 reference sites (not Print Elements)
-- [Kiran Roy](project-kiran-roy-third-pass.md) — READ FIRST for Kiran: fretboard build stashed 2026-11-10 (_archive/direction-B-guitar-2026-11-10), round 2 ideas in brief/IDEA.md awaiting pick
-- [Work summary 2026-11-08](work-summary-2026-11-08.md) — LinkedIn, FAQ deploy 095bc66, Kiran reference walk, three demo homes live
-- [Idea before pixels](feedback-idea-before-pixels.md) — 2026-11-09 root fix: three real-object ideas in words, Tejjo picks, then pixels; gates check defects only
-- [Offer skills plan](project-offer-skills-plan.md) — READ FIRST for skills work: CLAUDE.md under 25, prune skills, one complete skill per offer, benchmarks inside skills; nothing removed yet
-- [Work summary 2026-11-09](work-summary-2026-11-09.md) — Kiran stopped, skills audit, root fix, backup location
-- [Software only decision 2026-11-09](project-decision-software-only-2026-11-09.md) — no content agency, no rename; offer draft in content-hub/brands/disojo/offer.md, blanks await Tejjo
-- [Astro only](feedback-astro-only.md) — hard rule 2026-11-09: every website in Astro from first screen to launch, no HTML sites; enforced by guard, gate, deploy
-- [Footer location and clock](feedback-footer-location-clock.md) — 2026-11-09: every site footer has real location and a small live clock
-- [Approved benchmarks](project-approved-benchmarks.md) — eight quality-bar sites Tejjo approved 2026-11-10; 133 more judged on the yes or no page, 77 survive round 2
-- [Work summary 2026-11-10](work-summary-2026-11-10.md) — benchmarks, 84-site walk, type skills; lilt built and deployed to lilt-demo several times, then paused mid-pivot to vegan cookies
+## Disojo
+- [Disojo business](project-disojo-business.md) — READ FIRST: legal name Disojo Studio, offers + USD prices, what is not set since AGENTS.md was archived, logo, the 2026-11-16 setup cleanup
+- [Disojo site](project-disojo-site.md) — READ FIRST for disojostudio.com: disojo-mix :4700, live bd371e8, look, figures, case-study redo, open items, reminders
 - [Verified claims](reference-verified-claims.md) — what Disojo may publish without asking
 - [Projects and working rules](reference-projects.md) — Disojo facts, goals, site workflow, content, shipped work, moved from CLAUDE.md
 - [Environment](reference-environment.md) — tools, backups, screenshots, venv, Vercel notes
-- [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
-- [No NPC nav](feedback-no-npc-nav.md) — hard rule 2026-11-10: no blurred top bar with same-size links; nav from the idea, 3 options in words; gate enforces it
-- [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it
-- [Awwwards code study 2026-11-10](project-awwwards-code-study-2026-11-10.md) — READ FIRST for site quality: code study, award-bar numbers, kernel (:4790), taste study in skill taste/ (7 benchmarks walked, method + ranges; TFTL 96-project report in research/tftl-portfolio)
-- [Work summary 2026-11-11](work-summary-2026-11-11.md) — 7 benchmarks + all 96 TFTL projects studied; skills now a method not a look; next: demo project, mirror push pending
-- [Own verdict before showing](feedback-own-verdict-before-showing.md) — 2026-11-11 CSK: never send design I would not call good myself; say what's missing instead
-- [CSK v2](project-csk-v2.md) — STOPPED 2026-11-12: Tejjo happy with the earlier csk-law-demo build; v2 draft on disk, never shown
-- [Work summary 2026-11-12](work-summary-2026-11-12.md) — CSK E/F/10 options rejected, dissection numbers, v2 started
-- [Marathon Group](project-marathon.md) — NOT A REAL CLIENT: a test by Tejjo 2026-11-11; local build only, never deploy, stop building
-- [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
-- [CTESCOA test redo](project-ctescoa.md) — TEST not a client 2026-11-11: ctescoa.ac.in redo, local only; round 2 D/E/F after the arch study; D picked 2026-11-11 (name full width), not built further
-- [No big rectangle CTAs](feedback-no-big-rectangle-ctas.md) — 2026-11-11: Tejjo hates large filled block buttons with a centred label; make the action typographic, from the idea
-- [Window scroll effect](feedback-window-scroll-effect.md) — "like a window / zoom in zoom out" = Monolog window parallax (0.19px/px), not a zoom; approved on CTESCOA hero 2026-11-11
+- [Site research](reference-site-research.md) — where all benchmark, code, Awwwards, TFTL, taste and 3D research lives and what it found; never re-research
+- [LinkedIn profile optimisation](project-linkedin-profile.md) — About + banner FINAL; headline, experience, Featured, Services, photo, connections pending
+
+## Clients and builds
+- [Print Elements](project-print-elements.md) — READ FIRST: v8 approved, review link pe-review-chi.vercel.app, open owner questions, past builds
+- [Ascender site + identity](project-ascender-site.md) — READ FIRST for ascendermedia.in: live kraq88wyv, source rebuild-v6, deploy recipe, logo picks
+- [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
+- [CSK Law](project-csk.md) — approved build csk-law-demo.vercel.app (Brygada 1918), v2 stopped, the dissection lesson
+- [CTESCOA](project-ctescoa.md) — a client (Tejjo 2026-11-12), first called a test: drawing-sheet build D, demo ctescoa-demo.vercel.app, 132 inner routes; ctescoa.ac.in still old
 - [Postcards redo](project-postcards-redo.md) — READ FIRST for Postcards: Astro rack build REJECTED 2026-11-11; lumina-store (Vite) DEPLOYED to postcardsperfumes.in with auto nav colour shift; deploy recipe (git-author block)
-- [Fonts: research first](feedback-fonts-research-first.md) — 2026-11-11: our Google font defaults rejected; specimen of 15-20 free fonts in client words before first screens; method in skill references/free-type.md
-- [Postcards slop rejection](feedback-postcards-slop.md) — 2026-11-11: pastel + serif + script hand + stamp props = "usual ai slop"; theme must be structure, subject shown big
-- [Work summary 2026-11-12 (b)](work-summary-2026-11-12-b.md) — Postcards live with nav colour shift, CSK Brygada 1918 deployed, skills pushed
-- [Disojo site state 2026-11-12 cases](project-site-state-2026-11-12-cases.md) — DEPLOYED 149daa8: PE, CSK, CTESCOA case studies, Postcards updated, home stage swaps Nature's Blend for PE + CTESCOA
-- [No choice buttons](feedback-no-choice-buttons.md) — 2026-11-15: never pass ask/actions to wrap_up or use pickers; ask in plain text
+- [Mentable landing page](project-mentable-space-landing.md) — READ FIRST for Mentable: LIVE www.mentable.space, deploy recipe, decisions, NEXT PASS in progress (app logo + sim recordings + interaction library)
+- [KDC site redo](project-kdc-site-redo.md) — kunalsdrumclass.com, first disojo-site-system run: Count-in approved, home built localhost:4600, NOT deployed, gap list
+- [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
+- [Kiran Roy](project-kiran-roy-third-pass.md) — READ FIRST for Kiran: fretboard build stashed 2026-11-10 (_archive/direction-B-guitar-2026-11-10), round 2 ideas in brief/IDEA.md awaiting pick
+- [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
+
+## Own products and content
+- [Level, your trading playbook](project-level-trading-playbook.md) — READ FIRST for Level: DAY ONE 2026-11-15, one chat for everything; name, scope, strategy doc, logo status open
+- [Trading journal](project-trading-journal.md) — private journal in DISOJO SOLUTIONS/trading-journal, separate from content; backfill Oct 16/19/20 pending
+- [Trading account @abelkapoor](project-trading-account.md) — The Wall Model, Psyche Society, compliance, monetisation, origin facts, pending
+- [Content operation](project-content.md) — READ FIRST for content: accounts, 3 posts a day, locked looks, edit style v9, copy skills; MASTER-CONTEXT is the source
+- [Brand: codewithabel](brand-codewithabel.md) — build-in-public account, series, story bank, open questions
+
+## How Tejjo wants work done
+- [Astro only](feedback-astro-only.md) — hard rule 2026-11-09: every website in Astro from first screen to launch, no HTML sites; enforced by guard, gate, deploy
+- [Button motion feel](feedback-button-motion.md) — strong ease-out (.16,1,.35,1) 0.6s like Monolog; "dead" means fix the curve, not the speed
+- [Content style feedback](feedback-content-style.md) — how he wants the content operation run; voice-dictation quirks
+- [Disojo site working copy](feedback-disojo-site-working-copy.md) — edit ~/Desktop/disojo-mix on :4700 only, never disojo-hybrid; watermark with watermark_new.py (new logo)
+- [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
 - [Downloads and computer access](feedback-downloads-computer-access.md) — 2026-11-16 standing OK to download and use the whole computer without asking
 - [Flow prompting](feedback-flow-prompting.md) — Nano Banana Pro is good; long researched prompts with reference images, say what each image is for
+- [Fonts: research first](feedback-fonts-research-first.md) — 2026-11-11: our Google font defaults rejected; specimen of 15-20 free fonts in client words before first screens; method in skill references/free-type.md
+- [Footer credit HARD RULE](feedback-footer-credit.md) — always "Design & Systems · © Disojo Studio 2026" linking disojostudio.com; gate enforces it
+- [Footer location and clock](feedback-footer-location-clock.md) — 2026-11-09: every site footer has real location and a small live clock
+- [Gates are not quality](feedback-gates-are-not-quality.md) — VÆL 2026-11-03 trust break: beat the nine references screen by screen before showing; gate passes are not 'audited'
+- [Idea before pixels](feedback-idea-before-pixels.md) — 2026-11-09 root fix: three real-object ideas in words, Tejjo picks, then pixels; gates check defects only
+- [Iterate on localhost only](feedback-iterate-on-localhost-only.md) — 2026-10-27: no Vercel preview pushes unless asked
+- [Logo: no font tweaks](feedback-logo-no-font-tweaks.md) — 2026-10-21 sketches rejected; construct letters, explore wide, compare against his refs before showing
+- [Match live by measuring](feedback-match-live-by-measuring.md) — Disojo site: copy/restore means exact, and diff numerically vs live before claiming
+- [Multi-page + no basic CTAs guardrail](feedback-multipage-no-basic-ctas.md) — 2026-11-08 hard rule: never one-pager, never dead CTAs, bar = beat the 9 reference sites (not Print Elements)
+- [No big rectangle CTAs](feedback-no-big-rectangle-ctas.md) — 2026-11-11: Tejjo hates large filled block buttons with a centred label; make the action typographic, from the idea
+- [No choice buttons](feedback-no-choice-buttons.md) — 2026-11-15: never pass ask/actions to wrap_up or use pickers; ask in plain text
+- [No NPC nav](feedback-no-npc-nav.md) — hard rule 2026-11-10: no blurred top bar with same-size links; nav from the idea, 3 options in words; gate enforces it
+- [Own verdict before showing](feedback-own-verdict-before-showing.md) — 2026-11-11 CSK: never send design I would not call good myself; say what's missing instead
+- [Port elements only](feedback-port-elements-only.md) — bringing concept pieces into the live site: add only the named element, never touch positioning, spacing or fonts
+- [Postcards slop rejection](feedback-postcards-slop.md) — 2026-11-11: pastel + serif + script hand + stamp props = "usual ai slop"; theme must be structure, subject shown big
+- [Premium build process](feedback-premium-build-process.md) — Mentable v1 failed 2026-10-27: study refs hands-on first, concepts in words, then build
+- [Real-time 3D method](feedback-realtime-3d-method.md) — live 3D products: skill disojo-realtime-3d-product, bake every detail, no renders/no hiring
+- [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it
+- [Window scroll effect](feedback-window-scroll-effect.md) — "like a window / zoom in zoom out" = Monolog window parallax (0.19px/px), not a zoom; approved on CTESCOA hero 2026-11-11
+
+## Logs
+- [Compaction log](compaction-log.md) — one line per compaction from the PreCompact hook (proof it fired, newest note at that time)
+
+Archived 2026-11-16 (merged or history, read only when a past detail is needed): `_archive/2026-11-16/`

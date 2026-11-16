@@ -14,4 +14,4 @@ Per trade he wants: exact execution screenshot, reasoning (level/wall/road/trigg
 
 Backfill: he journalled from Friday 2026-10-16; he will send Fri 16, Mon 19 and Tue 20 Oct trades on Wed 22 Oct, then journals daily. Ask for exact dates.
 
-**Why:** consistency and edge discovery; he is already profitable and full-time. **How to apply:** log only what he reports, mark gaps "not given", never guess; flag rule boxes the screenshot can't prove; after ~10-20 trades offer pattern analysis. Rules live in the journal copy and evolve there; see [[brand-abelkapoor-trading]] for the Wall Model origin.
+**Why:** consistency and edge discovery; he is already profitable and full-time. **How to apply:** log only what he reports, mark gaps "not given", never guess; flag rule boxes the screenshot can't prove; after ~10-20 trades offer pattern analysis. Rules live in the journal copy and evolve there; see [[project-trading-account]] for the Wall Model origin.

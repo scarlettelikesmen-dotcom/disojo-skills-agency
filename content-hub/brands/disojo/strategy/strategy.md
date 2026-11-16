@@ -35,4 +35,4 @@ A: watch time, shares, profile visits -> link taps. B: reach, follows per reach,
 No invented numbers/claims; no client names or figures without client OK (work listed on the site can be named; results "as reported by the client"); no pricing in content; calm authoritative voice, never submissive; no India-specific pain examples; no competitor insults (opinion about practices, not people); Tradriv and old reels are gone.
 
 ## 9. TO CONFIRM
-Lead-magnet/offer wording ("free leak check"), USD pricing (private), current public email (AGENTS.md says hello@disojo.in; site is disojostudio.com), clients OK'd for case studies, handles actually registered per platform, capacity.
+Lead-magnet/offer wording ("free leak check"), USD pricing (private), current public email (projects@disojostudio.com per CLAUDE.md), clients OK'd for case studies, handles actually registered per platform, capacity.

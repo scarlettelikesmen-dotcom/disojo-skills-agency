@@ -11,4 +11,4 @@ Client portraits get the corner mark from `_archive/watermark_new.py src dst` (t
 
 **Why:** on 2026-11-02 I edited the Skye Nguyen and Lopamudra changes in disojo-hybrid, briefly put that copy on port 4700, and stamped the old logo. Tejjo: "critical error why the fuck have you used the old disojo copyright with the old logo. We just discussed this." The CLAUDE.md site section still names disojo-hybrid; the mix copy is current.
 
-**How to apply:** before any Disojo site edit, `cd ~/Desktop/disojo-mix` and confirm :4700 serves it. Related: [[project-disojo-graphite-palette]], [[project-disojo-logo-redo]].
+**How to apply:** before any Disojo site edit, `cd ~/Desktop/disojo-mix` and confirm :4700 serves it. Related: [[project-disojo-site]], [[project-disojo-business]].

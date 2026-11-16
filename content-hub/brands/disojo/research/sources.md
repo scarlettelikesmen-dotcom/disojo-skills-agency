@@ -17,4 +17,4 @@ Caveat: most sources are vendor/marketing blogs; numbers are indicative, not ver
 - Gap: little found on fee tracking or bookings specifically; learn from real DMs and calls.
 
 ## Local files used
-`AGENTS.md` (brand rules, tone), `~/.claude/CLAUDE.md` (positioning), disojostudio.com (live site, sample work), the founder reel transcript (IMG_2198, 2026-10-13).
+`AGENTS.md` (brand rules, tone; archived as outdated 2026-11-16, no longer a source), `~/.claude/CLAUDE.md` (positioning), disojostudio.com (live site, sample work), the founder reel transcript (IMG_2198, 2026-10-13).

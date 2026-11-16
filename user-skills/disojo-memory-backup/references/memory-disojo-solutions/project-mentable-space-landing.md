@@ -35,4 +35,4 @@ Tejjo authorised: (1) find the Mentable APP project on this laptop, run it in th
 Rules: no-copy law (no reference curves/timings/markup/signature moves); no layered slower-previous-section scroll (rejected on Ascender); no marquee, no bounce, no long preloader; commit app code only if asked (edit is authorised).
 App search result: likely app = `~/TradeMind` (iOS project still named `ios/Tradriv.xcodeproj` / `.xcworkspace`, Pods present); `~/backup-tradriv` looks like a backup copy (do not edit it). Next step: confirm ~/TradeMind is the current Mentable app (package.json name, git log, recent edits), then boot the simulator.
 
-Related: [[feedback-premium-build-process]], [[project-high-ticket-branding-offer]]
+Related: [[feedback-premium-build-process]], [[project-disojo-business]]

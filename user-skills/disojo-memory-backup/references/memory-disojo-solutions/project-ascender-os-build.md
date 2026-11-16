@@ -17,7 +17,7 @@ Client approved proposal 2026-10-21; Tejjo received the 20% advance (USD 3,900).
 
 **Left:** production board, invoices page, add/edit client form + CSV import UI, drag-and-drop pipeline, resumable upload (tus) + send-footage page, review player with timecoded comments, library, messages, billing/Stripe (client's restricted key), Slack alerts, Calendly webhook, spreadsheet import, invite flow, email sending (needs client DNS), Lighthouse, handover docs.
 
-**Why / how to apply:** brand tokens come from ascendermedia.in (Hanken Grotesk, cobalt #2b45f5, paper #f3f3f0, ink #0e0e10). Revision overage policy (charge/block/flag) is unconfirmed: currently flag only. Open facts needed from the client are listed in PLAN.md section 6. See [[project-high-ticket-branding-offer]].
+**Why / how to apply:** brand tokens come from ascendermedia.in (Hanken Grotesk, cobalt #2b45f5, paper #f3f3f0, ink #0e0e10). Revision overage policy (charge/block/flag) is unconfirmed: currently flag only. Open facts needed from the client are listed in PLAN.md section 6. See [[project-disojo-business]].
 
 ## CRM v2 redesign (2026-10-21, after Tejjo: "what the actual fuck is this design")
 - v1 was a dashboard template (stat cards, bar cards, 61px rows, deal-pipeline model). Rebuilt after research (Attio, Linear write-ups, Folk/Twenty product shots) and the anti-slop skills. Plan: `projects/ascender-portal/PLAN-v2-crm-design.md`.

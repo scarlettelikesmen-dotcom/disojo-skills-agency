@@ -2,7 +2,7 @@
 
 Every phase has: purpose, inputs, steps, skills, output, gate (what Tejjomay and the client see and approve), and the usual way it goes wrong. **No durations are given because the timeline is unresolved: Tejjomay sets them per project.** Gates are hard stops: no downstream work starts until the gate is passed and written in `00-admin/decisions.md`.
 
-Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outside the signed scope is a change order.
+Revision rounds and change orders: not set, ask Tejjomay (the old rules were in AGENTS.md, archived as outdated 2026-11-16).
 
 ---
 
@@ -17,7 +17,7 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 ## Phase 1. Scope and proposal
 **Purpose:** fix what is included before any work, especially the 3D.
 **Steps:** fill `templates/scope-sheet.md` (deliverables, exclusions, 3D scope, revisions, assumptions, client responsibilities, payment schedule, IP rule, timeline). Write the proposal in the Disojo voice (calm, structured, no apologetic phrasing). Price inside the range only after Tejjomay decides; never state a price or currency to a client without his say.
-**Output:** signed scope sheet and the payment schedule. **Gate:** client signs; first payment lands before work starts (AGENTS.md rule; confirm for this tier).
+**Output:** signed scope sheet and the payment schedule. **Gate:** client signs; payment terms as Tejjomay sets them (not set yet).
 **Skills:** `references/08-commercials.md`, `disojo-guardrails` (nothing promised that the stack cannot do).
 **Goes wrong:** vague 3D ("some 3D") becomes unbounded. Count objects, variants, scenes and camera moves in writing.
 
@@ -95,7 +95,7 @@ Two revision rounds per stage (AGENTS.md; confirm for this tier). Anything outsi
 
 ## Phase 11. Launch and handover
 **Steps:** `disojo-site-system` (pre-launch scan, Lighthouse, handover), domain and redirects, forms wired and tested with the real endpoint, analytics decision (open), sitemap, OG image, favicon set, a 404 page, credit line in the footer. Produce `brand-guidelines`, the asset pack, the licence log, the AI-disclosure note, the rollback URL, credentials list (never in chat or git). Deploy only on "deploy".
-**Money and IP (AGENTS.md; confirm for this tier):** final payment settles before IP release; repositories, cloud credentials, DNS and the IP deed are released only after the final invoice is paid and reconciled.
+**Money and IP:** not set. Ask Tejjomay when repositories, credentials, DNS and IP are released (the old rule was in AGENTS.md, archived as outdated 2026-11-16).
 **Output:** `handover/` complete. **Gate:** client sign-off, final payment.
 
 ## Phase 12. Aftercare

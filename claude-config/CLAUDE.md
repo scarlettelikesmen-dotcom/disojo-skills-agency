@@ -1,4 +1,4 @@
-# Tejjomay (Tejjo; they/them), founder of Disojo Studio, Bombay. Legal name Disojo Solutions: contracts and invoices only.
+# Tejjomay (Tejjo; they/them), founder of Disojo Studio, Bombay. Disojo Studio is also the legal name (Tejjo, 2026-11-16).
 Founder-led, owner-run clients. Two offers: Digital systems and Visual identity. Public: www.disojostudio.com, projects@disojostudio.com, +91 77380 73307, @disojostudio, cal.com/disojo-studio/discovery-call.
 
 ## Start here

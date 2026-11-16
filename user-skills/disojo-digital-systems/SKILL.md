@@ -7,7 +7,7 @@ description: START HERE for a whole Digital systems job (Disojo Offer A), from d
 
 The promise: find where the work leaks, then build the system that stops it, in stages the client can see. The model is KDC: student, parent and tutor apps plus an admin panel, "10 hrs back every week".
 
-Commercial terms live in `~/Desktop/DISOJO SOLUTIONS/content-hub/brands/disojo/offer.md`. **Never quote a price or currency from memory or from this file: ask Tejjomay.** Legal, payment and engineering law: `~/Desktop/DISOJO SOLUTIONS/AGENTS.md` (read-only).
+Commercial terms live in `~/Desktop/DISOJO SOLUTIONS/content-hub/brands/disojo/offer.md`. **Never quote a price or currency from memory or from this file: ask Tejjomay.**
 
 ## The stages
 | # | Stage | Do | Output | Stop? |
@@ -21,7 +21,7 @@ Commercial terms live in `~/Desktop/DISOJO SOLUTIONS/content-hub/brands/disojo/o
 | 6 | **Roll-out and training** | Move real data, run old and new side by side until trusted, train each role. | live system | **on their word** |
 | 7 | **Stay on** | A watch period, then the retainer in `offer.md`. `launch-retrospective`. | handover | Tejjomay |
 
-Payment 20/20/40/20 (`AGENTS.md` 2.2). Two consolidated revision rounds per milestone, new features are change orders (3.1, 3.2). Production repos, credentials, DNS and IP release only after final settlement (1.3). Client comms run through the client's own portal.
+Payment schedule, revision rounds, change orders and IP release are not set: the old rules lived in AGENTS.md, archived as outdated on 2026-11-16. Ask Tejjomay; never fill them from memory. Client comms run through the client's own portal.
 
 ## Collect at signing
 - [ ] Who decides, who uses it, every role
@@ -34,7 +34,7 @@ Payment 20/20/40/20 (`AGENTS.md` 2.2). Two consolidated revision rounds per mile
 - [ ] One named person on their side who answers within a day
 
 ## Engineering
-`disojo-guardrails` applies to everything: no placeholders, components under 150 lines, all five UI states, real verification. `AGENTS.md` section 7: indexes on foreign keys, no N+1, row-level security on every table. Also `error-handling`, `search-first` (buy or reuse before building), `react-patterns` and `react-testing` where React is used, `verification-loop`, `browser-qa`, `click-path-audit`, `safety-guard` for risky operations.
+`disojo-guardrails` applies to everything: no placeholders, components under 150 lines, all five UI states, real verification. Indexes on foreign keys, no N+1, row-level security on every table. Also `error-handling`, `search-first` (buy or reuse before building), `react-patterns` and `react-testing` where React is used, `verification-loop`, `browser-qa`, `click-path-audit`, `safety-guard` for risky operations.
 
 Put a git remote on the project early. The stack is decided per job. KDC (Expo, Supabase, Vercel admin) and Ascender OS (Next, Supabase) are what we have shipped or built, not a default.
 
@@ -53,4 +53,4 @@ The Astro rule is for websites; apps and internal tools are outside it. A market
 - Client financials and portals stay private.
 
 ## Honest status
-Written 2026-11-10 from KDC, Ascender OS, `offer.md` and `AGENTS.md`; not yet run from the start on a new client. Open in `offer.md` and left blank here: diagnosis call length, Leak Map turnaround, watch-period length, growth retainer hours. `AGENTS.md` 3.2 still names an old change-order mailbox and rupee rate: confirm with Tejjomay before using either.
+Written 2026-11-10 from KDC, Ascender OS and `offer.md`; not yet run from the start on a new client. Open in `offer.md` and left blank here: diagnosis call length, Leak Map turnaround, watch-period length, growth retainer hours.

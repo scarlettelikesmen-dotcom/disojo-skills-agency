@@ -1,6 +1,6 @@
 # Commercials, positioning and risks
 
-**Status of facts.** Working range: USD 10-15k (Tejjomay, 2026-10-14). Never quote a price or currency to a client without his say. Everything below marked "existing rule" comes from `~/Desktop/DISOJO SOLUTIONS/AGENTS.md`, an older document that uses rupee figures and disojo.in addresses; the principles are reused, the numbers are not. **Confirm each before relying on it.** Unresolved: public vs private pricing, payment schedule in USD, retainer in USD, timeline.
+**Status of facts.** Working range: USD 10-15k (Tejjomay, 2026-10-14). Never quote a price or currency to a client without his say. Everything below marked "existing rule" came from AGENTS.md, archived as wholly outdated on 2026-11-16. **None of it is current; confirm each with Tejjomay before relying on it.** Unresolved: public vs private pricing, payment schedule in USD, retainer in USD, timeline.
 
 ## 1. Positioning (how to describe the offer)
 - It is not "a website". It is a brand and a site that look like a top studio made them, led by the founder, built around one concept.
@@ -31,7 +31,7 @@ For commercial clients the schedule is 20% before work starts, 20% at the first 
 No transfer of production repositories, cloud credentials, DNS or the IP deed until the final invoice is paid and reconciled. The client owns their brand identity and business content; Disojo keeps its reusable frameworks and tooling. Staging and demo access can be given during the build.
 
 ## 6. Revisions and change orders (existing rule, confirm)
-Two consolidated revision rounds per stage. A revision adjusts something already in scope; it does not add a new feature or object. Feedback arrives as one numbered list. Anything new is a change order, quoted before work. The standing change-order rate in AGENTS.md is in rupees and does not apply to a USD project; ask Tejjomay for the rule.
+Two consolidated revision rounds per stage. A revision adjusts something already in scope; it does not add a new feature or object. Feedback arrives as one numbered list. Anything new is a change order, quoted before work. The change-order rate is not set; ask Tejjomay.
 
 ## 7. Aftercare and retainer
 The site promises "stay after launch". The 30-day check is in scope. A retainer is optional and unpriced for USD: ask Tejjomay before offering terms.

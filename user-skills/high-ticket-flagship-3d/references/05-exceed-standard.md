@@ -1,6 +1,6 @@
 # The exceed standard: how "better than the references" is measured
 
-"Insane" is not a measurement. This is. Score each project at Gate 4 (plan), Phase 10 (QA) and before any "deploy". Every row has a way to check it. Targets marked (AGENTS.md) come from Disojo's standing engineering rules; others are proposals from the measured reference defects and need Tejjomay's confirmation.
+"Insane" is not a measurement. This is. Score each project at Gate 4 (plan), Phase 10 (QA) and before any "deploy". Every row has a way to check it. Targets are proposals from the measured reference defects and need Tejjomay's confirmation.
 
 ## A. Craft (judged by eye, with a named reviewer: Tejjomay)
 | # | Criterion | How to check |
@@ -36,7 +36,7 @@
 ## D. Engineering and performance
 | # | Criterion | Target | Check |
 |---|---|---|---|
-| D1 | Lighthouse (deployed URL, not local) | 90+ across Performance, Accessibility, Best Practices, SEO (AGENTS.md); explain any 3D shortfall in numbers | `disojo-site-system/scripts/lighthouse_summary.sh` |
+| D1 | Lighthouse (deployed URL, not local) | 90+ across Performance, Accessibility, Best Practices, SEO; explain any 3D shortfall in numbers | `disojo-site-system/scripts/lighthouse_summary.sh` |
 | D2 | Home page first load | <= 6-8 MB (from `disojo-site-system`) | Network panel |
 | D3 | No horizontal overflow at any test width | 0 px | `qa_probe.js` |
 | D4 | No fixed UI overlapping text | none, or a deliberate blend that reads | `qa_probe.js` fixedUiOverlap and a screenshot |

@@ -11,4 +11,4 @@ Hover motion on buttons should use a strong ease-out: cubic-bezier(.16,1,.35,1) 
 
 **How to apply:** for any hover or press motion on Disojo or client sites, start from this curve. Don't answer "it feels dead" by changing the duration; change the curve. Measure the reference site frame by frame before copying it. Live implementation: end of global.css in ~/Desktop/disojo-hybrid (`--b-alive`).
 
-Related: [[project-disojo-graphite-palette]]
+Related: [[project-disojo-site]]

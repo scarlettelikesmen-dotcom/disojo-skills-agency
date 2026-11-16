@@ -16,7 +16,7 @@ Assets: only two ChatGPT collages (1536x1024, low-res, product proportions incon
 Tejjo's working rule for this build: keep working without stopping, post short updates, show only when finished and audited ("don't show me bullshit").
 Project: ~/Desktop/websites ARCHIVE/vael-site (site/ = starter, blender/ = bl.py socket sender + model/look/stage/render scripts, brand/wordmark/build_wordmark.py constructs the wordmark with shapely in ~/claudeskillsthrureels/.venv).
 Plan: bottle modelled in Blender (lathe profiles, real cm scale), all product imagery rendered from that one model (consistent); signature = exploded assembly frame sequence (technique B). Checkpoint = one direction (stage 2) only.
-Related: [[project-blender-autonomous-setup]], [[project-premium-3d-research-2026-11-03]]
+Related: [[reference-site-research]], [[reference-site-research]]
 
 ## State 2026-11-03 (evening)
 - Look: black studio, bottle standing in still water with ripples + reflection (plinth dropped). Renders from Blender 5.2 over the MCP socket (blender/bl.py, shots.py SHOT=..., queue.sh). Cap has a real boolean-engraved Æ; body has a debossed wordmark.
