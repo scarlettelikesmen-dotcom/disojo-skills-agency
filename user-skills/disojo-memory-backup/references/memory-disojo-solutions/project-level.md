@@ -24,3 +24,8 @@ Locked so far (all in `~/Desktop/DISOJO SOLUTIONS/level/`):
 2026-11-17 site: idea 1 'Through the ring' built at level/site index (:4610). Light is LOCKED for site and product (Paper ground, black ink). Amber REJECTED ("disgusting yellow lines"), no accent until Tejjo picks. Paper as a METAPHOR for the site is rejected (cringe), light colour is not.
 
 **How to apply:** Next step is colour, tested against the mark and Nippo. Then voice and messaging, then the Astro site (`level/site`, specimen at :4610/type via launch config "level-type-specimen"). "Make traders profitable" is internal intent only, never public copy. See [[reference-verified-claims]].
+
+## Site deploy (2026-11-17, Tejjo said "deploy")
+- levelplaybook.app + www are aliased to Vercel project `level-demo` (app.levelplaybook.app is a separate project `levelplaybook-app`, untouched).
+- Recipe: `cd level/site && npx astro build`, rsync dist to `level/deploy/level-demo/` excluding /brand, /type and the specimen fonts (Apfel, Necto, Ronzino), vercel.json with noindex header, then `vercel deploy --prod --yes --scope scarlettelikesmen-dotcoms-projects` from that folder (already linked).
+- Live is noindex (meta + header) because TODO text is on the pages; the pre-register form saves nothing. Previous live (older Level page, mentioned prop accounts) stays in Vercel history for rollback.
