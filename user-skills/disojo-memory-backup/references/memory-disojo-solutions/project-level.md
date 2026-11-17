@@ -29,3 +29,9 @@ Locked so far (all in `~/Desktop/DISOJO SOLUTIONS/level/`):
 - levelplaybook.app + www are aliased to Vercel project `level-demo` (app.levelplaybook.app is a separate project `levelplaybook-app`, untouched).
 - Recipe: `cd level/site && npx astro build`, rsync dist to `level/deploy/level-demo/` excluding /brand, /type and the specimen fonts (Apfel, Necto, Ronzino), vercel.json with noindex header, then `vercel deploy --prod --yes --scope scarlettelikesmen-dotcoms-projects` from that folder (already linked).
 - Live is noindex (meta + header) because TODO text is on the pages; the pre-register form saves nothing. Previous live (older Level page, mentioned prop accounts) stays in Vercel history for rollback.
+
+## App glass test (2026-11-17)
+- App work lives in ~/Desktop/level-app (Expo web). Localhost: launch config "level-app-web", http://localhost:8091. Metro did not pick up edits live once; restart the preview if a change does not show.
+- Home route = glass test screen (src/glass/Today.web.tsx, Glass.web.tsx, lens.ts, Backgrounds.web.tsx), stand-in data labelled. Old spike at /spike.
+- Deploy to app.levelplaybook.app only on "deploy": vercel build --prod, then vercel deploy --prebuilt --prod from ~/Desktop/level-app.
+- Shots: DISOJO SOLUTIONS/level/app/shots. Open problem: grey text on clear glass vanishes over dark backgrounds (Ink, Noise).
