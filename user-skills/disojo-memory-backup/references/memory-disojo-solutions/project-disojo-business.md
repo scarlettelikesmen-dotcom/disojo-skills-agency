@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0
-  modified: 2026-11-16T14:58:49.206Z
+  modified: 2026-11-17T03:21:35.051Z
 ---
 
 Merged 2026-11-16 from 6 notes (brand-disojo-solutions, software-only decision, high-ticket branding offer, offer-skills plan, logo redo, legal name and AGENTS archive). Originals: `memory/_archive/2026-11-16/`.
@@ -41,4 +41,5 @@ Merged 2026-11-16 from 6 notes (brand-disojo-solutions, software-only decision, 
 - Step 1 done: everything that cited AGENTS.md now points away from it. Backups of the 19 edited files: `~/Desktop/DISOJO SOLUTIONS/_archive/2026-11-16-cleanup/before-step1/`. Left alone on purpose: the memory copy inside skill disojo-memory-backup, and `projects/kdc/KDCAPP/AGENTS.md` (a different file).
 - Step 2: memory merged to one current note per project; originals in `memory/_archive/2026-11-16/`.
 - Background, the 2026-11-12 dissection: 148 skills listed per session, about 35k words of memory, 51.6k words in the site system, 3 blocking hooks, about 30 gate rules. The sites Tejjo calls good were made before most of those rules. Proposal then: keep essentials, make the idea gate, option counts, blocking hooks, taste rules and photo-tier ban advisory ([[project-csk]]).
-- Next: prune skills (Tejjo to say which they use), then decide whether taste rules become examples instead of laws, and whether the work-summary-before-compaction habit in CLAUDE.md stays.
+- 2026-11-17, the ground-up rebuild: 17-skill map agreed (`~/Desktop/DISOJO SOLUTIONS/_system/SKILL-MAP.md`). Built and on trial: `taste-library` (Tejjo's verdicts as examples), `identity-design`, `websites` (old disojo-site-system, identity-lab and logo-design are now their toolboxes). CLAUDE.md routes to the new skills. Site guard hooks now warn only; the Astro .html block stays. Tejjo's answers: they do outbound themselves; Level growth after real screens; identity + websites first, proved on a real job. Proof log: `_system/proof-log.md`. Old skills are archived only after a skill is proven.
+- Next: Tejjo's taste drops (identities and apps thinnest), pick the proving job, then product design for Level, then sales calls and finding clients, then content.

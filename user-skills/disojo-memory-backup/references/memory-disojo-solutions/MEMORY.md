@@ -21,7 +21,7 @@
 - [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
 
 ## Own products and content
-- [Level, your trading playbook](project-level-trading-playbook.md) — READ FIRST for Level: DAY ONE 2026-11-15, one chat for everything; name, scope, strategy doc, logo status open
+- [Level](project-level.md) — READ FIRST for Level: CLEAN SLATE 2026-11-17, old work archived and off limits; only infra facts carry over; first full job of the new system
 - [Trading journal](project-trading-journal.md) — private journal in DISOJO SOLUTIONS/trading-journal, separate from content; backfill Oct 16/19/20 pending
 - [Trading account @abelkapoor](project-trading-account.md) — The Wall Model, Psyche Society, compliance, monetisation, origin facts, pending
 - [Content operation](project-content.md) — READ FIRST for content: accounts, 3 posts a day, locked looks, edit style v9, copy skills; MASTER-CONTEXT is the source
@@ -35,6 +35,7 @@
 - [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
 - [Downloads and computer access](feedback-downloads-computer-access.md) — 2026-11-16 standing OK to download and use the whole computer without asking
 - [Flow prompting](feedback-flow-prompting.md) — Nano Banana Pro is good; long researched prompts with reference images, say what each image is for
+- [AI images allowed](feedback-ai-images-allowed.md) — 2026-11-17: Tejjo reverted my "no AI photo next to client results" rule; Flow images may sit anywhere
 - [Fonts: research first](feedback-fonts-research-first.md) — 2026-11-11: our Google font defaults rejected; specimen of 15-20 free fonts in client words before first screens; method in skill references/free-type.md
 - [Footer credit HARD RULE](feedback-footer-credit.md) — always "Design & Systems · © Disojo Studio 2026" linking disojostudio.com; gate enforces it
 - [Footer location and clock](feedback-footer-location-clock.md) — 2026-11-09: every site footer has real location and a small live clock

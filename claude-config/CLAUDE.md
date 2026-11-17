@@ -2,7 +2,7 @@
 Founder-led, owner-run clients. Two offers: Digital systems and Visual identity. Public: www.disojostudio.com, projects@disojostudio.com, +91 77380 73307, @disojostudio, cal.com/disojo-studio/discovery-call.
 
 ## Start here
-- Any website: skill `disojo-site-system`, loaded fresh per project. Identity job, signing to handover: `disojo-visual-identity`. Software job: `disojo-digital-systems`. The idea goes to Tejjo in words before any pixel.
+- New system on trial (2026-11-17, `_system/SKILL-MAP.md`): any website, skill `websites`; any logo or identity, `identity-design`; both read `taste-library` first. Whole identity job, signing to handover: `disojo-visual-identity`. Software job: `disojo-digital-systems`. The idea goes to Tejjo in words before any pixel.
 - Disojo's own site: `~/Desktop/disojo-mix` only, on Tejjo's server :4700 (never start or stop it). Memory `feedback-disojo-site-working-copy`.
 - Content and reels: `content-hub/MASTER-CONTEXT.md` first, then `disojo-content-os`; a clip: `disojo-reel-studio`. Posting is always Tejjo's.
 - Claims we may publish: memory `reference-verified-claims`. Anything else needs Tejjo's word. Prices: `content-hub/brands/disojo/offer.md`.

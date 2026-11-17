@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-16T15:00:35.895Z
 ---
 
-Merged 2026-11-16 from 2 notes (abelkapoor-trading brand, trading origin and answers). Originals: `memory/_archive/2026-11-16/`. Files: `content-hub/brands/abelkapoor-trading/` (founder-facts.md, wall-model-rules.md, PENDING-QUESTIONS.md). Copy skill `abelkapoor-copywriting`. Level, Tejjo's trading product, is separate: [[project-level-trading-playbook]]. Private journal: [[project-trading-journal]].
+Merged 2026-11-16 from 2 notes (abelkapoor-trading brand, trading origin and answers). Originals: `memory/_archive/2026-11-16/`. Files: `content-hub/brands/abelkapoor-trading/` (founder-facts.md, wall-model-rules.md, PENDING-QUESTIONS.md). Copy skill `abelkapoor-copywriting`. Level, Tejjo's trading product, is separate: [[project-level]]. Private journal: [[project-trading-journal]].
 
 ## Account
 - Handle @abelkapoor (final, verified). On camera. Fully separate from the Disojo world. Authority first from day one: Tejjo is profitable.

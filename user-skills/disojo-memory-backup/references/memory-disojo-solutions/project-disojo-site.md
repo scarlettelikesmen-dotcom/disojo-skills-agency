@@ -49,7 +49,7 @@ Merged 2026-11-16 from 17 older notes (site states 10-20 to 11-12, palette, redo
 3. From the Ascender comparison (2026-10-19): copy what makes ascendermedia.in look better (font, background, details). Light brief section and Ascender hover motion were done 2026-10-20; the rest folded into later passes, ask if anything is still wanted.
 
 ## Positioning (2026-11-02, draft in content-hub/brands/disojo/positioning.md)
-- Decided: diagnosis is free; audience founder-led and owner-run businesses, India and abroad; visual identity stays a headline service; hero keeps "Digital systems & visual identities that match your reputation" with the diagnosis in the subtext. Tejjo wants me to challenge them, not agree.
+- Decided: diagnosis is free; audience founder-led and owner-run businesses, India and abroad; visual identity stays a headline service; hero reads "Visual identities & digital systems that match your reputation" (order swapped by Tejjo, deployed 2026-11-17, uncommitted). 2026-11-17 positioning: one story, front (identity, website: bring the right enquiries) and back (CRM, systems: keep track, run the work); never promise "more leads" alone, we do not run traffic. Hero paragraph and the statement section under it rewritten on that line and deployed same day (uncommitted); "It costs trust" dropped. Open: one package price or two ways in (offer.md still has Offer A and B). Tejjo wants me to challenge them, not agree.
 - Use "where the work leaks", not Monolog's "gap".
 - Still open from then: real photos of client businesses, logos and awards, "the two doors" idea.
 

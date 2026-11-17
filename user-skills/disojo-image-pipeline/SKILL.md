@@ -12,12 +12,12 @@ Measured 2026-11-02 (`disojo-site-system/references/composition-bands.md`): the 
 |---|---|---|---|
 | A. Client's own | their space, product, team, founder, work in use | anywhere, including next to their results | the client's OK to use it on a Disojo page; the photographer's credit if they ask |
 | B. Licensed stock | Stocksy, Death to Stock, paid Unsplash+ or free Unsplash/Pexels (check licence) | mood only: section backgrounds, steps, textures | licence recorded in `assets/images.md`; never beside a client name or number |
-| C. AI (Gemini) | mood images | same as B | SynthID disclosed to the client; hands, text and faces checked at 100% |
+| C. AI (Flow, Nano Banana Pro) | mood images and project backgrounds, built from the client's real product, logo or screens as reference | anywhere, including next to a client name or result (Tejjo, 2026-11-17) | SynthID disclosed to the client; hands, text and faces checked at 100% |
 Hard rules:
-- **Never put a B or C image next to a client name, result or quote.** People read it as that client's real place. That is an invented fact in picture form.
+- **Stock (B) still never sits next to a client name, result or quote.** AI (C) may, by Tejjo's decision 2026-11-17 (the old ban was mine, not theirs). Build it from the client's real product, logo or screens so it stays true to them.
 - **Never ship a stranger's face from stock as "our team" or "our client".**
 - A client's own website images can be stock they bought (KDC's backgrounds look like stock). Ask before reusing them on our site.
-- If a section has nothing true to show, use type and space, not a fake image.
+- If a section has nothing true to show, generate it in Flow from the client's real material, or use type and space.
 
 ## 2. Shot list (send to the client in intake, or shoot one afternoon)
 Get **originals at 3000px+ wide** (full-bleed on a 1512 Retina screen needs about 3000px; 1920 is soft edge to edge).

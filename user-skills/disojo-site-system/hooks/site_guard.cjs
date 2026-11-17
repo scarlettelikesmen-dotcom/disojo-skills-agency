@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 // Guard for Disojo sites. Three hook modes, wired in ~/.claude/settings.json:
-//   node site_guard.cjs pre     (PreToolUse on Edit|Write|MultiEdit|SendUserFile)  blocks design files until Tejjo has picked an
+//   node site_guard.cjs pre     (PreToolUse on Edit|Write|MultiEdit|SendUserFile)  warns (blocked before 2026-11-17) design files until Tejjo has picked an
 //                               idea (brief/IDEA.md, line "PICKED BY TEJJO:"), and blocks sending design images without a fresh
 //                               side-by-side sheet. Cannot prove Tejjo said it; does not see files made through Bash.
 //   node site_guard.cjs track   (PostToolUse on Edit|Write|MultiEdit)  records which site project a session touched
-//   node site_guard.cjs stop    (Stop)  blocks ending the turn while a touched project has edits newer than its last
+//   node site_guard.cjs stop    (Stop)  warns (no longer blocks) on ending the turn while a touched project has edits newer than its last
 //                               premium gate run, and says exactly what to run.
 // The gate (scripts/premium_gate.cjs) stamps the project when it runs; `premium_gate.cjs --skip <root> "<reason>"`
 // stamps it with a stated reason when a gate genuinely does not apply (copy-only change already checked, etc.).
@@ -52,8 +52,14 @@ function newestSheet(dir) {
   } catch (e) {}
   return newest;
 }
+// Since 2026-11-17 (Tejjo: "make em warnings") the idea pick, side-by-side and gate checks only warn.
+// The Astro-only rule still blocks: it is Tejjo's hard rule, not a quality check.
 function deny(reason) {
   process.stdout.write(JSON.stringify({ hookSpecificOutput: { hookEventName: 'PreToolUse', permissionDecision: 'deny', permissionDecisionReason: reason } }));
+  process.exit(0);
+}
+function warn(reason) {
+  process.stdout.write(JSON.stringify({ systemMessage: 'Site guard (warning): ' + reason, hookSpecificOutput: { hookEventName: 'PreToolUse', additionalContext: 'Site guard warning, not a block: ' + reason } }));
   process.exit(0);
 }
 const read = () => { try { return JSON.parse(fs.readFileSync(0, 'utf8') || '{}'); } catch (e) { return {}; } };
@@ -70,17 +76,17 @@ if (mode === 'pre') {
     for (const f of (ti.files || [])) {
       const file = path.resolve(input.cwd || process.cwd(), f); const proj = projectOf(file);
       if (!proj || !IMAGE.test(file) || /^sbs-/i.test(path.basename(file)) || /\/(assets|research)\//.test(file) || !gated(proj)) continue;
-      if (!picked(proj)) deny(noPick(proj));
+      if (!picked(proj)) warn(noPick(proj));
       const last = Math.max(0, ...Object.entries(sess).filter(([r]) => r === proj || r.startsWith(proj + path.sep)).map(([, v]) => v.last || 0));
       const sheet = newestSheet(path.join(proj, 'qa', 'sbs'));
-      if (!sheet || sheet < last) deny(`No side-by-side sheet newer than the last edit in ${path.basename(proj)}. Run side_by_side.cjs ${path.join(proj, 'qa', 'sbs')} <ourUrl> <refUrl>..., fill scores.md with what they do that we do not, and send the sheet with the work. Tejjo decides who wins.`);
+      if (!sheet || sheet < last) warn(`No side-by-side sheet newer than the last edit in ${path.basename(proj)}. Run side_by_side.cjs ${path.join(proj, 'qa', 'sbs')} <ourUrl> <refUrl>..., fill scores.md with what they do that we do not, and send the sheet with the work. Tejjo decides who wins.`);
     }
     process.exit(0);
   }
   const file = path.resolve(input.cwd || process.cwd(), ti.file_path || ti.path || '');
   const proj = projectOf(file);
   if (proj && /\.html?$/i.test(file) && !IGNORE.test(file) && gated(proj)) deny(`Websites are built in Astro only (Tejjo, 2026-11-09). No .html files in ${path.basename(proj)}: use site/src/pages/*.astro. First screens go in site/src/pages/first/ (templates/first-screen.astro).`);
-  if (proj && DESIGN.test(file) && !IGNORE.test(file) && gated(proj) && !picked(proj)) deny(noPick(proj));
+  if (proj && DESIGN.test(file) && !IGNORE.test(file) && gated(proj) && !picked(proj)) warn(noPick(proj));
   process.exit(0);
 }
 
@@ -105,8 +111,8 @@ if (mode === 'stop') {
   if (!due.length) process.exit(0);
   const gate = path.join(__dirname, '..', 'scripts', 'premium_gate.cjs');
   process.stdout.write(JSON.stringify({
-    decision: 'block',
-    reason: `Site files changed since the last defect check:\n- ${due.join('\n- ')}\n` +
+    systemMessage: `Site guard (warning): site files changed since the last defect check. Run premium_gate.cjs when it helps; it is advisory.`,
+    _reason: `Site files changed since the last defect check:\n- ${due.join('\n- ')}\n` +
       `Before ending the turn: run NODE_PATH=$HOME/.disojo-tools/node_modules node "${gate}" <root> <local url> [paths...] , look at the screens it writes, fix every FAIL, and report the numbers. The gate is a defect check and says nothing about quality: never present 0 FAIL as progress. ` +
       `If the gate truly does not apply (no visible change, or already verified this turn with screenshots), run node "${gate}" --skip <root> "<one-line reason>" and say so to Tejjo.`
   }));

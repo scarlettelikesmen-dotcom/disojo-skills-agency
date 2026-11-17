@@ -17,4 +17,4 @@ On 2026-11-15 Tejjo asked how to stop "these double options": the question and t
 - Put any question at the end of the closing message, in plain text.
 - Don't use AskUserQuestion pickers either unless Tejjo asks for them.
 
-Related: [[project-level-trading-playbook]].
+Related: [[project-level]].
