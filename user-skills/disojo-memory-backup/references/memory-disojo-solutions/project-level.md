@@ -1,35 +1,22 @@
 ---
 name: project-level
-description: "READ FIRST for Level - Tejjo's own trading product. CLEAN SLATE since 2026-11-17: all earlier strategy, identity, plans and design are archived and must not be used. Only the infrastructure facts here carry over."
+description: "Level (Tejjo's trading playbook product) restarted clean 2026-11-17 via the brand-building skills; strategy, ink mark and Nippo type locked; colour next"
 metadata:
   node_type: memory
   type: project
-  originSessionId: 4e567c41-ccf5-4a5c-a42f-c5d79aa67be0
-  modified: 2026-11-17T03:27:20.165Z
+  originSessionId: ea15c3db-432f-48e4-ab32-232051318f19
+  modified: 2026-11-17T09:53:08.842Z
 ---
 
-**CLEAN SLATE, mandatory (Tejjo, 2026-11-17):** "lets do it for level only, but forgetting we ever did anything till now, not deleting that stuff but starting with a clean slate". Level is the first full A to Z job of the new system (skills `identity-design`, `websites`, `taste-library`): strategy, identity, imagery, website, then the product design.
+Level, Tejjo's own trading product (levelplaybook.app, app at app.levelplaybook.app). Restarted from a clean slate on 2026-11-17, working through the brand-building skills in order.
 
-**Never open or use the archive unless Tejjo asks for a specific thing from it.** That covers the old name reasoning, scope, pricing, payments, features, AI plans, logo and every render, UI looks, the old landing site and research on competitors. Anything Tejjo still wants, they will say again in the new interview. Archive: `~/Desktop/DISOJO SOLUTIONS/_archive/level-before-clean-slate-2026-11-17/` (plus the old memory note in `memory/_archive/level-before-clean-slate-2026-11-17/`, old Level verdicts in `taste-verdicts-level.md` there).
+Locked so far (all in `~/Desktop/DISOJO SOLUTIONS/level/`):
+- Brand context: `.agents/brand-context.md` (free forever plus two paid tiers, launch about mid-Feb 2027, Liquid is the only competitor).
+- Strategy: `strategy/brand-strategy.md`, confirmed ("everything sounds good"). Positioning: plan first, journal against the plan. Tagline pick "Hold your level."
+- Mark: organic ink ring, sheet 1 number 4 (`identity/marks/`). Pixel-exact only: grain is the whole point, never trace or smooth it. Source is 347x280 px.
+- Display type: Nippo, Fontshare, ITF FFL (`brand/fonts/`). Do not subset or convert the font files.
+- Source of truth: `brand/tokens.json`.
 
-## What exists in the world (facts, not decisions)
-- The name in use is Level. Whether the name is open in the new strategy is Tejjo's call: ask.
-- Domain levelplaybook.app, Instagram @levelplaybook.app (registered by Tejjo).
-- app.levelplaybook.app is live behind a password wall (Vercel project levelplaybook-app, Routing Middleware, env LEVEL_GATE_PASS set by Tejjo, noindex). A copy of `middleware.js` is in the archive folder; any new deploy to that project must keep the wall.
-- Supabase project LEVEL-PLAYBOOK (ref jcuvifxyzpbeiedxbaru) exists with an old schema.
-- `~/Desktop/level-app` is the old app code, left in place because processes run from it. It is not a design source. The stack is open again.
-- Google Flow: Tejjo is signed in on Pro in their Chrome (not the built-in browser). Old Level images sit in the Flow project "Nov 16 - 14:37": ignore them; make a new Flow project for the new job.
+**Why:** Tejjo rejected geometric letter marks and similar-looking grotesks the same day. They want organic, intentional, one thing at a time, and "thick and smooth" type.
 
-## Rules that are not design and still apply
-- Trading education only: no profit, return or win-rate claims, no signals. Lawyer check before any paid launch.
-- Never invent numbers, user counts or reviews.
-- Tejjo alone decides if the work is good.
-
-Related: [[project-disojo-business]] (the new system), [[project-trading-account]] (a separate brand).
-
-## New job state (2026-11-17)
-- **Strategy CONFIRMED** ("yes lets go"): `level/strategy/summary.md`, interview in `level/strategy/interview.md`. One line: "Level is the playbook you actually follow." Brand speaks to prop and live futures traders on NQ and ES (ICT concepts, never ICT or prop firm names in copy). Courses credited to Level only, community courses filtered by Level. Voice: sharp desk mate, very authoritative, never rude. Site job: pre-register at levelplaybook.app.
-- Closest competitor: liquidjournal.app (Tejjo loves it; study in `level/research/liquidjournal.md`). Take its why, never its liquid chrome look. Edge: "Liquid starts after the trade. Level starts before it."
-- Backtesting parked by Tejjo (costs in `level/research/backtesting-cost.md`).
-- Still TODO: early pre-register perks, launch date, what the social part shares, banned words.
-- Next: identity stage (skill identity-design).
+**How to apply:** Next step is colour, tested against the mark and Nippo. Then voice and messaging, then the Astro site (`level/site`, specimen at :4610/type via launch config "level-type-specimen"). "Make traders profitable" is internal intent only, never public copy. See [[reference-verified-claims]].

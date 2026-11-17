@@ -21,6 +21,7 @@
 - [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
 
 ## Own products and content
+- [Level](project-level.md) — READ FIRST for Level: restarted 2026-11-17, strategy + ink mark 4 + Nippo locked, colour next
 - [Trading journal](project-trading-journal.md) — private journal in DISOJO SOLUTIONS/trading-journal, separate from content; backfill Oct 16/19/20 pending
 - [Trading account @abelkapoor](project-trading-account.md) — The Wall Model, Psyche Society, compliance, monetisation, origin facts, pending
 - [Content operation](project-content.md) — READ FIRST for content: accounts, 3 posts a day, locked looks, edit style v9, copy skills; MASTER-CONTEXT is the source
