@@ -80,3 +80,4 @@ One line each time a session compacts (written by ~/.claude/hooks/precompact_log
 - 2026-11-16 21:26 | auto | session 4e567c41 | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-kdc-site-redo.md
 - 2026-11-17 09:46 | auto | session 2b056b99 | /Users/tejjo/Desktop/DISOJO SOLUTIONS/disojo-site-work/flow-refs | newest note: project-trading-account.md
 - 2026-11-17 10:18 | auto | session 4e567c41 | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-trading-account.md
+- 2026-11-17 14:02 | auto | session ea15c3db | /Users/tejjo/Desktop/DISOJO SOLUTIONS/level/identity | newest note: project-level.md

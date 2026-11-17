@@ -26,3 +26,10 @@ metadata:
 - Tejjo alone decides if the work is good.
 
 Related: [[project-disojo-business]] (the new system), [[project-trading-account]] (a separate brand).
+
+## New job state (2026-11-17)
+- **Strategy CONFIRMED** ("yes lets go"): `level/strategy/summary.md`, interview in `level/strategy/interview.md`. One line: "Level is the playbook you actually follow." Brand speaks to prop and live futures traders on NQ and ES (ICT concepts, never ICT or prop firm names in copy). Courses credited to Level only, community courses filtered by Level. Voice: sharp desk mate, very authoritative, never rude. Site job: pre-register at levelplaybook.app.
+- Closest competitor: liquidjournal.app (Tejjo loves it; study in `level/research/liquidjournal.md`). Take its why, never its liquid chrome look. Edge: "Liquid starts after the trade. Level starts before it."
+- Backtesting parked by Tejjo (costs in `level/research/backtesting-cost.md`).
+- Still TODO: early pre-register perks, launch date, what the social part shares, banned words.
+- Next: identity stage (skill identity-design).
