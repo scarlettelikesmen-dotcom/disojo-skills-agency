@@ -46,6 +46,7 @@
 - [Match live by measuring](feedback-match-live-by-measuring.md) — Disojo site: copy/restore means exact, and diff numerically vs live before claiming
 - [Multi-page + no basic CTAs guardrail](feedback-multipage-no-basic-ctas.md) — 2026-11-08 hard rule: never one-pager, never dead CTAs, bar = beat the 9 reference sites (not Print Elements)
 - [No big rectangle CTAs](feedback-no-big-rectangle-ctas.md) — 2026-11-11: Tejjo hates large filled block buttons with a centred label; make the action typographic, from the idea
+- [No unpicked choices in builds](feedback-no-unpicked-choices-in-builds.md) — Level 2026-11-17: amber and dark used without a pick; confirm basics first, build without unpicked choices
 - [No choice buttons](feedback-no-choice-buttons.md) — 2026-11-15: never pass ask/actions to wrap_up or use pickers; ask in plain text
 - [No NPC nav](feedback-no-npc-nav.md) — hard rule 2026-11-10: no blurred top bar with same-size links; nav from the idea, 3 options in words; gate enforces it
 - [Own verdict before showing](feedback-own-verdict-before-showing.md) — 2026-11-11 CSK: never send design I would not call good myself; say what's missing instead

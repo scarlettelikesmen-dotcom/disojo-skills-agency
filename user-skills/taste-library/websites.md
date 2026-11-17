@@ -32,6 +32,8 @@ shortscut.com, bymonolog.com, disojostudio.com, oharchitecture.com.au, supersoli
 | 2026-11-11 | CSK: ten quick layouts made in an hour because ten were asked for | "wow i cannot be more mad" | A count asked for is never a reason to drop the bar. |
 | 2026-11-11 | CSK: a first screen I did not believe in | "So why would you give it to me then if you yourself think it's not good." | My verdict comes before sending. |
 | 2026-11-01 | Disojo redo A, B and C: each carried a trick | none landed | 135 to 151 words a screen against about 50; 0 to 2 big images in 8 screens against 3 to 8. |
+| 2026-11-17 | Level pre-register site, three ideas in words (the fold on paper, 9:29 clock, plan sheet) | "neither, these are all cringe as fuck, be intentional, would you expect such an insane logo and then open up to the site looking a fucking paper" | Mine: I drew the mark's making (ink on paper) literally as the site. The site has to live up to the mark's energy, not explain its origin. |
+| 2026-11-17 | Level ring site v1: amber underlines and amber "level line" (colour never picked) | "who the fuck allowed you to use those disgusting yellow lines" | Mine: I used a proposed colour as if decided. Never ship an unpicked choice into a build. |
 | standing | disojostudio.com /services page | hates its visuals, layout and em dashes | To redo from scratch when asked. |
 
 ## What the loved ones share (my read, from the 2026-11-11 dissection, checked against the 84 walked sites)

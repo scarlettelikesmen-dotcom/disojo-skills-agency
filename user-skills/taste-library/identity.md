@@ -11,6 +11,7 @@ No benchmark set for identity has been approved yet. Ask Tejjo for 10 to 20 iden
 | 2026-10-23 | Print Elements: heavy PE inside hairline crop marks, overprint P/E, heavy serif and tile, slab PE in a block | liked | The client's own trade vocabulary, heavy against hairline. |
 | 2026-10-26 | Ascender: caption pill wordmark with a highlighted D | liked | The client's own interface (captions) turned into the logo. |
 | 2026-11-17 | Level: sheet of 9 folded ink blots, black on white (`~/Desktop/DISOJO SOLUTIONS/level/identity/ink-round/sheet-01.webp`); picked 4, the ring | "dang i love these" | Organic, real ink grain, mirrored by folding; after geometric letter marks were rejected. |
+| 2026-11-17 | Level system on the site: ink mark live on Paper, Nippo throughout, black only (`~/Desktop/DISOJO SOLUTIONS/level/site-shots/pages-v2/first-screens-d.png`) | "im so happy with the font and the branding i cant tell you" | One organic mark against one heavy smooth face, no accent colour; the ink carries every page. |
 | 2026-11-02 | Disojo round 6 "Settle": the first O as a ring of liquid caught mid-wobble between rigid caps and the square O | "only this landed, rest all disgusting" | Tension: the only fluid thing in a hard word. |
 
 | 2026-11-17 | Level type: Nippo (Fontshare), from a specimen of 20 thick, smooth fonts beside the ink mark (`~/Desktop/DISOJO SOLUTIONS/level/identity/type/specimen-05.png`) | "17 locked in foreveer" | Heavy and smooth, slightly squared; sits beside soft ink without going cute. |
