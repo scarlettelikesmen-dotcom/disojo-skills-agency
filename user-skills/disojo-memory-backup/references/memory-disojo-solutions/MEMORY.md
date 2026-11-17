@@ -21,7 +21,6 @@
 - [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
 
 ## Own products and content
-- [Level](project-level.md) — READ FIRST for Level: CLEAN SLATE 2026-11-17, old work archived and off limits; only infra facts carry over; first full job of the new system
 - [Trading journal](project-trading-journal.md) — private journal in DISOJO SOLUTIONS/trading-journal, separate from content; backfill Oct 16/19/20 pending
 - [Trading account @abelkapoor](project-trading-account.md) — The Wall Model, Psyche Society, compliance, monetisation, origin facts, pending
 - [Content operation](project-content.md) — READ FIRST for content: accounts, 3 posts a day, locked looks, edit style v9, copy skills; MASTER-CONTEXT is the source
@@ -32,7 +31,6 @@
 - [Button motion feel](feedback-button-motion.md) — strong ease-out (.16,1,.35,1) 0.6s like Monolog; "dead" means fix the curve, not the speed
 - [Content style feedback](feedback-content-style.md) — how he wants the content operation run; voice-dictation quirks
 - [Disojo site working copy](feedback-disojo-site-working-copy.md) — edit ~/Desktop/disojo-mix on :4700 only, never disojo-hybrid; watermark with watermark_new.py (new logo)
-- [Explore wide after a like](feedback-explore-wide-after-a-like.md) — 2026-11-17: a liked mark is one direction among many; keep rounds wide; no picks as ChatGPT refs
 - [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
 - [Downloads and computer access](feedback-downloads-computer-access.md) — 2026-11-16 standing OK to download and use the whole computer without asking
 - [Flow prompting](feedback-flow-prompting.md) — Nano Banana Pro is good; long researched prompts with reference images, say what each image is for

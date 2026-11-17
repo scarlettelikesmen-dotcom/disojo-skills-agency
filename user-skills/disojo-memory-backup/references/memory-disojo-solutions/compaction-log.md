@@ -82,3 +82,4 @@ One line each time a session compacts (written by ~/.claude/hooks/precompact_log
 - 2026-11-17 10:18 | auto | session 4e567c41 | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-trading-account.md
 - 2026-11-17 14:02 | auto | session ea15c3db | /Users/tejjo/Desktop/DISOJO SOLUTIONS/level/identity | newest note: project-level.md
 - 2026-11-17 14:23 | auto | session ea15c3db | /Users/tejjo/Desktop/DISOJO SOLUTIONS/level/identity/refs/bloom | newest note: feedback-explore-wide-after-a-like.md
+- 2026-11-17 14:37 | manual | session ea15c3db | /Users/tejjo/Desktop/DISOJO SOLUTIONS/level | newest note: project-trading-account.md
