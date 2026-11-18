@@ -40,3 +40,14 @@ Related: [[feedback-fonts-research-first]], [[feedback-dont-overbuild]], [[feedb
 - Added vercel.json SPA rewrite: inner pages (/story etc) 404'd on direct open before, even on the old deploy.
 - DEPLOY RECIPE: `vercel deploy` from the repo is BLOCKED by Vercel because the git commit author (tradingprops09@gmail.com) is not on the Vercel team (scarlettelikesmen). CLI 53 shows this as status UNKNOWN + ETIMEDOUT. Fix: `npx vercel@latest build --prod`, copy .vercel/output + .vercel/project.json into a folder with no git, `npx vercel@latest deploy --prebuilt --prod --yes` there. Three blocked deployments left in the project (harmless).
 - Still open for the client: PACK3/PACK4 discount mismatch in CartDrawer, Instagram handle, forms mailto only, Rakhi out of season. Not committed to git.
+
+## Identity (started 2026-11-18, Level process, `~/Desktop/DISOJO SOLUTIONS/branding/postcards/`)
+- Mark is a symbol only, never a wordmark (Tejjo). Mark 4 (light) dropped after the board. PICKED 2026-11-18: round 2 sheet G number 5, block-print arch window with hill ("I love this"). Files in branding/postcards/round2/, board in branding/postcards/board/.
+- Type LOCKED: Bonny 700 (Fontshare, ITF Free Font Licence). "Number 7, locked in forever." Do not re-open fonts.
+- Colours on the board (from ChatGPT's board, built from our samples): card #D6B58B, ink #2B2118, amber #F5B549, near-black #17110C. Next: Tejjo's verdict on the real board, then voice, guide, tokens. Notes in branding/postcards/IDEA.md.
+
+## 2026-11-18: identity applied to the live store and DEPLOYED (Tejjo: "update the postcard site with everything... and then deploy")
+- lumina-store: mark in the nav (solid version, takes the nav tone colour), amber mark beside the giant footer wordmark, mark on the loader and page curtain, new favicon/app icons (amber mark on ink #2B2118; old icons in lumina-store-review/identity/old-icons).
+- Type: headings and brand = Bonny, self-hosted public/fonts/bonny-500/700.woff2 as family 'PC Bonny' (300-450 maps to 500, heavier to 700, because Tejjo wants it thick). Small text stays Plus Jakarta Sans: Bonny was too thin and narrow at label sizes (tested, rejected by me, tell Tejjo if asked). Fraunces removed.
+- Colours: paper #EFE4D4 page, #E6D3B8 sections, ink #2B2118, near-black #17110C dark bands, accent #5D2C16 (print brown), amber #F5B549 on dark. Scent colours untouched.
+- Deployed with the prebuilt recipe. NOT committed to git. Before/after/live shots: lumina-store-review/identity/.

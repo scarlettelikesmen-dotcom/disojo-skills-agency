@@ -13,7 +13,7 @@
 - [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
 - [CSK Law](project-csk.md) — approved build csk-law-demo.vercel.app (Brygada 1918), v2 stopped, the dissection lesson
 - [CTESCOA](project-ctescoa.md) — a client (Tejjo 2026-11-12), first called a test: drawing-sheet build D, demo ctescoa-demo.vercel.app, 132 inner routes; ctescoa.ac.in still old
-- [Postcards redo](project-postcards-redo.md) — READ FIRST for Postcards: Astro rack build REJECTED 2026-11-11; lumina-store (Vite) DEPLOYED to postcardsperfumes.in with auto nav colour shift; deploy recipe (git-author block)
+- [Postcards redo](project-postcards-redo.md) — READ FIRST for Postcards: identity in progress (mark = round 2 block-print number 5, Bonny 700, both picked 2026-11-18); Astro rack build REJECTED 2026-11-11; lumina-store (Vite) DEPLOYED to postcardsperfumes.in with auto nav colour shift; deploy recipe (git-author block)
 - [Mentable landing page](project-mentable-space-landing.md) — READ FIRST for Mentable: LIVE www.mentable.space, deploy recipe, decisions, NEXT PASS in progress (app logo + sim recordings + interaction library)
 - [KDC site redo](project-kdc-site-redo.md) — kunalsdrumclass.com, first disojo-site-system run: Count-in approved, home built localhost:4600, NOT deployed, gap list
 - [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
