@@ -51,3 +51,9 @@ Tier names LOCKED by Tejjo: **Preflight** (free forever), **Takeoff**, **Altitud
 - 2026-11-18: Log panel has three modes on top, Level (plain words, parsed on device; AI reading via coach task 'log' on Takeoff+), Simple (buttons), Advanced (every field). Choice remembered in settings.logMode. Not committed yet.
 - 2026-11-18: page scroll was locked (Expo web reset sets body overflow hidden); fixed in ui.web.tsx. Shots only capture the first screen, so test scrolling by hand. Voice: web/speech.ts (Web Speech, Chrome/Edge/Safari only; the Claude browser pane blocks the mic). Automated Chrome hears speech but returns no words from a fake mic, so real-voice test needs Tejjo in real Chrome.
 - 2026-11-18: run the Level dev server in a Terminal tab (npx expo start --web --port 8091 in level-app/apps/app), not preview_start: the pane-owned server is stopped by the app, and the old launch config's CI=1 turned off file watching (removed).
+
+## 2026-11-18 polish pass ("do everything")
+- Content cards are solid frosted sheets; glass only on floating bars. Labels 12px. Money and R coloured with sign() through --up/--down.
+- Colour sets ink/a/b/c in ui.web.tsx; test switch in Settings ("Gain and loss colour (test, not picked yet)"). Default stays ink until Tejjo picks.
+- Journal leads with the latest day's result + running total line; calendar cells shaded by result; PriceLadder on the trade page (stop, entry, exit, target, worst/best).
+- Shots: level/app/shots/compare (before-after, colours-*). Nothing committed since ace97a6.

@@ -64,3 +64,4 @@
 - [Compaction log](compaction-log.md) — one line per compaction from the PreCompact hook (proof it fired, newest note at that time)
 
 Archived 2026-11-16 (merged or history, read only when a past detail is needed): `_archive/2026-11-16/`
+- [Describe from live](feedback-describe-from-live.md) — 2026-11-18: look at the live site before describing work; our case-study copy went stale
