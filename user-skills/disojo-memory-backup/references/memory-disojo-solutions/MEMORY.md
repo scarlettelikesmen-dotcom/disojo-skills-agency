@@ -58,6 +58,8 @@
 - [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it
 - [Window scroll effect](feedback-window-scroll-effect.md) — "like a window / zoom in zoom out" = Monolog window parallax (0.19px/px), not a zoom; approved on CTESCOA hero 2026-11-11
 
+- [Work summary 2026-11-18](work-summary-2026-11-18.md) — Monolog copy rejected and reverted; stage device now sits on a picture per project
+
 ## Logs
 - [Compaction log](compaction-log.md) — one line per compaction from the PreCompact hook (proof it fired, newest note at that time)
 

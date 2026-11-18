@@ -35,3 +35,10 @@ Locked so far (all in `~/Desktop/DISOJO SOLUTIONS/level/`):
 - Home route = glass test screen (src/glass/Today.web.tsx, Glass.web.tsx, lens.ts, Backgrounds.web.tsx), stand-in data labelled. Old spike at /spike.
 - Deploy to app.levelplaybook.app only on "deploy": vercel build --prod, then vercel deploy --prebuilt --prod from ~/Desktop/level-app.
 - Shots: DISOJO SOLUTIONS/level/app/shots. Open problem: grey text on clear glass vanishes over dark backgrounds (Ink, Noise).
+
+## Tiers (2026-11-18)
+Tier names LOCKED by Tejjo: **Preflight** (free forever), **Takeoff**, **Altitude** (paid, 12.99 / 28.99 with the 36% code). Picked after four rounds of options; Tejjo kept asking "more creative" and then chose the aviation set (checklist before the trade = plan first). Free tier is never named "Free". Next: every feature, sorted into the three tiers. Free core must be enough to learn and keep a plan.
+
+## Features and AI budget (2026-11-18)
+- Feature lists v2 by tier in `level/strategy/features.md`, market study in `level/research/journals/` (Liquid already does plan-first; Level wins on auto-checked rules, locked plans, courses tied to setups, one-trade-one-record, AI from 12.99, replay, native iPhone).
+- Takeoff AI budget: $1 per user per month on Claude Haiku 5.5 (Tejjo; worked out 2026-11-17). Model prices in `_archive/level-before-clean-slate-2026-11-17/level-plan-and-research/plan/MODELS.md` (Haiku 5.5 $0.10 in / $0.01 cached / $0.50 out per 1M, read 2026-11-15). Altitude budget $3 per user per month (Tejjo 2026-11-18), no daily limit. Takeoff gets a daily AI limit so the $1 cannot be spent in one day (LOCKED 2026-11-18: at most 1/15 of the month a day, about $0.07, counted in cost).
