@@ -51,3 +51,8 @@ Related: [[feedback-fonts-research-first]], [[feedback-dont-overbuild]], [[feedb
 - Type: headings and brand = Bonny, self-hosted public/fonts/bonny-500/700.woff2 as family 'PC Bonny' (300-450 maps to 500, heavier to 700, because Tejjo wants it thick). Small text stays Plus Jakarta Sans: Bonny was too thin and narrow at label sizes (tested, rejected by me, tell Tejjo if asked). Fraunces removed.
 - Colours: paper #EFE4D4 page, #E6D3B8 sections, ink #2B2118, near-black #17110C dark bands, accent #5D2C16 (print brown), amber #F5B549 on dark. Scent colours untouched.
 - Deployed with the prebuilt recipe. NOT committed to git. Before/after/live shots: lumina-store-review/identity/.
+
+## 2026-11-18 later (not deployed)
+- Section heights: Tejjo wants every home section exactly one laptop screen (100vh at 1512x864), content centred, next section never peeking. I first cut them to ~60-70% of a screen: rejected ("too short", "leaking"). Now index.css block "ONE SCREEN PER SECTION" (desktop >=900px wide only; phones compact).
+- Scent wheel replaced by scent reel (ScentWheel.jsx): bottle scrolls up and out, next rises, name rolls like a counter, colour changes. 220vh.
+- Flow round 1: branding/postcards/flow/ (prompts.md, refs/ with code-made labels from the real mark + Bonny, results/ 24 images, 512px previews). Flow project "Nov 18 - 15:59" in Tejjo's Flow. Full-res only for picks (open in viewer). Labels came out exact.
