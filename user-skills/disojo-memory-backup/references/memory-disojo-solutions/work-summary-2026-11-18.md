@@ -13,3 +13,5 @@ metadata:
 Related: [[project-disojo-site]], [[feedback-disojo-site-working-copy]]
 
 **Update 2026-11-18:** Tejjo rejected WorkReel hard: "who asked you to copy monolog's writing format and positioning". A reference is for one mechanism, never its layout or copy format. Reverted to WorkStage (files in disojo-mix/_archive/workreel-monolog-REJECTED-2026-11-18/). Then, as asked: the stage device sits on the project's picture (stage-bg/<id>.webp). Videos in the device were NOT asked for this round.
+
+**Phone break, 2026-11-18:** my desktop-only `.sg-wrap` override sat after the mobile media query and broke every phone (page 438 wide, squeezed text). Fixed by scoping it to min-width 861px; redeployed on Tejjo's "deploy", live checked at 390 (/, /work, /work/kdc). Lesson: any override appended at the end of global.css must be scoped to its breakpoint, and check 390 before every deploy, not just 1512.

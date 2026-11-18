@@ -38,3 +38,5 @@ shortscut.com, bymonolog.com, disojostudio.com, oharchitecture.com.au, supersoli
 
 ## What the loved ones share (my read, from the 2026-11-11 dissection, checked against the 84 walked sites)
 One huge visual from the subject. One confident line in the client's own words. An ordinary structure. Care on every detail: type chosen and named, motion with a strong ease-out, hovers that do something. What the hated ones share: a formula from my defaults (headline, sentence, two buttons, mock-up), safe fonts, props instead of structure, the subject small.
+| 2026-11-18 | Disojo home Our work: Monolog-style rebuild (label column, 3:2 cover, video on top, Monolog text format) | "did i ask you to fucking copy monolog ... no one asked you to copy monolog" | Mine: a reference was asked for one mechanism (a picture behind the work); I copied its layout and writing format instead. |
+| 2026-11-18 | Same section, kept our own scroll stage; device sits on a soft-cornered project picture, wider left side (live) | "looks great, thanks" | Mine: our own structure stays, only the asked element changes. |
