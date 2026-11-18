@@ -42,3 +42,12 @@ Tier names LOCKED by Tejjo: **Preflight** (free forever), **Takeoff**, **Altitud
 ## Features and AI budget (2026-11-18)
 - Feature lists v2 by tier in `level/strategy/features.md`, market study in `level/research/journals/` (Liquid already does plan-first; Level wins on auto-checked rules, locked plans, courses tied to setups, one-trade-one-record, AI from 12.99, replay, native iPhone).
 - Takeoff AI budget: $1 per user per month on Claude Haiku 5.5 (Tejjo; worked out 2026-11-17). Model prices in `_archive/level-before-clean-slate-2026-11-17/level-plan-and-research/plan/MODELS.md` (Haiku 5.5 $0.10 in / $0.01 cached / $0.50 out per 1M, read 2026-11-15). Altitude budget $3 per user per month (Tejjo 2026-11-18), no daily limit. Takeoff gets a daily AI limit so the $1 cannot be spent in one day (LOCKED 2026-11-18: at most 1/15 of the month a day, about $0.07, counted in cost).
+
+## 2026-11-18 full build
+- Every feature in strategy/features.md built as a local-first web app in ~/Desktop/level-app (Expo web, IndexedDB). Glass test screen deleted. Status and not-connected list in level-app/docs/BUILD.md.
+- Not committed yet (last commit d01e86a on level-playbook). Ask before committing or pushing.
+- Shots: level/app/shots/full (20 routes at 1512 and 390). Preview: launch config level-app-web, port 8091; restart it if edits don't show (Metro served stale code twice).
+- Open for Tejjo: share card contents, prop firm names in-app, AI taste in Preflight, currency/billing, Preflight setups limit (3 is a guess), lesson setup drafts, sample data.
+- 2026-11-18: Log panel has three modes on top, Level (plain words, parsed on device; AI reading via coach task 'log' on Takeoff+), Simple (buttons), Advanced (every field). Choice remembered in settings.logMode. Not committed yet.
+- 2026-11-18: page scroll was locked (Expo web reset sets body overflow hidden); fixed in ui.web.tsx. Shots only capture the first screen, so test scrolling by hand. Voice: web/speech.ts (Web Speech, Chrome/Edge/Safari only; the Claude browser pane blocks the mic). Automated Chrome hears speech but returns no words from a fake mic, so real-voice test needs Tejjo in real Chrome.
+- 2026-11-18: run the Level dev server in a Terminal tab (npx expo start --web --port 8091 in level-app/apps/app), not preview_start: the pane-owned server is stopped by the app, and the old launch config's CI=1 turned off file watching (removed).
