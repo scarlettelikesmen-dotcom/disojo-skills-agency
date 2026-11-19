@@ -1,52 +1,39 @@
-# Case study 01: Postcards Perfumes (DRAFT v2, 2026-11-18, waiting on Tejjo)
+# Case study 01: Postcards Perfumes (DRAFT v3, 2026-11-18, words only, waiting on Tejjo)
+v2 kept in case-study-01-postcards-v2.md. v3 is rewritten for the store as deployed tonight (new identity, new photos, new Build your own box, new footer).
 
-v1 was written from our own site's case study text, which is out of date (it still says the bottle turns as you scroll). v2 is written only from the live store, looked at on 2026-11-18 (screens in the scratchpad: pc/sheet.jpg), and from the verified claims.
-Format follows the nonstopbranding teardown (`research/nonstopbranding-teardown-2026-11-18.md`): show on the slides, tell in the caption.
+## Honesty line (read first)
+The verified results (Meta ads 0.6x to 3.7x, bundle sets +42%, as reported by the client) came from the earlier store work, before today's identity. The new mark, type and photos went live on 2026-11-18 and have no results yet. Copy must never say the new identity produced those numbers.
+AI: the product photos on the store are AI-generated (Flow), built on the real label art. The mark was explored with image models. Say "photography: AI-assisted" or leave product shots out if that is a problem for Tejjo.
 
-## What is on the live store today (postcardsperfumes.in)
-- Hero: one bottle, Himalayan Morning, standing on warm cream. "Carry a place. Wear a memory. Four scents bottled from the places India remembers." Add to cart.
-- "Four places. One brand.": four bottles in a row, ₹399 each.
-- "Build your own box.": the kraft gift box photo. 3 scents ₹899, 4 scents ₹1,099.
-- Each scent on its own colour (mint, sky blue, ochre) with a stamp-edged badge and loose bottles around it. View scent.
-- "Where would you rather be right now?": the quiz, question 1 of 4.
-- "We don't bottle places. We bottle the feeling you take back from them." over old handwritten postcards and bottles.
-- Reviews one at a time, Questions, "Give your people a place to remember." business enquiry, footer with a huge "Postcards" wordmark and the Bengaluru clock.
+## Post: carousel, 7 slides (show, almost no words)
+1. The mark, big, block-print brown on kraft, with "Postcards" in Bonny under it. Small: Postcards Perfumes, identity and store.
+2. The label, unrolled: one bottle beside its flat label (the real label art).
+3. The four bottles in a row, the collection on a laptop.
+4. Home hero on a phone: Old Haveli on cream.
+5. Build your own box on a phone: the scattered postcards with the four bottles.
+6. The result slide, the only words we write: "Meta ads 0.6x to 3.7x. Bundle sets +42%. As reported by the client." (store work)
+7. Footer: the label strip with the live Bengaluru clock, our credit line.
 
-## Post 1: the case study carousel
-Slides show, almost no words. The only text is Postcards' own lines from the store.
-| # | Slide |
-|---|---|
-| 1 | Grid tile: the store's hero on a phone, the single bottle on cream. Small: Postcards Perfumes. **Open: tile 1 as their wordmark on their colour instead?** |
-| 2 | The home page on a laptop, full width. |
-| 3 | Bento board: the four bottles row, a scent page on a phone, the kraft box. |
-| 4 | The three scent colours side by side on phones (mint, blue, ochre with their stamp badges). |
-| 5 | The quiz on a phone held in a hand: "Where would you rather be right now?" |
-| 6 | "We don't bottle places. We bottle the feeling you take back from them." the story section, full bleed. |
-| 7 | The result slide, the only slide we write on: "Meta ads: 0.6x to 3.7x. Bundle sets +42%." As reported by the client. |
-| 8 | The footer wordmark "Postcards" big, with our credit line. |
-
-Caption (shape from the teardown):
+Caption draft:
 New work for Postcards Perfumes.
-Postcards bottles four perfume oils, each from a place in India. Their Meta ads were bringing people to the store, and the store was losing them.
-We rebuilt it around the bottle and the places: one scent at a time on its own colour, a four-question quiz for people who can't smell a website, and boxes of three or four.
-The result? Their Meta ads went from 0.6x to 3.7x return, and bundle sets sales rose 42%, as reported by the client.
-CTA: TO CONFIRM (comment keyword for the case study link, or link in bio).
+Postcards bottles four perfume oils, each from a place in India. We built their store around the one problem every perfume brand online has: people can't smell a website. One scent at a time, the place behind it, and boxes of three or four.
+That store took their Meta ads from 0.6x to 3.7x return, and bundle sets rose 42%, as reported by the client.
+This week we gave it a new identity: a block-print arch mark, one typeface, two colours, and labels that read like the back of a postcard.
+CTA: TO CONFIRM.
 
-## Post 2: reel
-A real screen recording of the live store on a phone, about 12 s: hero, scroll the four bottles, a scent page, two quiz answers, the box. No voice. Text only at the end: "0.6x to 3.7x". Recorded fresh from the live store, not from old files.
-
-## Post 3: Lopamudra
-Her photo and her words, exactly as published:
-"The hardest part about selling perfume online is that people can't smell a website."
-"Before this, our Meta ads returned 0.6x. We were not earning our ad spend back. Now they return 3.7x."
-Best version: a 15 s selfie video from her, like their testimonials. TO CONFIRM if she would record one.
-
-## Dropped from v1
-- "The bottle turns as you scroll": not true any more.
-- "1.3 s on a slow phone": measured on an older build. Not used unless re-tested on today's store.
+## Reel: about 15 s, no voice
+A real screen recording of the live store on a phone (recorded fresh, iPhone frame), cut to the beat Tejjo adds in-app:
+0-2 s  the mark stamps onto kraft (from the brand board), text: "Postcards Perfumes"
+2-5 s  home hero, Old Haveli, scroll
+5-8 s  the scent reel: one bottle rises, the next replaces it, name rolls
+8-11 s Build your own box, the bottles on postcards, tap Build a box, a bottle drops into the box
+11-13 s the footer label unrolls
+13-15 s end card: "0.6x to 3.7x Meta ad return. As reported by the client." + Disojo Studio
+Style: the locked Disojo edit (disojo-editing-locked).
 
 ## To confirm (Tejjo)
-1. Tile 1: the hero on a phone (what we made), or their wordmark on their colour (the reference look)?
-2. Would Lopamudra record a 15 s video?
-3. CTA: comment keyword (needs your ManyChat) or link in bio?
-4. Our own site's Postcards case study still says the bottle turns. Fix it there too?
+1. Show the new identity in the case study, or only the store? (no results yet for the identity)
+2. OK to show AI-generated product photos, and label them "AI-assisted"?
+3. CTA: comment keyword (needs ManyChat) or link in bio?
+4. ₹ prices and "Bengaluru" appear on screen: fine for a tier-1 audience? (it is the client's real store)
+5. Our own site's Postcards case study is stale too: fix it after this?

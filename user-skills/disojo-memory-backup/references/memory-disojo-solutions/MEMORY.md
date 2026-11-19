@@ -21,6 +21,7 @@
 - [lilt](project-lilt.md) — READ FIRST for lilt: PAUSED 2026-11-10 mid-pivot to vegan cookie brand (look stays, content changes), 17 questions out; clothing version live on lilt-demo.vercel.app
 
 ## Own products and content
+- [Health plan](project-health-plan.md) — Tejjo personal fat-loss plan started 2026-11-19; record lives in health/plan.md
 - [Level](project-level.md) — READ FIRST for Level: restarted 2026-11-17, strategy + ink mark 4 + Nippo locked, colour next
 - [Level journal: no duplicate trades](project-level-journal-duplicate-trade.md) — Liquid saves a filled-in imported trade as a second trade and doubles the P&L; ours must edit the same record
 - [Trading journal](project-trading-journal.md) — private journal in DISOJO SOLUTIONS/trading-journal, separate from content; backfill Oct 16/19/20 pending
@@ -58,6 +59,8 @@
 - [Text button motion](feedback-text-button-roll.md) — hard rule 2026-11-10: every text button gets up down (Disojo) or side up down (Print Elements letter wave); gate enforces it
 - [Window scroll effect](feedback-window-scroll-effect.md) — "like a window / zoom in zoom out" = Monolog window parallax (0.19px/px), not a zoom; approved on CTESCOA hero 2026-11-11
 
+- [Content uses the live brand](feedback-content-current-brand.md) — 2026-11-18: never the October tokens.css; hoflik + Bricolage + graphite; case studies in the nonstopbranding format
+- [Reels: one idea, clean edits](feedback-reel-clean-flagship.md) — 2026-11-19 Postcards reel rejected: no shake/flash gimmicks, one visual idea, flagship craft
 - [Work summary 2026-11-18](work-summary-2026-11-18.md) — Monolog copy rejected and reverted; stage device now sits on a picture per project
 
 ## Logs

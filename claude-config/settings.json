@@ -15,9 +15,6 @@
   "switchModelsOnFlag": false,
   "agentPushNotifEnabled": true,
   "tui": "fullscreen",
-  "env": {
-    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "300k"
-  },
   "hooks": {
     "PreToolUse": [
       {

@@ -4,6 +4,8 @@ import { Reel8 } from "./Reel8";
 import { TradeReel } from "./TradeReel";
 import { TradeLite } from "./TradeLite";
 import { S } from "./specStore";
+import { Postcards, PC_FRAMES } from "./Postcards";
+import { Window, W_FRAMES } from "./Window";
 
 // One engine, many jobs: public/jobs/<job>/{spec.json, base.mp4, sfx.wav}. Render with --props='{"job":"<name>"}'.
 const F = (family: string, file: string, weight: string, style?: string) => new FontFace(family, `url(${staticFile("fonts/" + file)})`, { weight, ...(style ? { style } : {}) });
@@ -26,6 +28,8 @@ const common = { width: 1080, height: 1920, fps: 30, durationInFrames: 900, calc
 
 export const Root: React.FC = () => (
   <>
+    <Composition id="Window" component={Window} width={1080} height={1920} fps={30} durationInFrames={W_FRAMES} />
+    <Composition id="Postcards" component={Postcards} width={1080} height={1920} fps={30} durationInFrames={PC_FRAMES} />
     <Composition id="Reel8" component={wrap(Reel8)} defaultProps={{ job: "r2198", spec: null }} {...common} />
     <Composition id="Trade" component={wrap(TradeReel)} defaultProps={{ job: "t2257", spec: null }} {...common} />
     <Composition id="TradeLite" component={wrap(TradeLite)} defaultProps={{ job: "t2257", spec: null }} {...common} />
