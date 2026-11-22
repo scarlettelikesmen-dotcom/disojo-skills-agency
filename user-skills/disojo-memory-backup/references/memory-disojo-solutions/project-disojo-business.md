@@ -20,7 +20,8 @@ Merged 2026-11-16 from 6 notes (brand-disojo-solutions, software-only decision, 
 ## What Disojo sells (decided 2026-11-09)
 - Software only: digital systems and visual identities for established founder-led and owner-run businesses, India and abroad. No content agency, no rename.
 - Offer A Digital systems: $5,000 to $8,000 by scope; retainer $499 passive to $1,699 growth per month. Skill `disojo-digital-systems`.
-- Offer B Visual identity (website is part of it): $12,000 to $20,000 by scope; retainer $349 passive to $1,099 growth. Skill `disojo-visual-identity`.
+- Offer B, the flagship: $12,000 to $20,000 by scope buys the WHOLE digital presence, brand + identity + website + enquiry pipeline + the brand on every channel (Tejjo 2026-11-22: "we are not selling branding... the whole digital presence, including website"). Not branding alone. Retainer $349 passive to $1,099 growth. Skill `disojo-visual-identity` rewritten 2026-11-22 from `content-hub/brands/disojo/flagship-offer.md` (10-step journey, references strategy/book/presence-kit, untested on a client). Refs: [[reference-branding-flagship-refs]].
+- Launch content is included in the flagship (Tejjo 2026-11-22). Branding alone, no site: $4,000, sold to anyone (Tejjo 2026-11-22); contents and India discount not set.
 - USD. India is 10% off. Ideal client: at least $20,000 a month revenue.
 - Public on the site FAQ: $5,000 start, most $8,000 to $20,000, 8 to 12 weeks. Never quote anything else without Tejjo.
 - Source of truth: `content-hub/brands/disojo/offer.md`. Open there: retainer rule for clients taking both, growth hours, diagnosis call length, Leak Map turnaround, watch period.

@@ -16,7 +16,7 @@ Founder-led, owner-run clients. Two offers: Digital systems and Visual identity.
 - Take creative liberties, widen scope, or revert more than was asked. No em dashes or hype words in copy.
 
 ## Always
-- Think critically and push back; never agree by default. Say plainly what is placeholder, AI-generated or untested (real phones and Safari so far).
+- HARD RULE (2026-11-22): think like a senior designer, not an AI that agrees. My own view first; when Tejjo's idea or pick is weaker, say so, say why, offer the better option. Tejjo decides. Say plainly what is placeholder, AI-generated or untested (real phones and Safari so far).
 - Re-read Tejjo's details before building. Finish the whole piece, verify with real screenshots (1512x864, 390), then show it.
 - Every client gets their own look. Reuse the process and plumbing, never the look. Every website is Astro, first screen to launch; no hand-written HTML sites. Footer carries the client's location and a small live clock.
 - Footer on everything we make, right of the bottom row, linking https://disojostudio.com: `Design & Systems · © Disojo Studio 2026`.

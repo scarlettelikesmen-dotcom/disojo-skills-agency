@@ -34,7 +34,7 @@ Not for: pre-revenue ideas (MVPs only by exception, when funded), people who wan
 | | Offer A: Digital systems | Offer B: Visual identity |
 |---|---|---|
 | Fixes | The work runs on hand-work and the founder | The business looks smaller than it is |
-| Output | A custom system: portal, admin panel, CRM, dashboard, automation | Visual identity, site, enquiry pipeline (site inside B: Tejjo to confirm) |
+| Output | A custom system: portal, admin panel, CRM, dashboard, automation | The whole digital presence: brand, identity, website, enquiry pipeline, and the brand on every channel (Tejjo, 2026-11-22: "we are not selling branding, we are selling website and branding... the whole digital presence") |
 | Proof | KDC, Mentable | Ascender Media, Postcards Perfumes |
 | What the buyer says | "I'm the one who knows how everything works" | "Our site embarrasses us in front of bigger clients" |
 
@@ -46,6 +46,8 @@ Both can run in sequence for one client. Bundle discount: `___` (the old no-disc
 | Offer A: Digital systems | $5,000 to $8,000, by scope | $499 / month | $1,699 / month |
 | Offer B: Visual identity | $12,000 to $20,000, by scope | $349 / month | $1,099 / month |
 
+- **Branding on its own (Tejjo, 2026-11-22): $4,000.** Sold to anyone, no website. What it includes: settled 2026-11-22, see `flagship-offer.md`. India 10%: `___`.
+- **Launch content is included in the flagship (Tejjo, 2026-11-22).** Settled 2026-11-22: a 9-post grid plus 3 reels. We make the launch posts; posting stays the client's (no content agency, 2026-11-09).
 - **India and abroad:** India is 10% off the USD prices (confirmed 2026-11-09). Applies to projects and retainers alike unless Tejjo says otherwise.
 
 | India (10% off, USD) | Project | Retainer, passive | Retainer, growth |
@@ -102,7 +104,7 @@ Sender setup: use separate sending domains, never disojostudio.com. The DMARC an
 
 ## Decisions needed from Tejjo
 Settled 2026-11-09: currency is USD; India is 10% off; qualifier is at least $20k a month in revenue.
-1. Does Offer B include the website, or is the site sold with Offer A?
+1. ~~Does Offer B include the website?~~ Settled 2026-11-22: yes. The $12,000 to $20,000 offer is the whole digital presence, website included. Branding is not sold on its own at this price.
 2. Retainer rule when a client takes both offers.
 3. Publish a starting price: yes or no.
 4. Risk reversal line: yes or no, and the IP wording.

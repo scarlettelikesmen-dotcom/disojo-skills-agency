@@ -57,3 +57,9 @@ Tier names LOCKED by Tejjo: **Preflight** (free forever), **Takeoff**, **Altitud
 - Colour sets ink/a/b/c in ui.web.tsx; test switch in Settings ("Gain and loss colour (test, not picked yet)"). Default stays ink until Tejjo picks.
 - Journal leads with the latest day's result + running total line; calendar cells shaded by result; PriceLadder on the trade page (stop, entry, exit, target, worst/best).
 - Shots: level/app/shots/compare (before-after, colours-*). Nothing committed since ace97a6.
+
+## 2026-11-22 direction (Tejjo)
+- Plan: match everything Liquid has and do it better (sync glitch etc), plus exclusive features for a trader's everyday life, plus a concept-aware AI coach (knows e.g. SMT vs true manipulation; built on a concept library in Tejjo's definitions + journal context + a question set that scores it). Ultra plan coming, heavy build.
+- Tone: Tejjo wants delusional optimism, no negativity about the product. Frame hard parts as how we win; still flag real breakers (wrong answers, buy/sell calls) in one line with the fix.
+- Liquid launched September 2026 and was at 6,600+ by late November (Tejjo; unit not confirmed: users, sign-ups or paying).
+- Pending from Tejjo: "go" on research; whose definitions the AI follows; what "true manipulation" means to them.

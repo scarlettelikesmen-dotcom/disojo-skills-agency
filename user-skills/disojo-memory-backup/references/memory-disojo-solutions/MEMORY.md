@@ -5,6 +5,7 @@
 - [Projects and working rules](reference-projects.md) — Disojo facts, goals, site workflow, content, shipped work, moved from CLAUDE.md
 - [Environment](reference-environment.md) — tools, backups, screenshots, venv, Vercel notes
 - [Site research](reference-site-research.md) — where all benchmark, code, Awwwards, TFTL, taste and 3D research lives and what it found; never re-research
+- [Branding flagship refs](reference-branding-flagship-refs.md) — 2026-11-22: Softriver, Andrija Designs, €5k process carousel, guideline-deck reels; what each sells
 - [LinkedIn profile optimisation](project-linkedin-profile.md) — About + banner FINAL; headline, experience, Featured, Services, photo, connections pending
 
 ## Clients and builds
@@ -30,6 +31,7 @@
 - [Brand: codewithabel](brand-codewithabel.md) — build-in-public account, series, story bank, open questions
 
 ## How Tejjo wants work done
+- [Senior designer HARD RULE](feedback-senior-designer.md) — 2026-11-22: own view first, disagree with reasons, offer the better option; never agree by default
 - [Astro only](feedback-astro-only.md) — hard rule 2026-11-09: every website in Astro from first screen to launch, no HTML sites; enforced by guard, gate, deploy
 - [Button motion feel](feedback-button-motion.md) — strong ease-out (.16,1,.35,1) 0.6s like Monolog; "dead" means fix the curve, not the speed
 - [Content style feedback](feedback-content-style.md) — how he wants the content operation run; voice-dictation quirks

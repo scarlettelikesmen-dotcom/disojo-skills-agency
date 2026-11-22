@@ -7,7 +7,16 @@ description: START HERE for any logo, mark, wordmark or visual identity - Disojo
 
 The job: a mark and a system that make the business look as good as it really is, and that only this business could own.
 
-Read first, every time: `taste-library/identity.md` (and look at the images it points to). The whole client job (signing, stages, handover) still runs from `disojo-visual-identity` until the client-jobs skill is rebuilt. Strategy (positioning, naming, voice) still runs from the brand-* skills until the brand-strategy skill is rebuilt.
+Read first, every time: `taste-library/identity.md` (and look at the images it points to).
+
+**Hard rule (Tejjo, 2026-11-22): think like a senior designer, not an AI agreeing to whatever Tejjo says.** Every answer leads with my recommendation and the reason. When Tejjo's idea or pick is weaker, say so, say why, show the better option. Tejjo decides.
+
+Craft positions (read the one for the step you are on):
+- `references/marks.md`: wordmark, symbol, monogram, combination, emblem, system; when each makes sense
+- `references/type.md`: free and premium fonts, licensing, how to choose
+- `references/colour.md`: fewer colours with conviction, the handover system, checks
+- `references/voice.md`: voice as a person with checkable rules; labels and packaging labels
+- `references/guidelines.md`: what separates our book from the template floor The whole client job (signing, stages, handover) still runs from `disojo-visual-identity` until the client-jobs skill is rebuilt. Strategy (positioning, naming, voice) still runs from the brand-* skills until the brand-strategy skill is rebuilt.
 
 ## What good has looked like here
 - **Disojo, round 6 "Settle".** Heavy rigid caps and a square O; the first O became a ring of liquid caught mid-wobble. Tejjo: "only this landed". It worked because of tension: one soft, alive thing in a hard word.
@@ -60,7 +69,7 @@ python3 $S/test_sheet.py OUT mark.svg --name <Name> --brand "#hex" --refs ref.pn
 ### 6. The system around the mark
 The logo starts a world. After the pick:
 - **The one device** the identity repeats: a crop, an edge, a fold, a rhythm.
-- **Type:** free fonts only, chosen with care. A specimen of 15 to 20 candidates set in the client's own words (`disojo-site-system/references/free-type.md`). Licence recorded.
+- **Type:** free or paid foundry fonts, chosen for one nameable trait; the flagship usually deserves a paid face, licensed in the client's name (`references/type.md`). A specimen of 15 to 20 candidates set in the client's own words (`disojo-site-system/references/free-type.md` for free sources). Licence recorded.
 - **Colour:** named from the subject, not from a palette trend.
 - **Motion:** how the mark moves, in one line, then built. Strong ease-out (`cubic-bezier(.16,1,.35,1)`), the curve not the speed.
 - **Material:** for a finish such as glass or chrome, write the image prompt early with the vector as reference. Do not grind procedural renders.

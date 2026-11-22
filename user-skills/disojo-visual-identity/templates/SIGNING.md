@@ -10,8 +10,11 @@ Fill before the first invoice. Add the "Collect at signing" list from the type s
 - [ ] How enquiries really arrive today and who answers them
 
 ## Scope
-- [ ] Website type (Product, Catalogue, Studio, Person, Local practice, Software):
-- [ ] Identity, website, pipeline: which are in scope
+- [ ] Product: Branding ($4,000, no site) or the flagship ($12k to $20k, whole digital presence). Price from Tejjo only
+- [ ] Flagship: where in the $12k to $20k range, and what that buys (see `flagship-offer.md` section 3)
+- [ ] Website type (Product, Catalogue, Studio, Person, Local practice, Software), flagship only:
+- [ ] Their 3 real things (Branding) or brand world list (flagship): sign, packaging, card, merch, menu...
+- [ ] Launch content (flagship): footage they have for 3 reels, or a shoot date
 - [ ] Pages agreed (never a one-pager)
 - [ ] 3D: only Product, only if an idea needs it
 
@@ -29,7 +32,7 @@ Fill before the first invoice. Add the "Collect at signing" list from the type s
 
 ## Agreed
 - [ ] Price and currency confirmed by Tejjomay:
-- [ ] Stages and payment schedule
+- [ ] Stages and payment schedule (payment schedule is not set: ask Tejjo)
 - [ ] Gaps sent to Tejjomay on:
 
 ## Type skill list (paste from disojo-type-*)
