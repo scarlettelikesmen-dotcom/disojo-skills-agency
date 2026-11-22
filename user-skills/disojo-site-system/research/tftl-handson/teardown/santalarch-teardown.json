@@ -1,0 +1,1304 @@
+{
+ "url": "https://santalarch.com/",
+ "title": "Santalarch",
+ "generator": null,
+ "canvases": [
+  "1512x864",
+  "1240x1240",
+  "1080x1224",
+  "1512x864"
+ ],
+ "libs": [
+  "three r183"
+ ],
+ "docH": 40505,
+ "libsFromUrls": [],
+ "total": 19543203,
+ "files": [
+  {
+   "kind": "document",
+   "size": 230106,
+   "url": "https://santalarch.com/"
+  },
+  {
+   "kind": "image",
+   "size": 16548,
+   "url": "https://santalarch.com/images/page/main/works/thumb/001.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 7522,
+   "url": "https://santalarch.com/images/page/main/works/thumb/004.webp?v=20260813"
+  },
+  {
+   "kind": "script",
+   "size": 182866,
+   "url": "https://www.googletagmanager.com/gtag/js?id=G-TDYW18124Q"
+  },
+  {
+   "kind": "image",
+   "size": 20638,
+   "url": "https://santalarch.com/images/page/main/works/thumb/008.webp?v=20260813"
+  },
+  {
+   "kind": "stylesheet",
+   "size": 396771,
+   "url": "https://santalarch.com/_nuxt/entry.D7X7o5bn.css"
+  },
+  {
+   "kind": "script",
+   "size": 412549,
+   "url": "https://santalarch.com/_nuxt/CI8pdcr7.js"
+  },
+  {
+   "kind": "image",
+   "size": 11686,
+   "url": "https://santalarch.com/images/page/main/works/thumb/012.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 9442,
+   "url": "https://santalarch.com/images/page/main/works/thumb/010.webp?v=20260813"
+  },
+  {
+   "kind": "data",
+   "size": 139,
+   "url": "https://santalarch.com/_nuxt/builds/meta/03be9e1c-9e63-48c6-b4db-59a6b0167f79.json"
+  },
+  {
+   "kind": "image",
+   "size": 12622,
+   "url": "https://santalarch.com/images/page/main/works/thumb/002.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 7862,
+   "url": "https://santalarch.com/images/page/main/works/thumb/006.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 17428,
+   "url": "https://santalarch.com/images/page/main/works/thumb/011.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 13258,
+   "url": "https://santalarch.com/images/page/main/works/thumb/003.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 7046,
+   "url": "https://santalarch.com/images/page/main/works/thumb/005.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 10240,
+   "url": "https://santalarch.com/images/page/main/works/thumb/007.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 19994,
+   "url": "https://santalarch.com/images/page/main/works/thumb/009.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ad.B18i8NGa.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ad.Blhdm5jl.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/af.C77Rf6cE.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1447,
+   "url": "https://santalarch.com/icons/door-layer-2.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/af.Bc2fqp73.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1819,
+   "url": "https://santalarch.com/_nuxt/gu.SbvrH0uZ.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1399,
+   "url": "https://santalarch.com/icons/tftl-text.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2018,
+   "url": "https://santalarch.com/_nuxt/aw.CLCX8uk5.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1816,
+   "url": "https://santalarch.com/_nuxt/aw.W0PWLK5p.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2198,
+   "url": "https://santalarch.com/_nuxt/gq.CPnMO1hT.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1899,
+   "url": "https://santalarch.com/_nuxt/gu.Di1JYREk.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bn.B6T3O78g.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bn.CPQcA8Ol.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/gt.CJo5DI-7.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/gs.DiiNa0F5.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/as.Dekqy8Of.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/as.BTEVCXG-.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bm.BeYgB2z9.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bm.DvNWWcPM.svg"
+  },
+  {
+   "kind": "fetch",
+   "size": 0,
+   "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-TDYW18124Q&gtm=45je6bh1v9262780313za208zd9262780313xf1&_p=1795368809522&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1503794106.1795368810&frm=0&ngs=1&pscdl=noapi&rcb=15&sr=800x600&uaa=arm&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.79%7CChromium%3B157.0.8103.79&uam=&uamb=0&uap=macOS&uapv=26.5.1&uaw=0&ul=en-gb&_s=1&tag_exp=115938466~115938468~120213116~120385423~120469145~120469153~121246026~121246034&sid=1795368809&sct=1&seg=0&dl=https%3A%2F%2Fsantalarch.com%2F&dt=Santalarch&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1264"
+  },
+  {
+   "kind": "image",
+   "size": 873,
+   "url": "https://santalarch.com/icons/door-layer-4.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2500,
+   "url": "https://santalarch.com/_nuxt/br.Cu5YU29T.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2307,
+   "url": "https://santalarch.com/_nuxt/br.Dr5rMAMb.svg"
+  },
+  {
+   "kind": "image",
+   "size": 494,
+   "url": "https://santalarch.com/icons/door-layer-5.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2447,
+   "url": "https://santalarch.com/_nuxt/cy.bZuP8hmf.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2477,
+   "url": "https://santalarch.com/_nuxt/cy.DJKnEFYW.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3168,
+   "url": "https://santalarch.com/_nuxt/dm.Cbhezfe1.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3311,
+   "url": "https://santalarch.com/_nuxt/dm.DPPHwW2M.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2817,
+   "url": "https://santalarch.com/_nuxt/kh.BeWfuE30.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2828,
+   "url": "https://santalarch.com/_nuxt/kh.BBvObpUS.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1657,
+   "url": "https://santalarch.com/_nuxt/ki.p_fAQGbS.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1728,
+   "url": "https://santalarch.com/_nuxt/ki.fuIMkEYQ.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3001,
+   "url": "https://santalarch.com/_nuxt/kz.CwKXYZ8s.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2992,
+   "url": "https://santalarch.com/_nuxt/kz.Dkyx6q-p.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3070,
+   "url": "https://santalarch.com/_nuxt/li.CHdhvNcr.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3079,
+   "url": "https://santalarch.com/_nuxt/li.CMlf0YU8.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2982,
+   "url": "https://santalarch.com/_nuxt/md.DRlxvNwm.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2832,
+   "url": "https://santalarch.com/_nuxt/md.DTi94M3M.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2619,
+   "url": "https://santalarch.com/_nuxt/ms.DxciGbUu.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2573,
+   "url": "https://santalarch.com/_nuxt/ms.B-w7hFKu.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2516,
+   "url": "https://santalarch.com/_nuxt/nf.Dl00mlk2.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2429,
+   "url": "https://santalarch.com/_nuxt/nf.DGrQb42O.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2492,
+   "url": "https://santalarch.com/_nuxt/ir.cCIgaNf6.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/hr.fzLfaANM.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/gs.DOgYbHsY.svg"
+  },
+  {
+   "kind": "image",
+   "size": 25038,
+   "url": "https://santalarch.com/icons/door-layer-1.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2030,
+   "url": "https://santalarch.com/_nuxt/kg.CjfitMyT.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1985,
+   "url": "https://santalarch.com/_nuxt/kg.B0FsxZiL.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2097,
+   "url": "https://santalarch.com/_nuxt/gq.Cag8QTk2.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3678,
+   "url": "https://santalarch.com/_nuxt/eg.DwOkwyQ0.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3896,
+   "url": "https://santalarch.com/_nuxt/im.Dd9p-0-T.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3664,
+   "url": "https://santalarch.com/_nuxt/eg.YC70hswZ.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3613,
+   "url": "https://santalarch.com/_nuxt/im.-VPIqfkF.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bo.Dry0C6UA.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2565,
+   "url": "https://santalarch.com/_nuxt/zw.CSuuaw9K.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2355,
+   "url": "https://santalarch.com/_nuxt/ir.Q03Mij62.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/fj.DEAVMg38.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/io.BImhNBcd.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/io.13HOfeJD.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/fk.B-RvQ4Hz.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/je.DyWbhIiC.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2585,
+   "url": "https://santalarch.com/_nuxt/zw.U0m7oJ5e.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2343,
+   "url": "https://santalarch.com/_nuxt/zm.D8B-0kdx.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3645,
+   "url": "https://santalarch.com/_nuxt/vi.BSdsyIxY.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3685,
+   "url": "https://santalarch.com/_nuxt/vi.BC_zcciE.svg"
+  },
+  {
+   "kind": "font",
+   "size": 18556,
+   "url": "https://santalarch.com/_nuxt/Regular.BXndOYno.woff2"
+  },
+  {
+   "kind": "font",
+   "size": 19076,
+   "url": "https://santalarch.com/_nuxt/Medium.mTItNYFI.woff2"
+  },
+  {
+   "kind": "image",
+   "size": 3106,
+   "url": "https://santalarch.com/_nuxt/tc.CJHJmJj1.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3099,
+   "url": "https://santalarch.com/_nuxt/tc.dtelpZmc.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1984,
+   "url": "https://santalarch.com/_nuxt/sz.D39eIL5d.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1998,
+   "url": "https://santalarch.com/_nuxt/sz.qxMwa2gs.svg"
+  },
+  {
+   "kind": "image",
+   "size": 75936,
+   "url": "https://santalarch.com/icons/door-layer-3.svg"
+  },
+  {
+   "kind": "image",
+   "size": 2345,
+   "url": "https://santalarch.com/_nuxt/zm.BmsW91ne.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/es.BuSGTZm_.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/es.d5m8M5h8.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/gt.BLpn5qMn.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bo.CcUiMqkJ.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bt.BTo4qm10.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bt.SxWnbWW0.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3360,
+   "url": "https://santalarch.com/_nuxt/pt.BTevY6N2.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3341,
+   "url": "https://santalarch.com/_nuxt/pt.DZ2ADgIR.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bz.BCKHR4_q.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3187,
+   "url": "https://santalarch.com/_nuxt/xk.Cdz2uTvR.svg"
+  },
+  {
+   "kind": "image",
+   "size": 3383,
+   "url": "https://santalarch.com/_nuxt/xk.Bj15g7cp.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/bz.CoBdB-p8.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/do.B86d445t.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/do.DeRnbj4d.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ec.CaVOFQ3t.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ec.cwfBJlvF.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ky.Dpsu1myA.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ky.BqaZHuhf.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/hr.BpiVVBoV.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ht.DIMg4gti.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ht.pweRl6ZP.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/lk.DUkgV9Tq.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/lk.DSQoDxn_.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/me.Cv4Gwqah.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/me.CfGorN3b.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/mp.CrOApEqW.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/mp.CuaQmCLf.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/mt.YqzKx9xl.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/mt.YDa8zgzO.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/mx.Cc8Ccfe8.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/mx.CvCwYHGF.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ni.CcFCSQxm.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/ni.BX2WCaNt.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/om.DcqxRdQL.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/om.nN8zP2Bu.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sv.CJIHhYwF.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/gb-wls.Bxz9hxvX.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sh-hl.CqtQPzWZ.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/fj.u3dAPoew.svg"
+  },
+  {
+   "kind": "stylesheet",
+   "size": 55580,
+   "url": "https://santalarch.com/_nuxt/index.Ot20sIss.css"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sm.BKrUHzrq.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/je.vXe0Dr49.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/fk.nuUF_Ak3.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/vg.C7xY6pic.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/va.s7kyhqIM.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/va.B9-hqIE-.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/tm.DGBJvQay.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/tm.C_WSgUcv.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/es-ga.DXhVZ333.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sx.RKKs0ph6.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/es-ga.D9xG2hYr.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sx.nDhIaDNb.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/dg.DqkWLbnk.svg"
+  },
+  {
+   "kind": "script",
+   "size": 438650,
+   "url": "https://santalarch.com/_nuxt/DgNNnVYr.js"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sv.RZ39q5hO.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/py.BKi5dxWt.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/rs.CnTO3ehk.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/vg.ClZ-0KpG.svg"
+  },
+  {
+   "kind": "script",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/DgNNnVYr.js"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/rs.BfwKwXtn.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/py.mNzh0mZC.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/arab.C4CYPgyC.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/arab.C-KgnQEz.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/pn.BPAlH32D.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/pn.DgxdtieE.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sm.DGBIRFB_.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sa.DnlyVVKx.svg"
+  },
+  {
+   "kind": "other",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/index.Ot20sIss.css"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sa.Dh79zbT9.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/un.DabL4p35.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sh-hl.CgxUDvtv.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sh-ta.CPJublpi.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sh-ta.BFo5zkKU.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/un.Bqg4Cbbh.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/gb-wls.CK0XlKT-.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/dg.CJPJrjiZ.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/gb-nir.D4gikpNq.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/eac.CwGQsyAM.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sh-ac.FjwY7RYr.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/eac.h4QKADRE.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/gb-nir.vEp1ZXy6.svg"
+  },
+  {
+   "kind": "image",
+   "size": 0,
+   "url": "https://santalarch.com/_nuxt/sh-ac.D-aE2xRW.svg"
+  },
+  {
+   "kind": "data",
+   "size": 1360,
+   "url": "https://santalarch.com/sequences/watch_white.json"
+  },
+  {
+   "kind": "script",
+   "size": 157608,
+   "url": "https://santalarch.com/_nuxt/2NRRYcX_.js"
+  },
+  {
+   "kind": "image",
+   "size": 15648,
+   "url": "https://santalarch.com/images/page/main/works/thumb/017.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 6022,
+   "url": "https://santalarch.com/images/page/main/works/thumb/015.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 5592,
+   "url": "https://santalarch.com/images/page/main/works/thumb/013.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 4658,
+   "url": "https://santalarch.com/images/page/main/works/thumb/018.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 23874,
+   "url": "https://santalarch.com/images/page/main/works/thumb/014.webp?v=20260813"
+  },
+  {
+   "kind": "script",
+   "size": 52093,
+   "url": "https://santalarch.com/_nuxt/E3Lbg25B.js"
+  },
+  {
+   "kind": "image",
+   "size": 10540,
+   "url": "https://santalarch.com/images/page/main/works/thumb/029.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 10680,
+   "url": "https://santalarch.com/images/page/main/works/thumb/019.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 6658,
+   "url": "https://santalarch.com/images/page/main/works/thumb/028.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 3162,
+   "url": "https://santalarch.com/images/page/main/works/thumb/027.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 12298,
+   "url": "https://santalarch.com/images/page/main/works/thumb/024.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 60924,
+   "url": "https://santalarch.com/images/page/main/works/thumb/025.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 29318,
+   "url": "https://santalarch.com/images/page/main/works/thumb/016.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 9282,
+   "url": "https://santalarch.com/images/page/main/works/thumb/022.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 8372,
+   "url": "https://santalarch.com/images/page/main/works/thumb/026.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 9300,
+   "url": "https://santalarch.com/images/page/main/works/thumb/023.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 15866,
+   "url": "https://santalarch.com/images/page/main/works/thumb/021.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 5654,
+   "url": "https://santalarch.com/images/page/main/works/thumb/030.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 15332,
+   "url": "https://santalarch.com/images/page/main/works/thumb/020.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 3236,
+   "url": "https://api.santalarch.com/uploads/thumbnail_img_3_e2f6f15ce9.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 2244,
+   "url": "https://api.santalarch.com/uploads/thumbnail_img_4_2dc39ed17c.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 1558,
+   "url": "https://api.santalarch.com/uploads/thumbnail_mariia_plyuta_f13e9b0741.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 1978,
+   "url": "https://api.santalarch.com/uploads/thumbnail_img_2_ef9f62821d.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 5134,
+   "url": "https://api.santalarch.com/uploads/thumbnail_img_a3bd9995b5.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 2740,
+   "url": "https://api.santalarch.com/uploads/thumbnail_img_1_bfa5071c8d.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 1944,
+   "url": "https://api.santalarch.com/uploads/thumbnail_misak_melkonyan_35014294dc.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 1346,
+   "url": "https://api.santalarch.com/uploads/thumbnail_img_3105_a124e30f83.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 98832,
+   "url": "https://api.santalarch.com/uploads/small_img_a3bd9995b5.webp?v=20260813"
+  },
+  {
+   "kind": "script",
+   "size": 448121,
+   "url": "https://santalarch.com/_nuxt/D0wMD3SA.js"
+  },
+  {
+   "kind": "image",
+   "size": 1004,
+   "url": "https://api.santalarch.com/uploads/text_c63fe82591.svg"
+  },
+  {
+   "kind": "data",
+   "size": 1149067,
+   "url": "https://santalarch.com/sequences/chunks/watch_white/000.99c9f5e70d.bin"
+  },
+  {
+   "kind": "image",
+   "size": 1004,
+   "url": "https://api.santalarch.com/uploads/text_c63fe82591.svg"
+  },
+  {
+   "kind": "image",
+   "size": 1004,
+   "url": "https://api.santalarch.com/uploads/text_c63fe82591.svg"
+  },
+  {
+   "kind": "script",
+   "size": 1945,
+   "url": "blob:https://santalarch.com/f4277e4a-2b1e-4a29-95cb-3a1ff96473e2"
+  },
+  {
+   "kind": "other",
+   "size": 7699,
+   "url": "blob:https://santalarch.com/dcf22ffe-1f22-4bc1-80e1-f8e8d04c64b1"
+  },
+  {
+   "kind": "other",
+   "size": 2043,
+   "url": "blob:https://santalarch.com/228b8f52-025e-4af7-a97d-8018ce267e94"
+  },
+  {
+   "kind": "other",
+   "size": 36613,
+   "url": "blob:https://santalarch.com/d6d8187a-10b4-4381-999f-89ba2d7f6929"
+  },
+  {
+   "kind": "other",
+   "size": 5012,
+   "url": "blob:https://santalarch.com/d5006650-aed4-4120-bb39-7fd01c384641"
+  },
+  {
+   "kind": "other",
+   "size": 6165,
+   "url": "blob:https://santalarch.com/158853f1-192f-4978-84ee-3458e7240c3e"
+  },
+  {
+   "kind": "other",
+   "size": 102,
+   "url": "blob:https://santalarch.com/297f6219-cd3e-4d6b-b3a4-574c64d9e287"
+  },
+  {
+   "kind": "other",
+   "size": 4060,
+   "url": "blob:https://santalarch.com/11e1bcf8-eed4-4249-814c-c716010e1a67"
+  },
+  {
+   "kind": "other",
+   "size": 82,
+   "url": "blob:https://santalarch.com/a3e176d4-3802-459d-aedd-7f6e17d3001e"
+  },
+  {
+   "kind": "other",
+   "size": 12951,
+   "url": "blob:https://santalarch.com/fba6a449-f411-47ee-8cb9-417345bcbb53"
+  },
+  {
+   "kind": "other",
+   "size": 80,
+   "url": "blob:https://santalarch.com/7148f9d7-fb6c-4fa3-9512-17cd5f7282f3"
+  },
+  {
+   "kind": "other",
+   "size": 120,
+   "url": "blob:https://santalarch.com/61bd3363-c44c-4830-9f11-1cd47f7576a0"
+  },
+  {
+   "kind": "other",
+   "size": 158,
+   "url": "blob:https://santalarch.com/fe7fdc02-a79b-4806-b7a9-da0585ce4d46"
+  },
+  {
+   "kind": "image",
+   "size": 22814,
+   "url": "https://api.santalarch.com/uploads/small_img_1_bfa5071c8d.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 16946,
+   "url": "https://api.santalarch.com/uploads/small_img_2_ef9f62821d.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 15334,
+   "url": "https://api.santalarch.com/uploads/small_img_4_2dc39ed17c.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 40416,
+   "url": "https://api.santalarch.com/uploads/small_img_3_e2f6f15ce9.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 98832,
+   "url": "https://api.santalarch.com/uploads/small_img_a3bd9995b5.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 16946,
+   "url": "https://api.santalarch.com/uploads/small_img_2_ef9f62821d.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 15334,
+   "url": "https://api.santalarch.com/uploads/small_img_4_2dc39ed17c.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 22814,
+   "url": "https://api.santalarch.com/uploads/small_img_1_bfa5071c8d.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 40416,
+   "url": "https://api.santalarch.com/uploads/small_img_3_e2f6f15ce9.webp?v=20260813"
+  },
+  {
+   "kind": "image",
+   "size": 1074228,
+   "url": "https://santalarch.com/images/page/main/grid.webp"
+  },
+  {
+   "kind": "data",
+   "size": 20932,
+   "url": "https://santalarch.com/sequences/room.json"
+  },
+  {
+   "kind": "3d model",
+   "size": 1177944,
+   "url": "https://santalarch.com/models/Door.glb"
+  },
+  {
+   "kind": "fetch",
+   "size": 0,
+   "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-TDYW18124Q&gtm=45je6bh1v9262780313za200zd9262780313xf1&_p=1795368809522&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=1503794106.1795368810&frm=0&ngs=1&pscdl=noapi&rcb=15&sr=800x600&uaa=arm&uab=64&uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.79%7CChromium%3B157.0.8103.79&uam=&uamb=0&uap=macOS&uapv=26.5.1&uaw=0&ul=en-gb&_s=2&tag_exp=115938466~115938468~120213116~120385423~120469145~120469153~121246026~121246034&sid=1795368809&sct=1&seg=0&dl=https%3A%2F%2Fsantalarch.com%2F&dt=Santalarch&en=scroll&epn.percent_scrolled=90&_et=8&tfd=6275"
+  },
+  {
+   "kind": "data",
+   "size": 1172182,
+   "url": "https://santalarch.com/sequences/chunks/watch_white/001.5faedac0db.bin"
+  },
+  {
+   "kind": "data",
+   "size": 78286,
+   "url": "https://santalarch.com/sequences/chunks/watch_white/002.2c2884d985.bin"
+  },
+  {
+   "kind": "data",
+   "size": 1120275,
+   "url": "https://santalarch.com/sequences/chunks/room/000.2edef0fe13.bin"
+  },
+  {
+   "kind": "font",
+   "size": 25756,
+   "url": "https://santalarch.com/_nuxt/Regular.BoAwpaak.woff"
+  },
+  {
+   "kind": "fetch",
+   "size": 121582,
+   "url": "blob:https://santalarch.com/f6bb09ac-d55a-4bab-a161-3700cbe88bfe"
+  },
+  {
+   "kind": "fetch",
+   "size": 72554,
+   "url": "blob:https://santalarch.com/f601dcd4-d775-46eb-96ce-91900b334b4b"
+  },
+  {
+   "kind": "fetch",
+   "size": 16138,
+   "url": "blob:https://santalarch.com/422bbda8-67dd-47cf-808a-e128ee838cb9"
+  },
+  {
+   "kind": "fetch",
+   "size": 425052,
+   "url": "blob:https://santalarch.com/0dbbfcc3-8ba3-4884-971c-021d223ff829"
+  },
+  {
+   "kind": "fetch",
+   "size": 196560,
+   "url": "blob:https://santalarch.com/8f5770b1-9bf4-4286-99cb-34d0c7ea1fc3"
+  },
+  {
+   "kind": "wasm / decoder",
+   "size": 58456,
+   "url": "https://santalarch.com/draco/gltf/draco_wasm_wrapper.js"
+  },
+  {
+   "kind": "wasm / decoder",
+   "size": 192420,
+   "url": "https://santalarch.com/draco/gltf/draco_decoder.wasm"
+  },
+  {
+   "kind": "script",
+   "size": 60803,
+   "url": "blob:https://santalarch.com/4e295eb7-ec27-45b4-8190-6728f2e56b30"
+  },
+  {
+   "kind": "script",
+   "size": 60803,
+   "url": "blob:https://santalarch.com/4e295eb7-ec27-45b4-8190-6728f2e56b30"
+  },
+  {
+   "kind": "script",
+   "size": 60803,
+   "url": "blob:https://santalarch.com/4e295eb7-ec27-45b4-8190-6728f2e56b30"
+  },
+  {
+   "kind": "script",
+   "size": 60803,
+   "url": "blob:https://santalarch.com/4e295eb7-ec27-45b4-8190-6728f2e56b30"
+  },
+  {
+   "kind": "other",
+   "size": 162,
+   "url": "https://santalarch.com/favicon.ico"
+  },
+  {
+   "kind": "data",
+   "size": 1155997,
+   "url": "https://santalarch.com/sequences/chunks/room/001.a19ed83a93.bin"
+  },
+  {
+   "kind": "data",
+   "size": 1089103,
+   "url": "https://santalarch.com/sequences/chunks/room/002.8542b17ac4.bin"
+  },
+  {
+   "kind": "data",
+   "size": 1095691,
+   "url": "https://santalarch.com/sequences/chunks/room/003.84c80f828a.bin"
+  },
+  {
+   "kind": "data",
+   "size": 1099417,
+   "url": "https://santalarch.com/sequences/chunks/room/004.5cbc170ae0.bin"
+  },
+  {
+   "kind": "data",
+   "size": 1072244,
+   "url": "https://santalarch.com/sequences/chunks/room/005.461911d465.bin"
+  },
+  {
+   "kind": "data",
+   "size": 1243423,
+   "url": "https://santalarch.com/sequences/chunks/room/006.9e62b94ff8.bin"
+  },
+  {
+   "kind": "data",
+   "size": 1147628,
+   "url": "https://santalarch.com/sequences/chunks/room/007.a3038afd14.bin"
+  },
+  {
+   "kind": "data",
+   "size": 950341,
+   "url": "https://santalarch.com/sequences/chunks/room/008.69cf7381af.bin"
+  }
+ ]
+}
