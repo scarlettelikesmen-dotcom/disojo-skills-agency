@@ -15,6 +15,9 @@
   "switchModelsOnFlag": false,
   "agentPushNotifEnabled": true,
   "tui": "fullscreen",
+  "env": {
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "30"
+  },
   "hooks": {
     "PreToolUse": [
       {

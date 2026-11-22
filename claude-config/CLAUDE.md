@@ -20,4 +20,4 @@ Founder-led, owner-run clients. Two offers: Digital systems and Visual identity.
 - Re-read Tejjo's details before building. Finish the whole piece, verify with real screenshots (1512x864, 390), then show it.
 - Every client gets their own look. Reuse the process and plumbing, never the look. Every website is Astro, first screen to launch; no hand-written HTML sites. Footer carries the client's location and a small live clock.
 - Footer on everything we make, right of the bottom row, linking https://disojostudio.com: `Design & Systems · © Disojo Studio 2026`.
-- Before compacting: write a memory note and `work-summary-YYYY-MM-DD.md`, add both to MEMORY.md. Keep this file under 25 lines.
+- Auto-compact runs at 30% of the context window (settings.json env `CLAUDE_AUTOCOMPACT_PCT_OVERRIDE=30`; never `CLAUDE_CODE_AUTO_COMPACT_WINDOW`, it fakes the window size). Before every compaction, manual or auto (near 30%): write a memory note and `work-summary-YYYY-MM-DD.md`, add both to MEMORY.md. Keep this file under 25 lines.
