@@ -9,7 +9,7 @@ What we sell, in the client's eyes: a business that looks as good as it really i
 
 **The spec is the source:** `~/Desktop/DISOJO SOLUTIONS/content-hub/brands/disojo/flagship-offer.md` (what each price buys, the journey, what is settled and what is open). Prices and terms: `offer.md` beside it. **Never quote a price, discount, timeline or term that is not marked settled there. Ask Tejjo.**
 
-Read before the first step, every job: `taste-library` (identity and websites files), memory `reference-branding-flagship-refs` (what the market sells, so we never ship the template floor).
+Read before the first step, every job: `taste-library` (identity and websites files), memory `reference-branding-flagship-refs` and `taste-library/studios.md` (what the market sells, taken apart, so we never ship the template floor). At steps 4 to 8, open the images listed for that decision in `identity-design/references/refs.md`.
 
 ## The two products
 | | Branding, $4,000 | Flagship, $12k to $20k |

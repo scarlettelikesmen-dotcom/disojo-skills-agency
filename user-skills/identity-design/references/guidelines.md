@@ -15,6 +15,8 @@ A guidelines book has two jobs, and the template decks only do the second:
 - **Do and don't shown, not described.** The mark misused in six ways, each crossed out.
 - **It is short enough to read.** 20 pages for Branding, as many as the brand world needs for the flagship. Fifty pages of filler is not more value; the reels brag about page counts, our clients should brag about the brand.
 
+- **Never the Softriver page order** (Primary Logo, Logomark, Clearspace, Typeface, Hierarchy, Colour, Imagery, Patterns, Social, Mockups, Billboard, Merch). It is the template every client gets. Taken apart in `taste-library/studios.md`.
+
 ## Check before Tejjo sees it
 - Every page screenshotted at full size and looked at.
 - Read it as their junior designer: can I make an Instagram post and a business card from this alone?

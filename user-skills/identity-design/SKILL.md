@@ -7,7 +7,7 @@ description: START HERE for any logo, mark, wordmark or visual identity - Disojo
 
 The job: a mark and a system that make the business look as good as it really is, and that only this business could own.
 
-Read first, every time: `taste-library/identity.md` (and look at the images it points to).
+Read first, every time: `taste-library/identity.md` and `taste-library/studios.md` (the market's floor and bar, and the 13 rules), and look at the images they point to.
 
 **Hard rule (Tejjo, 2026-11-22): think like a senior designer, not an AI agreeing to whatever Tejjo says.** Every answer leads with my recommendation and the reason. When Tejjo's idea or pick is weaker, say so, say why, show the better option. Tejjo decides.
 
@@ -16,6 +16,7 @@ Craft positions (read the one for the step you are on):
 - `references/type.md`: free and premium fonts, licensing, how to choose
 - `references/colour.md`: fewer colours with conviction, the handover system, checks
 - `references/voice.md`: voice as a person with checkable rules; labels and packaging labels
+- `references/refs.md`: which reference images to open for each decision (idea, mark type, type, colour, book, brand-world surfaces, case-study post), with Tejjo's scores
 - `references/guidelines.md`: what separates our book from the template floor The whole client job (signing, stages, handover) still runs from `disojo-visual-identity` until the client-jobs skill is rebuilt. Strategy (positioning, naming, voice) still runs from the brand-* skills until the brand-strategy skill is rebuilt.
 
 ## What good has looked like here
@@ -52,9 +53,9 @@ Craft positions (read the one for the step you are on):
 
 ### 4. Make
 Split the work by what each tool is good at:
-- **Image models** (ChatGPT image, Nano Banana, Gemini): gesture, hand energy, material, character, the world around the mark. Long, researched prompts with reference images, saying what each image is for. Grammar and round rules: `disojo-identity-lab/references/prompt-engine.md` (WORLD, SHEET, FINISH, IN-WORD). Paste prompts in chat as code blocks; the board copy buttons failed for Tejjo.
+- **Image model: ChatGPT only** (Tejjo, 2026-11-22: exclusive, few intentional prompts, never spam rounds): gesture, hand energy, material, character, the world around the mark. Long, researched prompts with reference images, saying what each image is for. Grammar and round rules: `disojo-identity-lab/references/prompt-engine.md` (WORLD, SHEET, FINISH, IN-WORD). Paste prompts in chat as code blocks; the board copy buttons failed for Tejjo.
 - **Code**: exact geometry, the clean rebuild, optical corrections, grids, patterns, motion, tests. Pipeline: `disojo-logo-design` (fonttools, HarfBuzz, shapely, outlined type plus constructed geometry).
-- Make many rough marks before choosing. A round has 6 to 8 territories, and no two share a tool and a world.
+- Explore wide in code and words first (many rough marks are cheap in code); spend ChatGPT prompts only on the picked idea, 1 to 3 at a time.
 - Never brush or calligraphy. Never living designers' names in prompts. Never copy a reference's shapes.
 
 ### 5. Look at it before Tejjo does

@@ -5,7 +5,7 @@
 - [Projects and working rules](reference-projects.md) — Disojo facts, goals, site workflow, content, shipped work, moved from CLAUDE.md
 - [Environment](reference-environment.md) — tools, backups, screenshots, venv, Vercel notes
 - [Site research](reference-site-research.md) — where all benchmark, code, Awwwards, TFTL, taste and 3D research lives and what it found; never re-research
-- [Branding flagship refs](reference-branding-flagship-refs.md) — 2026-11-22: Softriver, Andrija Designs, €5k process carousel, guideline-deck reels; what each sells
+- [Branding flagship refs](reference-branding-flagship-refs.md) — 2026-11-22: Softriver, Andrija Designs, €5k process carousel, guideline-deck reels; what each sells; dissection in taste-library/studios.md
 - [LinkedIn profile optimisation](project-linkedin-profile.md) — About + banner FINAL; headline, experience, Featured, Services, photo, connections pending
 
 ## Clients and builds
@@ -16,6 +16,7 @@
 - [CTESCOA](project-ctescoa.md) — a client (Tejjo 2026-11-12), first called a test: drawing-sheet build D, demo ctescoa-demo.vercel.app, 132 inner routes; ctescoa.ac.in still old
 - [Postcards redo](project-postcards-redo.md) — READ FIRST for Postcards: identity in progress (mark = round 2 block-print number 5, Bonny 700, both picked 2026-11-18); Astro rack build REJECTED 2026-11-11; lumina-store (Vite) DEPLOYED to postcardsperfumes.in with auto nav colour shift; deploy recipe (git-author block)
 - [Mentable landing page](project-mentable-space-landing.md) — READ FIRST for Mentable: LIVE www.mentable.space, deploy recipe, decisions, NEXT PASS in progress (app logo + sim recordings + interaction library)
+- [KDC App contract](project-kdc-app-contract.md) — READ FIRST for KDC contract: v3 draft 2026-11-22, all decisions, build command, blanks left, red to strip
 - [KDC site redo](project-kdc-site-redo.md) — kunalsdrumclass.com, first disojo-site-system run: Count-in approved, home built localhost:4600, NOT deployed, gap list
 - [VÆL site](project-vael-site.md) — READ FIRST for VÆL: real brand, confirmed specs, scope (pages + shop, Shopify later), redraw wordmark, Blender-rendered imagery, show only when audited
 - [Kiran Roy](project-kiran-roy-third-pass.md) — READ FIRST for Kiran: fretboard build stashed 2026-11-10 (_archive/direction-B-guitar-2026-11-10), round 2 ideas in brief/IDEA.md awaiting pick
@@ -38,6 +39,7 @@
 - [Disojo site working copy](feedback-disojo-site-working-copy.md) — edit ~/Desktop/disojo-mix on :4700 only, never disojo-hybrid; watermark with watermark_new.py (new logo)
 - [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
 - [Downloads and computer access](feedback-downloads-computer-access.md) — 2026-11-16 standing OK to download and use the whole computer without asking
+- [ChatGPT images only](feedback-chatgpt-images-only.md) — 2026-11-22: images from ChatGPT only, few intentional prompts, everything else in code
 - [Flow prompting](feedback-flow-prompting.md) — Nano Banana Pro is good; long researched prompts with reference images, say what each image is for
 - [AI images allowed](feedback-ai-images-allowed.md) — 2026-11-17: Tejjo reverted my "no AI photo next to client results" rule; Flow images may sit anywhere
 - [Fonts: research first](feedback-fonts-research-first.md) — 2026-11-11: our Google font defaults rejected; specimen of 15-20 free fonts in client words before first screens; method in skill references/free-type.md
@@ -63,6 +65,7 @@
 
 - [Content uses the live brand](feedback-content-current-brand.md) — 2026-11-18: never the October tokens.css; hoflik + Bricolage + graphite; case studies in the nonstopbranding format
 - [Reels: one idea, clean edits](feedback-reel-clean-flagship.md) — 2026-11-19 Postcards reel rejected: no shake/flash gimmicks, one visual idea, flagship craft
+- [Work summary 2026-11-22](work-summary-2026-11-22.md) — flagship offer settled, visual-identity skill rewritten, studios dissected into taste-library/studios.md; open decisions
 - [Work summary 2026-11-18](work-summary-2026-11-18.md) — Monolog copy rejected and reverted; stage device now sits on a picture per project
 
 ## Logs

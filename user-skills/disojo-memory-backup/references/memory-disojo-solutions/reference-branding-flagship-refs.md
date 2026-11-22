@@ -17,3 +17,5 @@ Sent by Tejjo 2026-11-22 after saying our branding process "is okay, but it is n
 - **ninobusinesss reel DfHi17KNIgn** "POV: you just delivered 26 pages of brand guidelines": a music meme over a deck flip (Uprise). Its page titles and layout match the Trussly deck, probably the same guideline template.
 
 Related: [[project-disojo-business]], [[reference-site-research]].
+
+2026-11-22 later: every project from Nonstop, Andrija and Softriver taken apart in `~/.claude/skills/taste-library/studios.md` (Nonstop is the bar; Andrija's mockup kit and Softriver's 12-page deck are the floor; 12 rules to build by). Images in taste-library/studios/.

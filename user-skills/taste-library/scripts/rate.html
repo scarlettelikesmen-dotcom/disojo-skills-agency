@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio ratings</title>
+<style>
+:root{--paper:#f3f1ec;--ink:#151515;--mute:#7a7770;--line:#d9d5cc;--hi:#151515;--card:#fbfaf7}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;gap:24px;align-items:baseline;flex-wrap:wrap}
+header h1{font-size:18px;font-weight:600;letter-spacing:-.01em}
+#progress{color:var(--mute);font-variant-numeric:tabular-nums}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav button{all:unset;cursor:pointer;color:var(--mute);padding:2px 0;border-bottom:1px solid transparent}
+nav button.on{color:var(--ink);border-color:var(--ink)}
+#saved{margin-left:auto;color:var(--mute);font-size:13px}
+main{padding:8px 0 120px}
+section{padding:28px 0 22px;border-bottom:1px solid var(--line)}
+.head{display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap;padding:0 24px 14px}
+.studio{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.title{font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1.1;max-width:640px}
+.score{display:flex;gap:6px;align-items:center}
+.score .lab{font-size:12px;color:var(--mute);margin-right:6px}
+.score button{all:unset;cursor:pointer;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-weight:600;font-variant-numeric:tabular-nums;transition:background .3s cubic-bezier(.16,1,.35,1),color .3s,border-color .3s}
+.score button:hover{border-color:var(--ink)}
+.score button.on{background:var(--hi);color:var(--paper);border-color:var(--hi)}
+.note{flex:1;min-width:220px;border:0;border-bottom:1px solid var(--line);background:transparent;font:inherit;padding:6px 0;outline:none}
+.note:focus{border-color:var(--ink)}
+.strip{display:flex;gap:10px;overflow-x:auto;padding:0 24px 6px;scroll-snap-type:x proximity}
+.strip::-webkit-scrollbar{height:6px}.strip::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+figure{flex:none;scroll-snap-align:start;display:flex;flex-direction:column;gap:6px}
+figure img{height:380px;width:auto;display:block;cursor:zoom-in;background:#ddd;border-radius:2px}
+figure video{height:560px;width:auto;display:block;background:#000;border-radius:2px}
+.mini{display:flex;gap:4px;align-items:center;font-size:11px;color:var(--mute)}
+.mini button{all:unset;cursor:pointer;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:11px;color:var(--mute);border:1px solid transparent}
+.mini button:hover{border-color:var(--line)}
+.mini button.on{background:var(--ink);color:var(--paper)}
+.mini .n{margin-right:6px;min-width:56px;color:var(--ink)}
+.hidden{display:none}
+#lb{position:fixed;inset:0;background:rgba(12,12,12,.94);z-index:10;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#eee}
+#lb.open{display:flex}
+#lb img{max-width:94vw;max-height:84vh;object-fit:contain}
+#lb .mini button{color:#aaa;width:30px;height:30px;font-size:14px}
+#lb .mini button.on{background:#eee;color:#111}
+#lb .bar{display:flex;gap:24px;align-items:center;font-size:13px;color:#aaa}
+@media (max-width:700px){header{padding:12px 16px}.head,.strip{padding-left:16px;padding-right:16px}figure img{height:260px}figure video{height:420px}.title{font-size:21px}}
+footer{padding:24px;color:var(--mute);font-size:12px;display:flex;justify-content:flex-end}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<header>
+  <h1>Studio ratings</h1>
+  <span id="progress"></span>
+  <nav id="filters"></nav>
+  <span id="saved">loading</span>
+</header>
+<main id="list"></main>
+<div id="lb"><img alt=""><div class="bar"><span id="lbpos"></span><div class="mini" id="lbscore"></div><span>keys 1 to 5 rate · arrows move · esc closes</span></div></div>
+<footer><a href="https://disojostudio.com">Design &amp; Systems · © Disojo Studio 2026</a></footer>
+<script>
+let items=[], R={items:{}}, filter='All', timer;
+const $=s=>document.querySelector(s);
+const rec=id=>R.items[id]||(R.items[id]={score:0,note:'',images:{}});
+function save(){ $('#saved').textContent='saving'; clearTimeout(timer);
+  timer=setTimeout(()=>fetch('/ratings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(R)})
+   .then(r=>r.json()).then(j=>$('#saved').textContent='saved '+j.saved.slice(11)).catch(()=>$('#saved').textContent='not saved, server down'),300);
+  progress(); }
+function progress(){ const n=items.filter(i=>R.items[i.id]?.score).length; $('#progress').textContent=`${n} of ${items.length} rated`; }
+function scoreRow(cur,onPick,cls){ const d=document.createElement('div'); d.className=cls;
+  for(let k=1;k<=5;k++){const b=document.createElement('button'); b.textContent=k; b.title=k+' of 5'; if(cur===k)b.classList.add('on');
+    b.onclick=e=>{e.stopPropagation(); const v=(cur===k)?0:k; cur=v; [...d.querySelectorAll('button')].forEach((x,i)=>x.classList.toggle('on',i+1===v)); onPick(v);}; d.append(b);} return d; }
+function render(){
+  const L=$('#list'); L.innerHTML='';
+  items.forEach(it=>{
+    const r=rec(it.id), s=document.createElement('section'); s.dataset.studio=it.studio; s.dataset.id=it.id;
+    const h=document.createElement('div'); h.className='head';
+    h.innerHTML=`<div><div class="studio">${it.studio}${it.kind==='reel'?' · reel':''} · ${it.media.length>1?it.media.length+' images':''}</div><div class="title"></div></div>`;
+    h.querySelector('.title').textContent=it.title;
+    const sc=scoreRow(r.score,v=>{r.score=v;save();applyFilter();},'score'); sc.insertAdjacentHTML('afterbegin','<span class="lab">project</span>');
+    const note=document.createElement('input'); note.className='note'; note.placeholder='why, in your words (optional)'; note.value=r.note||'';
+    note.oninput=()=>{r.note=note.value;save();};
+    h.append(sc,note); s.append(h);
+    const st=document.createElement('div'); st.className='strip';
+    it.media.forEach((m,idx)=>{ const f=document.createElement('figure');
+      if(it.kind==='reel'){ const v=document.createElement('video'); v.src=m; v.controls=true; v.preload='metadata'; v.playsInline=true; f.append(v); }
+      else { const im=document.createElement('img'); im.src=m; im.loading='lazy'; im.onclick=()=>openLB(it,idx); f.append(im);
+        const mr=scoreRow(r.images[m]||0,v=>{ if(v)r.images[m]=v; else delete r.images[m]; save(); },'mini'); mr.insertAdjacentHTML('afterbegin',`<span class="n">image ${idx+1}</span>`); f.append(mr); }
+      st.append(f); });
+    s.append(st); L.append(s); });
+  applyFilter(); progress();
+}
+function applyFilter(){ document.querySelectorAll('section').forEach(s=>{ const r=R.items[s.dataset.id];
+  const show= filter==='All' || s.dataset.studio===filter || (filter==='Unrated' && !(r&&r.score)); s.classList.toggle('hidden',!show); }); }
+function filters(){ const n=$('#filters'); ['All','Nonstop','Andrija','Softriver','Unrated'].forEach(f=>{ const b=document.createElement('button'); b.textContent=f; if(f===filter)b.classList.add('on');
+  b.onclick=()=>{filter=f;[...n.children].forEach(x=>x.classList.toggle('on',x===b));applyFilter();window.scrollTo(0,0);}; n.append(b); }); }
+let lbIt,lbIdx;
+function openLB(it,idx){ lbIt=it; lbIdx=idx; $('#lb').classList.add('open'); drawLB(); }
+function drawLB(){ const m=lbIt.media[lbIdx], r=rec(lbIt.id); $('#lb img').src=m; $('#lbpos').textContent=`${lbIt.title} · ${lbIdx+1} of ${lbIt.media.length}`;
+  const old=$('#lbscore'); const n=scoreRow(r.images[m]||0,v=>{ if(v)r.images[m]=v; else delete r.images[m]; save(); syncMini(); },'mini'); n.id='lbscore'; old.replaceWith(n); }
+function syncMini(){ const sec=document.querySelector(`section[data-id="${lbIt.id}"]`); const fig=sec.querySelectorAll('figure')[lbIdx]; const v=rec(lbIt.id).images[lbIt.media[lbIdx]]||0;
+  fig.querySelectorAll('.mini button').forEach((b,i)=>b.classList.toggle('on',i+1===v)); }
+$('#lb').onclick=e=>{ if(e.target.id==='lb') $('#lb').classList.remove('open'); };
+document.addEventListener('keydown',e=>{ if(!$('#lb').classList.contains('open'))return;
+  if(e.key==='Escape')$('#lb').classList.remove('open');
+  if(e.key==='ArrowRight'){lbIdx=(lbIdx+1)%lbIt.media.length;drawLB();}
+  if(e.key==='ArrowLeft'){lbIdx=(lbIdx-1+lbIt.media.length)%lbIt.media.length;drawLB();}
+  if(/^[1-5]$/.test(e.key)){ $('#lbscore').querySelectorAll('button')[+e.key-1].click(); } });
+Promise.all([fetch('/manifest').then(r=>r.json()),fetch('/ratings').then(r=>r.json())]).then(([m,r])=>{ items=m; if(r&&r.items)R=r; filters(); render(); $('#saved').textContent=R._saved?'last saved '+R._saved.slice(11):'nothing saved yet'; });
+</script>
+</body>
+</html>

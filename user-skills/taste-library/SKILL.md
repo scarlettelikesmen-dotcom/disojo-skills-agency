@@ -12,6 +12,7 @@ What Tejjo loved and what they hated, in their words, with the work it was about
 - `identity.md`: logos, marks and identity rounds. Full log with screenshots: `~/.claude/skills/disojo-identity-lab/references/taste-tejjo.md` and its `shots/`.
 - `apps.md`: product and app screens. The thinnest file: ask Tejjo for references before designing an app.
 - `content.md`: reels, edits, carousels.
+- `studios.md`: what Nonstop, Andrija and Softriver ship, taken apart project by project, with the floor, the bar and the 13 rules we build identities by. Read before any branding job.
 - `inbox/`: anything Tejjo drops (links, screenshots) that is not sorted yet. Sort it into the files above with their words.
 
 ## How to use it

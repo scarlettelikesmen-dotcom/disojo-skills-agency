@@ -112,3 +112,4 @@ One line each time a session compacts (written by ~/.claude/hooks/precompact_log
 - 2026-11-19 19:12 | manual | session 2b056b99 | /Users/tejjo/Desktop/DISOJO SOLUTIONS/projects/kdc/KDCAPP/docs/design | newest note: project-health-plan.md
 - 2026-11-22 20:13 | auto | session 2b056b99 | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-health-plan.md
 - 2026-11-22 22:08 | auto | session d23809fb | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-level.md
+- 2026-11-22 23:00 | auto | session ea15c3db | /Users/tejjo/Desktop/DISOJO SOLUTIONS/level/research/2026-11-22 | newest note: project-kdc-app-contract.md
