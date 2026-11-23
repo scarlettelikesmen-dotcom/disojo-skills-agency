@@ -39,3 +39,4 @@ Merged 2026-11-16 from 4 notes (logo and identity, multipage, site iteration pla
 ## Identity round 2026-11-23 (job folder `~/Desktop/DISOJO SOLUTIONS/clients/ascender-media/`)
 - Tejjo: forget the current branding (pill, cobalt box, Hanken). Wants a standalone mark NOT from the letters and NOT a wordmark, plus a new font.
 - Rejected: r1 rope clamp/splice/pill, r2 seal/band/flick, r3 hop/character/caption stack (all "suck"; skipped the process). Draft strategy and IDEA.md now in the job folder; prompts r4, r5 in `brand/`.
+- 2026-11-24 PICKED: mark = A from two heavy shapes with a wave cut (clients/ascender-media/brand/logo/pick-2026-11-24.png, ChatGPT, prompt r7 with Softriver/Shift refs attached). Font = Technor 900 (Fontshare), specimen-01 no. 12. Lesson: the refs Tejjo rated 5 were the brief all along; attach them to prompts.
