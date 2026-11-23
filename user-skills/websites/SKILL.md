@@ -26,13 +26,14 @@ Toolbox (do not rebuild what is here): `SK=~/.claude/skills/disojo-site-system`.
 - A clever device that dropped the basics: what this is, who you deal with, what to do (CSK: "What does LM versus MA even mean?").
 - Quantity over quality (CSK ten layouts: "wow i cannot be more mad").
 - Showing work I did not believe in ("why would you give it to me then").
+- Every screen at maximum (2026-11-23, "all zoomed in, no beauty"): heavy type edge to edge, tight crops, #fff on #000, flat loud colour, everything speaking at once. Measured against 216 TFTL screens: ours are twice as loud, with 2.4x the type size and 3x the text. Posters, not places. `$SK/references/beauty.md`.
 
 ## How I work
 
 ### 1. Truth and material
 - `bash $SK/scripts/new_site.sh <slug> [url]`. With a URL it crawls the old site word for word; without one, inventory the client's files.
 - The five-second content, in the client's words: what this is, who it is for, what the visitor does next.
-- The photo pass (`disojo-image-pipeline`): every image marked real, stock or AI and given a job. Full-bleed needs 2300px+ sources.
+- The photo pass (`disojo-image-pipeline`): every image marked real, stock or AI and given a job. Full-bleed needs 2300px+ sources. Plan pictures by distance (mostly wide, some medium, few close) and one grade across all of them (`$SK/references/beauty.md` step 3).
 - If the material cannot carry a premium site (three soft photos, no logo), say so now and plan the fix (shoot, image generation for non-client imagery, Blender), before any design.
 
 ### 2. Study, hands-on
@@ -51,22 +52,29 @@ Toolbox (do not rebuild what is here): `SK=~/.claude/skills/disojo-site-system`.
 ### 4. Type
 A specimen of 15 to 20 free fonts set in the client's own words, from Google Fonts' recent additions, Fontshare, Collletttivo and Velvetyne (`$SK/references/free-type.md`). Tejjo picks. Never reuse Bricolage or Hanken for a client. No Inter, Fraunces or Instrument Serif by default.
 
-### 5. The first screen
+### 5. Still frames (the look is decided here)
+Read `$SK/references/beauty.md` first. Before code that moves, 6 to 8 frames of the home at 1512x864, composed as pictures (Astro pages, motion off, screenshotted):
+- Label each frame quiet, photo or event before drawing it. At most one event per page.
+- Pictures wide and graded to one look; type with range not size (nav and body 12-16px, display light, italic or grey, heavy only on the event); tinted grounds, never #fff and #000; empty ground on purpose, offsets, one layer over another.
+- `python3 $SK/scripts/beauty_pixels.py qa/beauty.json ours="<frames>" --check` and fix or explain every warning.
+- Put the frames on one board beside TFTL frames of the same kind (`$SK/research/beauty/tftl-mid.jpg`, `$SK/research/tftl-handson/scan/<slug>/`). My verdict first, then Tejjo picks. No motion and no second page before the yes.
+
+### 6. The first screen in motion
 - Real material only. Astro page, the kernel's motion (`$SK/kernel/`, already inside the starter since 2026-11-23: Lenis, GSAP, Barba transitions, split reveals, rolls, data-close, data-film). Every value (eases, durations, how far things move, the veil) is set from the idea in tokens, never left at the lab default.
 - Look at it at 1512x864 and 390 in the real browser, scrolling with a real wheel.
 - Put it beside the references: `node $SK/scripts/side_by_side.cjs <project>/qa/sbs <ourUrl> <refUrl>...`, and write what they do that we do not.
 - My verdict in writing before sending. If I would not put it beside the eight, it is not sent; I say what is missing.
 
-### 6. Build in pieces
+### 7. Build in pieces
 - One page or section at a time, each shown with real screenshots (1512x864 and 390). After a "keep going", build one piece, show it, wait.
 - The starter (`$SK/starter/`) and section library are plumbing, used only where they are right. The starter's nav is replaced, never shipped.
 - Multi-page: a home plus real inner pages, each designed in the client's world (`$SK/references/build-craft.md`).
 - Words: about 80 a screen, 120 at most. Copy is the client's or Tejjo's.
 
-### 7. Defect checks
+### 8. Defect checks
 `premium_gate.cjs`, `system_check.cjs`, `phone_audit.cjs`, `prelaunch_scan.sh`, Lighthouse. They catch broken things only, and since 2026-11-17 the site guard hook only warns. Never call a pass "premium", "audited" or "ready".
 
-### 8. Ship
+### 9. Ship
 Demo on Tejjo's go: `bash $SK/scripts/deploy_demo.sh <project> <slug>` (own noindex project; send only the URL it prints after `DEMO:`, never a guessed `<slug>-demo.vercel.app`). Production only on the word "deploy" (`$SK/references/launch.md`).
 
 ## Techniques, chosen after the idea, never as the idea
@@ -87,6 +95,7 @@ Demo on Tejjo's go: `bash $SK/scripts/deploy_demo.sh <project> <slug>` (own noin
 - Free fonts only, licence recorded. Never lift a reference's fonts, copy, images or code.
 - No em dashes or hype words in copy.
 - Say plainly what is placeholder, AI-made or untested (real phones and Safari so far).
+- One loud thing per screen. Ours keep what TFTL often lacks (what this is in five seconds, readable text, a first frame that is not black); theirs give the calm. Both, or it is not done.
 - The bar is TFTL's work and the approved benchmarks, screen by screen and moment by moment (opening, scroll, page change, close), on the side-by-side sheet. Not our earlier builds.
 
 ## Proof

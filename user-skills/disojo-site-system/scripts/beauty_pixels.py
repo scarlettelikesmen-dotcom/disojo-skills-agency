@@ -8,7 +8,8 @@ Per frame (scaled to 1512 wide):
   edges  share of pixels with gradient > 40: how busy the frame is
   colour Hasler-Susstrunk colourfulness (0 grey, ~30 moderate, 60+ loud)
   range  luminance p95 - p5 (tonal spread), mean = mean luminance
-Prints group medians."""
+Prints group medians. --check: also prints a warning line per frame past the TFTL lines
+(loud > .15, range > 210, colour > 35, calm < .60). Warnings only; an event frame is meant to break them."""
 import sys, glob, json, statistics as st
 import numpy as np
 from PIL import Image
@@ -28,7 +29,9 @@ def measure(path):
     p5, p95 = np.percentile(L, [5, 95])
     return dict(quiet=float((bl < 4).mean()), calm=float((bl < 12).mean()), loud=float((bl > 45).mean()),
                 edges=float((g > 40).mean()), colour=col, range=float(p95 - p5), mean=float(L.mean()))
-out, *groups = sys.argv[1:]
+args = sys.argv[1:]
+CHECK = '--check' in args
+out, *groups = [a for a in args if a != '--check']
 res = {}
 for gspec in groups:
     name, pat = gspec.split('=', 1)
@@ -44,3 +47,10 @@ for name, rows in res.items():
     if not rows: continue
     meds = [st.median([r[k] for r in rows.values()]) for k in keys]
     print(f"{name:12} {len(rows):>4} " + ' '.join(f'{m:7.3f}' if m < 2 else f'{m:7.1f}' for m in meds))
+
+if CHECK:
+    lines = [('loud', '>', .15), ('range', '>', 210), ('colour', '>', 35), ('calm', '<', .60)]
+    for name, rows in res.items():
+        for f, r in rows.items():
+            bad = [f"{k} {r[k]:.2f}" if r[k] < 2 else f"{k} {r[k]:.0f}" for k, op, v in lines if (r[k] > v if op == '>' else r[k] < v)]
+            print(('WARN ' if bad else 'ok   ') + '/'.join(f.split('/')[-3:]) + ('  ' + ', '.join(bad) if bad else ''))
