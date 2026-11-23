@@ -53,9 +53,14 @@ html.is-locked { overflow: hidden; }
 
 /* data-close="frame": tall section, one sticky screen inside (ERA). Height sets the scroll length. */
 [data-close="frame"] { position: relative; height: 220svh; }
-[data-close="frame"] > .k-close-stick { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; }
-[data-close="frame"] [data-close-clip], [data-close="frame"] [data-close-inner] { grid-area: 1 / 1; }
+[data-close="frame"] > .k-close-stick { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; grid-template: 100% / 100%; }
+[data-close="frame"] [data-close-clip], [data-close="frame"] [data-close-inner] { grid-area: 1 / 1; min-height: 0; height: 100%; }
 [data-close="frame"] [data-close-clip] { position: relative; z-index: 1; will-change: clip-path; }
 [data-close="frame"] [data-close-inner] { z-index: 0; transform-origin: 50% 50%; }
 /* data-close="catch-up": the footer hides its content's start position. */
 [data-close="catch-up"] { overflow: clip; }
+/* data-close="floor": the word is fitted by JS; the footer cuts it. */
+[data-close="floor"] { overflow: clip; }
+[data-close="floor"] [data-close-word] { display: block; width: max-content; white-space: nowrap; line-height: .8; }
+/* data-close="last-word": the action keeps its own line and turns from its left edge. */
+[data-close="last-word"] [data-close-action] { display: inline-block; transform-origin: 0 100%; }

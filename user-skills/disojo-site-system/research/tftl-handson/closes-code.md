@@ -57,3 +57,6 @@ Shared numbers: trigger the footer, `start: "top bottom"`, `end: "bottom bottom"
 ## Pictures (captured 2026-11-23 with `moments.cjs`, frames top to bottom of the close)
 All closes on one sheet: `moments/overview-closes.jpg` (last 10 frames per site). One strip per site, every frame: `moments/<slug>-close.jpg` for era-residence, 4x-strategy, ada, lenval-properties, sl-architects, pictoric, grape, archvoyage, coeval, alchemy-family, fame-estate, gifford-hill.
 Not captured: Hilight and Face to Face (their scroll is taken over by a pinned section; the tool never reached the footer). Use their scan frames in `scan/<slug>/` instead.
+
+## Built from this (2026-11-23)
+Kernel `data-close` with four settings: `frame`, `catch-up` (+ `data-close-dim`), `floor`, `last-word`. Lab pages `/close-frame/`, `/close-catch/`, `/close-floor/` on :4790. Captures: `moments/lab-*-close.jpg`, phone `moments/lab-*-phone-close.jpg`, side by side `moments/sbs-closes.jpg`.

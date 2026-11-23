@@ -60,3 +60,13 @@ main { min-height: 100vh; }
 .close-foot .cap { color: inherit; opacity: .7; }
 .close-word { align-self: end; font: 800 clamp(72px, 19vw, 330px)/.8 'Bricolage Grotesque'; letter-spacing: -.055em; }
 .close-foot-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; opacity: .8; }
+.close-lw { background: var(--ink); color: var(--bg); min-height: 90svh; display: grid; align-content: center; padding: 120px clamp(16px, 3vw, 40px); }
+.close-lw-line { font: 600 clamp(34px, 5vw, 84px)/1.02 'Bricolage Grotesque'; letter-spacing: -.03em; max-width: 18ch; }
+.close-lw-line [data-close-line] { opacity: .45; }
+.close-lw-act { text-decoration: underline; text-underline-offset: .12em; text-decoration-thickness: 2px; }
+.close-floor { background: var(--ink); color: var(--bg); display: grid; gap: 40px; padding: 80px clamp(16px, 3vw, 40px) 0; border-top: 1px solid #3a3733; }
+.close-floor .cap { color: inherit; opacity: .7; }
+.close-floor-w { overflow: visible; }
+.close-floor-word { font: 800 100px/.8 'Bricolage Grotesque'; letter-spacing: -.055em; }
+.close-floor { position: relative; }
+.close-floor-row { position: absolute; left: clamp(16px, 3vw, 40px); right: clamp(16px, 3vw, 40px); bottom: 20px; z-index: 2; mix-blend-mode: difference; color: #fff; }

@@ -120,12 +120,55 @@ use('[data-close]', el => {
     });
   } else if (kind === 'catch-up' && inner) {
     const from = parseFloat(el.dataset.closeFrom) || -50;
+    const prev = 'closeDim' in el.dataset ? el.previousElementSibling : null;
     mm.add('(min-width: 992px)', () => {
       gsap.fromTo(inner, { yPercent: from }, {
         yPercent: 0, ease: 'none', immediateRender: false,
         scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom bottom', scrub: true },
       });
+      // Lenval: the section above fades to .3 as the footer arrives (data-close-dim)
+      if (prev) gsap.to(prev, { opacity: parseFloat(el.dataset.closeDim) || 0.3, ease: 'none',
+        scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom bottom', scrub: true } });
     });
+  } else if (kind === 'floor') {
+    // Grape, Lenval, 4X: a wordmark set to the full width and sunk into the bottom edge.
+    // [data-close-word] is fitted to its box; data-close-sink=".35" is how much of it the edge cuts.
+    const word = el.querySelector('[data-close-word]');
+    if (!word) return;
+    const sink = parseFloat(el.dataset.closeSink ?? 0.35);
+    const fit = () => {
+      word.style.fontSize = '100px';
+      const w = word.scrollWidth, box = word.parentElement.clientWidth;
+      const size = 100 * box / w;
+      word.style.fontSize = size + 'px';
+      word.style.marginBottom = -(word.offsetHeight * sink) + 'px';
+    };
+    fit();
+    const ro = new ResizeObserver(fit); ro.observe(word.parentElement);
+    document.fonts?.ready.then(fit);
+    // Pictoric: the letters rise out of the floor as the footer scrolls in (desktop).
+    let split = null;
+    mm.add('(min-width: 992px)', () => {
+      split = SplitText.create(word, { type: 'chars', mask: 'chars' });
+      gsap.fromTo(split.chars, { yPercent: 100 }, {
+        yPercent: 0, ease: 'none', stagger: { each: 0.1, from: 'random' },
+        scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom bottom', scrub: true },
+      });
+      return () => { split?.revert(); split = null; };
+    });
+    return () => { ro.disconnect(); mm.revert(); };
+  } else if (kind === 'last-word') {
+    // Archvoyage: the closing sentence arrives word by word, then the action arrives as its
+    // last word: from below, turned 5deg, wiped in. [data-close-line] + [data-close-action].
+    const line = el.querySelector('[data-close-line]'), action = el.querySelector('[data-close-action]');
+    if (!line) return;
+    const split = SplitText.create(line, { type: 'words', mask: 'words' });
+    const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: 'top 75%', toggleActions: 'play none none reverse' } });
+    tl.from(split.words, { yPercent: 100, duration: 0.5, stagger: 0.06, ease: 'out' });
+    if (action) tl.fromTo(action,
+      { yPercent: 100, rotate: 5, clipPath: 'polygon(0% 0%,150% 0%,150% 0%,0% 0%)' },
+      { yPercent: 0, rotate: 0, clipPath: 'polygon(0% 0%,150% 0%,150% 120%,0% 120%)', duration: 0.5, ease: 'out' }, '>-0.1');
+    return () => { tl.scrollTrigger?.kill(); tl.kill(); split.revert(); mm.revert(); };
   }
   return () => mm.revert();
 });

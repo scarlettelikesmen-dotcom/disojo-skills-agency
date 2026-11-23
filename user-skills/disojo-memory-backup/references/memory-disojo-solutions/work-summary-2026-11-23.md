@@ -16,3 +16,4 @@ metadata:
 - Skills now point here: `websites/SKILL.md` (taste, study step, techniques table), `disojo-site-system/SKILL.md` files list, kernel README.
 - Tejjo: "whats the point if its not stored in memory and notes, and screenshots". So every code finding gets its own frames: `moments.cjs <slug> <url> loader|close` (closes: wheel to the bottom, step up, reverse order), `strip.py` makes `moments/<slug>-<kind>.jpg`.
 - Next, after Tejjo's go: build the kernel `data-close` module (frame, catch-up first), shown beside the originals.
+- Evening: moment strips captured for 13 closes + 4 loaders (sheets `moments/overview-closes.jpg`, `overview-loaders.jpg`, sent). Hilight and Face to Face closes not captured (scroll taken over). Built kernel `data-close` frame + catch-up with lab pages /close-frame/, /close-catch/; work at 1512. Then: 390 checked, side by side made, floor + last-word + dim built; all four sent to Tejjo for a verdict.

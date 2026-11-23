@@ -9,7 +9,7 @@ const out = path.join(__dirname, 'moments', `${slug}-${kind}`); fs.mkdirSync(out
 const wait = ms => new Promise(r => setTimeout(r, ms));
 (async () => {
   const b = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: 'new', args: ['--hide-scrollbars', '--autoplay-policy=no-user-gesture-required'] });
-  const p = await b.newPage(); await p.setViewport({ width: 1512, height: 864 });
+  const p = await b.newPage(); await p.setViewport(process.env.PHONE ? { width: 390, height: 844, isMobile: true, hasTouch: false, deviceScaleFactor: 1 } : { width: 1512, height: 864 });
   await p.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 }).catch(() => {});
   let n = 0; const shot = () => p.screenshot({ path: `${out}/${String(n++).padStart(2, '0')}.jpg`, type: 'jpeg', quality: 60 }).catch(() => {});
   if (kind === 'loader') {

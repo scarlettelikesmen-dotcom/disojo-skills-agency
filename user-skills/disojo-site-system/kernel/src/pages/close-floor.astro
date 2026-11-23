@@ -1,0 +1,24 @@
+---
+// Lab: data-close="last-word" (Archvoyage) then data-close="floor" (Grape, Lenval, Pictoric).
+import Base from '../layouts/Base.astro';
+---
+<Base title="Kernel lab · Close: last word + floor" ns="close-floor" bare>
+  <section class="hero" data-ground="light" style="min-height:70svh">
+    <h1 class="disp" data-reveal="chars" data-reveal-now>Last word + floor</h1>
+    <p class="lede" data-reveal="lines" data-reveal-delay="0.3">Scroll down. The closing sentence comes in word by word and the action arrives as its last word. Then the name sits in the floor of the footer, cut by the edge.</p>
+  </section>
+  <section data-close="last-word" data-ground="dark" class="close-lw">
+    <p class="close-lw-line"><span data-close-line>TODO(client) closing sentence in the client's own words, ending where the action begins</span> <a href="#" data-close-action class="close-lw-act" data-roll>TODO(client) action ↗</a></p>
+  </section>
+  <footer data-close="floor" data-close-sink="0.3" data-ground="dark" class="close-floor">
+    <div class="close-foot-top">
+      <p class="cap">TODO(client) office</p>
+      <p class="cap">TODO(client) email</p>
+    </div>
+    <div class="close-floor-w"><span data-close-word class="close-floor-word">Wordmark</span></div>
+    <div class="close-foot-row close-floor-row">
+      <p>Mumbai · <time data-clock="Asia/Kolkata">--:--</time></p>
+      <a href="https://disojostudio.com" data-roll data-no-swap>Design &amp; Systems · © Disojo Studio 2026</a>
+    </div>
+  </footer>
+</Base>
