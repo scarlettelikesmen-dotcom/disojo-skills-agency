@@ -181,5 +181,310 @@
     "marginR": 32
    }
   ]
+ },
+ "printelements": {
+  "url": "https://pe-review-chi.vercel.app/",
+  "rows": [
+   {
+    "big": 22,
+    "bigVw": 1.46,
+    "bigSpan": 0.08,
+    "bigText": "Print Elements",
+    "bigContrast": 17.3,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.5,
+    "sizes": 4,
+    "textArea": 0.011,
+    "marginL": 36,
+    "marginR": 36
+   },
+   {
+    "big": 166.32,
+    "bigVw": 11,
+    "bigSpan": 0.59,
+    "bigText": "Most asked for",
+    "bigContrast": 17.3,
+    "bigAlpha": 1,
+    "displayArea": 0.302,
+    "small": 11.5,
+    "sizes": 5,
+    "textArea": 0.305,
+    "marginL": 36,
+    "marginR": 36
+   },
+   {
+    "big": 166.32,
+    "bigVw": 11,
+    "bigSpan": 0.59,
+    "bigText": "Most asked for",
+    "bigContrast": 17.3,
+    "bigAlpha": 1,
+    "displayArea": 0.036,
+    "small": 11.5,
+    "sizes": 3,
+    "textArea": 0.041,
+    "marginL": 36,
+    "marginR": 36
+   },
+   {
+    "big": 11.5,
+    "bigVw": 0.76,
+    "bigSpan": 0.95,
+    "bigText": "(03)",
+    "bigContrast": 4.8,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.5,
+    "sizes": 1,
+    "textArea": 0.004,
+    "marginL": 36,
+    "marginR": 36
+   }
+  ]
+ },
+ "mentable": {
+  "url": "https://www.mentable.space/",
+  "rows": [
+   {
+    "big": 49.9624,
+    "bigVw": 3.3,
+    "bigSpan": 0.18,
+    "bigText": "The",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11,
+    "sizes": 5,
+    "textArea": 0.068,
+    "marginL": 62,
+    "marginR": 52
+   },
+   {
+    "big": 49.9624,
+    "bigVw": 3.3,
+    "bigSpan": 0.18,
+    "bigText": "The",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11,
+    "sizes": 4,
+    "textArea": 0.063,
+    "marginL": 62,
+    "marginR": 75
+   },
+   {
+    "big": 49.9624,
+    "bigVw": 3.3,
+    "bigSpan": 0.18,
+    "bigText": "The",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11,
+    "sizes": 4,
+    "textArea": 0.063,
+    "marginL": 62,
+    "marginR": 75
+   },
+   {
+    "big": 49.9624,
+    "bigVw": 3.3,
+    "bigSpan": 0.18,
+    "bigText": "The",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11,
+    "sizes": 4,
+    "textArea": 0.063,
+    "marginL": 62,
+    "marginR": 75
+   }
+  ]
+ },
+ "disojo": {
+  "url": "https://www.disojostudio.com/",
+  "rows": [
+   {
+    "big": 108,
+    "bigVw": 7.14,
+    "bigSpan": 0.51,
+    "bigText": "Visual",
+    "bigContrast": 14.3,
+    "bigAlpha": 1,
+    "displayArea": 0.249,
+    "small": 13,
+    "sizes": 6,
+    "textArea": 0.316,
+    "marginL": 39,
+    "marginR": 48
+   },
+   {
+    "big": 51.408,
+    "bigVw": 3.4,
+    "bigSpan": 0.32,
+    "bigText": "$850,000",
+    "bigContrast": 14.3,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13,
+    "sizes": 6,
+    "textArea": 0.117,
+    "marginL": 39,
+    "marginR": 39
+   },
+   {
+    "big": 52.92,
+    "bigVw": 3.5,
+    "bigSpan": 0.53,
+    "bigText": "The business grew. The way it looks and ",
+    "bigContrast": 14.3,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12,
+    "sizes": 8,
+    "textArea": 0.396,
+    "marginL": 39,
+    "marginR": 76
+   },
+   {
+    "big": 66.528,
+    "bigVw": 4.4,
+    "bigSpan": 0.52,
+    "bigText": "Different projects. The same way of work",
+    "bigContrast": 14.3,
+    "bigAlpha": 1,
+    "displayArea": 0.088,
+    "small": 13,
+    "sizes": 6,
+    "textArea": 0.175,
+    "marginL": 39,
+    "marginR": 49
+   }
+  ]
+ },
+ "ascender": {
+  "url": "https://ascendermedia.in/",
+  "rows": [
+   {
+    "big": 21,
+    "bigVw": 1.39,
+    "bigSpan": 0.24,
+    "bigText": "Ascender Media plans, edits and posts sh",
+    "bigContrast": 17.3,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 10,
+    "sizes": 4,
+    "textArea": 0.054,
+    "marginL": 28,
+    "marginR": 28
+   },
+   {
+    "big": 77.112,
+    "bigVw": 5.1,
+    "bigSpan": 0.78,
+    "bigText": "Send",
+    "bigContrast": 17.3,
+    "bigAlpha": 1,
+    "displayArea": 0.371,
+    "small": 11.5,
+    "sizes": 4,
+    "textArea": 0.384,
+    "marginL": 28,
+    "marginR": 28
+   },
+   {
+    "big": 157.248,
+    "bigVw": 10.4,
+    "bigSpan": 0.21,
+    "bigText": "Plan",
+    "bigContrast": 6.4,
+    "bigAlpha": 1,
+    "displayArea": 0.106,
+    "small": 11.5,
+    "sizes": 7,
+    "textArea": 0.169,
+    "marginL": 28,
+    "marginR": 66
+   },
+   {
+    "big": 157.248,
+    "bigVw": 10.4,
+    "bigSpan": 0.2,
+    "bigText": "Post",
+    "bigContrast": 6.4,
+    "bigAlpha": 1,
+    "displayArea": 0.195,
+    "small": 10,
+    "sizes": 8,
+    "textArea": 0.231,
+    "marginL": 28,
+    "marginR": 74
+   }
+  ]
+ },
+ "postcards": {
+  "url": "https://postcardsperfumes.in/",
+  "rows": [
+   {
+    "big": 38.4,
+    "bigVw": 2.54,
+    "bigSpan": 0.36,
+    "bigText": "Postcards",
+    "bigContrast": 12.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12.48,
+    "sizes": 2,
+    "textArea": 0.051,
+    "marginL": 51,
+    "marginR": 26
+   },
+   {
+    "big": 73.6,
+    "bigVw": 4.87,
+    "bigSpan": 0.19,
+    "bigText": "Four places.",
+    "bigContrast": 12.5,
+    "bigAlpha": 1,
+    "displayArea": 0.037,
+    "small": 11.52,
+    "sizes": 5,
+    "textArea": 0.079,
+    "marginL": 51,
+    "marginR": 51
+   },
+   {
+    "big": 73.6,
+    "bigVw": 4.87,
+    "bigSpan": 0.17,
+    "bigText": "Build your",
+    "bigContrast": 12.5,
+    "bigAlpha": 1,
+    "displayArea": 0.032,
+    "small": 11.52,
+    "sizes": 7,
+    "textArea": 0.07,
+    "marginL": 51,
+    "marginR": 51
+   },
+   {
+    "big": 27.2,
+    "bigVw": 1.8,
+    "bigSpan": 0.18,
+    "bigText": "₹899",
+    "bigContrast": 12.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.52,
+    "sizes": 4,
+    "textArea": 0.008,
+    "marginL": 51,
+    "marginR": 1188
+   }
+  ]
  }
 }

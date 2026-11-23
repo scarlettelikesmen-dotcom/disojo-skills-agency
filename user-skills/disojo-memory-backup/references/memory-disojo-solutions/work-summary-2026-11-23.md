@@ -31,3 +31,6 @@ metadata:
 - deploy_demo.sh false-200 fixed (demo_check.sh).
 - Tejjo: every client gets its own moments; kernel = mechanisms. Rule in websites/SKILL.md step 3 and [[feedback-moments-per-client]].
 - Tejjo has a signed client, asked for a week to optimise systems.
+
+## Beauty study (late night)
+Tejjo: our builds look "all zoomed in, no beauty". Measured still frames: `disojo-site-system/research/beauty/README.md` (scripts beauty_pixels.py, beauty_type.cjs). TFTL vs ours: loud area 0.10 vs 0.20, tonal range 168 vs 208, biggest text 25 vs 60px, display type on 25% vs 50% of screens, text covers 2.6% vs 7.5%. Diagnosis: max type everywhere, tight crops, full contrast, loud colour, everything loud at once. Sent ours.jpg + tftl-mid.jpg. Waiting on Tejjo before turning it into a check and taste section.

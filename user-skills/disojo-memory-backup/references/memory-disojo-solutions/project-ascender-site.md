@@ -35,3 +35,7 @@ Merged 2026-11-16 from 4 notes (logo and identity, multipage, site iteration pla
 - Tejjo wants finished, decided work, not step-by-step check-ins (2026-10-28), but see [[feedback-dont-overbuild]] (2026-11-11) for the later balance.
 - Shortscut teardown (`projects/ascender-portal/SHORTSCUT-TEARDOWN.md`): Webflow + GSAP + Lenis + Barba, Monolog-built; its strength is real work and proof as numbers. Ascender cannot borrow that without client reels, permissions and real numbers.
 - Plans: `projects/ascender-portal/ASCENDER-REBUILD-PLAN-2026-10-28.md`. The no-footage prototype "The edit, built in code" is at `ascender-media/rebuild-hero` (:4480).
+
+## Identity round 2026-11-23 (job folder `~/Desktop/DISOJO SOLUTIONS/clients/ascender-media/`)
+- Tejjo: forget the current branding (pill, cobalt box, Hanken). Wants a standalone mark NOT from the letters and NOT a wordmark, plus a new font.
+- Rejected: r1 rope clamp/splice/pill, r2 seal/band/flick, r3 hop/character/caption stack (all "suck"; skipped the process). Draft strategy and IDEA.md now in the job folder; prompts r4, r5 in `brand/`.
