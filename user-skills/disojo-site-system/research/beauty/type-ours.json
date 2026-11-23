@@ -1,0 +1,185 @@
+{
+ "csk": {
+  "url": "https://csk-law-demo.vercel.app/",
+  "rows": [
+   {
+    "big": 87.696,
+    "bigVw": 5.8,
+    "bigSpan": 0.49,
+    "bigText": "Guidance. Strategy.",
+    "bigContrast": 15.1,
+    "bigAlpha": 1,
+    "displayArea": 0.17,
+    "small": 10.5,
+    "sizes": 5,
+    "textArea": 0.203,
+    "marginL": 42,
+    "marginR": 42
+   },
+   {
+    "big": 105.84,
+    "bigVw": 7,
+    "bigSpan": 0.11,
+    "bigText": "50+",
+    "bigContrast": 16.7,
+    "bigAlpha": 1,
+    "displayArea": 0.016,
+    "small": 11.5,
+    "sizes": 4,
+    "textArea": 0.304,
+    "marginL": 42,
+    "marginR": 106
+   },
+   {
+    "big": 75.6,
+    "bigVw": 5,
+    "bigSpan": 0.53,
+    "bigText": "Focused on your family.",
+    "bigContrast": 18.1,
+    "bigAlpha": 1,
+    "displayArea": 0.088,
+    "small": 11.5,
+    "sizes": 4,
+    "textArea": 0.312,
+    "marginL": 42,
+    "marginR": 42
+   },
+   {
+    "big": 75.6,
+    "bigVw": 5,
+    "bigSpan": 0.53,
+    "bigText": "Experienced. Respected.",
+    "bigContrast": 18.1,
+    "bigAlpha": 1,
+    "displayArea": 0.083,
+    "small": 11.5,
+    "sizes": 5,
+    "textArea": 0.18,
+    "marginL": 42,
+    "marginR": 42
+   }
+  ]
+ },
+ "ctescoa": {
+  "url": "https://ctescoa-demo.vercel.app/",
+  "rows": [
+   {
+    "big": 267.642,
+    "bigVw": 17.7,
+    "bigSpan": 0.97,
+    "bigText": "CTESCOA",
+    "bigContrast": 16.2,
+    "bigAlpha": 1,
+    "displayArea": 0.41,
+    "small": 12,
+    "sizes": 4,
+    "textArea": 0.44,
+    "marginL": 24,
+    "marginR": 18
+   },
+   {
+    "big": 90.72,
+    "bigVw": 6,
+    "bigSpan": 0.85,
+    "bigText": "Understanding the past.",
+    "bigContrast": 16.2,
+    "bigAlpha": 1,
+    "displayArea": 0.276,
+    "small": 12,
+    "sizes": 4,
+    "textArea": 0.343,
+    "marginL": 24,
+    "marginR": 45
+   },
+   {
+    "big": 129.6,
+    "bigVw": 8.57,
+    "bigSpan": 0.33,
+    "bigText": "B.Arch.",
+    "bigContrast": 16.2,
+    "bigAlpha": 1,
+    "displayArea": 0.136,
+    "small": 12,
+    "sizes": 4,
+    "textArea": 0.22,
+    "marginL": 24,
+    "marginR": 45
+   },
+   {
+    "big": 16,
+    "bigVw": 1.06,
+    "bigSpan": 0.86,
+    "bigText": "The studio",
+    "bigContrast": 16.2,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12,
+    "sizes": 2,
+    "textArea": 0.014,
+    "marginL": 24,
+    "marginR": 45
+   }
+  ]
+ },
+ "lilt": {
+  "url": "https://lilt-demo.vercel.app/",
+  "rows": [
+   {
+    "big": 28.728,
+    "bigVw": 1.9,
+    "bigSpan": 0.2,
+    "bigText": "Clothing sold the way baked goods are.",
+    "bigContrast": 9,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 17,
+    "sizes": 3,
+    "textArea": 0.028,
+    "marginL": 32,
+    "marginR": 32
+   },
+   {
+    "big": 46,
+    "bigVw": 3.04,
+    "bigSpan": 0.96,
+    "bigText": "1",
+    "bigContrast": 9,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 16,
+    "sizes": 4,
+    "textArea": 0.019,
+    "marginL": 32,
+    "marginR": 32
+   },
+   {
+    "big": 46,
+    "bigVw": 3.04,
+    "bigSpan": 0.96,
+    "bigText": "1",
+    "bigContrast": 9,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 16,
+    "sizes": 4,
+    "textArea": 0.014,
+    "marginL": 32,
+    "marginR": 32
+   },
+   {
+    "big": 46,
+    "bigVw": 3.04,
+    "bigSpan": 0.96,
+    "bigText": "2",
+    "bigContrast": 9,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 16,
+    "sizes": 4,
+    "textArea": 0.016,
+    "marginL": 32,
+    "marginR": 32
+   }
+  ]
+ }
+}

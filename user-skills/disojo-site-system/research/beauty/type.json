@@ -1,0 +1,917 @@
+{
+ "lenval": {
+  "url": "https://www.lenvalproperties.com/",
+  "rows": [
+   {
+    "big": 60.48,
+    "bigVw": 4,
+    "bigSpan": 0.26,
+    "bigText": "Creators",
+    "bigContrast": 17.1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 10.395,
+    "sizes": 3,
+    "textArea": 0.047,
+    "marginL": 15,
+    "marginR": 131
+   },
+   {
+    "big": 60.48,
+    "bigVw": 4,
+    "bigSpan": 0.59,
+    "bigText": "Exceptional",
+    "bigContrast": 15.7,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 10.395,
+    "sizes": 5,
+    "textArea": 0.177,
+    "marginL": 8,
+    "marginR": 43
+   },
+   {
+    "big": 60.48,
+    "bigVw": 4,
+    "bigSpan": 0.7,
+    "bigText": "Exceptional",
+    "bigContrast": 15.7,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 14.175,
+    "sizes": 3,
+    "textArea": 0.051,
+    "marginL": 8,
+    "marginR": 410
+   },
+   {
+    "big": 15.12,
+    "bigVw": 1,
+    "bigSpan": 0.37,
+    "bigText": "Cookies",
+    "bigContrast": 15.7,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 15.12,
+    "sizes": 1,
+    "textArea": 0.007,
+    "marginL": 15,
+    "marginR": 940
+   }
+  ]
+ },
+ "hilight": {
+  "url": "https://hilight.design/",
+  "rows": [
+   {
+    "big": 15.75,
+    "bigVw": 1.04,
+    "bigSpan": 0.18,
+    "bigText": "B",
+    "bigContrast": 21,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 9.45,
+    "sizes": 2,
+    "textArea": 0.007,
+    "marginL": 66,
+    "marginR": 103
+   },
+   {
+    "big": 15.75,
+    "bigVw": 1.04,
+    "bigSpan": 0.19,
+    "bigText": "E",
+    "bigContrast": 21,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 9.45,
+    "sizes": 2,
+    "textArea": 0.007,
+    "marginL": 66,
+    "marginR": 103
+   },
+   {
+    "big": 15.75,
+    "bigVw": 1.04,
+    "bigSpan": 0.19,
+    "bigText": "E",
+    "bigContrast": 21,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 9.45,
+    "sizes": 2,
+    "textArea": 0.01,
+    "marginL": 41,
+    "marginR": 16
+   },
+   {
+    "big": 22.05,
+    "bigVw": 1.46,
+    "bigSpan": 0.34,
+    "bigText": "EVERYTHING BESPOKE — DRAWN ONCE,",
+    "bigContrast": 17.6,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 9.45,
+    "sizes": 2,
+    "textArea": 0.009,
+    "marginL": 364,
+    "marginR": 502
+   }
+  ]
+ },
+ "archvoyage": {
+  "url": "https://archvoyage.ae/",
+  "rows": [
+   {
+    "big": 77.7,
+    "bigVw": 5.14,
+    "bigSpan": 0.37,
+    "bigText": "Development",
+    "bigContrast": 16.9,
+    "bigAlpha": 1,
+    "displayArea": 0.073,
+    "small": 12.6,
+    "sizes": 4,
+    "textArea": 0.082,
+    "marginL": 34,
+    "marginR": 69
+   },
+   {
+    "big": 25.2,
+    "bigVw": 1.67,
+    "bigSpan": 0.92,
+    "bigText": "ABOUT US",
+    "bigContrast": 16.9,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 14.7,
+    "sizes": 3,
+    "textArea": 0.026,
+    "marginL": 34,
+    "marginR": 69
+   },
+   {
+    "big": 140.7,
+    "bigVw": 9.31,
+    "bigSpan": 0.95,
+    "bigText": "Together,",
+    "bigContrast": 16.9,
+    "bigAlpha": 1,
+    "displayArea": 0.373,
+    "small": 14.7,
+    "sizes": 3,
+    "textArea": 0.404,
+    "marginL": 34,
+    "marginR": 47
+   },
+   {
+    "big": 77.7,
+    "bigVw": 5.14,
+    "bigSpan": 0.35,
+    "bigText": "Our",
+    "bigContrast": 14.8,
+    "bigAlpha": 1,
+    "displayArea": 0.035,
+    "small": 14.7,
+    "sizes": 3,
+    "textArea": 0.06,
+    "marginL": 34,
+    "marginR": 43
+   }
+  ]
+ },
+ "fame": {
+  "url": "https://fame-estate.com/",
+  "rows": [
+   {
+    "big": 15.75,
+    "bigVw": 1.04,
+    "bigSpan": 0.08,
+    "bigText": "Full-cycle real estate services",
+    "bigContrast": 21,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 8.8725,
+    "sizes": 3,
+    "textArea": 0.014,
+    "marginL": 23,
+    "marginR": 23
+   },
+   {
+    "big": 13.65,
+    "bigVw": 0.9,
+    "bigSpan": 0.97,
+    "bigText": "let's discuss",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13.65,
+    "sizes": 1,
+    "textArea": 0.008,
+    "marginL": 23,
+    "marginR": 23
+   },
+   {
+    "big": 50.4,
+    "bigVw": 3.33,
+    "bigSpan": 0.6,
+    "bigText": "We sell real estate that evokes emotions",
+    "bigContrast": 1.9,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13.65,
+    "sizes": 2,
+    "textArea": 0.216,
+    "marginL": -30,
+    "marginR": 23
+   },
+   {
+    "big": 50.4,
+    "bigVw": 3.33,
+    "bigSpan": 0.98,
+    "bigText": "Exclusive real estate agency specializin",
+    "bigContrast": 21,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13.65,
+    "sizes": 3,
+    "textArea": 0.186,
+    "marginL": 8,
+    "marginR": 23
+   }
+  ]
+ },
+ "alchemy": {
+  "url": "https://alchemy.family/",
+  "rows": [
+   {
+    "big": 42,
+    "bigVw": 2.78,
+    "bigSpan": 0.5,
+    "bigText": "Alchemy Family is a private",
+    "bigContrast": 12.4,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.55,
+    "sizes": 2,
+    "textArea": 0.142,
+    "marginL": 26,
+    "marginR": 34
+   },
+   {
+    "big": 42,
+    "bigVw": 2.78,
+    "bigSpan": 0.15,
+    "bigText": "Our Essence",
+    "bigContrast": 12.4,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.55,
+    "sizes": 3,
+    "textArea": 0.087,
+    "marginL": 26,
+    "marginR": 34
+   },
+   {
+    "big": 11.55,
+    "bigVw": 0.76,
+    "bigSpan": 0.96,
+    "bigText": "MEMBERS",
+    "bigContrast": 12.4,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.55,
+    "sizes": 1,
+    "textArea": 0.005,
+    "marginL": 26,
+    "marginR": 34
+   },
+   {
+    "big": 42,
+    "bigVw": 2.78,
+    "bigSpan": 0.5,
+    "bigText": "A highly curated private members’",
+    "bigContrast": 6.9,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.55,
+    "sizes": 4,
+    "textArea": 0.114,
+    "marginL": 26,
+    "marginR": 34
+   }
+  ]
+ },
+ "sl": {
+  "url": "https://ab-sl.ru/",
+  "rows": [
+   {
+    "big": 21,
+    "bigVw": 1.39,
+    "bigSpan": 0.42,
+    "bigText": "Москва",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.55,
+    "sizes": 2,
+    "textArea": 0.011,
+    "marginL": 92,
+    "marginR": 42
+   },
+   {
+    "big": 151.2,
+    "bigVw": 10,
+    "bigSpan": 0.94,
+    "bigText": "Cоздание",
+    "bigContrast": 2.4,
+    "bigAlpha": 1,
+    "displayArea": 0.293,
+    "small": 11.55,
+    "sizes": 2,
+    "textArea": 0.296,
+    "marginL": 42,
+    "marginR": 43
+   },
+   {
+    "big": 151.2,
+    "bigVw": 10,
+    "bigSpan": 0.45,
+    "bigText": "Cоздание",
+    "bigContrast": 2.4,
+    "bigAlpha": 1,
+    "displayArea": 0.128,
+    "small": 11.55,
+    "sizes": 4,
+    "textArea": 0.138,
+    "marginL": 42,
+    "marginR": 50
+   },
+   {
+    "big": 21,
+    "bigVw": 1.39,
+    "bigSpan": 0.97,
+    "bigText": "Дубай",
+    "bigContrast": 2.9,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.55,
+    "sizes": 2,
+    "textArea": 0.057,
+    "marginL": 42,
+    "marginR": 0
+   }
+  ]
+ },
+ "pictoric": {
+  "url": "https://pictoric.com.ua/",
+  "rows": [
+   {
+    "big": 12.6,
+    "bigVw": 0.83,
+    "bigSpan": 0.85,
+    "bigText": "We use cookies to improve your experienc",
+    "bigContrast": 11.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12.6,
+    "sizes": 1,
+    "textArea": 0.012,
+    "marginL": 204,
+    "marginR": 21
+   },
+   {
+    "big": 12.6,
+    "bigVw": 0.83,
+    "bigSpan": 0.31,
+    "bigText": "We use cookies to improve your experienc",
+    "bigContrast": 11.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12.6,
+    "sizes": 1,
+    "textArea": 0.006,
+    "marginL": 1022,
+    "marginR": 21
+   },
+   {
+    "big": 25.2,
+    "bigVw": 1.67,
+    "bigSpan": 0.04,
+    "bigText": "open",
+    "bigContrast": 11.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12.6,
+    "sizes": 2,
+    "textArea": 0.009,
+    "marginL": 697,
+    "marginR": 21
+   },
+   {
+    "big": 306.6,
+    "bigVw": 20.28,
+    "bigSpan": 0.36,
+    "bigText": "our",
+    "bigContrast": 1.1,
+    "bigAlpha": 1,
+    "displayArea": 0.16,
+    "small": 12.6,
+    "sizes": 3,
+    "textArea": 0.218,
+    "marginL": 483,
+    "marginR": 21
+   }
+  ]
+ },
+ "grape": {
+  "url": "https://grape.ua/",
+  "rows": [
+   {
+    "big": 84,
+    "bigVw": 5.56,
+    "bigSpan": 0.83,
+    "bigText": "Grape®",
+    "bigContrast": 12.9,
+    "bigAlpha": 1,
+    "displayArea": 0.151,
+    "small": 14.7,
+    "sizes": 4,
+    "textArea": 0.19,
+    "marginL": 25,
+    "marginR": 42
+   },
+   {
+    "big": 84,
+    "bigVw": 5.56,
+    "bigSpan": 0.17,
+    "bigText": "D",
+    "bigContrast": 2.3,
+    "bigAlpha": 1,
+    "displayArea": 0.038,
+    "small": 16.8,
+    "sizes": 2,
+    "textArea": 0.046,
+    "marginL": 25,
+    "marginR": 42
+   },
+   {
+    "big": 84,
+    "bigVw": 5.56,
+    "bigSpan": 0.33,
+    "bigText": "Brave1",
+    "bigContrast": 2.3,
+    "bigAlpha": 1,
+    "displayArea": 0.082,
+    "small": 16.8,
+    "sizes": 3,
+    "textArea": 0.116,
+    "marginL": 25,
+    "marginR": 42
+   },
+   {
+    "big": 84,
+    "bigVw": 5.56,
+    "bigSpan": 0.28,
+    "bigText": "PaYard",
+    "bigContrast": 2.3,
+    "bigAlpha": 1,
+    "displayArea": 0.171,
+    "small": 16.8,
+    "sizes": 3,
+    "textArea": 0.18,
+    "marginL": 445,
+    "marginR": 42
+   }
+  ]
+ },
+ "yodezeen": {
+  "url": "https://yodezeen.com/",
+  "rows": [
+   {
+    "big": 14.7,
+    "bigVw": 0.97,
+    "bigSpan": 0.15,
+    "bigText": "Cookies",
+    "bigContrast": 12.8,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 11.76,
+    "sizes": 3,
+    "textArea": 0.015,
+    "marginL": 26,
+    "marginR": 66
+   },
+   {
+    "big": 14.7,
+    "bigVw": 0.97,
+    "bigSpan": 0.15,
+    "bigText": "Cookies",
+    "bigContrast": 12.8,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12.6,
+    "sizes": 2,
+    "textArea": 0.008,
+    "marginL": 1220,
+    "marginR": 66
+   },
+   {
+    "big": 67.2,
+    "bigVw": 4.44,
+    "bigSpan": 0.6,
+    "bigText": "W",
+    "bigContrast": 12.5,
+    "bigAlpha": 1,
+    "displayArea": 0.07,
+    "small": 12.6,
+    "sizes": 3,
+    "textArea": 0.078,
+    "marginL": 302,
+    "marginR": 66
+   },
+   {
+    "big": 25.2,
+    "bigVw": 1.67,
+    "bigSpan": 0.4,
+    "bigText": "YODEZEEN",
+    "bigContrast": 12.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12.6,
+    "sizes": 3,
+    "textArea": 0.023,
+    "marginL": 250,
+    "marginR": 66
+   }
+  ]
+ },
+ "iqosa": {
+  "url": "https://iqosa.com/",
+  "rows": [
+   {
+    "big": 18,
+    "bigVw": 1.19,
+    "bigSpan": 0.15,
+    "bigText": "About cookies on this site",
+    "bigContrast": 12.6,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13,
+    "sizes": 3,
+    "textArea": 0.025,
+    "marginL": 843,
+    "marginR": 70
+   },
+   {
+    "big": 18,
+    "bigVw": 1.19,
+    "bigSpan": 0.15,
+    "bigText": "About cookies on this site",
+    "bigContrast": 12.6,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13,
+    "sizes": 3,
+    "textArea": 0.025,
+    "marginL": 843,
+    "marginR": 70
+   },
+   {
+    "big": 18,
+    "bigVw": 1.19,
+    "bigSpan": 0.15,
+    "bigText": "About cookies on this site",
+    "bigContrast": 12.6,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13,
+    "sizes": 3,
+    "textArea": 0.025,
+    "marginL": 843,
+    "marginR": 70
+   },
+   {
+    "big": 18,
+    "bigVw": 1.19,
+    "bigSpan": 0.15,
+    "bigText": "About cookies on this site",
+    "bigContrast": 12.6,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13,
+    "sizes": 3,
+    "textArea": 0.025,
+    "marginL": 843,
+    "marginR": 70
+   }
+  ]
+ },
+ "vurrle": {
+  "url": "https://vurrle.tftl.agency/",
+  "rows": [
+   {
+    "big": 16,
+    "bigVw": 1.06,
+    "bigSpan": 0.69,
+    "bigText": "About us",
+    "bigContrast": 1.2,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12,
+    "sizes": 2,
+    "textArea": 0.022,
+    "marginL": 56,
+    "marginR": 55
+   },
+   {
+    "big": 240,
+    "bigVw": 15.87,
+    "bigSpan": 0.85,
+    "bigText": "interior",
+    "bigContrast": 1.2,
+    "bigAlpha": 1,
+    "displayArea": 0.275,
+    "small": 12,
+    "sizes": 5,
+    "textArea": 0.315,
+    "marginL": 56,
+    "marginR": 55
+   },
+   {
+    "big": 158,
+    "bigVw": 10.45,
+    "bigSpan": 0.46,
+    "bigText": "About",
+    "bigContrast": 15.3,
+    "bigAlpha": 1,
+    "displayArea": 0.097,
+    "small": 12,
+    "sizes": 4,
+    "textArea": 0.213,
+    "marginL": 56,
+    "marginR": 58
+   },
+   {
+    "big": 158,
+    "bigVw": 10.45,
+    "bigSpan": 0.49,
+    "bigText": "VURRLE",
+    "bigContrast": null,
+    "bigAlpha": 1,
+    "displayArea": 0.104,
+    "small": 12,
+    "sizes": 5,
+    "textArea": 0.177,
+    "marginL": 56,
+    "marginR": 58
+   }
+  ]
+ },
+ "snob": {
+  "url": "https://snobarchitects.com/",
+  "rows": [
+   {
+    "big": 20,
+    "bigVw": 1.32,
+    "bigSpan": 0.93,
+    "bigText": "This website uses ‘cookies’ to give you ",
+    "bigContrast": 16.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 14,
+    "sizes": 3,
+    "textArea": 0.026,
+    "marginL": 55,
+    "marginR": 50
+   },
+   {
+    "big": 20,
+    "bigVw": 1.32,
+    "bigSpan": 0.93,
+    "bigText": "This website uses ‘cookies’ to give you ",
+    "bigContrast": 16.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 14,
+    "sizes": 3,
+    "textArea": 0.026,
+    "marginL": 55,
+    "marginR": 50
+   },
+   {
+    "big": 20,
+    "bigVw": 1.32,
+    "bigSpan": 0.93,
+    "bigText": "This website uses ‘cookies’ to give you ",
+    "bigContrast": 16.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 14,
+    "sizes": 3,
+    "textArea": 0.026,
+    "marginL": 55,
+    "marginR": 50
+   },
+   {
+    "big": 20,
+    "bigVw": 1.32,
+    "bigSpan": 0.93,
+    "bigText": "This website uses ‘cookies’ to give you ",
+    "bigContrast": 16.5,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 14,
+    "sizes": 3,
+    "textArea": 0.026,
+    "marginL": 55,
+    "marginR": 50
+   }
+  ]
+ },
+ "taf": {
+  "url": "https://tafarchitecture.com/",
+  "rows": [
+   {
+    "big": 12,
+    "bigVw": 0.79,
+    "bigSpan": 0.99,
+    "bigText": "Contacts",
+    "bigContrast": 18.3,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12,
+    "sizes": 1,
+    "textArea": 0.022,
+    "marginL": 19,
+    "marginR": 0
+   },
+   {
+    "big": 12,
+    "bigVw": 0.79,
+    "bigSpan": 0.94,
+    "bigText": "Contacts",
+    "bigContrast": 18.3,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12,
+    "sizes": 1,
+    "textArea": 0.024,
+    "marginL": 19,
+    "marginR": 65
+   },
+   {
+    "big": 12,
+    "bigVw": 0.79,
+    "bigSpan": 0.99,
+    "bigText": "Contacts",
+    "bigContrast": 18.3,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12,
+    "sizes": 1,
+    "textArea": 0.027,
+    "marginL": 19,
+    "marginR": 0
+   },
+   {
+    "big": 12,
+    "bigVw": 0.79,
+    "bigSpan": 0.99,
+    "bigText": "Contacts",
+    "bigContrast": 18.3,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 12,
+    "sizes": 1,
+    "textArea": 0.025,
+    "marginL": 19,
+    "marginR": 0
+   }
+  ]
+ },
+ "horizonte": {
+  "url": "https://horizonte-village.com/",
+  "rows": [
+   {
+    "big": 60,
+    "bigVw": 3.97,
+    "bigSpan": 0.48,
+    "bigText": "Sorry, you have been blocked",
+    "bigContrast": 10.4,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 15,
+    "sizes": 3,
+    "textArea": 0.127,
+    "marginL": 276,
+    "marginR": 289
+   },
+   {
+    "big": 30,
+    "bigVw": 1.98,
+    "bigSpan": 0.58,
+    "bigText": "Why have I been blocked?",
+    "bigContrast": 10.4,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13,
+    "sizes": 3,
+    "textArea": 0.086,
+    "marginL": 276,
+    "marginR": 289
+   },
+   {
+    "big": 30,
+    "bigVw": 1.98,
+    "bigSpan": 0.58,
+    "bigText": "Why have I been blocked?",
+    "bigContrast": 10.4,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13,
+    "sizes": 3,
+    "textArea": 0.086,
+    "marginL": 276,
+    "marginR": 289
+   },
+   {
+    "big": 30,
+    "bigVw": 1.98,
+    "bigSpan": 0.58,
+    "bigText": "Why have I been blocked?",
+    "bigContrast": 10.4,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 13,
+    "sizes": 3,
+    "textArea": 0.086,
+    "marginL": 276,
+    "marginR": 289
+   }
+  ]
+ },
+ "bottega": {
+  "url": "https://www.bottega53.com/",
+  "rows": [
+   {
+    "big": 30,
+    "bigVw": 1.98,
+    "bigSpan": 0.02,
+    "bigText": "menu",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 10.5,
+    "sizes": 4,
+    "textArea": 0.016,
+    "marginL": 20,
+    "marginR": 27
+   },
+   {
+    "big": 30,
+    "bigVw": 1.98,
+    "bigSpan": 0.02,
+    "bigText": "menu",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 10.5,
+    "sizes": 4,
+    "textArea": 0.019,
+    "marginL": 20,
+    "marginR": 20
+   },
+   {
+    "big": 30,
+    "bigVw": 1.98,
+    "bigSpan": 0.02,
+    "bigText": "menu",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 10.5,
+    "sizes": 4,
+    "textArea": 0.022,
+    "marginL": 20,
+    "marginR": 20
+   },
+   {
+    "big": 30,
+    "bigVw": 1.98,
+    "bigSpan": 0.02,
+    "bigText": "menu",
+    "bigContrast": 1,
+    "bigAlpha": 1,
+    "displayArea": 0,
+    "small": 10.5,
+    "sizes": 4,
+    "textArea": 0.014,
+    "marginL": 20,
+    "marginR": 27
+   }
+  ]
+ }
+}
