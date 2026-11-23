@@ -1,0 +1,125 @@
+{
+ "slug": "tanya-timal-photography",
+ "url": "https://tanyatimal.studio/",
+ "errors": [],
+ "facts": {
+  "title": "Tanya Timal",
+  "h": 1887,
+  "attrs": {
+   "data-lenis-prevent": 2,
+   "data-cf-beacon": 1
+  },
+  "fonts": [
+   "pp-ultralight-italic",
+   "l",
+   "xl",
+   "inter-300",
+   "inter-500"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 36,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 4,
+ "wheelEndY": 1023,
+ "code": {
+  "scripts": [
+   "https://tanyatimal.studio/_nuxt/asyncData.361851ee.js 2KB",
+   "https://tanyatimal.studio/_nuxt/index.7110b8a4.js 0KB",
+   "https://tanyatimal.studio/_nuxt/TheFooter.7e512113.js 1KB",
+   "https://tanyatimal.studio/_nuxt/useImageLoader.b4773cae.js 34KB",
+   "https://tanyatimal.studio/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js 1KB",
+   "https://tanyatimal.studio/_nuxt/client-only.585372dc.js 0KB",
+   "https://tanyatimal.studio/_nuxt/default.e4c32233.js 16KB",
+   "https://tanyatimal.studio/_nuxt/TheWrapper.1a2e15c9.js 2KB",
+   "https://tanyatimal.studio/_nuxt/page.global%20copy.24d95b60.js 0KB",
+   "https://tanyatimal.studio/_nuxt/index.31c85433.js 33KB",
+   "https://tanyatimal.studio/_nuxt/categories.d5364a1d.js 0KB",
+   "https://tanyatimal.studio/_nuxt/useSvg.e6f7c7f6.js 0KB",
+   "https://tanyatimal.studio/_nuxt/TheDescription.af96be1b.js 0KB",
+   "https://tanyatimal.studio/_nuxt/shooting.e60b9ad4.js 0KB",
+   "https://tanyatimal.studio/_nuxt/error-component.26c58c1a.js 0KB",
+   "https://tanyatimal.studio/_nuxt/entry.f01b987e.js 511KB",
+   "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092 31KB",
+   "https://tanyatimal.studio/_nuxt/index.7d8f92f4.js 0KB",
+   "https://tanyatimal.studio/_nuxt/index.b15335a9.js 0KB",
+   "https://tanyatimal.studio/_nuxt/index.736dcea6.js 0KB",
+   "https://tanyatimal.studio/_nuxt/booking.7b980058.js 35KB",
+   "https://tanyatimal.studio/_nuxt/PopupFormButton.351b8ba7.js 1KB",
+   "https://tanyatimal.studio/_nuxt/about.2752608b.js 79KB",
+   "inline 764KB",
+   "https://tanyatimal.studio/_nuxt/_slug_.80bbd0a6.js 0KB"
+  ],
+  "inits": [
+   "createTextNode",
+   "createElement",
+   "animateTransform",
+   "setupState",
+   "setupContext",
+   "createText",
+   "createComment",
+   "createApp",
+   "createElementNS",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "createEvent",
+   "initMouseEvent",
+   "createOption",
+   "initBlocks",
+   "createTextRange",
+   "initValue",
+   "initSwapHiddenInput",
+   "initPhoneFormatter",
+   "initDateFormatter",
+   "initTimeFormatter",
+   "initNumeralFormatter",
+   "initHeroSection",
+   "initCopyrightsSection",
+   "initEvent",
+   "initSlides",
+   "createElements"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "Observer",
+   "ScrollSmoother",
+   "SplitText",
+   "Draggable",
+   "CustomEase",
+   "InertiaPlugin"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "IntersectionObserver",
+   "matchMedia",
+   "clipPath",
+   "mix-blend-mode",
+   "clip-path",
+   "scrub",
+   "sessionStorage",
+   "pin",
+   "pinSpacing",
+   "containerAnimation",
+   "Intl.DateTimeFormat"
+  ]
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [
+   "SchnyderXCondLLight.03c50b8e.otf",
+   "SchnyderXCondXLLight.11f39499.otf",
+   "PPEditorialNew-UltralightItalic.3db27ab4.otf",
+   "Inter-Medium.40076f68.otf",
+   "Inter-Light.02809400.otf"
+  ],
+  "totalMB": 18.2
+ }
+}

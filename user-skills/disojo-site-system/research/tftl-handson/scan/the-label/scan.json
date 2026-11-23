@@ -1,0 +1,61 @@
+{
+ "slug": "the-label",
+ "url": "https://the-label.store/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "the-label.store",
+  "h": 864,
+  "attrs": {
+   "data-url": 1
+  },
+  "fonts": [],
+  "libs": [],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 2,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "inline 103KB"
+  ],
+  "inits": [
+   "createElement",
+   "createProperty",
+   "createRenderRoot",
+   "createPolicy",
+   "createHTML",
+   "createComment",
+   "createTreeWalker",
+   "createTextNode",
+   "createStereoPanner",
+   "createOscillator",
+   "createGain",
+   "setupDisabledRunner",
+   "initAltGameType",
+   "createImageElement",
+   "createCanvas",
+   "createTouchController",
+   "createBufferSource",
+   "createAdjustedCollisionBox"
+  ],
+  "gsapPlugins": [],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "AudioContext",
+   "matchMedia"
+  ]
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [],
+  "totalMB": 0
+ }
+}

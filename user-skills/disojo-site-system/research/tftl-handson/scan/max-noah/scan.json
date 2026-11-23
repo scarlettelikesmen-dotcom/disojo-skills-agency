@@ -1,0 +1,37 @@
+{
+ "slug": "max-noah",
+ "url": "https://maxnoah.com/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "502 Bad Gateway",
+  "h": 864,
+  "attrs": {},
+  "fonts": [],
+  "libs": [],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 0,
+  "gen": "",
+  "lang": ""
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "inline 0KB"
+  ],
+  "inits": [],
+  "gsapPlugins": [],
+  "eases": [],
+  "webgl": [],
+  "css": []
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [],
+  "totalMB": 0
+ }
+}

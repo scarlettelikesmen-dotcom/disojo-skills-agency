@@ -1,0 +1,39 @@
+{
+ "slug": "horizonte",
+ "url": "https://horizonte-village.com/",
+ "errors": [],
+ "facts": {
+  "title": "Attention Required! | Cloudflare",
+  "h": 1021,
+  "attrs": {
+   "data-translate": 7,
+   "data-cf-beacon": 1
+  },
+  "fonts": [],
+  "libs": [],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 0,
+  "gen": "",
+  "lang": "en-US"
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 157,
+ "code": {
+  "scripts": [
+   "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092 31KB",
+   "inline 1KB"
+  ],
+  "inits": [],
+  "gsapPlugins": [],
+  "eases": [],
+  "webgl": [],
+  "css": []
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [],
+  "totalMB": 0
+ }
+}

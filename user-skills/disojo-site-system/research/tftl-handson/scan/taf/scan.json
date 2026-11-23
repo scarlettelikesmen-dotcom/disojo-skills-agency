@@ -1,0 +1,97 @@
+{
+ "slug": "taf",
+ "url": "https://tafarchitecture.com/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "TAF",
+  "h": 864,
+  "attrs": {
+   "data-vue-ssr-id": 1,
+   "data-id": 9,
+   "data-col": 9,
+   "data-row": 9
+  },
+  "fonts": [
+   "PP Formula Condensed",
+   "Euclid Circular B"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 1,
+  "imgs": 158,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "https://tafarchitecture.com/_nuxt/bc490dd.js 3KB",
+   "https://tafarchitecture.com/_nuxt/a8f6bb6.js 9KB",
+   "https://tafarchitecture.com/_nuxt/9447537.js 267KB",
+   "https://tafarchitecture.com/_nuxt/366b359.js 17KB",
+   "https://tafarchitecture.com/_nuxt/05968d2.js 187KB",
+   "https://tafarchitecture.com/_nuxt/a710665.js 184KB",
+   "https://tafarchitecture.com/_nuxt/bd6f260.js 5KB",
+   "https://tafarchitecture.com/_nuxt/36825d4.js 38KB",
+   "https://tafarchitecture.com/_nuxt/9ac242d.js 24KB",
+   "https://tafarchitecture.com/_nuxt/ac48df6.js 48KB",
+   "inline 199KB"
+  ],
+  "inits": [
+   "createElement",
+   "createAnimation",
+   "createTextNode",
+   "createEvent",
+   "createElementNS",
+   "createComment",
+   "initEvent",
+   "createNamespacedHelpers",
+   "createLogger",
+   "createURL",
+   "setupListeners",
+   "initMouseEvent",
+   "setupAnimation"
+  ],
+  "gsapPlugins": [
+   "InertiaPlugin",
+   "ScrollTrigger",
+   "Draggable",
+   "Observer",
+   "ScrollSmoother"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "clippath",
+   "Intl.DateTimeFormat",
+   "matchMedia",
+   "scrub",
+   "pin",
+   "pinSpacing",
+   "containerAnimation",
+   "IntersectionObserver",
+   "clipPath",
+   "mix-blend-mode",
+   "sessionStorage",
+   "clip-path",
+   "backdrop-filter"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://tafarchitecture.com/blobs/blob_big.mp4"
+  ],
+  "models": [],
+  "fontsFiles": [
+   "Euclid%20Circular%20B%20Regular.a621db9.woff2",
+   "Euclid%20Circular%20B%20Medium.a90f173.woff2",
+   "PP%20Formula%20Condensed.1662fa6.woff2"
+  ],
+  "totalMB": 11.7
+ }
+}

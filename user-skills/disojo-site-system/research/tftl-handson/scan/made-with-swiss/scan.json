@@ -1,0 +1,62 @@
+{
+ "slug": "made-with-swiss",
+ "url": "https://madewithswitzerland.ch/",
+ "errors": [
+  "goto Navigation timeout of 45000 ms exceeded",
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "madewithswitzerland.ch",
+  "h": 864,
+  "attrs": {
+   "data-url": 1
+  },
+  "fonts": [],
+  "libs": [],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 2,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "inline 104KB"
+  ],
+  "inits": [
+   "createElement",
+   "createProperty",
+   "createRenderRoot",
+   "createPolicy",
+   "createHTML",
+   "createComment",
+   "createTreeWalker",
+   "createTextNode",
+   "createStereoPanner",
+   "createOscillator",
+   "createGain",
+   "setupDisabledRunner",
+   "initAltGameType",
+   "createImageElement",
+   "createCanvas",
+   "createTouchController",
+   "createBufferSource",
+   "createAdjustedCollisionBox"
+  ],
+  "gsapPlugins": [],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "AudioContext",
+   "matchMedia"
+  ]
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [],
+  "totalMB": 0
+ }
+}

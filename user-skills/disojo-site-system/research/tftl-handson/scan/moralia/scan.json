@@ -1,0 +1,102 @@
+{
+ "slug": "moralia",
+ "url": "https://moralia.ca/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "Moralia | Luxury Contemporary Designer Custom Kitchens and Interior Furniture",
+  "h": 864,
+  "attrs": {
+   "data-vue-ssr-id": 1,
+   "data-fetch-key": 1,
+   "data-index": 33,
+   "data-src": 6,
+   "data-cursor-hover": 9,
+   "data-color": 9,
+   "data-link": 9,
+   "data-title": 18
+  },
+  "fonts": [
+   "FuturaPT",
+   "Montage"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 2,
+  "imgs": 15,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "https://moralia.ca/_nuxt/0b20343.js 10KB",
+   "https://moralia.ca/_nuxt/6fda488.js 33KB",
+   "https://moralia.ca/_nuxt/b2341be.js 35KB",
+   "https://moralia.ca/_nuxt/54fdb13.js 3KB",
+   "https://moralia.ca/_nuxt/d5ea4cc.js 259KB",
+   "https://moralia.ca/_nuxt/0a85734.js 225KB",
+   "https://moralia.ca/_nuxt/d27e140.js 40KB",
+   "https://moralia.ca/_nuxt/3a92a0b.js 236KB",
+   "https://moralia.ca/_nuxt/d38fde1.js 5KB",
+   "https://moralia.ca/_nuxt/7c23dde.js 8KB",
+   "https://moralia.ca/_nuxt/526c441.js 25KB",
+   "inline 77KB"
+  ],
+  "inits": [
+   "createElement",
+   "createElementNS",
+   "createEvent",
+   "initMouseEvent",
+   "animateReverse",
+   "createTextNode",
+   "createComment",
+   "initEvent",
+   "createNamespacedHelpers",
+   "createLogger",
+   "setupListeners",
+   "animateFirstPage",
+   "initEvents",
+   "initCustomEvent",
+   "initState"
+  ],
+  "gsapPlugins": [
+   "InertiaPlugin",
+   "Draggable",
+   "ScrollTrigger"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "matchMedia",
+   "sessionStorage",
+   "IntersectionObserver",
+   "scrub",
+   "clip-path",
+   "clipPath",
+   "mix-blend-mode",
+   "clippath",
+   "pin",
+   "pinSpacing",
+   "containerAnimation"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://api.moralia.ca/storage/final-20211206-1648479460L6wFq.mp4",
+   "https://api.moralia.ca/storage/final-20211206-1648479460L6wFq.mp4",
+   "https://api.moralia.ca/storage/final-20211206-1648479460L6wFq.mp4"
+  ],
+  "models": [],
+  "fontsFiles": [
+   "MontageSerifFont-Regular.9025ecc.ttf",
+   "FuturaPT-Book.4b34096.woff",
+   "FuturaPT-Light.bcdac18.woff"
+  ],
+  "totalMB": 125.2
+ }
+}

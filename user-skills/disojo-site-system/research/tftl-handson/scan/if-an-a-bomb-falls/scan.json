@@ -1,0 +1,125 @@
+{
+ "slug": "if-an-a-bomb-falls",
+ "url": "https://if-an-a-bomb-falls.com/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "If An A-Bomb Falls",
+  "h": 22408,
+  "attrs": {
+   "data-name": 18,
+   "data-lenis-prevent": 1,
+   "data-ssr": 1,
+   "data-src": 1
+  },
+  "fonts": [
+   "SerialAOutput-Regular",
+   "NeueMontreal-Regular",
+   "NeueMontreal-Medium"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 1,
+  "videos": 1,
+  "imgs": 131,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 19,
+ "wheelEndY": 0,
+ "fallbackScroll": true,
+ "code": {
+  "scripts": [
+   "https://if-an-a-bomb-falls.com/_nuxt/DaaJq0qv.js 0KB",
+   "https://if-an-a-bomb-falls.com/_nuxt/DnhpqMSJ.js 47KB",
+   "https://if-an-a-bomb-falls.com/_nuxt/DLp64PoA.js 17KB",
+   "https://if-an-a-bomb-falls.com/_nuxt/BS8cTq_j.js 200KB",
+   "https://if-an-a-bomb-falls.com/_nuxt/DyILUBPv.js 432KB",
+   "https://if-an-a-bomb-falls.com/_nuxt/DgWtrMzw.js 36KB",
+   "https://if-an-a-bomb-falls.com/_nuxt/C5xtdwUI.js 217KB",
+   "inline 2KB"
+  ],
+  "inits": [
+   "createElement",
+   "initSectionsSurviveHazardsRain",
+   "initSectionStep1",
+   "initSectionStep2",
+   "initSectionStep3",
+   "initSectionsSurviveDuring",
+   "initSectionsSurviveDuringMob",
+   "initSectionStayTuned",
+   "initSectionStep5",
+   "initSectionStep6",
+   "initSectionBackpack",
+   "initFooter",
+   "animateImage",
+   "setupState",
+   "createText",
+   "createComment",
+   "createApp",
+   "setupContext",
+   "createPolicy",
+   "createHTML",
+   "createElementNS",
+   "createTextNode",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "createEvent",
+   "initMouseEvent",
+   "initInfoSection",
+   "initHistorySection",
+   "initEscalationSection",
+   "initWeaponSection",
+   "initTerorizmSection",
+   "initWarheadSection",
+   "initRocketSection",
+   "initFlagsSection",
+   "initGivingSection"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "Draggable",
+   "MotionPathPlugin",
+   "Observer",
+   "ScrollSmoother",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "IntersectionObserver",
+   "scrub",
+   "clip-path",
+   "clipPath",
+   "containerAnimation",
+   "matchMedia",
+   "pin",
+   "pinSpacing",
+   "sessionStorage",
+   "Intl.DateTimeFormat"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://if-an-a-bomb-falls.com/index/video.mp4",
+   "https://if-an-a-bomb-falls.com/index/video.mp4",
+   "https://if-an-a-bomb-falls.com/index/video.mp4"
+  ],
+  "models": [
+   "https://if-an-a-bomb-falls.com/_payload.json?edc659bb-aec3-473b-8ad9-e27ca2c72976",
+   "https://if-an-a-bomb-falls.com/_nuxt/builds/meta/edc659bb-aec3-473b-8ad9-e27ca2c72976.json",
+   "https://if-an-a-bomb-falls.com/_payload.json?edc659bb-aec3-473b-8ad9-e27ca2c72976",
+   "https://if-an-a-bomb-falls.com/ua/_payload.json?edc659bb-aec3-473b-8ad9-e27ca2c72976",
+   "https://if-an-a-bomb-falls.com/nuclear-history/_payload.json?edc659bb-aec3-473b-8ad9-e27ca2c72976"
+  ],
+  "fontsFiles": [
+   "SerialAOutput-Regular.Cpr2f5Lp.woff2",
+   "NeueMontreal-Medium.GGovUxjE.woff2",
+   "NeueMontreal-Regular.CW_uIrMX.woff2"
+  ],
+  "totalMB": 188.6
+ }
+}

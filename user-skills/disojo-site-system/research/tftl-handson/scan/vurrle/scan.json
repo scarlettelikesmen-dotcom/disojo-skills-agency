@@ -1,0 +1,101 @@
+{
+ "slug": "vurrle",
+ "url": "https://vurrle.tftl.agency/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "interior firm",
+  "h": 982,
+  "attrs": {
+   "data-vue-ssr-id": 1,
+   "data-fetch-key": 1,
+   "data-word": 16
+  },
+  "fonts": [
+   "MonumentGrotesk"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 2,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "https://vurrle.tftl.agency/_nuxt/00a6825.js 3KB",
+   "https://vurrle.tftl.agency/_nuxt/265edd5.js 17KB",
+   "https://vurrle.tftl.agency/_nuxt/8569375.js 20KB",
+   "https://vurrle.tftl.agency/_nuxt/2aff4fe.js 31KB",
+   "https://vurrle.tftl.agency/_nuxt/f6b61ba.js 73KB",
+   "https://vurrle.tftl.agency/_nuxt/1ac0bab.js 126KB",
+   "https://vurrle.tftl.agency/_nuxt/fa8035b.js 250KB",
+   "https://vurrle.tftl.agency/_nuxt/bf7e81d.js 236KB",
+   "https://vurrle.tftl.agency/_nuxt/a10ac1a.js 268KB",
+   "https://vurrle.tftl.agency/_nuxt/8af37ab.js 5KB",
+   "https://vurrle.tftl.agency/_nuxt/865cf42.js 20KB",
+   "https://vurrle.tftl.agency/_nuxt/28bdf33.js 28KB",
+   "https://vurrle.tftl.agency/_nuxt/cf21ab7.js 19KB",
+   "https://vurrle.tftl.agency/_nuxt/2ce51af.js 49KB",
+   "https://vurrle.tftl.agency/_nuxt/2d4a78a.js 21KB",
+   "https://vurrle.tftl.agency/_nuxt/0b4e811.js 48KB",
+   "https://vurrle.tftl.agency/_nuxt/8636678.js 79KB",
+   "https://vurrle.tftl.agency/_nuxt/0f7e59f.js 73KB",
+   "inline 98KB"
+  ],
+  "inits": [
+   "createElement",
+   "createElements",
+   "animateSlider",
+   "createEvent",
+   "initEvent",
+   "createElementNS",
+   "createObserver",
+   "animateProcess",
+   "createTextNode",
+   "createComment",
+   "createURL",
+   "createNamespacedHelpers",
+   "createLogger",
+   "setupListeners",
+   "setupContext",
+   "initAll",
+   "createDocumentFragment"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "MotionPathPlugin"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "scrub",
+   "matchMedia",
+   "pin",
+   "clippath",
+   "getPointAtLength",
+   "Intl.DateTimeFormat",
+   "pinSpacing",
+   "containerAnimation",
+   "filter:blur",
+   "IntersectionObserver",
+   "sessionStorage"
+  ]
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [
+   "ABCMonumentGrotesk-Regular.e022bcf.woff2",
+   "Antiga.a144b68.otf",
+   "cardinalfruitweb-regular.9aeed84.woff2",
+   "cardinalfruitweb-italic.8b4d844.woff2"
+  ],
+  "totalMB": 3.7
+ }
+}

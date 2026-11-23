@@ -6,7 +6,7 @@
  ],
  "facts": {
   "title": "Home | ADA",
-  "h": 18376,
+  "h": 18665,
   "attrs": {
    "data-capo": 1,
    "data-anim-text-by-lines": 8,
@@ -17,9 +17,7 @@
    "data-lenis-prevent": 1,
    "data-ssr": 1
   },
-  "fonts": [
-   "InstrumentSerif"
-  ],
+  "fonts": [],
   "libs": [
    "__NUXT__"
   ],
@@ -29,29 +27,36 @@
   "gen": "",
   "lang": "en"
  },
- "wheelFrames": 3,
+ "wheelFrames": 26,
  "wheelEndY": 0,
+ "fallbackScroll": true,
  "code": {
   "scripts": [
-   "https://aventuradentalarts.com/_nuxt/QNNnm3oT.js 37KB",
-   "https://aventuradentalarts.com/_nuxt/COkvdYZ_.js 7KB",
-   "https://aventuradentalarts.com/_nuxt/AkxaoDpK.js 1KB",
    "https://aventuradentalarts.com/_nuxt/CpcOjxkA.js 0KB",
-   "https://aventuradentalarts.com/_nuxt/D9Cxwp1L.js 4KB",
-   "https://aventuradentalarts.com/_nuxt/IKh7Ux27.js 2KB",
-   "https://aventuradentalarts.com/_nuxt/Dl9tJ_2x.js 1KB",
-   "https://aventuradentalarts.com/_nuxt/jnTzBd4Y.js 63KB",
-   "https://aventuradentalarts.com/_nuxt/DFEjc4Xv.js 6KB",
+   "https://aventuradentalarts.com/_nuxt/AkxaoDpK.js 1KB",
+   "https://aventuradentalarts.com/_nuxt/COkvdYZ_.js 7KB",
+   "https://aventuradentalarts.com/_nuxt/QNNnm3oT.js 37KB",
    "https://aventuradentalarts.com/_nuxt/C3LIzMiL.js 811KB",
-   "inline 86KB"
+   "https://aventuradentalarts.com/_nuxt/jnTzBd4Y.js 63KB",
+   "https://aventuradentalarts.com/_nuxt/D9Cxwp1L.js 4KB",
+   "https://aventuradentalarts.com/_nuxt/Dl9tJ_2x.js 1KB",
+   "https://aventuradentalarts.com/_nuxt/IKh7Ux27.js 2KB",
+   "https://aventuradentalarts.com/_nuxt/DFEjc4Xv.js 6KB",
+   "inline 86KB",
+   "https://aventuradentalarts.com/_nuxt/CTy60ih0.js 26KB",
+   "https://aventuradentalarts.com/_nuxt/BpkPho2w.js 5KB",
+   "https://aventuradentalarts.com/_nuxt/B0m_t8GN.js 1KB",
+   "https://aventuradentalarts.com/_nuxt/mCIKZtRe.js 9KB",
+   "https://aventuradentalarts.com/_nuxt/DoQaItma.js 2KB",
+   "https://aventuradentalarts.com/_nuxt/Cur9xlOm.js 3KB",
+   "https://aventuradentalarts.com/_nuxt/Dkv5gp8w.js 5KB",
+   "https://aventuradentalarts.com/_nuxt/Det75Epw.js 4KB",
+   "https://aventuradentalarts.com/_nuxt/iO9iu0wM.js 3KB",
+   "https://aventuradentalarts.com/_nuxt/C2RUcFtv.js 1KB",
+   "https://aventuradentalarts.com/_nuxt/DDZkICGX.js 1KB",
+   "https://aventuradentalarts.com/_nuxt/C-DGtjQd.js 1KB"
   ],
   "inits": [
-   "createEvent",
-   "initEvent",
-   "createElement",
-   "createElementNS",
-   "initSlides",
-   "createElements",
    "createIterableMethod",
    "createReadonlyMethod",
    "createInstrumentations",
@@ -65,6 +70,7 @@
    "createVNode",
    "createTextVNode",
    "createInnerComp",
+   "createElement",
    "createHook",
    "createBlock",
    "setupContext",
@@ -90,6 +96,7 @@
    "setupStatefulComponent",
    "createPolicy",
    "createHTML",
+   "createElementNS",
    "createTextNode",
    "createInvoker",
    "createSSRApp",
@@ -116,6 +123,7 @@
    "createRouteRecordMatcher",
    "createRouterMatcher",
    "createRouter",
+   "createEvent",
    "initMouseEvent",
    "createTag",
    "createProxyFunction",
@@ -165,7 +173,10 @@
    "createTransformElement",
    "createShapeElement",
    "createPathShape",
-   "createCanvas"
+   "createCanvas",
+   "createElements",
+   "createLinearGradient",
+   "createRadialGradient"
   ],
   "gsapPlugins": [
    "ScrollTrigger",
@@ -183,8 +194,8 @@
   ],
   "webgl": [],
   "css": [
-   "matchMedia",
    "scrub",
+   "matchMedia",
    "clipPath",
    "clip-path",
    "pin",
@@ -202,16 +213,18 @@
   ],
   "models": [
    "https://aventuradentalarts.com/_nuxt/builds/meta/35a2f2e9-27d4-4a03-a127-a692dd3ea963.json",
-   "https://aventuradentalarts.com/lottie/preloader.json"
+   "https://aventuradentalarts.com/lottie/preloader.json",
+   "https://aventuradentalarts.com/lottie/balls.json",
+   "https://aventuradentalarts.com/tftl-logo.json"
   ],
   "fontsFiles": [
+   "InterTight-Bold.Bp88sS9q.ttf",
    "InstrumentSerif-Regular.C8Ywmrcl.ttf",
    "InstrumentSerif-Italic.BeW3a6To.ttf",
-   "InterTight-Bold.Bp88sS9q.ttf",
-   "InterTight-Medium.kWOU42rH.ttf",
    "InterTight-Regular.r9V2QY8h.ttf",
-   "InterTight-SemiBold.BZUkVlm6.ttf"
+   "InterTight-SemiBold.BZUkVlm6.ttf",
+   "InterTight-Medium.kWOU42rH.ttf"
   ],
-  "totalMB": 12.1
+  "totalMB": 18.2
  }
 }

@@ -1,0 +1,46 @@
+{
+ "slug": "rose-family",
+ "url": "https://rosefamily.com.ua/en/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "403 Forbidden - nginx",
+  "h": 864,
+  "attrs": {
+   "data-cf-beacon": 1
+  },
+  "fonts": [
+   "Open Sans"
+  ],
+  "libs": [],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 0,
+  "gen": "",
+  "lang": ""
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092 31KB",
+   "inline 0KB"
+  ],
+  "inits": [],
+  "gsapPlugins": [],
+  "eases": [],
+  "webgl": [],
+  "css": []
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [
+   "css?family=Open+Sans:400,700&subset=latin,cyrillic",
+   "memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2",
+   "memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2"
+  ],
+  "totalMB": 0.1
+ }
+}

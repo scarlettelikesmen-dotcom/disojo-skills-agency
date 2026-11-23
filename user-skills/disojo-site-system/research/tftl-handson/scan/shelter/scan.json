@@ -1,0 +1,50 @@
+{
+ "slug": "shelter",
+ "url": "https://www.the-shelter.com.au/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "Just a moment...",
+  "h": 864,
+  "attrs": {},
+  "fonts": [],
+  "libs": [],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 1,
+  "gen": "",
+  "lang": "en-us"
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "https://www.the-shelter.com.au/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a5eda4875a7830c4 610KB",
+   "https://challenges.cloudflare.com/turnstile/v0/b/f8df4d4a0cd6/api.js?onload=_5e91289b047e3d3591118b45&render=explicit 85KB",
+   "blob:https://www.the-shelter.com.au/305bd5c5-e313-4ed7-9452-6c0a2c51f1b2 0KB",
+   "blob:https://challenges.cloudflare.com/70063d36-e71f-4109-b168-09d8e2514f04 0KB",
+   "blob:https://challenges.cloudflare.com/70063d36-e71f-4109-b168-09d8e2514f04 0KB",
+   "blob:https://challenges.cloudflare.com/70063d36-e71f-4109-b168-09d8e2514f04 0KB",
+   "blob:https://challenges.cloudflare.com/b0093639-af60-4ec7-858a-56e489490811 0KB",
+   "inline 4KB"
+  ],
+  "inits": [
+   "createNodeIterator",
+   "createElement",
+   "createElementNS",
+   "createPolicy",
+   "createScript"
+  ],
+  "gsapPlugins": [],
+  "eases": [],
+  "webgl": [],
+  "css": []
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [],
+  "totalMB": 0
+ }
+}

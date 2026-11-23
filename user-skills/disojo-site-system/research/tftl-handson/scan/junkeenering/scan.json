@@ -1,0 +1,79 @@
+{
+ "slug": "junkeenering",
+ "url": "https://junkineering.io/",
+ "errors": [],
+ "facts": {
+  "title": "Junkineering",
+  "h": 27900,
+  "attrs": {
+   "data-speed": 33,
+   "data-volume-level": 1
+  },
+  "fonts": [
+   "metrikM",
+   "metrikB",
+   "metrikBlack",
+   "cameraB"
+  ],
+  "libs": [],
+  "canvases": 0,
+  "videos": 1,
+  "imgs": 149,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 26,
+ "wheelEndY": 18720,
+ "code": {
+  "scripts": [
+   "https://consent.cookiebot.com/uc.js?cbid=6c6c6ad4-0015-438a-aebb-cc72b13ac0d5 119KB",
+   "https://consent.cookiebot.com/6c6c6ad4-0015-438a-aebb-cc72b13ac0d5/cc.js?renew=false&referer=www.junkineering.io&dnt=fal 0KB",
+   "inline 0KB"
+  ],
+  "inits": [
+   "createElementOrig",
+   "createTimeoutPromise",
+   "createElement",
+   "createTextNode",
+   "initMutationObserver",
+   "createBannerQueryParameters",
+   "createBanner",
+   "createWidgetIconUrl",
+   "initConsent",
+   "initFramework",
+   "createAndShowGpcToast",
+   "createEvent",
+   "initEvent",
+   "initWidget",
+   "initWidgetInternal"
+  ],
+  "gsapPlugins": [],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "sessionStorage"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://www.junkineering.io/images/hero__video.png",
+   "https://www.junkineering.io/images/video__screw-2.png",
+   "https://www.junkineering.io/images/video__bolt-2.png",
+   "https://www.junkineering.io/images/video__img.jpg",
+   "https://www.junkineering.io/images/video__bolt-3.png",
+   "https://www.junkineering.io/images/video__screw-1.png",
+   "https://www.junkineering.io/images/video__bolt-1.png",
+   "https://www.junkineering.io/video.mp4"
+  ],
+  "models": [
+   "https://consentcdn.cookiebot.com/consentconfig/6c6c6ad4-0015-438a-aebb-cc72b13ac0d5/settings.json"
+  ],
+  "fontsFiles": [
+   "MetrikTrial-Black.936dace5.otf",
+   "ABCCameraPlain-Bold-Trial.056ce458.otf",
+   "MetrikTrial-Bold.dbf2e2b7.otf",
+   "MetrikTrial-Medium.f0bf7377.otf"
+  ],
+  "totalMB": 34.4
+ }
+}

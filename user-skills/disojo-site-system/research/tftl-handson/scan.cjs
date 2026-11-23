@@ -28,7 +28,7 @@ const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 }).catch(e => res.errors.push('goto ' + e.message));
     // intro: frames at 0.5, 1.5, 3, 5, 8 s after DOM ready
     for (const [i, at] of [[0, 500], [1, 1500], [2, 3000], [3, 5000], [4, 8000]].entries()) {
-      const left = at[1] - (Date.now() - t0); if (left > 0) await wait(left);
+      const left = at[1] + (+process.env.EXTRA_WAIT || 0) * (i === 4 ? 1 : 0) - (Date.now() - t0); if (left > 0) await wait(left);
       await page.screenshot({ path: `${out}/i${i}.jpg`, type: 'jpeg', quality: 60 }).catch(() => {});
     }
     // inline scripts too

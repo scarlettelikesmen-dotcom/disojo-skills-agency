@@ -26,3 +26,19 @@ metadata:
   - Do not copy the Softriver look.
   - Few ChatGPT prompts.
   - If nothing beats the current O, keep it.
+
+## 2026-11-23, Disojo mark, continued
+- **Round 2 (ChatGPT, heavy O / D / J): rejected.** Tejjo: "bad results, go study the references again".
+  - I re-studied the references. Their marks are constructed geometry, so they get made in code now; the method is written into `identity-design/references/marks.md`.
+- **Round 3 (code, 49 constructions, cut to 9):** in `branding/disojo-mark-2026-11-22/round3/`. My pick was the curved-cut D. Tejjo did not pick from it.
+- **FALLBACK LOCKED:** the current hoflik liquid O turned 135°. Use it if nothing better comes.
+  - File: `branding/disojo-mark-2026-11-22/o-135-fallback.png`.
+  - Turn sheets: `o-turn/`.
+  - My advice: if it goes final, turn the O in the wordmark to 135° too, so they stay one letter.
+- **Next:** Tejjo runs the ChatGPT prompts themselves. The prompts are in `round4-prompts.md`.
+- **Round 4:** Tejjo ran the prompts. They liked 2 sheets, saved as `round4/liked-sheet-A.png` and `liked-sheet-B.png`. Tejjo is giving instructions next.
+- **Rule (Tejjo, 2026-11-23):** every Disojo mark board uses only the site's blurry blue background.
+  - Rebuilt from the live site: `#D8E2EC`, the site grain, two noise layers, no vignette (the live site has none).
+  - Script: `branding/disojo-mark-2026-11-22/site_bg.py W H out.png`.
+  - Ready-made files: `site-bg-1080.png` and `site-bg-2160.png`.
+  - The live centre colour (188,195,203) was matched.
