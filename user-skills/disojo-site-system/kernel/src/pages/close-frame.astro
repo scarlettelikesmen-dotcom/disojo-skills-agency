@@ -1,0 +1,24 @@
+---
+// Lab: data-close="frame" (ERA). The last picture shrinks into a window, the contact grows in.
+import Base from '../layouts/Base.astro';
+---
+<Base title="Kernel lab · Close: frame" ns="close-frame">
+  <section class="hero" data-ground="light" style="min-height:70svh">
+    <h1 class="disp" data-reveal="chars" data-reveal-now>Close: frame</h1>
+    <p class="lede" data-reveal="lines" data-reveal-delay="0.3">Scroll to the end. The last picture of the page does not scroll away: it shrinks into a window and the contact grows in around it.</p>
+  </section>
+  <section class="sec" data-ground="light">
+    <p class="cap">Numbers from ERA's code</p>
+    <p class="body">Picture clip from inset 0 to a frame, contact from scale .75 and opacity 0 to 1, both scrubbed at .5 over the close's own scroll length.</p>
+  </section>
+  <section data-close="frame" data-close-inset="9% 30% 42% 30%" data-close-inset-phone="12% 6% 46% 6%" data-ground="dark">
+    <div class="k-close-stick">
+      <div data-close-clip class="close-pic"><img src="/ph3.svg" alt="Placeholder picture" /></div>
+      <div data-close-inner class="close-in">
+        <p class="cap">Visit, write or call</p>
+        <p class="close-big">TODO(client) phone</p>
+        <p class="close-sm">TODO(client) address</p>
+      </div>
+    </div>
+  </section>
+</Base>

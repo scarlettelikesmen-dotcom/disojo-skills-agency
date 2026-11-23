@@ -38,3 +38,4 @@ No benchmark set for identity has been approved yet. Ask Tejjo for 10 to 20 iden
   - Liquid-bowl D
 - **Liked:** the Softriver S. A bold one-letter monogram with heavy opposing swash strokes, sitting in a circle avatar. Why exactly is not asked yet.
 | 2026-11-23 | Disojo mark round 2 (heavy O cut, slit D, J) via ChatGPT | "bad results, go study the references again" | Constructed geometric marks are made in code, not ChatGPT; start from the reference's construction, not my old story. |
+| 2026-11-23 | Ascender standalone mark r1 prompts: rope ascender clamp, splice (cut 9:16 frame), caption pill without words (`branding/ascender-media/mark-2026-11-23/`) | "i dont like this direction" (before running them) | Objects standing for the name or the trade read literal again. Next: abstract form with a gesture and tension. |

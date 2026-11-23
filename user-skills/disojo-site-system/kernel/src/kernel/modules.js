@@ -93,3 +93,39 @@ use('link[rel="icon"][data-away]', link => {
   document.addEventListener('visibilitychange', onVis);
 }, { scope: 'once' });
 
+// data-close: the page close, read from TFTL's shipped code (research/tftl-handson/closes-code.md).
+// Every TFTL close is one scrubbed trigger on the footer; only what moves changes.
+//
+// data-close="frame" (ERA, ADA, 4X): a tall section with a sticky screen. The picture that ends
+// the page ([data-close-clip]) shrinks into a frame while the footer content ([data-close-inner])
+// grows in from .75. data-close-inset="8% 22%" sets the frame (phone default 4% 8%).
+//
+// data-close="catch-up" (Lenval, SL, Pictoric): the footer content ([data-close-inner]) starts
+// half its height higher and catches up as the footer scrolls in, so it feels like it was waiting
+// under the page. data-close-from="-50" sets the start offset in percent. Desktop only, as theirs.
+use('[data-close]', el => {
+  if (reduced.matches) return;
+  const kind = el.dataset.close;
+  const inner = el.querySelector('[data-close-inner]');
+  const mm = gsap.matchMedia();
+  if (kind === 'frame') {
+    const clip = el.querySelector('[data-close-clip]');
+    mm.add({ desk: '(min-width: 992px)', phone: '(max-width: 991px)' }, ctx => {
+      const inset = ctx.conditions.desk ? (el.dataset.closeInset || '8% 22%') : (el.dataset.closeInsetPhone || '4% 8%');
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: el, start: 'top top', end: 'bottom bottom', scrub: 0.5 },
+      });
+      if (clip) tl.fromTo(clip, { clipPath: 'inset(0% 0% 0% 0%)' }, { clipPath: `inset(${inset})`, ease: 'none' }, 0);
+      if (inner) tl.fromTo(inner, { opacity: 0, scale: 0.75 }, { opacity: 1, scale: 1, ease: 'none' }, 0);
+    });
+  } else if (kind === 'catch-up' && inner) {
+    const from = parseFloat(el.dataset.closeFrom) || -50;
+    mm.add('(min-width: 992px)', () => {
+      gsap.fromTo(inner, { yPercent: from }, {
+        yPercent: 0, ease: 'none', immediateRender: false,
+        scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom bottom', scrub: true },
+      });
+    });
+  }
+  return () => mm.revert();
+});

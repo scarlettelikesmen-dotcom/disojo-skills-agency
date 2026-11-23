@@ -17,6 +17,7 @@ Toolbox (do not rebuild what is here): `SK=~/.claude/skills/disojo-site-system`.
 - **Ray Corral**: one heavy grotesk, a real portrait, a huge name, a flat ground. "This just screams that it's not AI."
 - **Ours that landed**: the Monolog button curve ("there it is, finally"), the window scroll on CTESCOA ("exactly what I wanted"), the Kiran headstock nav, VÆL's live 3D bottle after real study ("soooooo much better").
 - **TFTL, all 96 projects**: no template, zero shared code, every look from the client's own subject. Tejjo: "don't make it a stuck system".
+- **TFTL hands-on, 51 live sites (2026-11-23)**: `$SK/research/tftl-handson/`. README holds 36 distinct moments and five page-close families; their shipped code is read with exact numbers in `closes-code.md`, `loaders-code.md`, `frame-player-code.md`. Never base a moment on one site: Tejjo, "look at everything across tftl not just endings".
 
 ## What failed, and why
 - Building fast from the starter and calling gate passes quality (Mentable v1 "disgusting", VÆL "very okay, not good").
@@ -37,6 +38,7 @@ Toolbox (do not rebuild what is here): `SK=~/.claude/skills/disojo-site-system`.
 ### 2. Study, hands-on
 - The 84 walked sites are never re-researched: open their sheets in `$SK/research/walk-2026-11-10/` and `$SK/references/design-moves.md`.
 - Open the references in the in-app browser and use them: loader, slow scroll, hovers, menu, an inner page, the phone. Read their fonts and motion with JS.
+- Moments (loader, scroll, page close, film): read `$SK/research/tftl-handson/` first. Its code is already saved in `code/<slug>/` and read; never re-scan or re-grab those sites. A new site: `node $SK/research/tftl-handson/grab.cjs <slug> <url>`, then `ctx.py` to search it.
 - For a new reference or a 3D hero: `node $SK/scripts/teardown.cjs <project>/research/teardown <url>...`.
 - Write what I found and how long I really looked.
 
@@ -69,11 +71,11 @@ Demo on Tejjo's go: `bash $SK/scripts/deploy_demo.sh <project> <slug>` (own noin
 ## Techniques, chosen after the idea, never as the idea
 | Technique | When | Where the working method is |
 |---|---|---|
-| Scroll-driven | The story unfolds as you move: pinned scenes, the window scroll, frame sequences | `$SK/kernel/`, `$SK/references/interaction-architecture.md`, window code in memory `feedback-window-scroll-effect` |
+| Scroll-driven | The story unfolds as you move: pinned scenes, the window scroll, frame sequences | `$SK/kernel/`, `$SK/references/interaction-architecture.md`, window code in memory `feedback-window-scroll-effect`, scroll film (WebCodecs, frame exact) in `$SK/research/tftl-handson/frame-player-code.md` |
 | Photo-led | The client has strong real photographs, or can shoot them | `disojo-image-pipeline`, `$SK/references/composition-bands.md` |
 | Minimal, type-led | The words or the name carry it; few images | `$SK/references/free-type.md`, `$SK/taste/` |
 | WebGL / Three.js | Product type only (an object or a building) unless Tejjo says otherwise | `disojo-realtime-3d-product` (the proven method), 3D research in memory `reference-site-research` |
-| Motion | Always: buttons, links, reveals, transitions | `$SK/references/text-button-motion.md`, curve `cubic-bezier(.16,1,.35,1)` about 0.6s |
+| Motion | Always: buttons, links, reveals, transitions | `$SK/references/text-button-motion.md`, curve `cubic-bezier(.16,1,.35,1)` about 0.6s; loaders and page closes in `$SK/research/tftl-handson/loaders-code.md` and `closes-code.md` |
 
 ## Standing rules (Tejjo's)
 - Astro, from the first screen to launch. No hand-written HTML sites (the hook still blocks .html in a project).

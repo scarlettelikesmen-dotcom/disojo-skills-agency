@@ -97,3 +97,8 @@ Batch 2 onward: the other ~40 live TFTL sites, 5 at a time (list from `../tftl-p
 4. **An object from the business ends it**: Fame (hanging 3D sign), ADA (smile mark under a face), Pictoric (mascot asleep), Kitchen Hero (character peeking), Envy (the app on a phone).
 5. **The real places** (sitemap, branches, hours): Grand Hotel, ADA, Verholy, Avalon (phone number huge).
 Families 1 to 3 are mechanisms the kernel can own. Family 4 always comes from the client's idea.
+
+## Page closes read in code (2026-11-23)
+All close mechanisms with exact numbers, by family: `closes-code.md`. Code saved per site in `code/<slug>/` by `grab.cjs`; search helper `ctx.py`.
+- Scroll-film player in code: `frame-player-code.md`. Loaders in code: `loaders-code.md`.
+- Moment captures: `moments.cjs` (loader|close), `strip.py`, `overview.py`; sheets in `moments/`.

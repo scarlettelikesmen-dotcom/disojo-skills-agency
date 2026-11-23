@@ -24,3 +24,6 @@ Status:
 - The kernel ships the mechanics, never a style.
 
 Not yet wired into `starter/`. That waits for Tejjo's verdict on the stack.
+
+## 2026-11-23: code read for the next modules
+Page close (`data-close`: frame, catch-up, floor, last-word), loader (fake progress on a stalling ease, short on return, loader becomes hero) and scroll film (`data-film`, WebCodecs): numbers in `../research/tftl-handson/closes-code.md`, `loaders-code.md`, `frame-player-code.md`. Not built yet.

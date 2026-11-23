@@ -69,6 +69,15 @@ code{{font-size:.9em;background:#e7e4dd;padding:1px 5px;border-radius:4px}}
 @media (max-width:820px){{.grid{{grid-template-columns:1fr}}h1{{font-size:34px}}}}
 </style><main><h1>{html.escape(title)}</h1><div class="lead">{lead(head)}</div>
 {f'<div class="imgs">{imgs}</div>' if imgs else ''}<div class="grid">{''.join(cards)}</div></main>
-<script>function cp(b){{navigator.clipboard.writeText(b.closest('.p').querySelector('pre').innerText);b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1200)}}</script></html>'''
+<script>
+// The preview pane and file:// often block navigator.clipboard, so fall back to execCommand, then to selecting the text.
+function sel(p){{const r=document.createRange();r.selectNodeContents(p);const s=getSelection();s.removeAllRanges();s.addRange(r)}}
+function legacy(t){{const a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(a);a.focus();a.select();let ok=false;try{{ok=document.execCommand('copy')}}catch(e){{}}a.remove();return ok}}
+function done(b,msg){{b.textContent=msg;setTimeout(()=>b.textContent='Copy',1600)}}
+function cp(b){{const p=b.closest('.p').querySelector('pre'),t=p.innerText;
+ const fail=()=>{{if(legacy(t))done(b,'Copied');else{{sel(p);done(b,'Selected, press Cmd+C')}}}};
+ if(navigator.clipboard&&window.isSecureContext){{navigator.clipboard.writeText(t).then(()=>done(b,'Copied'),fail)}}else fail()}}
+document.querySelectorAll('pre').forEach(p=>p.addEventListener('click',()=>sel(p)));
+</script></html>'''
 open(a.out, 'w').write(page)
 print(a.out, len(cards), 'cards')

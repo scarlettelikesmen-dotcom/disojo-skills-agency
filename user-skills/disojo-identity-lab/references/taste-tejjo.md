@@ -53,3 +53,11 @@ Read this before writing a single prompt. Every line is a verdict they actually 
   2. Wrong story. I kept forcing "liquid to square" into it, when the reference has no wobble at all.
   3. I never put the prompt's likely output next to the reference before sending.
 - **Fix:** `identity-design/references/marks.md`, "Constructed symbols".
+
+## 2026-11-23, Disojo mark round 5 (rejected before running)
+- Sheet 1 S/Z/X lifts: "too generic, many matches on google".
+- Shadow idea (square O casting a liquid O shadow) + 4 long prompts: "what the fuck is all this bullshit"; "the shadow, and zero creativity, and i didnt ask for this at all".
+- Lessons: Tejjo said "give prompts" and I wrote prompts for MY pick, not one they chose. Ideas first, short, they pick, then prompts. "Impossible shadow" is a known trope, not creative. Keep replies short when Tejjo is iterating.
+
+## 2026-11-23 Ascender standalone mark, round 1 prompts
+Rejected before running: rope ascender (name as climbing gear), splice (cut 9:16 frame), wordless caption pill. "i dont like this direction". Literal object-for-the-name again; round 2 goes abstract (cut paper, bent steel, frozen gesture).

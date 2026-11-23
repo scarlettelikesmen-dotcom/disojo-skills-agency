@@ -1,0 +1,27 @@
+---
+// Lab: data-close="catch-up" (Lenval, SL, Pictoric). The footer content starts half a footer
+// higher and catches up as the footer scrolls in.
+import Base from '../layouts/Base.astro';
+---
+<Base title="Kernel lab · Close: catch-up" ns="close-catch" bare>
+  <section class="hero" data-ground="light" style="min-height:70svh">
+    <h1 class="disp" data-reveal="chars" data-reveal-now>Close: catch-up</h1>
+    <p class="lede" data-reveal="lines" data-reveal-delay="0.3">Scroll to the end. The footer's content was waiting under the page and arrives a little behind the footer itself.</p>
+  </section>
+  <section class="sec" data-ground="light">
+    <div class="media"><img src="/ph1.svg" alt="Placeholder picture" /></div>
+  </section>
+  <footer data-close="catch-up" data-ground="dark" class="close-foot">
+    <div data-close-inner class="close-foot-in">
+      <div class="close-foot-top">
+        <p class="cap">TODO(client) office</p>
+        <p class="cap">TODO(client) email</p>
+      </div>
+      <p class="close-word" aria-hidden="true">Wordmark</p>
+      <div class="close-foot-row">
+        <p>Mumbai · <time data-clock="Asia/Kolkata">--:--</time></p>
+        <a href="https://disojostudio.com" data-roll data-no-swap>Design &amp; Systems · © Disojo Studio 2026</a>
+      </div>
+    </div>
+  </footer>
+</Base>

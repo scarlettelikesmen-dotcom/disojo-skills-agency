@@ -50,3 +50,12 @@ html.is-locked { overflow: hidden; }
 
 .k-colon { animation: k-blink 1s steps(1) infinite; }
 @keyframes k-blink { 50% { opacity: 0; } }
+
+/* data-close="frame": tall section, one sticky screen inside (ERA). Height sets the scroll length. */
+[data-close="frame"] { position: relative; height: 220svh; }
+[data-close="frame"] > .k-close-stick { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; }
+[data-close="frame"] [data-close-clip], [data-close="frame"] [data-close-inner] { grid-area: 1 / 1; }
+[data-close="frame"] [data-close-clip] { position: relative; z-index: 1; will-change: clip-path; }
+[data-close="frame"] [data-close-inner] { z-index: 0; transform-origin: 50% 50%; }
+/* data-close="catch-up": the footer hides its content's start position. */
+[data-close="catch-up"] { overflow: clip; }

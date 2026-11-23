@@ -2,9 +2,9 @@
 // Kernel lab layout: wrapper, persistent UI (cursor, veil, menu, nav) outside the container.
 import '../styles/kernel.css';
 import '../styles/lab.css';
-interface Props { title: string; ns: string; desc?: string }
-const { title, ns, desc = 'Disojo motion kernel lab' } = Astro.props;
-const links = [['/', 'Index'], ['/second/', 'Second page']];
+interface Props { title: string; ns: string; desc?: string; bare?: boolean }
+const { title, ns, desc = 'Disojo motion kernel lab', bare = false } = Astro.props;
+const links = [['/', 'Index'], ['/second/', 'Second page'], ['/close-frame/', 'Close: frame'], ['/close-catch/', 'Close: catch-up']];
 const parts = [['#ink', 'Ink'], ['#ground', 'Ground'], ['#list', 'List']];
 ---
 <!doctype html>
@@ -30,10 +30,10 @@ const parts = [['#ink', 'Ink'], ['#ground', 'Ground'], ['#list', 'List']];
 
   <main data-barba="container" data-barba-namespace={ns}>
     <slot />
-    <footer class="foot">
+    {!bare && <footer class="foot">
       <p>Mumbai · <time data-clock="Asia/Kolkata">--:--</time></p>
       <a href="https://disojostudio.com" data-roll data-no-swap>Design &amp; Systems · © Disojo Studio 2026</a>
-    </footer>
+    </footer>}
   </main>
   <script>import '../kernel/index.js';</script>
 </body>
