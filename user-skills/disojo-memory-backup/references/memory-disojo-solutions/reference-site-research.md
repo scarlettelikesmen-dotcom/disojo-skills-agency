@@ -37,3 +37,5 @@ Merged 2026-11-16 from 6 notes (approved benchmarks, Awwwards code study, 3D res
 
 ## Test runs
 - Movement First PT redo (2026-11-01, Tejjo's test): `~/Desktop/websites ARCHIVE/movementfirst-redo`, 27 pages, not deployed.
+
+- 2026-11-23 late: kit-code.md (menus, page changes, hovers, reveals, cursor), every loader/close/menu has a picture sheet in tftl-handson/moments/overview-*.jpg, hand visits in scan/<slug>/hand/. Kernel now has data-film (tools/make-film.cjs).

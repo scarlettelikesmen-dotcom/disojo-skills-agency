@@ -39,3 +39,12 @@ Read from shipped code, not run frame by frame. Hilight, Grape, SL and the other
 | Archvoyage | No loader: the page's first words wipe in | polygon wipe + yPercent 100 to 0, .6s, delay .7, stagger .1 |
 | Hilight, Verholy | Hilight: no first-load loader found, only the page-change overlay (see `kit-code.md`). Verholy: a full-screen loader, CSS only read. | |
 What carries over: every loader is one idea from the brand (a switch for a strategy firm, circles for a playful studio, a cut-away for a fast agency). The mechanism is always short: 1.5 to 4 s, then it hands over to the hero.
+
+### Pictures of the rest (captured 2026-11-23, 24 frames x 400 ms)
+All on one sheet: `moments/overview-loaders.jpg` (9 sites). Strips: `moments/<slug>-loader.jpg` for grape, coeval, pictoric, 4x-strategy, nabil.
+What the frames show, matching the code above:
+- **Coeval:** a sand field with a thin serif percent in the middle (0%, 10%, 94%, 100%), then the hero photo arrives already behind the big title.
+- **Grape:** a lilac field, "Loading" bottom right, the percent and a line climbing bottom left (0, 22, 98), then the cut-away to the grey home.
+- **Pictoric:** white circles of different sizes float on white, the percent "%34 ... %100" in heavy type in the middle, then the yellow drawn hero.
+- **4X:** a single short vertical line in the middle, then straight to the dark hero; the shortest loader of the set.
+- **Nabil:** a small drawn mark on black, then a dark photo building in slices.

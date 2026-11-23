@@ -102,3 +102,11 @@ Families 1 to 3 are mechanisms the kernel can own. Family 4 always comes from th
 All close mechanisms with exact numbers, by family: `closes-code.md`. Code saved per site in `code/<slug>/` by `grab.cjs`; search helper `ctx.py`.
 - Scroll-film player in code: `frame-player-code.md`. Loaders in code: `loaders-code.md`.
 - Moment captures: `moments.cjs` (loader|close), `strip.py`, `overview.py`; sheets in `moments/`.
+
+## 2026-11-23 evening: the not-done list closed
+- Kit code: menus, page changes, hovers, reveals, cursor (`kit-code.md`), with menu and page-change sheets `moments/overview-menus.jpg`, `overview-navs.jpg`.
+- Loaders: all nine captured (`moments/overview-loaders.jpg`), notes in `loaders-code.md`.
+- Closes: Hilight and Face to Face captured (`moments/overview-closes.jpg`, 19 rows).
+- Hand visits: HLE (23), IQOSA (25, scan was wrong: the haze was the cookie banner), Vurrle (47), Shelter desktop (38). Frames in `scan/<slug>/hand/`. Made with Swiss, Max Noah, Miracle, Qapara, The Label still unreachable.
+- Scroll film: maker + kernel `data-film` + lab page (`frame-player-code.md`, Built).
+Still not caught: ERA, Lenval and Fame menus; Fame page change.

@@ -56,7 +56,9 @@ Shared numbers: trigger the footer, `start: "top bottom"`, `end: "bottom bottom"
 
 ## Pictures (captured 2026-11-23 with `moments.cjs`, frames top to bottom of the close)
 All closes on one sheet: `moments/overview-closes.jpg` (last 10 frames per site). One strip per site, every frame: `moments/<slug>-close.jpg` for era-residence, 4x-strategy, ada, lenval-properties, sl-architects, pictoric, grape, archvoyage, coeval, alchemy-family, fame-estate, gifford-hill.
-Not captured: Hilight and Face to Face (their scroll is taken over by a pinned section; the tool never reached the footer). Use their scan frames in `scan/<slug>/` instead.
+Hilight and Face to Face captured on a second run with script scrolling (`SCRIPT=1 STEP=120`): `moments/hilight-close.jpg`, `moments/face-to-face-close.jpg`.
+- **Hilight:** the dark call band ("Ready to bring your next project to life with us?", a live clock "11:39") lifts off a pale footer; the footer is four columns of short lines, one small project photo, and the wordmark "HILIGHT" huge and very faint across the bottom, half sunk (the floor family).
+- **Face to Face:** "Alright, need someone who can handle it?" then a circle of small type turns and the words "You've just found me" assemble in its middle; then a white band with Call / Message / Fax and the phone number set edge to edge as the headline; then a red band with "FACE TO FACE" huge, cut by the edges, with the founder's photo standing in the words. The phone number is the close.
 
 ## Built from this (2026-11-23)
 Kernel `data-close` with four settings: `frame`, `catch-up` (+ `data-close-dim`), `floor`, `last-word`. Lab pages `/close-frame/`, `/close-catch/`, `/close-floor/` on :4790. Captures: `moments/lab-*-close.jpg`, phone `moments/lab-*-phone-close.jpg`, side by side `moments/sbs-closes.jpg`.

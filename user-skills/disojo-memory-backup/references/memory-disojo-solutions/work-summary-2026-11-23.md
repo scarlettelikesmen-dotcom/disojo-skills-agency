@@ -17,3 +17,11 @@ metadata:
 - Tejjo: "whats the point if its not stored in memory and notes, and screenshots". So every code finding gets its own frames: `moments.cjs <slug> <url> loader|close` (closes: wheel to the bottom, step up, reverse order), `strip.py` makes `moments/<slug>-<kind>.jpg`.
 - Next, after Tejjo's go: build the kernel `data-close` module (frame, catch-up first), shown beside the originals.
 - Evening: moment strips captured for 13 closes + 4 loaders (sheets `moments/overview-closes.jpg`, `overview-loaders.jpg`, sent). Hilight and Face to Face closes not captured (scroll taken over). Built kernel `data-close` frame + catch-up with lab pages /close-frame/, /close-catch/; work at 1512. Then: 390 checked, side by side made, floor + last-word + dim built; all four sent to Tejjo for a verdict.
+
+## Late evening: "do all the not done"
+- Kit code read (menus, page changes, hovers, reveals, cursor) in `tftl-handson/kit-code.md`, with menu and page-change sheets.
+- All nine loaders and all closes now have pictures (overview sheets in `tftl-handson/moments/`). Hilight and Face to Face closes caught with script scroll.
+- Hand visits: HLE, IQOSA (the scan was wrong, the haze was the cookie banner), Vurrle, Shelter desktop (correct URL the-shelter.com.au). Five dead sites rechecked, still dead.
+- Built: `kernel/tools/make-film.cjs` + kernel `data-film` + lab `/film/` (works in Chromium at 1512; Safari, phones untested).
+- Not caught: ERA, Lenval, Fame menus; Fame page change.
+- Still waiting on Tejjo: verdict on the four data-close settings before the loader module.

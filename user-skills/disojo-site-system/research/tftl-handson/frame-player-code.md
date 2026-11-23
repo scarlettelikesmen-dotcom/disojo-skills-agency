@@ -29,7 +29,7 @@ Cleanup on page leave: wait for loading, then `destroy()` (close decoder, drop b
 
 ## What we would need to build our own
 - The player is small (about 200 lines). Ours: one `data-film` module in the kernel, same shape, cleaned up on page leave.
-- The hard part is the file maker: encode with ffmpeg (short key frame interval, for example every 12 to 24 frames, so a jump back is cheap), demux to raw frames with their type and timestamp, write frames + manifest + offset. A Node script, about 100 lines. Not built yet.
+- The hard part is the file maker: encode with ffmpeg (short key frame interval, for example every 12 to 24 frames, so a jump back is cheap), demux to raw frames with their type and timestamp, write frames + manifest + offset. A Node script, about 100 lines. Built 2026-11-23, see below.
 - Phone and unsupported browsers: a poster, or a plain muted video. Never a blank box.
 - Only worth it when the client has real film that tells something as you scroll (a building being made, an object turning). A film for its own sake is a trick.
 
@@ -38,3 +38,9 @@ Read from shipped code; not run by us. The `.af` maker is TFTL's own and is not 
 
 ## Pictures
 The film itself shows in the Lenval loader strip (`moments/lenval-properties-loader.jpg`, frames after the slit opens) and in `scan/lenval-properties/` scroll frames.
+
+## Built from this (2026-11-23)
+- **Maker:** `kernel/tools/make-film.cjs <in> <out.film> [width=1920] [fps=30] [keyint=12] [crf=23]`. ffmpeg + libx264, no B-frames, a key frame every 12, one slice, access-unit delimiters so frames split cleanly; writes frames + manifest + offset (same shape as the studied file, our own name `.film`). H.264 Annex B only (no H.265 yet). Test: 4 s pattern at 1280 = 120 frames, 10 keys, 1.17 MB.
+- **Player:** `kernel/src/kernel/film.js`, `data-film="/films/x.film"` with `data-film-poster`, optional `[data-film-track]` parent as the trigger, `data-film-start` / `data-film-end`. Desktop 992+ only, needs `VideoDecoder`, reduced motion and phones keep the poster. Windows and Android prefer software decode. Next frame = one decode; a jump decodes from the nearest key; a forward jump inside the same group continues without a reset. Drawn "cover" at up to 2x. Cleaned up on page leave.
+- **Lab:** `/film/` on :4790, a 400svh track with the film sticky. Checked at 1512: decodes, different frames at 10% and 50%, scrolling back shows earlier frames, no console errors (`moments/lab-film-10.jpg`, `lab-film-50.jpg`).
+- **Untested:** Safari, Firefox, real phones, a real client film, file size on a long film.

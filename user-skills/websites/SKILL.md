@@ -66,7 +66,7 @@ A specimen of 15 to 20 free fonts set in the client's own words, from Google Fon
 `premium_gate.cjs`, `system_check.cjs`, `phone_audit.cjs`, `prelaunch_scan.sh`, Lighthouse. They catch broken things only, and since 2026-11-17 the site guard hook only warns. Never call a pass "premium", "audited" or "ready".
 
 ### 8. Ship
-Demo on Tejjo's go: `bash $SK/scripts/deploy_demo.sh <project> <slug>` (own noindex project; open the link and check its title before sending). Production only on the word "deploy" (`$SK/references/launch.md`).
+Demo on Tejjo's go: `bash $SK/scripts/deploy_demo.sh <project> <slug>` (own noindex project; send only the URL it prints after `DEMO:`, never a guessed `<slug>-demo.vercel.app`). Production only on the word "deploy" (`$SK/references/launch.md`).
 
 ## Techniques, chosen after the idea, never as the idea
 | Technique | When | Where the working method is |

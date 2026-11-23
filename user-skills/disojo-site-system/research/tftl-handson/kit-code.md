@@ -34,3 +34,16 @@ Each element splits once and keeps it (`e._split`). Cards: yPercent 35 to 0, 1.2
 - Our reveal kinds already match theirs in shape (lines, words, rule, media each have set, show and hide). Numbers differ: their headings rise 135% (ours 110%), their pictures scale from 1.5 (ours 1.15), their durations are 1.2s with a .3s delay (ours use T.slow .95). Theirs are bolder; ours are softer. Neither is right in general: the client's idea picks.
 - Our transition uses a veil; the Webflow kit uses none (content drops out, page fades), the Nuxt kit a sliding overlay. Both are fine; the veil should be a setting, not the default.
 - The underline that passes through and the elastic magnetic release are not in our kernel yet.
+
+## Pictures (captured 2026-11-23, a frame every 150 ms after the click)
+Sheets: `moments/overview-menus.jpg`, `moments/overview-navs.jpg`. Strips: `moments/<slug>-menu.jpg`, `moments/<slug>-nav.jpg`.
+- **Menus seen:** ADA (dark panel, "Services" with small portrait photos, four links large bottom right), Archvoyage (black panel, six caps links stacked top left rising line by line, a project photo right), Hilight (the panel fades in over a blurred photo, links small top centre).
+- **Menus not caught:** ERA, Lenval (button `.btn-menu` / `.header_menu` not clickable at 1512; their desktop shows the links in the bar), Fame (no menu button found).
+- **Page changes seen:** ERA (home fades to cream, then "APARTMENTS" with letters rising and a bougainvillea photo), Archvoyage (dark panel wipes in from the right, "PROJECTS"), Lenval (cream fade, then "A Developer Building For Generations"), Hilight (the cream overlay covers, then the new page appears under it), ADA (the hero swaps photo in place before the FAQ page appears).
+- **Not caught:** Fame (no internal link found by the tool).
+
+## Cursor (read 2026-11-23)
+No custom dot cursor on any of the TFTL sites read. The cursor work is in two places:
+- **Lenval `initFluidCursor` (`59707.js:2794`):** a full-screen WebGL fluid simulation (three.js r157 loaded on demand) that the pointer stirs, in the brand cream (249,244,238). Settings: sim 128, dye 512, 3 pressure passes, velocity dissipation 1, dye .98, splat radius .005. While the preloader shows, the fluid is masked by the logo SVG (drawn to a texture), so the stirring shows only inside the logo; after that it runs across the page. Stops updating after 300 frames without input.
+- **The cursor as a label:** ERA and Lenval plans set `cursor: zoom-in`; a click scales the plan to the screen width (durM .8, Out) and mouse movement pans it; Esc or arrows close it. Sliders use `grab` / `grabbing`. Hilight's 3D viewer uses `grab`.
+Against our kernel: we ship a follower dot. The references show the cursor is used only where it says what a click will do (zoom, drag), plus one site where it is the brand's material (fluid). Default to the system cursor; a follower only when the idea asks for it.

@@ -36,7 +36,7 @@ Related: [[reference-site-research]], [[reference-site-research]]
 - Renders V='b' (old -a files moved to vael-site/_old-img). macro frames now 3:2 (were cropped 4:5 -> soft). Cart got a lineup band.
 - In progress: explode 61 frames (blender/explode.sh, chunks of 8), then after2.sh: explode_track.py -> public/seq/track.json (per-frame part edge positions for desktop callouts in explode.js) and shots core-phone (portrait for /the-core/ phone hero, needs wiring with a <source>). Then tools/seq.sh converts frames.
 - Skipped on purpose: 360 turntable (a round bottle barely changes when spun), preloader.
-- DEMO LIVE 2026-11-03: https://vael-demo-topaz.vercel.app (own Vercel project vael-demo, noindex). NOTE: vael-demo.vercel.app is SOMEONE ELSE's site; deploy_demo.sh's 200 check passed on it falsely. Always use the -topaz alias and check <title>.
+- DEMO LIVE 2026-11-03: https://vael-demo-topaz.vercel.app (own Vercel project vael-demo, noindex). NOTE: vael-demo.vercel.app is SOMEONE ELSE's site; deploy_demo.sh's 200 check passed on it falsely (fixed 2026-11-23: demo_check.sh now checks the alias Vercel assigned, build id + title, and warns about the guessed name). Always use the -topaz alias.
 - Done in this pass: explode 61 frames + Blender-tracked callouts (desktop), phone frame fit; core-phone portrait; ink token now #000000 (page black, renders black-pointed to match, V='c'); easings unified; gates: system_check PASS, phone_audit clean, premium_gate 2 known false FAILs (gate reads <img> srcset not <source>).
 
 ## State 2026-11-03 (night, live 3D proof v2) READ THIS FIRST

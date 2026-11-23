@@ -1,0 +1,17 @@
+---
+// Lab: data-film. A film scrubbed by the scroll, frame exact (Lenval, Hilight). Test film is a
+// generated test pattern (ffmpeg testsrc2), not client material.
+import Base from '../layouts/Base.astro';
+---
+<Base title="Kernel lab · Scroll film" ns="film">
+  <section class="hero" data-ground="light" style="min-height:70svh">
+    <h1 class="disp" data-reveal="chars" data-reveal-now>Scroll film</h1>
+    <p class="lede" data-reveal="lines" data-reveal-delay="0.3">Scroll down: the film plays with you, and back when you scroll up. Phones and old browsers see the still.</p>
+  </section>
+  <section data-film-track class="film-track">
+    <div class="film-stick" data-film="/films/test.film" data-film-poster="/films/test.jpg"><canvas></canvas></div>
+  </section>
+  <section class="hero" data-ground="light" style="min-height:70svh">
+    <p class="lede">After the film.</p>
+  </section>
+</Base>

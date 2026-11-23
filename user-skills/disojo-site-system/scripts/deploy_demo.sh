@@ -2,8 +2,10 @@
 # Stage 5: public demo. bash deploy_demo.sh <project> <client-slug>
 # Builds site/, copies dist to a clean folder, adds noindex headers and the redirects, deploys to its OWN
 # Vercel project "<client-slug>-demo" (team preview links are login-walled), adds <client-slug>-demo.vercel.app,
-# and checks the link answers 200 without a login. Needs Tejjomay's go-ahead: it publishes.
+# then checks the URL Vercel actually assigned (not the guessed name) answers 200 without a login and serves
+# this build (demo_check.sh: build id + <title>). Needs Tejjomay's go-ahead: it publishes.
 set -euo pipefail
+HERE="$(cd "$(dirname "$0")" && pwd)"
 PROJ="$(cd "$1" && pwd)"; SLUG="$2"; NAME="${SLUG}-demo"; SCOPE="${VERCEL_SCOPE:-scarlettelikesmen-dotcoms-projects}"
 OUT="$PROJ/deploy/$NAME"
 SITE="${SITE_DIR:-site}"   # a project can hold several directions: site, site-B, site-C
@@ -23,10 +25,12 @@ cfg = {"framework": None, "buildCommand": "", "outputDirectory": ".", "trailingS
        "redirects": [{"source": a.rstrip('/') or '/', "destination": b, "permanent": True} for a, b in red.items() if a != b]}
 json.dump(cfg, open(os.path.join(out, 'vercel.json'), 'w'), indent=1)
 PY
+python3 -c 'import secrets;print(secrets.token_hex(8))' > "$OUT/_deploy-id.txt"   # proves the live page is this build
 cd "$OUT"
 [ -f .vercel/project.json ] || vercel link --yes --project "$NAME" --scope "$SCOPE" >/dev/null 2>&1 || true
-vercel deploy --prod --yes --scope "$SCOPE" 2>&1 | grep -E "Production:|Aliased" || true
+DLOG="$OUT/../$NAME-deploy.log"
+vercel deploy --prod --yes --scope "$SCOPE" > "$DLOG" 2>&1 || { cat "$DLOG"; echo "FAILED: vercel deploy did not finish."; exit 1; }
+grep -E "Production:|Aliased" "$DLOG" || true
+# Try to claim the short name; it fails silently when someone else owns it, so it is never trusted.
 vercel domains add "$NAME.vercel.app" --scope "$SCOPE" >/dev/null 2>&1 || true
-sleep 4
-CODE=$(curl -s -o /dev/null -w '%{http_code}' "https://$NAME.vercel.app/")
-echo "https://$NAME.vercel.app/ -> $CODE $( [ "$CODE" = 200 ] && echo '(open, no login wall)' || echo '(NOT OPEN: check Deployment Protection / domain)')"
+bash "$HERE/demo_check.sh" "$DLOG" "$OUT" "$NAME"

@@ -64,3 +64,8 @@ html.is-locked { overflow: hidden; }
 [data-close="floor"] [data-close-word] { display: block; width: max-content; white-space: nowrap; line-height: .8; }
 /* data-close="last-word": the action keeps its own line and turns from its left edge. */
 [data-close="last-word"] [data-close-action] { display: inline-block; transform-origin: 0 100%; }
+
+/* data-film: a tall track, the film sticks for its length */
+.film-track { height: 400svh; position: relative; }
+.film-stick { position: sticky; top: 0; height: 100svh; background: #111 center / cover no-repeat; }
+.film-stick canvas { width: 100%; height: 100%; display: block; }

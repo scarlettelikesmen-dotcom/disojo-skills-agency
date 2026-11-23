@@ -9,6 +9,7 @@ import { initRoll, initMagnetic, initCursor, initFollower } from './hover.js';
 import { startTransitions } from './transition.js';
 import { use, runPage, runOnce } from './registry.js';
 import './modules.js';
+import './film.js';
 
 // live clock: <time data-clock="Asia/Kolkata"></time>
 function initClock(root) {

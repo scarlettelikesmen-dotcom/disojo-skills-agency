@@ -15,3 +15,5 @@ The thinnest file. Before designing any app, ask Tejjo for apps they love using 
 | 2026-10-21 | Ascender CRM v1: stat cards, bar cards, a deal pipeline | rejected on sight | A dashboard template. |
 
 | 2026-11-23 | Level Today screen, three looks test (/lab: Ledger, Instrument, Session), Nippo Bold 92-168px numbers, bold caps labels, ink on #ECEDE8, ink only | "no completely no, this feels so weird... so unpleasent to look at, and the readiness is fucked i dont even feel like looking at this" | My read: heavy display Nippo blown up huge plus bold caps labels everywhere = shouting and chunky; no light weights, no rest, black slabs (gauge) on beige. I built from words without app references they love. Ask for references first. |
+
+| 2026-11-23 | Level home v3, full desktop (Weather layout: thin system-face hero, sessions strip, three grouped-list columns, empty states that point to the next step, time to the bell as hero for a new trader) | "damn this is great work claude" (earlier: "good stuff") | Mine: one thin huge number that answers the moment, calm grouped lists, no cards or caps; every empty place says what to do next. |
