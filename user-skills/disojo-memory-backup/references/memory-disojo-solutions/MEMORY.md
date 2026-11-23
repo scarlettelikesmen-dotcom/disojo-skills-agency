@@ -57,6 +57,7 @@
 - [No unpicked choices in builds](feedback-no-unpicked-choices-in-builds.md) — Level 2026-11-17: amber and dark used without a pick; confirm basics first, build without unpicked choices
 - [Beauty: still frames first](feedback-beauty-still-frames.md) — 2026-11-23: "zoomed in, no beauty" measured; frames quiet/photo/event, one loud thing, wide graded pictures, tinted grounds, check + board before motion
 - [Moments per client](feedback-moments-per-client.md) — 2026-11-23: loader, page change and close designed new per client from the idea; kernel = mechanisms, never a template; bar = TFTL
+- [No fork updates](feedback-no-fork-updates.md) — 2026-11-24: never relay other-session results unless Tejjo asks
 - [No choice buttons](feedback-no-choice-buttons.md) — 2026-11-15: never pass ask/actions to wrap_up or use pickers; ask in plain text
 - [No NPC nav](feedback-no-npc-nav.md) — hard rule 2026-11-10: no blurred top bar with same-size links; nav from the idea, 3 options in words; gate enforces it
 - [Own verdict before showing](feedback-own-verdict-before-showing.md) — 2026-11-11 CSK: never send design I would not call good myself; say what's missing instead
