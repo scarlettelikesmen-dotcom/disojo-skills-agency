@@ -153,6 +153,9 @@ const NAV_CHECK = () => {
       await p.close();
       // hard checks
       if (c.three_d && !idea.product && !idea.allowed) F(`${tag}: 3D on a ${idea.type || 'site with no TYPE in brief/IDEA.md'} (${c.three_d}). 3D is for the Product type; anywhere else "3D ALLOWED BY TEJJO:" must hold their own words`);
+      // A face Tejjo picked by name for this project is allowed: brief/IDEA.md line "FONT PICKED BY TEJJO: <family>" (their words quoted)
+      const picked = (() => { try { const t = require('fs').readFileSync(require('path').join(root, '..', 'brief', 'IDEA.md'), 'utf8'); return [...t.matchAll(/^FONT PICKED BY TEJJO:\s*([^"\n(]+)/gm)].map(m => m[1].trim().toLowerCase()); } catch { return []; } })();
+      c.fonts = c.fonts.filter(f => !picked.includes(f.toLowerCase()));
       if (c.fonts.length) F(`${tag}: default face loaded: ${c.fonts.join(', ')} (defaults-to-avoid.md; keep only if brief/IDEA.md needs it, and say why to Tejjo)`);
       if (c.accent.length) F(`${tag}: one-word accent in the h1: "${c.accent[0]}" (defaults-to-avoid.md)`);
       if (c.eyebrows > Math.ceil(c.sections / 3)) Wn(`${tag}: ${c.eyebrows} eyebrows in ${c.sections} sections (at most 1 per 3)`);
