@@ -1,0 +1,52 @@
+/* Kernel CSS: tokens a site overrides from its idea, plus the CSS half of the kernel. */
+:root {
+  --m-fast: .3; --m-normal: .65; --m-slow: .95; --m-slower: 1.25; --m-stagger: .05;
+  --e-out: .16,1,.35,1; --e-in: .5,0,.75,0; --e-inout: .76,0,.24,1; --e-soft: .25,.1,.25,1;
+  --ease-out: cubic-bezier(var(--e-out));
+  --ease-inout: cubic-bezier(var(--e-inout));
+}
+
+/* nothing marked for reveal shows before JS sets its hidden state (no flash) */
+html.js [data-reveal] { visibility: hidden; }
+html.js [data-barba="container"] { visibility: hidden; }
+@media (prefers-reduced-motion: reduce) { html.js [data-reveal], html.js [data-barba="container"] { visibility: visible; } }
+html.is-locked { overflow: hidden; }
+.k-line, .k-word { padding-bottom: .06em; margin-bottom: -.06em; } /* descenders inside the mask */
+.k-char { display: inline-block; will-change: transform; }
+
+/* text roll: each char rolls up to its twin (text-shadow one line below), left to right */
+[data-roll] { --roll-step: 14ms; }
+[data-roll] .k-rc {
+  display: inline-block; text-shadow: 0 1.15em currentColor;
+  transition: transform calc(var(--m-normal) * 1s) var(--ease-out);
+  transition-delay: calc(var(--char) * var(--roll-step));
+}
+[data-roll-label], [data-roll]:not(:has([data-roll-label])) { display: inline-block; overflow: hidden; vertical-align: top; line-height: 1.15; }
+@media (hover: hover) and (pointer: fine) {
+  [data-roll]:hover .k-rc, [data-roll]:focus-visible .k-rc, [data-roll-host]:hover .k-rc { transform: translateY(-1.15em); }
+}
+
+/* an overflow:hidden inline-block takes its bottom edge as baseline: never baseline-align a roll label in flex */
+
+/* cursor */
+[data-k-cursor] { position: fixed; left: 0; top: 0; z-index: 90; pointer-events: none; display: none; }
+@media (hover: hover) and (pointer: fine) { [data-k-cursor] { display: block; } }
+[data-k-cursor] .k-dot {
+  position: absolute; translate: -50% -50%; width: 10px; height: 10px; border-radius: 99px;
+  background: var(--k-cursor, currentColor); display: grid; place-items: center; overflow: hidden;
+  transition: width .5s var(--ease-out), height .5s var(--ease-out), opacity .3s;
+}
+[data-k-cursor]:not([data-on="1"]) .k-dot { opacity: 0; }
+[data-k-cursor][data-state="hover"] .k-dot { width: 44px; height: 44px; opacity: .25; }
+[data-k-cursor][data-state="label"] .k-dot { width: 96px; height: 96px; }
+[data-k-cursor-label] { color: var(--k-cursor-ink, #fff); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; opacity: 0; transition: opacity .3s; white-space: nowrap; }
+[data-k-cursor][data-state="label"] [data-k-cursor-label] { opacity: 1; transition-delay: .12s; }
+
+/* veil and menu live outside the swapped container */
+[data-k-veil] { position: fixed; inset: 0; z-index: 80; visibility: hidden; pointer-events: none; }
+[data-k-menu] { position: fixed; inset: 0; z-index: 70; visibility: hidden; }
+[data-k-menu-item] { display: block; }
+.k-mask { overflow: hidden; display: block; }
+
+.k-colon { animation: k-blink 1s steps(1) infinite; }
+@keyframes k-blink { 50% { opacity: 0; } }

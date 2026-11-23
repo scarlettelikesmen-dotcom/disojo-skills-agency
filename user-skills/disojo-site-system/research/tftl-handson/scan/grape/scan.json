@@ -1,0 +1,136 @@
+{
+ "slug": "grape",
+ "url": "https://grape.ua/",
+ "errors": [],
+ "facts": {
+  "title": "Grape Marketing Agency: creative design agency in Kyiv",
+  "h": 9885,
+  "attrs": {
+   "data-tag": 1,
+   "data-cursor": 8,
+   "data-cursor-text": 8,
+   "data-src": 17,
+   "data-ssr": 1
+  },
+  "fonts": [
+   "PPNeueMontreal"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 1,
+  "videos": 4,
+  "imgs": 70,
+  "gen": "",
+  "lang": "en-US"
+ },
+ "wheelFrames": 15,
+ "wheelEndY": 9021,
+ "code": {
+  "scripts": [
+   "https://grape.ua/_nuxt/component-stub.FmFgRqLi.js 0KB",
+   "https://grape.ua/_nuxt/empty.Cn49MvXJ.js 0KB",
+   "https://grape.ua/_nuxt/i18n.config.tCd5jrsr.js 0KB",
+   "https://grape.ua/_nuxt/Progress.C6s1Ee2-.js 0KB",
+   "https://grape.ua/_nuxt/default.BvWVsDI7.js 8KB",
+   "https://grape.ua/_nuxt/base.Cowcg-OE.js 0KB",
+   "https://grape.ua/_nuxt/Main.D-Xe3oxQ.js 4KB",
+   "https://grape.ua/_nuxt/index.DTFDwvP2.js 19KB",
+   "https://grape.ua/_nuxt/AnimCircles.vue.eKAmF3gL.js 1KB",
+   "https://grape.ua/_nuxt/AwardsWithProps.vue.D6tqsxmX.js 2KB",
+   "https://grape.ua/_nuxt/FlipTest.BlCQGEuk.js 3KB",
+   "https://grape.ua/_nuxt/swiper-vue.BTZulNLT.js 163KB",
+   "https://grape.ua/_nuxt/isVideo.BdcvccDS.js 0KB",
+   "https://grape.ua/_nuxt/MainProps.DBdvubZp.js 3KB",
+   "https://grape.ua/_nuxt/Contact.vue.HB5MoldY.js 2KB",
+   "https://grape.ua/_nuxt/setPageMeta.BIChswHP.js 2KB",
+   "https://grape.ua/_nuxt/entry.DN75vySF.js 463KB",
+   "https://grape.ua/_nuxt/i18n.config.tCd5jrsr.js 0KB",
+   "https://grape.ua/_nuxt/index.Ck_ayh9d.js 12KB",
+   "https://grape.ua/_nuxt/services.DO_NqN_U.js 7KB",
+   "https://grape.ua/_nuxt/about.CJ504dbI.js 16KB",
+   "https://grape.ua/_nuxt/EmptyWithProps.D19AbZT0.js 3KB",
+   "https://grape.ua/_nuxt/team.DTr1zdYE.js 23KB",
+   "https://grape.ua/_nuxt/index.BfwNHAfF.js 0KB",
+   "https://grape.ua/_nuxt/contact.Bt7mUDAx.js 9KB",
+   "https://player.vimeo.com/cdn-cgi/challenge-platform/h/b/scripts/precursor/f8df4d4a0cd6/main.js?ray=a5ed9cb7cf7d8730 58KB",
+   "https://challenges.cloudflare.com/turnstile/v0/b/f8df4d4a0cd6/api.js 85KB",
+   "blob:https://challenges.cloudflare.com/54cd3edf-5334-491f-bf07-9fdbc9e06a32 0KB",
+   "blob:https://challenges.cloudflare.com/54cd3edf-5334-491f-bf07-9fdbc9e06a32 0KB",
+   "inline 29KB"
+  ],
+  "inits": [
+   "setupState",
+   "createElement",
+   "createText",
+   "createComment",
+   "createApp",
+   "setupContext",
+   "createElementNS",
+   "createTextNode",
+   "createEvent",
+   "initEvent",
+   "initSlides",
+   "createElements",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "initCommands",
+   "initMouseEvent",
+   "createNodeIterator",
+   "createPolicy",
+   "createScript"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "CustomEase",
+   "Draggable",
+   "Flip",
+   "Observer",
+   "ScrollSmoother",
+   "DrawSVGPlugin",
+   "InertiaPlugin",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "clipPath",
+   "pin",
+   "scrub",
+   "matchMedia",
+   "sessionStorage",
+   "IntersectionObserver",
+   "Intl.DateTimeFormat",
+   "pinSpacing",
+   "containerAnimation",
+   "clip-path"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://api.grape.ua/storage/media/380/Patricia-.mp4",
+   "https://api.grape.ua/storage/media/572/%D0%BA%D0%B0%D0%B2%D0%B5%D1%80-%D0%B5%D0%BA%D1%96%D0%BF1.mp4",
+   "https://api.grape.ua/storage/media/380/Patricia-.mp4",
+   "https://api.grape.ua/storage/media/380/Patricia-.mp4",
+   "https://player.vimeo.com/video/915108326?h=4df47e9d52&title=0&byline=0&portrait=0",
+   "https://player.vimeo.com/video/915108326?h=4df47e9d52&title=0&byline=0&portrait=0&ts_client_error=600010",
+   "https://api.grape.ua/storage/media/698/cover.mp4",
+   "https://api.grape.ua/storage/media/380/Patricia-.mp4",
+   "https://api.grape.ua/storage/media/380/Patricia-.mp4",
+   "https://api.grape.ua/storage/media/380/Patricia-.mp4",
+   "https://api.grape.ua/storage/media/380/Patricia-.mp4",
+   "https://api.grape.ua/storage/media/572/%D0%BA%D0%B0%D0%B2%D0%B5%D1%80-%D0%B5%D0%BA%D1%96%D0%BF1.mp4"
+  ],
+  "models": [
+   "https://grape.ua/_nuxt/builds/meta/dcc3cf68-4531-4e68-9793-94cbe0411dff.json"
+  ],
+  "fontsFiles": [
+   "PPNeueMontreal-Regular.C0RgVexg.woff2",
+   "PPNeueMontreal-Medium.0qsiMyyJ.woff2",
+   "PPNeueMontreal-Bold.CXsqV9IZ.woff2",
+   "PPNeueMontreal-Book.BIi4htmG.woff2"
+  ],
+  "totalMB": 150.9
+ }
+}

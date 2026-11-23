@@ -1,0 +1,132 @@
+{
+ "slug": "alchemy-family",
+ "url": "https://alchemy.family/",
+ "errors": [],
+ "facts": {
+  "title": "Alchemy Family",
+  "h": 10533,
+  "attrs": {
+   "data-capo": 1,
+   "data-ssr": 1,
+   "data-cf-beacon": 1
+  },
+  "fonts": [
+   "PPNeueMontreal-Medium",
+   "Romie-Regular",
+   "Romie-Regular-Italic"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 47,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 16,
+ "wheelEndY": 9669,
+ "code": {
+  "scripts": [
+   "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092 31KB",
+   "https://alchemy.family/_nuxt/B1FdqAuq.js 1KB",
+   "https://alchemy.family/_nuxt/49XQLREk.js 8KB",
+   "https://alchemy.family/_nuxt/B8g4Zq01.js 0KB",
+   "https://alchemy.family/_nuxt/CAVGkUTV.js 1KB",
+   "https://alchemy.family/_nuxt/D7oFXEoe.js 0KB",
+   "https://alchemy.family/_nuxt/-6YC6hfl.js 1KB",
+   "https://alchemy.family/_nuxt/DJb2uxw5.js 3KB",
+   "https://alchemy.family/_nuxt/CGFW9tiQ.js 1KB",
+   "https://alchemy.family/_nuxt/D3z0VMi9.js 9KB",
+   "https://alchemy.family/_nuxt/CtlLC_md.js 9KB",
+   "https://alchemy.family/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js 1KB",
+   "https://alchemy.family/_nuxt/BRXP1YEI.js 42KB",
+   "https://alchemy.family/_nuxt/Bf90UVsE.js 0KB",
+   "https://alchemy.family/_nuxt/3SQQwhtx.js 163KB",
+   "https://alchemy.family/_nuxt/BsTfMyAe.js 60KB",
+   "https://alchemy.family/_nuxt/CWeo--9S.js 362KB",
+   "https://alchemy.family/_nuxt/CxVqP9Aq.js 0KB",
+   "https://alchemy.family/_nuxt/D5gOYdM7.js 0KB",
+   "https://alchemy.family/_nuxt/DYoNz821.js 0KB",
+   "https://mc.yandex.ru/metrika/tag.js 218KB",
+   "https://alchemy.family/_nuxt/D5gOYdM7.js 6KB",
+   "https://alchemy.family/_nuxt/DYoNz821.js 0KB",
+   "https://mc.yandex.ru/metrika/tag_phono.js 54KB",
+   "https://alchemy.family/_nuxt/B7Lms0Y0.js 1KB",
+   "https://alchemy.family/_nuxt/D6bKDpQI.js 0KB",
+   "https://alchemy.family/_nuxt/CusVeKZl.js 0KB",
+   "https://alchemy.family/_nuxt/DOIemC8V.js 2KB",
+   "https://alchemy.family/_nuxt/DOOeSOxg.js 1KB",
+   "https://alchemy.family/_nuxt/DIxLLLSG.js 6KB"
+  ],
+  "inits": [
+   "createElements",
+   "createTextNode",
+   "createElement",
+   "createEvent",
+   "initEvent",
+   "createElementNS",
+   "initSlides",
+   "setupState",
+   "createText",
+   "createComment",
+   "createApp",
+   "setupContext",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "initMouseEvent",
+   "initToParent",
+   "initToChild",
+   "createTreeWalker",
+   "createArgumentsQueue",
+   "createQueue",
+   "createPolicy",
+   "createHTML",
+   "createScript",
+   "createScriptURL",
+   "createBuffer",
+   "createProgram",
+   "createShader",
+   "createDataChannel",
+   "createOffer"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "CustomEase",
+   "Observer",
+   "ScrollSmoother",
+   "MorphSVGPlugin",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [
+   "gl_Position",
+   "gl_FragColor"
+  ],
+  "css": [
+   "scrub",
+   "matchMedia",
+   "sessionStorage",
+   "pin",
+   "pinSpacing",
+   "containerAnimation",
+   "IntersectionObserver",
+   "clippath"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://alchemy.family/manifest.webmanifest"
+  ],
+  "models": [
+   "https://alchemy.family/_nuxt/builds/meta/ef8edf4b-ae70-4e27-9d17-2af0e5078e3e.json"
+  ],
+  "fontsFiles": [
+   "PPNeueMontreal-Medium.Bc1YMBzw.otf",
+   "Romie-Regular.54y8XZXq.otf",
+   "Romie-Italic.zBoSvCv_.otf"
+  ],
+  "totalMB": 11.4
+ }
+}

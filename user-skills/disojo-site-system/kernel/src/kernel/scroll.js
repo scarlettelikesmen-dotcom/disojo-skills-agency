@@ -8,7 +8,7 @@ const raf = t => lenis && lenis.raf(t * 1000);
 export function startScroll() {
   if (reduced.matches) return null;
   lenis?.destroy();
-  lenis = new Lenis({ duration: 1.15, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+  lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.remove(raf);
   gsap.ticker.add(raf);

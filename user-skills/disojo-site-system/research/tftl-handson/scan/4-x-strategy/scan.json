@@ -1,0 +1,111 @@
+{
+ "slug": "4-x-strategy",
+ "url": "https://4xstrategy.com/",
+ "errors": [],
+ "facts": {
+  "title": "4xStrategy",
+  "h": 9025,
+  "attrs": {
+   "data-svg-origin": 253,
+   "data-swiper-slide-index": 8,
+   "data-locale": 1,
+   "data-template-id": 1,
+   "data-businessunit-id": 1,
+   "data-style-height": 1,
+   "data-style-width": 1,
+   "data-theme": 1,
+   "data-min-review-count": 1,
+   "data-style-alignment": 1,
+   "data-ssr": 1
+  },
+  "fonts": [
+   "Astraneo",
+   "GT-America"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 14,
+  "gen": "",
+  "lang": ""
+ },
+ "wheelFrames": 14,
+ "wheelEndY": 8161,
+ "code": {
+  "scripts": [
+   "https://4xstrategy.com/_nuxt/Charts.fdb29a3a.js 7KB",
+   "https://4xstrategy.com/_nuxt/default.05d6e74d.js 0KB",
+   "https://4xstrategy.com/_nuxt/empty.de7c9137.js 0KB",
+   "https://4xstrategy.com/_nuxt/index.e0f9a1ff.js 36KB",
+   "https://4xstrategy.com/_nuxt/Qustions.vue.d4f06c3d.js 1KB",
+   "https://4xstrategy.com/_nuxt/entry.a1695e90.js 340KB",
+   "https://4xstrategy.com/_nuxt/useEventEmitter.4acada34.js 35KB",
+   "https://4xstrategy.com/_nuxt/newsletterAnimation.0469daf4.js 20KB",
+   "https://4xstrategy.com/_nuxt/swiper-vue.8dc4d65b.js 157KB",
+   "https://4xstrategy.com/_nuxt/faq.033b055e.js 1KB",
+   "https://4xstrategy.com/_nuxt/disclaimer.c7d1ade2.js 1KB",
+   "https://4xstrategy.com/_nuxt/disclaimerPageAnimation.438fde47.js 2KB",
+   "https://4xstrategy.com/_nuxt/privacy.5829a4e8.js 1KB",
+   "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js 25KB",
+   "https://widget.trustpilot.com/trustboxes/5419b6a8b0d04a076446a9ad/main.js 98KB",
+   "inline 22KB"
+  ],
+  "inits": [
+   "createTask",
+   "createElement",
+   "createDocumentFragment",
+   "createHref",
+   "createElementNS",
+   "createEvent",
+   "initMouseEvent",
+   "createTextNode",
+   "createError",
+   "createPathState",
+   "setupState",
+   "createText",
+   "createComment",
+   "createApp",
+   "setupContext",
+   "initEvent",
+   "initSlides",
+   "createElements",
+   "createWidget",
+   "createIFrame",
+   "createIFrameCalls"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "Flip",
+   "MotionPathPlugin",
+   "Observer",
+   "ScrollSmoother",
+   "DrawSVGPlugin",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "clip-path",
+   "clipPath",
+   "scrub",
+   "pin",
+   "pinSpacing",
+   "matchMedia",
+   "containerAnimation",
+   "sessionStorage",
+   "IntersectionObserver"
+  ]
+ },
+ "media": {
+  "video": [],
+  "models": [],
+  "fontsFiles": [
+   "Astraneo.9ccde153.woff2",
+   "GTAmerica-Medium.b743137d.woff2",
+   "GTAmerica-Regular.fcab15e0.woff2"
+  ],
+  "totalMB": 2.4
+ }
+}

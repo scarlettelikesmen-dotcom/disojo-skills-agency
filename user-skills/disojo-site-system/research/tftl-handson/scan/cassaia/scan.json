@@ -1,0 +1,133 @@
+{
+ "slug": "cassaia",
+ "url": "https://cassaia.com/",
+ "errors": [],
+ "facts": {
+  "title": "СASSAIA STUDIO - Full Service Architecture and Interior Design Studio Washington DC, Maryland, Virginia, Dallas, Sarasota",
+  "h": 10517,
+  "attrs": {
+   "data-lenis-prevent": 3,
+   "data-projects-search": 2,
+   "data-simplebar": 1,
+   "data-swiper-slide-index": 34,
+   "data-animate-title": 11,
+   "data-hover-arrow": 2,
+   "data-swap-arrow-left": 1,
+   "data-swap-arrow-right": 1,
+   "data-ssr": 1
+  },
+  "fonts": [
+   "Moderat",
+   "Ogg",
+   "Moderat Mono"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 0,
+  "imgs": 101,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 18,
+ "wheelEndY": 9809,
+ "code": {
+  "scripts": [
+   "https://www.cassaia.com/_nuxt/default.DZd80Xg8.js 0KB",
+   "https://www.cassaia.com/_nuxt/index.9ETWM45u.js 38KB",
+   "https://www.cassaia.com/_nuxt/CommonNav.VGFNlGFV.js 3KB",
+   "https://www.cassaia.com/_nuxt/ParallaxImagesAnimation.BOns-Nux.js 9KB",
+   "https://www.cassaia.com/_nuxt/SwitchArrow.J1BfJATc.js 1KB",
+   "https://www.cassaia.com/_nuxt/ProjectsList.N4R0MnZs.js 3KB",
+   "https://www.cassaia.com/_nuxt/circled-arrow-left.MduQBs8U.js 0KB",
+   "https://www.cassaia.com/_nuxt/HeaderAnimation.2tUCVqhd.js 1KB",
+   "https://www.cassaia.com/_nuxt/CommonSocials.gX24ZS0L.js 5KB",
+   "https://www.cassaia.com/_nuxt/swiper.min.Gr1AsVHY.js 62KB",
+   "https://www.cassaia.com/_nuxt/entry.ACtHv4VQ.js 385KB",
+   "https://www.cassaia.com/_nuxt/workbox-window.prod.es5.prqDwDSL.js 5KB",
+   "https://www.cassaia.com/_nuxt/privacy-policy.Wwdstrkb.js 2KB",
+   "https://www.cassaia.com/_nuxt/FAQPageAnimation.ZsU2aX53.js 1KB",
+   "https://www.cassaia.com/_nuxt/PrivacyTitle.QBxuvtz5.js 0KB",
+   "https://www.cassaia.com/_nuxt/PrivacyCaption.46Z1P62V.js 0KB",
+   "https://www.cassaia.com/_nuxt/Inner.S_P3ALhq.js 3KB",
+   "https://www.cassaia.com/_nuxt/BasicAnimations.ue_kFdwm.js 1KB",
+   "https://www.cassaia.com/_nuxt/projects.h8MlPfvY.js 7KB",
+   "https://www.cassaia.com/_nuxt/client-only.x8wGU4Np.js 0KB",
+   "https://www.cassaia.com/_nuxt/services.vgYUpVjY.js 13KB",
+   "https://www.cassaia.com/_nuxt/brands.-cRP2N2p.js 11KB",
+   "https://www.cassaia.com/_nuxt/Brands.JfwEAs92.js 4KB",
+   "https://www.cassaia.com/_nuxt/ProcessList.mB9Skllh.js 7KB",
+   "https://www.cassaia.com/_nuxt/real-estate.wffVwo5P.js 14KB",
+   "https://www.cassaia.com/_nuxt/about-us.g7y5Mql-.js 18KB",
+   "https://www.cassaia.com/_nuxt/contact.hl2JF9La.js 9KB",
+   "https://www.cassaia.com/_nuxt/arrow-bottom-white.5kAgYodZ.js 0KB",
+   "https://www.cassaia.com/_nuxt/workbox-window.prod.es5.prqDwDSL.js 0KB",
+   "inline 902KB"
+  ],
+  "inits": [
+   "initIntroSection",
+   "initSection2",
+   "initProjectSection",
+   "createEvent",
+   "initEvent",
+   "createElement",
+   "createElementNS",
+   "initSlides",
+   "createElements",
+   "setupState",
+   "createText",
+   "createComment",
+   "createApp",
+   "setupContext",
+   "createTextNode",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "initMouseEvent",
+   "initDOM",
+   "initListeners",
+   "initEvents",
+   "initCircle",
+   "animateTitles"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "CustomEase",
+   "Observer",
+   "ScrollSmoother",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "clipPath",
+   "pin",
+   "scrub",
+   "matchMedia",
+   "pinSpacing",
+   "containerAnimation",
+   "clip-path",
+   "sessionStorage",
+   "IntersectionObserver"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://www.cassaia.com/manifest.webmanifest"
+  ],
+  "models": [
+   "https://www.cassaia.com/_nuxt/builds/meta/b4585b4f-e1fa-4178-9672-ebb95f0c4e80.json"
+  ],
+  "fontsFiles": [
+   "Ogg-Regular.TS5ZfdlG.woff",
+   "Moderat-Bold.UkK4CkQN.woff2",
+   "Moderat-Regular.r-wqi1Bx.woff2",
+   "Moderat-Medium.G4abSqTZ.woff2",
+   "Moderat-Mono-Medium.xio0NaXi.ttf",
+   "Moderat-Mono-Regular.SckRLlF9.ttf",
+   "Moderat-Mono-Bold.tLFDL7kI.ttf"
+  ],
+  "totalMB": 32
+ }
+}

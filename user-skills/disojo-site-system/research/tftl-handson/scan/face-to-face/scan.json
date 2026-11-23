@@ -1,0 +1,106 @@
+{
+ "slug": "face-to-face",
+ "url": "https://13322566869.com/",
+ "errors": [],
+ "facts": {
+  "title": "Digital Producer - Specialised in Design",
+  "h": 15721,
+  "attrs": {
+   "data-lazy-src": 19,
+   "data-src": 10,
+   "data-ssr": 1
+  },
+  "fonts": [
+   "HelveticaNeue-Thin",
+   "FoundersGrotesk-Light",
+   "FoundersGrotesk-Medium"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 3,
+  "imgs": 34,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 26,
+ "wheelEndY": 3863,
+ "code": {
+  "scripts": [
+   "https://13322566869.com/_nuxt/default.733b66fd.js 2KB",
+   "https://13322566869.com/_nuxt/index.7f0e4327.js 19KB",
+   "https://13322566869.com/_nuxt/is-video.b47a4014.js 1KB",
+   "https://13322566869.com/_nuxt/EaseSlider.3a1163ee.js 3KB",
+   "https://13322566869.com/_nuxt/Link.d8229fef.js 1KB",
+   "https://13322566869.com/_nuxt/Footer.a6c709f3.js 1KB",
+   "https://13322566869.com/_nuxt/setHeaderMeta.d0135f55.js 0KB",
+   "https://13322566869.com/_nuxt/delay.7101e9ce.js 0KB",
+   "https://13322566869.com/_nuxt/entry.3d26c39b.js 344KB",
+   "inline 8KB",
+   "https://13322566869.com/_nuxt/setPhotoFormat.dfb16e11.js 0KB",
+   "https://13322566869.com/_nuxt/_slug_.a6b589b2.js 40KB"
+  ],
+  "inits": [
+   "createElement",
+   "initHeroSection",
+   "initWorksSection",
+   "initPreviewSection",
+   "initPrioritizeSection",
+   "initFindingSection",
+   "setupState",
+   "createText",
+   "createComment",
+   "createApp",
+   "setupContext",
+   "createElementNS",
+   "createTextNode",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "createEvent",
+   "initMouseEvent",
+   "initCarousel",
+   "setupEventListeners",
+   "initCustomEvent"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "CustomEase",
+   "Draggable",
+   "Observer",
+   "ScrollSmoother",
+   "InertiaPlugin",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "IntersectionObserver",
+   "scrub",
+   "matchMedia",
+   "pin",
+   "pinSpacing",
+   "containerAnimation",
+   "clipPath",
+   "sessionStorage"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://13322566869.com/_nuxt/is-video.b47a4014.js",
+   "https://13322566869.com/_nuxt/is-video.21d84e67.css",
+   "https://api.13322566869.com/uploads/aexlab_dashboard_73c69f3522.mp4",
+   "https://api.13322566869.com/uploads/video_2c7a5f78b4.webm",
+   "https://api.13322566869.com/uploads/aexlab_dashboard_73c69f3522.mp4",
+   "https://api.13322566869.com/uploads/aexlab_dashboard_73c69f3522.mp4"
+  ],
+  "models": [],
+  "fontsFiles": [
+   "FoundersGrotesk-Light.ff890ce3.woff2",
+   "FoundersGrotesk-Medium.c1b5264c.woff2",
+   "HelveticaNeue-Thin.9056df93.woff2"
+  ],
+  "totalMB": 43.8
+ }
+}

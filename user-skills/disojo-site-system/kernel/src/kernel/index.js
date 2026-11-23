@@ -7,6 +7,8 @@ import { setReveals, introReveals, scrollReveals } from './reveal.js';
 import { startScroll, bindAnchors, lockScroll, unlockScroll } from './scroll.js';
 import { initRoll, initMagnetic, initCursor, initFollower } from './hover.js';
 import { startTransitions } from './transition.js';
+import { use, runPage, runOnce } from './registry.js';
+import './modules.js';
 
 // live clock: <time data-clock="Asia/Kolkata"></time>
 function initClock(root) {
@@ -67,6 +69,7 @@ async function boot(container, first, uncover) {
   initFollower(container);
   initClock(container);
   bindAnchors(container);
+  runPage(container);
   const tl = gsap.timeline();
   if (uncover) tl.add(uncover(), 0);
   tl.add(introReveals(container), uncover ? T.slow * 0.55 : 0.1);
@@ -78,4 +81,8 @@ async function boot(container, first, uncover) {
 
 initCursor();
 initMenu();
+runOnce();
 startTransitions({ boot, closeMenu: () => menuOpen() && setMenu(false) });
+
+// a site registers its own moments the same way: import { use } from '.../kernel/index.js'
+export { use };

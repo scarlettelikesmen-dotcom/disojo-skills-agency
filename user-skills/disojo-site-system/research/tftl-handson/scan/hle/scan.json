@@ -1,0 +1,137 @@
+{
+ "slug": "hle",
+ "url": "https://hle.io/",
+ "errors": [
+  "wheel did not move the page (hijacked or blocked)"
+ ],
+ "facts": {
+  "title": "HLE",
+  "h": 864,
+  "attrs": {
+   "data-engine": 1
+  },
+  "fonts": [
+   "PPSupplyMonoRegular",
+   "PPSupplySansRegular"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 1,
+  "videos": 1,
+  "imgs": 0,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 3,
+ "wheelEndY": 0,
+ "code": {
+  "scripts": [
+   "https://hle.io/_nuxt/runtime.js 36KB",
+   "https://hle.io/_nuxt/pages/index.js 34KB",
+   "https://hle.io/_nuxt/commons/app.js 2845KB",
+   "https://hle.io/_nuxt/pages/about.js 32KB",
+   "https://hle.io/scripts/draco/draco_wasm_wrapper.js 52KB",
+   "https://hle.io/_nuxt/pages/contacts.js 123KB",
+   "inline 14KB"
+  ],
+  "inits": [
+   "createElement",
+   "createRecord",
+   "createClass",
+   "createURL",
+   "createError",
+   "createInstance",
+   "createNonEnumerableProperty",
+   "createProperty",
+   "createMethod",
+   "createPropertyDescriptor",
+   "createIteratorConstructor",
+   "createTextNode",
+   "createWellKnownSymbol",
+   "createEvent",
+   "initEvent",
+   "createHTML",
+   "createTypedArrayConstructor",
+   "createObjectURL",
+   "createMixin",
+   "createRoute",
+   "createRouteMap",
+   "createMatcher",
+   "setupScroll",
+   "createNavigationRedirectedError",
+   "createRouterError",
+   "createNavigationDuplicatedError",
+   "createNavigationCancelledError",
+   "createNavigationAbortedError",
+   "setupListeners",
+   "createHref",
+   "createEmptyVNode",
+   "createTextVNode",
+   "initProxy",
+   "createFnInvoker",
+   "createOnceHandler",
+   "initProvide",
+   "initInjections",
+   "createFunctionalComponent",
+   "createComponentInstanceForVnode",
+   "createComponent",
+   "createAsyncPlaceholder",
+   "initRender",
+   "initEvents",
+   "initLifecycle",
+   "initState",
+   "initProps",
+   "initMethods",
+   "initData",
+   "initComputed",
+   "initWatch",
+   "createComputedGetter",
+   "createGetterInvoker",
+   "createWatcher",
+   "initMixin",
+   "initInternalComponent",
+   "initUse",
+   "initExtend",
+   "initAssetRegisters",
+   "initGlobalAPI",
+   "createElementNS",
+   "createComment",
+   "createKeyToOldIdx",
+   "createPatchFunction",
+   "createRmCb",
+   "createElm",
+   "createChildren",
+   "initComponent",
+   "createLogger",
+   "createNamespacedHelpers",
+   "createResolveAndReject_",
+   "animateFooter"
+  ],
+  "gsapPlugins": [
+   "Observer"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "clippath"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://hle.io/models/tv_square.mp4",
+   "https://hle.io/models/tv_square.mp4"
+  ],
+  "models": [
+   "https://hle.io/models/tv1.glb",
+   "https://hle.io/lottie/logo.json",
+   "https://hle.io/lottie/loader.json",
+   "https://hle.io/lottie/logo.json"
+  ],
+  "fontsFiles": [
+   "PPSupplySans-Regular.otf",
+   "PPSupplyMono-Regular.otf"
+  ],
+  "totalMB": 7.8
+ }
+}

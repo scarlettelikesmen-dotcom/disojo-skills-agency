@@ -8,8 +8,12 @@
 //   data-reveal="block"  any box: rises a little and fades in
 //   data-reveal="rule"   lines and dividers: draw from the left
 //   data-reveal="media"  images and video: frame opens, picture settles from 1.15
+//   data-reveal="turn"   display type: each char turns in on Y and rises half a line (TFTL heads)
+//   data-reveal="focus"  a calm line: arrives out of focus and sharpens (Jesko)
 // Options: data-reveal-delay="0.2", data-reveal-group on a wrapper makes its children
-// start together from one trigger, data-reveal-now plays on page intro instead of scroll.
+// start together from one trigger, data-reveal-now plays on page intro instead of scroll,
+// data-reveal-once keeps it shown. Without it, scrolling back above an element resets it
+// (once fully off screen) so it plays again on the way down, as on ERA and Son Daven.
 import { gsap, ScrollTrigger, SplitText, T, reduced } from './motion.js';
 import { onCleanup } from './life.js';
 
@@ -36,6 +40,16 @@ const K = {
     set: el => gsap.set(split(el, 'words,chars').chars, { opacity: 0, yPercent: 40, rotateX: -90, transformOrigin: '50% 100%' }),
     show: (el, d) => gsap.to(split(el, 'words,chars').chars, { opacity: 1, yPercent: 0, rotateX: 0, duration: T.slow, stagger: T.stagger / 2.5, delay: d }),
     hide: el => gsap.to(split(el, 'words,chars').chars, { opacity: 0, yPercent: -40, rotateX: 90, duration: T.fast, ease: 'in', stagger: T.stagger / 5 }),
+  },
+  turn: {
+    set: el => gsap.set(split(el, 'words,chars').chars, { opacity: 0, yPercent: 50, rotateY: 90, transformOrigin: '50% 50% -0.2em' }),
+    show: (el, d) => gsap.to(split(el, 'words,chars').chars, { opacity: 1, yPercent: 0, rotateY: 0, duration: T.slower, stagger: T.stagger / 2, delay: d }),
+    hide: el => gsap.to(split(el, 'words,chars').chars, { opacity: 0, yPercent: -30, rotateY: -90, duration: T.fast, ease: 'in', stagger: T.stagger / 5 }),
+  },
+  focus: {
+    set: el => gsap.set(el, { opacity: 0, filter: 'blur(14px)', scale: 1.03 }),
+    show: (el, d) => gsap.to(el, { opacity: 1, filter: 'blur(0px)', scale: 1, duration: T.slower * 1.3, ease: 'soft', delay: d }),
+    hide: el => gsap.to(el, { opacity: 0, filter: 'blur(10px)', duration: T.fast, ease: 'in' }),
   },
   block: {
     set: el => gsap.set(el, { opacity: 0, y: '2.5rem' }),
@@ -86,9 +100,12 @@ export function scrollReveals(root) {
     if (seen.has(trigger)) return;
     seen.add(trigger);
     const members = trigger === el ? [el] : [...trigger.querySelectorAll('[data-reveal]')].filter(m => !m._shown);
-    ScrollTrigger.create({
-      trigger, start: 'clamp(top 88%)', once: true,
-      onEnter: () => members.forEach((m, i) => { m._shown = true; K[kindOf(m)].show(m, delayOf(m) + i * T.stagger * 1.5); }),
+    const play = () => members.forEach((m, i) => { m._shown = true; K[kindOf(m)].show(m, delayOf(m) + i * T.stagger * 1.5); });
+    const once = trigger.hasAttribute('data-reveal-once') || members.every(m => m.hasAttribute('data-reveal-once'));
+    ScrollTrigger.create({ trigger, start: 'clamp(top 88%)', once, onEnter: play });
+    if (!once) ScrollTrigger.create({
+      trigger, start: 'top bottom',
+      onLeaveBack: () => members.forEach(m => { m._shown = false; gsap.killTweensOf(m._split ? [m, ...(m._split.chars || []), ...(m._split.words || []), ...(m._split.lines || [])] : m); K[kindOf(m)].set(m); }),
     });
   });
 }

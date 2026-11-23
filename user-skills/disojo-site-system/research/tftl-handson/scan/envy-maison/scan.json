@@ -1,0 +1,109 @@
+{
+ "slug": "envy-maison",
+ "url": "https://app.envymaison.com/",
+ "errors": [],
+ "facts": {
+  "title": "Envy Maison",
+  "h": 17725,
+  "attrs": {
+   "data-ssr": 1,
+   "data-cf-beacon": 1,
+   "data-style": 1
+  },
+  "fonts": [
+   "HelveticaNeue",
+   "HelveticaNeue-Bold",
+   "PPEditorialNew-Ultralight"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 1,
+  "imgs": 34,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 26,
+ "wheelEndY": 15600,
+ "code": {
+  "scripts": [
+   "https://app.envymaison.com/_nuxt/default.420440b1.js 22KB",
+   "https://app.envymaison.com/_nuxt/index.356252a9.js 20KB",
+   "https://app.envymaison.com/_nuxt/openPopup.bf9c4967.js 1KB",
+   "https://app.envymaison.com/_nuxt/error-component.ca3d5667.js 0KB",
+   "https://app.envymaison.com/_nuxt/entry.f104813d.js 302KB",
+   "https://cdn.segment.com/analytics.js/v1/yqkiDBAjZiwwd2BgJPcu2gXv5VfnEQov/analytics.min.js 112KB",
+   "inline 3KB"
+  ],
+  "inits": [
+   "initFirstScreenAnimation",
+   "initScrollAnimation",
+   "initTrendingSection",
+   "setupState",
+   "createElement",
+   "setupContext",
+   "createText",
+   "createComment",
+   "createApp",
+   "createComponentInstance",
+   "setupComponent",
+   "createElementNS",
+   "createTextNode",
+   "createBlock",
+   "createCommentVNode",
+   "createElementBlock",
+   "createElementVNode",
+   "createHydrationRenderer",
+   "createPropsRestProxy",
+   "createRenderer",
+   "createSSRApp",
+   "createSlots",
+   "createStaticVNode",
+   "createTextVNode",
+   "createVNode",
+   "initCustomFormatter",
+   "initDirectivesForSSR",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "createEvent",
+   "initMouseEvent",
+   "initRemoteMetrics",
+   "createMessageId",
+   "createStorage",
+   "createStore"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "CustomEase",
+   "Observer",
+   "ScrollSmoother",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "matchMedia",
+   "scrub",
+   "sessionStorage",
+   "pin",
+   "pinSpacing",
+   "containerAnimation",
+   "Intl.DateTimeFormat"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://app.envymaison.com/video/motion.mp4"
+  ],
+  "models": [],
+  "fontsFiles": [
+   "HelveticaNeue.8938806f.woff2",
+   "HelveticaNeue-Bold.f8f5b768.woff2",
+   "KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+   "PPEditorialNew-Ultralight.4701a413.woff2"
+  ],
+  "totalMB": 39.5
+ }
+}

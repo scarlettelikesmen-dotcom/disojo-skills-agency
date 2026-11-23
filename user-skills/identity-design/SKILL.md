@@ -55,6 +55,8 @@ Craft positions (read the one for the step you are on):
 Split the work by what each tool is good at:
 - **Image model: ChatGPT only** (Tejjo, 2026-11-22: exclusive, few intentional prompts, never spam rounds): gesture, hand energy, material, character, the world around the mark. Long, researched prompts with reference images, saying what each image is for. Grammar and round rules: `disojo-identity-lab/references/prompt-engine.md` (WORLD, SHEET, FINISH, IN-WORD). Paste prompts in chat as code blocks; the board copy buttons failed for Tejjo.
 - **Code**: exact geometry, the clean rebuild, optical corrections, grids, patterns, motion, tests. Pipeline: `disojo-logo-design` (fonttools, HarfBuzz, shapely, outlined type plus constructed geometry).
+- **Match the tool to the reference's genre before writing any prompt** (lesson 2026-11-23). Constructed geometric symbols (Softriver, Shift, Cortexa, Sanora) are made in code; see `references/marks.md`, "Constructed symbols". Gesture, ink, material and worlds are made in ChatGPT. Two Disojo rounds were lost by asking ChatGPT for geometry.
+- **When Tejjo points at a reference, start from what it does, not from my last idea.** Name its construction in one line, and check that each new direction uses that construction. On 2026-11-23 I carried my "liquid settle" story into every prompt after Tejjo pointed at a crisp geometric S.
 - Explore wide in code and words first (many rough marks are cheap in code); spend ChatGPT prompts only on the picked idea, 1 to 3 at a time.
 - Never brush or calligraphy. Never living designers' names in prompts. Never copy a reference's shapes.
 

@@ -49,3 +49,27 @@ Written 2026-11-22 as a senior designer's positions, checked against Tejjo's ver
 - Can a person describe it in five words after seeing it once? ("a ring of ink", "an arch with a hill")
 - Does it carry the feel of the name or a fact of the business, rather than a meaning I explained?
 - Would I put it beside the references Tejjo loves? If not, say what is missing, do not send it.
+
+## Constructed symbols (studied 2026-11-23, after two failed Disojo mark rounds)
+Every small mark Tejjo rated 5 in the studio study is built the same way:
+- Softriver S: two identical heavy leaf shapes, one turned 180°. The white cut between them draws the S.
+- Shift S (`andrija/shift-08`): four leaf shapes on a grid.
+- Sanora: circles and half circles.
+- Cortexa star (`cortexa-02`): four quarter circles.
+- Graticule: ellipses on a grid.
+- Remono R and the Smash star: the mark is lifted out of the wordmark itself.
+
+**The method:**
+- **One primitive, repeated.** A leaf, a quarter circle, a half disc or a rounded square, used 2 to 4 times. Rotate or mirror the copies.
+- **Negative space draws the letter.** Most of the shape is solid; one or two clean cuts make the letter.
+- **Crisp, calm curves.** Compass-and-ruler arcs. No wobble or hand gesture, and nothing liquid.
+- **Rotational symmetry** where it fits.
+- **Grid and construction shown** as a book page.
+- **Survives 16px** because it is mostly solid and the cuts are wide.
+- **The primitive comes from the wordmark** (its stems, corners, bowls), so the two read as one family.
+
+**Who makes it:** code, not the image model. This is exact geometry, which is code's strength. ChatGPT is weakest at it and fills the gap with mush, the D-with-a-moon and the brushstroke O (2026-11-23).
+- Explore 30 to 60 constructions in code.
+- Cut them to 9 on a sheet beside the reference at the same size.
+- Show Tejjo only after that.
+- ChatGPT comes in after the pick, for the world: lightbox, badge, app icon on a phone.

@@ -30,10 +30,12 @@ CustomEase.create('out', curve('--e-out', '.16,1,.35,1'));      // arrivals, rev
 CustomEase.create('in', curve('--e-in', '.5,0,.75,0'));         // exits, hides
 CustomEase.create('inout', curve('--e-inout', '.76,0,.24,1'));  // panels, page wipes, menus
 CustomEase.create('soft', curve('--e-soft', '.25,.1,.25,1'));   // fades, colour
+CustomEase.create('write', curve('--e-write', '.333,0,.667,1')); // lines drawing, paths, steady travel
+CustomEase.create('dive', curve('--e-dive', '.6,0,0,1'));        // a long push into a picture or space
 
 export const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 export const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 
-gsap.defaults({ ease: 'out', duration: T.normal });
+gsap.defaults({ ease: 'out', duration: T.normal, overwrite: 'auto' });
 
 export { gsap, ScrollTrigger, SplitText };

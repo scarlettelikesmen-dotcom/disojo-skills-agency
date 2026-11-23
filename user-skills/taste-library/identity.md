@@ -37,3 +37,4 @@ No benchmark set for identity has been approved yet. Ask Tejjo for 10 to 20 iden
   - Square O with a liquid hole
   - Liquid-bowl D
 - **Liked:** the Softriver S. A bold one-letter monogram with heavy opposing swash strokes, sitting in a circle avatar. Why exactly is not asked yet.
+| 2026-11-23 | Disojo mark round 2 (heavy O cut, slit D, J) via ChatGPT | "bad results, go study the references again" | Constructed geometric marks are made in code, not ChatGPT; start from the reference's construction, not my old story. |

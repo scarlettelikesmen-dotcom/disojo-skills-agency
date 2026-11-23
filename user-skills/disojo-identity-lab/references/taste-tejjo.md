@@ -36,3 +36,20 @@ Read this before writing a single prompt. Every line is a verdict they actually 
 5. **No world.** The refs show marks on jackets, objects, chrome renders and motion. Mine showed marks floating on paper, so nobody could feel the brand.
 6. **I asked the image model for exact geometry** (perfect circles, 4x4 grids), which is its weakest skill and my strongest. The split of work was backwards.
 7. **I never put my output next to a real reference** before sending (the rule from 2026-10-21, ignored).
+
+## 2026-11-22/23, Disojo standalone mark, rounds 1 and 2: all rejected
+- **Round 1:**
+  - O mid-settle
+  - Square O with a liquid hole
+  - Liquid D
+- **Tejjo then pointed at the Softriver S:** "the thickness and the design".
+- **Round 2:**
+  - Heavy O with a swash cut: came out as a brushstroke on a disc.
+  - Heavy D with a slit: came out as a slab D with a moon.
+  - J: came out as a bubble J.
+- **Tejjo:** "nah i really dont like where we are going with this, bad results, go study the references again".
+- **Lesson:**
+  1. Wrong tool. The reference is constructed geometry (two identical leaves turned 180°), and I sent it to ChatGPT.
+  2. Wrong story. I kept forcing "liquid to square" into it, when the reference has no wobble at all.
+  3. I never put the prompt's likely output next to the reference before sending.
+- **Fix:** `identity-design/references/marks.md`, "Constructed symbols".

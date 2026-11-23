@@ -1,0 +1,143 @@
+{
+ "slug": "brave",
+ "url": "https://braveaction.org/",
+ "errors": [],
+ "facts": {
+  "title": "Brave Action Ukraine",
+  "h": 32013,
+  "attrs": {
+   "data-capo": 1,
+   "data-height": 1,
+   "data-swiper-slide-index": 3,
+   "data-ssr": 1
+  },
+  "fonts": [
+   "NeueMontreal",
+   "NeueMontrealBold",
+   "RightGrotesk"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 11,
+  "imgs": 92,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 26,
+ "wheelEndY": 18000,
+ "code": {
+  "scripts": [
+   "https://braveaction.org/_nuxt/XGHn4MZS.js 0KB",
+   "https://braveaction.org/_nuxt/CEeo6ypA.js 2KB",
+   "https://braveaction.org/_nuxt/Dv4kuxP1.js 3KB",
+   "https://braveaction.org/_nuxt/Ce0YrMWh.js 116KB",
+   "https://braveaction.org/js/jscolor.js 61KB",
+   "https://braveaction.org/_nuxt/Gk0tKijZ.js 877KB",
+   "https://braveaction.org/_nuxt/3HU1P9O4.js 29KB",
+   "inline 495KB"
+  ],
+  "inits": [
+   "animateString",
+   "initAnimation",
+   "initSlider",
+   "initTimer",
+   "initHorizontalScrollElementAnimations",
+   "animateTitle",
+   "animateText",
+   "animatePhotoScroll",
+   "animateLines",
+   "animatePhotoUp",
+   "animatePhotoFadeScale",
+   "initAnim",
+   "createElement",
+   "createEvent",
+   "initEvent",
+   "createPadCanvas",
+   "createLinearGradient",
+   "createSliderGradient",
+   "createASliderGradient",
+   "createTextNode",
+   "initValue",
+   "initAlpha",
+   "createText",
+   "createComment",
+   "setupState",
+   "setupContext",
+   "createApp",
+   "createComponentInstance",
+   "setupComponent",
+   "createPolicy",
+   "createHTML",
+   "createElementNS",
+   "createTreeWalker",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "createLabel",
+   "createClone",
+   "initMouseEvent",
+   "animateHTMLLines",
+   "animatePhotoRotate",
+   "initPreloader",
+   "initSlides",
+   "createElements",
+   "setupString",
+   "initSwiper",
+   "initPlayers",
+   "initSliders",
+   "animateTextInPosts",
+   "animateFromRight",
+   "animatePhotoScale"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "CustomEase",
+   "Observer",
+   "ScrollSmoother",
+   "DrawSVGPlugin",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "matchMedia",
+   "scrub",
+   "containerAnimation",
+   "IntersectionObserver",
+   "sessionStorage",
+   "Intl.DateTimeFormat",
+   "pin",
+   "pinSpacing",
+   "clip-path",
+   "clipPath"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/draft/aqneziphsmghmnw2cb2fq7f747zrhnqkl1vbvzpb7mghu2fk-kpeul8iyz0xkxwf6mel2gckkbgopiy3vm-8vhl2trvtdf4akjmqo0gcnw-1768988431fedM5.mp4?id=12066",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/JULIUS/video-2025-06-19-driving-by-burnt-out-tank-1750355236sUH00.mp4?id=11692#t=0.1",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/draft/pavutina-178715977062N4m.mp4?id=12208#t=0.1",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/draft/aqodnarp47ej6f-20eysjox44uy4vekz6rxd-pcfnbf53tlaxjxqzmej5js8pt8godgr9i-niw-fu4c0aazhmzyrmkkqpbxpy6xsajyisa-1755978760Maeob.mp4?id=11796",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/JULIUS/video-2025-06-19-driving-by-burnt-out-tank-1750355236sUH00.mp4?id=11692#t=0.1",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/JULIUS/video-2025-06-19-driving-by-burnt-out-tank-1750355236sUH00.mp4?id=11692#t=0.1",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/draft/aqneziphsmghmnw2cb2fq7f747zrhnqkl1vbvzpb7mghu2fk-kpeul8iyz0xkxwf6mel2gckkbgopiy3vm-8vhl2trvtdf4akjmqo0gcnw-1768988431fedM5.mp4?id=12066",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/LEV/world-cup-in-valencia-2026-1776957060G4Hrv.mov?id=12135#t=0.1",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/LEV/world-cup-in-valencia-2026-1776957060G4Hrv.mov?id=12135#t=0.1",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/LEV/world-cup-in-valencia-2026-1776957060G4Hrv.mov?id=12135#t=0.1",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/draft/istoriya-bau-pro-vazke-risennya-1764251502PlLtd.mp4?id=11962#t=0.1",
+   "https://bau-media.s3.us-east-1.amazonaws.com/media_library/snow-eng-1737567236thy5k.mp4?id=11054#t=0.1"
+  ],
+  "models": [
+   "https://braveaction.org/_nuxt/builds/meta/e24c2771-a4b1-4cd9-af0e-b22fffcf6923.json"
+  ],
+  "fontsFiles": [
+   "PPNEUEMONTREAL-MEDIUM.CCwdazGK.woff2",
+   "PPRIGHTGROTESK-COMPACTDARK.DV1xoq0D.woff2",
+   "RIGHTGROTESK-COMPACTREGULAR.DkRbnlFw.woff2",
+   "PPNEUEMONTREAL-BOLD.CcIRRzy7.woff2"
+  ],
+  "totalMB": 62.4
+ }
+}

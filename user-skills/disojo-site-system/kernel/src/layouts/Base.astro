@@ -5,17 +5,20 @@ import '../styles/lab.css';
 interface Props { title: string; ns: string; desc?: string }
 const { title, ns, desc = 'Disojo motion kernel lab' } = Astro.props;
 const links = [['/', 'Index'], ['/second/', 'Second page']];
+const parts = [['#ink', 'Ink'], ['#ground', 'Ground'], ['#list', 'List']];
 ---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title><meta name="description" content={desc} /><meta name="robots" content="noindex" />
+  <link rel="icon" href="/fav.svg" data-away="/fav-away.svg" />
   <script is:inline>document.documentElement.classList.add('js')</script>
 </head>
 <body data-barba="wrapper">
-  <header class="nav">
+  <header class="nav" data-k-header data-follow-ground>
     <a href="/" class="mark" data-roll>Kernel lab</a>
+    <nav class="nav-l">{parts.map(([h, t]) => <a href={h} class="prog" data-progress={h} data-roll>{t}</a>)}</nav>
     <nav class="nav-l">{links.map(([h, t]) => <a href={h} data-roll data-cursor>{t}</a>)}</nav>
     <button class="menu-b" type="button" data-k-menu-toggle data-roll>Menu</button>
   </header>

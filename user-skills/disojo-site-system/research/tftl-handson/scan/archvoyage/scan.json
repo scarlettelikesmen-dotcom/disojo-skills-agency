@@ -1,0 +1,118 @@
+{
+ "slug": "archvoyage",
+ "url": "https://archvoyage.ae/",
+ "errors": [],
+ "facts": {
+  "title": "Archvoyage",
+  "h": 8620,
+  "attrs": {
+   "data-id": 3,
+   "data-ssr": 1
+  },
+  "fonts": [
+   "NeueMontreal",
+   "SuisseIntl"
+  ],
+  "libs": [
+   "__NUXT__"
+  ],
+  "canvases": 0,
+  "videos": 2,
+  "imgs": 97,
+  "gen": "",
+  "lang": "en"
+ },
+ "wheelFrames": 13,
+ "wheelEndY": 7756,
+ "code": {
+  "scripts": [
+   "https://archvoyage.ae/_nuxt/entry.YPAKmh3d.js 339KB",
+   "https://archvoyage.ae/_nuxt/index.N52Ra9gJ.js 22KB",
+   "https://archvoyage.ae/_nuxt/ForSale.DObTrXhB.js 5KB",
+   "https://archvoyage.ae/_nuxt/Button.DsjJ-bLs.js 0KB",
+   "https://archvoyage.ae/_nuxt/titleAnim.CszaPWUV.js 0KB",
+   "https://archvoyage.ae/_nuxt/ArrowDown.BETtDbQg.js 1KB",
+   "https://archvoyage.ae/_nuxt/Contact.D-xzsxJa.js 4KB",
+   "https://archvoyage.ae/_nuxt/Awards.aWEdVRRo.js 7KB",
+   "https://archvoyage.ae/_nuxt/DragCursor.DPcV-VC9.js 2KB",
+   "https://archvoyage.ae/_nuxt/Expertise.loTN4QAv.js 1KB",
+   "https://archvoyage.ae/_nuxt/List.Xuxzn0qK.js 5KB",
+   "https://archvoyage.ae/_nuxt/swiper.COee7uVM.js 58KB",
+   "https://archvoyage.ae/_nuxt/MoreButton.BK_q1TjK.js 1KB",
+   "https://archvoyage.ae/_nuxt/Plus.DQtF0hp8.js 0KB",
+   "https://archvoyage.ae/_nuxt/setPageMeta.DvPDcq0E.js 10KB",
+   "https://archvoyage.ae/_nuxt/workbox-window.prod.es5.DFjpnwFp.js 5KB",
+   "https://archvoyage.ae/_nuxt/workbox-window.prod.es5.DFjpnwFp.js 0KB",
+   "https://archvoyage.ae/_nuxt/index.DrPGMLen.js 15KB",
+   "inline 24KB",
+   "https://archvoyage.ae/_nuxt/about-us.DsRE29do.js 7KB",
+   "https://archvoyage.ae/_nuxt/OurMission.C42Ax4nB.js 3KB",
+   "https://archvoyage.ae/_nuxt/development.DyDQnlIQ.js 15KB",
+   "https://archvoyage.ae/_nuxt/_slug_.DXfBYvtQ.js 21KB",
+   "https://archvoyage.ae/_nuxt/Slider.RgheHn6-.js 12KB",
+   "https://archvoyage.ae/_nuxt/_slug_.CzZGPsDS.js 9KB",
+   "https://archvoyage.ae/_nuxt/contact.D_XnjpkF.js 3KB",
+   "https://archvoyage.ae/_nuxt/Form.CJOPYj32.js 9KB",
+   "https://archvoyage.ae/_nuxt/index.DIka7uFJ.js 3KB",
+   "https://archvoyage.ae/_nuxt/terms-of-use.CTOI4eoq.js 1KB",
+   "https://archvoyage.ae/_nuxt/Template.D4x9fmmx.js 2KB"
+  ],
+  "inits": [
+   "setupState",
+   "createElement",
+   "createText",
+   "createComment",
+   "createApp",
+   "setupContext",
+   "createElementNS",
+   "createTextNode",
+   "createTask",
+   "createDocumentFragment",
+   "createHref",
+   "createEvent",
+   "initMouseEvent",
+   "initEvent",
+   "initSlides",
+   "createElements"
+  ],
+  "gsapPlugins": [
+   "ScrollTrigger",
+   "CustomEase",
+   "Observer",
+   "ScrollSmoother",
+   "DrawSVGPlugin",
+   "SplitText"
+  ],
+  "eases": [],
+  "webgl": [],
+  "css": [
+   "clipPath",
+   "matchMedia",
+   "sessionStorage",
+   "pin",
+   "scrub",
+   "pinSpacing",
+   "containerAnimation",
+   "IntersectionObserver",
+   "clip-path"
+  ]
+ },
+ "media": {
+  "video": [
+   "https://archvoyage.ae/manifest.webmanifest",
+   "https://api.archvoyage.ae/uploads/Dubai_4_K_1_minute_on_Drone_DASH_5a830c17a1.mp4#t=0.1",
+   "https://api.archvoyage.ae/uploads/Dubai_4_K_1_minute_on_Drone_DASH_5a830c17a1.mp4#t=0.1",
+   "https://api.archvoyage.ae/uploads/Dubai_4_K_1_minute_on_Drone_DASH_5a830c17a1.mp4#t=0.1"
+  ],
+  "models": [
+   "https://archvoyage.ae/_nuxt/builds/meta/9febd4db-50ce-4f42-95cd-3784f227d2df.json"
+  ],
+  "fontsFiles": [
+   "SuisseIntl-Regular.AtYeqYOu.woff2",
+   "NeueMontreal-Regular.CosVl1EI.woff2",
+   "NeueMontreal-LightItalic.Dy7cTHEb.woff2",
+   "SuisseIntl-ThinItalic.BTdOPAED.woff2"
+  ],
+  "totalMB": 58.1
+ }
+}

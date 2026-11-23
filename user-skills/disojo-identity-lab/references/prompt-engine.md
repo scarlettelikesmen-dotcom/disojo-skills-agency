@@ -3,7 +3,7 @@
 ## Division of labour (the rule rounds 1–4 broke)
 - **Image model:** gesture, energy, material, character, melt, chrome, a world, presentation. Breadth.
 - **Claude (code):** exact geometry, grids, optical corrections, the clean vector, systems (pattern, motion, icons), testing.
-Never ask the image model for "perfect circles in a 4x4 grid". Ask it for what a human illustrator would bring.
+Never ask the image model for "perfect circles in a 4x4 grid", nor for a constructed letter mark (two leaves making an S, a cut D). That is code's job (2026-11-23, both Disojo rounds failed this way). Ask it for what a human illustrator would bring.
 
 ## Grammar: every prompt fills these slots, in this order
 1. **Format.** `WORLD`: one hero image with the flat logo AND its life (object, garment, sign). `SHEET`: a sketchbook page of 9 numbered, clearly different variations in one territory. `FINISH`: after a pick, the same mark flat black on white, centred, for tracing.
