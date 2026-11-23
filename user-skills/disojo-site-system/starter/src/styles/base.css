@@ -20,7 +20,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ul:hover{background-size:0 1px;background-position:100% 100%}
 .muted{color:var(--c-grey)}
 /* nav */
-.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:var(--s-4);padding:var(--s-3) var(--gutter);transition:transform var(--d-base) var(--e-out),background var(--d-base)}
+.nav{position:fixed;inset:0 0 auto;z-index:75;display:flex;align-items:center;justify-content:space-between;gap:var(--s-4);padding:var(--s-3) var(--gutter);transition:background var(--d-base)}
 .nav.hide{transform:translateY(-110%)}
 /* PLUMBING ONLY. Never ship this nav: design the nav from the picked idea (hard rule 2026-11-10, no blurred bar, no same-size links). The gate fails it. */
 .nav.solid{background:var(--c-paper)}
@@ -32,7 +32,7 @@ body.dark .nav.solid{background:color-mix(in srgb,var(--c-ink) 92%,transparent)}
 .nav-r{display:flex;align-items:center;gap:var(--s-2)}
 .menu-b{min-height:40px;padding:0 12px;display:none}
 .pm{position:fixed;inset:0;z-index:49;background:var(--c-ink);color:var(--c-paper);padding:calc(var(--sec-sm) + 40px) var(--gutter) var(--s-6);display:flex;flex-direction:column;justify-content:space-between}
-.pm[hidden]{display:none}
+.veil{background:var(--c-ink)}
 .pm nav{display:flex;flex-direction:column;gap:var(--s-2)}
 .pm-foot{display:flex;flex-direction:column;gap:var(--s-2)}
 .pm-foot a{min-height:40px;display:flex;align-items:center}
@@ -68,9 +68,7 @@ body.dark .nav.solid{background:color-mix(in srgb,var(--c-ink) 92%,transparent)}
 .foot{padding:var(--sec-sm) var(--gutter) var(--s-5)}
 .foot-base{display:flex;justify-content:space-between;gap:var(--s-3);flex-wrap:wrap;padding-top:var(--s-5);border-top:1px solid color-mix(in srgb,currentColor 16%,transparent)}
 .credit{opacity:.55;transition:opacity var(--d-fast)}.credit:hover{opacity:1}
-/* reveal */
-[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity var(--d-slow) var(--e-out),transform var(--d-slow) var(--e-out)}
-[data-reveal].in{opacity:1;transform:none}
+/* reveal: the kernel sets hidden states and plays them (src/kernel/reveal.js) */
 /* grain (tokens.grain) */
 body.grain::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 @media (max-width:860px){
@@ -78,4 +76,4 @@ body.grain::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:
   .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
   .foot a{min-height:40px;display:inline-flex;align-items:center}
 }
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}[data-reveal]{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}

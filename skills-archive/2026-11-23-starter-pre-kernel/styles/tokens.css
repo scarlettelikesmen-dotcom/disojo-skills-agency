@@ -1,0 +1,80 @@
+:root {
+  --f-sans: 'Inter Tight', system-ui, sans-serif;
+  --f-display: 'Inter Tight', system-ui, sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --t-label: clamp(0.75rem, 0.7283rem + 0.08913vw, 0.8125rem);
+  --t-label-w: 500;
+  --t-label-ls: -0.01em;
+  --t-label-lh: 1.25;
+  --t-label-f: var(--f-mono);
+  --t-small: clamp(0.875rem, 0.8533rem + 0.08913vw, 0.9375rem);
+  --t-small-w: 500;
+  --t-small-ls: -0.01em;
+  --t-small-lh: 1.3;
+  --t-small-f: var(--f-sans);
+  --t-body: clamp(1rem, 0.9566rem + 0.1783vw, 1.125rem);
+  --t-body-w: 500;
+  --t-body-ls: -0.01em;
+  --t-body-lh: 1.3;
+  --t-body-f: var(--f-sans);
+  --t-lead: clamp(1.188rem, 1.079rem + 0.4456vw, 1.5rem);
+  --t-lead-w: 500;
+  --t-lead-ls: -0.015em;
+  --t-lead-lh: 1.2;
+  --t-lead-f: var(--f-sans);
+  --t-h3: clamp(1.375rem, 1.158rem + 0.8913vw, 2rem);
+  --t-h3-w: 700;
+  --t-h3-ls: -0.02em;
+  --t-h3-lh: 1.1;
+  --t-h3-f: var(--f-display);
+  --t-h2: clamp(2.125rem, 1.473rem + 2.674vw, 4rem);
+  --t-h2-w: 700;
+  --t-h2-ls: -0.03em;
+  --t-h2-lh: 1.0;
+  --t-h2-f: var(--f-display);
+  --t-display: clamp(2.75rem, 0.9251rem + 7.487vw, 8rem);
+  --t-display-w: 700;
+  --t-display-ls: -0.04em;
+  --t-display-lh: 0.92;
+  --t-display-f: var(--f-display);
+  --t-mega: clamp(4rem, -0.258rem + 17.47vw, 16.25rem);
+  --t-mega-w: 700;
+  --t-mega-ls: -0.05em;
+  --t-mega-lh: 0.85;
+  --t-mega-f: var(--f-display);
+  --c-ink: #0B0B0A;
+  --c-paper: #E9E8E3;
+  --c-accent: #FF4A1C;
+  --c-grey: #8E8A84;
+  --s-1: clamp(0.375rem, 0.3316rem + 0.1783vw, 0.5rem);
+  --s-2: clamp(0.625rem, 0.5816rem + 0.1783vw, 0.75rem);
+  --s-3: clamp(0.875rem, 0.8316rem + 0.1783vw, 1rem);
+  --s-4: clamp(1.25rem, 1.163rem + 0.3565vw, 1.5rem);
+  --s-5: clamp(1.75rem, 1.663rem + 0.3565vw, 2rem);
+  --s-6: clamp(2rem, 1.826rem + 0.713vw, 2.5rem);
+  --s-7: clamp(2.25rem, 1.989rem + 1.07vw, 3rem);
+  --s-8: clamp(3rem, 2.479rem + 2.139vw, 4.5rem);
+  --sec-sm: clamp(3rem, 2.305rem + 2.852vw, 5rem);
+  --sec-md: clamp(4rem, 2.957rem + 4.278vw, 7rem);
+  --sec-lg: clamp(5.5rem, 3.936rem + 6.417vw, 10rem);
+  --sec-top: clamp(7rem, 4.567rem + 9.982vw, 14rem);
+  --gutter: clamp(1rem, 0.8262rem + 0.713vw, 1.5rem);
+  --cols: 12;
+  --wrap: min(100% - 2 * var(--gutter), 1760px);
+  --col: calc((var(--wrap) - (var(--cols) - 1) * var(--gutter)) / var(--cols));
+  --r-ctl: 3px;
+  --r-card: 3px;
+  --e-io: cubic-bezier(0.83,0,0.17,1);
+  --e-out: cubic-bezier(0.16,1,0.3,1);
+  --d-fast: 0.3s;
+  --d-base: 0.5s;
+  --d-slow: 0.75s;
+}
+.t-label{font-family:var(--t-label-f);font-size:var(--t-label);font-weight:var(--t-label-w);letter-spacing:var(--t-label-ls);line-height:var(--t-label-lh);text-transform:uppercase;}
+.t-small{font-family:var(--t-small-f);font-size:var(--t-small);font-weight:var(--t-small-w);letter-spacing:var(--t-small-ls);line-height:var(--t-small-lh);}
+.t-body{font-family:var(--t-body-f);font-size:var(--t-body);font-weight:var(--t-body-w);letter-spacing:var(--t-body-ls);line-height:var(--t-body-lh);}
+.t-lead{font-family:var(--t-lead-f);font-size:var(--t-lead);font-weight:var(--t-lead-w);letter-spacing:var(--t-lead-ls);line-height:var(--t-lead-lh);}
+.t-h3{font-family:var(--t-h3-f);font-size:var(--t-h3);font-weight:var(--t-h3-w);letter-spacing:var(--t-h3-ls);line-height:var(--t-h3-lh);}
+.t-h2{font-family:var(--t-h2-f);font-size:var(--t-h2);font-weight:var(--t-h2-w);letter-spacing:var(--t-h2-ls);line-height:var(--t-h2-lh);}
+.t-display{font-family:var(--t-display-f);font-size:var(--t-display);font-weight:var(--t-display-w);letter-spacing:var(--t-display-ls);line-height:var(--t-display-lh);}
+.t-mega{font-family:var(--t-mega-f);font-size:var(--t-mega);font-weight:var(--t-mega-w);letter-spacing:var(--t-mega-ls);line-height:var(--t-mega-lh);}

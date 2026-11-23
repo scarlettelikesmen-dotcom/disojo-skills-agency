@@ -45,13 +45,14 @@ Toolbox (do not rebuild what is here): `SK=~/.claude/skills/disojo-site-system`.
 ### 3. The idea, in words
 - Three one-sentence ideas: "the first screen is ___ and it does ___", each from something only this client has. Then the one I would stand behind and why. (Three is Tejjo's rule; one strong pick inside it is mine.)
 - Each idea also says: the nav, the one device the site repeats, the type direction, and which technique (below) it needs, if any.
+- **And its moments, in words: how it opens (loader or none), how it changes page, how it closes.** Each comes from the same idea as the first screen (Tejjo 2026-11-23: "we have to have a new style for every client, we can't be keeping a template"). TFTL proved it: every close is the same small tool (one scrubbed trigger on the footer); what moves and why is new every time. The kernel's `data-close`, `data-film`, reveals and transitions are mechanisms, like a hinge; the lab pages are not looks to reuse. If a moment I propose could sit on another client's site unchanged, it is not designed yet.
 - Method and name test: `$SK/references/idea.md`. Tejjo picks before any pixel. Their words go in `brief/IDEA.md` as `PICKED BY TEJJO:`.
 
 ### 4. Type
 A specimen of 15 to 20 free fonts set in the client's own words, from Google Fonts' recent additions, Fontshare, Collletttivo and Velvetyne (`$SK/references/free-type.md`). Tejjo picks. Never reuse Bricolage or Hanken for a client. No Inter, Fraunces or Instrument Serif by default.
 
 ### 5. The first screen
-- Real material only. Astro page, the kernel's motion (`$SK/kernel/`: Lenis, GSAP, transitions, split reveals, rolls).
+- Real material only. Astro page, the kernel's motion (`$SK/kernel/`, already inside the starter since 2026-11-23: Lenis, GSAP, Barba transitions, split reveals, rolls, data-close, data-film). Every value (eases, durations, how far things move, the veil) is set from the idea in tokens, never left at the lab default.
 - Look at it at 1512x864 and 390 in the real browser, scrolling with a real wheel.
 - Put it beside the references: `node $SK/scripts/side_by_side.cjs <project>/qa/sbs <ourUrl> <refUrl>...`, and write what they do that we do not.
 - My verdict in writing before sending. If I would not put it beside the eight, it is not sent; I say what is missing.
@@ -86,6 +87,7 @@ Demo on Tejjo's go: `bash $SK/scripts/deploy_demo.sh <project> <slug>` (own noin
 - Free fonts only, licence recorded. Never lift a reference's fonts, copy, images or code.
 - No em dashes or hype words in copy.
 - Say plainly what is placeholder, AI-made or untested (real phones and Safari so far).
+- The bar is TFTL's work and the approved benchmarks, screen by screen and moment by moment (opening, scroll, page change, close), on the side-by-side sheet. Not our earlier builds.
 
 ## Proof
 This skill is on trial. Each real run gets a line in `~/Desktop/DISOJO SOLUTIONS/_system/proof-log.md`: the job, my verdict, Tejjo's first-look words, and the rounds it took. Log verdicts in `taste-library/websites.md` the same day.

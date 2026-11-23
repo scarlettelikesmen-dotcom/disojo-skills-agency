@@ -2,11 +2,15 @@
 import '../styles/tokens.css';
 import '../styles/base.css';
 import '../styles/sections.css';
+import '../styles/kernel.css';
 import Btn from '../components/Btn.astro';
 import FootPlace from '../components/FootPlace.astro';
 import { BRAND, yr } from '../data/brand.js';
-interface Props { title: string; desc?: string; route?: string; og?: string; dark?: boolean }
-const { title, desc = '', route = '/', og = '', dark = false } = Astro.props;
+// Motion: the Disojo kernel (src/kernel, synced from $SK/kernel by scripts/sync_kernel.sh). Barba keeps the
+// header, menu and veil outside the swapped container; the footer is inside it so data-close works per page.
+// ns = Barba namespace (one per page type). cursor: opt in only when the idea needs a cursor (see research kit-code.md).
+interface Props { title: string; desc?: string; route?: string; og?: string; dark?: boolean; ns?: string; cursor?: boolean }
+const { title, desc = '', route = '/', og = '', dark = false, ns = route === '/' ? 'home' : 'page', cursor = false } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -20,22 +24,26 @@ const { title, desc = '', route = '/', og = '', dark = false } = Astro.props;
   <meta property="og:title" content={title} /><meta property="og:description" content={desc} />
   {og && <meta property="og:image" content={og} />}
   <link rel="icon" href="/favicon.png" />
+  <script is:inline>document.documentElement.classList.add('js')</script>
   {BRAND.fonts && <><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href={BRAND.fonts} rel="stylesheet" /></>}
 </head>
-<body class:list={{ dark, grain: BRAND.grain }}>
+<body class:list={{ dark, grain: BRAND.grain }} data-barba="wrapper">
   <a class="skip" href="#main">Skip to content</a>
-  <header class="nav" id="nav">
+  <header class="nav" id="nav" data-k-header>
     <a class="mark t-small" href="/" aria-label={`${BRAND.name}, home`}><slot name="logo">{BRAND.name}</slot></a>
-    <nav class="links t-small" aria-label="Main">{BRAND.nav.map(([h, t]) => <a href={h} aria-current={route === h ? 'page' : undefined}>{t}</a>)}</nav>
+    <nav class="links t-small" aria-label="Main">{BRAND.nav.map(([h, t]) => <a href={h} data-roll aria-current={route === h ? 'page' : undefined}>{t}</a>)}</nav>
     <div class="nav-r">
       {BRAND.cta && <Btn href={BRAND.cta[0]} label={BRAND.cta[1]} size="sm" />}
-      <button class="menu-b t-label" id="menuB" aria-expanded="false" aria-controls="pm">Menu</button>
+      <button class="menu-b t-label" type="button" data-k-menu-toggle data-roll aria-controls="pm">Menu</button>
     </div>
   </header>
-  <div class="pm" id="pm" hidden>
-    <nav aria-label="Menu">{BRAND.nav.map(([h, t]) => <a class="t-h2" href={h}>{t}</a>)}</nav>
+  <div class="pm" id="pm" data-k-menu>
+    <nav aria-label="Menu">{BRAND.nav.map(([h, t]) => <span class="k-mask"><a class="t-h2" href={h} data-k-menu-item data-roll>{t}</a></span>)}</nav>
     <div class="pm-foot t-small">{BRAND.tel && <a href={`tel:${BRAND.tel.replace(/^tel:/, '')}`}>{BRAND.tel.replace(/^tel:/, '')}</a>}{BRAND.mail && <a href={BRAND.mail}>{BRAND.mail.replace('mailto:', '')}</a>}</div>
   </div>
+  <div class="veil" data-k-veil></div>
+  {cursor && <div data-k-cursor><span class="k-dot"><span data-k-cursor-label></span></span></div>}
+  <div data-barba="container" data-barba-namespace={ns}>
   <main id="main"><slot /></main>
   <footer class="foot">
     <slot name="footer" />
@@ -45,6 +53,7 @@ const { title, desc = '', route = '/', og = '', dark = false } = Astro.props;
       <a class="credit" href="https://disojostudio.com" target="_blank" rel="noopener">Design &amp; Systems · © Disojo Studio 2026</a>
     </div>
   </footer>
-  <script src="../scripts/main.js"></script>
+  </div>
+  <script>import '../kernel/index.js';</script>
 </body>
 </html>

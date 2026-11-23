@@ -11,6 +11,7 @@ mkdir -p "$P"/{research,brief,qa,assets}
 cp "$SK/templates/IDEA.md" "$P/brief/IDEA.md"   # the site guard blocks design files until Tejjo's pick is written here
 rsync -a --exclude node_modules --exclude dist --exclude .astro --exclude 'src/data/pages/*.json' --exclude 'src/data/site.json' --exclude 'src/data/images.json' \
   --exclude 'src/pages/library.astro' --exclude 'public/library' "$SK/starter/" "$P/site/"
+bash "$SK/scripts/sync_kernel.sh" "$P/site" >/dev/null   # always the newest kernel, never a stale copy
 mkdir -p "$P/site/src/data/pages"; echo '{}' > "$P/site/src/data/images.json"
 [ -f "$P/site/src/data/site.json" ] || echo '{"name":"","origin":"","nav":[],"footer":[],"tel":[],"mail":[],"social":[],"address":"","logo":[],"icons":[]}' > "$P/site/src/data/site.json"
 ( cd "$P/site" && npm install --silent >/dev/null 2>&1 ) && echo "deps installed"

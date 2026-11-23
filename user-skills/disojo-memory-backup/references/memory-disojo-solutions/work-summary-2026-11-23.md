@@ -25,3 +25,9 @@ metadata:
 - Built: `kernel/tools/make-film.cjs` + kernel `data-film` + lab `/film/` (works in Chromium at 1512; Safari, phones untested).
 - Not caught: ERA, Lenval, Fame menus; Fame page change.
 - Still waiting on Tejjo: verdict on the four data-close settings before the loader module.
+
+## 2026-11-23 night: systems for the signed client
+- Kernel merged into the starter (sync_kernel.sh, new_site.sh pulls it). Verified build + reveals + Barba on /library/.
+- deploy_demo.sh false-200 fixed (demo_check.sh).
+- Tejjo: every client gets its own moments; kernel = mechanisms. Rule in websites/SKILL.md step 3 and [[feedback-moments-per-client]].
+- Tejjo has a signed client, asked for a week to optimise systems.

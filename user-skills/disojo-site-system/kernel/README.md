@@ -33,3 +33,7 @@ Page close (`data-close`: frame, catch-up, floor, last-word), loader (fake progr
 
 ## 2026-11-23: data-film built (scroll film)
 `src/kernel/film.js` (imported in `index.js`), maker `tools/make-film.cjs`, lab `/film/`, styles `.film-track` / `.film-stick` in `kernel.css`. Desktop 992+ with WebCodecs only; everyone else sees the poster. Verified in the in-app browser at 1512 (Chromium); Safari, Firefox and phones untested. Use only when the client has real film that says something as you scroll. Notes: `research/tftl-handson/frame-player-code.md`.
+
+## 2026-11-23: the kernel is now inside the starter
+`scripts/sync_kernel.sh <site>` copies `src/kernel/`, `kernel.css` and `tools/make-film.cjs`; `new_site.sh` runs it, so every new site gets the newest kernel. The starter's Base.astro carries the Barba wrapper, header (data-k-header, adds `.solid` past 40px), menu (data-k-menu), veil, optional cursor (`cursor` prop, off by default), container with the footer inside. Old starter files archived in `~/.claude/skills-archive/2026-11-23-starter-pre-kernel/`. Verified: starter builds; /library/ reveals, scroll and a Barba page change work at 1512 with no console errors. Phone, Safari untested.
+**Mechanisms, not looks (Tejjo 2026-11-23).** Nothing in this folder is a style. Each client's opening, page change and close is designed from its idea in words first; the kernel only makes it move.

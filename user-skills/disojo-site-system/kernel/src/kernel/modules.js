@@ -61,7 +61,7 @@ use('[data-k-header]', header => {
   };
   const st = ScrollTrigger.create({
     start: 0, end: 'max',
-    onUpdate: self => show(self.scroll() < 120 || self.direction < 0),
+    onUpdate: self => { show(self.scroll() < 120 || self.direction < 0); header.classList.toggle('solid', self.scroll() > 40); },
   });
   return () => st.kill();
 }, { scope: 'shell' });
@@ -171,4 +171,17 @@ use('[data-close]', el => {
     return () => { tl.scrollTrigger?.kill(); tl.kill(); split.revert(); mm.revert(); };
   }
   return () => mm.revert();
+});
+
+// .pic.par (starter Pic with par): the picture drifts up to 6% inside its frame while the frame
+// crosses the screen. Was a rAF loop in the starter's main.js; now one scrubbed trigger per frame.
+use('.pic.par', frame => {
+  if (reduced.matches) return;
+  const img = frame.querySelector('img');
+  if (!img) return;
+  const tw = gsap.fromTo(img, { y: () => frame.offsetHeight * 0.06 }, {
+    y: () => -frame.offsetHeight * 0.06, ease: 'none',
+    scrollTrigger: { trigger: frame, start: 'top bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true },
+  });
+  return () => { tw.scrollTrigger?.kill(); tw.kill(); gsap.set(img, { clearProps: 'transform' }); };
 });

@@ -1,0 +1,50 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/sections.css';
+import Btn from '../components/Btn.astro';
+import FootPlace from '../components/FootPlace.astro';
+import { BRAND, yr } from '../data/brand.js';
+interface Props { title: string; desc?: string; route?: string; og?: string; dark?: boolean }
+const { title, desc = '', route = '/', og = '', dark = false } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {BRAND.noindex && <meta name="robots" content="noindex, nofollow" />}
+  <title>{title}</title>
+  <meta name="description" content={desc} />
+  <link rel="canonical" href={BRAND.origin + route} />
+  <meta property="og:title" content={title} /><meta property="og:description" content={desc} />
+  {og && <meta property="og:image" content={og} />}
+  <link rel="icon" href="/favicon.png" />
+  {BRAND.fonts && <><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href={BRAND.fonts} rel="stylesheet" /></>}
+</head>
+<body class:list={{ dark, grain: BRAND.grain }}>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav" id="nav">
+    <a class="mark t-small" href="/" aria-label={`${BRAND.name}, home`}><slot name="logo">{BRAND.name}</slot></a>
+    <nav class="links t-small" aria-label="Main">{BRAND.nav.map(([h, t]) => <a href={h} aria-current={route === h ? 'page' : undefined}>{t}</a>)}</nav>
+    <div class="nav-r">
+      {BRAND.cta && <Btn href={BRAND.cta[0]} label={BRAND.cta[1]} size="sm" />}
+      <button class="menu-b t-label" id="menuB" aria-expanded="false" aria-controls="pm">Menu</button>
+    </div>
+  </header>
+  <div class="pm" id="pm" hidden>
+    <nav aria-label="Menu">{BRAND.nav.map(([h, t]) => <a class="t-h2" href={h}>{t}</a>)}</nav>
+    <div class="pm-foot t-small">{BRAND.tel && <a href={`tel:${BRAND.tel.replace(/^tel:/, '')}`}>{BRAND.tel.replace(/^tel:/, '')}</a>}{BRAND.mail && <a href={BRAND.mail}>{BRAND.mail.replace('mailto:', '')}</a>}</div>
+  </div>
+  <main id="main"><slot /></main>
+  <footer class="foot">
+    <slot name="footer" />
+    <div class="foot-base t-label">
+      <span>© {yr} {BRAND.name}</span>
+      <FootPlace />
+      <a class="credit" href="https://disojostudio.com" target="_blank" rel="noopener">Design &amp; Systems · © Disojo Studio 2026</a>
+    </div>
+  </footer>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>
