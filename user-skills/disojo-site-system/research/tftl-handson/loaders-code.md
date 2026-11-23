@@ -26,3 +26,16 @@ Read from shipped code, not run frame by frame. Hilight, Grape, SL and the other
 
 ## Pictures
 `moments/overview-loaders.jpg` (every other frame). Full strips: `moments/era-residence-loader.jpg` and `moments/lenval-properties-loader.jpg` (a frame every 0.5 s for 15 s), `moments/fame-estate-loader.jpg` and `moments/ada-loader.jpg` (every 0.35 s for 7 s).
+
+## The rest of the loaders (read 2026-11-23, shorter)
+| Site | What it does | Numbers |
+|---|---|---|
+| Grape | A progress line fills, then the whole loader is cut away upward with a slanted bottom edge | line scaleX to 1, 2s, ease `.85,0,.15,1`; loader clip `polygon(0 0,100% 0,100% 104%,0 100%)` to `polygon(0 0,100% 0,100% 0,0 -4%)`, 1s |
+| Coeval | The loader is a stack of bars that shrink away one after another | `.preloader__item` scaleX 1.1 to 0, power4, staggered; `.move-loader` 1s |
+| Pictoric | Circles pop in with a bounce, two grow, then the hero opens from a circle in the middle | scale 1, 1.5s, stagger .25, `bounce.out`; grow to 2.5, 1s; reveal `circle(0% at 50% 50%)` to open |
+| 4X Strategy | A switch fills like a toggle being turned on, then the loader fades | `.preloader__switch` height to 69px, 2s; fade .5s; body scroll locked |
+| Nabil | The logo plays as a drawing (Lottie, with an 8s safety timeout), then the hero pictures slide in | images power4.inOut 1.5s, stagger .1; picture scale to 1, 1s |
+| Face to Face | A number counts with each digit rolling | `.number__char-wrap` yPercent 100 to 0 per digit |
+| Archvoyage | No loader: the page's first words wipe in | polygon wipe + yPercent 100 to 0, .6s, delay .7, stagger .1 |
+| Hilight, Verholy | Hilight: no first-load loader found, only the page-change overlay (see `kit-code.md`). Verholy: a full-screen loader, CSS only read. | |
+What carries over: every loader is one idea from the brand (a switch for a strategy firm, circles for a playful studio, a cut-away for a fast agency). The mechanism is always short: 1.5 to 4 s, then it hands over to the hero.

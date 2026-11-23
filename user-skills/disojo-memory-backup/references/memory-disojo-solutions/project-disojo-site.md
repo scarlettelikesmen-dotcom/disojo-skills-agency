@@ -58,3 +58,6 @@ Merged 2026-11-16 from 17 older notes (site states 10-20 to 11-12, palette, redo
 - v4 "Two O's" concept (2026-10-28, `~/Desktop/websites ARCHIVE/disojo-v4`): pieces ported to live on 2026-10-28 ([[feedback-port-elements-only]]).
 - Mock-ups for Our work, What we do, CTAs, case studies: `~/Desktop/disojo-hybrid/_archive/work-options/` (port 4455).
 - CTESCOA was a test redo by Tejjo (not a client build) but is now a case study here.
+
+## 2026-11-23: new logo swapped into the current site (not a new site)
+Tejjo: "we are updating the branding on the current site, not making a new site". Fonts stay as on the site (Bricolage); the brand kit PDF says Hanken Grotesk and that is WRONG per Tejjo. Swapped in disojo-mix (not committed, not deployed): `.lg-w` mask (nav, hero, footer) -> `/brand/disojo-wordmark-26.svg`; `.hero-mark` -> `disojo-mark-26.svg`; hero `.emb` inline SVG -> new wordmark; favicons `fav26.*`, `apple-touch-26.png`, `icon26-512.png`; share image `og-26.png` (cut from on-blue 4K). Old files left in public/brand. Still old: client portrait watermarks (`-v2.jpg`, stamped hoflik).

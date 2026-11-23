@@ -120,3 +120,4 @@ One line each time a session compacts (written by ~/.claude/hooks/precompact_log
 - 2026-11-23 10:50 | auto | session 2b056b99 | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-level.md
 - 2026-11-23 11:13 | auto | session ea15c3db | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-level.md
 - 2026-11-23 16:00 | auto | session a7db1d44 | /Users/tejjo/Desktop/DISOJO SOLUTIONS/branding/disojo-mark-2026-11-22/final | newest note: work-summary-2026-11-23.md
+- 2026-11-23 16:04 | auto | session 2b056b99 | /Users/tejjo/Desktop/DISOJO SOLUTIONS | newest note: project-disojo-site.md
