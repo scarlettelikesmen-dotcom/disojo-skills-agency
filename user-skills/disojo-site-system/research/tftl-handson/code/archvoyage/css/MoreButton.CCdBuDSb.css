@@ -1,0 +1,65 @@
+/* https://archvoyage.ae/_nuxt/MoreButton.CCdBuDSb.css */
+.button[data-v-5124647b] {
+  --button-transition-time: .5s;
+  align-items: center;
+  display: flex;
+  overflow: hidden
+}
+
+.icon[data-v-5124647b] {
+  display: block;
+  margin-left: .375rem;
+  margin-top: .1875rem;
+  width: .625rem
+}
+
+@media (hover:hover) {
+
+  .hover>.button .text[data-v-5124647b],
+  :hover>.button .text[data-v-5124647b] {
+    transform: translateY(-130%);
+    transition: transform var(--button-transition-time) var(--easing) .1s
+  }
+
+  .hover>.button .hover-text[data-v-5124647b],
+  :hover>.button .hover-text[data-v-5124647b] {
+    transform: translate3d(-50%, 0, 0) rotate(0);
+    transition: transform var(--button-transition-time) var(--easing) .1s
+  }
+}
+
+.disabled>.button[data-v-5124647b] {
+  cursor: default;
+  opacity: .15;
+  pointer-events: none
+}
+
+.text[data-v-5124647b] {
+  display: block;
+  position: relative;
+  transform: translateY(0)
+}
+
+.hover-text[data-v-5124647b],
+.text[data-v-5124647b] {
+  transition: transform var(--button-transition-time) var(--easing)
+}
+
+.hover-text[data-v-5124647b] {
+  left: 50%;
+  position: absolute;
+  top: 130%;
+  transform: translate3d(-50%, 0, 0) rotate(10deg);
+  transform-origin: left center;
+  white-space: nowrap
+}
+
+.button.reverse[data-v-5124647b] {
+  flex-direction: row-reverse
+}
+
+.button.reverse .icon[data-v-5124647b] {
+  margin-left: 0;
+  margin-right: .375rem;
+  transform: rotate(180deg)
+}

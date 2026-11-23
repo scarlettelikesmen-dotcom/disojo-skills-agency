@@ -1,0 +1,13 @@
+/* https://pictoric.com.ua/_nuxt/Circles.aba5169b.css */
+.canvas-wrapper {
+  overflow: hidden
+}
+
+.canvas-wrapper.larger {
+  height: 200%;
+  left: 0;
+  min-height: 127svh;
+  position: absolute;
+  top: 0;
+  width: 100%
+}

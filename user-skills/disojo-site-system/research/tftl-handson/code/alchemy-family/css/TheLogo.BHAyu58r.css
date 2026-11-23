@@ -1,0 +1,26 @@
+/* https://alchemy.family/_nuxt/TheLogo.BHAyu58r.css */
+.logo[data-v-d36e41e2] {
+  --_size: var(--size, 3.75rem);
+  height: var(--_size);
+  width: var(--_size)
+}
+
+@media (min-width:640px) and (max-width:1023px) {
+  .logo[data-v-d36e41e2] {
+    --_size: 4rem
+  }
+}
+
+.logo>svg[data-v-d36e41e2] {
+  display: block;
+  height: 100%;
+  width: 100%
+}
+
+svg path[data-v-d36e41e2] {
+  transition: fill var(--transition)
+}
+
+.frame.dark:not(.is-burger) .logo>svg path[data-v-d36e41e2] {
+  fill: var(--c-bg)
+}

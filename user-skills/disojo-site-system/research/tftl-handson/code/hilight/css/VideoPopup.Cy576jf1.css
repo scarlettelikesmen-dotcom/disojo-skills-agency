@@ -1,0 +1,133 @@
+/* https://hilight.design/_nuxt/VideoPopup.Cy576jf1.css */
+.icon[data-v-2d956707],
+.icon[data-v-fe2d2ac2],
+.icon[data-v-dfe22ae1] {
+  width: 1rem
+}
+
+.video-sect[data-v-3b2745f8] {
+  height: 100%
+}
+
+.video-container[data-v-3b2745f8] {
+  height: 100%;
+  overflow: hidden;
+  position: relative
+}
+
+.video-gradient[data-v-3b2745f8] {
+  height: 100%
+}
+
+.play-wrap[data-v-3b2745f8] {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+  z-index: 2
+}
+
+.play-text[data-v-3b2745f8] {
+  color: var(--c-white);
+  margin-left: var(--space-16)
+}
+
+.controls[data-v-3b2745f8] {
+  bottom: 0;
+  left: 0;
+  padding: 0 1rem 1.5rem;
+  position: absolute;
+  width: 100%
+}
+
+@media(max-width:1023px) {
+  .controls[data-v-3b2745f8] {
+    padding: 0 1rem 1rem
+  }
+}
+
+.progress-wrap[data-v-3b2745f8] {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  touch-action: none
+}
+
+@media(max-width:1023px) {
+  .progress-wrap[data-v-3b2745f8] {
+    margin-bottom: 1rem
+  }
+}
+
+.progress-wrap[data-v-3b2745f8]:before {
+  background: var(--c-white-20);
+  content: "";
+  height: .0625rem;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%
+}
+
+.progress-line[data-v-3b2745f8] {
+  background: var(--c-white);
+  height: .0625rem;
+  position: relative;
+  width: 0;
+  z-index: 2
+}
+
+.progress-circle[data-v-3b2745f8] {
+  background: var(--c-white);
+  border-radius: 100%;
+  height: .5rem;
+  left: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  width: .5rem
+}
+
+.controls-foot[data-v-3b2745f8] {
+  align-items: center;
+  color: var(--c-white);
+  display: flex;
+  justify-content: space-between
+}
+
+.time[data-v-3b2745f8] {
+  display: flex;
+  gap: .25rem
+}
+
+.time span[data-v-3b2745f8]:not(:first-child) {
+  opacity: .5
+}
+
+.btn-pause[data-v-3b2745f8] .icon {
+  width: 1.25rem
+}
+
+.video-popup[data-v-455b0bfe] {
+  background: var(--c-white);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: var(--z-popup)
+}
+
+.close[data-v-455b0bfe] {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 5
+}

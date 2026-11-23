@@ -1,0 +1,16 @@
+/* https://pictoric.com.ua/_nuxt/Caret.bf2d372a.css */
+.caret.top[data-v-40602d87] {
+  transform: rotate(180deg)
+}
+
+.caret.right[data-v-40602d87] {
+  transform: rotate(-90deg)
+}
+
+.caret.left[data-v-40602d87] {
+  transform: rotate(90deg)
+}
+
+path[data-v-40602d87] {
+  stroke: var(--icon-color, var(--c-brown))
+}

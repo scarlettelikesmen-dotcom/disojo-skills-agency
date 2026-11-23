@@ -1,0 +1,27 @@
+/* https://hilight.design/_nuxt/Cta.nWRtQ2ch.css */
+.cta-about[data-v-1f378ff1] {
+  pointer-events: auto;
+  position: relative
+}
+
+.cta-container[data-v-1f378ff1] {
+  height: 100vh;
+  position: relative
+}
+
+@media(max-width:1023px) {
+  .cta-container[data-v-1f378ff1] {
+    height: auto
+  }
+}
+
+.person-container[data-v-1f378ff1] {
+  position: relative;
+  z-index: 10
+}
+
+@media(max-width:1023px) {
+  .cta-about[data-v-1f378ff1] .sect-person {
+    padding-bottom: 0
+  }
+}

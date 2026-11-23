@@ -1,0 +1,241 @@
+/* https://archvoyage.ae/_nuxt/Awards.CYjZOti7.css */
+.development[data-v-e0bb8b58] {
+  padding: var(--offset-120) 0
+}
+
+.title[data-v-e0bb8b58] {
+  text-transform: uppercase;
+  z-index: 1
+}
+
+.content[data-v-e0bb8b58],
+.title[data-v-e0bb8b58] {
+  position: relative
+}
+
+.image-wrapper[data-v-e0bb8b58] {
+  height: 44.3125rem;
+  margin: -3.5rem auto 0;
+  width: 35.4375rem
+}
+
+@media (max-width:1024px) {
+  .image-wrapper[data-v-e0bb8b58] {
+    height: 29.125rem;
+    margin: -1.25rem auto 0;
+    width: 100%
+  }
+}
+
+.info-grid[data-v-e0bb8b58] {
+  display: grid;
+  grid-template-columns: 18.75rem 20.125rem;
+  height: calc(100% - 3.5rem);
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: 3.5rem;
+  width: 100%
+}
+
+@media (max-width:1024px) {
+  .info-grid[data-v-e0bb8b58] {
+    display: block;
+    height: auto;
+    position: relative;
+    top: 0
+  }
+}
+
+.info-block[data-v-e0bb8b58]:first-child {
+  padding-top: var(--offset-72)
+}
+
+.info-block[data-v-e0bb8b58]:nth-child(2) {
+  align-self: end
+}
+
+@media (max-width:1024px) {
+  .info-block[data-v-e0bb8b58]:nth-child(2) {
+    padding-top: var(--offset-40)
+  }
+}
+
+.info-title[data-v-e0bb8b58] {
+  margin-bottom: var(--offset-16)
+}
+
+.info-button[data-v-e0bb8b58] {
+  margin-top: var(--offset-24)
+}
+
+.link[data-v-e0bb8b58] {
+  display: inline-block
+}
+
+.showreel[data-v-e676f0c5] {
+  background-color: var(--c-gray)
+}
+
+.header[data-v-e676f0c5] {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--offset-16)
+}
+
+.description[data-v-e676f0c5] {
+  max-width: 17.25rem
+}
+
+@media (max-width:1024px) {
+  .description[data-v-e676f0c5] {
+    max-width: 15.8125rem
+  }
+}
+
+.arrow[data-v-e676f0c5] {
+  width: .875rem
+}
+
+.video-block[data-v-e676f0c5] {
+  height: 46.5rem;
+  isolation: isolate;
+  position: relative;
+  width: 100%
+}
+
+@media (max-width:1024px) {
+  .video-block[data-v-e676f0c5] {
+    height: 12rem
+  }
+}
+
+.video-preview[data-v-e676f0c5] {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.video-preview.playing[data-v-e676f0c5] {
+  cursor: pointer
+}
+
+.cover[data-v-e676f0c5] {
+  pointer-events: none
+}
+
+.video-title-wrapper[data-v-e676f0c5] {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  pointer-events: none;
+  position: relative;
+  width: 100%
+}
+
+.video-title[data-v-e676f0c5] {
+  pointer-events: all;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 27.875rem
+}
+
+@media (max-width:1024px) {
+  .video-title[data-v-e676f0c5] {
+    max-width: 16.25rem
+  }
+}
+
+.video-title.hide[data-v-e676f0c5] {
+  opacity: 0;
+  pointer-events: none
+}
+
+.title-wrap[data-v-e676f0c5] {
+  display: contents
+}
+
+.play[data-v-e676f0c5] {
+  display: inline-block;
+  margin-bottom: .4375rem;
+  margin-right: .25rem;
+  width: 3.3125rem
+}
+
+@media (max-width:1024px) {
+  .play[data-v-e676f0c5] {
+    margin-bottom: .3125rem;
+    width: 1.875rem
+  }
+}
+
+.awards[data-v-ab9e7535] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--offset-144)
+}
+
+.lists-wrapper[data-v-ab9e7535] {
+  margin: var(--offset-64) 0;
+  position: relative;
+  z-index: 1
+}
+
+.hidden-list-wrapper[data-v-ab9e7535] {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--trs-400) var(--easing)
+}
+
+.hidden-list[data-v-ab9e7535] {
+  padding-top: var(--offset-32)
+}
+
+.item[data-v-ab9e7535] {
+  isolation: isolate;
+  position: relative;
+  text-align: center
+}
+
+.item[data-v-ab9e7535]:not(:first-child) {
+  margin-top: var(--offset-32)
+}
+
+.name[data-v-ab9e7535] {
+  margin-bottom: var(--offset-8)
+}
+
+.photos-cursor[data-v-ab9e7535] {
+  height: 10.25rem;
+  left: -4.25rem;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  top: -6.25rem;
+  width: 8.6875rem;
+  z-index: 0
+}
+
+@media (max-width:1024px) {
+  .photos-cursor[data-v-ab9e7535] {
+    display: none
+  }
+}
+
+.cursor-photo[data-v-ab9e7535] {
+  -webkit-clip-path: polygon(0 100%, 100% 130%, 100% 100%, 0 100%);
+  clip-path: polygon(0 100%, 100% 130%, 100% 100%, 0 100%);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%
+}

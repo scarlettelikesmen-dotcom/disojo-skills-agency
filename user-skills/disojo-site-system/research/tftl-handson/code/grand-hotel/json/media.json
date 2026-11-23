@@ -1,0 +1,9 @@
+/* https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=IGQWRPSWhOUHpnMUpILVRqYmdQbDlFakk0eUktVXJXSFhuTlh3ZA0liTmZA1eTlVWHpyWVVLVnJsdDZAsd1pEX3RMc2dTUExkZA1hqY0xLTFdoS25ndE5JX3Njb3ZAyOWYyUzR3WExLUnIzeTZAUT01IMnk5VzFnRU9ESFkZD */
+{
+   "error": {
+      "message": "Error validating application",
+      "type": "OAuthException",
+      "code": 190,
+      "fbtrace_id": "AmwovnFDjxBqMop1zGs-0Md"
+   }
+}

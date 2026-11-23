@@ -1,0 +1,51 @@
+/* https://ab-sl.ru/_nuxt/Dropdown.sS8LpUxP.css */
+.button.active span[data-v-0d3d26bc] {
+  color: var(--hover-color);
+  text-decoration: none
+}
+
+.button[data-v-0d3d26bc] {
+  color: var(----color)
+}
+
+.button span[data-v-0d3d26bc] {
+  transition: color .4s var(--easing)
+}
+
+@media(max-width:1024px) {
+  .dropdown[data-v-0d3d26bc] {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column
+  }
+}
+
+.list-wrapper[data-v-0d3d26bc] {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s var(--easing)
+}
+
+.list[data-v-0d3d26bc] {
+  padding-top: var(--offset-20)
+}
+
+@media(max-width:1024px) {
+  .list[data-v-0d3d26bc] {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column
+  }
+}
+
+.list-item[data-v-0d3d26bc] {
+  color: var(--color);
+  display: block;
+  text-align: left;
+  text-transform: capitalize;
+  transition: color .4s var(--easing)
+}
+
+.list-item[data-v-0d3d26bc]:hover {
+  color: var(--hover-color)
+}

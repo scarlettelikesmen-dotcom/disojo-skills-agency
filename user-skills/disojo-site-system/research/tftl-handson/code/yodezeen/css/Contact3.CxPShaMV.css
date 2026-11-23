@@ -1,0 +1,210 @@
+/* https://yodezeen.com/_nuxt/Contact3.CxPShaMV.css */
+.accordion-item[data-v-f7a1a6f6] {
+  cursor: pointer;
+  transform: translateZ(10px)
+}
+
+.accordion-wrapper[data-v-f7a1a6f6] {
+  height: 0;
+  overflow: hidden
+}
+
+.accordion-content[data-v-f7a1a6f6] {
+  opacity: 1;
+  padding: 1.5rem 0 4rem
+}
+
+.representative[data-v-addbe17b] {
+  border: 1px solid #dedcdc;
+  border-radius: .75rem;
+  left: 100%;
+  margin-left: .5rem;
+  padding: .3125rem .5rem;
+  pointer-events: none;
+  position: absolute;
+  text-transform: none;
+  top: 1rem
+}
+
+@media(max-width:1023px) {
+  .representative[data-v-addbe17b] {
+    font-weight: 400;
+    margin-left: 0;
+    position: static
+  }
+
+  .representative-wrap[data-v-addbe17b] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5rem
+  }
+}
+
+.main-contact[data-v-addbe17b] {
+  display: flex;
+  justify-content: center;
+  position: relative
+}
+
+@media(max-width:1023px) {
+  .main-contact[data-v-addbe17b] {
+    padding: 0 1rem
+  }
+}
+
+.main-contact__items[data-v-addbe17b] {
+  grid-column: 2/5;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding-left: 5rem;
+  padding-right: 5rem
+}
+
+@media(max-width:1023px) {
+  .main-contact__items[data-v-addbe17b] {
+    --pt: .5rem;
+    --pb: 2.5rem;
+    padding-left: 0;
+    padding-right: 0
+  }
+}
+
+.main-contact__item[data-v-addbe17b] {
+  padding: .125rem 2rem;
+  transition: opacity .8s var(--third-ease)
+}
+
+@media(max-width:1023px) {
+  .main-contact__item[data-v-addbe17b] {
+    padding: 0
+  }
+}
+
+@media(min-width:1024px) {
+  .main-contact__items:has(.main-contact__item:hover) .main-contact__item[data-v-addbe17b]:not(:hover) {
+    opacity: .5
+  }
+}
+
+@media(max-width:1023px) {
+  .main-contact__items:has(.main-contact__item:hover) .main-contact__item[data-v-addbe17b]:not(:hover) {
+    color: #dedcdc
+  }
+}
+
+.main-contact__item-city[data-v-addbe17b] {
+  font-family: var(--font-forma);
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 4rem;
+  margin-inline: auto;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content
+}
+
+@media(max-width:1023px) {
+  .main-contact__item-city[data-v-addbe17b] {
+    transition: color .8s var(--third-ease)
+  }
+
+  .main-contact__item:hover .main-contact__item-city[data-v-addbe17b] {
+    color: var(--c-dark)
+  }
+}
+
+.main-contact__item-timezone[data-v-addbe17b] {
+  left: 100%;
+  margin-left: .5rem;
+  position: absolute;
+  top: 0;
+  white-space: nowrap
+}
+
+@media(max-width:1023px) {
+  .main-contact__item-timezone[data-v-addbe17b] {
+    display: block;
+    font-family: var(--font-helvetica);
+    font-size: .75rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    position: static;
+    text-align: center
+  }
+}
+
+.main-contact__item-info-address[data-v-addbe17b],
+.main-contact__item-info-phone[data-v-addbe17b] {
+  display: flex;
+  text-transform: uppercase
+}
+
+@media(max-width:1023px) {
+
+  .main-contact__item-info-address[data-v-addbe17b] .p2,
+  .main-contact__item-info-phone[data-v-addbe17b] .p2 {
+    font-weight: 500
+  }
+}
+
+@media(max-width:1023px) {
+  .main-contact__item-info-address[data-v-addbe17b] {
+    margin-top: .25rem
+  }
+}
+
+.main-contact__item-info-title[data-v-addbe17b] {
+  flex: 0 0 2.6875rem
+}
+
+@media(max-width:1023px) {
+  .main-contact__item-info-title[data-v-addbe17b] {
+    flex: 0 0 1.75rem
+  }
+}
+
+.main-contact__item-info-address-box[data-v-addbe17b] {
+  width: 9.375rem
+}
+
+.main-contact__item-info-link[data-v-addbe17b] {
+  display: block;
+  margin: 1rem auto 0;
+  max-width: -moz-max-content;
+  max-width: max-content
+}
+
+.main-contact__item-info-link[data-v-addbe17b] .p2-button {
+  line-height: 100%
+}
+
+[data-v-addbe17b] .accordion-content {
+  margin-inline: auto;
+  width: -moz-max-content;
+  width: max-content
+}
+
+@media(max-width:1023px) {
+  .desk[data-v-addbe17b] {
+    display: none
+  }
+}
+
+@media(min-width:1024px) {
+  .mob[data-v-addbe17b] {
+    display: none
+  }
+}
+
+.whatsapp-icon[data-v-addbe17b] {
+  width: .625rem
+}
+
+.whatsapp-link[data-v-addbe17b] {
+  align-items: center;
+  display: flex;
+  gap: .25rem
+}

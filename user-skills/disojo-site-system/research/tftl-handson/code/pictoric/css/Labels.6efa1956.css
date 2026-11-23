@@ -1,0 +1,23 @@
+/* https://pictoric.com.ua/_nuxt/Labels.6efa1956.css */
+.labels[data-v-df5f3e46] {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+  left: 0;
+  padding: var(--labels-padding, 1rem);
+  position: absolute;
+  top: 0
+}
+
+.label[data-v-df5f3e46] {
+  background-color: var(--c-brown);
+  border-radius: .9375rem;
+  color: var(--c-pure-white);
+  padding: .25rem .4375rem
+}
+
+.label.type[data-v-df5f3e46] {
+  background-color: var(--c-yellow-main);
+  color: var(--c-brown)
+}

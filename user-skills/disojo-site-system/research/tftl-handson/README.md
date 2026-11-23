@@ -86,3 +86,14 @@ Batch 2 onward: the other ~40 live TFTL sites, 5 at a time (list from `../tftl-p
 | 34 | Buttons as stickers in the brand's own shape | Pictoric |
 | 35 | Ghost word behind, real heading on top | Pictoric, Grand Hotel |
 | 36 | Chapters in the bottom bar as nav and progress | Nabil |
+
+### Sweep closed 2026-11-23
+51 notes (01-51). Studied by scanner: 44. Dead or blocking headless browsers: Agency Telegram, Horizonte, Rose Family, Tommy47 (now Bandcamp), Made with Switzerland, Miracle, Qapara, The Label, Max Noah (curl: no connection / 502 on 2026-11-23). Need a hand visit: `rescan.txt`. Page-close sheets: `closes-1.jpg`, `closes-2.jpg` (last three wheel stops of every site that scrolled).
+
+**Five families of page close:**
+1. **The page turns into the footer** (the last section shrinks, clips or folds as the footer rises): ERA, Alchemy (clouds), SL (ribbon behind).
+2. **The wordmark as the floor** (the name huge, sunk or cut by the bottom edge): 4X, Lenval, Grape (©2026), Pictoric, Hilight.
+3. **The last sentence is the contact** (the action sits inside the line): Archvoyage ("...designs together. Send request"), Coeval ("From You"), Nabil ("CONNECT"), Face to Face ("Next, let's"), Gifford Hill.
+4. **An object from the business ends it**: Fame (hanging 3D sign), ADA (smile mark under a face), Pictoric (mascot asleep), Kitchen Hero (character peeking), Envy (the app on a phone).
+5. **The real places** (sitemap, branches, hours): Grand Hotel, ADA, Verholy, Avalon (phone number huge).
+Families 1 to 3 are mechanisms the kernel can own. Family 4 always comes from the client's idea.

@@ -1,0 +1,162 @@
+/* https://pictoric.com.ua/_nuxt/index.a1de441f.css */
+.form[data-v-52d2210d] {
+  height: 2.5rem;
+  margin: var(--offset-32) auto 0;
+  opacity: 1;
+  position: relative;
+  transition: opacity .6s var(--default-ease);
+  width: 20.5rem
+}
+
+@media (max-width:1023px) {
+  .form[data-v-52d2210d] {
+    height: 2.875rem;
+    width: 21.4375rem
+  }
+}
+
+.form.sending[data-v-52d2210d] {
+  opacity: .5;
+  pointer-events: none
+}
+
+.form-input[data-v-52d2210d] {
+  background-color: var(--c-pure-white);
+  border-radius: 3.75rem;
+  color: var(--c-brown);
+  height: 100%;
+  outline: none;
+  padding-left: 1.5625rem;
+  padding-right: 2.9375rem;
+  text-transform: uppercase;
+  width: 100%
+}
+
+@media (max-width:1023px) {
+  .form-input[data-v-52d2210d] {
+    border-radius: 2.6875rem;
+    padding-left: 1.5rem;
+    padding-right: 3.25rem
+  }
+}
+
+.form-input[data-v-52d2210d]::-moz-placeholder {
+  color: var(--c-brown)
+}
+
+.form-input[data-v-52d2210d]::placeholder {
+  color: var(--c-brown)
+}
+
+.form-input[data-v-52d2210d]:-webkit-autofill {
+  -webkit-text-fill-color: var(--c-brown)
+}
+
+.form-input.inactive[data-v-52d2210d] {
+  pointer-events: none
+}
+
+.form-button[data-v-52d2210d] {
+  cursor: pointer;
+  position: absolute;
+  right: .1875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  --circular-btn-color: var(--c-yellow-main)
+}
+
+@media (max-width:1023px) {
+  .form-button[data-v-52d2210d] {
+    --circular-btn-size: 38;
+    right: .25rem
+  }
+}
+
+.form-notice[data-v-52d2210d] {
+  margin-top: .5rem;
+  padding-left: 1.5rem;
+  text-align: left
+}
+
+.form-notice.success[data-v-52d2210d] {
+  color: var(--c-green)
+}
+
+.form-notice.error[data-v-52d2210d] {
+  color: var(--c-red)
+}
+
+.cta[data-v-fc196927] {
+  margin-bottom: -16.875rem;
+  pointer-events: none;
+  position: relative;
+  text-align: center
+}
+
+@media (max-width:1023px) {
+  .cta[data-v-fc196927] {
+    margin-bottom: 0;
+    overflow: hidden
+  }
+}
+
+.background[data-v-fc196927] {
+  height: auto;
+  position: relative;
+  width: 100%
+}
+
+@media (max-width:1023px) {
+  .background[data-v-fc196927] {
+    left: -37%;
+    width: 160%
+  }
+}
+
+.layer[data-v-fc196927] {
+  height: auto;
+  width: 100%
+}
+
+.layer[data-v-fc196927]:not(:first-child) {
+  left: 0;
+  position: absolute;
+  top: 0
+}
+
+.layer img[data-v-fc196927] {
+  display: block;
+  height: auto;
+  width: 100%
+}
+
+.cta-wrapper[data-v-fc196927] {
+  left: 0;
+  pointer-events: all;
+  position: absolute;
+  top: 33.75rem;
+  width: 100%
+}
+
+@media (max-width:1023px) {
+  .cta-wrapper[data-v-fc196927] {
+    top: 15.625rem
+  }
+}
+
+.cta-caption span[data-v-fc196927] {
+  display: block
+}
+
+.cta-caption .part-title[data-v-fc196927] {
+  display: none
+}
+
+.part-title.show[data-v-fc196927] {
+  display: block
+}
+
+.cta-description[data-v-fc196927] {
+  margin: 1rem auto 0;
+  max-width: 20.5rem
+}

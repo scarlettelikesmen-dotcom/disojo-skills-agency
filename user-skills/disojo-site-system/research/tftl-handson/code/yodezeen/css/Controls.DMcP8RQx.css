@@ -1,0 +1,22 @@
+/* https://yodezeen.com/_nuxt/Controls.DMcP8RQx.css */
+.controls[data-v-799066c3] {
+  --icon-color: currentColor;
+  display: flex;
+  gap: .5rem
+}
+
+.controls-button[data-v-799066c3] {
+  --size: 2rem;
+  align-items: center;
+  background-color: #00000012;
+  border-radius: 50%;
+  display: flex;
+  height: var(--size);
+  justify-content: center;
+  width: var(--size)
+}
+
+svg[data-v-799066c3] {
+  height: .875rem;
+  width: .875rem
+}

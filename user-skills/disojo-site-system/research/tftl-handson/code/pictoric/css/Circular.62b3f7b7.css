@@ -1,0 +1,24 @@
+/* https://pictoric.com.ua/_nuxt/Circular.62b3f7b7.css */
+.button-inner[data-v-5a25260d] {
+  align-items: center;
+  background-color: var(--circular-btn-color, var(--c-pure-white));
+  border-radius: 100%;
+  display: flex;
+  height: calc(var(--circular-btn-size, 34)/16*1rem);
+  justify-content: center;
+  width: calc(var(--circular-btn-size, 34)/16*1rem)
+}
+
+@media (hover:hover) {
+
+  .button-inner.animated:hover .button-icon[data-v-5a25260d],
+  .button-trigger:hover>.button-inner.animated .button-icon[data-v-5a25260d] {
+    transform: translate(.25rem)
+  }
+}
+
+.button-icon[data-v-5a25260d] {
+  height: calc(var(--circular-btn-icon-size, 12)/16*1rem);
+  transition: transform .2s ease-in-out;
+  width: calc(var(--circular-btn-icon-size, 12)/16*1rem)
+}

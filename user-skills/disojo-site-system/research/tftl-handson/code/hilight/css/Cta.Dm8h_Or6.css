@@ -1,0 +1,133 @@
+/* https://hilight.design/_nuxt/Cta.Dm8h_Or6.css */
+.time[data-v-8c1b90bd] {
+  display: flex;
+  gap: var(--space-8)
+}
+
+.colon[data-v-8c1b90bd] {
+  animation: blink-8c1b90bd 2s step-end infinite;
+  display: inline-block;
+  text-align: center
+}
+
+@keyframes blink-8c1b90bd {
+
+  0%,
+  49% {
+    opacity: 1
+  }
+
+  50%,
+  to {
+    opacity: 0
+  }
+}
+
+.cta-block[data-v-2bb47929] {
+  inset: 0;
+  position: absolute;
+  z-index: 2
+}
+
+@media(max-width:1023px) {
+  .cta-block[data-v-2bb47929] {
+    inset: auto;
+    position: relative
+  }
+}
+
+.cta-bg[data-v-2bb47929] {
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0
+}
+
+@media(max-width:1023px) {
+  .cta-bg[data-v-2bb47929] {
+    inset: auto
+  }
+
+  .cta-bg[data-v-2bb47929],
+  .cta-bg img[data-v-2bb47929] {
+    height: auto;
+    position: relative;
+    width: 100%
+  }
+}
+
+.unicorn-bg[data-v-2bb47929] {
+  bottom: 0;
+  height: 75vw;
+  left: 0;
+  min-height: 100%;
+  opacity: 1;
+  position: absolute;
+  width: 100%
+}
+
+.content[data-v-2bb47929] {
+  left: 37.25rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 33.5rem;
+  z-index: 101
+}
+
+@media(max-width:1023px) {
+  .content[data-v-2bb47929] {
+    left: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    width: 100%
+  }
+}
+
+.title2[data-v-2bb47929] {
+  margin-bottom: var(--space-40)
+}
+
+.foot[data-v-2bb47929],
+.title2[data-v-2bb47929] {
+  color: var(--c-white)
+}
+
+.foot[data-v-2bb47929] {
+  align-items: flex-end;
+  bottom: var(--space-20);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 37.25rem;
+  padding-right: var(--space-20);
+  position: absolute;
+  width: 100%;
+  z-index: 101
+}
+
+@media(max-width:1023px) {
+  .foot[data-v-2bb47929] {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem
+  }
+}
+
+.right[data-v-2bb47929] {
+  display: flex;
+  gap: var(--space-8)
+}
+
+.left[data-v-2bb47929] {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column
+}
+
+.btn[data-v-2bb47929] {
+  display: inline-flex
+}
+
+.lines-img[data-v-2bb47929] {
+  opacity: .2
+}

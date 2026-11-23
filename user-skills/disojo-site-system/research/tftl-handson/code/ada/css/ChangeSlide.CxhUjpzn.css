@@ -1,0 +1,30 @@
+/* https://aventuradentalarts.com/_nuxt/ChangeSlide.CxhUjpzn.css */
+.btn-slide-change.next .wrap-icon[data-v-2f490315] {
+  transform: rotate(180deg)
+}
+
+.btn-slide-change[data-v-2f490315] {
+  align-items: center;
+  background-color: var(--btn-bg-color, var(--c-light-base));
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  height: 6rem;
+  justify-content: center;
+  transition: all .3s var(--default-ease);
+  width: 6rem
+}
+
+@media (max-width:1023px) {
+  .btn-slide-change[data-v-2f490315] {
+    height: 5rem;
+    width: 5rem
+  }
+}
+
+@media (hover:hover) {
+  .btn-slide-change[data-v-2f490315]:hover {
+    --icon-color: var(--c-light-base);
+    background-color: var(--c-brand-navy)
+  }
+}

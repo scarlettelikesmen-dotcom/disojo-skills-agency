@@ -1,0 +1,17 @@
+/* https://hilight.design/_nuxt/VideoScroller.BPTAP_mc.css */
+.video-scroller[data-v-01d4dfcd] {
+  pointer-events: none
+}
+
+.canvas[data-v-01d4dfcd],
+.video-scroller[data-v-01d4dfcd] {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%
+}
+
+.canvas[data-v-01d4dfcd] {
+  -o-object-fit: cover;
+  object-fit: cover
+}

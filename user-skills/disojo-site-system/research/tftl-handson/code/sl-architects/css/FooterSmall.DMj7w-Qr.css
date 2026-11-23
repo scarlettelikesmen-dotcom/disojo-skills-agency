@@ -1,0 +1,69 @@
+/* https://ab-sl.ru/_nuxt/FooterSmall.DMj7w-Qr.css */
+.small-footer[data-v-ce3b543f] {
+  background-color: var(--bg-color, var(--c-Base-0));
+  padding-bottom: var(--offset-40);
+  text-transform: uppercase
+}
+
+.small-footer[data-v-ce3b543f],
+.small-footer a[data-v-ce3b543f] {
+  color: var(--color, var(--c-Base-700))
+}
+
+.copyright[data-v-ce3b543f] {
+  grid-column-end: 6;
+  grid-column-start: 1
+}
+
+@media(max-width:1024px) {
+  .copyright[data-v-ce3b543f] {
+    grid-column-end: 3
+  }
+
+  .copyright__item[data-v-ce3b543f] {
+    display: block
+  }
+}
+
+.links[data-v-ce3b543f] {
+  display: flex;
+  gap: 1rem;
+  grid-column-end: 14;
+  grid-column-start: 6;
+  justify-content: center
+}
+
+@media(max-width:1024px) {
+  .links[data-v-ce3b543f] {
+    display: none
+  }
+}
+
+.links a[data-v-ce3b543f] {
+  display: block;
+  white-space: nowrap
+}
+
+.developer[data-v-ce3b543f] {
+  grid-column-end: -1;
+  grid-column-start: 14;
+  text-align: right
+}
+
+@media(max-width:1024px) {
+  .developer[data-v-ce3b543f] {
+    grid-column-start: 3
+  }
+
+  .developer__link[data-v-ce3b543f] {
+    display: block
+  }
+}
+
+.l1--link[data-v-ce3b543f] {
+  transition: color .4s var(--easing)
+}
+
+.l1--link[data-v-ce3b543f]:hover {
+  color: var(--c-Base-700)
+}

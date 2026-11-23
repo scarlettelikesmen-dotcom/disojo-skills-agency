@@ -1,0 +1,59 @@
+/* https://pictoric.com.ua/_nuxt/Default.4ca94cc2.css */
+@media (hover:hover) {
+  :hover>.button-inner .button-icon[data-v-0cb6847b]:before {
+    transform: scale(1.7692307692)
+  }
+}
+
+:active>.button-inner .button-icon[data-v-0cb6847b]:before {
+  transform: scale(1)
+}
+
+.button-inner[data-v-0cb6847b] {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--offset-8)
+}
+
+.button-inner.yellow[data-v-0cb6847b] {
+  --icon-color: var(--c-brown);
+  --bg-color: var(--c-yellow-main)
+}
+
+.button-inner.brown[data-v-0cb6847b] {
+  --icon-color: var(--c-yellow-main);
+  --bg-color: var(--c-brown)
+}
+
+.button-icon[data-v-0cb6847b] {
+  align-items: center;
+  display: flex;
+  height: 1.625rem;
+  justify-content: center;
+  position: relative;
+  width: 1.625rem
+}
+
+.button-icon[data-v-0cb6847b]:before {
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: right;
+  transition: transform .6s var(--default-ease);
+  width: 100%
+}
+
+.button-text[data-v-0cb6847b] {
+  position: relative
+}
+
+.button-icon[data-v-0cb6847b] svg {
+  height: .75rem;
+  position: relative;
+  width: .75rem
+}

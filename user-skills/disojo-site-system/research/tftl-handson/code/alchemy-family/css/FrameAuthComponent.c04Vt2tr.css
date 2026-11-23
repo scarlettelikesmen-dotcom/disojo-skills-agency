@@ -1,0 +1,125 @@
+/* https://alchemy.family/_nuxt/FrameAuthComponent.c04Vt2tr.css */
+.frame[data-v-8fd2f2dd] {
+  display: grid;
+  grid-template-rows: 3.125rem 1fr;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1
+}
+
+@media (max-width:1023px) {
+  .frame[data-v-8fd2f2dd] {
+    grid-template-rows: 2.625rem 1fr
+  }
+}
+
+.frame-body[data-v-8fd2f2dd] {
+  border: 1px solid hsla(0, 0%, 100%, .7);
+  border-top: unset;
+  margin: 0 .5rem .5rem;
+  position: relative
+}
+
+@media (max-width:1023px) {
+  .frame-body[data-v-8fd2f2dd] {
+    margin: 0 .25rem .25rem
+  }
+}
+
+.frame-header[data-v-8fd2f2dd] {
+  align-items: center;
+  display: flex;
+  padding: 0 2.5rem
+}
+
+@media (max-width:1023px) {
+  .frame-header[data-v-8fd2f2dd] {
+    border-left: 1px solid hsla(0, 0%, 100%, .7);
+    border-right: 1px solid hsla(0, 0%, 100%, .7);
+    border-top: 1px solid hsla(0, 0%, 100%, .7);
+    margin: .25rem .25rem 0;
+    padding: 0 .75rem
+  }
+}
+
+.frame-body[data-v-8fd2f2dd]:before {
+  background-color: #ffffffb3;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: calc(50% - 2.75rem)
+}
+
+@media (max-width:1023px) {
+  .frame-body[data-v-8fd2f2dd]:before {
+    width: calc(50% - 2rem)
+  }
+}
+
+@media (min-width:640px) and (max-width:1023px) {
+  .frame-body[data-v-8fd2f2dd]:before {
+    width: calc(50% - 2.5rem)
+  }
+}
+
+.frame-body[data-v-8fd2f2dd]:after {
+  background-color: #ffffffb3;
+  content: "";
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(50% - 2.75rem)
+}
+
+@media (max-width:1023px) {
+  .frame-body[data-v-8fd2f2dd]:after {
+    width: calc(50% - 2rem)
+  }
+}
+
+@media (min-width:640px) and (max-width:1023px) {
+  .frame-body[data-v-8fd2f2dd]:after {
+    width: calc(50% - 2.5rem)
+  }
+}
+
+.frame-logo[data-v-8fd2f2dd] {
+  --box-size: 5.5rem;
+  --size: 3.75rem;
+  left: 50%;
+  pointer-events: all;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%)
+}
+
+@media (max-width:1023px) {
+  .frame-logo[data-v-8fd2f2dd] {
+    --size: 3.4375rem
+  }
+}
+
+.wrap-icon[data-v-8fd2f2dd] {
+  height: .9375rem;
+  margin-right: .3125rem;
+  position: relative;
+  width: .9375rem
+}
+
+.wrap-icon[data-v-8fd2f2dd] .icon {
+  transform: rotate(180deg)
+}
+
+.back-btn[data-v-8fd2f2dd] {
+  --icon-color: var(--c-text);
+  align-items: center;
+  display: flex;
+  pointer-events: all
+}

@@ -1,0 +1,14 @@
+/* https://aventuradentalarts.com/_nuxt/esthetic-dentistry.DTpmt5Gv.css */
+.footer-plash[data-v-7f202248] {
+  background-color: var(--c-brand-navy);
+  height: 14rem;
+  position: relative;
+  width: 100%
+}
+
+@media (max-width:1023px) {
+  .footer-plash[data-v-7f202248] {
+    height: 3rem;
+    z-index: -1
+  }
+}

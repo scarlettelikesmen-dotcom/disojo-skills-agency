@@ -1,0 +1,44 @@
+/* https://alchemy.family/_nuxt/HeaderMenu.xek-QDNN.css */
+.menu[data-v-fa22e911] {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding-block: .25rem;
+  transition: var(--transition)
+}
+
+@media (max-width:1023px) {
+  .menu[data-v-fa22e911] {
+    flex-direction: column;
+    gap: .6875rem;
+    padding-block: 0
+  }
+}
+
+.menu[data-v-fa22e911]:before {
+  width: 2rem
+}
+
+.menu[data-v-fa22e911]:after,
+.menu[data-v-fa22e911]:before {
+  content: "";
+  display: block;
+  flex-shrink: 0
+}
+
+.menu[data-v-fa22e911]:after {
+  width: .25rem
+}
+
+.menu li[data-v-fa22e911] {
+  display: flex
+}
+
+.link[data-v-fa22e911] {
+  color: var(--c-text)
+}
+
+.frame.dark:not(.is-burger) .link[data-v-fa22e911] {
+  color: var(--c-bg)
+}

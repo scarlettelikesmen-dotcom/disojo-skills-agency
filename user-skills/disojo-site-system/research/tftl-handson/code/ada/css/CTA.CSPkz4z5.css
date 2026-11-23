@@ -1,0 +1,327 @@
+/* https://aventuradentalarts.com/_nuxt/CTA.CSPkz4z5.css */
+.test[data-v-6896cd1e] {
+  background-color: var(--c-light-base);
+  height: 31.5rem;
+  width: 100%
+}
+
+.form[data-v-6896cd1e],
+.test[data-v-6896cd1e] {
+  position: relative
+}
+
+.form[data-v-6896cd1e] {
+  --placeholder-color: var(--c-light-base);
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 1fr 1fr 5rem
+}
+
+@media (max-width:1023px) {
+  .form[data-v-6896cd1e] {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    justify-items: center
+  }
+}
+
+@media (min-width:1024px) {
+  .form[data-v-6896cd1e] .wrap-textarea {
+    grid-area: 2/1/3/3
+  }
+}
+
+.btn-submit[data-v-6896cd1e] {
+  min-height: 5rem;
+  min-width: 5rem
+}
+
+@media (min-width:1024px) {
+  .btn-submit[data-v-6896cd1e] {
+    grid-area: 2/3/3/4
+  }
+}
+
+@media (max-width:1023px) {
+  .btn-submit[data-v-6896cd1e] {
+    margin-top: 1rem
+  }
+}
+
+.form-title[data-v-6896cd1e] {
+  margin: 0 auto 3rem;
+  text-align: center;
+  width: 31.125rem
+}
+
+@media (max-width:1023px) {
+  .form-title[data-v-6896cd1e] {
+    margin-bottom: 4rem;
+    width: 19.75rem
+  }
+}
+
+.content[data-v-6896cd1e] .wrap-locations-radio {
+  align-items: center;
+  display: flex;
+  flex-direction: column
+}
+
+.content[data-v-6896cd1e] {
+  color: var(--c-light-base);
+  position: relative;
+  width: 49.5rem;
+  z-index: 2
+}
+
+@media (max-width:1023px) {
+  .content[data-v-6896cd1e] {
+    width: calc(100% - 2rem)
+  }
+}
+
+.bg[data-v-6896cd1e] {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.bg .n2[data-v-6896cd1e] {
+  z-index: 2
+}
+
+.bg[data-v-6896cd1e]:after {
+  background: linear-gradient(180deg, #14151d00, #14151d08 12.19%, #14151d12 22.01%, #14151d1f 29.8%, #14151d2e 35.95%, #14151d3d 40.81%, #14151d4f 44.77%, #14151d63 48.18%, #14151d75 51.41%, #14151d8a 54.84%, #14151d9e 58.82%, #14151db3 63.73%, #14151dc7 69.94%, #14151dfa 77.8%, #14151d 87.7%, #14151d);
+  bottom: 0;
+  content: "";
+  height: 78rem;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2
+}
+
+@media (max-width:1023px) {
+  .bg[data-v-6896cd1e] {
+    height: 23.75rem;
+    top: 10rem
+  }
+
+  .bg[data-v-6896cd1e]:after,
+  .bg[data-v-6896cd1e]:before {
+    height: 18rem
+  }
+}
+
+.title[data-v-6896cd1e] {
+  color: var(--c-light-base);
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 1.875rem;
+  position: absolute;
+  top: 5rem;
+  width: 100%
+}
+
+@media (max-width:1023px) {
+  .title[data-v-6896cd1e] {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: auto;
+    padding: 0;
+    position: relative;
+    top: 5rem;
+    transform: translateY(0)
+  }
+}
+
+.decor-el[data-v-6896cd1e] {
+  display: none;
+  filter: blur(4.875rem);
+  height: 54.875rem;
+  mix-blend-mode: hard-light;
+  position: absolute;
+  width: 72.875rem;
+  z-index: 1
+}
+
+@media (max-width:1023px) {
+  .decor-el[data-v-6896cd1e] {
+    filter: blur(1.25rem);
+    height: 27.1875rem;
+    width: 40rem
+  }
+}
+
+.gradient-1[data-v-6896cd1e] {
+  right: -60.75rem;
+  top: -26.25rem
+}
+
+@media (max-width:1023px) {
+  .gradient-1[data-v-6896cd1e] {
+    right: -27.75rem;
+    top: -12.25rem
+  }
+}
+
+.gradient-2[data-v-6896cd1e] {
+  left: -30rem;
+  top: -5.625rem
+}
+
+@media (max-width:1023px) {
+  .gradient-2[data-v-6896cd1e] {
+    left: -19rem;
+    top: -9.25rem
+  }
+}
+
+.gradient-3[data-v-6896cd1e] {
+  right: -22.75rem;
+  top: -12.625rem
+}
+
+@media (max-width:1023px) {
+  .gradient-3[data-v-6896cd1e] {
+    right: -30.75rem;
+    top: -11.625rem
+  }
+}
+
+.gradient-4[data-v-6896cd1e] {
+  right: -44rem;
+  top: -15.5rem
+}
+
+@media (max-width:1023px) {
+  .gradient-4[data-v-6896cd1e] {
+    right: 18rem;
+    top: -15.5rem
+  }
+}
+
+.gradient-5[data-v-6896cd1e] {
+  left: -36rem;
+  top: -4.25rem
+}
+
+@media (max-width:1023px) {
+  .gradient-5[data-v-6896cd1e] {
+    left: -27rem;
+    top: -10.25rem
+  }
+}
+
+.gradient-1[data-v-6896cd1e] {
+  animation: decor-anim-1-6896cd1e 10s ease-in-out infinite alternate
+}
+
+.gradient-2[data-v-6896cd1e] {
+  animation: decor-anim-2-6896cd1e 10s ease-in-out infinite alternate
+}
+
+.gradient-3[data-v-6896cd1e] {
+  animation: decor-anim-3-6896cd1e 10s ease-in-out infinite alternate
+}
+
+.gradient-4[data-v-6896cd1e] {
+  animation: decor-anim-4-6896cd1e 10s ease-in-out infinite alternate
+}
+
+.gradient-5[data-v-6896cd1e] {
+  animation: decor-anim-5-6896cd1e 10s ease-in-out infinite alternate
+}
+
+.cta.light[data-v-6896cd1e] {
+  background-color: var(--c-light-base)
+}
+
+.cta.light .bg[data-v-6896cd1e]:before {
+  background: linear-gradient(180deg, #eae8e8 10%, #e9e7e7d9 34.04%, #e9e7e794 62.4%, #e9e7e700);
+  height: 47.5rem
+}
+
+@media (max-width:1023px) {
+  .cta.light .bg[data-v-6896cd1e]:before {
+    height: 18rem
+  }
+
+  .cta.light[data-v-6896cd1e] {
+    background-color: var(--c-brand-navy)
+  }
+}
+
+.cta[data-v-6896cd1e] {
+  align-items: center;
+  background-color: var(--c-brand-navy);
+  display: flex;
+  flex-direction: column;
+  height: 74rem;
+  isolation: isolate;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding-bottom: 6rem;
+  position: relative;
+  width: 100%
+}
+
+@media (max-width:1023px) {
+  .cta[data-v-6896cd1e] {
+    height: 64rem;
+    padding-bottom: 3.5rem
+  }
+}
+
+@keyframes decor-anim-1-6896cd1e {
+  0% {
+    transform: translate(0) rotate(-9deg)
+  }
+
+  to {
+    transform: translate(15%, 20%) rotate(5deg)
+  }
+}
+
+@keyframes decor-anim-2-6896cd1e {
+  0% {
+    transform: translate(0) rotate(10deg)
+  }
+
+  to {
+    transform: translate(-10%, 15%) rotate(15deg)
+  }
+}
+
+@keyframes decor-anim-3-6896cd1e {
+  0% {
+    transform: translate(0) rotate(-9deg)
+  }
+
+  to {
+    transform: translate(-25%, -10%) rotate(-25deg)
+  }
+}
+
+@keyframes decor-anim-4-6896cd1e {
+  0% {
+    transform: translate(0) rotate(180deg)
+  }
+
+  to {
+    transform: translate(15%, -10%) rotate(185deg)
+  }
+}
+
+@keyframes decor-anim-5-6896cd1e {
+  0% {
+    transform: translate(0) rotate(0)
+  }
+
+  to {
+    transform: translate(5%, -20%) rotate(5deg)
+  }
+}

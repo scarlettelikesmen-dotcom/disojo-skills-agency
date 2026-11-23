@@ -1,0 +1,45 @@
+/* https://archvoyage.ae/_nuxt/index.DANs4DYP.css */
+.header[data-v-07eabb1c] {
+  padding-bottom: var(--offset-16);
+  padding-top: var(--offset-40);
+  position: relative
+}
+
+.header-line[data-v-07eabb1c] {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%
+}
+
+.title[data-v-07eabb1c] {
+  margin-bottom: var(--offset-64)
+}
+
+.status-bar[data-v-07eabb1c] {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between
+}
+
+.caption[data-v-07eabb1c] {
+  position: relative;
+  text-indent: .9375rem
+}
+
+.caption-dot[data-v-07eabb1c] {
+  background-color: var(--c-white);
+  border-radius: 50%;
+  display: block;
+  height: .5rem;
+  left: 0;
+  margin-right: .4375rem;
+  position: absolute;
+  top: 0;
+  transform: translateY(40%);
+  width: .5rem
+}
+
+.counter[data-v-07eabb1c] {
+  white-space: nowrap
+}

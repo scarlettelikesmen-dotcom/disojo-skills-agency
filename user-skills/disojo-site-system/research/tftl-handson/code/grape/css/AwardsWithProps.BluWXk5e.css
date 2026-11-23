@@ -1,0 +1,170 @@
+/* https://grape.ua/_nuxt/AwardsWithProps.BluWXk5e.css */
+.video-preview {
+  align-items: center;
+  display: flex
+}
+
+.video-preview__image {
+  border-radius: 3.8647342995rem;
+  display: block;
+  height: 15.4589371981rem;
+  overflow: hidden;
+  width: 15.4589371981rem
+}
+
+@media (min-width:1200px) {
+  .video-preview__image {
+    border-radius: 1.1111111111rem;
+    height: 4.4444444444rem;
+    width: 4.4444444444rem
+  }
+}
+
+.video-preview__img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: transform .4s cubic-bezier(.16, 1, .32, 1);
+  width: 100%
+}
+
+.video-preview:hover .video-preview__img {
+  transform: scale(1.2)
+}
+
+.video-preview__play {
+  align-items: center;
+  background-color: #a2a2fc;
+  border: .7246376812rem solid #dfe0df;
+  border-radius: 50%;
+  display: flex;
+  height: 15.9420289855rem;
+  justify-content: center;
+  margin-left: -1.4492753623rem;
+  transition: transform .4s cubic-bezier(.16, 1, .32, 1);
+  width: 15.9420289855rem
+}
+
+@media (min-width:1200px) {
+  .video-preview__play {
+    border-width: .2083333333rem;
+    height: 4.5833333333rem;
+    margin-left: -.4166666667rem;
+    width: 4.5833333333rem
+  }
+
+  .high-theme .video-preview__play {
+    background-color: #4162fb;
+    border-color: #c9f7ca
+  }
+}
+
+.video-preview:hover .video-preview__play {
+  transform: scale(1.08)
+}
+
+.awards {
+  background-color: #a2a2fc;
+  color: #fff;
+  overflow: hidden;
+  padding: 3.8647342995rem
+}
+
+@media (min-width:1200px) {
+  .awards {
+    padding: 1.6666666667rem
+  }
+
+  .high-theme .awards {
+    background-color: #4162fb
+  }
+}
+
+.awards__header {
+  align-items: center;
+  color: #ffffff80;
+  display: grid;
+  gap: .5555555556rem;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 3.8647342995rem
+}
+
+@media (min-width:1200px) {
+  .awards__header {
+    margin-bottom: 1.1111111111rem
+  }
+}
+
+.awards__header .awards__title {
+  grid-column: span 6
+}
+
+@media (max-width:1199px) {
+  .awards__text:last-child {
+    text-align: right
+  }
+}
+
+.awards__item {
+  position: relative
+}
+
+.title-h1t.awards__item {
+  color: #fff
+}
+
+.awards__item>* {
+  display: inline
+}
+
+.awards__other {
+  color: #fff
+}
+
+.awards__description {
+  margin-top: 23.1884057971rem
+}
+
+@media (min-width:1200px) {
+  .awards__description {
+    margin-top: 10.5555555556rem;
+    max-width: 28.5714285714%
+  }
+}
+
+.awards__item-projectcs {
+  display: flex;
+  gap: .5555555556rem;
+  position: absolute;
+  right: 0;
+  top: 0
+}
+
+@media (max-width:1199px) {
+  .awards__item-projectcs {
+    display: none
+  }
+}
+
+.awards__item-projects-link {
+  border-radius: .8333333333rem;
+  display: block;
+  height: 5.5555555556rem;
+  overflow: hidden;
+  transform: scale(0);
+  transform-origin: 75% 25%;
+  transition: all .4s cubic-bezier(.16, 1, .32, 1);
+  width: 5.5555555556rem
+}
+
+.awards__item-projects-link>* {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.awards__item>:first-child:hover+.awards__item-projectcs .awards__item-projects-link {
+  transform: scale(1)
+}

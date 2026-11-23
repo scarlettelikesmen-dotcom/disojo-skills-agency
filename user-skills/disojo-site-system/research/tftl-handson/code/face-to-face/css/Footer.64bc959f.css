@@ -1,0 +1,225 @@
+/* https://13322566869.com/_nuxt/Footer.64bc959f.css */
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Thin;
+  font-weight: 200;
+  src: url(./HelveticaNeue-Thin.9056df93.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Roman;
+  font-weight: 400;
+  src: url(./HelveticaNeue-Roman.63d9f12c.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-UltraLight;
+  font-weight: 100;
+  src: url(./HelveticaNeue-UltraLight.37b61809.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Bold;
+  font-weight: 700;
+  src: url(./HelveticaNeue-Bold.0520dad4.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Light;
+  font-weight: 300;
+  src: url(./FoundersGrotesk-Light.ff890ce3.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Regular;
+  font-weight: 400;
+  src: url(./FoundersGrotesk-Regular.5f0334d8.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Medium;
+  font-weight: 500;
+  src: url(./FoundersGrotesk-Medium.c1b5264c.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Semibold;
+  font-weight: 600;
+  src: url(./FoundersGrotesk-Semibold.33ac05b0.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Bold;
+  font-weight: 700;
+  src: url(./FoundersGrotesk-Bold.dc42e3ff.woff2)
+}
+
+.footer[data-v-149b04b6] {
+  height: 100vh;
+  min-height: 54.8611111111vw;
+  overflow: hidden;
+  position: relative
+}
+
+@media (max-width:1024px) {
+  .footer[data-v-149b04b6] {
+    height: auto
+  }
+}
+
+.footer__links[data-v-149b04b6] {
+  display: flex;
+  justify-content: space-between
+}
+
+.footer__link[data-v-149b04b6] {
+  cursor: pointer;
+  position: relative
+}
+
+.footer__link[data-v-149b04b6]:after {
+  background: #000;
+  bottom: -.1388888889vw;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: all .5s ease;
+  width: 100%
+}
+
+@media (max-width:1024px) {
+  .footer__link[data-v-149b04b6]:after {
+    bottom: -2px
+  }
+}
+
+.footer__link[data-v-149b04b6]:hover:after {
+  width: 0
+}
+
+.footer__wrapper[data-v-149b04b6] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding-bottom: 3.6805555556vw;
+  padding-top: 3.6805555556vw
+}
+
+@media (max-width:1024px) {
+  .footer__wrapper[data-v-149b04b6] {
+    padding-bottom: 16px;
+    padding-top: 16px
+  }
+}
+
+.footer__phone[data-v-149b04b6] {
+  color: #000000d9;
+  font-family: FoundersGrotesk-Medium;
+  font-size: 16.1805555556vw;
+  letter-spacing: -.5944444444vw;
+  line-height: 70%;
+  margin-top: 2.2222222222vw;
+  text-align: center
+}
+
+@media (max-width:1024px) {
+  .footer__phone[data-v-149b04b6] {
+    font-size: 15.5vw;
+    letter-spacing: -2px;
+    margin-top: 32px
+  }
+}
+
+.footer__photo[data-v-149b04b6] {
+  border-radius: .5555555556vw;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 19.1666666667vw
+}
+
+@media (max-width:1024px) {
+  .footer__photo[data-v-149b04b6] {
+    margin-top: 50px;
+    width: 210px
+  }
+}
+
+.footer__text[data-v-149b04b6] {
+  font-family: FoundersGrotesk-Medium;
+  margin: 2.5vw auto 0;
+  text-align: center;
+  width: 35.4166666667vw
+}
+
+@media (max-width:1024px) {
+  .footer__text[data-v-149b04b6] {
+    margin-top: 50px;
+    max-width: 358px;
+    width: auto
+  }
+}
+
+.footer__link-fake[data-v-149b04b6] {
+  position: relative
+}
+
+.tooltip[data-v-149b04b6] {
+  background-color: #fff;
+  border-radius: .2777777778vw;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, .08)) drop-shadow(-4px -4px 3px rgba(0, 0, 0, .05));
+  font-size: 1.0416666667vw;
+  letter-spacing: -.0012em;
+  line-height: 1.1111111111vw;
+  padding: .6944444444vw;
+  pointer-events: none;
+  position: absolute;
+  right: calc(100% + 1.11111vw);
+  top: 50%;
+  transform: translateY(-50%);
+  width: -moz-max-content;
+  width: max-content
+}
+
+@media (max-width:1024px) {
+  .tooltip[data-v-149b04b6] {
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 10px;
+    right: calc(100% + 16px)
+  }
+}
+
+.tooltip[data-v-149b04b6]:before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: .5555555556vw;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+  transform-origin: center center;
+  width: .5555555556vw
+}
+
+@media (max-width:1024px) {
+  .tooltip[data-v-149b04b6]:before {
+    height: 8px;
+    width: 8px
+  }
+}
+
+.tooltip__inner[data-v-149b04b6] {
+  transition: .3s ease-in-out
+}

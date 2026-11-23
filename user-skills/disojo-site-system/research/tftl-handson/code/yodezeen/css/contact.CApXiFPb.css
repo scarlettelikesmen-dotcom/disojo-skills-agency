@@ -1,0 +1,133 @@
+/* https://yodezeen.com/_nuxt/contact.CApXiFPb.css */
+.link-template[data-v-3b5e308a] {
+  display: flex;
+  overflow: hidden;
+  position: relative
+}
+
+.link-template[data-v-3b5e308a]:after {
+  background: linear-gradient(90deg, #2d2a2a 0, #2d2a2a 33.3333%, transparent 0, transparent 66.6666%, #2d2a2a 0, #2d2a2a);
+  bottom: 0;
+  content: "";
+  height: .0625rem;
+  position: absolute;
+  right: 0;
+  transition: all .7s ease;
+  width: 300%
+}
+
+.link-template._white[data-v-3b5e308a]:after {
+  background: linear-gradient(90deg, #fff 0, #fff 33.3333%, transparent 0, transparent 66.6666%, #fff 0, #fff)
+}
+
+@media(hover:hover) {
+  .link-template[data-v-3b5e308a]:hover:after {
+    transform: translate(66.6666%)
+  }
+}
+
+.page-container[data-v-8fee1637] {
+  opacity: 0
+}
+
+.page-wrapper[data-v-8fee1637] {
+  background-color: #f2f0f0;
+  font-family: var(--font-neue);
+  min-height: 100vh;
+  padding-top: 9rem
+}
+
+@media(max-width:1023px) {
+  .page-wrapper[data-v-8fee1637] {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem
+  }
+}
+
+.emails[data-v-8fee1637] {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 10rem;
+  row-gap: 2.5rem
+}
+
+@media(max-width:1023px) {
+  .emails[data-v-8fee1637] {
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 5rem
+  }
+}
+
+.email[data-v-8fee1637]:first-child {
+  grid-column: span 3
+}
+
+@media(max-width:1023px) {
+  .email[data-v-8fee1637]:first-child {
+    grid-column: 1
+  }
+}
+
+.email[data-v-8fee1637]:nth-child(5) {
+  grid-column: span 3
+}
+
+@media(max-width:1023px) {
+  .email[data-v-8fee1637]:nth-child(5) {
+    grid-column: 1
+  }
+}
+
+.email[data-v-8fee1637] {
+  align-items: center;
+  display: flex;
+  flex-direction: column
+}
+
+.email-text[data-v-8fee1637] {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -.016em;
+  line-height: 100%;
+  margin-top: .25rem
+}
+
+@media(max-width:1023px) {
+  .email-text[data-v-8fee1637] {
+    font-size: 1.25rem
+  }
+}
+
+.email-title[data-v-8fee1637] {
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: -.016em;
+  line-height: 100%;
+  text-transform: uppercase
+}
+
+@media(max-width:1023px) {
+  .email-title[data-v-8fee1637] {
+    font-size: .875rem
+  }
+}
+
+.contact-wrap[data-v-8fee1637] {
+  height: 45rem
+}
+
+@media(max-width:1023px) {
+  .contact-wrap[data-v-8fee1637] {
+    height: auto;
+    margin-bottom: 2.5rem
+  }
+}
+
+@media(max-width:1023px) {
+  [data-v-8fee1637] .main-contact__item-city {
+    font-size: 3.5rem;
+    line-height: 84%
+  }
+}

@@ -1,0 +1,503 @@
+/* https://grape.ua/_nuxt/contact.CfPlnw9v.css */
+.contact-first {
+  padding: 5.7971014493rem 3.8647342995rem 15.4589371981rem
+}
+
+@media (min-width:1200px) {
+  .contact-first {
+    display: grid;
+    gap: .5555555556rem;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr auto;
+    min-height: calc(100vh - 5rem);
+    padding: 1.6666666667rem
+  }
+}
+
+@media (max-width:1199px) {
+  .contact-first__title {
+    margin-bottom: 5.7971014493rem
+  }
+}
+
+@media (min-width:1200px) {
+  .contact-first__title {
+    grid-column: 1/4;
+    margin-top: 10.5555555556rem;
+    text-wrap: balance
+  }
+
+  .contact-first__some:nth-child(3) {
+    grid-column: 1/2
+  }
+
+  .contact-first__some:nth-child(4) {
+    grid-column: 2/3
+  }
+}
+
+@media (max-width:1199px) {
+  .contact-first__some {
+    margin-left: calc(50% + .96618rem)
+  }
+
+  .contact-first__some+.contact-first__some {
+    margin-top: 7.729468599rem
+  }
+}
+
+.contact-first__some .text-p3 {
+  color: #26172366;
+  margin-bottom: .5555555556rem
+}
+
+.contact-first__slider {
+  border-radius: 4.8309178744rem;
+  color: #fff;
+  display: grid;
+  gap: 0 1.9323671498rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  margin: 0 -1.9323671498rem 15.4589371981rem;
+  overflow: hidden;
+  padding: 3.8647342995rem;
+  position: relative
+}
+
+@media (max-width:1199px) {
+  .contact-first__slider {
+    min-height: 120.7729468599rem
+  }
+}
+
+@media (min-width:1200px) {
+  .contact-first__slider {
+    border-radius: 1.6666666667rem;
+    grid-column: 5/-1;
+    grid-row: 1/3;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto !important;
+    margin: -1.6666666667rem -1.1111111111rem -1.1111111111rem;
+    min-height: 34.7222222222rem;
+    padding: 1.1111111111rem
+  }
+}
+
+.contact-first__slider:before {
+  background-color: #0000004d;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3
+}
+
+.contact-first__address {
+  margin-top: auto;
+  position: relative;
+  z-index: 3
+}
+
+@media (max-width:1199px) {
+  .contact-first__address {
+    grid-column: 2/3;
+    grid-row: 4/5
+  }
+}
+
+.contact-first__info {
+  position: relative;
+  z-index: 3
+}
+
+@media (max-width:1199px) {
+  .contact-first__info {
+    align-self: center
+  }
+}
+
+.contact-first__place {
+  color: #ffffff80;
+  position: relative;
+  z-index: 3
+}
+
+.contact-first__count {
+  grid-column: -2/-1;
+  grid-row: 2/3;
+  position: relative;
+  text-align: right;
+  z-index: 3
+}
+
+.contact-first__time {
+  grid-column: 1/2;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 3
+}
+
+@media (min-width:1200px) {
+  .contact-first__time {
+    grid-column: 1/-1
+  }
+
+  .high-theme .contact-first__time {
+    color: #c9f7ca
+  }
+}
+
+.contact-first__slider .title-h0 {
+  margin-top: 1.1111111111rem
+}
+
+.contact-first__slider .link-2:after,
+.contact-first__slider .link-2:before {
+  background-color: #fff3
+}
+
+.contact-first__next,
+.contact-first__prev {
+  bottom: 0;
+  position: absolute !important;
+  top: 0;
+  width: 50%;
+  z-index: 3
+}
+
+.contact-first__prev {
+  left: 0
+}
+
+@media (max-width:1199px) {
+  .contact-first__prev {
+    display: none
+  }
+}
+
+.contact-first__next {
+  right: 0
+}
+
+@media (max-width:1199px) {
+  .contact-first__next {
+    left: 0;
+    width: 100%
+  }
+}
+
+.contact-first__images {
+  display: contents
+}
+
+.contact-first__img {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0
+}
+
+.contact__dots {
+  display: flex;
+  gap: 1.9323671498rem;
+  grid-column: 1/-1;
+  margin-bottom: 2.8985507246rem;
+  position: relative;
+  width: 100%;
+  z-index: 3
+}
+
+@media (min-width:1200px) {
+  .contact__dots {
+    gap: .5555555556rem;
+    margin-bottom: 1.25rem
+  }
+}
+
+.contact__dot {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #26172333;
+  border-radius: .4830917874rem;
+  flex-grow: 1;
+  height: .9661835749rem;
+  overflow: hidden
+}
+
+.contact__dot:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%
+}
+
+@media (min-width:1200px) {
+  .contact__dot {
+    height: .4166666667rem
+  }
+}
+
+.contact__dot.active:after {
+  animation: dot 5s linear forwards;
+  background: #fff;
+  width: 0
+}
+
+@keyframes dot {
+  0% {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+.contact__dot.active~.contact__dot:after {
+  background-color: transparent
+}
+
+.contact-map {
+  padding: 0 3.8647342995rem
+}
+
+@media (min-width:1200px) {
+  .contact-map {
+    padding: 0 1.6666666667rem
+  }
+}
+
+.contact-map__wrap {
+  background-color: #a2a2fc;
+  background-image: url(../img/map-icon.svg);
+  background-position: center 6.5217391304rem;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  border-radius: 4.8309178744rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 7.729468599rem;
+  justify-content: space-between;
+  margin: 0 -1.9323671498rem;
+  overflow: hidden;
+  padding: 3.8647342995rem;
+  position: relative
+}
+
+@media (max-width:1199px) {
+  .contact-map__wrap {
+    height: calc(100vh - 19.32367rem)
+  }
+}
+
+@media (min-width:1200px) {
+  .contact-map__wrap {
+    background-position: center -2.5rem;
+    background-size: auto 210%;
+    border-radius: 1.6666666667rem;
+    display: grid;
+    gap: .5555555556rem;
+    grid-template-columns: repeat(7, 1fr);
+    height: 30.5555555556rem;
+    margin: 0 -1.1111111111rem;
+    padding: 1.1111111111rem
+  }
+
+  .high-theme .contact-map__wrap {
+    background-color: #4162fb;
+    background-image: url(../img/map-icon-high.svg)
+  }
+}
+
+.contact-map__icon {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0
+}
+
+.contact-map__title {
+  color: #fff
+}
+
+@media (min-width:1200px) {
+  .contact-map__title {
+    align-self: flex-end;
+    grid-column: 1/5
+  }
+}
+
+.high-theme .contact-map__title {
+  color: #fff
+}
+
+@media (min-width:1200px) {
+
+  .high-theme .contact-map__title a,
+  .high-theme .contact-map__title span {
+    color: #261723
+  }
+}
+
+.contact-map__qoutes {
+  margin: 0 -3.8647342995rem;
+  overflow: hidden;
+  padding: 0 3.8647342995rem
+}
+
+@media (max-width:1199px) {
+  .contact-map__qoutes {
+    margin-top: auto
+  }
+}
+
+@media (min-width:1200px) {
+  .contact-map__qoutes {
+    flex-direction: column;
+    grid-column: 6/8;
+    margin: -1.1111111111rem 0;
+    padding: 1.1111111111rem 0
+  }
+
+  .contact-map__qoutes-wrap {
+    height: -moz-max-content;
+    height: max-content
+  }
+}
+
+@media (max-width:1199px) {
+  .contact-map__qoutes-wrap {
+    display: flex;
+    width: -moz-max-content;
+    width: max-content
+  }
+
+  .contact-map__qoutes-wrap>div {
+    height: 100%
+  }
+}
+
+.contact-map-quote {
+  background-color: #fff;
+  border-radius: 3.8647342995rem 3.8647342995rem 0;
+  color: #261723;
+  margin-right: 21.2560386473rem;
+  padding: 3.8647342995rem;
+  position: relative;
+  width: 61.1111111111rem;
+  z-index: 3
+}
+
+@media (max-width:1199px) {
+  .contact-map-quote {
+    flex-shrink: 0
+  }
+}
+
+@media (min-width:1200px) {
+  .contact-map-quote {
+    border-radius: 1.1111111111rem 1.1111111111rem 0;
+    margin-right: 4.4444444444rem;
+    padding: 1.6666666667rem;
+    width: 22.2222222222rem
+  }
+
+  .contact-map-quote+.contact-map-quote {
+    margin-top: 1.6666666667rem
+  }
+}
+
+.contact-map-quote__quote {
+  height: 4.8309178744rem;
+  margin-bottom: 1.9323671498rem;
+  width: auto
+}
+
+@media (min-width:1200px) {
+  .contact-map-quote__quote {
+    height: 1.6666666667rem;
+    margin-bottom: .5555555556rem
+  }
+}
+
+.contact-map-quote__text {
+  margin-bottom: 1.6666666667rem
+}
+
+.contact-map-quote__author {
+  color: #0006;
+  text-align: right
+}
+
+.contact-map-quote__icon {
+  bottom: 0;
+  left: calc(100% - 1px);
+  position: absolute
+}
+
+.contact-map-quote__avatar {
+  bottom: 0;
+  height: 11.5942028986rem;
+  position: absolute;
+  right: -15.4589371981rem;
+  width: 11.5942028986rem
+}
+
+@media (min-width:1200px) {
+  .contact-map-quote__avatar {
+    height: 3.3333333333rem;
+    right: -4.4444444444rem;
+    width: 3.3333333333rem
+  }
+}
+
+.contact-map-quote__avatar img {
+  -webkit-clip-path: polygon(99.75% 27.541%, 99.75% 27.541%, 98.997% 27.841%, 98.23% 28.112%, 97.449% 28.354%, 96.656% 28.565%, 95.851% 28.746%, 95.034% 28.896%, 94.207% 29.013%, 93.369% 29.098%, 92.522% 29.149%, 91.667% 29.167%, 91.667% 29.167%, 88.287% 28.894%, 85.082% 28.105%, 82.093% 26.841%, 79.363% 25.147%, 76.935% 23.065%, 74.853% 20.637%, 73.159% 17.907%, 71.895% 14.918%, 71.106% 11.713%, 70.833% 8.333%, 70.833% 8.333%, 70.851% 7.478%, 70.902% 6.631%, 70.987% 5.793%, 71.104% 4.966%, 71.254% 4.149%, 71.435% 3.344%, 71.646% 2.551%, 71.888% 1.77%, 72.159% 1.003%, 72.459% .25%, 72.459% .25%, 71.009% .183%, 69.499% .128%, 67.926% .086%, 66.289% .054%, 64.586% .031%, 62.814% .016%, 60.971% .007%, 59.056% .002%, 57.067% 0, 55% 0, 45% 0, 45% 0, 39.65% .005%, 34.823% .038%, 30.48% .129%, 26.581% .306%, 23.086% .597%, 19.957% 1.031%, 17.154% 1.638%, 14.637% 2.445%, 12.368% 3.481%, 10.305% 4.775%, 10.305% 4.775%, 9.676% 5.247%, 9.063% 5.738%, 8.466% 6.248%, 7.886% 6.776%, 7.322% 7.322%, 6.776% 7.886%, 6.248% 8.466%, 5.738% 9.063%, 5.247% 9.676%, 4.775% 10.305%, 4.775% 10.305%, 3.481% 12.368%, 2.445% 14.637%, 1.638% 17.154%, 1.031% 19.957%, .597% 23.086%, .306% 26.581%, .129% 30.48%, .038% 34.823%, .005% 39.65%, 0 45%, 0 55%, 0 55%, .005% 60.35%, .038% 65.177%, .129% 69.52%, .306% 73.419%, .597% 76.914%, 1.031% 80.043%, 1.638% 82.846%, 2.445% 85.363%, 3.481% 87.632%, 4.775% 89.695%, 4.775% 89.695%, 5.247% 90.324%, 5.738% 90.937%, 6.248% 91.534%, 6.776% 92.114%, 7.322% 92.678%, 7.886% 93.224%, 8.466% 93.752%, 9.063% 94.262%, 9.676% 94.753%, 10.305% 95.225%, 10.305% 95.225%, 12.368% 96.519%, 14.637% 97.555%, 17.154% 98.362%, 19.957% 98.969%, 23.086% 99.403%, 26.581% 99.694%, 30.48% 99.871%, 34.823% 99.962%, 39.65% 99.995%, 45% 100%, 55% 100%, 55% 100%, 60.35% 99.995%, 65.177% 99.962%, 69.52% 99.871%, 73.419% 99.694%, 76.914% 99.403%, 80.043% 98.969%, 82.846% 98.362%, 85.363% 97.555%, 87.632% 96.519%, 89.695% 95.225%, 89.695% 95.225%, 90.324% 94.753%, 90.937% 94.262%, 91.534% 93.752%, 92.114% 93.224%, 92.678% 92.678%, 93.224% 92.114%, 93.752% 91.534%, 94.262% 90.937%, 94.753% 90.324%, 95.225% 89.695%, 95.225% 89.695%, 96.519% 87.632%, 97.555% 85.363%, 98.362% 82.846%, 98.969% 80.043%, 99.403% 76.914%, 99.694% 73.419%, 99.871% 69.52%, 99.962% 65.177%, 99.995% 60.35%, 100% 55%, 100% 45%, 100% 45%, 100% 42.933%, 99.998% 40.944%, 99.993% 39.029%, 99.984% 37.186%, 99.969% 35.414%, 99.946% 33.711%, 99.914% 32.074%, 99.872% 30.501%, 99.817% 28.991%, 99.75% 27.541%);
+  clip-path: polygon(99.75% 27.541%, 99.75% 27.541%, 98.997% 27.841%, 98.23% 28.112%, 97.449% 28.354%, 96.656% 28.565%, 95.851% 28.746%, 95.034% 28.896%, 94.207% 29.013%, 93.369% 29.098%, 92.522% 29.149%, 91.667% 29.167%, 91.667% 29.167%, 88.287% 28.894%, 85.082% 28.105%, 82.093% 26.841%, 79.363% 25.147%, 76.935% 23.065%, 74.853% 20.637%, 73.159% 17.907%, 71.895% 14.918%, 71.106% 11.713%, 70.833% 8.333%, 70.833% 8.333%, 70.851% 7.478%, 70.902% 6.631%, 70.987% 5.793%, 71.104% 4.966%, 71.254% 4.149%, 71.435% 3.344%, 71.646% 2.551%, 71.888% 1.77%, 72.159% 1.003%, 72.459% .25%, 72.459% .25%, 71.009% .183%, 69.499% .128%, 67.926% .086%, 66.289% .054%, 64.586% .031%, 62.814% .016%, 60.971% .007%, 59.056% .002%, 57.067% 0, 55% 0, 45% 0, 45% 0, 39.65% .005%, 34.823% .038%, 30.48% .129%, 26.581% .306%, 23.086% .597%, 19.957% 1.031%, 17.154% 1.638%, 14.637% 2.445%, 12.368% 3.481%, 10.305% 4.775%, 10.305% 4.775%, 9.676% 5.247%, 9.063% 5.738%, 8.466% 6.248%, 7.886% 6.776%, 7.322% 7.322%, 6.776% 7.886%, 6.248% 8.466%, 5.738% 9.063%, 5.247% 9.676%, 4.775% 10.305%, 4.775% 10.305%, 3.481% 12.368%, 2.445% 14.637%, 1.638% 17.154%, 1.031% 19.957%, .597% 23.086%, .306% 26.581%, .129% 30.48%, .038% 34.823%, .005% 39.65%, 0 45%, 0 55%, 0 55%, .005% 60.35%, .038% 65.177%, .129% 69.52%, .306% 73.419%, .597% 76.914%, 1.031% 80.043%, 1.638% 82.846%, 2.445% 85.363%, 3.481% 87.632%, 4.775% 89.695%, 4.775% 89.695%, 5.247% 90.324%, 5.738% 90.937%, 6.248% 91.534%, 6.776% 92.114%, 7.322% 92.678%, 7.886% 93.224%, 8.466% 93.752%, 9.063% 94.262%, 9.676% 94.753%, 10.305% 95.225%, 10.305% 95.225%, 12.368% 96.519%, 14.637% 97.555%, 17.154% 98.362%, 19.957% 98.969%, 23.086% 99.403%, 26.581% 99.694%, 30.48% 99.871%, 34.823% 99.962%, 39.65% 99.995%, 45% 100%, 55% 100%, 55% 100%, 60.35% 99.995%, 65.177% 99.962%, 69.52% 99.871%, 73.419% 99.694%, 76.914% 99.403%, 80.043% 98.969%, 82.846% 98.362%, 85.363% 97.555%, 87.632% 96.519%, 89.695% 95.225%, 89.695% 95.225%, 90.324% 94.753%, 90.937% 94.262%, 91.534% 93.752%, 92.114% 93.224%, 92.678% 92.678%, 93.224% 92.114%, 93.752% 91.534%, 94.262% 90.937%, 94.753% 90.324%, 95.225% 89.695%, 95.225% 89.695%, 96.519% 87.632%, 97.555% 85.363%, 98.362% 82.846%, 98.969% 80.043%, 99.403% 76.914%, 99.694% 73.419%, 99.871% 69.52%, 99.962% 65.177%, 99.995% 60.35%, 100% 55%, 100% 45%, 100% 45%, 100% 42.933%, 99.998% 40.944%, 99.993% 39.029%, 99.984% 37.186%, 99.969% 35.414%, 99.946% 33.711%, 99.914% 32.074%, 99.872% 30.501%, 99.817% 28.991%, 99.75% 27.541%);
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.contact-map-quote__avatar-online {
+  background-color: #c9f7ca;
+  border-radius: 50%;
+  height: 2.8985507246rem;
+  position: absolute;
+  right: -.4830917874rem;
+  top: -.4830917874rem;
+  width: 2.8985507246rem
+}
+
+@media (min-width:1200px) {
+  .contact-map-quote__avatar-online {
+    height: .8333333333rem;
+    right: -.1388888889rem;
+    top: -.1388888889rem;
+    width: .8333333333rem
+  }
+
+  .contact-map__btn {
+    display: none
+  }
+}

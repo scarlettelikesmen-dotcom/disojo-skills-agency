@@ -1,0 +1,27 @@
+/* https://yodezeen.com/_nuxt/Gradient.H0z9qMCv.css */
+.gradient[data-v-6a8e3fe8] {
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5
+}
+
+@media(max-width:1023px) {
+  .gradient[data-v-6a8e3fe8] {
+    display: none
+  }
+}
+
+.layer[data-v-6a8e3fe8] {
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  inset: 0;
+  -webkit-mask-image: linear-gradient(to top, transparent var(--start-gradient), var(--c-dark) var(--end-gradient));
+  mask-image: linear-gradient(to top, transparent var(--start-gradient), var(--c-dark) var(--end-gradient));
+  position: absolute
+}

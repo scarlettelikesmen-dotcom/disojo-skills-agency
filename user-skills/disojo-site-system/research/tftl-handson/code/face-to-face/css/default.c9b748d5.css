@@ -1,0 +1,86 @@
+/* https://13322566869.com/_nuxt/default.c9b748d5.css */
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Thin;
+  font-weight: 200;
+  src: url(./HelveticaNeue-Thin.9056df93.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Roman;
+  font-weight: 400;
+  src: url(./HelveticaNeue-Roman.63d9f12c.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-UltraLight;
+  font-weight: 100;
+  src: url(./HelveticaNeue-UltraLight.37b61809.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Bold;
+  font-weight: 700;
+  src: url(./HelveticaNeue-Bold.0520dad4.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Light;
+  font-weight: 300;
+  src: url(./FoundersGrotesk-Light.ff890ce3.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Regular;
+  font-weight: 400;
+  src: url(./FoundersGrotesk-Regular.5f0334d8.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Medium;
+  font-weight: 500;
+  src: url(./FoundersGrotesk-Medium.c1b5264c.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Semibold;
+  font-weight: 600;
+  src: url(./FoundersGrotesk-Semibold.33ac05b0.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Bold;
+  font-weight: 700;
+  src: url(./FoundersGrotesk-Bold.dc42e3ff.woff2)
+}
+
+.preloader[data-v-3f1d39e6] {
+  background: #fff;
+  color: #fff;
+  inset: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999
+}
+
+.number[data-v-3f1d39e6] {
+  bottom: 2.7777777778vw;
+  color: #000000d9;
+  font-family: FoundersGrotesk-Medium;
+  font-size: 15.625vw;
+  left: 0;
+  letter-spacing: -.5944444444vw;
+  line-height: 80%;
+  margin-top: 2.2222222222vw;
+  position: absolute;
+  text-align: center;
+  width: 100%
+}

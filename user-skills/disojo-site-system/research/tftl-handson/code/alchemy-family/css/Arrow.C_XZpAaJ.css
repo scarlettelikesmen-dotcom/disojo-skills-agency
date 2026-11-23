@@ -1,0 +1,11 @@
+/* https://alchemy.family/_nuxt/Arrow.C_XZpAaJ.css */
+.icon[data-v-d282eb51] {
+  --self-color: var(--icon-color, var(--c-bg));
+  display: block;
+  height: auto;
+  width: 100%
+}
+
+.icon path[data-v-d282eb51] {
+  stroke: var(--self-color)
+}

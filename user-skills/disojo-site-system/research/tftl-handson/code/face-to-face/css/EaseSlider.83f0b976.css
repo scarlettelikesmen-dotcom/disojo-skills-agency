@@ -1,0 +1,188 @@
+/* https://13322566869.com/_nuxt/EaseSlider.83f0b976.css */
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Thin;
+  font-weight: 200;
+  src: url(./HelveticaNeue-Thin.9056df93.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Roman;
+  font-weight: 400;
+  src: url(./HelveticaNeue-Roman.63d9f12c.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-UltraLight;
+  font-weight: 100;
+  src: url(./HelveticaNeue-UltraLight.37b61809.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: HelveticaNeue-Bold;
+  font-weight: 700;
+  src: url(./HelveticaNeue-Bold.0520dad4.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Light;
+  font-weight: 300;
+  src: url(./FoundersGrotesk-Light.ff890ce3.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Regular;
+  font-weight: 400;
+  src: url(./FoundersGrotesk-Regular.5f0334d8.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Medium;
+  font-weight: 500;
+  src: url(./FoundersGrotesk-Medium.c1b5264c.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Semibold;
+  font-weight: 600;
+  src: url(./FoundersGrotesk-Semibold.33ac05b0.woff2)
+}
+
+@font-face {
+  font-display: swap;
+  font-family: FoundersGrotesk-Bold;
+  font-weight: 700;
+  src: url(./FoundersGrotesk-Bold.dc42e3ff.woff2)
+}
+
+.hero__slider-bg-svg[data-v-a5348e6e] {
+  width: 50vw
+}
+
+@media (max-width:1024px) {
+  .hero__slider-bg-svg[data-v-a5348e6e] {
+    display: none
+  }
+}
+
+.hero__slider[data-v-a5348e6e] {
+  background: #fff;
+  bottom: -1px;
+  color: #000;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1
+}
+
+@media (max-width:1024px) {
+  .hero__slider[data-v-a5348e6e] {
+    height: 160px;
+    width: 100%
+  }
+}
+
+.hero__slide[data-v-a5348e6e],
+.hero__slider-wrapper[data-v-a5348e6e] {
+  inset: 0;
+  position: absolute
+}
+
+.hero__slide[data-v-a5348e6e] {
+  opacity: 0;
+  padding: 1.1111111111vw;
+  visibility: hidden
+}
+
+@media (max-width:1024px) {
+  .hero__slide[data-v-a5348e6e] {
+    display: flex;
+    flex-direction: column;
+    padding: 16px
+  }
+}
+
+.hero__slide[data-v-a5348e6e]:first-child {
+  opacity: 1;
+  visibility: visible
+}
+
+.hero__slide-text[data-v-a5348e6e] {
+  font-family: FoundersGrotesk-Medium;
+  width: 12.2222222222vw
+}
+
+@media (max-width:1024px) {
+  .hero__slide-text[data-v-a5348e6e] {
+    margin-left: 50%;
+    width: 176px
+  }
+}
+
+.hero__slider-pagination[data-v-a5348e6e] {
+  display: flex;
+  font-family: FoundersGrotesk-Medium;
+  left: 50%;
+  opacity: .4;
+  position: absolute;
+  top: 1.1111111111vw;
+  transform: translate(-50%)
+}
+
+@media (max-width:1024px) {
+  .hero__slider-pagination[data-v-a5348e6e] {
+    left: 16px;
+    top: 16px;
+    transform: none
+  }
+}
+
+.hero__slider-loader-svg[data-v-a5348e6e] {
+  width: .8333333333vw
+}
+
+@media (max-width:1024px) {
+  .hero__slider-loader-svg[data-v-a5348e6e] {
+    width: 12px
+  }
+}
+
+.hero__slider-loader[data-v-a5348e6e] {
+  margin-right: .6944444444vw;
+  position: relative;
+  top: .2083333333vw
+}
+
+@media (max-width:1024px) {
+  .hero__slider-loader[data-v-a5348e6e] {
+    margin-right: 10px;
+    top: 2px
+  }
+}
+
+.hero__slider-loader-svg circle[data-v-a5348e6e] {
+  stroke-width: .1388888889vw
+}
+
+@media (max-width:1024px) {
+  .hero__slider-loader-svg circle[data-v-a5348e6e] {
+    stroke-width: 2px
+  }
+}
+
+.hero__slider-loader-svg circle[data-v-a5348e6e]:first-child {
+  stroke: #0003
+}
+
+.hero__slider-loader-svg circle[data-v-a5348e6e]:nth-child(2) {
+  stroke: #000;
+  transform: rotate(-90deg);
+  transform-origin: center center
+}

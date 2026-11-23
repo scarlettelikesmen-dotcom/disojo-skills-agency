@@ -1,0 +1,21 @@
+/* https://archvoyage.ae/_nuxt/Expertise.KgrFcRoy.css */
+.expertise[data-v-da70c03c] {
+  background-color: var(--c-gray);
+  padding: var(--offset-88) 0
+}
+
+.header[data-v-da70c03c] {
+  padding-bottom: var(--offset-32);
+  position: relative
+}
+
+.header-line[data-v-da70c03c] {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%
+}
+
+.title[data-v-da70c03c] {
+  text-transform: uppercase
+}

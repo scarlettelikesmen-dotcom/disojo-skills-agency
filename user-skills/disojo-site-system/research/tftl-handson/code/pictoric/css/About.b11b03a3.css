@@ -1,0 +1,108 @@
+/* https://pictoric.com.ua/_nuxt/About.b11b03a3.css */
+.player[data-v-93e64835] {
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  width: 100%
+}
+
+.player-icon[data-v-93e64835] {
+  bottom: 1rem;
+  display: flex;
+  height: 1.4375rem;
+  left: 1rem;
+  position: absolute;
+  width: 1.4375rem
+}
+
+.about[data-v-bce22fb1] {
+  margin-bottom: var(--mb-about, var(--offset-120));
+  padding: 0 var(--padding);
+  text-align: center
+}
+
+@media (max-width:1023px) {
+  .about[data-v-bce22fb1] {
+    margin-bottom: 7.5rem
+  }
+}
+
+.about-icon[data-v-bce22fb1] {
+  display: block;
+  height: 5.4375rem;
+  margin: 0 auto;
+  position: relative;
+  width: 17.4375rem;
+  z-index: var(--z-base)
+}
+
+@media (max-width:1023px) {
+  .about-icon[data-v-bce22fb1] {
+    height: 3rem;
+    width: 9.5rem
+  }
+}
+
+.title-wrapper[data-v-bce22fb1] {
+  margin-top: -2.875rem;
+  position: relative
+}
+
+@media (max-width:1023px) {
+  .title-wrapper[data-v-bce22fb1] {
+    margin-top: -1rem
+  }
+}
+
+.player-wrapper[data-v-bce22fb1] {
+  height: 25rem;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 34.875rem
+}
+
+@media (max-width:1023px) {
+  .player-wrapper[data-v-bce22fb1] {
+    height: 15.4375rem;
+    left: unset;
+    margin: -.875rem auto 2rem;
+    position: relative;
+    top: unset;
+    transform: unset;
+    width: 100%
+  }
+}
+
+.player-wrapper img[data-v-bce22fb1] {
+  transform: scale(1.1)
+}
+
+.about-title[data-v-bce22fb1] {
+  color: var(--c-pure-white);
+  word-break: break-word
+}
+
+.about-title__first-word[data-v-bce22fb1] {
+  display: block;
+  margin-bottom: 18.3125rem
+}
+
+@media (max-width:1023px) {
+  .about-title__first-word[data-v-bce22fb1] {
+    margin-bottom: 0
+  }
+}
+
+.about-description[data-v-bce22fb1] {
+  margin-top: -1.4375rem;
+  position: relative
+}
+
+@media (max-width:1023px) {
+  .about-description[data-v-bce22fb1] {
+    margin-top: 0
+  }
+}

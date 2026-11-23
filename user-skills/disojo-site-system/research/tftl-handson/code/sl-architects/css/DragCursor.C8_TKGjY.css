@@ -1,0 +1,47 @@
+/* https://ab-sl.ru/_nuxt/DragCursor.C8_TKGjY.css */
+.drag-cursor[data-v-a1aac18f] {
+  align-items: center;
+  background-color: var(--c-Base-0);
+  border-radius: 50%;
+  display: flex;
+  height: 7.5rem;
+  justify-content: center;
+  left: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  position: fixed;
+  scale: 0;
+  top: 0;
+  transition: translate .8s var(--easing), scale .3s var(--easing);
+  width: 7.5rem;
+  z-index: 3
+}
+
+@media(max-width:1024px) {
+  .drag-cursor[data-v-a1aac18f] {
+    display: none
+  }
+}
+
+.drag-text-wrapper[data-v-a1aac18f] {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 .75rem;
+  width: 100%
+}
+
+.drag-text-wrapper.with-arrows[data-v-a1aac18f] {
+  justify-content: space-between
+}
+
+.drag-arrow[data-v-a1aac18f] {
+  height: 1rem;
+  width: 1rem
+}
+
+.drag-text[data-v-a1aac18f] {
+  color: var(--c-Base-1000);
+  text-align: center;
+  text-transform: uppercase
+}

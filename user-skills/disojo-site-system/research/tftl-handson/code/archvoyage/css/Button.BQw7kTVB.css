@@ -1,0 +1,57 @@
+/* https://archvoyage.ae/_nuxt/Button.BQw7kTVB.css */
+.button[data-v-2be0b3a5] {
+  --button-transition-time: .5s;
+  background-color: var(--c-white);
+  border: 1px solid var(--c-white);
+  border-radius: 5rem;
+  color: var(--c-dark-gray);
+  overflow: hidden;
+  padding: .1875rem 1.1875rem;
+  text-align: center
+}
+
+:active>.button[data-v-2be0b3a5] {
+  background-color: rgba(var(--c-white-rgb), .8);
+  border-color: #c8c8c8
+}
+
+@media (hover:hover) {
+  :hover>.button .text[data-v-2be0b3a5] {
+    transform: translateY(-130%)
+  }
+
+  :hover>.button .hover-text[data-v-2be0b3a5],
+  :hover>.button .text[data-v-2be0b3a5] {
+    transition: transform var(--button-transition-time) var(--easing) .1s
+  }
+
+  :hover>.button .hover-text[data-v-2be0b3a5] {
+    transform: translate3d(-50%, -1px, 0) rotate(0)
+  }
+}
+
+.disabled>.button[data-v-2be0b3a5] {
+  background-color: rgba(var(--c-white-rgb), .4);
+  border-color: #6c6c6c;
+  color: rgba(var(--c-dark-gray-rgb), .9)
+}
+
+.text[data-v-2be0b3a5] {
+  display: block;
+  position: relative;
+  transform: translateY(0)
+}
+
+.hover-text[data-v-2be0b3a5],
+.text[data-v-2be0b3a5] {
+  transition: transform var(--button-transition-time) var(--easing)
+}
+
+.hover-text[data-v-2be0b3a5] {
+  left: 50%;
+  position: absolute;
+  top: 130%;
+  transform: translate3d(-50%, 0, 0) rotate(10deg);
+  transform-origin: left center;
+  white-space: nowrap
+}

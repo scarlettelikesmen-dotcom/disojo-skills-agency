@@ -1,0 +1,78 @@
+/* https://ab-sl.ru/_nuxt/ImagesTicker.CgeEKADI.css */
+.ticker-swiper[data-v-4255d7bb] {
+  padding: 0 var(--offset-40);
+  width: 100%
+}
+
+@media(max-width:1024px) {
+  .ticker-swiper[data-v-4255d7bb] {
+    display: none
+  }
+}
+
+.swiper-slide[data-v-4255d7bb] {
+  aspect-ratio: 1/1;
+  margin-right: .5rem;
+  width: calc(11.11111% - .44444rem)
+}
+
+@media(max-width:1024px) {
+  .swiper-slide[data-v-4255d7bb] {
+    margin-right: 0
+  }
+}
+
+.swiper-wrapper[data-v-4255d7bb] {
+  transition-timing-function: var(--thirth-easing)
+}
+
+@media(max-width:1024px) {
+  .swiper-wrapper[data-v-4255d7bb] {
+    flex-wrap: wrap
+  }
+}
+
+.photos-wrapper[data-v-4255d7bb] {
+  display: none;
+  position: relative
+}
+
+@media(max-width:1024px) {
+  .photos-wrapper[data-v-4255d7bb] {
+    display: block
+  }
+}
+
+.photos[data-v-4255d7bb] {
+  gap: .5625rem
+}
+
+.photos-item[data-v-4255d7bb] {
+  aspect-ratio: 1/.9938650307;
+  width: 100%
+}
+
+.photos-item[data-v-4255d7bb]:nth-child(7n+1),
+.photos-item[data-v-4255d7bb]:nth-child(7n+5),
+.photos-item[data-v-4255d7bb]:nth-child(7n+6) {
+  grid-column: 1/3
+}
+
+.photos-item[data-v-4255d7bb]:nth-child(7n+3) {
+  grid-column: 1/-1;
+  width: calc(50% - .25rem)
+}
+
+.photos-item[data-v-4255d7bb]:nth-child(7n+2),
+.photos-item[data-v-4255d7bb]:nth-child(7n+4),
+.photos-item[data-v-4255d7bb]:nth-child(7n+7) {
+  grid-column: 3/-1
+}
+
+.description[data-v-4255d7bb] {
+  left: 51.2%;
+  max-width: 43.4666666667%;
+  position: absolute;
+  text-transform: uppercase;
+  top: 60.5700712589%
+}

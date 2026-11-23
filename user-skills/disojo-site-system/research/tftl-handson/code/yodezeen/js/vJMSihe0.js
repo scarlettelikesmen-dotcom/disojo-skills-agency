@@ -1,0 +1,36 @@
+/* https://yodezeen.com/_nuxt/vJMSihe0.js */
+import {
+  X as i,
+  g as l
+} from "./BfIK-IeK.js";
+
+function r(t) {
+  const e = typeof t == "string" ? document.querySelectorAll(t) : Array.isArray(t) ? t : [t];
+  if (!e.length) return;
+  const n = new i(e, {
+    type: "lines",
+    tag: "span"
+  });
+  l.set(n.lines, {
+    overflow: "hidden",
+    display: "block",
+    marginBottom: "-0.15em",
+    marginTop: "-0.05em"
+  });
+  const {
+    lines: s
+  } = new i(n.lines, {
+    type: "lines",
+    tag: "span",
+    linesClass: "line-anim"
+  });
+  return l.set(s, {
+    paddingBottom: "0.15em",
+    paddingTop: "0.05em",
+    willChange: "transform",
+    display: "block"
+  }), s
+}
+export {
+  r as u
+};

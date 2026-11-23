@@ -1,0 +1,71 @@
+/* https://hilight.design/_nuxt/Tabs.DoaawgjI.css */
+.item[data-v-8d575385] {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 2.5rem auto .5rem;
+  padding: var(--space-8) 0;
+  position: relative
+}
+
+@media(hover:hover) {
+
+  .item:hover .item-count[data-v-8d575385],
+  .item:hover .item-name[data-v-8d575385] {
+    opacity: 1
+  }
+}
+
+.item-square[data-v-8d575385] {
+  background: var(--c-dark);
+  height: .5rem;
+  position: relative;
+  top: .125rem;
+  transform: scale(0);
+  transition: all .4s var(--t-ease)
+}
+
+.item-count[data-v-8d575385],
+.item-name[data-v-8d575385] {
+  opacity: .4;
+  transition: all .4s var(--t-ease)
+}
+
+.item.active .item-square[data-v-8d575385] {
+  transform: scale(1)
+}
+
+.item.active .item-count[data-v-8d575385],
+.item.active .item-name[data-v-8d575385] {
+  opacity: 1
+}
+
+.item-line[data-v-8d575385] {
+  background: var(--c-dark-10);
+  bottom: 0;
+  height: .0625rem;
+  left: 0;
+  position: absolute;
+  width: 100%
+}
+
+.item-progress[data-v-8d575385] {
+  background: var(--c-dark);
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  will-change: transform
+}
+
+.item.active .item-progress[data-v-8d575385] {
+  animation: progressLine-8d575385 5s linear forwards
+}
+
+@keyframes progressLine-8d575385 {
+  0% {
+    transform: scaleX(0)
+  }
+
+  to {
+    transform: scaleX(1)
+  }
+}

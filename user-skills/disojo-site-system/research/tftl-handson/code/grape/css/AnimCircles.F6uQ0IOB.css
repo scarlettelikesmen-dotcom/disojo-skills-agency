@@ -1,0 +1,40 @@
+/* https://grape.ua/_nuxt/AnimCircles.F6uQ0IOB.css */
+.anim-circles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 8.3333333333rem;
+  width: 8.3333333333rem
+}
+
+@media (max-width:1199px) {
+  .anim-circles {
+    height: 24.154589372rem;
+    width: 24.154589372rem
+  }
+}
+
+.circle {
+  background-color: var(--c-dark);
+  border-radius: 50%;
+  transform-origin: center center;
+  transition-duration: .8s;
+  transition-property: transform;
+  transition-timing-function: var(--transition-easing)
+}
+
+@media (min-width:1200px) {
+  .high-theme .circle {
+    background-color: #a2a2fc
+  }
+}
+
+.anim-circles.anim-circles--white .circle {
+  background-color: #fff
+}
+
+.circle.hide {
+  transform: scale(0);
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(.68, 0, .84, 0)
+}

@@ -1,0 +1,58 @@
+/* https://pictoric.com.ua/_nuxt/index.b67ee2df.css */
+.slider[data-v-d658b820] {
+  --screen-width: 1361;
+  display: flex;
+  flex-direction: column
+}
+
+@media (max-width:1023px) {
+  .slider[data-v-d658b820] {
+    --screen-width: 343
+  }
+}
+
+.pagination-wrapper[data-v-d658b820] {
+  --swiper-pagination-progressbar-size: 100%;
+  --swiper-pagination-progressbar-bg-color: var(--c-brown-20);
+  --swiper-pagination-color: var(--c-brown);
+  border-radius: .0625rem;
+  height: .125rem;
+  margin: 0 auto var(--pagination-margin, 2.5rem);
+  max-width: 6.125rem;
+  overflow: hidden;
+  position: relative
+}
+
+@media (max-width:1023px) {
+  .pagination-wrapper[data-v-d658b820] {
+    margin: var(--pagination-margin, 2rem) auto 0;
+    max-width: calc(100% - var(--padding)*2);
+    order: 2
+  }
+}
+
+.pagination-wrapper.bottom[data-v-d658b820] {
+  margin: var(--pagination-margin, 2.5rem) auto 0;
+  order: 2
+}
+
+.pagination-wrapper[data-v-d658b820] .swiper-pagination-progressbar-fill {
+  border-radius: .0625rem
+}
+
+.swiper[data-v-d658b820] {
+  padding: 0 calc(var(--padding) - .0625rem) 0 var(--padding);
+  width: 100%
+}
+
+.swiper-wrapper[data-v-d658b820] .swiper-slide {
+  width: calc((var(--slide-width) + var(--offset, 16))/var(--screen-width)*100%)
+}
+
+.swiper-wrapper[data-v-d658b820] .swiper-slide:not(:last-child) {
+  padding-right: calc(var(--between-space, 16)/16*1rem)
+}
+
+.swiper-wrapper[data-v-d658b820] .swiper-slide:last-child {
+  --offset: 0
+}

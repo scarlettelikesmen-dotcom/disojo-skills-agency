@@ -1,0 +1,29 @@
+/* https://ab-sl.ru/_nuxt/WithUnderline.DSIdH1nz.css */
+.button-inner[data-v-106f1e62] {
+  color: var(--text-color, inherit)
+}
+
+.button-inner>span[data-v-106f1e62] {
+  display: block;
+  position: relative;
+  transition: color .4s var(--easing)
+}
+
+.button-inner span[data-v-106f1e62]:first-child {
+  text-decoration: none
+}
+
+.button-sup[data-v-106f1e62] {
+  bottom: 50%;
+  font-size: 58%;
+  left: calc(100% + .1875rem);
+  line-height: 58%;
+  position: absolute
+}
+
+@media(hover:hover) {
+  :hover>.button-inner>span[data-v-106f1e62]:last-child {
+    color: var(--hover-color, inherit);
+    text-decoration: none
+  }
+}

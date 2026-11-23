@@ -1,0 +1,184 @@
+/* https://nabilissa.com/_nuxt/entry.Bh23g7Y-.css */
+.cursor-canvas[data-v-117ff042] {
+  display: block;
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  z-index: 100000
+}
+
+@media(max-width:1279px) {
+  .cursor-canvas[data-v-117ff042] {
+    display: none
+  }
+}
+
+.animation-container[data-v-9ff88b5c] {
+  display: flex;
+  height: 100%;
+  text-align: center;
+  transition: color .6s var(--default-ease)
+}
+
+.animation-container[data-v-9ff88b5c],
+.btn[data-v-9ff88b5c] {
+  align-items: center;
+  justify-content: center;
+  position: relative
+}
+
+.btn[data-v-9ff88b5c] {
+  cursor: pointer;
+  display: inline-flex;
+  height: 2.75rem;
+  padding: 0 var(--20);
+  transition: transform .6s var(--default-ease);
+  transition-delay: .3s;
+  white-space: nowrap
+}
+
+.btn-decor[data-v-9ff88b5c] {
+  align-items: center;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background: var(--c-soft-concrete-1);
+  border: .0625rem solid var(--c-soft-concrete-6);
+  border-radius: 62.4375rem;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: width .6s var(--default-ease) .3s, transform .6s var(--default-ease) .3s, background .6s var(--default-ease), border-color .6s var(--default-ease);
+  width: 100%
+}
+
+@media(max-width:1023px) {
+  .btn-decor[data-v-9ff88b5c] {
+    border: 1px solid var(--c-soft-concrete-6)
+  }
+}
+
+.btn-decor[data-v-9ff88b5c]:after {
+  background: var(--c-soft-concrete);
+  border-radius: 62.4375rem;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0);
+  transition: transform .6s var(--default-ease) 0s, background .6s var(--default-ease);
+  width: 100%
+}
+
+.btn-decor[data-v-9ff88b5c] svg {
+  opacity: 0;
+  position: relative;
+  transform: rotate(-45deg);
+  transition: transform .4s var(--default-ease) 0s, opacity .4s var(--default-ease) 0s;
+  width: .75rem;
+  z-index: 2
+}
+
+.btn-decor[data-v-9ff88b5c] svg path {
+  transition: transform .6s var(--default-ease)
+}
+
+.btn-text[data-v-9ff88b5c] {
+  transition: transform .6s var(--default-ease) .3s
+}
+
+.btn-text[data-v-9ff88b5c]:nth-child(2) {
+  left: 0;
+  padding-top: 1rem;
+  position: absolute;
+  top: 100%
+}
+
+.btn-wrap[data-v-9ff88b5c] {
+  overflow: hidden;
+  position: relative;
+  transition: transform .6s var(--default-ease) .3s
+}
+
+@media(hover:hover) {
+  .btn[data-v-9ff88b5c]:hover {
+    transform: translate(1.25rem);
+    transition-delay: 0s
+  }
+
+  .header .btn[data-v-9ff88b5c]:hover {
+    transform: translate(-1.25rem)
+  }
+
+  .btn:hover .btn-text[data-v-9ff88b5c] {
+    transform: translateY(-100%);
+    transition-delay: 0s
+  }
+
+  .btn:hover .btn-decor[data-v-9ff88b5c] {
+    transform: translate(-1.25rem);
+    transition-delay: 0s;
+    width: 2.75rem
+  }
+
+  .btn[data-v-9ff88b5c]:hover svg {
+    opacity: 1;
+    transform: rotate(0);
+    transition-delay: .5s
+  }
+
+  .btn:hover .btn-decor[data-v-9ff88b5c]:after {
+    transform: scale(1);
+    transition-delay: .3s
+  }
+
+  .btn:hover .btn-wrap[data-v-9ff88b5c] {
+    transform: translate(var(--20));
+    transition-delay: 0s
+  }
+}
+
+.animation-container.black[data-v-9ff88b5c] {
+  color: var(--c-obsidian-dust)
+}
+
+.animation-container.black .btn-decor[data-v-9ff88b5c] {
+  background: var(--c-obsidian-dust-1);
+  border-color: var(--c-obsidian-dust-6)
+}
+
+.animation-container.black .btn-decor[data-v-9ff88b5c]:after {
+  background: var(--c-obsidian-dust)
+}
+
+.animation-container.black .btn-decor[data-v-9ff88b5c] svg path {
+  fill: var(--c-soft-concrete)
+}
+
+.error-page[data-v-543a314d] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: 100vh;
+  justify-content: center
+}
+
+.error-title[data-v-543a314d] {
+  font-family: var(--font-gotham-con-thin);
+  font-size: 31.25rem;
+  line-height: 80%;
+  margin-bottom: 1rem;
+  text-transform: uppercase
+}
+
+@media(max-width:1023px) {
+  .error-title[data-v-543a314d] {
+    font-size: 10rem
+  }
+}

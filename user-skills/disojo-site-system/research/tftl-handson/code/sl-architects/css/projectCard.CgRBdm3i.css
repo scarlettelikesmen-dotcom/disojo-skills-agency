@@ -1,0 +1,45 @@
+/* https://ab-sl.ru/_nuxt/projectCard.CgRBdm3i.css */
+.project-link[data-v-9c1ab0d8] {
+  display: block;
+  text-decoration: none
+}
+
+@media(hover:hover) {
+
+  .project-link:focus .project-name-wrapper[data-v-9c1ab0d8],
+  .project-link:hover .project-name-wrapper[data-v-9c1ab0d8] {
+    color: var(--c-Base-800)
+  }
+
+  .project-link:focus .project-name[data-v-9c1ab0d8],
+  .project-link:hover .project-name[data-v-9c1ab0d8] {
+    text-decoration: none
+  }
+
+  .project-link:focus .project-photo[data-v-9c1ab0d8] .wrapper,
+  .project-link:hover .project-photo[data-v-9c1ab0d8] .wrapper {
+    transform: scale(1.12)
+  }
+}
+
+.project-name-wrapper[data-v-9c1ab0d8] {
+  transition: color .4s var(--easing)
+}
+
+.project-photo[data-v-9c1ab0d8] {
+  overflow: hidden
+}
+
+.area[data-v-9c1ab0d8] {
+  text-align: end;
+  white-space: nowrap
+}
+
+.project-info[data-v-9c1ab0d8] {
+  margin-top: var(--offset-8)
+}
+
+.project-info-inner[data-v-9c1ab0d8] {
+  display: flex;
+  justify-content: space-between
+}

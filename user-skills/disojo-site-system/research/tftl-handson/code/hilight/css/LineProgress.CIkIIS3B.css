@@ -1,0 +1,17 @@
+/* https://hilight.design/_nuxt/LineProgress.CIkIIS3B.css */
+.common-line[data-v-2c735fa4] {
+  background: var(--c-white-20);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  transform-origin: top;
+  width: .0625rem
+}
+
+.line-progress[data-v-2c735fa4] {
+  background: var(--c-white);
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  will-change: transform
+}

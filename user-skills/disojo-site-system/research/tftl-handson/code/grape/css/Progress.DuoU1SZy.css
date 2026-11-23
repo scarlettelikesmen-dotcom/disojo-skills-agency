@@ -1,0 +1,22 @@
+/* https://grape.ua/_nuxt/Progress.DuoU1SZy.css */
+.progress[data-v-8c9c173b] {
+  background-color: #2617231a;
+  border-radius: .7246376812rem;
+  height: 1.4492753623rem;
+  overflow: hidden
+}
+
+@media (min-width:1200px) {
+  .progress[data-v-8c9c173b] {
+    border-radius: .1388888889rem;
+    height: .4166666667rem
+  }
+}
+
+.progress__line[data-v-8c9c173b] {
+  background-color: #fff;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  width: 100%
+}

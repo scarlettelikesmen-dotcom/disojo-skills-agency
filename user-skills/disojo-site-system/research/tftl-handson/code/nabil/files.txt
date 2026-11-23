@@ -1,0 +1,7 @@
+css 4KB https://nabilissa.com/_nuxt/entry.Bh23g7Y-.css
+js 477KB https://nabilissa.com/_nuxt/Ct55yWcp.js
+js 701KB https://nabilissa.com/_nuxt/BuhJADiR.js
+css 60KB https://nabilissa.com/_nuxt/index.C6rKv_Un.css
+json 721KB https://nabilissa.com/logo_hover_white_half.json
+json 30KB https://nabilissa.com/logo.json
+json 0KB https://nabilissa.com/_nuxt/builds/meta/aab8c654-7620-4036-b012-1aaa15356d1a.json

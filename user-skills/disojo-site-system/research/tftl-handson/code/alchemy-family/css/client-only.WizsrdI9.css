@@ -1,0 +1,11 @@
+/* https://alchemy.family/_nuxt/client-only.WizsrdI9.css */
+.icon[data-v-1c5b1a32] {
+  --self-color: var(--icon-color, #e8e8e8);
+  display: block;
+  height: auto;
+  width: 100%
+}
+
+.icon path[data-v-1c5b1a32] {
+  stroke: var(--self-color)
+}

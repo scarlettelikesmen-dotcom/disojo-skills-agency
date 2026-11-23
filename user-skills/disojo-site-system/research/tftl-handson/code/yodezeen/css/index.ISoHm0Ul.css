@@ -1,0 +1,198 @@
+/* https://yodezeen.com/_nuxt/index.ISoHm0Ul.css */
+.services-page[data-v-40db4150] {
+  ---services-count: 6
+}
+
+.sticky-item[data-v-40db4150] {
+  height: 75svh
+}
+
+.sticky-mob-plash[data-v-40db4150] {
+  display: none
+}
+
+@media(max-width:1023px) {
+  .sticky-mob-plash[data-v-40db4150] {
+    display: block;
+    pointer-events: none;
+    position: relative
+  }
+}
+
+.page-container[data-v-40db4150] {
+  background: var(--c-bg);
+  opacity: 0
+}
+
+.page-wrapper[data-v-40db4150] {
+  font-family: var(--font-neue);
+  padding-top: 10rem
+}
+
+@media(max-width:1023px) {
+  .page-wrapper[data-v-40db4150] {
+    height: calc(var(--services-count)*100svh/16*1rem);
+    padding-top: 0
+  }
+}
+
+.head[data-v-40db4150] {
+  border-bottom: .0625rem solid hsla(0, 0%, 100%, .15);
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -.06rem;
+  line-height: 90%;
+  padding-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase
+}
+
+@media(max-width:1023px) {
+  .head[data-v-40db4150] {
+    border: 0;
+    clip-path: inset(100%);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden
+  }
+}
+
+.panel[data-v-40db4150] {
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: -.009rem;
+  line-height: .75rem;
+  padding: 1rem 1.5rem 2.5rem;
+  text-transform: uppercase
+}
+
+.services-grid[data-v-40db4150] {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem
+}
+
+@media(max-width:1023px) {
+  .services-grid[data-v-40db4150] {
+    display: block;
+    left: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 2
+  }
+}
+
+.services__link[data-v-40db4150] {
+  color: #fff;
+  height: 26.875rem;
+  overflow: hidden;
+  position: relative
+}
+
+@media(max-width:1023px) {
+  .services__link[data-v-40db4150] {
+    display: block;
+    height: var(--service-height, 0);
+    position: sticky;
+    top: 0;
+    transform: translateZ(10px);
+    width: 100%
+  }
+
+  .services__link[data-v-40db4150]:not(:first-child) {
+    margin-top: -.0625rem
+  }
+}
+
+.content-wrapper[data-v-40db4150] {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding-bottom: 2rem;
+  position: absolute;
+  width: 100%;
+  z-index: 3
+}
+
+@media(max-width:1023px) {
+  .content-wrapper[data-v-40db4150] {
+    padding-bottom: 1rem
+  }
+}
+
+.services__gradient[data-v-40db4150] {
+  background: linear-gradient(transparent, #000);
+  bottom: 0;
+  height: 50%;
+  left: 0;
+  opacity: .6;
+  position: absolute;
+  width: 100%;
+  z-index: 2
+}
+
+.services__name[data-v-40db4150] {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -.06rem;
+  line-height: 110%;
+  margin-bottom: 2rem;
+  text-transform: uppercase
+}
+
+@media(max-width:1023px) {
+  .services__name[data-v-40db4150] {
+    font-size: 1.25rem;
+    letter-spacing: -.032em;
+    line-height: 100%;
+    margin-bottom: 1rem
+  }
+
+  .services__button[data-v-40db4150] {
+    --overlay-color: hsla(0, 0%, 100%, .99)
+  }
+
+  .btn-main[data-v-40db4150],
+  body.macos .btn-main[data-v-40db4150] {
+    --c-self-text: var(--c-pure-black);
+    padding: .4375rem 1rem .3125rem
+  }
+}
+
+@media(max-width:1023px) {
+  .btn-main[data-v-40db4150] .p2-button {
+    font-family: var(--font-helvetica);
+    font-size: .7rem;
+    letter-spacing: -.012em;
+    line-height: 107.143%
+  }
+}
+
+.services__thumb[data-v-40db4150] {
+  height: 100%;
+  position: relative;
+  transition: all .3s ease
+}
+
+@media(hover:hover) {
+  .services__link:hover .services__thumb[data-v-40db4150] {
+    transform: scale(1.02)
+  }
+}
+
+@media(max-width:1023px) {
+  .services-page[data-v-40db4150] .lets-talk {
+    margin-top: -25vh
+  }
+}

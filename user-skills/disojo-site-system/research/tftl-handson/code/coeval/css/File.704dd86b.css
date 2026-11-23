@@ -1,0 +1,113 @@
+/* https://coevalstudio.com/_nuxt/File.704dd86b.css */
+:root {
+  --h-padding: 204;
+  --sm-padding: 32;
+  --h-padding-rem: calc(var(--h-padding)/14.4*1rem);
+  --sm-padding-rem: calc(var(--sm-padding)/14.4*1rem);
+  --md-padding-rem: calc(var(--h-padding-rem) - var(--sm-padding-rem))
+}
+
+@media (max-width:1199px) {
+  :root {
+    --sm-padding: 24;
+    --h-padding: 144;
+    --h-padding-rem: calc(var(--h-padding)/7.68*1rem);
+    --sm-padding-rem: calc(var(--sm-padding)/7.68*1rem)
+  }
+}
+
+@media (max-width:767px) {
+  :root {
+    --sm-padding: 12;
+    --sm-padding-rem: calc(var(--sm-padding)/3.75*1rem)
+  }
+}
+
+:root {
+  --xs: 3.75;
+  --sm: 7.68;
+  --bg: 14.4;
+  --lg: 19.2;
+  --z-teleport: 1;
+  --z-footer: 10;
+  --z-main: 20;
+  --z-canvas: 20;
+  --z-over-canvas: calc(var(--z-canvas) + 1);
+  --z-header: 30;
+  --z-cursor: 60;
+  --z-popup: 50;
+  --z-preloader: 100;
+  --cl-black: #1e1e1e;
+  --cl-brand-bg: #1a1820;
+  --cl-white: #f7f7f7;
+  --cl-base-1000: #d9d9d9;
+  --cl-brand-500: #cfbaa9;
+  --cl-error: #cb3451;
+  --ease: cubic-bezier(.32, .04, .08, 1);
+  --delay: .4s;
+  --transition: var(--delay) var(--ease)
+}
+
+.input-file {
+  align-items: center;
+  border: 1px dashed rgba(30, 30, 30, .2);
+  border-radius: 64px;
+  cursor: pointer;
+  display: flex;
+  gap: .2777777778rem;
+  height: 4.4444444444rem;
+  justify-content: center;
+  padding: 0 1.6666666667rem
+}
+
+@media (max-width:1199px) {
+  .input-file {
+    gap: .5208333333rem
+  }
+}
+
+@media (max-width:767px) {
+  .input-file {
+    gap: 1.0666666667rem
+  }
+}
+
+.input-file__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none
+}
+
+.input-file__link {
+  text-decoration: underline
+}
+
+.input-file__info {
+  align-items: center;
+  display: flex;
+  width: 100%
+}
+
+.input-file__icon {
+  height: 2.2222222222rem;
+  margin-right: 1.1111111111rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 2.2222222222rem
+}
+
+.input-file__title {
+  margin-right: .2777777778rem;
+  text-transform: uppercase
+}
+
+.input-file__size {
+  opacity: .4
+}
+
+.input-file__delete {
+  height: 1.6666666667rem;
+  margin-left: auto;
+  width: 1.6666666667rem
+}

@@ -1,0 +1,218 @@
+/* https://grape.ua/_nuxt/MainProps.a1gU32ML.css */
+.slider[data-v-a7fefcb2] {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  position: relative
+}
+
+.slider[data-v-a7fefcb2]:before {
+  background: #26172333;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3
+}
+
+@media (min-width:1200px) {
+  .slider[data-v-a7fefcb2]:before {
+    background-image: linear-gradient(180deg, transparent 0, transparent 6.6666666667rem, hsla(0, 0%, 100%, .2) 0, hsla(0, 0%, 100%, .2) 6.7361111111rem, transparent 0, transparent)
+  }
+}
+
+.slider__next[data-v-a7fefcb2],
+.slider__prev[data-v-a7fefcb2] {
+  bottom: 0;
+  position: absolute !important;
+  top: 0;
+  width: 50%;
+  z-index: 3
+}
+
+.slider__prev[data-v-a7fefcb2] {
+  left: 0
+}
+
+@media (max-width:1199px) {
+  .slider__prev[data-v-a7fefcb2] {
+    display: none
+  }
+}
+
+.slider__next[data-v-a7fefcb2] {
+  right: 0
+}
+
+@media (max-width:1199px) {
+  .slider__next[data-v-a7fefcb2] {
+    left: 0;
+    width: 100%
+  }
+}
+
+.slider__img[data-v-a7fefcb2] {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%
+}
+
+.slider__header[data-v-a7fefcb2] {
+  padding: 3.8647342995rem 3.8647342995rem 5.7971014493rem
+}
+
+@media (min-width:1200px) {
+  .slider__header[data-v-a7fefcb2] {
+    padding: 2.5rem 1.6666666667rem
+  }
+}
+
+.slider__dots[data-v-a7fefcb2] {
+  display: flex;
+  gap: 1.9323671498rem;
+  margin-bottom: 2.8985507246rem;
+  position: relative;
+  z-index: 3
+}
+
+@media (min-width:1200px) {
+  .slider__dots[data-v-a7fefcb2] {
+    display: none
+  }
+}
+
+.slider__dot[data-v-a7fefcb2] {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #fff3;
+  border-radius: .4830917874rem;
+  flex-grow: 1;
+  height: .9661835749rem;
+  overflow: hidden
+}
+
+.slider__dot[data-v-a7fefcb2]:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%
+}
+
+.slider__dot.active[data-v-a7fefcb2]:after {
+  animation: dot-a7fefcb2 5s linear forwards;
+  background: #fff;
+  width: 0
+}
+
+@keyframes dot-a7fefcb2 {
+  0% {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+.slider__dot.active~.slider__dot[data-v-a7fefcb2]:after {
+  background-color: transparent
+}
+
+.slider__counter[data-v-a7fefcb2] {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 3
+}
+
+.slider__content[data-v-a7fefcb2] {
+  display: grid;
+  flex-grow: 1;
+  padding: 2.8985507246rem 3.8647342995rem 3.8647342995rem;
+  position: relative
+}
+
+@media (min-width:1200px) {
+  .slider__content[data-v-a7fefcb2] {
+    padding: 1.6666666667rem
+  }
+}
+
+.slider__item[data-v-a7fefcb2] {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  margin-bottom: 7.729468599rem
+}
+
+@media (min-width:1200px) {
+  .slider__item[data-v-a7fefcb2] {
+    margin-bottom: 3.3333333333rem;
+    max-width: 41.1111111111rem
+  }
+}
+
+.slider__item[data-v-a7fefcb2]:not(:first-child) {
+  display: none
+}
+
+.slider__title[data-v-a7fefcb2] {
+  margin-bottom: 7.729468599rem;
+  position: relative;
+  z-index: 3
+}
+
+@media (min-width:1200px) {
+  .slider__title[data-v-a7fefcb2] {
+    margin-bottom: 3.3333333333rem
+  }
+}
+
+.slider__brand[data-v-a7fefcb2] {
+  margin-bottom: 3.8647342995rem;
+  position: relative;
+  z-index: 3
+}
+
+@media (min-width:1200px) {
+  .slider__brand[data-v-a7fefcb2] {
+    margin-bottom: 1.1111111111rem
+  }
+}
+
+.slider__name[data-v-a7fefcb2],
+.slider__text[data-v-a7fefcb2] {
+  position: relative;
+  z-index: 3
+}
+
+.slider__name[data-v-a7fefcb2] {
+  color: #fff6;
+  width: -moz-max-content;
+  width: max-content
+}
+
+.slider__icon[data-v-a7fefcb2] {
+  position: absolute !important;
+  right: 1.6666666667rem;
+  top: 8.3333333333rem;
+  z-index: 3
+}
+
+@media (max-width:1199px) {
+  .slider__icon[data-v-a7fefcb2] {
+    display: none
+  }
+}

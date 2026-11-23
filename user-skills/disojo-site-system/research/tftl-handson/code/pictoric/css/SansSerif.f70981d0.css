@@ -1,0 +1,16 @@
+/* https://pictoric.com.ua/_nuxt/SansSerif.f70981d0.css */
+.arrow.top[data-v-fe62f54e] {
+  transform: rotate(-90deg)
+}
+
+.arrow.bottom[data-v-fe62f54e] {
+  transform: rotate(90deg)
+}
+
+.arrow.left[data-v-fe62f54e] {
+  transform: rotate(180deg)
+}
+
+path[data-v-fe62f54e] {
+  stroke: var(--icon-color, var(--c-brown))
+}

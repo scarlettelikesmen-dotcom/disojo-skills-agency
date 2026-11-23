@@ -1,0 +1,89 @@
+/* https://archvoyage.ae/_nuxt/Template.jf6J1CuJ.css */
+.info-page[data-v-76f63a13] {
+  padding-bottom: var(--offset-144)
+}
+
+.header[data-v-76f63a13] {
+  padding-bottom: var(--offset-8);
+  padding-top: var(--offset-40)
+}
+
+.title[data-v-76f63a13] {
+  margin-bottom: var(--offset-144)
+}
+
+.arrow[data-v-76f63a13] {
+  width: .875rem
+}
+
+.item[data-v-76f63a13] {
+  padding-bottom: var(--offset-32);
+  position: relative
+}
+
+.item-line[data-v-76f63a13] {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%
+}
+
+.item-header[data-v-76f63a13] {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-top: var(--offset-32)
+}
+
+.item-button[data-v-76f63a13] {
+  display: block;
+  height: 1.1875rem;
+  min-height: 1.1875rem;
+  min-width: 1.1875rem;
+  transform: rotate(0);
+  transition: transform var(--trs-200) var(--easing);
+  width: 1.1875rem
+}
+
+@media (max-width:1024px) {
+  .item-button[data-v-76f63a13] {
+    margin-top: .125rem
+  }
+}
+
+.item-button[data-v-76f63a13] .plus-vertical-line {
+  transition: opacity var(--trs-200) var(--easing)
+}
+
+@media (hover:hover) {
+  .item-header:hover .item-button[data-v-76f63a13] {
+    transform: rotate(45deg)
+  }
+}
+
+.item-content[data-v-76f63a13] {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--trs-200) var(--easing)
+}
+
+.item-description-wrapper[data-v-76f63a13] {
+  margin-top: var(--offset-16);
+  max-width: 42.8125rem
+}
+
+@media (max-width:1024px) {
+  .item-description-wrapper[data-v-76f63a13] {
+    max-width: 19.375rem
+  }
+}
+
+.item.active .item-button[data-v-76f63a13] {
+  transform: rotate(0)
+}
+
+.item.active .item-button[data-v-76f63a13] .plus-vertical-line {
+  opacity: 0
+}

@@ -1,0 +1,112 @@
+/* https://archvoyage.ae/_nuxt/contact.ZZXl6Xan.css */
+.hero[data-v-240f491f] {
+  padding-bottom: var(--offset-120);
+  padding-top: var(--offset-40)
+}
+
+@media (max-width:1024px) {
+  .title-wrapper[data-v-240f491f] {
+    font-size: 2.625rem;
+    line-height: .9em
+  }
+}
+
+.title-wrapper[data-v-240f491f] strong {
+  font-style: normal;
+  font-weight: 400
+}
+
+.title-wrapper[data-v-240f491f] p {
+  text-align: center
+}
+
+.photo[data-v-240f491f] {
+  height: 36.4375rem;
+  margin: var(--offset-40) auto;
+  width: 36.6875rem
+}
+
+@media (max-width:1024px) {
+  .photo[data-v-240f491f] {
+    height: 15.0625rem;
+    width: 14.6875rem
+  }
+
+  .description-wrapper[data-v-240f491f] {
+    font-size: 2.625rem;
+    line-height: .9em
+  }
+}
+
+.description-wrapper[data-v-240f491f] strong {
+  font-style: normal;
+  font-weight: 400
+}
+
+.description-wrapper[data-v-240f491f] p {
+  text-align: center
+}
+
+.links[data-v-240f491f] {
+  display: grid;
+  gap: .875rem;
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+  margin-top: var(--offset-56)
+}
+
+@media (max-width:1024px) {
+  .links[data-v-240f491f] {
+    gap: 0
+  }
+
+  .link-item[data-v-240f491f],
+  .links[data-v-240f491f] {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+  }
+
+  .link-item[data-v-240f491f]:not(:last-child) {
+    margin-bottom: var(--offset-40)
+  }
+}
+
+.link-item[data-v-240f491f]:nth-child(4n+1) {
+  grid-column-end: 8;
+  grid-column-start: 1
+}
+
+.link-item[data-v-240f491f]:nth-child(4n+2) {
+  grid-column-end: 14;
+  grid-column-start: 8
+}
+
+.link-item[data-v-240f491f]:nth-child(4n+3) {
+  grid-column-end: 20;
+  grid-column-start: 14
+}
+
+.link-item[data-v-240f491f]:nth-child(4n+4) {
+  grid-column-end: 25;
+  grid-column-start: 20
+}
+
+.link-title[data-v-240f491f] {
+  color: var(--c-white-opacity);
+  margin-bottom: var(--offset-8)
+}
+
+.form-section[data-v-e1f50352] {
+  padding-bottom: var(--offset-144)
+}
+
+.title[data-v-e1f50352] {
+  color: var(--c-white-opacity);
+  margin-bottom: var(--offset-32)
+}
+
+@media (max-width:1024px) {
+  .title[data-v-e1f50352] {
+    text-align: center
+  }
+}

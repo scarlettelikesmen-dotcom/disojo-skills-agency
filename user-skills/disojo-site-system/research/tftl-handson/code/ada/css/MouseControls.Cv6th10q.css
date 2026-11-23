@@ -1,0 +1,57 @@
+/* https://aventuradentalarts.com/_nuxt/MouseControls.Cv6th10q.css */
+.circle.left[data-v-e268f249]:before {
+  transform: translate(-50%, -50%) rotate(180deg)
+}
+
+.circle.left .path-loader[data-v-e268f249] {
+  transform: rotate(180deg)
+}
+
+.path-loader[data-v-e268f249] {
+  transform-origin: center;
+  transition: all .3s var(--default-ease)
+}
+
+.circle.dark[data-v-e268f249]:before {
+  background-image: url(../icons/control-arrow-dark.svg)
+}
+
+.circle[data-v-e268f249] {
+  height: 11.25rem;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transition: opacity .3s ease-in;
+  width: 11.25rem
+}
+
+.circle[data-v-e268f249]:before {
+  background-image: url(../icons/control-arrow.svg);
+  background-size: cover;
+  content: "";
+  height: 1.5rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s var(--default-ease);
+  width: 1.5rem
+}
+
+.mouse-controls[data-v-e268f249] {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2
+}
+
+@media (max-width:1023px) {
+  .mouse-controls[data-v-e268f249] {
+    display: none
+  }
+}

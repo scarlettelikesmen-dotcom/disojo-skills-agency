@@ -1,0 +1,47 @@
+/* https://archvoyage.ae/_nuxt/DragCursor.Kw7N7xIW.css */
+.drag-cursor[data-v-c4271991] {
+  align-items: center;
+  display: flex;
+  height: 4.8125rem;
+  justify-content: center;
+  left: -2.375rem;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: -2.375rem;
+  transition: opacity var(--trs-200) var(--easing);
+  width: 4.8125rem;
+  z-index: 2
+}
+
+@media (max-width:1024px) {
+  .drag-cursor[data-v-c4271991] {
+    display: none
+  }
+}
+
+.drag-cursor.show[data-v-c4271991] {
+  opacity: 1
+}
+
+.drag-cursor.show .drag-circle circle[data-v-c4271991] {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1000 0
+}
+
+.drag-cursor.active .drag-circle[data-v-c4271991] {
+  transform: scale(.95)
+}
+
+.drag-circle[data-v-c4271991] {
+  position: absolute;
+  transition: transform var(--trs-200) var(--easing)
+}
+
+.drag-circle circle[data-v-c4271991] {
+  transition: all var(--trs-1200) var(--easing)
+}
+
+.drag-text-wrapper[data-v-c4271991] {
+  overflow: hidden
+}

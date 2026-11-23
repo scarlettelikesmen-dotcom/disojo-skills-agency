@@ -1,0 +1,126 @@
+/* https://hilight.design/_nuxt/Person.C5ELn9-8.css */
+.sect-person[data-v-6585e238] {
+  height: 100vh;
+  position: relative
+}
+
+@media(max-width:1023px) {
+  .sect-person[data-v-6585e238] {
+    height: auto;
+    overflow: hidden;
+    padding: 4.5rem 1.25rem 5.5rem
+  }
+}
+
+.photo[data-v-6585e238] {
+  -webkit-mask-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .01) 5.9%, hsla(0, 0%, 100%, .03) 10.69%, hsla(0, 0%, 100%, .07) 14.56%, hsla(0, 0%, 100%, .12) 17.67%, hsla(0, 0%, 100%, .18) 20.19%, hsla(0, 0%, 100%, .25) 22.28%, hsla(0, 0%, 100%, .33) 24.12%, hsla(0, 0%, 100%, .41) 25.88%, hsla(0, 0%, 100%, .5) 27.72%, hsla(0, 0%, 100%, .59) 29.82%, hsla(0, 0%, 100%, .67) 32.33%, hsla(0, 0%, 100%, .76) 35.44%, hsla(0, 0%, 100%, .85) 39.31%, hsla(0, 0%, 100%, .93) 44.11%, #fff 50%);
+  mask-image: linear-gradient(0deg, #fff0, #ffffff03 5.9%, #ffffff08 10.69%, #ffffff12 14.56%, #ffffff1f 17.67%, #ffffff2e 20.19%, #ffffff40 22.28%, #ffffff54 24.12%, #ffffff69 25.88%, #ffffff80 27.72%, #ffffff96 29.82%, #ffffffab 32.33%, #ffffffc2 35.44%, #ffffffd9 39.31%, #ffffffed 44.11%, #fff 50%);
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 51.375rem;
+  z-index: 2
+}
+
+@media(max-width:1023px) {
+  .photo[data-v-6585e238] {
+    right: -5rem;
+    top: 10rem;
+    transform: none;
+    width: 32rem;
+    z-index: 10
+  }
+}
+
+.content[data-v-6585e238],
+.photo img[data-v-6585e238] {
+  width: 100%
+}
+
+.content[data-v-6585e238] {
+  display: grid;
+  gap: var(--space-40);
+  grid-template-columns: 15.5rem 1fr;
+  left: 0;
+  padding: 0 var(--space-20);
+  position: absolute;
+  top: 43%
+}
+
+@media(max-width:1023px) {
+  .content[data-v-6585e238] {
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+    padding: 0;
+    position: relative;
+    top: 0
+  }
+}
+
+.position[data-v-6585e238] {
+  color: var(--c-dark-40)
+}
+
+.name[data-v-6585e238],
+.position[data-v-6585e238] {
+  border-bottom: 1px solid var(--c-dark-10);
+  margin-bottom: var(--space-20);
+  padding-bottom: var(--space-20)
+}
+
+@media(max-width:1023px) {
+  .name[data-v-6585e238] {
+    display: none
+  }
+}
+
+.name-mob[data-v-6585e238] {
+  display: none
+}
+
+@media(max-width:1023px) {
+  .name-mob[data-v-6585e238] {
+    display: block
+  }
+}
+
+.logo[data-v-6585e238] {
+  filter: blur(5px);
+  height: 18.25rem;
+  left: 1.25rem;
+  position: absolute;
+  top: calc(43% + 3.375rem);
+  width: 15.5rem
+}
+
+@media(max-width:1023px) {
+  .logo[data-v-6585e238] {
+    height: 16.75rem;
+    top: 9rem;
+    width: 14rem
+  }
+}
+
+.descr[data-v-6585e238] {
+  margin-bottom: var(--space-32);
+  max-width: 33.5rem
+}
+
+@media(max-width:1023px) {
+  .descr[data-v-6585e238] {
+    margin-bottom: 1.25rem;
+    margin-top: auto
+  }
+}
+
+.person-btn[data-v-6585e238] {
+  display: inline-flex;
+  pointer-events: auto
+}
+
+.logo[data-v-6585e238] path {
+  fill: #e9decf
+}

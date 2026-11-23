@@ -1,0 +1,135 @@
+/* https://grape.ua/_nuxt/setPageMeta.DAk88x2V.css */
+.footer {
+  display: grid;
+  gap: 1.9323671498rem;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  padding: 7.729468599rem 3.8647342995rem 4.8309178744rem
+}
+
+@media (min-width:1200px) {
+  .footer {
+    align-items: flex-end;
+    display: grid;
+    gap: .5555555556rem;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-between;
+    padding: 3.8888888889rem 1.6666666667rem 1.3888888889rem
+  }
+}
+
+.footer__copy {
+  color: #fff;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  margin-left: -6.2801932367rem
+}
+
+@media (min-width:1200px) {
+  .footer__copy {
+    grid-column: span 4;
+    grid-row: auto;
+    margin-bottom: -2.7777777778rem;
+    margin-left: -2.7083333333rem
+  }
+}
+
+@media (max-width:1199px) {
+  .footer__copy {
+    font-size: 35.5072463768rem;
+    letter-spacing: -2.4154589372rem;
+    line-height: 1.42;
+    margin-bottom: -17.1497584541rem
+  }
+}
+
+@media (min-width:1200px) {
+  .high-theme .footer__copy {
+    color: #261723
+  }
+}
+
+@media (max-width:1199px) {
+  .footer__center {
+    align-self: flex-end;
+    grid-column: 2/3;
+    grid-row: 1/2
+  }
+}
+
+@media (min-width:1200px) {
+  .footer__center {
+    grid-column: span 2
+  }
+}
+
+.footer__nav {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9323671498rem
+}
+
+@media (min-width:1200px) {
+  .footer__nav {
+    gap: .5555555556rem
+  }
+}
+
+.footer__tftl {
+  margin-bottom: 3.8647342995rem
+}
+
+@media (min-width:1200px) {
+  .footer__tftl {
+    margin-bottom: 1.1111111111rem
+  }
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.9323671498rem
+}
+
+@media (max-width:1199px) {
+  .footer__links {
+    grid-column: 2/3;
+    grid-row: 1/2
+  }
+}
+
+@media (min-width:1200px) {
+  .footer__links {
+    gap: .8333333333rem
+  }
+}
+
+.footer__link,
+.footer__tftl {
+  color: #26172366
+}
+
+.footer__link {
+  transition: color .4s cubic-bezier(.16, 1, .32, 1)
+}
+
+.footer__link:hover {
+  color: #261723
+}
+
+.footer__hash {
+  margin-bottom: 3.8647342995rem
+}
+
+@media (min-width:1200px) {
+  .footer__hash {
+    margin-bottom: 2.2222222222rem
+  }
+}
+
+@media (max-width:1199px) {
+  .footer__link-soc {
+    margin-block: -.9661835749rem;
+    padding-block: .9661835749rem
+  }
+}

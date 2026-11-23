@@ -1,0 +1,29 @@
+/* https://hilight.design/_nuxt/Media.GvnLmOFX.css */
+.wrap-video.inner[data-v-adcfab5b],
+.wrap-video.inner video[data-v-adcfab5b] {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.wrap-video.inner video[data-v-adcfab5b] {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center
+}
+
+.wrap-video video[data-v-adcfab5b] {
+  vertical-align: top;
+  width: 100%
+}
+
+.wrap-video[data-v-274f4b0e] {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}

@@ -1,0 +1,89 @@
+/* https://yodezeen.com/_nuxt/LetsTalk.CSH7BYNo.css */
+.lets-talk[data-v-cb6e605e] {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative
+}
+
+@media(max-width:1023px) {
+  .lets-talk[data-v-cb6e605e] {
+    margin-bottom: calc(-50lvh + 6.375rem)
+  }
+}
+
+.lets-talk.isWhite[data-v-cb6e605e] {
+  color: #fff
+}
+
+.title[data-v-cb6e605e] {
+  opacity: .1;
+  position: absolute;
+  text-transform: uppercase
+}
+
+@media(max-width:1023px) {
+  .title[data-v-cb6e605e] {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: -.048em;
+    line-height: 80%;
+    top: 25%
+  }
+}
+
+.lets-talk-wrap[data-v-cb6e605e] {
+  align-items: center;
+  display: flex;
+  flex-direction: column
+}
+
+.second-title[data-v-cb6e605e] {
+  text-align: center
+}
+
+@media(max-width:1023px) {
+  .second-title[data-v-cb6e605e] {
+    font-family: var(--font-neue);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -.032em;
+    line-height: 84%
+  }
+}
+
+.title-1[data-v-cb6e605e] {
+  left: 0;
+  margin-left: -6.25rem
+}
+
+@media(max-width:1023px) {
+  .title-1[data-v-cb6e605e] {
+    margin-left: 2rem
+  }
+}
+
+.title-2[data-v-cb6e605e] {
+  margin-right: -3.125rem;
+  right: 0
+}
+
+@media(max-width:1023px) {
+  .title-2[data-v-cb6e605e] {
+    margin-right: 2rem
+  }
+}
+
+.button[data-v-cb6e605e] {
+  --bg-color: var(--c-dark);
+  display: block;
+  margin: 2rem auto 0
+}
+
+@media(max-width:1023px) {
+  .button[data-v-cb6e605e] {
+    margin-top: 1rem
+  }
+}

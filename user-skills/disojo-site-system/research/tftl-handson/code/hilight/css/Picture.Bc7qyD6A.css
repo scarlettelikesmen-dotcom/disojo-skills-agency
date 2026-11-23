@@ -1,0 +1,24 @@
+/* https://hilight.design/_nuxt/Picture.Bc7qyD6A.css */
+.common-picture[data-v-ccf1dbff] {
+  display: block
+}
+
+.common-picture.inner[data-v-ccf1dbff],
+.common-picture.inner img[data-v-ccf1dbff] {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.common-picture.inner img[data-v-ccf1dbff] {
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+:where(.common-picture) img[data-v-ccf1dbff] {
+  display: block;
+  height: auto;
+  width: 100%
+}

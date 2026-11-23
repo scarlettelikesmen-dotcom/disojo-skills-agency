@@ -1,0 +1,86 @@
+/* https://coevalstudio.com/_nuxt/Banner.c15ca19a.css */
+[data-v-538bb314]:root {
+  --h-padding: 204;
+  --sm-padding: 32;
+  --h-padding-rem: calc(var(--h-padding)/14.4*1rem);
+  --sm-padding-rem: calc(var(--sm-padding)/14.4*1rem);
+  --md-padding-rem: calc(var(--h-padding-rem) - var(--sm-padding-rem))
+}
+
+@media (max-width:1199px) {
+  [data-v-538bb314]:root {
+    --sm-padding: 24;
+    --h-padding: 144;
+    --h-padding-rem: calc(var(--h-padding)/7.68*1rem);
+    --sm-padding-rem: calc(var(--sm-padding)/7.68*1rem)
+  }
+}
+
+@media (max-width:767px) {
+  [data-v-538bb314]:root {
+    --sm-padding: 12;
+    --sm-padding-rem: calc(var(--sm-padding)/3.75*1rem)
+  }
+}
+
+[data-v-538bb314]:root {
+  --xs: 3.75;
+  --sm: 7.68;
+  --bg: 14.4;
+  --lg: 19.2;
+  --z-teleport: 1;
+  --z-footer: 10;
+  --z-main: 20;
+  --z-canvas: 20;
+  --z-over-canvas: calc(var(--z-canvas) + 1);
+  --z-header: 30;
+  --z-cursor: 60;
+  --z-popup: 50;
+  --z-preloader: 100;
+  --cl-black: #1e1e1e;
+  --cl-brand-bg: #1a1820;
+  --cl-white: #f7f7f7;
+  --cl-base-1000: #d9d9d9;
+  --cl-brand-500: #cfbaa9;
+  --cl-error: #cb3451;
+  --ease: cubic-bezier(.32, .04, .08, 1);
+  --delay: .4s;
+  --transition: var(--delay) var(--ease)
+}
+
+.banner[data-v-538bb314] {
+  bottom: 1.3888888889rem;
+  height: 20px;
+  left: 0;
+  opacity: .4;
+  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content
+}
+
+.banner[data-v-538bb314],
+.banner .some[data-v-538bb314] {
+  position: absolute;
+  white-space: nowrap
+}
+
+.banner .some[data-v-538bb314] {
+  display: flex;
+  left: 50%;
+  mix-blend-mode: difference;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.banner .some span[data-v-538bb314] {
+  display: block;
+  white-space: nowrap
+}
+
+.banner p[data-v-538bb314] {
+  white-space: nowrap
+}
+
+.next__banner p+p[data-v-538bb314] {
+  margin-right: .2083333333rem
+}

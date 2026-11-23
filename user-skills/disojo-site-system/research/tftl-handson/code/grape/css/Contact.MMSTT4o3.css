@@ -1,0 +1,173 @@
+/* https://grape.ua/_nuxt/Contact.MMSTT4o3.css */
+.contacts {
+  padding: 3.8647342995rem
+}
+
+@media (min-width:1200px) {
+  .contacts {
+    padding: 1.6666666667rem
+  }
+}
+
+.contacts__wrap {
+  -moz-column-gap: 1.9323671498rem;
+  column-gap: 1.9323671498rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+@media (min-width:1200px) {
+  .contacts__wrap {
+    align-items: flex-start;
+    display: grid;
+    gap: .5555555556rem;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr auto 1fr;
+    min-height: calc(100vh - 5rem)
+  }
+}
+
+@media (max-width:1199px) {
+  .contacts__wrap>* {
+    grid-column: span 2
+  }
+}
+
+.contacts__subtitle {
+  color: #26172366;
+  grid-column: span 2
+}
+
+@media (max-width:1199px) {
+  .contacts__subtitle {
+    margin-bottom: 11.5942028986rem
+  }
+
+  .contacts__wrap>.contacts__notifications,
+  .contacts__wrap>.contacts__subtitle {
+    grid-column: span 1
+  }
+}
+
+.contacts__text {
+  grid-column: 5/7
+}
+
+@media (max-width:1199px) {
+  .contacts__text {
+    grid-column: span 2;
+    margin-bottom: 15.4589371981rem;
+    margin-top: 18.8405797101rem
+  }
+
+  .contacts__title {
+    margin-bottom: 5.3140096618rem
+  }
+}
+
+@media (min-width:1200px) {
+  .contacts__title {
+    grid-column: 5/-1
+  }
+}
+
+.contacts__title>* {
+  display: inline-block;
+  min-width: -moz-max-content;
+  min-width: max-content
+}
+
+.contacts__list {
+  align-self: flex-end;
+  grid-column: 1/5
+}
+
+@media (max-width:1199px) {
+  .contacts__list {
+    grid-column: 2/3;
+    order: 5
+  }
+}
+
+.contact {
+  position: relative
+}
+
+.contact__city {
+  color: #26172366;
+  margin-bottom: 1.1111111111rem
+}
+
+.contact__email {
+  display: block;
+  margin-bottom: .9661835749rem;
+  margin-left: 9.6618357488rem
+}
+
+@media (min-width:1200px) {
+  .contact__email {
+    margin-bottom: .2777777778rem;
+    margin-left: 4.4444444444rem
+  }
+}
+
+.contact__phone {
+  display: block;
+  margin-bottom: 2.8985507246rem;
+  margin-left: 9.6618357488rem
+}
+
+@media (min-width:1200px) {
+  .contact__phone {
+    margin-bottom: 1.1111111111rem;
+    margin-left: 4.4444444444rem
+  }
+}
+
+.contact__email,
+.contact__phone {
+  width: -moz-max-content;
+  width: max-content
+}
+
+.contact__address {
+  color: #26172366;
+  max-width: 13.3333333333rem
+}
+
+@media (max-width:1199px) {
+  .contact__address {
+    max-width: unset
+  }
+}
+
+.contact__enter {
+  left: 0;
+  position: absolute;
+  top: 5.3140096618rem
+}
+
+@media (max-width:1199px) {
+  .contact__enter {
+    width: 3.6231884058rem
+  }
+}
+
+@media (min-width:1200px) {
+  .contact__enter {
+    top: 2.6388888889rem
+  }
+}
+
+@media (max-width:1199px) {
+  .contacts__icon {
+    margin-bottom: 21.2560386473rem
+  }
+}
+
+@media (min-width:1200px) {
+  .contacts__icon {
+    align-self: flex-end;
+    grid-column: 5/6
+  }
+}

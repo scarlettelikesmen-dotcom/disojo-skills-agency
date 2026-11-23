@@ -1,0 +1,85 @@
+/* https://hilight.design/_nuxt/InstagramCarousel.Dq4tlV8M.css */
+.code-wrap[data-v-0fec3abf] {
+  cursor: pointer;
+  perspective: 80rem;
+  width: 3.5rem
+}
+
+.code[data-v-0fec3abf] {
+  transform-style: preserve-3d;
+  width: 100%;
+  will-change: transform
+}
+
+.code img[data-v-0fec3abf] {
+  display: block;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 100%
+}
+
+.carousel[data-v-3213abe1] {
+  height: 40rem;
+  pointer-events: none;
+  transform: translate(-50%, -50%) translateZ(-550px) rotateY(0);
+  width: 40rem;
+  z-index: 4
+}
+
+.carousel[data-v-3213abe1],
+.carousel__cell[data-v-3213abe1] {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-style: preserve-3d;
+  will-change: transform
+}
+
+.carousel__cell[data-v-3213abe1] {
+  aspect-ratio: 9/16;
+  cursor: pointer;
+  pointer-events: auto;
+  width: 20rem
+}
+
+@media(max-width:1023px) {
+  .carousel__cell[data-v-3213abe1] {
+    width: 15rem
+  }
+}
+
+.card[data-v-3213abe1] {
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  will-change: transform
+}
+
+.card__face[data-v-3213abe1] {
+  backface-visibility: hidden;
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.card__media[data-v-3213abe1] {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  pointer-events: none;
+  width: 100%
+}
+
+.card__face--front[data-v-3213abe1] {
+  transform: translateZ(.1px)
+}
+
+.card__face--back[data-v-3213abe1] {
+  transform: rotateY(180deg) translateZ(.1px)
+}

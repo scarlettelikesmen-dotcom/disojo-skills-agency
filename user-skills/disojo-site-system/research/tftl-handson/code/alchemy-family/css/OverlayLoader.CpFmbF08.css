@@ -1,0 +1,78 @@
+/* https://alchemy.family/_nuxt/OverlayLoader.CpFmbF08.css */
+.overlay[data-v-121d32dc] {
+  background-color: #262626cc;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100
+}
+
+.loader[data-v-121d32dc] {
+  animation: l20-1-121d32dc .8s linear infinite alternate, l20-2-121d32dc 1.6s linear infinite
+}
+
+.loader[data-v-121d32dc],
+.under-loader[data-v-121d32dc] {
+  border: .125rem solid var(--c-text);
+  border-radius: 50%;
+  height: 3.75rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.75rem
+}
+
+.under-loader[data-v-121d32dc] {
+  opacity: .2
+}
+
+@keyframes l20-1-121d32dc {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0)
+  }
+
+  12.5% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0, 100% 0, 100% 0, 100% 0, 100% 0)
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%)
+  }
+
+  62.5% {
+    clip-path: polygon(50% 50%, 100% 0, 100% 0, 100% 0, 100% 100%, 50% 100%, 0 100%)
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0 100%)
+  }
+
+  to {
+    clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0 100%)
+  }
+}
+
+@keyframes l20-2-121d32dc {
+  0% {
+    transform: translate(-50%, -50%) scaleY(1) rotate(0)
+  }
+
+  49.99% {
+    transform: translate(-50%, -50%) scaleY(1) rotate(135deg)
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scaleY(-1) rotate(0)
+  }
+
+  to {
+    transform: translate(-50%, -50%) scaleY(-1) rotate(-135deg)
+  }
+}

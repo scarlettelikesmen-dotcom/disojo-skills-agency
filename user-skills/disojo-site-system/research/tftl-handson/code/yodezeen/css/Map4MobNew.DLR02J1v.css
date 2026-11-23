@@ -1,0 +1,120 @@
+/* https://yodezeen.com/_nuxt/Map4MobNew.DLR02J1v.css */
+.cities-wrap[data-v-264fb25a] {
+  height: 12rem;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  perspective: 900px;
+  perspective-origin: 50%;
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 100%
+}
+
+.cities-wrap[data-v-264fb25a]:after,
+.cities-wrap[data-v-264fb25a]:before {
+  content: "";
+  height: 4.375rem;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 2
+}
+
+.cities-wrap[data-v-264fb25a]:after {
+  background: linear-gradient(#f2f0f0, transparent);
+  top: -1px
+}
+
+.cities-wrap[data-v-264fb25a]:before {
+  background: linear-gradient(transparent, #f2f0f0);
+  bottom: -1px
+}
+
+.cities-track[data-v-264fb25a] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-style: preserve-3d;
+  width: 100%
+}
+
+.city[data-v-264fb25a] {
+  backface-visibility: hidden;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -.08rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  transform-origin: center center
+}
+
+.map-mob[data-v-5ba44f99] {
+  display: none
+}
+
+@media(max-width:1023px) {
+  .map-mob[data-v-5ba44f99] {
+    display: block;
+    padding: 0 1rem
+  }
+}
+
+.title[data-v-5ba44f99] {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -.08rem;
+  line-height: 87%
+}
+
+.name[data-v-5ba44f99],
+.title[data-v-5ba44f99] {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-transform: uppercase
+}
+
+.name[data-v-5ba44f99] {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.02rem;
+  line-height: 120%
+}
+
+.cities[data-v-5ba44f99] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  overflow: hidden
+}
+
+.continent[data-v-5ba44f99] {
+  border-top: .0625rem solid #e0e0e0;
+  padding-bottom: 4rem;
+  padding-top: 1rem
+}
+
+.map-dots[data-v-5ba44f99] {
+  margin-left: -1rem;
+  margin-right: -1rem
+}
+
+.map-dots[data-v-5ba44f99] svg {
+  width: 100%
+}
+
+.first-block[data-v-5ba44f99] {
+  margin-bottom: 2.5rem
+}
+
+.landing-page1 .map-mob[data-v-5ba44f99] {
+  font-family: var(--font-helvetica)
+}

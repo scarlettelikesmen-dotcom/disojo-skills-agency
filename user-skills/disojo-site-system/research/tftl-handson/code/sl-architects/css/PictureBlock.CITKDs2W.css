@@ -1,0 +1,29 @@
+/* https://ab-sl.ru/_nuxt/PictureBlock.CITKDs2W.css */
+.wrapper[data-v-fb2e9ba9] {
+  height: var(--height, 100%);
+  position: relative;
+  transition: transform .8s var(--easing);
+  width: 100%
+}
+
+@media(max-width:1024px) {
+  .wrapper[data-v-fb2e9ba9] {
+    height: var(--height, var(--height-mob, 100%))
+  }
+}
+
+.wrapper.hidden .background[data-v-fb2e9ba9] {
+  opacity: 1
+}
+
+.background[data-v-fb2e9ba9] {
+  background-color: var(--c-Base-400);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity .4s var(--easing);
+  width: 100%
+}

@@ -1,0 +1,70 @@
+/* https://ab-sl.ru/_nuxt/Socials.CkQykksH.css */
+.socials[data-v-83d12ac6] {
+  align-items: center;
+  display: flex
+}
+
+.socials__link[data-v-83d12ac6] {
+  fill: var(--icon-color, var(--c-Base-0));
+  transition: opacity .4s var(--easing), fill .4s var(--easing)
+}
+
+.socials.alt-view .socials__link[data-v-83d12ac6] {
+  align-items: center;
+  display: flex;
+  height: 7.5rem;
+  justify-items: center;
+  position: relative;
+  width: 7.5rem
+}
+
+.socials.alt-view .socials__link[data-v-83d12ac6]:focus,
+.socials.alt-view .socials__link[data-v-83d12ac6]:hover {
+  fill: var(--c-Base-700)
+}
+
+.socials.alt-view .socials__link:focus .socials__bg[data-v-83d12ac6],
+.socials.alt-view .socials__link:hover .socials__bg[data-v-83d12ac6] {
+  transform: scale(.8667)
+}
+
+.socials[data-v-83d12ac6]:not(.alt-view) {
+  gap: .5rem
+}
+
+.socials:not(.alt-view) .socials__link[data-v-83d12ac6] {
+  height: 1.25rem;
+  width: 1.25rem
+}
+
+.socials:not(.alt-view) .socials__link[data-v-83d12ac6]:focus,
+.socials:not(.alt-view) .socials__link[data-v-83d12ac6]:hover {
+  opacity: .4
+}
+
+.socials__bg[data-v-83d12ac6] {
+  background-color: var(--c-Base-100);
+  border-radius: 50%;
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  transition: transform .8s var(--easing);
+  width: 100%
+}
+
+.socials__icon[data-v-83d12ac6] {
+  display: block;
+  height: 2rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem
+}
+
+@media(max-width:1024px) {
+  .socials__icon[data-v-83d12ac6] {
+    height: 1.5rem;
+    width: 1.5rem
+  }
+}

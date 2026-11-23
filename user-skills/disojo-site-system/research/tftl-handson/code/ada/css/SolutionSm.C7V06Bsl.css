@@ -1,0 +1,160 @@
+/* https://aventuradentalarts.com/_nuxt/SolutionSm.C7V06Bsl.css */
+.inner-img.before[data-v-7f438e6f] {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%)
+}
+
+.divider[data-v-7f438e6f],
+.inner-img[data-v-7f438e6f] {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none
+}
+
+.divider[data-v-7f438e6f] {
+  background-image: url(../icons/before-after-divider.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%);
+  width: 3.25rem
+}
+
+.before-after[data-v-7f438e6f] {
+  border-radius: 1.875rem;
+  cursor: grab;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.before-after.moving[data-v-7f438e6f] {
+  cursor: grabbing
+}
+
+@media (max-width:1023px) {
+  .before-after[data-v-7f438e6f] {
+    border-radius: 1.5rem;
+    touch-action: none
+  }
+}
+
+.mob-name[data-v-a3489c7e] {
+  display: none
+}
+
+@media (max-width:1023px) {
+  .mob-name[data-v-a3489c7e] {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 14.875rem
+  }
+}
+
+.details-wrap[data-v-a3489c7e] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between
+}
+
+@media (max-width:1023px) {
+  .details-wrap[data-v-a3489c7e] {
+    align-items: center;
+    justify-content: unset
+  }
+}
+
+.description[data-v-a3489c7e] {
+  width: 12.25rem
+}
+
+@media (max-width:1023px) {
+  .description[data-v-a3489c7e] {
+    color: var(--c-dark-40);
+    text-align: center;
+    width: 16rem
+  }
+}
+
+.btn-learn-more[data-v-a3489c7e] {
+  --btn-bg: var(--c-brand-navy);
+  --btn-color: var(--c-light-base);
+  --icon-color: var(--c-light-base);
+  margin-bottom: 2.5rem;
+  width: -moz-max-content;
+  width: max-content
+}
+
+@media (max-width:1023px) {
+  .btn-learn-more[data-v-a3489c7e] {
+    margin-bottom: 0;
+    margin-top: auto
+  }
+}
+
+.wrap-img[data-v-a3489c7e] {
+  aspect-ratio: 1/1;
+  border-radius: 1.375rem;
+  overflow: hidden;
+  position: relative;
+  width: 17.875rem
+}
+
+@media (max-width:1023px) {
+  .wrap-img[data-v-a3489c7e] {
+    width: 100%
+  }
+}
+
+.bottom[data-v-a3489c7e] {
+  display: flex;
+  justify-content: space-between
+}
+
+@media (max-width:1023px) {
+  .bottom[data-v-a3489c7e] {
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    height: 100%;
+    width: 100%
+  }
+}
+
+.name[data-v-a3489c7e] {
+  width: 24.125rem
+}
+
+@media (max-width:1023px) {
+  .name[data-v-a3489c7e] {
+    display: none
+  }
+}
+
+.solution[data-v-a3489c7e] {
+  background-color: var(--c-light-base);
+  border-radius: 1.875rem;
+  color: var(--c-dark-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 3rem .5rem .5rem 3rem;
+  width: 100%
+}
+
+@media (max-width:1023px) {
+  .solution[data-v-a3489c7e] {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: .5rem .5rem 1.5rem
+  }
+}

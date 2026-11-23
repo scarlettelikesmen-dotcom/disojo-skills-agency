@@ -1,0 +1,14 @@
+/* https://pictoric.com.ua/_nuxt/Close.9d88bb07.css */
+.button-inner[data-v-7efbeac9] {
+  align-items: center;
+  background-color: var(--c-close-btn, var(--c-grey));
+  display: flex;
+  gap: 1rem;
+  padding: .1875rem .5rem
+}
+
+.button-icon[data-v-7efbeac9] {
+  display: flex;
+  height: .8125rem;
+  width: .8125rem
+}

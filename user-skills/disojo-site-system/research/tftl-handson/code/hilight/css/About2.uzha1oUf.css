@@ -1,0 +1,105 @@
+/* https://hilight.design/_nuxt/About2.uzha1oUf.css */
+.about[data-v-b200ae27] {
+  height: 300vh;
+  position: relative
+}
+
+@media(max-width:1023px) {
+  .about[data-v-b200ae27] {
+    height: 300vh
+  }
+}
+
+.sect-about2[data-v-b200ae27] {
+  margin-top: -200vh
+}
+
+@media(max-width:1023px) {
+  .sect-about2[data-v-b200ae27] {
+    margin-top: 0
+  }
+}
+
+.sticky[data-v-b200ae27] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+  justify-content: center;
+  mix-blend-mode: multiply;
+  text-align: center
+}
+
+@media(max-width:1023px) {
+  .sticky[data-v-b200ae27] {
+    height: 100vh
+  }
+}
+
+.texts[data-v-b200ae27] {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 100%;
+  z-index: 2
+}
+
+@media(max-width:1023px) {
+  .texts[data-v-b200ae27] {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem
+  }
+}
+
+.text[data-v-b200ae27] {
+  grid-area: 1/1
+}
+
+.btn[data-v-b200ae27] {
+  position: relative;
+  z-index: 2
+}
+
+.photos[data-v-b200ae27] {
+  inset: 0;
+  -webkit-mask-image: linear-gradient(0deg, transparent 0, #000 25%, #000);
+  mask-image: linear-gradient(0deg, transparent 0, #000 25%, #000);
+  opacity: .5;
+  pointer-events: none;
+  position: absolute
+}
+
+@media(max-width:1023px) {
+  .photos[data-v-b200ae27] {
+    -webkit-mask-image: linear-gradient(0deg, transparent 0, #000 15%, #000 50%);
+    mask-image: linear-gradient(0deg, transparent 0, #000 15%, #000 50%);
+    opacity: 1
+  }
+}
+
+.first-sketch[data-v-b200ae27],
+.second-sketch[data-v-b200ae27] {
+  bottom: 0;
+  height: 40rem;
+  position: absolute;
+  width: 70%
+}
+
+@media(max-width:1023px) {
+
+  .first-sketch[data-v-b200ae27],
+  .second-sketch[data-v-b200ae27] {
+    height: 15rem;
+    width: 100%
+  }
+}
+
+.first-sketch[data-v-b200ae27] {
+  right: 0
+}
+
+.second-sketch[data-v-b200ae27] {
+  left: 0;
+  margin-inline: auto;
+  right: 0
+}

@@ -70,3 +70,6 @@ Tier names LOCKED by Tejjo: **Preflight** (free forever), **Takeoff**, **Altitud
 
 ## 2026-11-22 Liquid walk-through done
 Walked Liquid hands-on in Tejjo's account (look only): research/2026-11-22/07-liquid-walkthrough.md. Liquid = three columns + 10 top links + rails on every screen, 9-12.5px grey type, 12-16 sizes a screen, card grids, a social feed bolted on, affiliate firm cards, Showcase 404s. Level = one question per screen, big tabular numbers, no rails, no feed, firm as live rules. Readability rules + three looks (A Ledger, B Instrument, C Session) written; my pick A with B's gauge for room left. Awaiting Tejjo's pick + colour set. Phone width of Liquid not measured.
+
+## 2026-11-23 Look test page
+Tejjo did not want to pick a look from words; built /lab?look=ledger|instrument|session (src/web/Lab.web.tsx, route src/app/lab.tsx, _layout.web.tsx skips the frame for /lab). Same Today "during the session" moment (10:40, a sample losing day inside the rules), own copy of sample data, ink only. Server: preview level-app-web :8091. My read after seeing them: C Session reads best (headline "Off the plan." + vertical timeline on phone was clearer than I predicted), B's big room gauge is the fastest number, A is tidy but report-like. Suggested blend: C headline + B room gauge, A's ruled table for after the close. Awaiting Tejjo's verdict. Not committed.
