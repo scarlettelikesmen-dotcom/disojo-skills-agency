@@ -1,0 +1,42 @@
+# TFTL hands-on study (started 2026-11-22)
+
+Tejjo's goal: build at The First The Last's level. The 2026-11-11 study (`../tftl-portfolio/`) proved they use no template. This pass goes deeper on the ~45 live sites still in TFTL's design: use each by hand and read the code behind its best moments, then rebuild chosen moments as our own Astro pieces, one at a time, each shown beside the original before the next.
+
+Rules: study only. Never copy their code, fonts, images or copy. Record mechanisms and numbers. One file per site, written straight after the visit. `teardown/` holds the asset lists from `teardown.cjs`.
+
+## Batch 1 (2026-11-22): ERA, Gifford Hill, Son Daven, Santal, Jesko Jets
+Files 01 to 05. About 75 minutes of real looking in all.
+
+### What batch 1 changed in what we knew
+1. **TFTL do share a code skeleton, just not class names.** ERA, Son Daven and Jesko Jets run the same hand-written script structure: one `init*` function per data attribute, all called from `initScripts()` after every Barba page change; identical motion tokens (`durS .4, durM .8, durL 1.2, stagger .1`), identical named eases (`In .5,0,.75,0 · Out .25,1,.5,1 · InOut .76,0,.24,1 · Write .333,0,.667,1 · Ease .25,.1,.25,1`), the same Lenis settings (duration 1.2, exponential easing, GSAP ticker), breakpoint 992. Webflow pages, one Slater-hosted script. Santal (Nuxt + three.js) and Gifford Hill (plain jQuery) are other hands. So: one kernel, and a new look on top every time. That is exactly the system to build.
+2. **Every intro is a real object from the business doing its real action**: ERA's arch door rises and opens, Jesko's window shade lifts, Santal's door opens into a room. Never a logo spin.
+3. **The heavy look is usually cheap tech.** ERA's flowers are alpha WebM loops; Jesko's window is four layered images and four tweens; ERA's door is two CSS variables. Real WebGL appears only where the idea needs it (Son Daven's engraving filter, Santal's space, Jesko's globe).
+4. **Text never just fades.** Headings split into chars that turn in (rotateY 90 to 0, yPercent 50 to 0); paragraphs rise line by line from a mask; text hides again when you scroll back up. Statements ink in letter by letter as you scroll (Gifford Hill, Son Daven). Headlines pull into focus from blur (Jesko).
+5. **Two pro techniques we lack**: a WebCodecs frame player for scroll video (Son Daven, Santal) and a per-client image filter shader (Son Daven's engraving).
+
+### Distinct moments found so far (candidates to rebuild)
+| # | Moment | Seen on | Tech |
+|---|---|---|---|
+| 1 | Object intro: a shape from the business opens to reveal the site | ERA, Jesko | CSS vars + GSAP, layered images |
+| 2 | Char-turn heading reveal + line-mask paragraphs, with hide on scroll back | ERA, Son Daven, Jesko | SplitText |
+| 3 | Sentence that inks in as you scroll | Gifford Hill, Son Daven | SplitText + scrub |
+| 4 | Tall single image as hero, name leaves faster, zoom into it at the end | ERA | scrub timeline |
+| 5 | Footer clip: the page shrinks into a framed picture | ERA | clip-path scrub |
+| 6 | Fixed UI changes colour exactly as each section passes under it | ERA, Son Daven | ScrollTrigger per element |
+| 7 | Horizontal walk with drifting title lines and a path drawing in | ERA | containerAnimation |
+| 8 | Map or plan as the menu (hover a pin, see the place) | Gifford Hill, Son Daven | CSS + JS |
+| 9 | Hover index: themes left, big photo swaps right | Gifford Hill | CSS + JS |
+| 10 | Closing screen = the contact, set huge | Gifford Hill, ERA | type |
+| 11 | House image filter (engraving / halftone) on photos and small videos | Son Daven | WebGL shader |
+| 12 | Frame-exact scroll video | Son Daven, Santal | WebCodecs |
+| 13 | A control from the subject (seasons dial on an arc) | Son Daven | SVG path + drag |
+| 14 | Nav as progress bar | Santal | CSS + ScrollTrigger |
+| 15 | Live 3D object opening into a pre-rendered space | Santal | three.js + frames |
+| 16 | Focus-pull headline (blur to sharp) | Jesko | GSAP filter |
+| 17 | Infinite stepping list ("Fly anywhere + city") | Jesko | GSAP |
+| 18 | Globe with own flat map, arcs, mask follows pointer | Jesko | globe.gl |
+| 19 | Label roll + arrow swap on CTA hover | Jesko, ERA | SplitText |
+| 20 | Background-tab favicon blink | Jesko | JS |
+
+### Next
+Batch 2 onward: the other ~40 live TFTL sites, 5 at a time (list from `../tftl-portfolio/cases.json` minus the dead, blocked and rebuilt ones in `../tftl-portfolio/NOTES.md`). After all are done, Tejjo picks which moments we rebuild, one at a time. The kernel (`../../kernel/`) should adopt the skeleton in point 1 first, since every rebuilt moment plugs into it.

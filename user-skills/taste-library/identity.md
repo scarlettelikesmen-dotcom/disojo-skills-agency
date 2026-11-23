@@ -30,3 +30,10 @@ No benchmark set for identity has been approved yet. Ask Tejjo for 10 to 20 iden
 | 2026-11-18 | Postcards type round 2, number 7: Bonny 700 (`branding/postcards/type/`) | "Number 7, locked in forever." | My read: heavy but rounded and soft, warm rather than sharp. |
 | 2026-11-18 | Postcards mark 4 on a real board (`branding/postcards/board/mark4/`) | "A clean slate. Let's keep going on the logo bit." | A photo of light is not a mark: no edge, smudge under 48 px, nothing left in one colour. |
 | 2026-11-18 | Postcards round 2, block print sheet, number 5: arch window with hill, base bar (`branding/postcards/round2/`) | "I love this." (on ChatGPT's brand boards of 5) | My read: one colour by construction, compact silhouette, a real craft texture, Indian without props. Business detail in the prompt again. |
+
+## 2026-11-22, Disojo standalone mark, last shot
+- **Rejected, all 3 ChatGPT sheets** (`~/Desktop/DISOJO SOLUTIONS/branding/disojo-mark-2026-11-22/`):
+  - O mid-settle (liquid to square ring)
+  - Square O with a liquid hole
+  - Liquid-bowl D
+- **Liked:** the Softriver S. A bold one-letter monogram with heavy opposing swash strokes, sitting in a circle avatar. Why exactly is not asked yet.

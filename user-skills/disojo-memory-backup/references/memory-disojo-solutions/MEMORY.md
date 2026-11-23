@@ -65,7 +65,7 @@
 
 - [Content uses the live brand](feedback-content-current-brand.md) — 2026-11-18: never the October tokens.css; hoflik + Bricolage + graphite; case studies in the nonstopbranding format
 - [Reels: one idea, clean edits](feedback-reel-clean-flagship.md) — 2026-11-19 Postcards reel rejected: no shake/flash gimmicks, one visual idea, flagship craft
-- [Work summary 2026-11-22](work-summary-2026-11-22.md) — flagship offer settled, visual-identity skill rewritten, studios dissected into taste-library/studios.md; open decisions
+- [Work summary 2026-11-22](work-summary-2026-11-22.md) — flagship offer, skills, studios dissected; evening: 3 Disojo mark sheets all rejected, Tejjo likes the Softriver S monogram, resume tomorrow
 - [Work summary 2026-11-18](work-summary-2026-11-18.md) — Monolog copy rejected and reverted; stage device now sits on a picture per project
 
 ## Logs
