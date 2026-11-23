@@ -9,6 +9,7 @@
 - [LinkedIn profile optimisation](project-linkedin-profile.md) — About + banner FINAL; headline, experience, Featured, Services, photo, connections pending
 
 ## Clients and builds
+- [Chandak Group](project-chandak.md) — READ FIRST for Chandak: signed client, chandakgroup.com redo started 2026-11-23, truth + photo pass in research/TRUTH.md, ideas stage
 - [Print Elements](project-print-elements.md) — READ FIRST: v8 approved, review link pe-review-chi.vercel.app, open owner questions, past builds
 - [Ascender site + identity](project-ascender-site.md) — READ FIRST for ascendermedia.in: live kraq88wyv, source rebuild-v6, deploy recipe, logo picks
 - [Ascender OS build](project-ascender-os-build.md) — CRM + portal, approved 2026-10-21, state, how to run, what is left
@@ -39,7 +40,8 @@
 - [Disojo site working copy](feedback-disojo-site-working-copy.md) — edit ~/Desktop/disojo-mix on :4700 only, never disojo-hybrid; watermark with watermark_new.py (new logo)
 - [Do not overbuild](feedback-dont-overbuild.md) — 2026-11-11: after a "keep going", build one piece, show it, wait; never the whole site in one run
 - [Downloads and computer access](feedback-downloads-computer-access.md) — 2026-11-16 standing OK to download and use the whole computer without asking
-- [ChatGPT images only](feedback-chatgpt-images-only.md) — 2026-11-22: images from ChatGPT only, few intentional prompts, everything else in code
+- [I operate Flow](feedback-i-operate-flow.md) — HARD RULE 2026-11-23: I run Flow (and any image tool) myself in Claude in Chrome; never paste prompts for Tejjo to run
+- [Image tools](feedback-chatgpt-images-only.md) — 2026-11-22 ChatGPT only; 2026-11-23 Flow allowed again (Chandak); few intentional prompts; AI never stands in for proof of a built building
 - [Flow prompting](feedback-flow-prompting.md) — Nano Banana Pro is good; long researched prompts with reference images, say what each image is for
 - [AI images allowed](feedback-ai-images-allowed.md) — 2026-11-17: Tejjo reverted my "no AI photo next to client results" rule; Flow images may sit anywhere
 - [Fonts: research first](feedback-fonts-research-first.md) — 2026-11-11: our Google font defaults rejected; specimen of 15-20 free fonts in client words before first screens; method in skill references/free-type.md

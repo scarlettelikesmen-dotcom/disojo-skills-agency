@@ -24,7 +24,7 @@ Merged 2026-11-16 from 4 notes (logo and identity, multipage, site iteration pla
 - Buttons: Monolog motion, cubic-bezier(.16,1,.35,1) .6s, label roll and twin arrows. Page change: the disojostudio.com shutter with an Ascender ink panel. Tejjo expects that level of smoothness without asking.
 - Tokens: cobalt #2B45F5, paper #F3F3F0, ink #0E0E10, Hanken Grotesk. Nav logo says ASCENDER only, never "Media".
 - Deploy recipe: the deploy folder was /tmp/asc-mp-deploy, built by copying rebuild-v6's index.html, 404.html, page folders and assets, plus favicon/img/og/robots and .vercel. /tmp is wiped on restart, so rebuild it. vercel.json: cleanUrls + trailingSlash; canonicals end in a slash; sitemap lists 6 pages.
-- Before the next deploy: favicon.png, favicon.ico and img/apple-touch-icon.png were missing; add a .vercelignore for src/, backups, _qa, _study.
+- 2026-11-23 deploy (Tejjo's "deploy"): statement "(The promise)" now uses Monolog's data-highlight-text reveal (letters at 20% opacity, filled by scroll, .1 per letter, .3 per line, start top 100%, end centre 40%), studied from bymonolog.com's own code after Tejjo rejected a smooth diagonal mask wipe ("too smooth"). Backup before: src/index.src.before-diagreveal.html. Deploy folder rebuilt from rebuild-v6 (index, 404, page folders, assets, .vercel) + favicon.png, favicon.ico, img/apple-touch-icon.png, og.jpg, robots.txt, sitemap.xml pulled from live + vercel.json {cleanUrls, trailingSlash:true}; all pages 200 after.
 
 ## Identity (2026-10-26, `~/Desktop/DISOJO SOLUTIONS/branding/ascender-media/`)
 - Banned by Tejjo: ascending bars, growth or rise symbols, play buttons.
